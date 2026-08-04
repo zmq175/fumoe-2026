@@ -1,0 +1,13 @@
+node_modules/
+dist/
+.dev.vars
+.env*
+!.env.example
+.wrangler/
+.claude/
+.local/
+backups/
+*.tsbuildinfo
+playwright-report/
+test-results/
+.DS_Store

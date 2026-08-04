@@ -1,0 +1,17 @@
+{
+  "$schema": "./characters.manifest.schema.json",
+  "version": 1,
+  "characters": [
+    {
+      "id": "c001",
+      "sourceFile": "assets/source/c001.png",
+      "sourceUrl": "https://example-official-game-site.invalid/characters/furina",
+      "officialHost": "example-official-game-site.invalid",
+      "status": "approved",
+      "reviewedBy": "operator@example.com",
+      "reviewedAt": "2026-07-31",
+      "focus": { "x": 50, "y": 42 },
+      "notes": "从官方角色页下载；确认全身立绘且允许官网公开展示。"
+    }
+  ]
+}

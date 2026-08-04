@@ -1,0 +1,8 @@
+AUTH_SECRET=replace-with-a-long-random-secret
+BREVO_API_KEY=xkeysib-your-brevo-api-key
+TURNSTILE_SECRET=your-turnstile-secret
+VITE_TURNSTILE_SITE_KEY=your-turnstile-site-key
+# Local full-stack development only.
+APP_ORIGIN=http://127.0.0.1:8787
+DEV_AUTH_BYPASS=false
+VITE_DEV_AUTH_BYPASS=false

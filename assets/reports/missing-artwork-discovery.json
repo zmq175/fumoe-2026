@@ -1,0 +1,2420 @@
+{
+  "generatedAt": "2026-08-04T06:34:07.219Z",
+  "method": "missing-only-mediawiki-v2",
+  "missingCount": 64,
+  "candidates": [
+    {
+      "id": "c039",
+      "name": "妮可",
+      "game": "绝区零",
+      "aliases": [],
+      "candidates": [
+        {
+          "url": "https://patchwiki.biligame.com/images/zzz/4/47/3ds8par4s5y6c2q1r25o20ilqb01hgk.png",
+          "sourcePage": "https://wiki.biligame.com/zzz/%E5%A6%AE%E5%8F%AF",
+          "fileTitle": "文件:角色立绘-妮可-官方介绍.png",
+          "width": 1052,
+          "height": 1403,
+          "mime": "image/png",
+          "status": "recommended",
+          "reason": "高置信度默认立绘",
+          "score": 970
+        },
+        {
+          "url": "https://patchwiki.biligame.com/images/zzz/d/d2/8i2skjn9mqhk2dcdh5sk832518xbsv3.png",
+          "sourcePage": "https://wiki.biligame.com/zzz/%E5%A6%AE%E5%8F%AF",
+          "fileTitle": "文件:角色立绘-妮可.png",
+          "width": 882,
+          "height": 1143,
+          "mime": "image/png",
+          "status": "recommended",
+          "reason": "高置信度默认立绘",
+          "score": 900
+        },
+        {
+          "url": "https://patchwiki.biligame.com/images/zzz/c/cc/4wgasrjaq758z1agyojnvxr7s6tizy6.png",
+          "sourcePage": "https://wiki.biligame.com/zzz/%E5%A6%AE%E5%8F%AF",
+          "fileTitle": "文件:生贺·妮可·2024.png",
+          "width": 1234,
+          "height": 1908,
+          "mime": "image/png",
+          "status": "review",
+          "reason": "需要人工确认",
+          "score": 620
+        },
+        {
+          "url": "https://patchwiki.biligame.com/images/zzz/a/a6/9flpo9rnuohy6q5dw723dai6wv39www.png",
+          "sourcePage": "https://wiki.biligame.com/zzz/%E5%A6%AE%E5%8F%AF",
+          "fileTitle": "文件:生贺·妮可·2025.png",
+          "width": 1052,
+          "height": 1627,
+          "mime": "image/png",
+          "status": "review",
+          "reason": "需要人工确认",
+          "score": 620
+        },
+        {
+          "url": "https://patchwiki.biligame.com/images/zzz/4/47/gnnj2g0q6aeug988lcm5x4f0z8t1gk0.png",
+          "sourcePage": "https://wiki.biligame.com/zzz/%E5%A6%AE%E5%8F%AF",
+          "fileTitle": "文件:情人节·妮可·2023.png",
+          "width": 1920,
+          "height": 1920,
+          "mime": "image/png",
+          "status": "review",
+          "reason": "需要人工确认",
+          "score": 520
+        }
+      ],
+      "recommended": {
+        "url": "https://patchwiki.biligame.com/images/zzz/4/47/3ds8par4s5y6c2q1r25o20ilqb01hgk.png",
+        "sourcePage": "https://wiki.biligame.com/zzz/%E5%A6%AE%E5%8F%AF",
+        "fileTitle": "文件:角色立绘-妮可-官方介绍.png",
+        "width": 1052,
+        "height": 1403,
+        "mime": "image/png",
+        "status": "recommended",
+        "reason": "高置信度默认立绘",
+        "score": 970
+      },
+      "status": "recommended"
+    },
+    {
+      "id": "c049",
+      "name": "长离",
+      "game": "鸣潮",
+      "aliases": [],
+      "candidates": [
+        {
+          "url": "https://wuthering.gg/images/iconrolepile/T_IconRole_Pile_changli_UI.png",
+          "sourcePage": "https://wuthering.gg/characters/changli",
+          "fileTitle": "T_IconRole_Pile_changli_UI.png",
+          "width": 696,
+          "height": 960,
+          "mime": "image/png",
+          "status": "recommended",
+          "reason": "角色页直接引用的单角色透明立绘；已验证文件签名、解码和尺寸",
+          "score": 950
+        }
+      ],
+      "recommended": {
+        "url": "https://wuthering.gg/images/iconrolepile/T_IconRole_Pile_changli_UI.png",
+        "sourcePage": "https://wuthering.gg/characters/changli",
+        "fileTitle": "T_IconRole_Pile_changli_UI.png",
+        "width": 696,
+        "height": 960,
+        "mime": "image/png",
+        "status": "recommended",
+        "reason": "角色页直接引用的单角色透明立绘；已验证文件签名、解码和尺寸",
+        "score": 950
+      },
+      "status": "recommended"
+    },
+    {
+      "id": "c050",
+      "name": "椿",
+      "game": "鸣潮",
+      "aliases": [],
+      "candidates": [
+        {
+          "url": "https://wuthering.gg/images/iconrolepile/T_IconRole_Pile_chun_UI.png",
+          "sourcePage": "https://wuthering.gg/characters/camellya",
+          "fileTitle": "T_IconRole_Pile_chun_UI.png",
+          "width": 696,
+          "height": 960,
+          "mime": "image/png",
+          "status": "recommended",
+          "reason": "角色页直接引用的单角色透明立绘；已验证文件签名、解码和尺寸",
+          "score": 950
+        }
+      ],
+      "recommended": {
+        "url": "https://wuthering.gg/images/iconrolepile/T_IconRole_Pile_chun_UI.png",
+        "sourcePage": "https://wuthering.gg/characters/camellya",
+        "fileTitle": "T_IconRole_Pile_chun_UI.png",
+        "width": 696,
+        "height": 960,
+        "mime": "image/png",
+        "status": "recommended",
+        "reason": "角色页直接引用的单角色透明立绘；已验证文件签名、解码和尺寸",
+        "score": 950
+      },
+      "status": "recommended"
+    },
+    {
+      "id": "c051",
+      "name": "守岸人",
+      "game": "鸣潮",
+      "aliases": [],
+      "candidates": [
+        {
+          "url": "https://patchwiki.biligame.com/images/wutheringwaves/5/56/101neg0k0er0rkh019ljtj5ev6jgac3.png",
+          "sourcePage": "https://wiki.biligame.com/wutheringwaves/%E5%85%B1%E9%B8%A3%E8%80%85/%E5%AE%88%E5%B2%B8%E4%BA%BA",
+          "fileTitle": "文件:角色 守岸人 立绘.png",
+          "width": 1040,
+          "height": 1675,
+          "mime": "image/png",
+          "status": "recommended",
+          "reason": "角色资料页直接链接的单角色透明立绘；已验证文件签名、解码和尺寸",
+          "score": 970
+        }
+      ],
+      "recommended": {
+        "url": "https://patchwiki.biligame.com/images/wutheringwaves/5/56/101neg0k0er0rkh019ljtj5ev6jgac3.png",
+        "sourcePage": "https://wiki.biligame.com/wutheringwaves/%E5%85%B1%E9%B8%A3%E8%80%85/%E5%AE%88%E5%B2%B8%E4%BA%BA",
+        "fileTitle": "文件:角色 守岸人 立绘.png",
+        "width": 1040,
+        "height": 1675,
+        "mime": "image/png",
+        "status": "recommended",
+        "reason": "角色资料页直接链接的单角色透明立绘；已验证文件签名、解码和尺寸",
+        "score": 970
+      },
+      "status": "recommended"
+    },
+    {
+      "id": "c052",
+      "name": "今汐",
+      "game": "鸣潮",
+      "aliases": [],
+      "candidates": [
+        {
+          "url": "https://wuthering.gg/images/iconrolepile/T_IconRole_Pile_jinxi_UI.png",
+          "sourcePage": "https://wuthering.gg/characters/jinhsi",
+          "fileTitle": "T_IconRole_Pile_jinxi_UI.png",
+          "width": 696,
+          "height": 960,
+          "mime": "image/png",
+          "status": "recommended",
+          "reason": "角色页直接引用的单角色透明立绘；已验证文件签名、解码和尺寸",
+          "score": 950
+        }
+      ],
+      "recommended": {
+        "url": "https://wuthering.gg/images/iconrolepile/T_IconRole_Pile_jinxi_UI.png",
+        "sourcePage": "https://wuthering.gg/characters/jinhsi",
+        "fileTitle": "T_IconRole_Pile_jinxi_UI.png",
+        "width": 696,
+        "height": 960,
+        "mime": "image/png",
+        "status": "recommended",
+        "reason": "角色页直接引用的单角色透明立绘；已验证文件签名、解码和尺寸",
+        "score": 950
+      },
+      "status": "recommended"
+    },
+    {
+      "id": "c053",
+      "name": "卡提希娅",
+      "game": "鸣潮",
+      "aliases": [],
+      "candidates": [
+        {
+          "url": "https://wuthering.gg/images/iconrolepile/T_IconRole_Pile_katixiya_UI.png",
+          "sourcePage": "https://wuthering.gg/characters/cartethyia",
+          "fileTitle": "T_IconRole_Pile_katixiya_UI.png",
+          "width": 696,
+          "height": 960,
+          "mime": "image/png",
+          "status": "recommended",
+          "reason": "角色页直接引用的单角色透明立绘；已验证文件签名、解码和尺寸",
+          "score": 950
+        }
+      ],
+      "recommended": {
+        "url": "https://wuthering.gg/images/iconrolepile/T_IconRole_Pile_katixiya_UI.png",
+        "sourcePage": "https://wuthering.gg/characters/cartethyia",
+        "fileTitle": "T_IconRole_Pile_katixiya_UI.png",
+        "width": 696,
+        "height": 960,
+        "mime": "image/png",
+        "status": "recommended",
+        "reason": "角色页直接引用的单角色透明立绘；已验证文件签名、解码和尺寸",
+        "score": 950
+      },
+      "status": "recommended"
+    },
+    {
+      "id": "c054",
+      "name": "珂莱塔",
+      "game": "鸣潮",
+      "aliases": [],
+      "candidates": [
+        {
+          "url": "https://wuthering.gg/images/iconrolepile/T_IconRole_Pile_kelaita_UI.png",
+          "sourcePage": "https://wuthering.gg/characters/carlotta",
+          "fileTitle": "T_IconRole_Pile_kelaita_UI.png",
+          "width": 696,
+          "height": 960,
+          "mime": "image/png",
+          "status": "recommended",
+          "reason": "角色页直接引用的单角色透明立绘；已验证文件签名、解码和尺寸",
+          "score": 950
+        }
+      ],
+      "recommended": {
+        "url": "https://wuthering.gg/images/iconrolepile/T_IconRole_Pile_kelaita_UI.png",
+        "sourcePage": "https://wuthering.gg/characters/carlotta",
+        "fileTitle": "T_IconRole_Pile_kelaita_UI.png",
+        "width": 696,
+        "height": 960,
+        "mime": "image/png",
+        "status": "recommended",
+        "reason": "角色页直接引用的单角色透明立绘；已验证文件签名、解码和尺寸",
+        "score": 950
+      },
+      "status": "recommended"
+    },
+    {
+      "id": "c055",
+      "name": "吟霖",
+      "game": "鸣潮",
+      "aliases": [],
+      "candidates": [
+        {
+          "url": "https://wuthering.gg/images/iconrolepile/T_IconRole_Pile_yinlin_UI.png",
+          "sourcePage": "https://wuthering.gg/characters/yinlin",
+          "fileTitle": "T_IconRole_Pile_yinlin_UI.png",
+          "width": 696,
+          "height": 960,
+          "mime": "image/png",
+          "status": "recommended",
+          "reason": "角色页直接引用的单角色透明立绘；已验证文件签名、解码和尺寸",
+          "score": 950
+        }
+      ],
+      "recommended": {
+        "url": "https://wuthering.gg/images/iconrolepile/T_IconRole_Pile_yinlin_UI.png",
+        "sourcePage": "https://wuthering.gg/characters/yinlin",
+        "fileTitle": "T_IconRole_Pile_yinlin_UI.png",
+        "width": 696,
+        "height": 960,
+        "mime": "image/png",
+        "status": "recommended",
+        "reason": "角色页直接引用的单角色透明立绘；已验证文件签名、解码和尺寸",
+        "score": 950
+      },
+      "status": "recommended"
+    },
+    {
+      "id": "c056",
+      "name": "秧秧",
+      "game": "鸣潮",
+      "aliases": [],
+      "candidates": [
+        {
+          "url": "https://wuthering.gg/images/iconrolepile/T_IconRole_Pile_yangyang_UI.png",
+          "sourcePage": "https://wuthering.gg/characters/yangyang",
+          "fileTitle": "T_IconRole_Pile_yangyang_UI.png",
+          "width": 696,
+          "height": 960,
+          "mime": "image/png",
+          "status": "recommended",
+          "reason": "角色页直接引用的单角色透明立绘；已验证文件签名、解码和尺寸",
+          "score": 950
+        }
+      ],
+      "recommended": {
+        "url": "https://wuthering.gg/images/iconrolepile/T_IconRole_Pile_yangyang_UI.png",
+        "sourcePage": "https://wuthering.gg/characters/yangyang",
+        "fileTitle": "T_IconRole_Pile_yangyang_UI.png",
+        "width": 696,
+        "height": 960,
+        "mime": "image/png",
+        "status": "recommended",
+        "reason": "角色页直接引用的单角色透明立绘；已验证文件签名、解码和尺寸",
+        "score": 950
+      },
+      "status": "recommended"
+    },
+    {
+      "id": "c057",
+      "name": "鉴心",
+      "game": "鸣潮",
+      "aliases": [],
+      "candidates": [
+        {
+          "url": "https://wuthering.gg/images/iconrolepile/T_IconRole_Pile_jiexin_UI.png",
+          "sourcePage": "https://wuthering.gg/characters/jianxin",
+          "fileTitle": "T_IconRole_Pile_jiexin_UI.png",
+          "width": 696,
+          "height": 960,
+          "mime": "image/png",
+          "status": "recommended",
+          "reason": "角色页直接引用的单角色透明立绘；已验证文件签名、解码和尺寸",
+          "score": 950
+        }
+      ],
+      "recommended": {
+        "url": "https://wuthering.gg/images/iconrolepile/T_IconRole_Pile_jiexin_UI.png",
+        "sourcePage": "https://wuthering.gg/characters/jianxin",
+        "fileTitle": "T_IconRole_Pile_jiexin_UI.png",
+        "width": 696,
+        "height": 960,
+        "mime": "image/png",
+        "status": "recommended",
+        "reason": "角色页直接引用的单角色透明立绘；已验证文件签名、解码和尺寸",
+        "score": 950
+      },
+      "status": "recommended"
+    },
+    {
+      "id": "c058",
+      "name": "散华",
+      "game": "鸣潮",
+      "aliases": [],
+      "candidates": [
+        {
+          "url": "https://wuthering.gg/images/iconrolepile/T_IconRole_Pile_shanhua_UI.png",
+          "sourcePage": "https://wuthering.gg/characters/sanhua",
+          "fileTitle": "T_IconRole_Pile_shanhua_UI.png",
+          "width": 696,
+          "height": 960,
+          "mime": "image/png",
+          "status": "recommended",
+          "reason": "角色页直接引用的单角色透明立绘；已验证文件签名、解码和尺寸",
+          "score": 950
+        }
+      ],
+      "recommended": {
+        "url": "https://wuthering.gg/images/iconrolepile/T_IconRole_Pile_shanhua_UI.png",
+        "sourcePage": "https://wuthering.gg/characters/sanhua",
+        "fileTitle": "T_IconRole_Pile_shanhua_UI.png",
+        "width": 696,
+        "height": 960,
+        "mime": "image/png",
+        "status": "recommended",
+        "reason": "角色页直接引用的单角色透明立绘；已验证文件签名、解码和尺寸",
+        "score": 950
+      },
+      "status": "recommended"
+    },
+    {
+      "id": "c060",
+      "name": "丹瑾",
+      "game": "鸣潮",
+      "aliases": [],
+      "candidates": [
+        {
+          "url": "https://wuthering.gg/images/iconrolepile/T_IconRole_Pile_micai_UI.png",
+          "sourcePage": "https://wuthering.gg/characters/danjin",
+          "fileTitle": "T_IconRole_Pile_micai_UI.png",
+          "width": 696,
+          "height": 960,
+          "mime": "image/png",
+          "status": "recommended",
+          "reason": "角色页直接引用的单角色透明立绘；已验证文件签名、解码和尺寸",
+          "score": 950
+        }
+      ],
+      "recommended": {
+        "url": "https://wuthering.gg/images/iconrolepile/T_IconRole_Pile_micai_UI.png",
+        "sourcePage": "https://wuthering.gg/characters/danjin",
+        "fileTitle": "T_IconRole_Pile_micai_UI.png",
+        "width": 696,
+        "height": 960,
+        "mime": "image/png",
+        "status": "recommended",
+        "reason": "角色页直接引用的单角色透明立绘；已验证文件签名、解码和尺寸",
+        "score": 950
+      },
+      "status": "recommended"
+    },
+    {
+      "id": "c061",
+      "name": "桃祈",
+      "game": "鸣潮",
+      "aliases": [],
+      "candidates": [
+        {
+          "url": "https://wuthering.gg/images/iconrolepile/T_IconRole_Pile_taohua_UI.png",
+          "sourcePage": "https://wuthering.gg/characters/taoqi",
+          "fileTitle": "T_IconRole_Pile_taohua_UI.png",
+          "width": 696,
+          "height": 960,
+          "mime": "image/png",
+          "status": "recommended",
+          "reason": "角色页直接引用的单角色透明立绘；已验证文件签名、解码和尺寸",
+          "score": 950
+        }
+      ],
+      "recommended": {
+        "url": "https://wuthering.gg/images/iconrolepile/T_IconRole_Pile_taohua_UI.png",
+        "sourcePage": "https://wuthering.gg/characters/taoqi",
+        "fileTitle": "T_IconRole_Pile_taohua_UI.png",
+        "width": 696,
+        "height": 960,
+        "mime": "image/png",
+        "status": "recommended",
+        "reason": "角色页直接引用的单角色透明立绘；已验证文件签名、解码和尺寸",
+        "score": 950
+      },
+      "status": "recommended"
+    },
+    {
+      "id": "c062",
+      "name": "菲比",
+      "game": "鸣潮",
+      "aliases": [],
+      "candidates": [
+        {
+          "url": "https://wuthering.gg/images/iconrolepile/T_IconRole_Pile_Feibi_UI.png",
+          "sourcePage": "https://wuthering.gg/characters/phoebe",
+          "fileTitle": "T_IconRole_Pile_Feibi_UI.png",
+          "width": 696,
+          "height": 960,
+          "mime": "image/png",
+          "status": "recommended",
+          "reason": "角色页直接引用的单角色透明立绘；已验证文件签名、解码和尺寸",
+          "score": 950
+        }
+      ],
+      "recommended": {
+        "url": "https://wuthering.gg/images/iconrolepile/T_IconRole_Pile_Feibi_UI.png",
+        "sourcePage": "https://wuthering.gg/characters/phoebe",
+        "fileTitle": "T_IconRole_Pile_Feibi_UI.png",
+        "width": 696,
+        "height": 960,
+        "mime": "image/png",
+        "status": "recommended",
+        "reason": "角色页直接引用的单角色透明立绘；已验证文件签名、解码和尺寸",
+        "score": 950
+      },
+      "status": "recommended"
+    },
+    {
+      "id": "c063",
+      "name": "赞妮",
+      "game": "鸣潮",
+      "aliases": [],
+      "candidates": [
+        {
+          "url": "https://wuthering.gg/images/iconrolepile/T_IconRole_Pile_zanni_UI.png",
+          "sourcePage": "https://wuthering.gg/characters/zani",
+          "fileTitle": "T_IconRole_Pile_zanni_UI.png",
+          "width": 696,
+          "height": 960,
+          "mime": "image/png",
+          "status": "recommended",
+          "reason": "角色页直接引用的单角色透明立绘；已验证文件签名、解码和尺寸",
+          "score": 950
+        }
+      ],
+      "recommended": {
+        "url": "https://wuthering.gg/images/iconrolepile/T_IconRole_Pile_zanni_UI.png",
+        "sourcePage": "https://wuthering.gg/characters/zani",
+        "fileTitle": "T_IconRole_Pile_zanni_UI.png",
+        "width": 696,
+        "height": 960,
+        "mime": "image/png",
+        "status": "recommended",
+        "reason": "角色页直接引用的单角色透明立绘；已验证文件签名、解码和尺寸",
+        "score": 950
+      },
+      "status": "recommended"
+    },
+    {
+      "id": "c064",
+      "name": "露帕",
+      "game": "鸣潮",
+      "aliases": [],
+      "candidates": [
+        {
+          "url": "https://wuthering.gg/images/iconrolepile/T_IconRole_Pile_lupa_UI.png",
+          "sourcePage": "https://wuthering.gg/characters/lupa",
+          "fileTitle": "T_IconRole_Pile_lupa_UI.png",
+          "width": 696,
+          "height": 960,
+          "mime": "image/png",
+          "status": "recommended",
+          "reason": "角色页直接引用的单角色透明立绘；已验证文件签名、解码和尺寸",
+          "score": 950
+        }
+      ],
+      "recommended": {
+        "url": "https://wuthering.gg/images/iconrolepile/T_IconRole_Pile_lupa_UI.png",
+        "sourcePage": "https://wuthering.gg/characters/lupa",
+        "fileTitle": "T_IconRole_Pile_lupa_UI.png",
+        "width": 696,
+        "height": 960,
+        "mime": "image/png",
+        "status": "recommended",
+        "reason": "角色页直接引用的单角色透明立绘；已验证文件签名、解码和尺寸",
+        "score": 950
+      },
+      "status": "recommended"
+    },
+    {
+      "id": "c075",
+      "name": "阿罗娜",
+      "game": "蔚蓝档案",
+      "aliases": [],
+      "candidates": [
+        {
+          "url": "https://sh-anime.shochiku.co.jp/bluearchive-anime/assets/images/common/character/arona/chara-arona-front_03.png",
+          "sourcePage": "https://sh-anime.shochiku.co.jp/bluearchive-anime/character/arona/",
+          "fileTitle": "chara-arona-front_03.png",
+          "width": 795,
+          "height": 1060,
+          "mime": "image/png",
+          "status": "recommended",
+          "reason": "公开游戏资源归档中的单角色原始立绘；已验证文件签名、解码和尺寸",
+          "score": 950
+        }
+      ],
+      "recommended": {
+        "url": "https://sh-anime.shochiku.co.jp/bluearchive-anime/assets/images/common/character/arona/chara-arona-front_03.png",
+        "sourcePage": "https://sh-anime.shochiku.co.jp/bluearchive-anime/character/arona/",
+        "fileTitle": "chara-arona-front_03.png",
+        "width": 795,
+        "height": 1060,
+        "mime": "image/png",
+        "status": "recommended",
+        "reason": "公开游戏资源归档中的单角色原始立绘；已验证文件签名、解码和尺寸",
+        "score": 950
+      },
+      "status": "recommended"
+    },
+    {
+      "id": "c076",
+      "name": "圣园未花",
+      "game": "蔚蓝档案",
+      "aliases": [],
+      "candidates": [
+        {
+          "url": "https://raw.githubusercontent.com/SchaleDB/SchaleDB/main/images/student/portrait/10059.webp",
+          "sourcePage": "https://schaledb.com/student/10059",
+          "fileTitle": "10059.webp",
+          "width": 816,
+          "height": 1367,
+          "mime": "image/webp",
+          "status": "recommended",
+          "reason": "公开游戏资源归档中的单角色原始立绘；已验证文件签名、解码和尺寸",
+          "score": 950
+        }
+      ],
+      "recommended": {
+        "url": "https://raw.githubusercontent.com/SchaleDB/SchaleDB/main/images/student/portrait/10059.webp",
+        "sourcePage": "https://schaledb.com/student/10059",
+        "fileTitle": "10059.webp",
+        "width": 816,
+        "height": 1367,
+        "mime": "image/webp",
+        "status": "recommended",
+        "reason": "公开游戏资源归档中的单角色原始立绘；已验证文件签名、解码和尺寸",
+        "score": 950
+      },
+      "status": "recommended"
+    },
+    {
+      "id": "c077",
+      "name": "天雨亚子",
+      "game": "蔚蓝档案",
+      "aliases": [],
+      "candidates": [
+        {
+          "url": "https://static.zerochan.net/Amau.Ako.full.4170027.png",
+          "sourcePage": "https://www.zerochan.net/4170027",
+          "fileTitle": "Amau.Ako.full.4170027.png",
+          "width": 1500,
+          "height": 2000,
+          "mime": "image/png",
+          "status": "recommended",
+          "reason": "公开游戏资源归档中的单角色原始立绘；已验证文件签名、解码和尺寸",
+          "score": 950
+        }
+      ],
+      "recommended": {
+        "url": "https://static.zerochan.net/Amau.Ako.full.4170027.png",
+        "sourcePage": "https://www.zerochan.net/4170027",
+        "fileTitle": "Amau.Ako.full.4170027.png",
+        "width": 1500,
+        "height": 2000,
+        "mime": "image/png",
+        "status": "recommended",
+        "reason": "公开游戏资源归档中的单角色原始立绘；已验证文件签名、解码和尺寸",
+        "score": 950
+      },
+      "status": "recommended"
+    },
+    {
+      "id": "c078",
+      "name": "砂狼白子",
+      "game": "蔚蓝档案",
+      "aliases": [],
+      "candidates": [
+        {
+          "url": "https://raw.githubusercontent.com/SchaleDB/SchaleDB/main/images/student/portrait/10010.webp",
+          "sourcePage": "https://schaledb.com/student/10010",
+          "fileTitle": "10010.webp",
+          "width": 540,
+          "height": 1024,
+          "mime": "image/webp",
+          "status": "recommended",
+          "reason": "公开游戏资源归档中的单角色原始立绘；已验证文件签名、解码和尺寸",
+          "score": 950
+        }
+      ],
+      "recommended": {
+        "url": "https://raw.githubusercontent.com/SchaleDB/SchaleDB/main/images/student/portrait/10010.webp",
+        "sourcePage": "https://schaledb.com/student/10010",
+        "fileTitle": "10010.webp",
+        "width": 540,
+        "height": 1024,
+        "mime": "image/webp",
+        "status": "recommended",
+        "reason": "公开游戏资源归档中的单角色原始立绘；已验证文件签名、解码和尺寸",
+        "score": 950
+      },
+      "status": "recommended"
+    },
+    {
+      "id": "c079",
+      "name": "陆八魔爱露",
+      "game": "蔚蓝档案",
+      "aliases": [],
+      "candidates": [
+        {
+          "url": "https://raw.githubusercontent.com/SchaleDB/SchaleDB/main/images/student/portrait/10000.webp",
+          "sourcePage": "https://schaledb.com/student/10000",
+          "fileTitle": "10000.webp",
+          "width": 614,
+          "height": 1024,
+          "mime": "image/webp",
+          "status": "recommended",
+          "reason": "公开游戏资源归档中的单角色原始立绘；已验证文件签名、解码和尺寸",
+          "score": 950
+        }
+      ],
+      "recommended": {
+        "url": "https://raw.githubusercontent.com/SchaleDB/SchaleDB/main/images/student/portrait/10000.webp",
+        "sourcePage": "https://schaledb.com/student/10000",
+        "fileTitle": "10000.webp",
+        "width": 614,
+        "height": 1024,
+        "mime": "image/webp",
+        "status": "recommended",
+        "reason": "公开游戏资源归档中的单角色原始立绘；已验证文件签名、解码和尺寸",
+        "score": 950
+      },
+      "status": "recommended"
+    },
+    {
+      "id": "c080",
+      "name": "空崎日奈",
+      "game": "蔚蓝档案",
+      "aliases": [],
+      "candidates": [
+        {
+          "url": "https://raw.githubusercontent.com/SchaleDB/SchaleDB/main/images/student/portrait/10004.webp",
+          "sourcePage": "https://schaledb.com/student/10004",
+          "fileTitle": "10004.webp",
+          "width": 1400,
+          "height": 927,
+          "mime": "image/webp",
+          "status": "recommended",
+          "reason": "公开游戏资源归档中的单角色原始立绘；已验证文件签名、解码和尺寸",
+          "score": 950
+        }
+      ],
+      "recommended": {
+        "url": "https://raw.githubusercontent.com/SchaleDB/SchaleDB/main/images/student/portrait/10004.webp",
+        "sourcePage": "https://schaledb.com/student/10004",
+        "fileTitle": "10004.webp",
+        "width": 1400,
+        "height": 927,
+        "mime": "image/webp",
+        "status": "recommended",
+        "reason": "公开游戏资源归档中的单角色原始立绘；已验证文件签名、解码和尺寸",
+        "score": 950
+      },
+      "status": "recommended"
+    },
+    {
+      "id": "c081",
+      "name": "天童爱丽丝",
+      "game": "蔚蓝档案",
+      "aliases": [],
+      "candidates": [
+        {
+          "url": "https://raw.githubusercontent.com/SchaleDB/SchaleDB/main/images/student/portrait/10015.webp",
+          "sourcePage": "https://schaledb.com/student/10015",
+          "fileTitle": "10015.webp",
+          "width": 916,
+          "height": 1035,
+          "mime": "image/webp",
+          "status": "recommended",
+          "reason": "公开游戏资源归档中的单角色原始立绘；已验证文件签名、解码和尺寸",
+          "score": 950
+        }
+      ],
+      "recommended": {
+        "url": "https://raw.githubusercontent.com/SchaleDB/SchaleDB/main/images/student/portrait/10015.webp",
+        "sourcePage": "https://schaledb.com/student/10015",
+        "fileTitle": "10015.webp",
+        "width": 916,
+        "height": 1035,
+        "mime": "image/webp",
+        "status": "recommended",
+        "reason": "公开游戏资源归档中的单角色原始立绘；已验证文件签名、解码和尺寸",
+        "score": 950
+      },
+      "status": "recommended"
+    },
+    {
+      "id": "c082",
+      "name": "伊落玛丽",
+      "game": "蔚蓝档案",
+      "aliases": [],
+      "candidates": [
+        {
+          "url": "https://raw.githubusercontent.com/SchaleDB/SchaleDB/main/images/student/portrait/23008.webp",
+          "sourcePage": "https://schaledb.com/student/23008",
+          "fileTitle": "23008.webp",
+          "width": 569,
+          "height": 1263,
+          "mime": "image/webp",
+          "status": "recommended",
+          "reason": "公开游戏资源归档中的单角色原始立绘；已验证文件签名、解码和尺寸",
+          "score": 950
+        }
+      ],
+      "recommended": {
+        "url": "https://raw.githubusercontent.com/SchaleDB/SchaleDB/main/images/student/portrait/23008.webp",
+        "sourcePage": "https://schaledb.com/student/23008",
+        "fileTitle": "23008.webp",
+        "width": 569,
+        "height": 1263,
+        "mime": "image/webp",
+        "status": "recommended",
+        "reason": "公开游戏资源归档中的单角色原始立绘；已验证文件签名、解码和尺寸",
+        "score": 950
+      },
+      "status": "recommended"
+    },
+    {
+      "id": "c083",
+      "name": "一之濑明日奈",
+      "game": "蔚蓝档案",
+      "aliases": [],
+      "candidates": [
+        {
+          "url": "https://raw.githubusercontent.com/SchaleDB/SchaleDB/main/images/student/portrait/16001.webp",
+          "sourcePage": "https://schaledb.com/student/16001",
+          "fileTitle": "16001.webp",
+          "width": 677,
+          "height": 1024,
+          "mime": "image/webp",
+          "status": "recommended",
+          "reason": "公开游戏资源归档中的单角色原始立绘；已验证文件签名、解码和尺寸",
+          "score": 950
+        }
+      ],
+      "recommended": {
+        "url": "https://raw.githubusercontent.com/SchaleDB/SchaleDB/main/images/student/portrait/16001.webp",
+        "sourcePage": "https://schaledb.com/student/16001",
+        "fileTitle": "16001.webp",
+        "width": 677,
+        "height": 1024,
+        "mime": "image/webp",
+        "status": "recommended",
+        "reason": "公开游戏资源归档中的单角色原始立绘；已验证文件签名、解码和尺寸",
+        "score": 950
+      },
+      "status": "recommended"
+    },
+    {
+      "id": "c084",
+      "name": "早濑优香",
+      "game": "蔚蓝档案",
+      "aliases": [],
+      "candidates": [
+        {
+          "url": "https://raw.githubusercontent.com/SchaleDB/SchaleDB/main/images/student/portrait/13010.webp",
+          "sourcePage": "https://schaledb.com/student/13010",
+          "fileTitle": "13010.webp",
+          "width": 503,
+          "height": 1024,
+          "mime": "image/webp",
+          "status": "recommended",
+          "reason": "公开游戏资源归档中的单角色原始立绘；已验证文件签名、解码和尺寸",
+          "score": 950
+        }
+      ],
+      "recommended": {
+        "url": "https://raw.githubusercontent.com/SchaleDB/SchaleDB/main/images/student/portrait/13010.webp",
+        "sourcePage": "https://schaledb.com/student/13010",
+        "fileTitle": "13010.webp",
+        "width": 503,
+        "height": 1024,
+        "mime": "image/webp",
+        "status": "recommended",
+        "reason": "公开游戏资源归档中的单角色原始立绘；已验证文件签名、解码和尺寸",
+        "score": 950
+      },
+      "status": "recommended"
+    },
+    {
+      "id": "c085",
+      "name": "阿尔托莉雅·潘德拉贡",
+      "game": "Fate/Grand Order",
+      "aliases": [],
+      "candidates": [
+        {
+          "url": "https://static.atlasacademy.io/NA/CharaGraph/100100/100100b@1.png",
+          "sourcePage": "https://apps.atlasacademy.io/db/NA/servant/2",
+          "fileTitle": "100100b@1.png",
+          "width": 512,
+          "height": 724,
+          "mime": "image/png",
+          "status": "recommended",
+          "reason": "Atlas Academy 角色页可核验的 FGO 游戏内第三阶段单角色立绘；已验证文件签名、解码和尺寸",
+          "score": 980
+        }
+      ],
+      "recommended": {
+        "url": "https://static.atlasacademy.io/NA/CharaGraph/100100/100100b@1.png",
+        "sourcePage": "https://apps.atlasacademy.io/db/NA/servant/2",
+        "fileTitle": "100100b@1.png",
+        "width": 512,
+        "height": 724,
+        "mime": "image/png",
+        "status": "recommended",
+        "reason": "Atlas Academy 角色页可核验的 FGO 游戏内第三阶段单角色立绘；已验证文件签名、解码和尺寸",
+        "score": 980
+      },
+      "status": "recommended"
+    },
+    {
+      "id": "c086",
+      "name": "玛修·基列莱特",
+      "game": "Fate/Grand Order",
+      "aliases": [],
+      "candidates": [
+        {
+          "url": "https://static.atlasacademy.io/NA/CharaGraph/800100/800100b@1.png",
+          "sourcePage": "https://apps.atlasacademy.io/db/NA/servant/1",
+          "fileTitle": "800100b@1.png",
+          "width": 512,
+          "height": 724,
+          "mime": "image/png",
+          "status": "recommended",
+          "reason": "Atlas Academy 角色页可核验的 FGO 游戏内第三阶段单角色立绘；已验证文件签名、解码和尺寸",
+          "score": 980
+        }
+      ],
+      "recommended": {
+        "url": "https://static.atlasacademy.io/NA/CharaGraph/800100/800100b@1.png",
+        "sourcePage": "https://apps.atlasacademy.io/db/NA/servant/1",
+        "fileTitle": "800100b@1.png",
+        "width": 512,
+        "height": 724,
+        "mime": "image/png",
+        "status": "recommended",
+        "reason": "Atlas Academy 角色页可核验的 FGO 游戏内第三阶段单角色立绘；已验证文件签名、解码和尺寸",
+        "score": 980
+      },
+      "status": "recommended"
+    },
+    {
+      "id": "c087",
+      "name": "斯卡哈",
+      "game": "Fate/Grand Order",
+      "aliases": [],
+      "candidates": [
+        {
+          "url": "https://static.atlasacademy.io/NA/CharaGraph/301300/301300b@1.png",
+          "sourcePage": "https://apps.atlasacademy.io/db/NA/servant/70",
+          "fileTitle": "301300b@1.png",
+          "width": 512,
+          "height": 724,
+          "mime": "image/png",
+          "status": "recommended",
+          "reason": "Atlas Academy 角色页可核验的 FGO 游戏内第三阶段单角色立绘；已验证文件签名、解码和尺寸",
+          "score": 980
+        }
+      ],
+      "recommended": {
+        "url": "https://static.atlasacademy.io/NA/CharaGraph/301300/301300b@1.png",
+        "sourcePage": "https://apps.atlasacademy.io/db/NA/servant/70",
+        "fileTitle": "301300b@1.png",
+        "width": 512,
+        "height": 724,
+        "mime": "image/png",
+        "status": "recommended",
+        "reason": "Atlas Academy 角色页可核验的 FGO 游戏内第三阶段单角色立绘；已验证文件签名、解码和尺寸",
+        "score": 980
+      },
+      "status": "recommended"
+    },
+    {
+      "id": "c088",
+      "name": "伊什塔尔",
+      "game": "Fate/Grand Order",
+      "aliases": [],
+      "candidates": [
+        {
+          "url": "https://static.atlasacademy.io/NA/CharaGraph/202000/202000b@1.png",
+          "sourcePage": "https://apps.atlasacademy.io/db/NA/servant/142",
+          "fileTitle": "202000b@1.png",
+          "width": 512,
+          "height": 724,
+          "mime": "image/png",
+          "status": "recommended",
+          "reason": "Atlas Academy 角色页可核验的 FGO 游戏内第三阶段单角色立绘；已验证文件签名、解码和尺寸",
+          "score": 980
+        }
+      ],
+      "recommended": {
+        "url": "https://static.atlasacademy.io/NA/CharaGraph/202000/202000b@1.png",
+        "sourcePage": "https://apps.atlasacademy.io/db/NA/servant/142",
+        "fileTitle": "202000b@1.png",
+        "width": 512,
+        "height": 724,
+        "mime": "image/png",
+        "status": "recommended",
+        "reason": "Atlas Academy 角色页可核验的 FGO 游戏内第三阶段单角色立绘；已验证文件签名、解码和尺寸",
+        "score": 980
+      },
+      "status": "recommended"
+    },
+    {
+      "id": "c089",
+      "name": "摩根",
+      "game": "Fate/Grand Order",
+      "aliases": [],
+      "candidates": [
+        {
+          "url": "https://static.atlasacademy.io/NA/CharaGraph/704000/704000b@1.png",
+          "sourcePage": "https://apps.atlasacademy.io/db/NA/servant/309",
+          "fileTitle": "704000b@1.png",
+          "width": 512,
+          "height": 724,
+          "mime": "image/png",
+          "status": "recommended",
+          "reason": "Atlas Academy 角色页可核验的 FGO 游戏内第三阶段单角色立绘；已验证文件签名、解码和尺寸",
+          "score": 980
+        }
+      ],
+      "recommended": {
+        "url": "https://static.atlasacademy.io/NA/CharaGraph/704000/704000b@1.png",
+        "sourcePage": "https://apps.atlasacademy.io/db/NA/servant/309",
+        "fileTitle": "704000b@1.png",
+        "width": 512,
+        "height": 724,
+        "mime": "image/png",
+        "status": "recommended",
+        "reason": "Atlas Academy 角色页可核验的 FGO 游戏内第三阶段单角色立绘；已验证文件签名、解码和尺寸",
+        "score": 980
+      },
+      "status": "recommended"
+    },
+    {
+      "id": "c090",
+      "name": "尼禄·克劳狄乌斯",
+      "game": "Fate/Grand Order",
+      "aliases": [],
+      "candidates": [
+        {
+          "url": "https://static.atlasacademy.io/NA/CharaGraph/100500/100500b@1.png",
+          "sourcePage": "https://apps.atlasacademy.io/db/NA/servant/5",
+          "fileTitle": "100500b@1.png",
+          "width": 512,
+          "height": 724,
+          "mime": "image/png",
+          "status": "recommended",
+          "reason": "Atlas Academy 角色页可核验的 FGO 游戏内第三阶段单角色立绘；已验证文件签名、解码和尺寸",
+          "score": 980
+        }
+      ],
+      "recommended": {
+        "url": "https://static.atlasacademy.io/NA/CharaGraph/100500/100500b@1.png",
+        "sourcePage": "https://apps.atlasacademy.io/db/NA/servant/5",
+        "fileTitle": "100500b@1.png",
+        "width": 512,
+        "height": 724,
+        "mime": "image/png",
+        "status": "recommended",
+        "reason": "Atlas Academy 角色页可核验的 FGO 游戏内第三阶段单角色立绘；已验证文件签名、解码和尺寸",
+        "score": 980
+      },
+      "status": "recommended"
+    },
+    {
+      "id": "c091",
+      "name": "贞德",
+      "game": "Fate/Grand Order",
+      "aliases": [],
+      "candidates": [
+        {
+          "url": "https://static.atlasacademy.io/NA/CharaGraph/900100/900100b@1.png",
+          "sourcePage": "https://apps.atlasacademy.io/db/NA/servant/59",
+          "fileTitle": "900100b@1.png",
+          "width": 512,
+          "height": 724,
+          "mime": "image/png",
+          "status": "recommended",
+          "reason": "Atlas Academy 角色页可核验的 FGO 游戏内第三阶段单角色立绘；已验证文件签名、解码和尺寸",
+          "score": 980
+        }
+      ],
+      "recommended": {
+        "url": "https://static.atlasacademy.io/NA/CharaGraph/900100/900100b@1.png",
+        "sourcePage": "https://apps.atlasacademy.io/db/NA/servant/59",
+        "fileTitle": "900100b@1.png",
+        "width": 512,
+        "height": 724,
+        "mime": "image/png",
+        "status": "recommended",
+        "reason": "Atlas Academy 角色页可核验的 FGO 游戏内第三阶段单角色立绘；已验证文件签名、解码和尺寸",
+        "score": 980
+      },
+      "status": "recommended"
+    },
+    {
+      "id": "c092",
+      "name": "梅林",
+      "game": "Fate/Grand Order",
+      "aliases": [],
+      "candidates": [
+        {
+          "url": "https://static.atlasacademy.io/NA/CharaGraph/500800/500800b@1.png",
+          "sourcePage": "https://apps.atlasacademy.io/db/NA/servant/150",
+          "fileTitle": "500800b@1.png",
+          "width": 512,
+          "height": 724,
+          "mime": "image/png",
+          "status": "recommended",
+          "reason": "Atlas Academy 角色页可核验的 FGO 游戏内第三阶段单角色立绘；已验证文件签名、解码和尺寸",
+          "score": 980
+        }
+      ],
+      "recommended": {
+        "url": "https://static.atlasacademy.io/NA/CharaGraph/500800/500800b@1.png",
+        "sourcePage": "https://apps.atlasacademy.io/db/NA/servant/150",
+        "fileTitle": "500800b@1.png",
+        "width": 512,
+        "height": 724,
+        "mime": "image/png",
+        "status": "recommended",
+        "reason": "Atlas Academy 角色页可核验的 FGO 游戏内第三阶段单角色立绘；已验证文件签名、解码和尺寸",
+        "score": 980
+      },
+      "status": "recommended"
+    },
+    {
+      "id": "c093",
+      "name": "BB",
+      "game": "Fate/Grand Order",
+      "aliases": [],
+      "candidates": [
+        {
+          "url": "https://static.atlasacademy.io/NA/CharaGraph/2300100/2300100b@1.png",
+          "sourcePage": "https://apps.atlasacademy.io/db/NA/servant/166",
+          "fileTitle": "2300100b@1.png",
+          "width": 512,
+          "height": 724,
+          "mime": "image/png",
+          "status": "recommended",
+          "reason": "Atlas Academy 角色页可核验的 FGO 游戏内第三阶段单角色立绘；已验证文件签名、解码和尺寸",
+          "score": 980
+        }
+      ],
+      "recommended": {
+        "url": "https://static.atlasacademy.io/NA/CharaGraph/2300100/2300100b@1.png",
+        "sourcePage": "https://apps.atlasacademy.io/db/NA/servant/166",
+        "fileTitle": "2300100b@1.png",
+        "width": 512,
+        "height": 724,
+        "mime": "image/png",
+        "status": "recommended",
+        "reason": "Atlas Academy 角色页可核验的 FGO 游戏内第三阶段单角色立绘；已验证文件签名、解码和尺寸",
+        "score": 980
+      },
+      "status": "recommended"
+    },
+    {
+      "id": "c094",
+      "name": "两仪式",
+      "game": "Fate/Grand Order",
+      "aliases": [],
+      "candidates": [
+        {
+          "url": "https://static.atlasacademy.io/NA/CharaGraph/102800/102800b@1.png",
+          "sourcePage": "https://apps.atlasacademy.io/db/NA/servant/91",
+          "fileTitle": "102800b@1.png",
+          "width": 512,
+          "height": 724,
+          "mime": "image/png",
+          "status": "recommended",
+          "reason": "Atlas Academy 角色页可核验的 FGO 游戏内第三阶段单角色立绘；已验证文件签名、解码和尺寸",
+          "score": 980
+        }
+      ],
+      "recommended": {
+        "url": "https://static.atlasacademy.io/NA/CharaGraph/102800/102800b@1.png",
+        "sourcePage": "https://apps.atlasacademy.io/db/NA/servant/91",
+        "fileTitle": "102800b@1.png",
+        "width": 512,
+        "height": 724,
+        "mime": "image/png",
+        "status": "recommended",
+        "reason": "Atlas Academy 角色页可核验的 FGO 游戏内第三阶段单角色立绘；已验证文件签名、解码和尺寸",
+        "score": 980
+      },
+      "status": "recommended"
+    },
+    {
+      "id": "c095",
+      "name": "阿妮斯",
+      "game": "胜利女神：妮姬",
+      "aliases": [
+        "c012"
+      ],
+      "candidates": [
+        {
+          "url": "https://img.gamewith.jp/article_tools/nikke/gacha/16_cz.jpg",
+          "sourcePage": "https://gamewith.jp/nikke/article/show/370992",
+          "width": 500,
+          "height": 900,
+          "mime": "image/jpeg",
+          "fileTitle": "16_cz.jpg",
+          "status": "recommended",
+          "reason": "公开角色页与 Nikke-db 数据中的 c012 身份映射一致；单角色主立绘已验证签名、解码和尺寸",
+          "score": 970
+        }
+      ],
+      "recommended": {
+        "url": "https://img.gamewith.jp/article_tools/nikke/gacha/16_cz.jpg",
+        "sourcePage": "https://gamewith.jp/nikke/article/show/370992",
+        "width": 500,
+        "height": 900,
+        "mime": "image/jpeg",
+        "fileTitle": "16_cz.jpg",
+        "status": "recommended",
+        "reason": "公开角色页与 Nikke-db 数据中的 c012 身份映射一致；单角色主立绘已验证签名、解码和尺寸",
+        "score": 970
+      },
+      "status": "recommended"
+    },
+    {
+      "id": "c096",
+      "name": "红莲",
+      "game": "胜利女神：妮姬",
+      "aliases": [
+        "c222"
+      ],
+      "candidates": [
+        {
+          "url": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c222_00.png",
+          "sourcePage": "https://nikke-db.github.io/c.html?id=c222",
+          "width": 882,
+          "height": 971,
+          "mime": "image/png",
+          "fileTitle": "c222_00.png",
+          "status": "recommended",
+          "reason": "公开角色页与 Nikke-db 数据中的 c222 身份映射一致；单角色主立绘已验证签名、解码和尺寸",
+          "score": 970
+        }
+      ],
+      "recommended": {
+        "url": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c222_00.png",
+        "sourcePage": "https://nikke-db.github.io/c.html?id=c222",
+        "width": 882,
+        "height": 971,
+        "mime": "image/png",
+        "fileTitle": "c222_00.png",
+        "status": "recommended",
+        "reason": "公开角色页与 Nikke-db 数据中的 c222 身份映射一致；单角色主立绘已验证签名、解码和尺寸",
+        "score": 970
+      },
+      "status": "recommended"
+    },
+    {
+      "id": "c097",
+      "name": "桃乐丝",
+      "game": "胜利女神：妮姬",
+      "aliases": [
+        "c233"
+      ],
+      "candidates": [
+        {
+          "url": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c233_00.png",
+          "sourcePage": "https://nikke-db.github.io/c.html?id=c233",
+          "width": 803,
+          "height": 962,
+          "mime": "image/png",
+          "fileTitle": "c233_00.png",
+          "status": "recommended",
+          "reason": "公开角色页与 Nikke-db 数据中的 c233 身份映射一致；单角色主立绘已验证签名、解码和尺寸",
+          "score": 970
+        }
+      ],
+      "recommended": {
+        "url": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c233_00.png",
+        "sourcePage": "https://nikke-db.github.io/c.html?id=c233",
+        "width": 803,
+        "height": 962,
+        "mime": "image/png",
+        "fileTitle": "c233_00.png",
+        "status": "recommended",
+        "reason": "公开角色页与 Nikke-db 数据中的 c233 身份映射一致；单角色主立绘已验证签名、解码和尺寸",
+        "score": 970
+      },
+      "status": "recommended"
+    },
+    {
+      "id": "c099",
+      "name": "爱丽丝",
+      "game": "胜利女神：妮姬",
+      "aliases": [
+        "c191"
+      ],
+      "candidates": [
+        {
+          "url": "https://img.gamewith.jp/article_tools/nikke/gacha/44_cz.jpg",
+          "sourcePage": "https://gamewith.jp/nikke/article/show/370966",
+          "width": 500,
+          "height": 900,
+          "mime": "image/jpeg",
+          "fileTitle": "44_cz.jpg",
+          "status": "recommended",
+          "reason": "公开角色页与 Nikke-db 数据中的 c191 身份映射一致；单角色主立绘已验证签名、解码和尺寸",
+          "score": 970
+        }
+      ],
+      "recommended": {
+        "url": "https://img.gamewith.jp/article_tools/nikke/gacha/44_cz.jpg",
+        "sourcePage": "https://gamewith.jp/nikke/article/show/370966",
+        "width": 500,
+        "height": 900,
+        "mime": "image/jpeg",
+        "fileTitle": "44_cz.jpg",
+        "status": "recommended",
+        "reason": "公开角色页与 Nikke-db 数据中的 c191 身份映射一致；单角色主立绘已验证签名、解码和尺寸",
+        "score": 970
+      },
+      "status": "recommended"
+    },
+    {
+      "id": "c100",
+      "name": "神罚",
+      "game": "胜利女神：妮姬",
+      "aliases": [
+        "c260"
+      ],
+      "candidates": [
+        {
+          "url": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c260_00.png",
+          "sourcePage": "https://nikke-db.github.io/c.html?id=c260",
+          "width": 821,
+          "height": 1022,
+          "mime": "image/png",
+          "fileTitle": "c260_00.png",
+          "status": "recommended",
+          "reason": "公开角色页与 Nikke-db 数据中的 c260 身份映射一致；单角色主立绘已验证签名、解码和尺寸",
+          "score": 970
+        }
+      ],
+      "recommended": {
+        "url": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c260_00.png",
+        "sourcePage": "https://nikke-db.github.io/c.html?id=c260",
+        "width": 821,
+        "height": 1022,
+        "mime": "image/png",
+        "fileTitle": "c260_00.png",
+        "status": "recommended",
+        "reason": "公开角色页与 Nikke-db 数据中的 c260 身份映射一致；单角色主立绘已验证签名、解码和尺寸",
+        "score": 970
+      },
+      "status": "recommended"
+    },
+    {
+      "id": "c101",
+      "name": "海伦",
+      "game": "胜利女神：妮姬",
+      "aliases": [
+        "c352"
+      ],
+      "candidates": [
+        {
+          "url": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c352_00.png",
+          "sourcePage": "https://nikke-db.github.io/c.html?id=c352",
+          "width": 690,
+          "height": 1024,
+          "mime": "image/png",
+          "fileTitle": "c352_00.png",
+          "status": "recommended",
+          "reason": "公开角色页与 Nikke-db 数据中的 c352 身份映射一致；单角色主立绘已验证签名、解码和尺寸",
+          "score": 970
+        }
+      ],
+      "recommended": {
+        "url": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c352_00.png",
+        "sourcePage": "https://nikke-db.github.io/c.html?id=c352",
+        "width": 690,
+        "height": 1024,
+        "mime": "image/png",
+        "fileTitle": "c352_00.png",
+        "status": "recommended",
+        "reason": "公开角色页与 Nikke-db 数据中的 c352 身份映射一致；单角色主立绘已验证签名、解码和尺寸",
+        "score": 970
+      },
+      "status": "recommended"
+    },
+    {
+      "id": "c102",
+      "name": "诺伊斯",
+      "game": "胜利女神：妮姬",
+      "aliases": [
+        "c430"
+      ],
+      "candidates": [
+        {
+          "url": "https://img.gamewith.jp/article_tools/nikke/gacha/57_cz.jpg",
+          "sourcePage": "https://gamewith.jp/nikke/article/show/370953",
+          "width": 500,
+          "height": 900,
+          "mime": "image/jpeg",
+          "fileTitle": "57_cz.jpg",
+          "status": "recommended",
+          "reason": "公开角色页与 Nikke-db 数据中的 c430 身份映射一致；单角色主立绘已验证签名、解码和尺寸",
+          "score": 970
+        }
+      ],
+      "recommended": {
+        "url": "https://img.gamewith.jp/article_tools/nikke/gacha/57_cz.jpg",
+        "sourcePage": "https://gamewith.jp/nikke/article/show/370953",
+        "width": 500,
+        "height": 900,
+        "mime": "image/jpeg",
+        "fileTitle": "57_cz.jpg",
+        "status": "recommended",
+        "reason": "公开角色页与 Nikke-db 数据中的 c430 身份映射一致；单角色主立绘已验证签名、解码和尺寸",
+        "score": 970
+      },
+      "status": "recommended"
+    },
+    {
+      "id": "c104",
+      "name": "伊莎贝尔",
+      "game": "胜利女神：妮姬",
+      "aliases": [
+        "c231"
+      ],
+      "candidates": [
+        {
+          "url": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c231_00.png",
+          "sourcePage": "https://nikke-db.github.io/c.html?id=c231",
+          "width": 1024,
+          "height": 838,
+          "mime": "image/png",
+          "fileTitle": "c231_00.png",
+          "status": "recommended",
+          "reason": "公开角色页与 Nikke-db 数据中的 c231 身份映射一致；单角色主立绘已验证签名、解码和尺寸",
+          "score": 970
+        }
+      ],
+      "recommended": {
+        "url": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c231_00.png",
+        "sourcePage": "https://nikke-db.github.io/c.html?id=c231",
+        "width": 1024,
+        "height": 838,
+        "mime": "image/png",
+        "fileTitle": "c231_00.png",
+        "status": "recommended",
+        "reason": "公开角色页与 Nikke-db 数据中的 c231 身份映射一致；单角色主立绘已验证签名、解码和尺寸",
+        "score": 970
+      },
+      "status": "recommended"
+    },
+    {
+      "id": "c105",
+      "name": "露西亚·誓焰",
+      "game": "战双帕弥什",
+      "aliases": [],
+      "candidates": [
+        {
+          "url": "https://patchwiki.biligame.com/images/zspms/a/a3/a2qrbegu5uuxkbqivzpu67124qkwj1k.png",
+          "sourcePage": "https://wiki.biligame.com/zspms/%E9%9C%B2%E8%A5%BF%E4%BA%9A%C2%B7%E8%AA%93%E7%84%B0",
+          "fileTitle": "露西亚·誓焰角色立绘.png",
+          "width": 1024,
+          "height": 1096,
+          "mime": "image/png",
+          "status": "recommended",
+          "reason": "战双帕弥什角色资料页直接链接的单角色原始立绘；已验证文件签名、解码和尺寸",
+          "score": 980
+        }
+      ],
+      "recommended": {
+        "url": "https://patchwiki.biligame.com/images/zspms/a/a3/a2qrbegu5uuxkbqivzpu67124qkwj1k.png",
+        "sourcePage": "https://wiki.biligame.com/zspms/%E9%9C%B2%E8%A5%BF%E4%BA%9A%C2%B7%E8%AA%93%E7%84%B0",
+        "fileTitle": "露西亚·誓焰角色立绘.png",
+        "width": 1024,
+        "height": 1096,
+        "mime": "image/png",
+        "status": "recommended",
+        "reason": "战双帕弥什角色资料页直接链接的单角色原始立绘；已验证文件签名、解码和尺寸",
+        "score": 980
+      },
+      "status": "recommended"
+    },
+    {
+      "id": "c106",
+      "name": "丽芙·极昼",
+      "game": "战双帕弥什",
+      "aliases": [],
+      "candidates": [
+        {
+          "url": "https://patchwiki.biligame.com/images/zspms/b/b7/ioapm11xp40z6626hn1pcol6notihec.png",
+          "sourcePage": "https://wiki.biligame.com/zspms/%E4%B8%BD%E8%8A%99%C2%B7%E6%9E%81%E6%98%BC",
+          "fileTitle": "丽芙·极昼角色立绘.png",
+          "width": 1000,
+          "height": 1080,
+          "mime": "image/png",
+          "status": "recommended",
+          "reason": "战双帕弥什角色资料页直接链接的单角色原始立绘；已验证文件签名、解码和尺寸",
+          "score": 980
+        }
+      ],
+      "recommended": {
+        "url": "https://patchwiki.biligame.com/images/zspms/b/b7/ioapm11xp40z6626hn1pcol6notihec.png",
+        "sourcePage": "https://wiki.biligame.com/zspms/%E4%B8%BD%E8%8A%99%C2%B7%E6%9E%81%E6%98%BC",
+        "fileTitle": "丽芙·极昼角色立绘.png",
+        "width": 1000,
+        "height": 1080,
+        "mime": "image/png",
+        "status": "recommended",
+        "reason": "战双帕弥什角色资料页直接链接的单角色原始立绘；已验证文件签名、解码和尺寸",
+        "score": 980
+      },
+      "status": "recommended"
+    },
+    {
+      "id": "c107",
+      "name": "薇拉·绯耀",
+      "game": "战双帕弥什",
+      "aliases": [],
+      "candidates": [
+        {
+          "url": "https://patchwiki.biligame.com/images/zspms/c/c3/91tcc8vo895brl5rsl8pa1t9cvcjuuh.png",
+          "sourcePage": "https://wiki.biligame.com/zspms/%E8%96%87%E6%8B%89%C2%B7%E7%BB%AF%E8%80%80",
+          "fileTitle": "薇拉·绯耀角色立绘.png",
+          "width": 1000,
+          "height": 1080,
+          "mime": "image/png",
+          "status": "recommended",
+          "reason": "战双帕弥什角色资料页直接链接的单角色原始立绘；已验证文件签名、解码和尺寸",
+          "score": 980
+        }
+      ],
+      "recommended": {
+        "url": "https://patchwiki.biligame.com/images/zspms/c/c3/91tcc8vo895brl5rsl8pa1t9cvcjuuh.png",
+        "sourcePage": "https://wiki.biligame.com/zspms/%E8%96%87%E6%8B%89%C2%B7%E7%BB%AF%E8%80%80",
+        "fileTitle": "薇拉·绯耀角色立绘.png",
+        "width": 1000,
+        "height": 1080,
+        "mime": "image/png",
+        "status": "recommended",
+        "reason": "战双帕弥什角色资料页直接链接的单角色原始立绘；已验证文件签名、解码和尺寸",
+        "score": 980
+      },
+      "status": "recommended"
+    },
+    {
+      "id": "c108",
+      "name": "曲·启明",
+      "game": "战双帕弥什",
+      "aliases": [],
+      "candidates": [
+        {
+          "url": "https://patchwiki.biligame.com/images/zspms/f/f1/jy855wl5akfr4kqtl6sms9cppx25b55.png",
+          "sourcePage": "https://wiki.biligame.com/zspms/%E6%9B%B2%C2%B7%E5%90%AF%E6%98%8E",
+          "fileTitle": "曲·启明角色立绘.png",
+          "width": 1000,
+          "height": 1080,
+          "mime": "image/png",
+          "status": "recommended",
+          "reason": "战双帕弥什角色资料页直接链接的单角色原始立绘；已验证文件签名、解码和尺寸",
+          "score": 980
+        }
+      ],
+      "recommended": {
+        "url": "https://patchwiki.biligame.com/images/zspms/f/f1/jy855wl5akfr4kqtl6sms9cppx25b55.png",
+        "sourcePage": "https://wiki.biligame.com/zspms/%E6%9B%B2%C2%B7%E5%90%AF%E6%98%8E",
+        "fileTitle": "曲·启明角色立绘.png",
+        "width": 1000,
+        "height": 1080,
+        "mime": "image/png",
+        "status": "recommended",
+        "reason": "战双帕弥什角色资料页直接链接的单角色原始立绘；已验证文件签名、解码和尺寸",
+        "score": 980
+      },
+      "status": "recommended"
+    },
+    {
+      "id": "c109",
+      "name": "赛琳娜·幻奏",
+      "game": "战双帕弥什",
+      "aliases": [],
+      "candidates": [
+        {
+          "url": "https://patchwiki.biligame.com/images/zspms/1/11/5vi0m5ciks9a2tvbzupxp2f7exgqe9z.png",
+          "sourcePage": "https://wiki.biligame.com/zspms/%E8%B5%9B%E7%90%B3%E5%A8%9C%C2%B7%E5%B9%BB%E5%A5%8F",
+          "fileTitle": "赛琳娜·幻奏角色立绘.png",
+          "width": 1000,
+          "height": 1080,
+          "mime": "image/png",
+          "status": "recommended",
+          "reason": "战双帕弥什角色资料页直接链接的单角色原始立绘；已验证文件签名、解码和尺寸",
+          "score": 980
+        }
+      ],
+      "recommended": {
+        "url": "https://patchwiki.biligame.com/images/zspms/1/11/5vi0m5ciks9a2tvbzupxp2f7exgqe9z.png",
+        "sourcePage": "https://wiki.biligame.com/zspms/%E8%B5%9B%E7%90%B3%E5%A8%9C%C2%B7%E5%B9%BB%E5%A5%8F",
+        "fileTitle": "赛琳娜·幻奏角色立绘.png",
+        "width": 1000,
+        "height": 1080,
+        "mime": "image/png",
+        "status": "recommended",
+        "reason": "战双帕弥什角色资料页直接链接的单角色原始立绘；已验证文件签名、解码和尺寸",
+        "score": 980
+      },
+      "status": "recommended"
+    },
+    {
+      "id": "c110",
+      "name": "罗塞塔·极锋",
+      "game": "战双帕弥什",
+      "aliases": [],
+      "candidates": [
+        {
+          "url": "https://patchwiki.biligame.com/images/zspms/2/23/tul1qiitb5kj126eze91y2o4cxurtdo.png",
+          "sourcePage": "https://wiki.biligame.com/zspms/%E7%BD%97%E5%A1%9E%E5%A1%94%C2%B7%E6%9E%81%E9%94%8B",
+          "fileTitle": "罗塞塔·极锋角色立绘.png",
+          "width": 1000,
+          "height": 1080,
+          "mime": "image/png",
+          "status": "recommended",
+          "reason": "战双帕弥什角色资料页直接链接的单角色原始立绘；已验证文件签名、解码和尺寸",
+          "score": 980
+        }
+      ],
+      "recommended": {
+        "url": "https://patchwiki.biligame.com/images/zspms/2/23/tul1qiitb5kj126eze91y2o4cxurtdo.png",
+        "sourcePage": "https://wiki.biligame.com/zspms/%E7%BD%97%E5%A1%9E%E5%A1%94%C2%B7%E6%9E%81%E9%94%8B",
+        "fileTitle": "罗塞塔·极锋角色立绘.png",
+        "width": 1000,
+        "height": 1080,
+        "mime": "image/png",
+        "status": "recommended",
+        "reason": "战双帕弥什角色资料页直接链接的单角色原始立绘；已验证文件签名、解码和尺寸",
+        "score": 980
+      },
+      "status": "recommended"
+    },
+    {
+      "id": "c111",
+      "name": "含英·檀心",
+      "game": "战双帕弥什",
+      "aliases": [],
+      "candidates": [
+        {
+          "url": "https://patchwiki.biligame.com/images/zspms/8/86/lzabulr4aa25cwaatd6gzqnlteztdnd.png",
+          "sourcePage": "https://wiki.biligame.com/zspms/%E5%90%AB%E8%8B%B1%C2%B7%E6%AA%80%E5%BF%83",
+          "fileTitle": "含英·檀心角色立绘.png",
+          "width": 1000,
+          "height": 1080,
+          "mime": "image/png",
+          "status": "recommended",
+          "reason": "战双帕弥什角色资料页直接链接的单角色原始立绘；已验证文件签名、解码和尺寸",
+          "score": 980
+        }
+      ],
+      "recommended": {
+        "url": "https://patchwiki.biligame.com/images/zspms/8/86/lzabulr4aa25cwaatd6gzqnlteztdnd.png",
+        "sourcePage": "https://wiki.biligame.com/zspms/%E5%90%AB%E8%8B%B1%C2%B7%E6%AA%80%E5%BF%83",
+        "fileTitle": "含英·檀心角色立绘.png",
+        "width": 1000,
+        "height": 1080,
+        "mime": "image/png",
+        "status": "recommended",
+        "reason": "战双帕弥什角色资料页直接链接的单角色原始立绘；已验证文件签名、解码和尺寸",
+        "score": 980
+      },
+      "status": "recommended"
+    },
+    {
+      "id": "c112",
+      "name": "21号·森息",
+      "game": "战双帕弥什",
+      "aliases": [],
+      "candidates": [
+        {
+          "url": "https://patchwiki.biligame.com/images/zspms/a/aa/odeda5czqxpow3pc3vtdb84di6oneuo.png",
+          "sourcePage": "https://wiki.biligame.com/zspms/21%E5%8F%B7%C2%B7%E6%A3%AE%E6%81%AF",
+          "fileTitle": "21号·森息角色立绘.png",
+          "width": 1000,
+          "height": 1080,
+          "mime": "image/png",
+          "status": "recommended",
+          "reason": "战双帕弥什角色资料页直接链接的单角色原始立绘；已验证文件签名、解码和尺寸",
+          "score": 980
+        }
+      ],
+      "recommended": {
+        "url": "https://patchwiki.biligame.com/images/zspms/a/aa/odeda5czqxpow3pc3vtdb84di6oneuo.png",
+        "sourcePage": "https://wiki.biligame.com/zspms/21%E5%8F%B7%C2%B7%E6%A3%AE%E6%81%AF",
+        "fileTitle": "21号·森息角色立绘.png",
+        "width": 1000,
+        "height": 1080,
+        "mime": "image/png",
+        "status": "recommended",
+        "reason": "战双帕弥什角色资料页直接链接的单角色原始立绘；已验证文件签名、解码和尺寸",
+        "score": 980
+      },
+      "status": "recommended"
+    },
+    {
+      "id": "c113",
+      "name": "陈千语",
+      "game": "明日方舟：终末地",
+      "aliases": [],
+      "candidates": [
+        {
+          "url": "https://patchwiki.biligame.com/images/zmd/0/0a/7oc2v8kqfgzaltfwm42og404l57kha4.png",
+          "sourcePage": "https://wiki.biligame.com/zmd/%E9%99%88%E5%8D%83%E8%AF%AD",
+          "fileTitle": "陈千语角色立绘.png",
+          "width": 1000,
+          "height": 1000,
+          "mime": "image/png",
+          "status": "recommended",
+          "reason": "终末地角色资料页直接链接的单角色原始立绘；已验证文件签名、解码和尺寸",
+          "score": 980
+        }
+      ],
+      "recommended": {
+        "url": "https://patchwiki.biligame.com/images/zmd/0/0a/7oc2v8kqfgzaltfwm42og404l57kha4.png",
+        "sourcePage": "https://wiki.biligame.com/zmd/%E9%99%88%E5%8D%83%E8%AF%AD",
+        "fileTitle": "陈千语角色立绘.png",
+        "width": 1000,
+        "height": 1000,
+        "mime": "image/png",
+        "status": "recommended",
+        "reason": "终末地角色资料页直接链接的单角色原始立绘；已验证文件签名、解码和尺寸",
+        "score": 980
+      },
+      "status": "recommended"
+    },
+    {
+      "id": "c114",
+      "name": "管理员",
+      "game": "明日方舟：终末地",
+      "aliases": [],
+      "candidates": [
+        {
+          "url": "https://patchwiki.biligame.com/images/zmd/c/ca/ofikhhgdqb65qfrhl42dm0fdd08fwpd.png",
+          "sourcePage": "https://wiki.biligame.com/zmd/%E7%AE%A1%E7%90%86%E5%91%98",
+          "fileTitle": "管理员角色立绘.png",
+          "width": 1000,
+          "height": 1000,
+          "mime": "image/png",
+          "status": "recommended",
+          "reason": "终末地角色资料页直接链接的单角色原始立绘；已验证文件签名、解码和尺寸",
+          "score": 980
+        }
+      ],
+      "recommended": {
+        "url": "https://patchwiki.biligame.com/images/zmd/c/ca/ofikhhgdqb65qfrhl42dm0fdd08fwpd.png",
+        "sourcePage": "https://wiki.biligame.com/zmd/%E7%AE%A1%E7%90%86%E5%91%98",
+        "fileTitle": "管理员角色立绘.png",
+        "width": 1000,
+        "height": 1000,
+        "mime": "image/png",
+        "status": "recommended",
+        "reason": "终末地角色资料页直接链接的单角色原始立绘；已验证文件签名、解码和尺寸",
+        "score": 980
+      },
+      "status": "recommended"
+    },
+    {
+      "id": "c115",
+      "name": "赛希",
+      "game": "明日方舟：终末地",
+      "aliases": [],
+      "candidates": [
+        {
+          "url": "https://patchwiki.biligame.com/images/zmd/0/0e/34s7b2cdxfts8o3mxcg5j4r2nijqtmg.png",
+          "sourcePage": "https://wiki.biligame.com/zmd/%E8%B5%9B%E5%B8%8C",
+          "fileTitle": "赛希角色立绘.png",
+          "width": 1000,
+          "height": 1000,
+          "mime": "image/png",
+          "status": "recommended",
+          "reason": "终末地角色资料页直接链接的单角色原始立绘；已验证文件签名、解码和尺寸",
+          "score": 980
+        }
+      ],
+      "recommended": {
+        "url": "https://patchwiki.biligame.com/images/zmd/0/0e/34s7b2cdxfts8o3mxcg5j4r2nijqtmg.png",
+        "sourcePage": "https://wiki.biligame.com/zmd/%E8%B5%9B%E5%B8%8C",
+        "fileTitle": "赛希角色立绘.png",
+        "width": 1000,
+        "height": 1000,
+        "mime": "image/png",
+        "status": "recommended",
+        "reason": "终末地角色资料页直接链接的单角色原始立绘；已验证文件签名、解码和尺寸",
+        "score": 980
+      },
+      "status": "recommended"
+    },
+    {
+      "id": "c116",
+      "name": "佩丽卡",
+      "game": "明日方舟：终末地",
+      "aliases": [],
+      "candidates": [
+        {
+          "url": "https://patchwiki.biligame.com/images/zmd/8/88/5bh5tuwy2oloxisg1jg9ezzfe9foupm.png",
+          "sourcePage": "https://wiki.biligame.com/zmd/%E4%BD%A9%E4%B8%BD%E5%8D%A1",
+          "fileTitle": "佩丽卡角色立绘.png",
+          "width": 1000,
+          "height": 1000,
+          "mime": "image/png",
+          "status": "recommended",
+          "reason": "终末地角色资料页直接链接的单角色原始立绘；已验证文件签名、解码和尺寸",
+          "score": 980
+        }
+      ],
+      "recommended": {
+        "url": "https://patchwiki.biligame.com/images/zmd/8/88/5bh5tuwy2oloxisg1jg9ezzfe9foupm.png",
+        "sourcePage": "https://wiki.biligame.com/zmd/%E4%BD%A9%E4%B8%BD%E5%8D%A1",
+        "fileTitle": "佩丽卡角色立绘.png",
+        "width": 1000,
+        "height": 1000,
+        "mime": "image/png",
+        "status": "recommended",
+        "reason": "终末地角色资料页直接链接的单角色原始立绘；已验证文件签名、解码和尺寸",
+        "score": 980
+      },
+      "status": "recommended"
+    },
+    {
+      "id": "c117",
+      "name": "安洁莉娜",
+      "game": "明日方舟：终末地",
+      "aliases": [],
+      "candidates": [
+        {
+          "url": "https://dotgg.gg/wp-content/uploads/sites/16/2024/03/image-61-13-849x1024.jpg",
+          "sourcePage": "https://endfield.gg/introduction/",
+          "fileTitle": "安洁莉娜角色立绘.jpg",
+          "width": 849,
+          "height": 1024,
+          "mime": "image/webp",
+          "status": "recommended",
+          "reason": "终末地角色资料页直接链接的单角色原始立绘；已验证文件签名、解码和尺寸",
+          "score": 980
+        }
+      ],
+      "recommended": {
+        "url": "https://dotgg.gg/wp-content/uploads/sites/16/2024/03/image-61-13-849x1024.jpg",
+        "sourcePage": "https://endfield.gg/introduction/",
+        "fileTitle": "安洁莉娜角色立绘.jpg",
+        "width": 849,
+        "height": 1024,
+        "mime": "image/webp",
+        "status": "recommended",
+        "reason": "终末地角色资料页直接链接的单角色原始立绘；已验证文件签名、解码和尺寸",
+        "score": 980
+      },
+      "status": "recommended"
+    },
+    {
+      "id": "c118",
+      "name": "黎风",
+      "game": "明日方舟：终末地",
+      "aliases": [],
+      "candidates": [
+        {
+          "url": "https://patchwiki.biligame.com/images/zmd/5/5d/7flbuypbon8y8m55euyppps60t74ws3.png",
+          "sourcePage": "https://wiki.biligame.com/zmd/%E9%BB%8E%E9%A3%8E",
+          "fileTitle": "黎风角色立绘.png",
+          "width": 1000,
+          "height": 1000,
+          "mime": "image/png",
+          "status": "recommended",
+          "reason": "终末地角色资料页直接链接的单角色原始立绘；已验证文件签名、解码和尺寸",
+          "score": 980
+        }
+      ],
+      "recommended": {
+        "url": "https://patchwiki.biligame.com/images/zmd/5/5d/7flbuypbon8y8m55euyppps60t74ws3.png",
+        "sourcePage": "https://wiki.biligame.com/zmd/%E9%BB%8E%E9%A3%8E",
+        "fileTitle": "黎风角色立绘.png",
+        "width": 1000,
+        "height": 1000,
+        "mime": "image/png",
+        "status": "recommended",
+        "reason": "终末地角色资料页直接链接的单角色原始立绘；已验证文件签名、解码和尺寸",
+        "score": 980
+      },
+      "status": "recommended"
+    },
+    {
+      "id": "c119",
+      "name": "艾维文娜",
+      "game": "明日方舟：终末地",
+      "aliases": [],
+      "candidates": [
+        {
+          "url": "https://patchwiki.biligame.com/images/zmd/e/ee/loxtv8kxlkbxbw9s9s1uany6nbgvz1g.png",
+          "sourcePage": "https://wiki.biligame.com/zmd/%E8%89%BE%E7%BB%B4%E6%96%87%E5%A8%9C",
+          "fileTitle": "艾维文娜角色立绘.png",
+          "width": 1000,
+          "height": 1000,
+          "mime": "image/png",
+          "status": "recommended",
+          "reason": "终末地角色资料页直接链接的单角色原始立绘；已验证文件签名、解码和尺寸",
+          "score": 980
+        }
+      ],
+      "recommended": {
+        "url": "https://patchwiki.biligame.com/images/zmd/e/ee/loxtv8kxlkbxbw9s9s1uany6nbgvz1g.png",
+        "sourcePage": "https://wiki.biligame.com/zmd/%E8%89%BE%E7%BB%B4%E6%96%87%E5%A8%9C",
+        "fileTitle": "艾维文娜角色立绘.png",
+        "width": 1000,
+        "height": 1000,
+        "mime": "image/png",
+        "status": "recommended",
+        "reason": "终末地角色资料页直接链接的单角色原始立绘；已验证文件签名、解码和尺寸",
+        "score": 980
+      },
+      "status": "recommended"
+    },
+    {
+      "id": "c120",
+      "name": "余烬",
+      "game": "明日方舟：终末地",
+      "aliases": [],
+      "candidates": [
+        {
+          "url": "https://patchwiki.biligame.com/images/zmd/4/4f/opip8l1ltjgwul2ixz6s4eaihiwzs9k.png",
+          "sourcePage": "https://wiki.biligame.com/zmd/%E4%BD%99%E7%83%AC",
+          "fileTitle": "余烬角色立绘.png",
+          "width": 1000,
+          "height": 1000,
+          "mime": "image/png",
+          "status": "recommended",
+          "reason": "终末地角色资料页直接链接的单角色原始立绘；已验证文件签名、解码和尺寸",
+          "score": 980
+        }
+      ],
+      "recommended": {
+        "url": "https://patchwiki.biligame.com/images/zmd/4/4f/opip8l1ltjgwul2ixz6s4eaihiwzs9k.png",
+        "sourcePage": "https://wiki.biligame.com/zmd/%E4%BD%99%E7%83%AC",
+        "fileTitle": "余烬角色立绘.png",
+        "width": 1000,
+        "height": 1000,
+        "mime": "image/png",
+        "status": "recommended",
+        "reason": "终末地角色资料页直接链接的单角色原始立绘；已验证文件签名、解码和尺寸",
+        "score": 980
+      },
+      "status": "recommended"
+    },
+    {
+      "id": "c121",
+      "name": "安魂曲",
+      "game": "异环",
+      "aliases": [
+        "Lacrimosa"
+      ],
+      "candidates": [
+        {
+          "url": "https://cdn.prydwen.gg/images/nte/characters/lacrimosa_full.webp",
+          "sourcePage": "https://www.prydwen.gg/neverness-to-everness/characters/lacrimosa",
+          "fileTitle": "Lacrimosa full art.webp",
+          "width": 1000,
+          "height": 1000,
+          "mime": "image/webp",
+          "status": "recommended",
+          "reason": "角色专页直接引用的安魂曲无字单人透明主图；已与《异环》官网和官方角色档案交叉核对身份，并验证签名、解码和尺寸",
+          "score": 990
+        }
+      ],
+      "recommended": {
+        "url": "https://cdn.prydwen.gg/images/nte/characters/lacrimosa_full.webp",
+        "sourcePage": "https://www.prydwen.gg/neverness-to-everness/characters/lacrimosa",
+        "fileTitle": "Lacrimosa full art.webp",
+        "width": 1000,
+        "height": 1000,
+        "mime": "image/webp",
+        "status": "recommended",
+        "reason": "角色专页直接引用的安魂曲无字单人透明主图；已与《异环》官网和官方角色档案交叉核对身份，并验证签名、解码和尺寸",
+        "score": 990
+      },
+      "status": "recommended"
+    },
+    {
+      "id": "c125",
+      "name": "白藏",
+      "game": "异环",
+      "aliases": [
+        "Baicang"
+      ],
+      "candidates": [
+        {
+          "url": "https://cdn.prydwen.gg/images/nte/characters/baicang_full.webp",
+          "sourcePage": "https://www.prydwen.gg/neverness-to-everness/characters/baicang",
+          "fileTitle": "Baicang full art.webp",
+          "width": 1000,
+          "height": 1000,
+          "mime": "image/webp",
+          "status": "recommended",
+          "reason": "角色专页直接引用的白藏无字单人透明主图；已与《异环》现行角色图鉴交叉核对身份，并验证签名、解码和尺寸",
+          "score": 990
+        }
+      ],
+      "recommended": {
+        "url": "https://cdn.prydwen.gg/images/nte/characters/baicang_full.webp",
+        "sourcePage": "https://www.prydwen.gg/neverness-to-everness/characters/baicang",
+        "fileTitle": "Baicang full art.webp",
+        "width": 1000,
+        "height": 1000,
+        "mime": "image/webp",
+        "status": "recommended",
+        "reason": "角色专页直接引用的白藏无字单人透明主图；已与《异环》现行角色图鉴交叉核对身份，并验证签名、解码和尺寸",
+        "score": 990
+      },
+      "status": "recommended"
+    },
+    {
+      "id": "c126",
+      "name": "法帝娅",
+      "game": "异环",
+      "aliases": [
+        "Fadia"
+      ],
+      "candidates": [
+        {
+          "url": "https://cdn.prydwen.gg/images/nte/characters/fadia_full.webp",
+          "sourcePage": "https://www.prydwen.gg/neverness-to-everness/characters/fadia",
+          "fileTitle": "Fadia full art.webp",
+          "width": 1000,
+          "height": 1000,
+          "mime": "image/webp",
+          "status": "recommended",
+          "reason": "角色专页直接引用的法帝娅无字单人透明主图；已与《异环》现行角色图鉴交叉核对身份，并验证签名、解码和尺寸",
+          "score": 990
+        }
+      ],
+      "recommended": {
+        "url": "https://cdn.prydwen.gg/images/nte/characters/fadia_full.webp",
+        "sourcePage": "https://www.prydwen.gg/neverness-to-everness/characters/fadia",
+        "fileTitle": "Fadia full art.webp",
+        "width": 1000,
+        "height": 1000,
+        "mime": "image/webp",
+        "status": "recommended",
+        "reason": "角色专页直接引用的法帝娅无字单人透明主图；已与《异环》现行角色图鉴交叉核对身份，并验证签名、解码和尺寸",
+        "score": 990
+      },
+      "status": "recommended"
+    },
+    {
+      "id": "c127",
+      "name": "哈索尔",
+      "game": "异环",
+      "aliases": [
+        "Hathor"
+      ],
+      "candidates": [
+        {
+          "url": "https://cdn.prydwen.gg/images/nte/characters/hathor_full.webp",
+          "sourcePage": "https://www.prydwen.gg/neverness-to-everness/characters/hathor",
+          "fileTitle": "Hathor full art.webp",
+          "width": 1000,
+          "height": 1000,
+          "mime": "image/webp",
+          "status": "recommended",
+          "reason": "角色专页直接引用的哈索尔无字单人透明主图；已与《异环》现行角色图鉴交叉核对身份，并验证签名、解码和尺寸",
+          "score": 990
+        }
+      ],
+      "recommended": {
+        "url": "https://cdn.prydwen.gg/images/nte/characters/hathor_full.webp",
+        "sourcePage": "https://www.prydwen.gg/neverness-to-everness/characters/hathor",
+        "fileTitle": "Hathor full art.webp",
+        "width": 1000,
+        "height": 1000,
+        "mime": "image/webp",
+        "status": "recommended",
+        "reason": "角色专页直接引用的哈索尔无字单人透明主图；已与《异环》现行角色图鉴交叉核对身份，并验证签名、解码和尺寸",
+        "score": 990
+      },
+      "status": "recommended"
+    },
+    {
+      "id": "c128",
+      "name": "九原",
+      "game": "异环",
+      "aliases": [
+        "Jiuyuan"
+      ],
+      "candidates": [
+        {
+          "url": "https://cdn.prydwen.gg/images/nte/characters/jiuyuan_full.webp",
+          "sourcePage": "https://www.prydwen.gg/neverness-to-everness/characters/jiuyuan",
+          "fileTitle": "Jiuyuan full art.webp",
+          "width": 1000,
+          "height": 1000,
+          "mime": "image/webp",
+          "status": "recommended",
+          "reason": "角色专页直接引用的九原无字单人透明主图；已与《异环》现行角色图鉴交叉核对身份，并验证签名、解码和尺寸",
+          "score": 990
+        }
+      ],
+      "recommended": {
+        "url": "https://cdn.prydwen.gg/images/nte/characters/jiuyuan_full.webp",
+        "sourcePage": "https://www.prydwen.gg/neverness-to-everness/characters/jiuyuan",
+        "fileTitle": "Jiuyuan full art.webp",
+        "width": 1000,
+        "height": 1000,
+        "mime": "image/webp",
+        "status": "recommended",
+        "reason": "角色专页直接引用的九原无字单人透明主图；已与《异环》现行角色图鉴交叉核对身份，并验证签名、解码和尺寸",
+        "score": 990
+      },
+      "status": "recommended"
+    },
+    {
+      "id": "c065",
+      "name": "企业",
+      "game": "碧蓝航线",
+      "aliases": [],
+      "candidates": [
+        {
+          "url": "https://patchwiki.biligame.com/images/blhx/a/a2/1lwxg8c62po6ldaqhzz6ahtz0jshdsq.jpg",
+          "sourcePage": "https://wiki.biligame.com/blhx/%E4%BC%81%E4%B8%9A",
+          "fileTitle": "企业原始角色立绘.jpg",
+          "width": 1000,
+          "height": 1500,
+          "mime": "image/jpeg",
+          "status": "recommended",
+          "reason": "逐图核对为对应舰船的游戏原始单角色立绘；已验证文件签名、解码、尺寸及角色身份",
+          "score": 990
+        }
+      ],
+      "recommended": {
+        "url": "https://patchwiki.biligame.com/images/blhx/a/a2/1lwxg8c62po6ldaqhzz6ahtz0jshdsq.jpg",
+        "sourcePage": "https://wiki.biligame.com/blhx/%E4%BC%81%E4%B8%9A",
+        "fileTitle": "企业原始角色立绘.jpg",
+        "width": 1000,
+        "height": 1500,
+        "mime": "image/jpeg",
+        "status": "recommended",
+        "reason": "逐图核对为对应舰船的游戏原始单角色立绘；已验证文件签名、解码、尺寸及角色身份",
+        "score": 990
+      },
+      "status": "recommended"
+    },
+    {
+      "id": "c066",
+      "name": "能代",
+      "game": "碧蓝航线",
+      "aliases": [],
+      "candidates": [
+        {
+          "url": "https://patchwiki.biligame.com/images/blhx/2/2d/td3lgyav6scdx5jnqjhrmvrf5fv5yte.jpg",
+          "sourcePage": "https://wiki.biligame.com/blhx/%E8%83%BD%E4%BB%A3",
+          "fileTitle": "能代原始角色立绘.jpg",
+          "width": 1000,
+          "height": 1500,
+          "mime": "image/jpeg",
+          "status": "recommended",
+          "reason": "逐图核对为对应舰船的游戏原始单角色立绘；已验证文件签名、解码、尺寸及角色身份",
+          "score": 990
+        }
+      ],
+      "recommended": {
+        "url": "https://patchwiki.biligame.com/images/blhx/2/2d/td3lgyav6scdx5jnqjhrmvrf5fv5yte.jpg",
+        "sourcePage": "https://wiki.biligame.com/blhx/%E8%83%BD%E4%BB%A3",
+        "fileTitle": "能代原始角色立绘.jpg",
+        "width": 1000,
+        "height": 1500,
+        "mime": "image/jpeg",
+        "status": "recommended",
+        "reason": "逐图核对为对应舰船的游戏原始单角色立绘；已验证文件签名、解码、尺寸及角色身份",
+        "score": 990
+      },
+      "status": "recommended"
+    },
+    {
+      "id": "c067",
+      "name": "大凤",
+      "game": "碧蓝航线",
+      "aliases": [],
+      "candidates": [
+        {
+          "url": "https://patchwiki.biligame.com/images/blhx/f/fe/9bemp0mmhbqujua87wfjkcpff4qryt2.jpg",
+          "sourcePage": "https://wiki.biligame.com/blhx/%E5%A4%A7%E5%87%A4",
+          "fileTitle": "大凤原始角色立绘.jpg",
+          "width": 1000,
+          "height": 1500,
+          "mime": "image/jpeg",
+          "status": "recommended",
+          "reason": "逐图核对为对应舰船的游戏原始单角色立绘；已验证文件签名、解码、尺寸及角色身份",
+          "score": 990
+        }
+      ],
+      "recommended": {
+        "url": "https://patchwiki.biligame.com/images/blhx/f/fe/9bemp0mmhbqujua87wfjkcpff4qryt2.jpg",
+        "sourcePage": "https://wiki.biligame.com/blhx/%E5%A4%A7%E5%87%A4",
+        "fileTitle": "大凤原始角色立绘.jpg",
+        "width": 1000,
+        "height": 1500,
+        "mime": "image/jpeg",
+        "status": "recommended",
+        "reason": "逐图核对为对应舰船的游戏原始单角色立绘；已验证文件签名、解码、尺寸及角色身份",
+        "score": 990
+      },
+      "status": "recommended"
+    },
+    {
+      "id": "c068",
+      "name": "圣路易斯",
+      "game": "碧蓝航线",
+      "aliases": [],
+      "candidates": [
+        {
+          "url": "https://azurlane.netojuu.com/images/4/44/St._Louis.png",
+          "sourcePage": "https://azurlane.koumakan.jp/wiki/St._Louis",
+          "fileTitle": "圣路易斯原始角色立绘.png",
+          "width": 1356,
+          "height": 2048,
+          "mime": "image/png",
+          "status": "recommended",
+          "reason": "逐图核对为对应舰船的游戏原始单角色立绘；已验证文件签名、解码、尺寸及角色身份",
+          "score": 990
+        }
+      ],
+      "recommended": {
+        "url": "https://azurlane.netojuu.com/images/4/44/St._Louis.png",
+        "sourcePage": "https://azurlane.koumakan.jp/wiki/St._Louis",
+        "fileTitle": "圣路易斯原始角色立绘.png",
+        "width": 1356,
+        "height": 2048,
+        "mime": "image/png",
+        "status": "recommended",
+        "reason": "逐图核对为对应舰船的游戏原始单角色立绘；已验证文件签名、解码、尺寸及角色身份",
+        "score": 990
+      },
+      "status": "recommended"
+    },
+    {
+      "id": "c069",
+      "name": "信浓",
+      "game": "碧蓝航线",
+      "aliases": [],
+      "candidates": [
+        {
+          "url": "https://patchwiki.biligame.com/images/blhx/6/66/pqzhgas84hebtddal3kf8n9ibp79moc.jpg",
+          "sourcePage": "https://wiki.biligame.com/blhx/%E4%BF%A1%E6%B5%93",
+          "fileTitle": "信浓原始角色立绘.jpg",
+          "width": 1000,
+          "height": 1500,
+          "mime": "image/jpeg",
+          "status": "recommended",
+          "reason": "逐图核对为对应舰船的游戏原始单角色立绘；已验证文件签名、解码、尺寸及角色身份",
+          "score": 990
+        }
+      ],
+      "recommended": {
+        "url": "https://patchwiki.biligame.com/images/blhx/6/66/pqzhgas84hebtddal3kf8n9ibp79moc.jpg",
+        "sourcePage": "https://wiki.biligame.com/blhx/%E4%BF%A1%E6%B5%93",
+        "fileTitle": "信浓原始角色立绘.jpg",
+        "width": 1000,
+        "height": 1500,
+        "mime": "image/jpeg",
+        "status": "recommended",
+        "reason": "逐图核对为对应舰船的游戏原始单角色立绘；已验证文件签名、解码、尺寸及角色身份",
+        "score": 990
+      },
+      "status": "recommended"
+    },
+    {
+      "id": "c070",
+      "name": "可畏",
+      "game": "碧蓝航线",
+      "aliases": [],
+      "candidates": [
+        {
+          "url": "https://patchwiki.biligame.com/images/blhx/e/e9/9a6zlv9fdyqbkvvrs91nvcc6hej1qsl.jpg",
+          "sourcePage": "https://wiki.biligame.com/blhx/%E5%8F%AF%E7%95%8F",
+          "fileTitle": "可畏原始角色立绘.jpg",
+          "width": 1000,
+          "height": 1500,
+          "mime": "image/jpeg",
+          "status": "recommended",
+          "reason": "逐图核对为对应舰船的游戏原始单角色立绘；已验证文件签名、解码、尺寸及角色身份",
+          "score": 990
+        }
+      ],
+      "recommended": {
+        "url": "https://patchwiki.biligame.com/images/blhx/e/e9/9a6zlv9fdyqbkvvrs91nvcc6hej1qsl.jpg",
+        "sourcePage": "https://wiki.biligame.com/blhx/%E5%8F%AF%E7%95%8F",
+        "fileTitle": "可畏原始角色立绘.jpg",
+        "width": 1000,
+        "height": 1500,
+        "mime": "image/jpeg",
+        "status": "recommended",
+        "reason": "逐图核对为对应舰船的游戏原始单角色立绘；已验证文件签名、解码、尺寸及角色身份",
+        "score": 990
+      },
+      "status": "recommended"
+    },
+    {
+      "id": "c071",
+      "name": "花园",
+      "game": "碧蓝航线",
+      "aliases": [],
+      "candidates": [
+        {
+          "url": "https://patchwiki.biligame.com/images/blhx/d/d0/9p78v8i8gh6nqseoggy50zh94r42p6f.jpg",
+          "sourcePage": "https://wiki.biligame.com/blhx/%E8%8A%B1%E5%9B%AD",
+          "fileTitle": "花园原始角色立绘.jpg",
+          "width": 1000,
+          "height": 1500,
+          "mime": "image/jpeg",
+          "status": "recommended",
+          "reason": "逐图核对为对应舰船的游戏原始单角色立绘；已验证文件签名、解码、尺寸及角色身份",
+          "score": 990
+        }
+      ],
+      "recommended": {
+        "url": "https://patchwiki.biligame.com/images/blhx/d/d0/9p78v8i8gh6nqseoggy50zh94r42p6f.jpg",
+        "sourcePage": "https://wiki.biligame.com/blhx/%E8%8A%B1%E5%9B%AD",
+        "fileTitle": "花园原始角色立绘.jpg",
+        "width": 1000,
+        "height": 1500,
+        "mime": "image/jpeg",
+        "status": "recommended",
+        "reason": "逐图核对为对应舰船的游戏原始单角色立绘；已验证文件签名、解码、尺寸及角色身份",
+        "score": 990
+      },
+      "status": "recommended"
+    },
+    {
+      "id": "c072",
+      "name": "武藏",
+      "game": "碧蓝航线",
+      "aliases": [],
+      "candidates": [
+        {
+          "url": "https://patchwiki.biligame.com/images/blhx/f/f6/0wfabudfnxluzwf6pmsdyo0c3quhftl.jpg",
+          "sourcePage": "https://wiki.biligame.com/blhx/%E6%AD%A6%E8%97%8F",
+          "fileTitle": "武藏原始角色立绘.jpg",
+          "width": 1000,
+          "height": 1500,
+          "mime": "image/jpeg",
+          "status": "recommended",
+          "reason": "逐图核对为对应舰船的游戏原始单角色立绘；已验证文件签名、解码、尺寸及角色身份",
+          "score": 990
+        }
+      ],
+      "recommended": {
+        "url": "https://patchwiki.biligame.com/images/blhx/f/f6/0wfabudfnxluzwf6pmsdyo0c3quhftl.jpg",
+        "sourcePage": "https://wiki.biligame.com/blhx/%E6%AD%A6%E8%97%8F",
+        "fileTitle": "武藏原始角色立绘.jpg",
+        "width": 1000,
+        "height": 1500,
+        "mime": "image/jpeg",
+        "status": "recommended",
+        "reason": "逐图核对为对应舰船的游戏原始单角色立绘；已验证文件签名、解码、尺寸及角色身份",
+        "score": 990
+      },
+      "status": "recommended"
+    },
+    {
+      "id": "c073",
+      "name": "阿尔萨斯",
+      "game": "碧蓝航线",
+      "aliases": [],
+      "candidates": [
+        {
+          "url": "https://patchwiki.biligame.com/images/blhx/c/c3/9pr2325f49fit6qe3z1mcagiy1ylfbx.jpg",
+          "sourcePage": "https://wiki.biligame.com/blhx/%E9%98%BF%E5%B0%94%E8%90%A8%E6%96%AF",
+          "fileTitle": "阿尔萨斯原始角色立绘.jpg",
+          "width": 1000,
+          "height": 1500,
+          "mime": "image/jpeg",
+          "status": "recommended",
+          "reason": "逐图核对为对应舰船的游戏原始单角色立绘；已验证文件签名、解码、尺寸及角色身份",
+          "score": 990
+        }
+      ],
+      "recommended": {
+        "url": "https://patchwiki.biligame.com/images/blhx/c/c3/9pr2325f49fit6qe3z1mcagiy1ylfbx.jpg",
+        "sourcePage": "https://wiki.biligame.com/blhx/%E9%98%BF%E5%B0%94%E8%90%A8%E6%96%AF",
+        "fileTitle": "阿尔萨斯原始角色立绘.jpg",
+        "width": 1000,
+        "height": 1500,
+        "mime": "image/jpeg",
+        "status": "recommended",
+        "reason": "逐图核对为对应舰船的游戏原始单角色立绘；已验证文件签名、解码、尺寸及角色身份",
+        "score": 990
+      },
+      "status": "recommended"
+    },
+    {
+      "id": "c074",
+      "name": "贝尔法斯特",
+      "game": "碧蓝航线",
+      "aliases": [],
+      "candidates": [
+        {
+          "url": "https://azurlane.netojuu.com/images/8/86/Belfast.png",
+          "sourcePage": "https://azurlane.koumakan.jp/wiki/Belfast",
+          "fileTitle": "贝尔法斯特原始角色立绘.png",
+          "width": 790,
+          "height": 1023,
+          "mime": "image/png",
+          "status": "recommended",
+          "reason": "逐图核对为对应舰船的游戏原始单角色立绘；已验证文件签名、解码、尺寸及角色身份",
+          "score": 990
+        }
+      ],
+      "recommended": {
+        "url": "https://azurlane.netojuu.com/images/8/86/Belfast.png",
+        "sourcePage": "https://azurlane.koumakan.jp/wiki/Belfast",
+        "fileTitle": "贝尔法斯特原始角色立绘.png",
+        "width": 790,
+        "height": 1023,
+        "mime": "image/png",
+        "status": "recommended",
+        "reason": "逐图核对为对应舰船的游戏原始单角色立绘；已验证文件签名、解码、尺寸及角色身份",
+        "score": 990
+      },
+      "status": "recommended"
+    }
+  ],
+  "failures": [
+    {
+      "game": "Fate/Grand Order",
+      "reason": "HTTP 567"
+    },
+    {
+      "game": "胜利女神：妮姬",
+      "reason": "HTTP 567"
+    },
+    {
+      "game": "战双帕弥什",
+      "reason": "HTTP 567"
+    },
+    {
+      "game": "明日方舟：终末地",
+      "reason": "非 JSON 响应：text/html; charset=UTF-8"
+    }
+  ]
+}

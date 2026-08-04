@@ -1,0 +1,3087 @@
+{
+  "generatedAt": "2026-07-30T20:08:12.894Z",
+  "crawler": "FuMoe2026ArtworkBot/1.0 (+https://fumoe.example.com/artwork-policy; low-rate official-public-artwork-fetcher)",
+  "games": {
+    "原神": {
+      "pages": [
+        "https://genshin.hoyoverse.com/zh-cn/"
+      ],
+      "assetsFound": 3
+    },
+    "崩坏：星穹铁道": {
+      "pages": [
+        "https://hsr.hoyoverse.com/zh-cn/"
+      ],
+      "assetsFound": 1
+    },
+    "绝区零": {
+      "pages": [
+        "https://zenless.hoyoverse.com/zh-cn/main"
+      ],
+      "assetsFound": 1
+    },
+    "鸣潮": {
+      "pages": [
+        "https://wutheringwaves.kurogames.com/zh-tw/"
+      ],
+      "assetsFound": 0
+    },
+    "碧蓝航线": {
+      "pages": [
+        "https://azurlane.yo-star.com/"
+      ],
+      "assetsFound": 0
+    },
+    "蔚蓝档案": {
+      "pages": [
+        "https://bluearchive-cn.com/official"
+      ],
+      "assetsFound": 0
+    },
+    "Fate/Grand Order": {
+      "pages": [
+        "https://www.fate-go.jp/servant/"
+      ],
+      "assetsFound": 0
+    },
+    "胜利女神：妮姬": {
+      "pages": [
+        "https://nikke.hotcool.tw/?lang=zh-TW"
+      ],
+      "assetsFound": 33
+    },
+    "战双帕弥什": {
+      "pages": [
+        "https://pns.kurogame.com/"
+      ],
+      "assetsFound": 0
+    },
+    "明日方舟：终末地": {
+      "pages": [
+        "https://endfield.gryphline.com/"
+      ],
+      "assetsFound": 0
+    },
+    "异环": {
+      "pages": [
+        "https://yh.wanmei.com/"
+      ],
+      "assetsFound": 9
+    }
+  },
+  "candidates": [
+    {
+      "id": "c001",
+      "name": "芙宁娜",
+      "game": "原神",
+      "summary": "枫丹的水神，以戏剧感与正义之名守护众人。",
+      "officialHosts": [
+        "genshin.hoyoverse.com",
+        "webstatic.mihoyo.com",
+        "upload-os-bbs.hoyolab.com",
+        "fastcdn.hoyoverse.com",
+        "act.hoyolab.com"
+      ],
+      "candidates": [
+        {
+          "url": "https://fastcdn.hoyoverse.com/static-resource-v2/2024/08/19/929753488ed9abdb8d6c48050da4e0eb_2788618069477720962.png",
+          "sourcePage": "https://genshin.hoyoverse.com/zh-cn/",
+          "context": "",
+          "score": 8
+        },
+        {
+          "url": "https://fastcdn.hoyoverse.com/static-resource-v2/2024/08/19/bd35cf94d58753ca8d1512c907f97ae4_2258090926944326502.png",
+          "sourcePage": "https://genshin.hoyoverse.com/zh-cn/",
+          "context": "",
+          "score": 8
+        },
+        {
+          "url": "https://fastcdn.hoyoverse.com/static-resource-v2/2024/08/19/40a2ed2ed3a6cb6596edd4bb5268ff24_5091933417970259165.png",
+          "sourcePage": "https://genshin.hoyoverse.com/zh-cn/",
+          "context": "",
+          "score": 8
+        }
+      ],
+      "recommended": null
+    },
+    {
+      "id": "c002",
+      "name": "雷电将军",
+      "game": "原神",
+      "summary": "稻妻的永恒执政者，雷霆与意志的化身。",
+      "officialHosts": [
+        "genshin.hoyoverse.com",
+        "webstatic.mihoyo.com",
+        "upload-os-bbs.hoyolab.com",
+        "fastcdn.hoyoverse.com",
+        "act.hoyolab.com"
+      ],
+      "candidates": [
+        {
+          "url": "https://fastcdn.hoyoverse.com/static-resource-v2/2024/08/19/929753488ed9abdb8d6c48050da4e0eb_2788618069477720962.png",
+          "sourcePage": "https://genshin.hoyoverse.com/zh-cn/",
+          "context": "",
+          "score": 8
+        },
+        {
+          "url": "https://fastcdn.hoyoverse.com/static-resource-v2/2024/08/19/bd35cf94d58753ca8d1512c907f97ae4_2258090926944326502.png",
+          "sourcePage": "https://genshin.hoyoverse.com/zh-cn/",
+          "context": "",
+          "score": 8
+        },
+        {
+          "url": "https://fastcdn.hoyoverse.com/static-resource-v2/2024/08/19/40a2ed2ed3a6cb6596edd4bb5268ff24_5091933417970259165.png",
+          "sourcePage": "https://genshin.hoyoverse.com/zh-cn/",
+          "context": "",
+          "score": 8
+        }
+      ],
+      "recommended": null
+    },
+    {
+      "id": "c003",
+      "name": "胡桃",
+      "game": "原神",
+      "summary": "往生堂第七十七代堂主，古灵精怪。",
+      "officialHosts": [
+        "genshin.hoyoverse.com",
+        "webstatic.mihoyo.com",
+        "upload-os-bbs.hoyolab.com",
+        "fastcdn.hoyoverse.com",
+        "act.hoyolab.com"
+      ],
+      "candidates": [
+        {
+          "url": "https://fastcdn.hoyoverse.com/static-resource-v2/2024/08/19/929753488ed9abdb8d6c48050da4e0eb_2788618069477720962.png",
+          "sourcePage": "https://genshin.hoyoverse.com/zh-cn/",
+          "context": "",
+          "score": 8
+        },
+        {
+          "url": "https://fastcdn.hoyoverse.com/static-resource-v2/2024/08/19/bd35cf94d58753ca8d1512c907f97ae4_2258090926944326502.png",
+          "sourcePage": "https://genshin.hoyoverse.com/zh-cn/",
+          "context": "",
+          "score": 8
+        },
+        {
+          "url": "https://fastcdn.hoyoverse.com/static-resource-v2/2024/08/19/40a2ed2ed3a6cb6596edd4bb5268ff24_5091933417970259165.png",
+          "sourcePage": "https://genshin.hoyoverse.com/zh-cn/",
+          "context": "",
+          "score": 8
+        }
+      ],
+      "recommended": null
+    },
+    {
+      "id": "c004",
+      "name": "纳西妲",
+      "game": "原神",
+      "summary": "须弥的草神，以智慧聆听人心。",
+      "officialHosts": [
+        "genshin.hoyoverse.com",
+        "webstatic.mihoyo.com",
+        "upload-os-bbs.hoyolab.com",
+        "fastcdn.hoyoverse.com",
+        "act.hoyolab.com"
+      ],
+      "candidates": [
+        {
+          "url": "https://fastcdn.hoyoverse.com/static-resource-v2/2024/08/19/929753488ed9abdb8d6c48050da4e0eb_2788618069477720962.png",
+          "sourcePage": "https://genshin.hoyoverse.com/zh-cn/",
+          "context": "",
+          "score": 8
+        },
+        {
+          "url": "https://fastcdn.hoyoverse.com/static-resource-v2/2024/08/19/bd35cf94d58753ca8d1512c907f97ae4_2258090926944326502.png",
+          "sourcePage": "https://genshin.hoyoverse.com/zh-cn/",
+          "context": "",
+          "score": 8
+        },
+        {
+          "url": "https://fastcdn.hoyoverse.com/static-resource-v2/2024/08/19/40a2ed2ed3a6cb6596edd4bb5268ff24_5091933417970259165.png",
+          "sourcePage": "https://genshin.hoyoverse.com/zh-cn/",
+          "context": "",
+          "score": 8
+        }
+      ],
+      "recommended": null
+    },
+    {
+      "id": "c005",
+      "name": "夜兰",
+      "game": "原神",
+      "summary": "璃月总务司神秘情报官。",
+      "officialHosts": [
+        "genshin.hoyoverse.com",
+        "webstatic.mihoyo.com",
+        "upload-os-bbs.hoyolab.com",
+        "fastcdn.hoyoverse.com",
+        "act.hoyolab.com"
+      ],
+      "candidates": [
+        {
+          "url": "https://fastcdn.hoyoverse.com/static-resource-v2/2024/08/19/929753488ed9abdb8d6c48050da4e0eb_2788618069477720962.png",
+          "sourcePage": "https://genshin.hoyoverse.com/zh-cn/",
+          "context": "",
+          "score": 8
+        },
+        {
+          "url": "https://fastcdn.hoyoverse.com/static-resource-v2/2024/08/19/bd35cf94d58753ca8d1512c907f97ae4_2258090926944326502.png",
+          "sourcePage": "https://genshin.hoyoverse.com/zh-cn/",
+          "context": "",
+          "score": 8
+        },
+        {
+          "url": "https://fastcdn.hoyoverse.com/static-resource-v2/2024/08/19/40a2ed2ed3a6cb6596edd4bb5268ff24_5091933417970259165.png",
+          "sourcePage": "https://genshin.hoyoverse.com/zh-cn/",
+          "context": "",
+          "score": 8
+        }
+      ],
+      "recommended": null
+    },
+    {
+      "id": "c006",
+      "name": "神里绫华",
+      "game": "原神",
+      "summary": "白鹭公主，稻妻社奉行神里家的大小姐。",
+      "officialHosts": [
+        "genshin.hoyoverse.com",
+        "webstatic.mihoyo.com",
+        "upload-os-bbs.hoyolab.com",
+        "fastcdn.hoyoverse.com",
+        "act.hoyolab.com"
+      ],
+      "candidates": [
+        {
+          "url": "https://fastcdn.hoyoverse.com/static-resource-v2/2024/08/19/929753488ed9abdb8d6c48050da4e0eb_2788618069477720962.png",
+          "sourcePage": "https://genshin.hoyoverse.com/zh-cn/",
+          "context": "",
+          "score": 8
+        },
+        {
+          "url": "https://fastcdn.hoyoverse.com/static-resource-v2/2024/08/19/bd35cf94d58753ca8d1512c907f97ae4_2258090926944326502.png",
+          "sourcePage": "https://genshin.hoyoverse.com/zh-cn/",
+          "context": "",
+          "score": 8
+        },
+        {
+          "url": "https://fastcdn.hoyoverse.com/static-resource-v2/2024/08/19/40a2ed2ed3a6cb6596edd4bb5268ff24_5091933417970259165.png",
+          "sourcePage": "https://genshin.hoyoverse.com/zh-cn/",
+          "context": "",
+          "score": 8
+        }
+      ],
+      "recommended": null
+    },
+    {
+      "id": "c007",
+      "name": "妮露",
+      "game": "原神",
+      "summary": "祖拜尔剧场舞者，舞姿如莲。",
+      "officialHosts": [
+        "genshin.hoyoverse.com",
+        "webstatic.mihoyo.com",
+        "upload-os-bbs.hoyolab.com",
+        "fastcdn.hoyoverse.com",
+        "act.hoyolab.com"
+      ],
+      "candidates": [
+        {
+          "url": "https://fastcdn.hoyoverse.com/static-resource-v2/2024/08/19/929753488ed9abdb8d6c48050da4e0eb_2788618069477720962.png",
+          "sourcePage": "https://genshin.hoyoverse.com/zh-cn/",
+          "context": "",
+          "score": 8
+        },
+        {
+          "url": "https://fastcdn.hoyoverse.com/static-resource-v2/2024/08/19/bd35cf94d58753ca8d1512c907f97ae4_2258090926944326502.png",
+          "sourcePage": "https://genshin.hoyoverse.com/zh-cn/",
+          "context": "",
+          "score": 8
+        },
+        {
+          "url": "https://fastcdn.hoyoverse.com/static-resource-v2/2024/08/19/40a2ed2ed3a6cb6596edd4bb5268ff24_5091933417970259165.png",
+          "sourcePage": "https://genshin.hoyoverse.com/zh-cn/",
+          "context": "",
+          "score": 8
+        }
+      ],
+      "recommended": null
+    },
+    {
+      "id": "c008",
+      "name": "申鹤",
+      "game": "原神",
+      "summary": "仙家弟子，以红绳锁住尘缘。",
+      "officialHosts": [
+        "genshin.hoyoverse.com",
+        "webstatic.mihoyo.com",
+        "upload-os-bbs.hoyolab.com",
+        "fastcdn.hoyoverse.com",
+        "act.hoyolab.com"
+      ],
+      "candidates": [
+        {
+          "url": "https://fastcdn.hoyoverse.com/static-resource-v2/2024/08/19/929753488ed9abdb8d6c48050da4e0eb_2788618069477720962.png",
+          "sourcePage": "https://genshin.hoyoverse.com/zh-cn/",
+          "context": "",
+          "score": 8
+        },
+        {
+          "url": "https://fastcdn.hoyoverse.com/static-resource-v2/2024/08/19/bd35cf94d58753ca8d1512c907f97ae4_2258090926944326502.png",
+          "sourcePage": "https://genshin.hoyoverse.com/zh-cn/",
+          "context": "",
+          "score": 8
+        },
+        {
+          "url": "https://fastcdn.hoyoverse.com/static-resource-v2/2024/08/19/40a2ed2ed3a6cb6596edd4bb5268ff24_5091933417970259165.png",
+          "sourcePage": "https://genshin.hoyoverse.com/zh-cn/",
+          "context": "",
+          "score": 8
+        }
+      ],
+      "recommended": null
+    },
+    {
+      "id": "c009",
+      "name": "宵宫",
+      "game": "原神",
+      "summary": "长野原烟花店店主，点亮夏夜的烟火。",
+      "officialHosts": [
+        "genshin.hoyoverse.com",
+        "webstatic.mihoyo.com",
+        "upload-os-bbs.hoyolab.com",
+        "fastcdn.hoyoverse.com",
+        "act.hoyolab.com"
+      ],
+      "candidates": [
+        {
+          "url": "https://fastcdn.hoyoverse.com/static-resource-v2/2024/08/19/929753488ed9abdb8d6c48050da4e0eb_2788618069477720962.png",
+          "sourcePage": "https://genshin.hoyoverse.com/zh-cn/",
+          "context": "",
+          "score": 8
+        },
+        {
+          "url": "https://fastcdn.hoyoverse.com/static-resource-v2/2024/08/19/bd35cf94d58753ca8d1512c907f97ae4_2258090926944326502.png",
+          "sourcePage": "https://genshin.hoyoverse.com/zh-cn/",
+          "context": "",
+          "score": 8
+        },
+        {
+          "url": "https://fastcdn.hoyoverse.com/static-resource-v2/2024/08/19/40a2ed2ed3a6cb6596edd4bb5268ff24_5091933417970259165.png",
+          "sourcePage": "https://genshin.hoyoverse.com/zh-cn/",
+          "context": "",
+          "score": 8
+        }
+      ],
+      "recommended": null
+    },
+    {
+      "id": "c010",
+      "name": "克洛琳德",
+      "game": "原神",
+      "summary": "枫丹决斗代理人，以剑维护秩序。",
+      "officialHosts": [
+        "genshin.hoyoverse.com",
+        "webstatic.mihoyo.com",
+        "upload-os-bbs.hoyolab.com",
+        "fastcdn.hoyoverse.com",
+        "act.hoyolab.com"
+      ],
+      "candidates": [
+        {
+          "url": "https://fastcdn.hoyoverse.com/static-resource-v2/2024/08/19/929753488ed9abdb8d6c48050da4e0eb_2788618069477720962.png",
+          "sourcePage": "https://genshin.hoyoverse.com/zh-cn/",
+          "context": "",
+          "score": 8
+        },
+        {
+          "url": "https://fastcdn.hoyoverse.com/static-resource-v2/2024/08/19/bd35cf94d58753ca8d1512c907f97ae4_2258090926944326502.png",
+          "sourcePage": "https://genshin.hoyoverse.com/zh-cn/",
+          "context": "",
+          "score": 8
+        },
+        {
+          "url": "https://fastcdn.hoyoverse.com/static-resource-v2/2024/08/19/40a2ed2ed3a6cb6596edd4bb5268ff24_5091933417970259165.png",
+          "sourcePage": "https://genshin.hoyoverse.com/zh-cn/",
+          "context": "",
+          "score": 8
+        }
+      ],
+      "recommended": null
+    },
+    {
+      "id": "c011",
+      "name": "阿蕾奇诺",
+      "game": "原神",
+      "summary": "愚人众执行官，壁炉之家的家长。",
+      "officialHosts": [
+        "genshin.hoyoverse.com",
+        "webstatic.mihoyo.com",
+        "upload-os-bbs.hoyolab.com",
+        "fastcdn.hoyoverse.com",
+        "act.hoyolab.com"
+      ],
+      "candidates": [
+        {
+          "url": "https://fastcdn.hoyoverse.com/static-resource-v2/2024/08/19/929753488ed9abdb8d6c48050da4e0eb_2788618069477720962.png",
+          "sourcePage": "https://genshin.hoyoverse.com/zh-cn/",
+          "context": "",
+          "score": 8
+        },
+        {
+          "url": "https://fastcdn.hoyoverse.com/static-resource-v2/2024/08/19/bd35cf94d58753ca8d1512c907f97ae4_2258090926944326502.png",
+          "sourcePage": "https://genshin.hoyoverse.com/zh-cn/",
+          "context": "",
+          "score": 8
+        },
+        {
+          "url": "https://fastcdn.hoyoverse.com/static-resource-v2/2024/08/19/40a2ed2ed3a6cb6596edd4bb5268ff24_5091933417970259165.png",
+          "sourcePage": "https://genshin.hoyoverse.com/zh-cn/",
+          "context": "",
+          "score": 8
+        }
+      ],
+      "recommended": null
+    },
+    {
+      "id": "c012",
+      "name": "闲云",
+      "game": "原神",
+      "summary": "云游尘世的仙人，洞悉众生。",
+      "officialHosts": [
+        "genshin.hoyoverse.com",
+        "webstatic.mihoyo.com",
+        "upload-os-bbs.hoyolab.com",
+        "fastcdn.hoyoverse.com",
+        "act.hoyolab.com"
+      ],
+      "candidates": [
+        {
+          "url": "https://fastcdn.hoyoverse.com/static-resource-v2/2024/08/19/929753488ed9abdb8d6c48050da4e0eb_2788618069477720962.png",
+          "sourcePage": "https://genshin.hoyoverse.com/zh-cn/",
+          "context": "",
+          "score": 8
+        },
+        {
+          "url": "https://fastcdn.hoyoverse.com/static-resource-v2/2024/08/19/bd35cf94d58753ca8d1512c907f97ae4_2258090926944326502.png",
+          "sourcePage": "https://genshin.hoyoverse.com/zh-cn/",
+          "context": "",
+          "score": 8
+        },
+        {
+          "url": "https://fastcdn.hoyoverse.com/static-resource-v2/2024/08/19/40a2ed2ed3a6cb6596edd4bb5268ff24_5091933417970259165.png",
+          "sourcePage": "https://genshin.hoyoverse.com/zh-cn/",
+          "context": "",
+          "score": 8
+        }
+      ],
+      "recommended": null
+    },
+    {
+      "id": "c013",
+      "name": "千织",
+      "game": "原神",
+      "summary": "来自枫丹的稻妻服装设计师。",
+      "officialHosts": [
+        "genshin.hoyoverse.com",
+        "webstatic.mihoyo.com",
+        "upload-os-bbs.hoyolab.com",
+        "fastcdn.hoyoverse.com",
+        "act.hoyolab.com"
+      ],
+      "candidates": [
+        {
+          "url": "https://fastcdn.hoyoverse.com/static-resource-v2/2024/08/19/929753488ed9abdb8d6c48050da4e0eb_2788618069477720962.png",
+          "sourcePage": "https://genshin.hoyoverse.com/zh-cn/",
+          "context": "",
+          "score": 8
+        },
+        {
+          "url": "https://fastcdn.hoyoverse.com/static-resource-v2/2024/08/19/bd35cf94d58753ca8d1512c907f97ae4_2258090926944326502.png",
+          "sourcePage": "https://genshin.hoyoverse.com/zh-cn/",
+          "context": "",
+          "score": 8
+        },
+        {
+          "url": "https://fastcdn.hoyoverse.com/static-resource-v2/2024/08/19/40a2ed2ed3a6cb6596edd4bb5268ff24_5091933417970259165.png",
+          "sourcePage": "https://genshin.hoyoverse.com/zh-cn/",
+          "context": "",
+          "score": 8
+        }
+      ],
+      "recommended": null
+    },
+    {
+      "id": "c014",
+      "name": "希格雯",
+      "game": "原神",
+      "summary": "梅洛彼得堡的美露莘护士长。",
+      "officialHosts": [
+        "genshin.hoyoverse.com",
+        "webstatic.mihoyo.com",
+        "upload-os-bbs.hoyolab.com",
+        "fastcdn.hoyoverse.com",
+        "act.hoyolab.com"
+      ],
+      "candidates": [
+        {
+          "url": "https://fastcdn.hoyoverse.com/static-resource-v2/2024/08/19/929753488ed9abdb8d6c48050da4e0eb_2788618069477720962.png",
+          "sourcePage": "https://genshin.hoyoverse.com/zh-cn/",
+          "context": "",
+          "score": 8
+        },
+        {
+          "url": "https://fastcdn.hoyoverse.com/static-resource-v2/2024/08/19/bd35cf94d58753ca8d1512c907f97ae4_2258090926944326502.png",
+          "sourcePage": "https://genshin.hoyoverse.com/zh-cn/",
+          "context": "",
+          "score": 8
+        },
+        {
+          "url": "https://fastcdn.hoyoverse.com/static-resource-v2/2024/08/19/40a2ed2ed3a6cb6596edd4bb5268ff24_5091933417970259165.png",
+          "sourcePage": "https://genshin.hoyoverse.com/zh-cn/",
+          "context": "",
+          "score": 8
+        }
+      ],
+      "recommended": null
+    },
+    {
+      "id": "c015",
+      "name": "玛拉妮",
+      "game": "原神",
+      "summary": "纳塔的逐浪客，开朗而自由。",
+      "officialHosts": [
+        "genshin.hoyoverse.com",
+        "webstatic.mihoyo.com",
+        "upload-os-bbs.hoyolab.com",
+        "fastcdn.hoyoverse.com",
+        "act.hoyolab.com"
+      ],
+      "candidates": [
+        {
+          "url": "https://fastcdn.hoyoverse.com/static-resource-v2/2024/08/19/929753488ed9abdb8d6c48050da4e0eb_2788618069477720962.png",
+          "sourcePage": "https://genshin.hoyoverse.com/zh-cn/",
+          "context": "",
+          "score": 8
+        },
+        {
+          "url": "https://fastcdn.hoyoverse.com/static-resource-v2/2024/08/19/bd35cf94d58753ca8d1512c907f97ae4_2258090926944326502.png",
+          "sourcePage": "https://genshin.hoyoverse.com/zh-cn/",
+          "context": "",
+          "score": 8
+        },
+        {
+          "url": "https://fastcdn.hoyoverse.com/static-resource-v2/2024/08/19/40a2ed2ed3a6cb6596edd4bb5268ff24_5091933417970259165.png",
+          "sourcePage": "https://genshin.hoyoverse.com/zh-cn/",
+          "context": "",
+          "score": 8
+        }
+      ],
+      "recommended": null
+    },
+    {
+      "id": "c016",
+      "name": "茜特菈莉",
+      "game": "原神",
+      "summary": "纳塔烟谜主的大萨满。",
+      "officialHosts": [
+        "genshin.hoyoverse.com",
+        "webstatic.mihoyo.com",
+        "upload-os-bbs.hoyolab.com",
+        "fastcdn.hoyoverse.com",
+        "act.hoyolab.com"
+      ],
+      "candidates": [
+        {
+          "url": "https://fastcdn.hoyoverse.com/static-resource-v2/2024/08/19/929753488ed9abdb8d6c48050da4e0eb_2788618069477720962.png",
+          "sourcePage": "https://genshin.hoyoverse.com/zh-cn/",
+          "context": "",
+          "score": 8
+        },
+        {
+          "url": "https://fastcdn.hoyoverse.com/static-resource-v2/2024/08/19/bd35cf94d58753ca8d1512c907f97ae4_2258090926944326502.png",
+          "sourcePage": "https://genshin.hoyoverse.com/zh-cn/",
+          "context": "",
+          "score": 8
+        },
+        {
+          "url": "https://fastcdn.hoyoverse.com/static-resource-v2/2024/08/19/40a2ed2ed3a6cb6596edd4bb5268ff24_5091933417970259165.png",
+          "sourcePage": "https://genshin.hoyoverse.com/zh-cn/",
+          "context": "",
+          "score": 8
+        }
+      ],
+      "recommended": null
+    },
+    {
+      "id": "c017",
+      "name": "卡芙卡",
+      "game": "崩坏：星穹铁道",
+      "summary": "星核猎手，以言语和乐曲编织命运。",
+      "officialHosts": [
+        "hsr.hoyoverse.com",
+        "webstatic.mihoyo.com",
+        "upload-os-bbs.hoyolab.com",
+        "fastcdn.hoyoverse.com",
+        "act.hoyolab.com"
+      ],
+      "candidates": [
+        {
+          "url": "https://fastcdn.hoyoverse.com/mi18n/hkrpg_global/m20260622hy1gldpzb4/upload/f96c04c7805d1cd1eb43449dd836565e_6995460040935078713.png",
+          "sourcePage": "https://hsr.hoyoverse.com/zh-cn/",
+          "context": "",
+          "score": 8
+        }
+      ],
+      "recommended": null
+    },
+    {
+      "id": "c018",
+      "name": "黄泉",
+      "game": "崩坏：星穹铁道",
+      "summary": "独自行走于虚无命途的巡海游侠。",
+      "officialHosts": [
+        "hsr.hoyoverse.com",
+        "webstatic.mihoyo.com",
+        "upload-os-bbs.hoyolab.com",
+        "fastcdn.hoyoverse.com",
+        "act.hoyolab.com"
+      ],
+      "candidates": [
+        {
+          "url": "https://fastcdn.hoyoverse.com/mi18n/hkrpg_global/m20260622hy1gldpzb4/upload/f96c04c7805d1cd1eb43449dd836565e_6995460040935078713.png",
+          "sourcePage": "https://hsr.hoyoverse.com/zh-cn/",
+          "context": "",
+          "score": 8
+        }
+      ],
+      "recommended": null
+    },
+    {
+      "id": "c019",
+      "name": "流萤",
+      "game": "崩坏：星穹铁道",
+      "summary": "怀抱微小愿望的少女，也是萨姆的驾驶者。",
+      "officialHosts": [
+        "hsr.hoyoverse.com",
+        "webstatic.mihoyo.com",
+        "upload-os-bbs.hoyolab.com",
+        "fastcdn.hoyoverse.com",
+        "act.hoyolab.com"
+      ],
+      "candidates": [
+        {
+          "url": "https://fastcdn.hoyoverse.com/mi18n/hkrpg_global/m20260622hy1gldpzb4/upload/f96c04c7805d1cd1eb43449dd836565e_6995460040935078713.png",
+          "sourcePage": "https://hsr.hoyoverse.com/zh-cn/",
+          "context": "",
+          "score": 8
+        }
+      ],
+      "recommended": null
+    },
+    {
+      "id": "c020",
+      "name": "镜流",
+      "game": "崩坏：星穹铁道",
+      "summary": "前代罗浮剑首，剑光如月。",
+      "officialHosts": [
+        "hsr.hoyoverse.com",
+        "webstatic.mihoyo.com",
+        "upload-os-bbs.hoyolab.com",
+        "fastcdn.hoyoverse.com",
+        "act.hoyolab.com"
+      ],
+      "candidates": [
+        {
+          "url": "https://fastcdn.hoyoverse.com/mi18n/hkrpg_global/m20260622hy1gldpzb4/upload/f96c04c7805d1cd1eb43449dd836565e_6995460040935078713.png",
+          "sourcePage": "https://hsr.hoyoverse.com/zh-cn/",
+          "context": "",
+          "score": 8
+        }
+      ],
+      "recommended": null
+    },
+    {
+      "id": "c021",
+      "name": "三月七",
+      "game": "崩坏：星穹铁道",
+      "summary": "星穹列车开朗的摄影担当。",
+      "officialHosts": [
+        "hsr.hoyoverse.com",
+        "webstatic.mihoyo.com",
+        "upload-os-bbs.hoyolab.com",
+        "fastcdn.hoyoverse.com",
+        "act.hoyolab.com"
+      ],
+      "candidates": [
+        {
+          "url": "https://fastcdn.hoyoverse.com/mi18n/hkrpg_global/m20260622hy1gldpzb4/upload/f96c04c7805d1cd1eb43449dd836565e_6995460040935078713.png",
+          "sourcePage": "https://hsr.hoyoverse.com/zh-cn/",
+          "context": "",
+          "score": 8
+        }
+      ],
+      "recommended": null
+    },
+    {
+      "id": "c022",
+      "name": "符玄",
+      "game": "崩坏：星穹铁道",
+      "summary": "太卜司太卜，以法眼洞察命途。",
+      "officialHosts": [
+        "hsr.hoyoverse.com",
+        "webstatic.mihoyo.com",
+        "upload-os-bbs.hoyolab.com",
+        "fastcdn.hoyoverse.com",
+        "act.hoyolab.com"
+      ],
+      "candidates": [
+        {
+          "url": "https://fastcdn.hoyoverse.com/mi18n/hkrpg_global/m20260622hy1gldpzb4/upload/f96c04c7805d1cd1eb43449dd836565e_6995460040935078713.png",
+          "sourcePage": "https://hsr.hoyoverse.com/zh-cn/",
+          "context": "",
+          "score": 8
+        }
+      ],
+      "recommended": null
+    },
+    {
+      "id": "c023",
+      "name": "黑天鹅",
+      "game": "崩坏：星穹铁道",
+      "summary": "流光忆庭的忆者，收藏记忆碎片。",
+      "officialHosts": [
+        "hsr.hoyoverse.com",
+        "webstatic.mihoyo.com",
+        "upload-os-bbs.hoyolab.com",
+        "fastcdn.hoyoverse.com",
+        "act.hoyolab.com"
+      ],
+      "candidates": [
+        {
+          "url": "https://fastcdn.hoyoverse.com/mi18n/hkrpg_global/m20260622hy1gldpzb4/upload/f96c04c7805d1cd1eb43449dd836565e_6995460040935078713.png",
+          "sourcePage": "https://hsr.hoyoverse.com/zh-cn/",
+          "context": "",
+          "score": 8
+        }
+      ],
+      "recommended": null
+    },
+    {
+      "id": "c024",
+      "name": "银狼",
+      "game": "崩坏：星穹铁道",
+      "summary": "天才骇客，视现实为大型游戏。",
+      "officialHosts": [
+        "hsr.hoyoverse.com",
+        "webstatic.mihoyo.com",
+        "upload-os-bbs.hoyolab.com",
+        "fastcdn.hoyoverse.com",
+        "act.hoyolab.com"
+      ],
+      "candidates": [
+        {
+          "url": "https://fastcdn.hoyoverse.com/mi18n/hkrpg_global/m20260622hy1gldpzb4/upload/f96c04c7805d1cd1eb43449dd836565e_6995460040935078713.png",
+          "sourcePage": "https://hsr.hoyoverse.com/zh-cn/",
+          "context": "",
+          "score": 8
+        }
+      ],
+      "recommended": null
+    },
+    {
+      "id": "c025",
+      "name": "阮·梅",
+      "game": "崩坏：星穹铁道",
+      "summary": "生命科学领域的天才俱乐部成员。",
+      "officialHosts": [
+        "hsr.hoyoverse.com",
+        "webstatic.mihoyo.com",
+        "upload-os-bbs.hoyolab.com",
+        "fastcdn.hoyoverse.com",
+        "act.hoyolab.com"
+      ],
+      "candidates": [
+        {
+          "url": "https://fastcdn.hoyoverse.com/mi18n/hkrpg_global/m20260622hy1gldpzb4/upload/f96c04c7805d1cd1eb43449dd836565e_6995460040935078713.png",
+          "sourcePage": "https://hsr.hoyoverse.com/zh-cn/",
+          "context": "",
+          "score": 8
+        }
+      ],
+      "recommended": null
+    },
+    {
+      "id": "c026",
+      "name": "花火",
+      "game": "崩坏：星穹铁道",
+      "summary": "假面愚者，擅长将舞台化为现实。",
+      "officialHosts": [
+        "hsr.hoyoverse.com",
+        "webstatic.mihoyo.com",
+        "upload-os-bbs.hoyolab.com",
+        "fastcdn.hoyoverse.com",
+        "act.hoyolab.com"
+      ],
+      "candidates": [
+        {
+          "url": "https://fastcdn.hoyoverse.com/mi18n/hkrpg_global/m20260622hy1gldpzb4/upload/f96c04c7805d1cd1eb43449dd836565e_6995460040935078713.png",
+          "sourcePage": "https://hsr.hoyoverse.com/zh-cn/",
+          "context": "",
+          "score": 8
+        }
+      ],
+      "recommended": null
+    },
+    {
+      "id": "c027",
+      "name": "知更鸟",
+      "game": "崩坏：星穹铁道",
+      "summary": "匹诺康尼的银河歌者。",
+      "officialHosts": [
+        "hsr.hoyoverse.com",
+        "webstatic.mihoyo.com",
+        "upload-os-bbs.hoyolab.com",
+        "fastcdn.hoyoverse.com",
+        "act.hoyolab.com"
+      ],
+      "candidates": [
+        {
+          "url": "https://fastcdn.hoyoverse.com/mi18n/hkrpg_global/m20260622hy1gldpzb4/upload/f96c04c7805d1cd1eb43449dd836565e_6995460040935078713.png",
+          "sourcePage": "https://hsr.hoyoverse.com/zh-cn/",
+          "context": "",
+          "score": 8
+        }
+      ],
+      "recommended": null
+    },
+    {
+      "id": "c028",
+      "name": "翡翠",
+      "game": "崩坏：星穹铁道",
+      "summary": "战略投资部的冷静谈判者。",
+      "officialHosts": [
+        "hsr.hoyoverse.com",
+        "webstatic.mihoyo.com",
+        "upload-os-bbs.hoyolab.com",
+        "fastcdn.hoyoverse.com",
+        "act.hoyolab.com"
+      ],
+      "candidates": [
+        {
+          "url": "https://fastcdn.hoyoverse.com/mi18n/hkrpg_global/m20260622hy1gldpzb4/upload/f96c04c7805d1cd1eb43449dd836565e_6995460040935078713.png",
+          "sourcePage": "https://hsr.hoyoverse.com/zh-cn/",
+          "context": "",
+          "score": 8
+        }
+      ],
+      "recommended": null
+    },
+    {
+      "id": "c029",
+      "name": "飞霄",
+      "game": "崩坏：星穹铁道",
+      "summary": "仙舟曜青的天击将军。",
+      "officialHosts": [
+        "hsr.hoyoverse.com",
+        "webstatic.mihoyo.com",
+        "upload-os-bbs.hoyolab.com",
+        "fastcdn.hoyoverse.com",
+        "act.hoyolab.com"
+      ],
+      "candidates": [
+        {
+          "url": "https://fastcdn.hoyoverse.com/mi18n/hkrpg_global/m20260622hy1gldpzb4/upload/f96c04c7805d1cd1eb43449dd836565e_6995460040935078713.png",
+          "sourcePage": "https://hsr.hoyoverse.com/zh-cn/",
+          "context": "",
+          "score": 8
+        }
+      ],
+      "recommended": null
+    },
+    {
+      "id": "c030",
+      "name": "灵砂",
+      "game": "崩坏：星穹铁道",
+      "summary": "丹鼎司新任司鼎，善于调香。",
+      "officialHosts": [
+        "hsr.hoyoverse.com",
+        "webstatic.mihoyo.com",
+        "upload-os-bbs.hoyolab.com",
+        "fastcdn.hoyoverse.com",
+        "act.hoyolab.com"
+      ],
+      "candidates": [
+        {
+          "url": "https://fastcdn.hoyoverse.com/mi18n/hkrpg_global/m20260622hy1gldpzb4/upload/f96c04c7805d1cd1eb43449dd836565e_6995460040935078713.png",
+          "sourcePage": "https://hsr.hoyoverse.com/zh-cn/",
+          "context": "",
+          "score": 8
+        }
+      ],
+      "recommended": null
+    },
+    {
+      "id": "c031",
+      "name": "大黑塔",
+      "game": "崩坏：星穹铁道",
+      "summary": "天才俱乐部会员，以傀儡游历宇宙。",
+      "officialHosts": [
+        "hsr.hoyoverse.com",
+        "webstatic.mihoyo.com",
+        "upload-os-bbs.hoyolab.com",
+        "fastcdn.hoyoverse.com",
+        "act.hoyolab.com"
+      ],
+      "candidates": [
+        {
+          "url": "https://fastcdn.hoyoverse.com/mi18n/hkrpg_global/m20260622hy1gldpzb4/upload/f96c04c7805d1cd1eb43449dd836565e_6995460040935078713.png",
+          "sourcePage": "https://hsr.hoyoverse.com/zh-cn/",
+          "context": "",
+          "score": 8
+        }
+      ],
+      "recommended": null
+    },
+    {
+      "id": "c032",
+      "name": "遐蝶",
+      "game": "崩坏：星穹铁道",
+      "summary": "翁法罗斯的冥河引路人。",
+      "officialHosts": [
+        "hsr.hoyoverse.com",
+        "webstatic.mihoyo.com",
+        "upload-os-bbs.hoyolab.com",
+        "fastcdn.hoyoverse.com",
+        "act.hoyolab.com"
+      ],
+      "candidates": [
+        {
+          "url": "https://fastcdn.hoyoverse.com/mi18n/hkrpg_global/m20260622hy1gldpzb4/upload/f96c04c7805d1cd1eb43449dd836565e_6995460040935078713.png",
+          "sourcePage": "https://hsr.hoyoverse.com/zh-cn/",
+          "context": "",
+          "score": 8
+        }
+      ],
+      "recommended": null
+    },
+    {
+      "id": "c033",
+      "name": "艾莲",
+      "game": "绝区零",
+      "summary": "维多利亚家政成员，安静的鲨鱼少女。",
+      "officialHosts": [
+        "zenless.hoyoverse.com",
+        "webstatic.mihoyo.com",
+        "upload-os-bbs.hoyolab.com",
+        "fastcdn.hoyoverse.com",
+        "act.hoyolab.com"
+      ],
+      "candidates": [
+        {
+          "url": "https://fastcdn.hoyoverse.com/static-resource-v2/2024/05/17/ce1888e31d79d6d4b2f4ad9b25fbbd68_1850626400856033913.png",
+          "sourcePage": "https://zenless.hoyoverse.com/zh-cn/main",
+          "context": "",
+          "score": 8
+        }
+      ],
+      "recommended": null
+    },
+    {
+      "id": "c034",
+      "name": "朱鸢",
+      "game": "绝区零",
+      "summary": "新艾利都治安局刑侦特勤组长。",
+      "officialHosts": [
+        "zenless.hoyoverse.com",
+        "webstatic.mihoyo.com",
+        "upload-os-bbs.hoyolab.com",
+        "fastcdn.hoyoverse.com",
+        "act.hoyolab.com"
+      ],
+      "candidates": [
+        {
+          "url": "https://fastcdn.hoyoverse.com/static-resource-v2/2024/05/17/ce1888e31d79d6d4b2f4ad9b25fbbd68_1850626400856033913.png",
+          "sourcePage": "https://zenless.hoyoverse.com/zh-cn/main",
+          "context": "",
+          "score": 8
+        }
+      ],
+      "recommended": null
+    },
+    {
+      "id": "c035",
+      "name": "简",
+      "game": "绝区零",
+      "summary": "神秘又危险的特别行动组成员。",
+      "officialHosts": [
+        "zenless.hoyoverse.com",
+        "webstatic.mihoyo.com",
+        "upload-os-bbs.hoyolab.com",
+        "fastcdn.hoyoverse.com",
+        "act.hoyolab.com"
+      ],
+      "candidates": [
+        {
+          "url": "https://fastcdn.hoyoverse.com/static-resource-v2/2024/05/17/ce1888e31d79d6d4b2f4ad9b25fbbd68_1850626400856033913.png",
+          "sourcePage": "https://zenless.hoyoverse.com/zh-cn/main",
+          "context": "",
+          "score": 8
+        }
+      ],
+      "recommended": null
+    },
+    {
+      "id": "c036",
+      "name": "耀嘉音",
+      "game": "绝区零",
+      "summary": "新艾利都最耀眼的偶像。",
+      "officialHosts": [
+        "zenless.hoyoverse.com",
+        "webstatic.mihoyo.com",
+        "upload-os-bbs.hoyolab.com",
+        "fastcdn.hoyoverse.com",
+        "act.hoyolab.com"
+      ],
+      "candidates": [
+        {
+          "url": "https://fastcdn.hoyoverse.com/static-resource-v2/2024/05/17/ce1888e31d79d6d4b2f4ad9b25fbbd68_1850626400856033913.png",
+          "sourcePage": "https://zenless.hoyoverse.com/zh-cn/main",
+          "context": "",
+          "score": 8
+        }
+      ],
+      "recommended": null
+    },
+    {
+      "id": "c037",
+      "name": "伊芙琳",
+      "game": "绝区零",
+      "summary": "与耀嘉音并肩的贴身护卫。",
+      "officialHosts": [
+        "zenless.hoyoverse.com",
+        "webstatic.mihoyo.com",
+        "upload-os-bbs.hoyolab.com",
+        "fastcdn.hoyoverse.com",
+        "act.hoyolab.com"
+      ],
+      "candidates": [
+        {
+          "url": "https://fastcdn.hoyoverse.com/static-resource-v2/2024/05/17/ce1888e31d79d6d4b2f4ad9b25fbbd68_1850626400856033913.png",
+          "sourcePage": "https://zenless.hoyoverse.com/zh-cn/main",
+          "context": "",
+          "score": 8
+        }
+      ],
+      "recommended": null
+    },
+    {
+      "id": "c038",
+      "name": "格莉丝",
+      "game": "绝区零",
+      "summary": "白祇重工的机械天才。",
+      "officialHosts": [
+        "zenless.hoyoverse.com",
+        "webstatic.mihoyo.com",
+        "upload-os-bbs.hoyolab.com",
+        "fastcdn.hoyoverse.com",
+        "act.hoyolab.com"
+      ],
+      "candidates": [
+        {
+          "url": "https://fastcdn.hoyoverse.com/static-resource-v2/2024/05/17/ce1888e31d79d6d4b2f4ad9b25fbbd68_1850626400856033913.png",
+          "sourcePage": "https://zenless.hoyoverse.com/zh-cn/main",
+          "context": "",
+          "score": 8
+        }
+      ],
+      "recommended": null
+    },
+    {
+      "id": "c039",
+      "name": "妮可",
+      "game": "绝区零",
+      "summary": "狡兔屋创始人，精于生意之道。",
+      "officialHosts": [
+        "zenless.hoyoverse.com",
+        "webstatic.mihoyo.com",
+        "upload-os-bbs.hoyolab.com",
+        "fastcdn.hoyoverse.com",
+        "act.hoyolab.com"
+      ],
+      "candidates": [
+        {
+          "url": "https://fastcdn.hoyoverse.com/static-resource-v2/2024/05/17/ce1888e31d79d6d4b2f4ad9b25fbbd68_1850626400856033913.png",
+          "sourcePage": "https://zenless.hoyoverse.com/zh-cn/main",
+          "context": "",
+          "score": 8
+        }
+      ],
+      "recommended": null
+    },
+    {
+      "id": "c040",
+      "name": "雅",
+      "game": "绝区零",
+      "summary": "对空六课课长，以太刀守护新艾利都。",
+      "officialHosts": [
+        "zenless.hoyoverse.com",
+        "webstatic.mihoyo.com",
+        "upload-os-bbs.hoyolab.com",
+        "fastcdn.hoyoverse.com",
+        "act.hoyolab.com"
+      ],
+      "candidates": [
+        {
+          "url": "https://fastcdn.hoyoverse.com/static-resource-v2/2024/05/17/ce1888e31d79d6d4b2f4ad9b25fbbd68_1850626400856033913.png",
+          "sourcePage": "https://zenless.hoyoverse.com/zh-cn/main",
+          "context": "",
+          "score": 8
+        }
+      ],
+      "recommended": null
+    },
+    {
+      "id": "c041",
+      "name": "青衣",
+      "game": "绝区零",
+      "summary": "治安局的老资格人工智能。",
+      "officialHosts": [
+        "zenless.hoyoverse.com",
+        "webstatic.mihoyo.com",
+        "upload-os-bbs.hoyolab.com",
+        "fastcdn.hoyoverse.com",
+        "act.hoyolab.com"
+      ],
+      "candidates": [
+        {
+          "url": "https://fastcdn.hoyoverse.com/static-resource-v2/2024/05/17/ce1888e31d79d6d4b2f4ad9b25fbbd68_1850626400856033913.png",
+          "sourcePage": "https://zenless.hoyoverse.com/zh-cn/main",
+          "context": "",
+          "score": 8
+        }
+      ],
+      "recommended": null
+    },
+    {
+      "id": "c042",
+      "name": "露西",
+      "game": "绝区零",
+      "summary": "卡吕冬之子的火爆策士。",
+      "officialHosts": [
+        "zenless.hoyoverse.com",
+        "webstatic.mihoyo.com",
+        "upload-os-bbs.hoyolab.com",
+        "fastcdn.hoyoverse.com",
+        "act.hoyolab.com"
+      ],
+      "candidates": [
+        {
+          "url": "https://fastcdn.hoyoverse.com/static-resource-v2/2024/05/17/ce1888e31d79d6d4b2f4ad9b25fbbd68_1850626400856033913.png",
+          "sourcePage": "https://zenless.hoyoverse.com/zh-cn/main",
+          "context": "",
+          "score": 8
+        }
+      ],
+      "recommended": null
+    },
+    {
+      "id": "c043",
+      "name": "派派",
+      "game": "绝区零",
+      "summary": "卡吕冬之子的可靠驾驶员。",
+      "officialHosts": [
+        "zenless.hoyoverse.com",
+        "webstatic.mihoyo.com",
+        "upload-os-bbs.hoyolab.com",
+        "fastcdn.hoyoverse.com",
+        "act.hoyolab.com"
+      ],
+      "candidates": [
+        {
+          "url": "https://fastcdn.hoyoverse.com/static-resource-v2/2024/05/17/ce1888e31d79d6d4b2f4ad9b25fbbd68_1850626400856033913.png",
+          "sourcePage": "https://zenless.hoyoverse.com/zh-cn/main",
+          "context": "",
+          "score": 8
+        }
+      ],
+      "recommended": null
+    },
+    {
+      "id": "c044",
+      "name": "可琳",
+      "game": "绝区零",
+      "summary": "维多利亚家政的女仆，挥舞电锯。",
+      "officialHosts": [
+        "zenless.hoyoverse.com",
+        "webstatic.mihoyo.com",
+        "upload-os-bbs.hoyolab.com",
+        "fastcdn.hoyoverse.com",
+        "act.hoyolab.com"
+      ],
+      "candidates": [
+        {
+          "url": "https://fastcdn.hoyoverse.com/static-resource-v2/2024/05/17/ce1888e31d79d6d4b2f4ad9b25fbbd68_1850626400856033913.png",
+          "sourcePage": "https://zenless.hoyoverse.com/zh-cn/main",
+          "context": "",
+          "score": 8
+        }
+      ],
+      "recommended": null
+    },
+    {
+      "id": "c045",
+      "name": "苍角",
+      "game": "绝区零",
+      "summary": "对空六课成员，热爱美食。",
+      "officialHosts": [
+        "zenless.hoyoverse.com",
+        "webstatic.mihoyo.com",
+        "upload-os-bbs.hoyolab.com",
+        "fastcdn.hoyoverse.com",
+        "act.hoyolab.com"
+      ],
+      "candidates": [
+        {
+          "url": "https://fastcdn.hoyoverse.com/static-resource-v2/2024/05/17/ce1888e31d79d6d4b2f4ad9b25fbbd68_1850626400856033913.png",
+          "sourcePage": "https://zenless.hoyoverse.com/zh-cn/main",
+          "context": "",
+          "score": 8
+        }
+      ],
+      "recommended": null
+    },
+    {
+      "id": "c046",
+      "name": "柏妮思",
+      "game": "绝区零",
+      "summary": "卡吕冬之子的燃油调酒师。",
+      "officialHosts": [
+        "zenless.hoyoverse.com",
+        "webstatic.mihoyo.com",
+        "upload-os-bbs.hoyolab.com",
+        "fastcdn.hoyoverse.com",
+        "act.hoyolab.com"
+      ],
+      "candidates": [
+        {
+          "url": "https://fastcdn.hoyoverse.com/static-resource-v2/2024/05/17/ce1888e31d79d6d4b2f4ad9b25fbbd68_1850626400856033913.png",
+          "sourcePage": "https://zenless.hoyoverse.com/zh-cn/main",
+          "context": "",
+          "score": 8
+        }
+      ],
+      "recommended": null
+    },
+    {
+      "id": "c047",
+      "name": "扳机",
+      "game": "绝区零",
+      "summary": "新艾利都防卫军的狙击手。",
+      "officialHosts": [
+        "zenless.hoyoverse.com",
+        "webstatic.mihoyo.com",
+        "upload-os-bbs.hoyolab.com",
+        "fastcdn.hoyoverse.com",
+        "act.hoyolab.com"
+      ],
+      "candidates": [
+        {
+          "url": "https://fastcdn.hoyoverse.com/static-resource-v2/2024/05/17/ce1888e31d79d6d4b2f4ad9b25fbbd68_1850626400856033913.png",
+          "sourcePage": "https://zenless.hoyoverse.com/zh-cn/main",
+          "context": "",
+          "score": 8
+        }
+      ],
+      "recommended": null
+    },
+    {
+      "id": "c048",
+      "name": "仪玄",
+      "game": "绝区零",
+      "summary": "云岿山观主，深藏不露的宗师。",
+      "officialHosts": [
+        "zenless.hoyoverse.com",
+        "webstatic.mihoyo.com",
+        "upload-os-bbs.hoyolab.com",
+        "fastcdn.hoyoverse.com",
+        "act.hoyolab.com"
+      ],
+      "candidates": [
+        {
+          "url": "https://fastcdn.hoyoverse.com/static-resource-v2/2024/05/17/ce1888e31d79d6d4b2f4ad9b25fbbd68_1850626400856033913.png",
+          "sourcePage": "https://zenless.hoyoverse.com/zh-cn/main",
+          "context": "",
+          "score": 8
+        }
+      ],
+      "recommended": null
+    },
+    {
+      "id": "c049",
+      "name": "长离",
+      "game": "鸣潮",
+      "summary": "今州令尹参事，筹谋于无形之间。",
+      "officialHosts": [
+        "wutheringwaves.kurogames.com",
+        "prod-gf-cn-res.aki-game.com",
+        "prod-cn-res.aki-game.com"
+      ],
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c050",
+      "name": "椿",
+      "game": "鸣潮",
+      "summary": "黑海岸的巡尉，寻觅真实与归处。",
+      "officialHosts": [
+        "wutheringwaves.kurogames.com",
+        "prod-gf-cn-res.aki-game.com",
+        "prod-cn-res.aki-game.com"
+      ],
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c051",
+      "name": "守岸人",
+      "game": "鸣潮",
+      "summary": "黑海岸的核心终端，静候长久的约定。",
+      "officialHosts": [
+        "wutheringwaves.kurogames.com",
+        "prod-gf-cn-res.aki-game.com",
+        "prod-cn-res.aki-game.com"
+      ],
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c052",
+      "name": "今汐",
+      "game": "鸣潮",
+      "summary": "今州令尹，承载岁主之力。",
+      "officialHosts": [
+        "wutheringwaves.kurogames.com",
+        "prod-gf-cn-res.aki-game.com",
+        "prod-cn-res.aki-game.com"
+      ],
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c053",
+      "name": "卡提希娅",
+      "game": "鸣潮",
+      "summary": "与风同行的骑士，纯粹而坚定。",
+      "officialHosts": [
+        "wutheringwaves.kurogames.com",
+        "prod-gf-cn-res.aki-game.com",
+        "prod-cn-res.aki-game.com"
+      ],
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c054",
+      "name": "珂莱塔",
+      "game": "鸣潮",
+      "summary": "翡萨烈家族二小姐，优雅而锋利。",
+      "officialHosts": [
+        "wutheringwaves.kurogames.com",
+        "prod-gf-cn-res.aki-game.com",
+        "prod-cn-res.aki-game.com"
+      ],
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c055",
+      "name": "吟霖",
+      "game": "鸣潮",
+      "summary": "前巡尉，擅长审问与追踪。",
+      "officialHosts": [
+        "wutheringwaves.kurogames.com",
+        "prod-gf-cn-res.aki-game.com",
+        "prod-cn-res.aki-game.com"
+      ],
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c056",
+      "name": "秧秧",
+      "game": "鸣潮",
+      "summary": "夜归成员，声音可感知风的痕迹。",
+      "officialHosts": [
+        "wutheringwaves.kurogames.com",
+        "prod-gf-cn-res.aki-game.com",
+        "prod-cn-res.aki-game.com"
+      ],
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c057",
+      "name": "鉴心",
+      "game": "鸣潮",
+      "summary": "今州的拳师，以心观万象。",
+      "officialHosts": [
+        "wutheringwaves.kurogames.com",
+        "prod-gf-cn-res.aki-game.com",
+        "prod-cn-res.aki-game.com"
+      ],
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c058",
+      "name": "散华",
+      "game": "鸣潮",
+      "summary": "今州令尹近侍，冷静而忠诚。",
+      "officialHosts": [
+        "wutheringwaves.kurogames.com",
+        "prod-gf-cn-res.aki-game.com",
+        "prod-cn-res.aki-game.com"
+      ],
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c059",
+      "name": "白芷",
+      "game": "鸣潮",
+      "summary": "华胥研究院的研究员。",
+      "officialHosts": [
+        "wutheringwaves.kurogames.com",
+        "prod-gf-cn-res.aki-game.com",
+        "prod-cn-res.aki-game.com"
+      ],
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c060",
+      "name": "丹瑾",
+      "game": "鸣潮",
+      "summary": "漂泊各地的流浪者，以血刃惩恶。",
+      "officialHosts": [
+        "wutheringwaves.kurogames.com",
+        "prod-gf-cn-res.aki-game.com",
+        "prod-cn-res.aki-game.com"
+      ],
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c061",
+      "name": "桃祈",
+      "game": "鸣潮",
+      "summary": "今州边防军的工事专家。",
+      "officialHosts": [
+        "wutheringwaves.kurogames.com",
+        "prod-gf-cn-res.aki-game.com",
+        "prod-cn-res.aki-game.com"
+      ],
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c062",
+      "name": "菲比",
+      "game": "鸣潮",
+      "summary": "隐海修会的颂诗者。",
+      "officialHosts": [
+        "wutheringwaves.kurogames.com",
+        "prod-gf-cn-res.aki-game.com",
+        "prod-cn-res.aki-game.com"
+      ],
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c063",
+      "name": "赞妮",
+      "game": "鸣潮",
+      "summary": "黎那汐塔的高效雇员。",
+      "officialHosts": [
+        "wutheringwaves.kurogames.com",
+        "prod-gf-cn-res.aki-game.com",
+        "prod-cn-res.aki-game.com"
+      ],
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c064",
+      "name": "露帕",
+      "game": "鸣潮",
+      "summary": "在竞技场中追逐荣耀的斗士。",
+      "officialHosts": [
+        "wutheringwaves.kurogames.com",
+        "prod-gf-cn-res.aki-game.com",
+        "prod-cn-res.aki-game.com"
+      ],
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c065",
+      "name": "企业",
+      "game": "碧蓝航线",
+      "summary": "白鹰阵营航母，沉稳可靠的传奇舰船。",
+      "officialHosts": [
+        "azurlane.yo-star.com",
+        "blhx.yo-star.com",
+        "manjuu.cn",
+        "weibo.com",
+        "wx1.sinaimg.cn"
+      ],
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c066",
+      "name": "能代",
+      "game": "碧蓝航线",
+      "summary": "重樱轻巡，认真且温柔。",
+      "officialHosts": [
+        "azurlane.yo-star.com",
+        "blhx.yo-star.com",
+        "manjuu.cn",
+        "weibo.com",
+        "wx1.sinaimg.cn"
+      ],
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c067",
+      "name": "大凤",
+      "game": "碧蓝航线",
+      "summary": "重樱航母，炽热又执着。",
+      "officialHosts": [
+        "azurlane.yo-star.com",
+        "blhx.yo-star.com",
+        "manjuu.cn",
+        "weibo.com",
+        "wx1.sinaimg.cn"
+      ],
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c068",
+      "name": "圣路易斯",
+      "game": "碧蓝航线",
+      "summary": "优雅强大的白鹰重巡。",
+      "officialHosts": [
+        "azurlane.yo-star.com",
+        "blhx.yo-star.com",
+        "manjuu.cn",
+        "weibo.com",
+        "wx1.sinaimg.cn"
+      ],
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c069",
+      "name": "信浓",
+      "game": "碧蓝航线",
+      "summary": "重樱大和级航母，常在梦境中低语。",
+      "officialHosts": [
+        "azurlane.yo-star.com",
+        "blhx.yo-star.com",
+        "manjuu.cn",
+        "weibo.com",
+        "wx1.sinaimg.cn"
+      ],
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c070",
+      "name": "可畏",
+      "game": "碧蓝航线",
+      "summary": "皇家装甲航母，傲娇而高贵。",
+      "officialHosts": [
+        "azurlane.yo-star.com",
+        "blhx.yo-star.com",
+        "manjuu.cn",
+        "weibo.com",
+        "wx1.sinaimg.cn"
+      ],
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c071",
+      "name": "花园",
+      "game": "碧蓝航线",
+      "summary": "白鹰战列舰，充满活力的王牌。",
+      "officialHosts": [
+        "azurlane.yo-star.com",
+        "blhx.yo-star.com",
+        "manjuu.cn",
+        "weibo.com",
+        "wx1.sinaimg.cn"
+      ],
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c072",
+      "name": "武藏",
+      "game": "碧蓝航线",
+      "summary": "重樱大和级战列舰，威严而从容。",
+      "officialHosts": [
+        "azurlane.yo-star.com",
+        "blhx.yo-star.com",
+        "manjuu.cn",
+        "weibo.com",
+        "wx1.sinaimg.cn"
+      ],
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c073",
+      "name": "阿尔萨斯",
+      "game": "碧蓝航线",
+      "summary": "自由鸢尾战列舰，执着于正义。",
+      "officialHosts": [
+        "azurlane.yo-star.com",
+        "blhx.yo-star.com",
+        "manjuu.cn",
+        "weibo.com",
+        "wx1.sinaimg.cn"
+      ],
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c074",
+      "name": "贝尔法斯特",
+      "game": "碧蓝航线",
+      "summary": "皇家女仆长，完美而沉着。",
+      "officialHosts": [
+        "azurlane.yo-star.com",
+        "blhx.yo-star.com",
+        "manjuu.cn",
+        "weibo.com",
+        "wx1.sinaimg.cn"
+      ],
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c075",
+      "name": "阿罗娜",
+      "game": "蔚蓝档案",
+      "summary": "什亭之箱的引导者，陪伴老师的少女。",
+      "officialHosts": [
+        "bluearchive-cn.com",
+        "bluearchive.nexon.com",
+        "bluearchive.nexon.com"
+      ],
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c076",
+      "name": "圣园未花",
+      "game": "蔚蓝档案",
+      "summary": "茶会的天真领袖，笑容明亮。",
+      "officialHosts": [
+        "bluearchive-cn.com",
+        "bluearchive.nexon.com",
+        "bluearchive.nexon.com"
+      ],
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c077",
+      "name": "天雨亚子",
+      "game": "蔚蓝档案",
+      "summary": "风纪委员会行政官，严谨而可靠。",
+      "officialHosts": [
+        "bluearchive-cn.com",
+        "bluearchive.nexon.com",
+        "bluearchive.nexon.com"
+      ],
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c078",
+      "name": "砂狼白子",
+      "game": "蔚蓝档案",
+      "summary": "阿比多斯对策委员会成员。",
+      "officialHosts": [
+        "bluearchive-cn.com",
+        "bluearchive.nexon.com",
+        "bluearchive.nexon.com"
+      ],
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c079",
+      "name": "陆八魔爱露",
+      "game": "蔚蓝档案",
+      "summary": "便利屋68社长，想成为帅气反派。",
+      "officialHosts": [
+        "bluearchive-cn.com",
+        "bluearchive.nexon.com",
+        "bluearchive.nexon.com"
+      ],
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c080",
+      "name": "空崎日奈",
+      "game": "蔚蓝档案",
+      "summary": "风纪委员会会长，冷酷又怕麻烦。",
+      "officialHosts": [
+        "bluearchive-cn.com",
+        "bluearchive.nexon.com",
+        "bluearchive.nexon.com"
+      ],
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c081",
+      "name": "天童爱丽丝",
+      "game": "蔚蓝档案",
+      "summary": "游戏开发部的公主，向往冒险。",
+      "officialHosts": [
+        "bluearchive-cn.com",
+        "bluearchive.nexon.com",
+        "bluearchive.nexon.com"
+      ],
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c082",
+      "name": "伊落玛丽",
+      "game": "蔚蓝档案",
+      "summary": "三一综合学园的正义实现委员。",
+      "officialHosts": [
+        "bluearchive-cn.com",
+        "bluearchive.nexon.com",
+        "bluearchive.nexon.com"
+      ],
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c083",
+      "name": "一之濑明日奈",
+      "game": "蔚蓝档案",
+      "summary": "C&C特工，开朗而善解人意。",
+      "officialHosts": [
+        "bluearchive-cn.com",
+        "bluearchive.nexon.com",
+        "bluearchive.nexon.com"
+      ],
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c084",
+      "name": "早濑优香",
+      "game": "蔚蓝档案",
+      "summary": "千年学园研讨会会计，精于计算。",
+      "officialHosts": [
+        "bluearchive-cn.com",
+        "bluearchive.nexon.com",
+        "bluearchive.nexon.com"
+      ],
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c085",
+      "name": "阿尔托莉雅·潘德拉贡",
+      "game": "Fate/Grand Order",
+      "summary": "拔出石中剑的骑士王。",
+      "officialHosts": [
+        "fate-go.jp",
+        "static.atlasacademy.io"
+      ],
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c086",
+      "name": "玛修·基列莱特",
+      "game": "Fate/Grand Order",
+      "summary": "迦勒底的后辈，以盾守护未来。",
+      "officialHosts": [
+        "fate-go.jp",
+        "static.atlasacademy.io"
+      ],
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c087",
+      "name": "斯卡哈",
+      "game": "Fate/Grand Order",
+      "summary": "影之国女王，传授枪术的导师。",
+      "officialHosts": [
+        "fate-go.jp",
+        "static.atlasacademy.io"
+      ],
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c088",
+      "name": "伊什塔尔",
+      "game": "Fate/Grand Order",
+      "summary": "来自天际的女神，华丽且任性。",
+      "officialHosts": [
+        "fate-go.jp",
+        "static.atlasacademy.io"
+      ],
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c089",
+      "name": "摩根",
+      "game": "Fate/Grand Order",
+      "summary": "不列颠异闻带的女王。",
+      "officialHosts": [
+        "fate-go.jp",
+        "static.atlasacademy.io"
+      ],
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c090",
+      "name": "尼禄·克劳狄乌斯",
+      "game": "Fate/Grand Order",
+      "summary": "自称艺术之花的罗马皇帝。",
+      "officialHosts": [
+        "fate-go.jp",
+        "static.atlasacademy.io"
+      ],
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c091",
+      "name": "贞德",
+      "game": "Fate/Grand Order",
+      "summary": "响应祈祷而来的圣女。",
+      "officialHosts": [
+        "fate-go.jp",
+        "static.atlasacademy.io"
+      ],
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c092",
+      "name": "梅林",
+      "game": "Fate/Grand Order",
+      "summary": "花之魔术师，善于讲述梦境。",
+      "officialHosts": [
+        "fate-go.jp",
+        "static.atlasacademy.io"
+      ],
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c093",
+      "name": "BB",
+      "game": "Fate/Grand Order",
+      "summary": "月之背面的后辈型人工智能。",
+      "officialHosts": [
+        "fate-go.jp",
+        "static.atlasacademy.io"
+      ],
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c094",
+      "name": "两仪式",
+      "game": "Fate/Grand Order",
+      "summary": "直死之魔眼的持有者。",
+      "officialHosts": [
+        "fate-go.jp",
+        "static.atlasacademy.io"
+      ],
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c095",
+      "name": "阿妮斯",
+      "game": "胜利女神：妮姬",
+      "summary": "反击部队成员，直率且重情。",
+      "officialHosts": [
+        "nikke.hotcool.tw",
+        "static.hotcool.tw",
+        "nikke-en.com",
+        "nikke-kr.com"
+      ],
+      "candidates": [
+        {
+          "url": "https://static.hotcool.tw/static/act/slnstw/gw_new/pc/ossweb-img/role/d_role1.png",
+          "sourcePage": "https://nikke.hotcool.tw/?lang=zh-TW",
+          "context": "",
+          "score": 28
+        },
+        {
+          "url": "https://static.hotcool.tw/static/act/slnstw/gw_new/pc/ossweb-img/buoy_text.png",
+          "sourcePage": "https://nikke.hotcool.tw/?lang=zh-TW",
+          "context": "",
+          "score": 8
+        },
+        {
+          "url": "https://static.hotcool.tw/static/act/slnstw/gw_new/pc/ossweb-img/flex_box_img.png",
+          "sourcePage": "https://nikke.hotcool.tw/?lang=zh-TW",
+          "context": "",
+          "score": 8
+        },
+        {
+          "url": "https://static.hotcool.tw/static/act/slnstw/gw_new/pc/ossweb-img/img_qr.png",
+          "sourcePage": "https://nikke.hotcool.tw/?lang=zh-TW",
+          "context": "",
+          "score": 8
+        },
+        {
+          "url": "https://static.hotcool.tw/static/act/slnstw/gw_new/pc/ossweb-img/img_qr1.png",
+          "sourcePage": "https://nikke.hotcool.tw/?lang=zh-TW",
+          "context": "",
+          "score": 8
+        },
+        {
+          "url": "https://static.hotcool.tw/static/act/slnstw/gw_new/pc/ossweb-img/part2.png",
+          "sourcePage": "https://nikke.hotcool.tw/?lang=zh-TW",
+          "context": "",
+          "score": 8
+        },
+        {
+          "url": "https://static.hotcool.tw/static/act/slnstw/gw_new/pc/ossweb-img/part4.png",
+          "sourcePage": "https://nikke.hotcool.tw/?lang=zh-TW",
+          "context": "",
+          "score": 8
+        },
+        {
+          "url": "https://static.hotcool.tw/static/act/slnstw/gw_new/pc/ossweb-img/text_bg1.png",
+          "sourcePage": "https://nikke.hotcool.tw/?lang=zh-TW",
+          "context": "",
+          "score": 8
+        }
+      ],
+      "recommended": null
+    },
+    {
+      "id": "c096",
+      "name": "红莲",
+      "game": "胜利女神：妮姬",
+      "summary": "朝圣者之一，以剑守护人类。",
+      "officialHosts": [
+        "nikke.hotcool.tw",
+        "static.hotcool.tw",
+        "nikke-en.com",
+        "nikke-kr.com"
+      ],
+      "candidates": [
+        {
+          "url": "https://static.hotcool.tw/static/act/slnstw/gw_new/pc/ossweb-img/role/d_role1.png",
+          "sourcePage": "https://nikke.hotcool.tw/?lang=zh-TW",
+          "context": "",
+          "score": 28
+        },
+        {
+          "url": "https://static.hotcool.tw/static/act/slnstw/gw_new/pc/ossweb-img/buoy_text.png",
+          "sourcePage": "https://nikke.hotcool.tw/?lang=zh-TW",
+          "context": "",
+          "score": 8
+        },
+        {
+          "url": "https://static.hotcool.tw/static/act/slnstw/gw_new/pc/ossweb-img/flex_box_img.png",
+          "sourcePage": "https://nikke.hotcool.tw/?lang=zh-TW",
+          "context": "",
+          "score": 8
+        },
+        {
+          "url": "https://static.hotcool.tw/static/act/slnstw/gw_new/pc/ossweb-img/img_qr.png",
+          "sourcePage": "https://nikke.hotcool.tw/?lang=zh-TW",
+          "context": "",
+          "score": 8
+        },
+        {
+          "url": "https://static.hotcool.tw/static/act/slnstw/gw_new/pc/ossweb-img/img_qr1.png",
+          "sourcePage": "https://nikke.hotcool.tw/?lang=zh-TW",
+          "context": "",
+          "score": 8
+        },
+        {
+          "url": "https://static.hotcool.tw/static/act/slnstw/gw_new/pc/ossweb-img/part2.png",
+          "sourcePage": "https://nikke.hotcool.tw/?lang=zh-TW",
+          "context": "",
+          "score": 8
+        },
+        {
+          "url": "https://static.hotcool.tw/static/act/slnstw/gw_new/pc/ossweb-img/part4.png",
+          "sourcePage": "https://nikke.hotcool.tw/?lang=zh-TW",
+          "context": "",
+          "score": 8
+        },
+        {
+          "url": "https://static.hotcool.tw/static/act/slnstw/gw_new/pc/ossweb-img/text_bg1.png",
+          "sourcePage": "https://nikke.hotcool.tw/?lang=zh-TW",
+          "context": "",
+          "score": 8
+        }
+      ],
+      "recommended": null
+    },
+    {
+      "id": "c097",
+      "name": "桃乐丝",
+      "game": "胜利女神：妮姬",
+      "summary": "伊甸的领袖，背负旧日伤痕。",
+      "officialHosts": [
+        "nikke.hotcool.tw",
+        "static.hotcool.tw",
+        "nikke-en.com",
+        "nikke-kr.com"
+      ],
+      "candidates": [
+        {
+          "url": "https://static.hotcool.tw/static/act/slnstw/gw_new/pc/ossweb-img/role/d_role1.png",
+          "sourcePage": "https://nikke.hotcool.tw/?lang=zh-TW",
+          "context": "",
+          "score": 28
+        },
+        {
+          "url": "https://static.hotcool.tw/static/act/slnstw/gw_new/pc/ossweb-img/buoy_text.png",
+          "sourcePage": "https://nikke.hotcool.tw/?lang=zh-TW",
+          "context": "",
+          "score": 8
+        },
+        {
+          "url": "https://static.hotcool.tw/static/act/slnstw/gw_new/pc/ossweb-img/flex_box_img.png",
+          "sourcePage": "https://nikke.hotcool.tw/?lang=zh-TW",
+          "context": "",
+          "score": 8
+        },
+        {
+          "url": "https://static.hotcool.tw/static/act/slnstw/gw_new/pc/ossweb-img/img_qr.png",
+          "sourcePage": "https://nikke.hotcool.tw/?lang=zh-TW",
+          "context": "",
+          "score": 8
+        },
+        {
+          "url": "https://static.hotcool.tw/static/act/slnstw/gw_new/pc/ossweb-img/img_qr1.png",
+          "sourcePage": "https://nikke.hotcool.tw/?lang=zh-TW",
+          "context": "",
+          "score": 8
+        },
+        {
+          "url": "https://static.hotcool.tw/static/act/slnstw/gw_new/pc/ossweb-img/part2.png",
+          "sourcePage": "https://nikke.hotcool.tw/?lang=zh-TW",
+          "context": "",
+          "score": 8
+        },
+        {
+          "url": "https://static.hotcool.tw/static/act/slnstw/gw_new/pc/ossweb-img/part4.png",
+          "sourcePage": "https://nikke.hotcool.tw/?lang=zh-TW",
+          "context": "",
+          "score": 8
+        },
+        {
+          "url": "https://static.hotcool.tw/static/act/slnstw/gw_new/pc/ossweb-img/text_bg1.png",
+          "sourcePage": "https://nikke.hotcool.tw/?lang=zh-TW",
+          "context": "",
+          "score": 8
+        }
+      ],
+      "recommended": null
+    },
+    {
+      "id": "c098",
+      "name": "拉毗",
+      "game": "胜利女神：妮姬",
+      "summary": "反击部队的冷静核心。",
+      "officialHosts": [
+        "nikke.hotcool.tw",
+        "static.hotcool.tw",
+        "nikke-en.com",
+        "nikke-kr.com"
+      ],
+      "candidates": [
+        {
+          "url": "https://static.hotcool.tw/static/act/slnstw/gw_new/pc/ossweb-img/role/d_role1.png",
+          "sourcePage": "https://nikke.hotcool.tw/?lang=zh-TW",
+          "context": "",
+          "score": 28
+        },
+        {
+          "url": "https://static.hotcool.tw/static/act/slnstw/gw_new/pc/ossweb-img/buoy_text.png",
+          "sourcePage": "https://nikke.hotcool.tw/?lang=zh-TW",
+          "context": "",
+          "score": 8
+        },
+        {
+          "url": "https://static.hotcool.tw/static/act/slnstw/gw_new/pc/ossweb-img/flex_box_img.png",
+          "sourcePage": "https://nikke.hotcool.tw/?lang=zh-TW",
+          "context": "",
+          "score": 8
+        },
+        {
+          "url": "https://static.hotcool.tw/static/act/slnstw/gw_new/pc/ossweb-img/img_qr.png",
+          "sourcePage": "https://nikke.hotcool.tw/?lang=zh-TW",
+          "context": "",
+          "score": 8
+        },
+        {
+          "url": "https://static.hotcool.tw/static/act/slnstw/gw_new/pc/ossweb-img/img_qr1.png",
+          "sourcePage": "https://nikke.hotcool.tw/?lang=zh-TW",
+          "context": "",
+          "score": 8
+        },
+        {
+          "url": "https://static.hotcool.tw/static/act/slnstw/gw_new/pc/ossweb-img/part2.png",
+          "sourcePage": "https://nikke.hotcool.tw/?lang=zh-TW",
+          "context": "",
+          "score": 8
+        },
+        {
+          "url": "https://static.hotcool.tw/static/act/slnstw/gw_new/pc/ossweb-img/part4.png",
+          "sourcePage": "https://nikke.hotcool.tw/?lang=zh-TW",
+          "context": "",
+          "score": 8
+        },
+        {
+          "url": "https://static.hotcool.tw/static/act/slnstw/gw_new/pc/ossweb-img/text_bg1.png",
+          "sourcePage": "https://nikke.hotcool.tw/?lang=zh-TW",
+          "context": "",
+          "score": 8
+        }
+      ],
+      "recommended": null
+    },
+    {
+      "id": "c099",
+      "name": "爱丽丝",
+      "game": "胜利女神：妮姬",
+      "summary": "以童话和勇气面对战斗的少女。",
+      "officialHosts": [
+        "nikke.hotcool.tw",
+        "static.hotcool.tw",
+        "nikke-en.com",
+        "nikke-kr.com"
+      ],
+      "candidates": [
+        {
+          "url": "https://static.hotcool.tw/static/act/slnstw/gw_new/pc/ossweb-img/role/d_role1.png",
+          "sourcePage": "https://nikke.hotcool.tw/?lang=zh-TW",
+          "context": "",
+          "score": 28
+        },
+        {
+          "url": "https://static.hotcool.tw/static/act/slnstw/gw_new/pc/ossweb-img/buoy_text.png",
+          "sourcePage": "https://nikke.hotcool.tw/?lang=zh-TW",
+          "context": "",
+          "score": 8
+        },
+        {
+          "url": "https://static.hotcool.tw/static/act/slnstw/gw_new/pc/ossweb-img/flex_box_img.png",
+          "sourcePage": "https://nikke.hotcool.tw/?lang=zh-TW",
+          "context": "",
+          "score": 8
+        },
+        {
+          "url": "https://static.hotcool.tw/static/act/slnstw/gw_new/pc/ossweb-img/img_qr.png",
+          "sourcePage": "https://nikke.hotcool.tw/?lang=zh-TW",
+          "context": "",
+          "score": 8
+        },
+        {
+          "url": "https://static.hotcool.tw/static/act/slnstw/gw_new/pc/ossweb-img/img_qr1.png",
+          "sourcePage": "https://nikke.hotcool.tw/?lang=zh-TW",
+          "context": "",
+          "score": 8
+        },
+        {
+          "url": "https://static.hotcool.tw/static/act/slnstw/gw_new/pc/ossweb-img/part2.png",
+          "sourcePage": "https://nikke.hotcool.tw/?lang=zh-TW",
+          "context": "",
+          "score": 8
+        },
+        {
+          "url": "https://static.hotcool.tw/static/act/slnstw/gw_new/pc/ossweb-img/part4.png",
+          "sourcePage": "https://nikke.hotcool.tw/?lang=zh-TW",
+          "context": "",
+          "score": 8
+        },
+        {
+          "url": "https://static.hotcool.tw/static/act/slnstw/gw_new/pc/ossweb-img/text_bg1.png",
+          "sourcePage": "https://nikke.hotcool.tw/?lang=zh-TW",
+          "context": "",
+          "score": 8
+        }
+      ],
+      "recommended": null
+    },
+    {
+      "id": "c100",
+      "name": "神罚",
+      "game": "胜利女神：妮姬",
+      "summary": "朝圣者，承载旧日的奇迹。",
+      "officialHosts": [
+        "nikke.hotcool.tw",
+        "static.hotcool.tw",
+        "nikke-en.com",
+        "nikke-kr.com"
+      ],
+      "candidates": [
+        {
+          "url": "https://static.hotcool.tw/static/act/slnstw/gw_new/pc/ossweb-img/role/d_role1.png",
+          "sourcePage": "https://nikke.hotcool.tw/?lang=zh-TW",
+          "context": "",
+          "score": 28
+        },
+        {
+          "url": "https://static.hotcool.tw/static/act/slnstw/gw_new/pc/ossweb-img/buoy_text.png",
+          "sourcePage": "https://nikke.hotcool.tw/?lang=zh-TW",
+          "context": "",
+          "score": 8
+        },
+        {
+          "url": "https://static.hotcool.tw/static/act/slnstw/gw_new/pc/ossweb-img/flex_box_img.png",
+          "sourcePage": "https://nikke.hotcool.tw/?lang=zh-TW",
+          "context": "",
+          "score": 8
+        },
+        {
+          "url": "https://static.hotcool.tw/static/act/slnstw/gw_new/pc/ossweb-img/img_qr.png",
+          "sourcePage": "https://nikke.hotcool.tw/?lang=zh-TW",
+          "context": "",
+          "score": 8
+        },
+        {
+          "url": "https://static.hotcool.tw/static/act/slnstw/gw_new/pc/ossweb-img/img_qr1.png",
+          "sourcePage": "https://nikke.hotcool.tw/?lang=zh-TW",
+          "context": "",
+          "score": 8
+        },
+        {
+          "url": "https://static.hotcool.tw/static/act/slnstw/gw_new/pc/ossweb-img/part2.png",
+          "sourcePage": "https://nikke.hotcool.tw/?lang=zh-TW",
+          "context": "",
+          "score": 8
+        },
+        {
+          "url": "https://static.hotcool.tw/static/act/slnstw/gw_new/pc/ossweb-img/part4.png",
+          "sourcePage": "https://nikke.hotcool.tw/?lang=zh-TW",
+          "context": "",
+          "score": 8
+        },
+        {
+          "url": "https://static.hotcool.tw/static/act/slnstw/gw_new/pc/ossweb-img/text_bg1.png",
+          "sourcePage": "https://nikke.hotcool.tw/?lang=zh-TW",
+          "context": "",
+          "score": 8
+        }
+      ],
+      "recommended": null
+    },
+    {
+      "id": "c101",
+      "name": "海伦",
+      "game": "胜利女神：妮姬",
+      "summary": "绝对部队成员，自信而耀眼。",
+      "officialHosts": [
+        "nikke.hotcool.tw",
+        "static.hotcool.tw",
+        "nikke-en.com",
+        "nikke-kr.com"
+      ],
+      "candidates": [
+        {
+          "url": "https://static.hotcool.tw/static/act/slnstw/gw_new/pc/ossweb-img/role/d_role1.png",
+          "sourcePage": "https://nikke.hotcool.tw/?lang=zh-TW",
+          "context": "",
+          "score": 28
+        },
+        {
+          "url": "https://static.hotcool.tw/static/act/slnstw/gw_new/pc/ossweb-img/buoy_text.png",
+          "sourcePage": "https://nikke.hotcool.tw/?lang=zh-TW",
+          "context": "",
+          "score": 8
+        },
+        {
+          "url": "https://static.hotcool.tw/static/act/slnstw/gw_new/pc/ossweb-img/flex_box_img.png",
+          "sourcePage": "https://nikke.hotcool.tw/?lang=zh-TW",
+          "context": "",
+          "score": 8
+        },
+        {
+          "url": "https://static.hotcool.tw/static/act/slnstw/gw_new/pc/ossweb-img/img_qr.png",
+          "sourcePage": "https://nikke.hotcool.tw/?lang=zh-TW",
+          "context": "",
+          "score": 8
+        },
+        {
+          "url": "https://static.hotcool.tw/static/act/slnstw/gw_new/pc/ossweb-img/img_qr1.png",
+          "sourcePage": "https://nikke.hotcool.tw/?lang=zh-TW",
+          "context": "",
+          "score": 8
+        },
+        {
+          "url": "https://static.hotcool.tw/static/act/slnstw/gw_new/pc/ossweb-img/part2.png",
+          "sourcePage": "https://nikke.hotcool.tw/?lang=zh-TW",
+          "context": "",
+          "score": 8
+        },
+        {
+          "url": "https://static.hotcool.tw/static/act/slnstw/gw_new/pc/ossweb-img/part4.png",
+          "sourcePage": "https://nikke.hotcool.tw/?lang=zh-TW",
+          "context": "",
+          "score": 8
+        },
+        {
+          "url": "https://static.hotcool.tw/static/act/slnstw/gw_new/pc/ossweb-img/text_bg1.png",
+          "sourcePage": "https://nikke.hotcool.tw/?lang=zh-TW",
+          "context": "",
+          "score": 8
+        }
+      ],
+      "recommended": null
+    },
+    {
+      "id": "c102",
+      "name": "诺伊斯",
+      "game": "胜利女神：妮姬",
+      "summary": "绝对部队成员，舞台上的歌手。",
+      "officialHosts": [
+        "nikke.hotcool.tw",
+        "static.hotcool.tw",
+        "nikke-en.com",
+        "nikke-kr.com"
+      ],
+      "candidates": [
+        {
+          "url": "https://static.hotcool.tw/static/act/slnstw/gw_new/pc/ossweb-img/role/d_role1.png",
+          "sourcePage": "https://nikke.hotcool.tw/?lang=zh-TW",
+          "context": "",
+          "score": 28
+        },
+        {
+          "url": "https://static.hotcool.tw/static/act/slnstw/gw_new/pc/ossweb-img/buoy_text.png",
+          "sourcePage": "https://nikke.hotcool.tw/?lang=zh-TW",
+          "context": "",
+          "score": 8
+        },
+        {
+          "url": "https://static.hotcool.tw/static/act/slnstw/gw_new/pc/ossweb-img/flex_box_img.png",
+          "sourcePage": "https://nikke.hotcool.tw/?lang=zh-TW",
+          "context": "",
+          "score": 8
+        },
+        {
+          "url": "https://static.hotcool.tw/static/act/slnstw/gw_new/pc/ossweb-img/img_qr.png",
+          "sourcePage": "https://nikke.hotcool.tw/?lang=zh-TW",
+          "context": "",
+          "score": 8
+        },
+        {
+          "url": "https://static.hotcool.tw/static/act/slnstw/gw_new/pc/ossweb-img/img_qr1.png",
+          "sourcePage": "https://nikke.hotcool.tw/?lang=zh-TW",
+          "context": "",
+          "score": 8
+        },
+        {
+          "url": "https://static.hotcool.tw/static/act/slnstw/gw_new/pc/ossweb-img/part2.png",
+          "sourcePage": "https://nikke.hotcool.tw/?lang=zh-TW",
+          "context": "",
+          "score": 8
+        },
+        {
+          "url": "https://static.hotcool.tw/static/act/slnstw/gw_new/pc/ossweb-img/part4.png",
+          "sourcePage": "https://nikke.hotcool.tw/?lang=zh-TW",
+          "context": "",
+          "score": 8
+        },
+        {
+          "url": "https://static.hotcool.tw/static/act/slnstw/gw_new/pc/ossweb-img/text_bg1.png",
+          "sourcePage": "https://nikke.hotcool.tw/?lang=zh-TW",
+          "context": "",
+          "score": 8
+        }
+      ],
+      "recommended": null
+    },
+    {
+      "id": "c103",
+      "name": "樱花",
+      "game": "胜利女神：妮姬",
+      "summary": "牡丹会首领，温婉又果断。",
+      "officialHosts": [
+        "nikke.hotcool.tw",
+        "static.hotcool.tw",
+        "nikke-en.com",
+        "nikke-kr.com"
+      ],
+      "candidates": [
+        {
+          "url": "https://static.hotcool.tw/static/act/slnstw/gw_new/pc/ossweb-img/role/d_role1.png",
+          "sourcePage": "https://nikke.hotcool.tw/?lang=zh-TW",
+          "context": "",
+          "score": 28
+        },
+        {
+          "url": "https://static.hotcool.tw/static/act/slnstw/gw_new/pc/ossweb-img/buoy_text.png",
+          "sourcePage": "https://nikke.hotcool.tw/?lang=zh-TW",
+          "context": "",
+          "score": 8
+        },
+        {
+          "url": "https://static.hotcool.tw/static/act/slnstw/gw_new/pc/ossweb-img/flex_box_img.png",
+          "sourcePage": "https://nikke.hotcool.tw/?lang=zh-TW",
+          "context": "",
+          "score": 8
+        },
+        {
+          "url": "https://static.hotcool.tw/static/act/slnstw/gw_new/pc/ossweb-img/img_qr.png",
+          "sourcePage": "https://nikke.hotcool.tw/?lang=zh-TW",
+          "context": "",
+          "score": 8
+        },
+        {
+          "url": "https://static.hotcool.tw/static/act/slnstw/gw_new/pc/ossweb-img/img_qr1.png",
+          "sourcePage": "https://nikke.hotcool.tw/?lang=zh-TW",
+          "context": "",
+          "score": 8
+        },
+        {
+          "url": "https://static.hotcool.tw/static/act/slnstw/gw_new/pc/ossweb-img/part2.png",
+          "sourcePage": "https://nikke.hotcool.tw/?lang=zh-TW",
+          "context": "",
+          "score": 8
+        },
+        {
+          "url": "https://static.hotcool.tw/static/act/slnstw/gw_new/pc/ossweb-img/part4.png",
+          "sourcePage": "https://nikke.hotcool.tw/?lang=zh-TW",
+          "context": "",
+          "score": 8
+        },
+        {
+          "url": "https://static.hotcool.tw/static/act/slnstw/gw_new/pc/ossweb-img/text_bg1.png",
+          "sourcePage": "https://nikke.hotcool.tw/?lang=zh-TW",
+          "context": "",
+          "score": 8
+        }
+      ],
+      "recommended": null
+    },
+    {
+      "id": "c104",
+      "name": "伊莎贝尔",
+      "game": "胜利女神：妮姬",
+      "summary": "朝圣者，带着执着的温柔。",
+      "officialHosts": [
+        "nikke.hotcool.tw",
+        "static.hotcool.tw",
+        "nikke-en.com",
+        "nikke-kr.com"
+      ],
+      "candidates": [
+        {
+          "url": "https://static.hotcool.tw/static/act/slnstw/gw_new/pc/ossweb-img/role/d_role1.png",
+          "sourcePage": "https://nikke.hotcool.tw/?lang=zh-TW",
+          "context": "",
+          "score": 28
+        },
+        {
+          "url": "https://static.hotcool.tw/static/act/slnstw/gw_new/pc/ossweb-img/buoy_text.png",
+          "sourcePage": "https://nikke.hotcool.tw/?lang=zh-TW",
+          "context": "",
+          "score": 8
+        },
+        {
+          "url": "https://static.hotcool.tw/static/act/slnstw/gw_new/pc/ossweb-img/flex_box_img.png",
+          "sourcePage": "https://nikke.hotcool.tw/?lang=zh-TW",
+          "context": "",
+          "score": 8
+        },
+        {
+          "url": "https://static.hotcool.tw/static/act/slnstw/gw_new/pc/ossweb-img/img_qr.png",
+          "sourcePage": "https://nikke.hotcool.tw/?lang=zh-TW",
+          "context": "",
+          "score": 8
+        },
+        {
+          "url": "https://static.hotcool.tw/static/act/slnstw/gw_new/pc/ossweb-img/img_qr1.png",
+          "sourcePage": "https://nikke.hotcool.tw/?lang=zh-TW",
+          "context": "",
+          "score": 8
+        },
+        {
+          "url": "https://static.hotcool.tw/static/act/slnstw/gw_new/pc/ossweb-img/part2.png",
+          "sourcePage": "https://nikke.hotcool.tw/?lang=zh-TW",
+          "context": "",
+          "score": 8
+        },
+        {
+          "url": "https://static.hotcool.tw/static/act/slnstw/gw_new/pc/ossweb-img/part4.png",
+          "sourcePage": "https://nikke.hotcool.tw/?lang=zh-TW",
+          "context": "",
+          "score": 8
+        },
+        {
+          "url": "https://static.hotcool.tw/static/act/slnstw/gw_new/pc/ossweb-img/text_bg1.png",
+          "sourcePage": "https://nikke.hotcool.tw/?lang=zh-TW",
+          "context": "",
+          "score": 8
+        }
+      ],
+      "recommended": null
+    },
+    {
+      "id": "c105",
+      "name": "露西亚",
+      "game": "战双帕弥什",
+      "summary": "灰鸦小队队长，始终守望人类。",
+      "officialHosts": [
+        "pns.kurogame.com",
+        "pns.kurogames.com",
+        "prod-cn-res.aki-game.com"
+      ],
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c106",
+      "name": "丽芙",
+      "game": "战双帕弥什",
+      "summary": "温柔坚韧的支援型构造体。",
+      "officialHosts": [
+        "pns.kurogame.com",
+        "pns.kurogames.com",
+        "prod-cn-res.aki-game.com"
+      ],
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c107",
+      "name": "薇拉",
+      "game": "战双帕弥什",
+      "summary": "渡边小队成员，野性而果决。",
+      "officialHosts": [
+        "pns.kurogame.com",
+        "pns.kurogames.com",
+        "prod-cn-res.aki-game.com"
+      ],
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c108",
+      "name": "曲",
+      "game": "战双帕弥什",
+      "summary": "九龙众的首领，理性且优雅。",
+      "officialHosts": [
+        "pns.kurogame.com",
+        "pns.kurogames.com",
+        "prod-cn-res.aki-game.com"
+      ],
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c109",
+      "name": "赛琳娜",
+      "game": "战双帕弥什",
+      "summary": "被遗忘的舞者，以歌声守望。",
+      "officialHosts": [
+        "pns.kurogame.com",
+        "pns.kurogames.com",
+        "prod-cn-res.aki-game.com"
+      ],
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c110",
+      "name": "罗塞塔",
+      "game": "战双帕弥什",
+      "summary": "遗忘者的骑士，守护绿洲。",
+      "officialHosts": [
+        "pns.kurogame.com",
+        "pns.kurogames.com",
+        "prod-cn-res.aki-game.com"
+      ],
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c111",
+      "name": "含英",
+      "game": "战双帕弥什",
+      "summary": "九龙商会成员，擅长布局。",
+      "officialHosts": [
+        "pns.kurogame.com",
+        "pns.kurogames.com",
+        "prod-cn-res.aki-game.com"
+      ],
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c112",
+      "name": "21号",
+      "game": "战双帕弥什",
+      "summary": "专精改造的实验型构造体。",
+      "officialHosts": [
+        "pns.kurogame.com",
+        "pns.kurogames.com",
+        "prod-cn-res.aki-game.com"
+      ],
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c113",
+      "name": "陈千语",
+      "game": "明日方舟：终末地",
+      "summary": "终末地工业体系中的年轻领航者。",
+      "officialHosts": [
+        "endfield.gryphline.com",
+        "ak.hypergryph.com",
+        "web.hycdn.cn",
+        "media.hypergryph.com"
+      ],
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c114",
+      "name": "管理员",
+      "game": "明日方舟：终末地",
+      "summary": "深入塔卫二的终末地管理者。",
+      "officialHosts": [
+        "endfield.gryphline.com",
+        "ak.hypergryph.com",
+        "web.hycdn.cn",
+        "media.hypergryph.com"
+      ],
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c115",
+      "name": "赛希",
+      "game": "明日方舟：终末地",
+      "summary": "擅长在荒野间探索与战斗。",
+      "officialHosts": [
+        "endfield.gryphline.com",
+        "ak.hypergryph.com",
+        "web.hycdn.cn",
+        "media.hypergryph.com"
+      ],
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c116",
+      "name": "佩丽卡",
+      "game": "明日方舟：终末地",
+      "summary": "活跃于终末地前线的干员。",
+      "officialHosts": [
+        "endfield.gryphline.com",
+        "ak.hypergryph.com",
+        "web.hycdn.cn",
+        "media.hypergryph.com"
+      ],
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c117",
+      "name": "安洁莉娜",
+      "game": "明日方舟：终末地",
+      "summary": "终末地世界中的探索者。",
+      "officialHosts": [
+        "endfield.gryphline.com",
+        "ak.hypergryph.com",
+        "web.hycdn.cn",
+        "media.hypergryph.com"
+      ],
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c118",
+      "name": "黎风",
+      "game": "明日方舟：终末地",
+      "summary": "在塔卫二前线执行任务的干员。",
+      "officialHosts": [
+        "endfield.gryphline.com",
+        "ak.hypergryph.com",
+        "web.hycdn.cn",
+        "media.hypergryph.com"
+      ],
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c119",
+      "name": "艾维文娜",
+      "game": "明日方舟：终末地",
+      "summary": "擅长处理异常生态的终末地成员。",
+      "officialHosts": [
+        "endfield.gryphline.com",
+        "ak.hypergryph.com",
+        "web.hycdn.cn",
+        "media.hypergryph.com"
+      ],
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c120",
+      "name": "余烬",
+      "game": "明日方舟：终末地",
+      "summary": "参与荒野开拓的年轻干员。",
+      "officialHosts": [
+        "endfield.gryphline.com",
+        "ak.hypergryph.com",
+        "web.hycdn.cn",
+        "media.hypergryph.com"
+      ],
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c121",
+      "name": "安魂曲",
+      "game": "异环",
+      "summary": "海特洛市中神秘的异象处理者。",
+      "officialHosts": [
+        "yh.wanmei.com",
+        "yh.wanmei.com",
+        "static.wanmei.com"
+      ],
+      "candidates": [
+        {
+          "url": "https://yh.wanmei.com/images/cover260226/logo.png",
+          "sourcePage": "https://yh.wanmei.com/",
+          "context": "",
+          "score": 8
+        },
+        {
+          "url": "https://yh.wanmei.com/images/cover260702/slogan.png",
+          "sourcePage": "https://yh.wanmei.com/",
+          "context": "",
+          "score": 8
+        },
+        {
+          "url": "https://yh.wanmei.com/images/cover260203/icon-age.png",
+          "sourcePage": "https://yh.wanmei.com/",
+          "context": "",
+          "score": 8
+        },
+        {
+          "url": "https://yh.wanmei.com/images/cover260528/downloadCloudCode.png",
+          "sourcePage": "https://yh.wanmei.com/",
+          "context": "",
+          "score": 8
+        }
+      ],
+      "recommended": null
+    },
+    {
+      "id": "c122",
+      "name": "娜娜莉",
+      "game": "异环",
+      "summary": "异象猎人事务所的活力成员。",
+      "officialHosts": [
+        "yh.wanmei.com",
+        "yh.wanmei.com",
+        "static.wanmei.com"
+      ],
+      "candidates": [
+        {
+          "url": "https://yh.wanmei.com/images/cover260226/logo.png",
+          "sourcePage": "https://yh.wanmei.com/",
+          "context": "",
+          "score": 8
+        },
+        {
+          "url": "https://yh.wanmei.com/images/cover260702/slogan.png",
+          "sourcePage": "https://yh.wanmei.com/",
+          "context": "",
+          "score": 8
+        },
+        {
+          "url": "https://yh.wanmei.com/images/cover260203/icon-age.png",
+          "sourcePage": "https://yh.wanmei.com/",
+          "context": "",
+          "score": 8
+        },
+        {
+          "url": "https://yh.wanmei.com/images/cover260528/downloadCloudCode.png",
+          "sourcePage": "https://yh.wanmei.com/",
+          "context": "",
+          "score": 8
+        }
+      ],
+      "recommended": null
+    },
+    {
+      "id": "c123",
+      "name": "薄荷",
+      "game": "异环",
+      "summary": "与都市异象共处的年轻调查员。",
+      "officialHosts": [
+        "yh.wanmei.com",
+        "yh.wanmei.com",
+        "static.wanmei.com"
+      ],
+      "candidates": [
+        {
+          "url": "https://yh.wanmei.com/images/cover260226/logo.png",
+          "sourcePage": "https://yh.wanmei.com/",
+          "context": "",
+          "score": 8
+        },
+        {
+          "url": "https://yh.wanmei.com/images/cover260702/slogan.png",
+          "sourcePage": "https://yh.wanmei.com/",
+          "context": "",
+          "score": 8
+        },
+        {
+          "url": "https://yh.wanmei.com/images/cover260203/icon-age.png",
+          "sourcePage": "https://yh.wanmei.com/",
+          "context": "",
+          "score": 8
+        },
+        {
+          "url": "https://yh.wanmei.com/images/cover260528/downloadCloudCode.png",
+          "sourcePage": "https://yh.wanmei.com/",
+          "context": "",
+          "score": 8
+        }
+      ],
+      "recommended": null
+    },
+    {
+      "id": "c124",
+      "name": "早雾",
+      "game": "异环",
+      "summary": "穿梭在城市霓虹间的灵异专家。",
+      "officialHosts": [
+        "yh.wanmei.com",
+        "yh.wanmei.com",
+        "static.wanmei.com"
+      ],
+      "candidates": [
+        {
+          "url": "https://yh.wanmei.com/images/cover260226/logo.png",
+          "sourcePage": "https://yh.wanmei.com/",
+          "context": "",
+          "score": 8
+        },
+        {
+          "url": "https://yh.wanmei.com/images/cover260702/slogan.png",
+          "sourcePage": "https://yh.wanmei.com/",
+          "context": "",
+          "score": 8
+        },
+        {
+          "url": "https://yh.wanmei.com/images/cover260203/icon-age.png",
+          "sourcePage": "https://yh.wanmei.com/",
+          "context": "",
+          "score": 8
+        },
+        {
+          "url": "https://yh.wanmei.com/images/cover260528/downloadCloudCode.png",
+          "sourcePage": "https://yh.wanmei.com/",
+          "context": "",
+          "score": 8
+        }
+      ],
+      "recommended": null
+    },
+    {
+      "id": "c125",
+      "name": "白羽",
+      "game": "异环",
+      "summary": "海特洛市的异象行动专家。",
+      "officialHosts": [
+        "yh.wanmei.com",
+        "yh.wanmei.com",
+        "static.wanmei.com"
+      ],
+      "candidates": [
+        {
+          "url": "https://yh.wanmei.com/images/cover260226/logo.png",
+          "sourcePage": "https://yh.wanmei.com/",
+          "context": "",
+          "score": 8
+        },
+        {
+          "url": "https://yh.wanmei.com/images/cover260702/slogan.png",
+          "sourcePage": "https://yh.wanmei.com/",
+          "context": "",
+          "score": 8
+        },
+        {
+          "url": "https://yh.wanmei.com/images/cover260203/icon-age.png",
+          "sourcePage": "https://yh.wanmei.com/",
+          "context": "",
+          "score": 8
+        },
+        {
+          "url": "https://yh.wanmei.com/images/cover260528/downloadCloudCode.png",
+          "sourcePage": "https://yh.wanmei.com/",
+          "context": "",
+          "score": 8
+        }
+      ],
+      "recommended": null
+    },
+    {
+      "id": "c126",
+      "name": "塔塔",
+      "game": "异环",
+      "summary": "事务所中充满好奇心的新人。",
+      "officialHosts": [
+        "yh.wanmei.com",
+        "yh.wanmei.com",
+        "static.wanmei.com"
+      ],
+      "candidates": [
+        {
+          "url": "https://yh.wanmei.com/images/cover260226/logo.png",
+          "sourcePage": "https://yh.wanmei.com/",
+          "context": "",
+          "score": 8
+        },
+        {
+          "url": "https://yh.wanmei.com/images/cover260702/slogan.png",
+          "sourcePage": "https://yh.wanmei.com/",
+          "context": "",
+          "score": 8
+        },
+        {
+          "url": "https://yh.wanmei.com/images/cover260203/icon-age.png",
+          "sourcePage": "https://yh.wanmei.com/",
+          "context": "",
+          "score": 8
+        },
+        {
+          "url": "https://yh.wanmei.com/images/cover260528/downloadCloudCode.png",
+          "sourcePage": "https://yh.wanmei.com/",
+          "context": "",
+          "score": 8
+        }
+      ],
+      "recommended": null
+    },
+    {
+      "id": "c127",
+      "name": "兰",
+      "game": "异环",
+      "summary": "在都市传说间寻找真相的调查员。",
+      "officialHosts": [
+        "yh.wanmei.com",
+        "yh.wanmei.com",
+        "static.wanmei.com"
+      ],
+      "candidates": [
+        {
+          "url": "https://yh.wanmei.com/images/cover260226/logo.png",
+          "sourcePage": "https://yh.wanmei.com/",
+          "context": "",
+          "score": 8
+        },
+        {
+          "url": "https://yh.wanmei.com/images/cover260702/slogan.png",
+          "sourcePage": "https://yh.wanmei.com/",
+          "context": "",
+          "score": 8
+        },
+        {
+          "url": "https://yh.wanmei.com/images/cover260203/icon-age.png",
+          "sourcePage": "https://yh.wanmei.com/",
+          "context": "",
+          "score": 8
+        },
+        {
+          "url": "https://yh.wanmei.com/images/cover260528/downloadCloudCode.png",
+          "sourcePage": "https://yh.wanmei.com/",
+          "context": "",
+          "score": 8
+        }
+      ],
+      "recommended": null
+    },
+    {
+      "id": "c128",
+      "name": "郁离",
+      "game": "异环",
+      "summary": "熟悉异象规则的神秘向导。",
+      "officialHosts": [
+        "yh.wanmei.com",
+        "yh.wanmei.com",
+        "static.wanmei.com"
+      ],
+      "candidates": [
+        {
+          "url": "https://yh.wanmei.com/images/cover260226/logo.png",
+          "sourcePage": "https://yh.wanmei.com/",
+          "context": "",
+          "score": 8
+        },
+        {
+          "url": "https://yh.wanmei.com/images/cover260702/slogan.png",
+          "sourcePage": "https://yh.wanmei.com/",
+          "context": "",
+          "score": 8
+        },
+        {
+          "url": "https://yh.wanmei.com/images/cover260203/icon-age.png",
+          "sourcePage": "https://yh.wanmei.com/",
+          "context": "",
+          "score": 8
+        },
+        {
+          "url": "https://yh.wanmei.com/images/cover260528/downloadCloudCode.png",
+          "sourcePage": "https://yh.wanmei.com/",
+          "context": "",
+          "score": 8
+        }
+      ],
+      "recommended": null
+    }
+  ],
+  "errors": [
+    {
+      "game": "Fate/Grand Order",
+      "page": "https://www.fate-go.jp/servant/",
+      "error": "页面不在白名单域名：https://www.fate-go.jp/servant/"
+    }
+  ]
+}

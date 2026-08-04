@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "games": {
+    "原神": { "query": "原神", "officialHosts": ["genshin.hoyoverse.com", "webstatic.mihoyo.com", "upload-os-bbs.hoyolab.com", "fastcdn.hoyoverse.com", "act.hoyolab.com"], "startUrls": ["https://genshin.hoyoverse.com/zh-cn/"] },
+    "崩坏：星穹铁道": { "query": "崩坏 星穹铁道", "officialHosts": ["hsr.hoyoverse.com", "webstatic.mihoyo.com", "upload-os-bbs.hoyolab.com", "fastcdn.hoyoverse.com", "act.hoyolab.com"], "startUrls": ["https://hsr.hoyoverse.com/zh-cn/"] },
+    "绝区零": { "query": "绝区零", "officialHosts": ["zenless.hoyoverse.com", "webstatic.mihoyo.com", "upload-os-bbs.hoyolab.com", "fastcdn.hoyoverse.com", "act.hoyolab.com"], "startUrls": ["https://zenless.hoyoverse.com/zh-cn/main"] },
+    "鸣潮": { "query": "鸣潮", "officialHosts": ["wutheringwaves.kurogames.com", "prod-gf-cn-res.aki-game.com", "prod-cn-res.aki-game.com"], "startUrls": ["https://wutheringwaves.kurogames.com/zh-tw/"] },
+    "碧蓝航线": { "query": "碧蓝航线", "officialHosts": ["azurlane.yo-star.com", "blhx.yo-star.com", "manjuu.cn", "weibo.com", "wx1.sinaimg.cn"], "startUrls": ["https://azurlane.yo-star.com/"] },
+    "蔚蓝档案": { "query": "蔚蓝档案", "officialHosts": ["bluearchive-cn.com", "bluearchive.nexon.com", "bluearchive.nexon.com"], "startUrls": ["https://bluearchive-cn.com/official"] },
+    "Fate/Grand Order": { "query": "Fate Grand Order", "officialHosts": ["fate-go.jp", "static.atlasacademy.io"], "startUrls": ["https://www.fate-go.jp/servant/"] },
+    "胜利女神：妮姬": { "query": "胜利女神 妮姬", "officialHosts": ["nikke.hotcool.tw", "static.hotcool.tw", "nikke-en.com", "nikke-kr.com"], "startUrls": ["https://nikke.hotcool.tw/?lang=zh-TW"] },
+    "战双帕弥什": { "query": "战双帕弥什", "officialHosts": ["pns.kurogame.com", "pns.kurogames.com", "prod-cn-res.aki-game.com"], "startUrls": ["https://pns.kurogame.com/"] },
+    "明日方舟：终末地": { "query": "明日方舟 终末地", "officialHosts": ["endfield.gryphline.com", "ak.hypergryph.com", "web.hycdn.cn", "media.hypergryph.com"], "startUrls": ["https://endfield.gryphline.com/"] },
+    "异环": { "query": "异环", "officialHosts": ["yh.wanmei.com", "yh.wanmei.com", "static.wanmei.com"], "startUrls": ["https://yh.wanmei.com/"] }
+  }
+}

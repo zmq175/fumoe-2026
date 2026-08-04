@@ -1,0 +1,32 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "fumoe-2026",
+  "main": "src/worker/index.ts",
+  "compatibility_date": "2026-07-30",
+  "assets": {
+    "directory": "./dist",
+    "binding": "ASSETS",
+    "not_found_handling": "single-page-application",
+    "run_worker_first": ["/api/*", "/artwork/*"]
+  },
+  "d1_databases": [
+    { "binding": "DB", "database_name": "fumoe-2026", "database_id": "280908fc-acc7-4e75-bf7a-249d1cc0f13e" }
+  ],
+  "r2_buckets": [
+    { "binding": "MEDIA", "bucket_name": "fumoe-2026-assets" }
+  ],
+  "durable_objects": {
+    "bindings": [
+      { "name": "MATCH_ROOM", "class_name": "MatchRoom" }
+    ]
+  },
+  "migrations": [
+    { "tag": "v1", "new_sqlite_classes": ["MatchRoom"] }
+  ],
+  "triggers": { "crons": ["*/5 * * * *"] },
+  "vars": {
+    "APP_ORIGIN": "https://moe.hooxi.co",
+    "BREVO_SENDER": "府萌 <noreply@hooxi.co>",
+    "ADMIN_EMAILS": "zmq175@qq.com"
+  }
+}

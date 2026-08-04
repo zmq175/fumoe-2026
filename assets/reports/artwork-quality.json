@@ -1,0 +1,3719 @@
+{
+  "generatedAt": "2026-08-04T09:43:00.664Z",
+  "accepted": [
+    {
+      "id": "c001",
+      "sourceType": "community-wiki",
+      "sourceUrl": "https://patchwiki.biligame.com/images/ys/3/36/596ms0f8jjyjb20gxg4nybjz2yc7y0y.png",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "variants": [
+        {
+          "variant": "gallery",
+          "width": 900,
+          "height": 1200,
+          "bytes": 211736
+        },
+        {
+          "variant": "match",
+          "width": 960,
+          "height": 540,
+          "bytes": 75216
+        },
+        {
+          "variant": "avatar",
+          "width": 512,
+          "height": 512,
+          "bytes": 84678
+        }
+      ]
+    },
+    {
+      "id": "c002",
+      "sourceType": "community-wiki",
+      "sourceUrl": "https://patchwiki.biligame.com/images/ys/1/18/37k6tkwpg0j4rp4wno3djauxmi5tcsg.png",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "variants": [
+        {
+          "variant": "gallery",
+          "width": 900,
+          "height": 1200,
+          "bytes": 185968
+        },
+        {
+          "variant": "match",
+          "width": 960,
+          "height": 540,
+          "bytes": 84556
+        },
+        {
+          "variant": "avatar",
+          "width": 512,
+          "height": 512,
+          "bytes": 84544
+        }
+      ]
+    },
+    {
+      "id": "c003",
+      "sourceType": "community-wiki",
+      "sourceUrl": "https://patchwiki.biligame.com/images/ys/2/27/2lajlkv4483cjv65mf5dgg701squhte.png",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "variants": [
+        {
+          "variant": "gallery",
+          "width": 900,
+          "height": 1200,
+          "bytes": 153938
+        },
+        {
+          "variant": "match",
+          "width": 960,
+          "height": 540,
+          "bytes": 61528
+        },
+        {
+          "variant": "avatar",
+          "width": 512,
+          "height": 512,
+          "bytes": 62652
+        }
+      ]
+    },
+    {
+      "id": "c004",
+      "sourceType": "community-wiki",
+      "sourceUrl": "https://patchwiki.biligame.com/images/ys/3/30/7vf3x2md1skhpijpfyznxczi8ohlp71.png",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "variants": [
+        {
+          "variant": "gallery",
+          "width": 900,
+          "height": 1200,
+          "bytes": 195666
+        },
+        {
+          "variant": "match",
+          "width": 960,
+          "height": 540,
+          "bytes": 72028
+        },
+        {
+          "variant": "avatar",
+          "width": 512,
+          "height": 512,
+          "bytes": 79328
+        }
+      ]
+    },
+    {
+      "id": "c005",
+      "sourceType": "community-wiki",
+      "sourceUrl": "https://patchwiki.biligame.com/images/ys/5/52/svbsb24r4gn98gxlltz5f7o3o8rdq82.png",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "variants": [
+        {
+          "variant": "gallery",
+          "width": 900,
+          "height": 1200,
+          "bytes": 156098
+        },
+        {
+          "variant": "match",
+          "width": 960,
+          "height": 540,
+          "bytes": 71692
+        },
+        {
+          "variant": "avatar",
+          "width": 512,
+          "height": 512,
+          "bytes": 67420
+        }
+      ]
+    },
+    {
+      "id": "c006",
+      "sourceType": "community-wiki",
+      "sourceUrl": "https://patchwiki.biligame.com/images/ys/7/7c/ly06duqmzi7aclhdyenj02u1w07aj4q.png",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "variants": [
+        {
+          "variant": "gallery",
+          "width": 900,
+          "height": 1200,
+          "bytes": 177944
+        },
+        {
+          "variant": "match",
+          "width": 960,
+          "height": 540,
+          "bytes": 66338
+        },
+        {
+          "variant": "avatar",
+          "width": 512,
+          "height": 512,
+          "bytes": 75888
+        }
+      ]
+    },
+    {
+      "id": "c007",
+      "sourceType": "community-wiki",
+      "sourceUrl": "https://patchwiki.biligame.com/images/ys/2/2f/mtnrz149g7hp4evj1ze7w55pk1ifnlh.png",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "variants": [
+        {
+          "variant": "gallery",
+          "width": 900,
+          "height": 1200,
+          "bytes": 217308
+        },
+        {
+          "variant": "match",
+          "width": 960,
+          "height": 540,
+          "bytes": 85802
+        },
+        {
+          "variant": "avatar",
+          "width": 512,
+          "height": 512,
+          "bytes": 85674
+        }
+      ]
+    },
+    {
+      "id": "c008",
+      "sourceType": "community-wiki",
+      "sourceUrl": "https://patchwiki.biligame.com/images/ys/5/59/h8guwfomjccchkolh1f9imbalkkpon8.png",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "variants": [
+        {
+          "variant": "gallery",
+          "width": 900,
+          "height": 1200,
+          "bytes": 171726
+        },
+        {
+          "variant": "match",
+          "width": 960,
+          "height": 540,
+          "bytes": 72166
+        },
+        {
+          "variant": "avatar",
+          "width": 512,
+          "height": 512,
+          "bytes": 65830
+        }
+      ]
+    },
+    {
+      "id": "c009",
+      "sourceType": "community-wiki",
+      "sourceUrl": "https://patchwiki.biligame.com/images/ys/f/f9/5sozren3l58ad56quvtotq8xj8n577d.png",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "variants": [
+        {
+          "variant": "gallery",
+          "width": 900,
+          "height": 1200,
+          "bytes": 197282
+        },
+        {
+          "variant": "match",
+          "width": 960,
+          "height": 540,
+          "bytes": 71510
+        },
+        {
+          "variant": "avatar",
+          "width": 512,
+          "height": 512,
+          "bytes": 78174
+        }
+      ]
+    },
+    {
+      "id": "c010",
+      "sourceType": "community-wiki",
+      "sourceUrl": "https://patchwiki.biligame.com/images/ys/9/91/rbdy599dw8ivcvy61wfhnyvy3a1qo6f.png",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "variants": [
+        {
+          "variant": "gallery",
+          "width": 900,
+          "height": 1200,
+          "bytes": 193724
+        },
+        {
+          "variant": "match",
+          "width": 960,
+          "height": 540,
+          "bytes": 81970
+        },
+        {
+          "variant": "avatar",
+          "width": 512,
+          "height": 512,
+          "bytes": 79360
+        }
+      ]
+    },
+    {
+      "id": "c011",
+      "sourceType": "community-wiki",
+      "sourceUrl": "https://patchwiki.biligame.com/images/ys/4/4b/ti70pf41ljpspv65sd2xohs4yv366sz.png",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "variants": [
+        {
+          "variant": "gallery",
+          "width": 900,
+          "height": 1200,
+          "bytes": 186410
+        },
+        {
+          "variant": "match",
+          "width": 960,
+          "height": 540,
+          "bytes": 68944
+        },
+        {
+          "variant": "avatar",
+          "width": 512,
+          "height": 512,
+          "bytes": 82804
+        }
+      ]
+    },
+    {
+      "id": "c012",
+      "sourceType": "community-wiki",
+      "sourceUrl": "https://patchwiki.biligame.com/images/ys/0/03/r042d5mlhyynxyulmr203d6brigvcn1.png",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "variants": [
+        {
+          "variant": "gallery",
+          "width": 900,
+          "height": 1200,
+          "bytes": 184564
+        },
+        {
+          "variant": "match",
+          "width": 960,
+          "height": 540,
+          "bytes": 73700
+        },
+        {
+          "variant": "avatar",
+          "width": 512,
+          "height": 512,
+          "bytes": 76854
+        }
+      ]
+    },
+    {
+      "id": "c013",
+      "sourceType": "community-wiki",
+      "sourceUrl": "https://patchwiki.biligame.com/images/ys/9/93/ixr7anh0vmi68zs4n4kcjh6cvjw7isp.png",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "variants": [
+        {
+          "variant": "gallery",
+          "width": 900,
+          "height": 1200,
+          "bytes": 207294
+        },
+        {
+          "variant": "match",
+          "width": 960,
+          "height": 540,
+          "bytes": 86182
+        },
+        {
+          "variant": "avatar",
+          "width": 512,
+          "height": 512,
+          "bytes": 83994
+        }
+      ]
+    },
+    {
+      "id": "c014",
+      "sourceType": "community-wiki",
+      "sourceUrl": "https://patchwiki.biligame.com/images/ys/0/07/kdg14nwggq5g9nct15v2lgqgc52i0is.png",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "variants": [
+        {
+          "variant": "gallery",
+          "width": 900,
+          "height": 1200,
+          "bytes": 198288
+        },
+        {
+          "variant": "match",
+          "width": 960,
+          "height": 540,
+          "bytes": 72538
+        },
+        {
+          "variant": "avatar",
+          "width": 512,
+          "height": 512,
+          "bytes": 77120
+        }
+      ]
+    },
+    {
+      "id": "c015",
+      "sourceType": "community-wiki",
+      "sourceUrl": "https://patchwiki.biligame.com/images/ys/2/23/hwbzsww2i4albbp5to9pvo8q6g4h1s5.png",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "variants": [
+        {
+          "variant": "gallery",
+          "width": 900,
+          "height": 1200,
+          "bytes": 205038
+        },
+        {
+          "variant": "match",
+          "width": 960,
+          "height": 540,
+          "bytes": 86942
+        },
+        {
+          "variant": "avatar",
+          "width": 512,
+          "height": 512,
+          "bytes": 74264
+        }
+      ]
+    },
+    {
+      "id": "c016",
+      "sourceType": "community-wiki",
+      "sourceUrl": "https://patchwiki.biligame.com/images/ys/1/1a/fkgmmrffam7rnghpm2eyuff1g97e29s.png",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "variants": [
+        {
+          "variant": "gallery",
+          "width": 900,
+          "height": 1200,
+          "bytes": 219578
+        },
+        {
+          "variant": "match",
+          "width": 960,
+          "height": 540,
+          "bytes": 79986
+        },
+        {
+          "variant": "avatar",
+          "width": 512,
+          "height": 512,
+          "bytes": 84992
+        }
+      ]
+    },
+    {
+      "id": "c017",
+      "sourceType": "community-wiki",
+      "sourceUrl": "https://patchwiki.biligame.com/images/sr/thumb/4/40/ohzhieftz25z05ftzetqds1km8cph4x.png/900px-%E5%8D%A1%E8%8A%99%E5%8D%A1%E7%AB%8B%E7%BB%98.png",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "variants": [
+        {
+          "variant": "gallery",
+          "width": 900,
+          "height": 1200,
+          "bytes": 185838
+        },
+        {
+          "variant": "match",
+          "width": 960,
+          "height": 540,
+          "bytes": 121104
+        },
+        {
+          "variant": "avatar",
+          "width": 512,
+          "height": 512,
+          "bytes": 81638
+        }
+      ]
+    },
+    {
+      "id": "c018",
+      "sourceType": "community-wiki",
+      "sourceUrl": "https://patchwiki.biligame.com/images/sr/thumb/7/71/fud590c54lodhhcj2bji0zucih5dzm5.png/900px-%E9%BB%84%E6%B3%89%E7%AB%8B%E7%BB%98.png",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "variants": [
+        {
+          "variant": "gallery",
+          "width": 900,
+          "height": 1200,
+          "bytes": 278522
+        },
+        {
+          "variant": "match",
+          "width": 960,
+          "height": 540,
+          "bytes": 159622
+        },
+        {
+          "variant": "avatar",
+          "width": 512,
+          "height": 512,
+          "bytes": 112856
+        }
+      ]
+    },
+    {
+      "id": "c019",
+      "sourceType": "community-wiki",
+      "sourceUrl": "https://patchwiki.biligame.com/images/sr/thumb/d/d3/k7g0ja362py1shisgib2uxl5s5kzbfw.png/900px-%E6%B5%81%E8%90%A4%E7%AB%8B%E7%BB%98.png",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "variants": [
+        {
+          "variant": "gallery",
+          "width": 900,
+          "height": 1200,
+          "bytes": 265736
+        },
+        {
+          "variant": "match",
+          "width": 960,
+          "height": 540,
+          "bytes": 182730
+        },
+        {
+          "variant": "avatar",
+          "width": 512,
+          "height": 512,
+          "bytes": 125836
+        }
+      ]
+    },
+    {
+      "id": "c020",
+      "sourceType": "community-wiki",
+      "sourceUrl": "https://patchwiki.biligame.com/images/sr/thumb/7/75/shqgamdstfb3fqluonzq7alip7wbjm6.png/900px-%E9%95%9C%E6%B5%81%E7%AB%8B%E7%BB%98.png",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "variants": [
+        {
+          "variant": "gallery",
+          "width": 900,
+          "height": 1200,
+          "bytes": 241126
+        },
+        {
+          "variant": "match",
+          "width": 960,
+          "height": 540,
+          "bytes": 141382
+        },
+        {
+          "variant": "avatar",
+          "width": 512,
+          "height": 512,
+          "bytes": 99474
+        }
+      ]
+    },
+    {
+      "id": "c021",
+      "sourceType": "community-wiki",
+      "sourceUrl": "https://patchwiki.biligame.com/images/sr/thumb/e/ec/0nrtu7s6jqlq00wzcqqoyjl1doukder.png/900px-%E4%B8%89%E6%9C%88%E4%B8%83%E7%AB%8B%E7%BB%98.png",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "variants": [
+        {
+          "variant": "gallery",
+          "width": 900,
+          "height": 1200,
+          "bytes": 301872
+        },
+        {
+          "variant": "match",
+          "width": 960,
+          "height": 540,
+          "bytes": 181864
+        },
+        {
+          "variant": "avatar",
+          "width": 512,
+          "height": 512,
+          "bytes": 136492
+        }
+      ]
+    },
+    {
+      "id": "c022",
+      "sourceType": "community-wiki",
+      "sourceUrl": "https://patchwiki.biligame.com/images/sr/thumb/6/61/7l1pfiibrkrb7n8snk8m8yqrcplzo60.png/900px-%E7%AC%A6%E7%8E%84%E7%AB%8B%E7%BB%98.png",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "variants": [
+        {
+          "variant": "gallery",
+          "width": 900,
+          "height": 1200,
+          "bytes": 253586
+        },
+        {
+          "variant": "match",
+          "width": 960,
+          "height": 540,
+          "bytes": 164676
+        },
+        {
+          "variant": "avatar",
+          "width": 512,
+          "height": 512,
+          "bytes": 108972
+        }
+      ]
+    },
+    {
+      "id": "c023",
+      "sourceType": "community-wiki",
+      "sourceUrl": "https://patchwiki.biligame.com/images/sr/thumb/a/af/payusvzxpo9mso33fml1trp9qtr39j5.png/900px-%E9%BB%91%E5%A4%A9%E9%B9%85%E7%AB%8B%E7%BB%98.png",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "variants": [
+        {
+          "variant": "gallery",
+          "width": 900,
+          "height": 1200,
+          "bytes": 198900
+        },
+        {
+          "variant": "match",
+          "width": 960,
+          "height": 540,
+          "bytes": 116784
+        },
+        {
+          "variant": "avatar",
+          "width": 512,
+          "height": 512,
+          "bytes": 85206
+        }
+      ]
+    },
+    {
+      "id": "c024",
+      "sourceType": "community-wiki",
+      "sourceUrl": "https://patchwiki.biligame.com/images/sr/thumb/3/3f/oy6o9fm6o0rrcwzs9gvgc4rfhvejcts.png/900px-%E9%93%B6%E7%8B%BC%E7%AB%8B%E7%BB%98.png",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "variants": [
+        {
+          "variant": "gallery",
+          "width": 900,
+          "height": 1200,
+          "bytes": 254740
+        },
+        {
+          "variant": "match",
+          "width": 960,
+          "height": 540,
+          "bytes": 143634
+        },
+        {
+          "variant": "avatar",
+          "width": 512,
+          "height": 512,
+          "bytes": 110880
+        }
+      ]
+    },
+    {
+      "id": "c025",
+      "sourceType": "community-wiki",
+      "sourceUrl": "https://patchwiki.biligame.com/images/sr/thumb/4/4d/0iamwg2dwen149n3ucjxlnx4dw4ym5z.png/900px-%E9%98%AE%E2%80%A2%E6%A2%85%E7%AB%8B%E7%BB%98.png",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "variants": [
+        {
+          "variant": "gallery",
+          "width": 900,
+          "height": 1200,
+          "bytes": 244808
+        },
+        {
+          "variant": "match",
+          "width": 960,
+          "height": 540,
+          "bytes": 134168
+        },
+        {
+          "variant": "avatar",
+          "width": 512,
+          "height": 512,
+          "bytes": 110488
+        }
+      ]
+    },
+    {
+      "id": "c026",
+      "sourceType": "community-wiki",
+      "sourceUrl": "https://patchwiki.biligame.com/images/sr/thumb/b/b5/7zgd5kv12cw5nkj37vb2wn9u6p7fbbb.png/900px-%E8%8A%B1%E7%81%AB%E7%AB%8B%E7%BB%98.png",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "variants": [
+        {
+          "variant": "gallery",
+          "width": 900,
+          "height": 1200,
+          "bytes": 275334
+        },
+        {
+          "variant": "match",
+          "width": 960,
+          "height": 540,
+          "bytes": 158824
+        },
+        {
+          "variant": "avatar",
+          "width": 512,
+          "height": 512,
+          "bytes": 119438
+        }
+      ]
+    },
+    {
+      "id": "c027",
+      "sourceType": "community-wiki",
+      "sourceUrl": "https://patchwiki.biligame.com/images/sr/thumb/b/b9/q7uxyiej5tg4p3ysts38oxcv23mt76p.png/900px-%E7%9F%A5%E6%9B%B4%E9%B8%9F%E7%AB%8B%E7%BB%98.png",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "variants": [
+        {
+          "variant": "gallery",
+          "width": 900,
+          "height": 1200,
+          "bytes": 212210
+        },
+        {
+          "variant": "match",
+          "width": 960,
+          "height": 540,
+          "bytes": 122676
+        },
+        {
+          "variant": "avatar",
+          "width": 512,
+          "height": 512,
+          "bytes": 91658
+        }
+      ]
+    },
+    {
+      "id": "c028",
+      "sourceType": "community-wiki",
+      "sourceUrl": "https://patchwiki.biligame.com/images/sr/thumb/d/db/hzxqo1nhxb0on8ntmv58gshidxpue61.png/900px-%E7%BF%A1%E7%BF%A0%E7%AB%8B%E7%BB%98.png",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "variants": [
+        {
+          "variant": "gallery",
+          "width": 900,
+          "height": 1200,
+          "bytes": 227826
+        },
+        {
+          "variant": "match",
+          "width": 960,
+          "height": 540,
+          "bytes": 169042
+        },
+        {
+          "variant": "avatar",
+          "width": 512,
+          "height": 512,
+          "bytes": 115360
+        }
+      ]
+    },
+    {
+      "id": "c029",
+      "sourceType": "community-wiki",
+      "sourceUrl": "https://patchwiki.biligame.com/images/sr/thumb/7/79/0vez7r8jr0vperakdhxgc1uxw0qh5wk.png/900px-%E9%A3%9E%E9%9C%84%E7%AB%8B%E7%BB%98.png",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "variants": [
+        {
+          "variant": "gallery",
+          "width": 900,
+          "height": 1200,
+          "bytes": 308824
+        },
+        {
+          "variant": "match",
+          "width": 960,
+          "height": 540,
+          "bytes": 183056
+        },
+        {
+          "variant": "avatar",
+          "width": 512,
+          "height": 512,
+          "bytes": 137412
+        }
+      ]
+    },
+    {
+      "id": "c030",
+      "sourceType": "community-wiki",
+      "sourceUrl": "https://patchwiki.biligame.com/images/sr/thumb/8/87/i74ocx6kwo3qxcpl4bqeoi9m2mnn8q2.png/900px-%E7%81%B5%E7%A0%82%E7%AB%8B%E7%BB%98.png",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "variants": [
+        {
+          "variant": "gallery",
+          "width": 900,
+          "height": 1200,
+          "bytes": 215528
+        },
+        {
+          "variant": "match",
+          "width": 960,
+          "height": 540,
+          "bytes": 120258
+        },
+        {
+          "variant": "avatar",
+          "width": 512,
+          "height": 512,
+          "bytes": 104544
+        }
+      ]
+    },
+    {
+      "id": "c031",
+      "sourceType": "community-wiki",
+      "sourceUrl": "https://patchwiki.biligame.com/images/sr/thumb/f/f1/a4xh2fqj236rw5pdcy88vcr2fban63x.png/900px-%E5%A4%A7%E9%BB%91%E5%A1%94%E7%AB%8B%E7%BB%98.png",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "variants": [
+        {
+          "variant": "gallery",
+          "width": 900,
+          "height": 1200,
+          "bytes": 235640
+        },
+        {
+          "variant": "match",
+          "width": 960,
+          "height": 540,
+          "bytes": 147462
+        },
+        {
+          "variant": "avatar",
+          "width": 512,
+          "height": 512,
+          "bytes": 121486
+        }
+      ]
+    },
+    {
+      "id": "c032",
+      "sourceType": "community-wiki",
+      "sourceUrl": "https://patchwiki.biligame.com/images/sr/thumb/3/3b/g2i10cu84radhr53nbghm6yidwmrgh2.png/900px-%E9%81%90%E8%9D%B6%E7%AB%8B%E7%BB%98.png",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "variants": [
+        {
+          "variant": "gallery",
+          "width": 900,
+          "height": 1200,
+          "bytes": 278842
+        },
+        {
+          "variant": "match",
+          "width": 960,
+          "height": 540,
+          "bytes": 165142
+        },
+        {
+          "variant": "avatar",
+          "width": 512,
+          "height": 512,
+          "bytes": 119670
+        }
+      ]
+    },
+    {
+      "id": "c033",
+      "sourceType": "community-wiki",
+      "sourceUrl": "https://patchwiki.biligame.com/images/zzz/b/b2/q4u9by7enh272ni0pez6xmz92kfjol5.png",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "variants": [
+        {
+          "variant": "gallery",
+          "width": 900,
+          "height": 1200,
+          "bytes": 75658
+        },
+        {
+          "variant": "match",
+          "width": 960,
+          "height": 540,
+          "bytes": 33536
+        },
+        {
+          "variant": "avatar",
+          "width": 512,
+          "height": 512,
+          "bytes": 41838
+        }
+      ]
+    },
+    {
+      "id": "c034",
+      "sourceType": "community-wiki",
+      "sourceUrl": "https://patchwiki.biligame.com/images/zzz/f/f7/5003ndyn0wyuyupnq7pbg1i36x7rna5.png",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "variants": [
+        {
+          "variant": "gallery",
+          "width": 900,
+          "height": 1200,
+          "bytes": 82714
+        },
+        {
+          "variant": "match",
+          "width": 960,
+          "height": 540,
+          "bytes": 35932
+        },
+        {
+          "variant": "avatar",
+          "width": 512,
+          "height": 512,
+          "bytes": 45678
+        }
+      ]
+    },
+    {
+      "id": "c035",
+      "sourceType": "community-wiki",
+      "sourceUrl": "https://patchwiki.biligame.com/images/zzz/e/ef/ngxyk5tih6lypewmaagsko0vtydg4hg.png",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "variants": [
+        {
+          "variant": "gallery",
+          "width": 900,
+          "height": 1200,
+          "bytes": 95326
+        },
+        {
+          "variant": "match",
+          "width": 960,
+          "height": 540,
+          "bytes": 46588
+        },
+        {
+          "variant": "avatar",
+          "width": 512,
+          "height": 512,
+          "bytes": 43384
+        }
+      ]
+    },
+    {
+      "id": "c036",
+      "sourceType": "community-wiki",
+      "sourceUrl": "https://patchwiki.biligame.com/images/zzz/8/80/t49ztw8oadtgaqrf6ox8kjxmftflc31.png",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "variants": [
+        {
+          "variant": "gallery",
+          "width": 900,
+          "height": 1200,
+          "bytes": 113748
+        },
+        {
+          "variant": "match",
+          "width": 960,
+          "height": 540,
+          "bytes": 47922
+        },
+        {
+          "variant": "avatar",
+          "width": 512,
+          "height": 512,
+          "bytes": 53378
+        }
+      ]
+    },
+    {
+      "id": "c037",
+      "sourceType": "community-wiki",
+      "sourceUrl": "https://patchwiki.biligame.com/images/zzz/7/7a/qp0041upsamhoguij5ugubegt68ozxh.png",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "variants": [
+        {
+          "variant": "gallery",
+          "width": 900,
+          "height": 1200,
+          "bytes": 102688
+        },
+        {
+          "variant": "match",
+          "width": 960,
+          "height": 540,
+          "bytes": 51312
+        },
+        {
+          "variant": "avatar",
+          "width": 512,
+          "height": 512,
+          "bytes": 44346
+        }
+      ]
+    },
+    {
+      "id": "c038",
+      "sourceType": "community-wiki",
+      "sourceUrl": "https://patchwiki.biligame.com/images/zzz/c/cc/fclibwlac725hmi77qdu8r7b64mgziu.png",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "variants": [
+        {
+          "variant": "gallery",
+          "width": 900,
+          "height": 1200,
+          "bytes": 76878
+        },
+        {
+          "variant": "match",
+          "width": 960,
+          "height": 540,
+          "bytes": 28688
+        },
+        {
+          "variant": "avatar",
+          "width": 512,
+          "height": 512,
+          "bytes": 40758
+        }
+      ]
+    },
+    {
+      "id": "c039",
+      "sourceType": "community-wiki",
+      "sourceUrl": "https://patchwiki.biligame.com/images/zzz/d/d2/8i2skjn9mqhk2dcdh5sk832518xbsv3.png",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "variants": [
+        {
+          "variant": "gallery",
+          "width": 900,
+          "height": 1200,
+          "bytes": 118224
+        },
+        {
+          "variant": "match",
+          "width": 960,
+          "height": 540,
+          "bytes": 59150
+        },
+        {
+          "variant": "avatar",
+          "width": 512,
+          "height": 512,
+          "bytes": 59130
+        }
+      ]
+    },
+    {
+      "id": "c040",
+      "sourceType": "community-wiki",
+      "sourceUrl": "https://patchwiki.biligame.com/images/zzz/3/37/2lasbws34i96v3801bsg8bpy8hygj0r.png",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "variants": [
+        {
+          "variant": "gallery",
+          "width": 900,
+          "height": 1200,
+          "bytes": 125798
+        },
+        {
+          "variant": "match",
+          "width": 960,
+          "height": 540,
+          "bytes": 78318
+        },
+        {
+          "variant": "avatar",
+          "width": 512,
+          "height": 512,
+          "bytes": 52482
+        }
+      ]
+    },
+    {
+      "id": "c041",
+      "sourceType": "community-wiki",
+      "sourceUrl": "https://patchwiki.biligame.com/images/zzz/0/02/23ikriljpiqbgarx45g9m0oogg2i3zp.png",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "variants": [
+        {
+          "variant": "gallery",
+          "width": 900,
+          "height": 1200,
+          "bytes": 102860
+        },
+        {
+          "variant": "match",
+          "width": 960,
+          "height": 540,
+          "bytes": 53574
+        },
+        {
+          "variant": "avatar",
+          "width": 512,
+          "height": 512,
+          "bytes": 48560
+        }
+      ]
+    },
+    {
+      "id": "c042",
+      "sourceType": "community-wiki",
+      "sourceUrl": "https://patchwiki.biligame.com/images/zzz/b/b0/89p4i2wg0c5qcfnuuxx0em5ayl2u0r9.png",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "variants": [
+        {
+          "variant": "gallery",
+          "width": 900,
+          "height": 1200,
+          "bytes": 140924
+        },
+        {
+          "variant": "match",
+          "width": 960,
+          "height": 540,
+          "bytes": 69002
+        },
+        {
+          "variant": "avatar",
+          "width": 512,
+          "height": 512,
+          "bytes": 59474
+        }
+      ]
+    },
+    {
+      "id": "c043",
+      "sourceType": "community-wiki",
+      "sourceUrl": "https://patchwiki.biligame.com/images/zzz/e/e9/5uguuh7jj7u04x4388o6uzlp3ckz9i6.png",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "variants": [
+        {
+          "variant": "gallery",
+          "width": 900,
+          "height": 1200,
+          "bytes": 124208
+        },
+        {
+          "variant": "match",
+          "width": 960,
+          "height": 540,
+          "bytes": 51152
+        },
+        {
+          "variant": "avatar",
+          "width": 512,
+          "height": 512,
+          "bytes": 42112
+        }
+      ]
+    },
+    {
+      "id": "c044",
+      "sourceType": "community-wiki",
+      "sourceUrl": "https://patchwiki.biligame.com/images/zzz/2/2f/771weh4j6k5we5dt69csfem3r659b3s.png",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "variants": [
+        {
+          "variant": "gallery",
+          "width": 900,
+          "height": 1200,
+          "bytes": 216732
+        },
+        {
+          "variant": "match",
+          "width": 960,
+          "height": 540,
+          "bytes": 57996
+        },
+        {
+          "variant": "avatar",
+          "width": 512,
+          "height": 512,
+          "bytes": 64470
+        }
+      ]
+    },
+    {
+      "id": "c045",
+      "sourceType": "community-wiki",
+      "sourceUrl": "https://patchwiki.biligame.com/images/zzz/c/c0/2gntr9rw018n0sjjr86rqzsxbf72lqa.png",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "variants": [
+        {
+          "variant": "gallery",
+          "width": 900,
+          "height": 1200,
+          "bytes": 195288
+        },
+        {
+          "variant": "match",
+          "width": 960,
+          "height": 540,
+          "bytes": 61222
+        },
+        {
+          "variant": "avatar",
+          "width": 512,
+          "height": 512,
+          "bytes": 63566
+        }
+      ]
+    },
+    {
+      "id": "c046",
+      "sourceType": "community-wiki",
+      "sourceUrl": "https://patchwiki.biligame.com/images/zzz/8/8a/aq8u5iz8xzdd9es547tl24lcppd8i3p.png",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "variants": [
+        {
+          "variant": "gallery",
+          "width": 900,
+          "height": 1200,
+          "bytes": 118528
+        },
+        {
+          "variant": "match",
+          "width": 960,
+          "height": 540,
+          "bytes": 70584
+        },
+        {
+          "variant": "avatar",
+          "width": 512,
+          "height": 512,
+          "bytes": 51910
+        }
+      ]
+    },
+    {
+      "id": "c047",
+      "sourceType": "community-wiki",
+      "sourceUrl": "https://patchwiki.biligame.com/images/zzz/3/3a/raivzx4lk1g0xcgk24lovem9p0n1uh3.png",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "variants": [
+        {
+          "variant": "gallery",
+          "width": 900,
+          "height": 1200,
+          "bytes": 119304
+        },
+        {
+          "variant": "match",
+          "width": 960,
+          "height": 540,
+          "bytes": 59592
+        },
+        {
+          "variant": "avatar",
+          "width": 512,
+          "height": 512,
+          "bytes": 50528
+        }
+      ]
+    },
+    {
+      "id": "c048",
+      "sourceType": "community-wiki",
+      "sourceUrl": "https://patchwiki.biligame.com/images/zzz/1/1d/k9m7919bfvjgd1kpvztqnzgwmc9799i.png",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "variants": [
+        {
+          "variant": "gallery",
+          "width": 900,
+          "height": 1200,
+          "bytes": 163434
+        },
+        {
+          "variant": "match",
+          "width": 960,
+          "height": 540,
+          "bytes": 78498
+        },
+        {
+          "variant": "avatar",
+          "width": 512,
+          "height": 512,
+          "bytes": 72274
+        }
+      ]
+    },
+    {
+      "id": "c049",
+      "sourceType": "community-wiki",
+      "sourceUrl": "https://wuthering.gg/images/iconrolepile/T_IconRole_Pile_changli_UI.png",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "variants": [
+        {
+          "variant": "gallery",
+          "width": 900,
+          "height": 1200,
+          "bytes": 243844
+        },
+        {
+          "variant": "match",
+          "width": 960,
+          "height": 540,
+          "bytes": 43112
+        },
+        {
+          "variant": "avatar",
+          "width": 512,
+          "height": 512,
+          "bytes": 77852
+        }
+      ]
+    },
+    {
+      "id": "c050",
+      "sourceType": "community-wiki",
+      "sourceUrl": "https://wuthering.gg/images/iconrolepile/T_IconRole_Pile_chun_UI.png",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "variants": [
+        {
+          "variant": "gallery",
+          "width": 900,
+          "height": 1200,
+          "bytes": 250380
+        },
+        {
+          "variant": "match",
+          "width": 960,
+          "height": 540,
+          "bytes": 45986
+        },
+        {
+          "variant": "avatar",
+          "width": 512,
+          "height": 512,
+          "bytes": 119060
+        }
+      ]
+    },
+    {
+      "id": "c051",
+      "sourceType": "community-wiki",
+      "sourceUrl": "https://patchwiki.biligame.com/images/wutheringwaves/5/56/101neg0k0er0rkh019ljtj5ev6jgac3.png",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "variants": [
+        {
+          "variant": "gallery",
+          "width": 900,
+          "height": 1200,
+          "bytes": 171472
+        },
+        {
+          "variant": "match",
+          "width": 960,
+          "height": 540,
+          "bytes": 81662
+        },
+        {
+          "variant": "avatar",
+          "width": 512,
+          "height": 512,
+          "bytes": 73216
+        }
+      ]
+    },
+    {
+      "id": "c052",
+      "sourceType": "community-wiki",
+      "sourceUrl": "https://wuthering.gg/images/iconrolepile/T_IconRole_Pile_jinxi_UI.png",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "variants": [
+        {
+          "variant": "gallery",
+          "width": 900,
+          "height": 1200,
+          "bytes": 223956
+        },
+        {
+          "variant": "match",
+          "width": 960,
+          "height": 540,
+          "bytes": 35556
+        },
+        {
+          "variant": "avatar",
+          "width": 512,
+          "height": 512,
+          "bytes": 99678
+        }
+      ]
+    },
+    {
+      "id": "c053",
+      "sourceType": "community-wiki",
+      "sourceUrl": "https://wuthering.gg/images/iconrolepile/T_IconRole_Pile_katixiya_UI.png",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "variants": [
+        {
+          "variant": "gallery",
+          "width": 900,
+          "height": 1200,
+          "bytes": 334988
+        },
+        {
+          "variant": "match",
+          "width": 960,
+          "height": 540,
+          "bytes": 38262
+        },
+        {
+          "variant": "avatar",
+          "width": 512,
+          "height": 512,
+          "bytes": 123956
+        }
+      ]
+    },
+    {
+      "id": "c054",
+      "sourceType": "community-wiki",
+      "sourceUrl": "https://wuthering.gg/images/iconrolepile/T_IconRole_Pile_kelaita_UI.png",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "variants": [
+        {
+          "variant": "gallery",
+          "width": 900,
+          "height": 1200,
+          "bytes": 288214
+        },
+        {
+          "variant": "match",
+          "width": 960,
+          "height": 540,
+          "bytes": 53832
+        },
+        {
+          "variant": "avatar",
+          "width": 512,
+          "height": 512,
+          "bytes": 97268
+        }
+      ]
+    },
+    {
+      "id": "c055",
+      "sourceType": "community-wiki",
+      "sourceUrl": "https://wuthering.gg/images/iconrolepile/T_IconRole_Pile_yinlin_UI.png",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "variants": [
+        {
+          "variant": "gallery",
+          "width": 900,
+          "height": 1200,
+          "bytes": 292374
+        },
+        {
+          "variant": "match",
+          "width": 960,
+          "height": 540,
+          "bytes": 83540
+        },
+        {
+          "variant": "avatar",
+          "width": 512,
+          "height": 512,
+          "bytes": 98716
+        }
+      ]
+    },
+    {
+      "id": "c056",
+      "sourceType": "community-wiki",
+      "sourceUrl": "https://wuthering.gg/images/iconrolepile/T_IconRole_Pile_yangyang_UI.png",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "variants": [
+        {
+          "variant": "gallery",
+          "width": 900,
+          "height": 1200,
+          "bytes": 214842
+        },
+        {
+          "variant": "match",
+          "width": 960,
+          "height": 540,
+          "bytes": 31536
+        },
+        {
+          "variant": "avatar",
+          "width": 512,
+          "height": 512,
+          "bytes": 101970
+        }
+      ]
+    },
+    {
+      "id": "c057",
+      "sourceType": "community-wiki",
+      "sourceUrl": "https://wuthering.gg/images/iconrolepile/T_IconRole_Pile_jiexin_UI.png",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "variants": [
+        {
+          "variant": "gallery",
+          "width": 900,
+          "height": 1200,
+          "bytes": 220340
+        },
+        {
+          "variant": "match",
+          "width": 960,
+          "height": 540,
+          "bytes": 48298
+        },
+        {
+          "variant": "avatar",
+          "width": 512,
+          "height": 512,
+          "bytes": 77198
+        }
+      ]
+    },
+    {
+      "id": "c058",
+      "sourceType": "community-wiki",
+      "sourceUrl": "https://wuthering.gg/images/iconrolepile/T_IconRole_Pile_shanhua_UI.png",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "variants": [
+        {
+          "variant": "gallery",
+          "width": 900,
+          "height": 1200,
+          "bytes": 166888
+        },
+        {
+          "variant": "match",
+          "width": 960,
+          "height": 540,
+          "bytes": 38626
+        },
+        {
+          "variant": "avatar",
+          "width": 512,
+          "height": 512,
+          "bytes": 59862
+        }
+      ]
+    },
+    {
+      "id": "c059",
+      "sourceType": "community-wiki",
+      "sourceUrl": "https://patchwiki.biligame.com/images/wutheringwaves/5/52/r0wr4fjaqwv1pv5a48nzk9a0hwfueq4.png",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "variants": [
+        {
+          "variant": "gallery",
+          "width": 900,
+          "height": 1200,
+          "bytes": 169278
+        },
+        {
+          "variant": "match",
+          "width": 960,
+          "height": 540,
+          "bytes": 46662
+        },
+        {
+          "variant": "avatar",
+          "width": 512,
+          "height": 512,
+          "bytes": 69314
+        }
+      ]
+    },
+    {
+      "id": "c060",
+      "sourceType": "community-wiki",
+      "sourceUrl": "https://wuthering.gg/images/iconrolepile/T_IconRole_Pile_micai_UI.png",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "variants": [
+        {
+          "variant": "gallery",
+          "width": 900,
+          "height": 1200,
+          "bytes": 200698
+        },
+        {
+          "variant": "match",
+          "width": 960,
+          "height": 540,
+          "bytes": 37030
+        },
+        {
+          "variant": "avatar",
+          "width": 512,
+          "height": 512,
+          "bytes": 58508
+        }
+      ]
+    },
+    {
+      "id": "c061",
+      "sourceType": "community-wiki",
+      "sourceUrl": "https://wuthering.gg/images/iconrolepile/T_IconRole_Pile_taohua_UI.png",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "variants": [
+        {
+          "variant": "gallery",
+          "width": 900,
+          "height": 1200,
+          "bytes": 201716
+        },
+        {
+          "variant": "match",
+          "width": 960,
+          "height": 540,
+          "bytes": 33912
+        },
+        {
+          "variant": "avatar",
+          "width": 512,
+          "height": 512,
+          "bytes": 64932
+        }
+      ]
+    },
+    {
+      "id": "c062",
+      "sourceType": "community-wiki",
+      "sourceUrl": "https://wuthering.gg/images/iconrolepile/T_IconRole_Pile_Feibi_UI.png",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "variants": [
+        {
+          "variant": "gallery",
+          "width": 900,
+          "height": 1200,
+          "bytes": 291336
+        },
+        {
+          "variant": "match",
+          "width": 960,
+          "height": 540,
+          "bytes": 52372
+        },
+        {
+          "variant": "avatar",
+          "width": 512,
+          "height": 512,
+          "bytes": 133794
+        }
+      ]
+    },
+    {
+      "id": "c063",
+      "sourceType": "community-wiki",
+      "sourceUrl": "https://wuthering.gg/images/iconrolepile/T_IconRole_Pile_zanni_UI.png",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "variants": [
+        {
+          "variant": "gallery",
+          "width": 900,
+          "height": 1200,
+          "bytes": 224086
+        },
+        {
+          "variant": "match",
+          "width": 960,
+          "height": 540,
+          "bytes": 36362
+        },
+        {
+          "variant": "avatar",
+          "width": 512,
+          "height": 512,
+          "bytes": 83748
+        }
+      ]
+    },
+    {
+      "id": "c064",
+      "sourceType": "community-wiki",
+      "sourceUrl": "https://wuthering.gg/images/iconrolepile/T_IconRole_Pile_lupa_UI.png",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "variants": [
+        {
+          "variant": "gallery",
+          "width": 900,
+          "height": 1200,
+          "bytes": 365110
+        },
+        {
+          "variant": "match",
+          "width": 960,
+          "height": 540,
+          "bytes": 79240
+        },
+        {
+          "variant": "avatar",
+          "width": 512,
+          "height": 512,
+          "bytes": 110916
+        }
+      ]
+    },
+    {
+      "id": "c065",
+      "sourceType": "community-wiki",
+      "sourceUrl": "https://patchwiki.biligame.com/images/blhx/a/a2/1lwxg8c62po6ldaqhzz6ahtz0jshdsq.jpg",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "variants": [
+        {
+          "variant": "gallery",
+          "width": 900,
+          "height": 1200,
+          "bytes": 153126
+        },
+        {
+          "variant": "match",
+          "width": 960,
+          "height": 540,
+          "bytes": 40000
+        },
+        {
+          "variant": "avatar",
+          "width": 512,
+          "height": 512,
+          "bytes": 55084
+        }
+      ]
+    },
+    {
+      "id": "c066",
+      "sourceType": "community-wiki",
+      "sourceUrl": "https://patchwiki.biligame.com/images/blhx/2/2d/td3lgyav6scdx5jnqjhrmvrf5fv5yte.jpg",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "variants": [
+        {
+          "variant": "gallery",
+          "width": 900,
+          "height": 1200,
+          "bytes": 183692
+        },
+        {
+          "variant": "match",
+          "width": 960,
+          "height": 540,
+          "bytes": 57168
+        },
+        {
+          "variant": "avatar",
+          "width": 512,
+          "height": 512,
+          "bytes": 68584
+        }
+      ]
+    },
+    {
+      "id": "c067",
+      "sourceType": "community-wiki",
+      "sourceUrl": "https://patchwiki.biligame.com/images/blhx/f/fe/9bemp0mmhbqujua87wfjkcpff4qryt2.jpg",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "variants": [
+        {
+          "variant": "gallery",
+          "width": 900,
+          "height": 1200,
+          "bytes": 152768
+        },
+        {
+          "variant": "match",
+          "width": 960,
+          "height": 540,
+          "bytes": 43622
+        },
+        {
+          "variant": "avatar",
+          "width": 512,
+          "height": 512,
+          "bytes": 68778
+        }
+      ]
+    },
+    {
+      "id": "c068",
+      "sourceType": "community-wiki",
+      "sourceUrl": "https://azurlane.netojuu.com/images/4/44/St._Louis.png",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "variants": [
+        {
+          "variant": "gallery",
+          "width": 900,
+          "height": 1200,
+          "bytes": 133576
+        },
+        {
+          "variant": "match",
+          "width": 960,
+          "height": 540,
+          "bytes": 70848
+        },
+        {
+          "variant": "avatar",
+          "width": 512,
+          "height": 512,
+          "bytes": 63424
+        }
+      ]
+    },
+    {
+      "id": "c069",
+      "sourceType": "community-wiki",
+      "sourceUrl": "https://patchwiki.biligame.com/images/blhx/6/66/pqzhgas84hebtddal3kf8n9ibp79moc.jpg",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "variants": [
+        {
+          "variant": "gallery",
+          "width": 900,
+          "height": 1200,
+          "bytes": 209762
+        },
+        {
+          "variant": "match",
+          "width": 960,
+          "height": 540,
+          "bytes": 70932
+        },
+        {
+          "variant": "avatar",
+          "width": 512,
+          "height": 512,
+          "bytes": 81072
+        }
+      ]
+    },
+    {
+      "id": "c070",
+      "sourceType": "community-wiki",
+      "sourceUrl": "https://patchwiki.biligame.com/images/blhx/e/e9/9a6zlv9fdyqbkvvrs91nvcc6hej1qsl.jpg",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "variants": [
+        {
+          "variant": "gallery",
+          "width": 900,
+          "height": 1200,
+          "bytes": 142264
+        },
+        {
+          "variant": "match",
+          "width": 960,
+          "height": 540,
+          "bytes": 52190
+        },
+        {
+          "variant": "avatar",
+          "width": 512,
+          "height": 512,
+          "bytes": 58314
+        }
+      ]
+    },
+    {
+      "id": "c071",
+      "sourceType": "community-wiki",
+      "sourceUrl": "https://patchwiki.biligame.com/images/blhx/d/d0/9p78v8i8gh6nqseoggy50zh94r42p6f.jpg",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "variants": [
+        {
+          "variant": "gallery",
+          "width": 900,
+          "height": 1200,
+          "bytes": 183508
+        },
+        {
+          "variant": "match",
+          "width": 960,
+          "height": 540,
+          "bytes": 60462
+        },
+        {
+          "variant": "avatar",
+          "width": 512,
+          "height": 512,
+          "bytes": 78960
+        }
+      ]
+    },
+    {
+      "id": "c072",
+      "sourceType": "community-wiki",
+      "sourceUrl": "https://patchwiki.biligame.com/images/blhx/f/f6/0wfabudfnxluzwf6pmsdyo0c3quhftl.jpg",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "variants": [
+        {
+          "variant": "gallery",
+          "width": 900,
+          "height": 1200,
+          "bytes": 196152
+        },
+        {
+          "variant": "match",
+          "width": 960,
+          "height": 540,
+          "bytes": 53516
+        },
+        {
+          "variant": "avatar",
+          "width": 512,
+          "height": 512,
+          "bytes": 72578
+        }
+      ]
+    },
+    {
+      "id": "c073",
+      "sourceType": "community-wiki",
+      "sourceUrl": "https://patchwiki.biligame.com/images/blhx/c/c3/9pr2325f49fit6qe3z1mcagiy1ylfbx.jpg",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "variants": [
+        {
+          "variant": "gallery",
+          "width": 900,
+          "height": 1200,
+          "bytes": 152298
+        },
+        {
+          "variant": "match",
+          "width": 960,
+          "height": 540,
+          "bytes": 48046
+        },
+        {
+          "variant": "avatar",
+          "width": 512,
+          "height": 512,
+          "bytes": 57606
+        }
+      ]
+    },
+    {
+      "id": "c074",
+      "sourceType": "community-wiki",
+      "sourceUrl": "https://azurlane.netojuu.com/images/8/86/Belfast.png",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "variants": [
+        {
+          "variant": "gallery",
+          "width": 900,
+          "height": 1200,
+          "bytes": 182138
+        },
+        {
+          "variant": "match",
+          "width": 960,
+          "height": 540,
+          "bytes": 93882
+        },
+        {
+          "variant": "avatar",
+          "width": 512,
+          "height": 512,
+          "bytes": 82278
+        }
+      ]
+    },
+    {
+      "id": "c075",
+      "sourceType": "official",
+      "sourceUrl": "https://sh-anime.shochiku.co.jp/bluearchive-anime/assets/images/common/character/arona/chara-arona-front_03.png",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "variants": [
+        {
+          "variant": "gallery",
+          "width": 900,
+          "height": 1200,
+          "bytes": 45776
+        },
+        {
+          "variant": "match",
+          "width": 960,
+          "height": 540,
+          "bytes": 12132
+        },
+        {
+          "variant": "avatar",
+          "width": 512,
+          "height": 512,
+          "bytes": 26468
+        }
+      ]
+    },
+    {
+      "id": "c076",
+      "sourceType": "community-wiki",
+      "sourceUrl": "https://raw.githubusercontent.com/SchaleDB/SchaleDB/main/images/student/portrait/10059.webp",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "variants": [
+        {
+          "variant": "gallery",
+          "width": 900,
+          "height": 1200,
+          "bytes": 133388
+        },
+        {
+          "variant": "match",
+          "width": 960,
+          "height": 540,
+          "bytes": 56960
+        },
+        {
+          "variant": "avatar",
+          "width": 512,
+          "height": 512,
+          "bytes": 61292
+        }
+      ]
+    },
+    {
+      "id": "c077",
+      "sourceType": "community-wiki",
+      "sourceUrl": "https://static.zerochan.net/Amau.Ako.full.4170027.png",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "variants": [
+        {
+          "variant": "gallery",
+          "width": 900,
+          "height": 1200,
+          "bytes": 57680
+        },
+        {
+          "variant": "match",
+          "width": 960,
+          "height": 540,
+          "bytes": 26046
+        },
+        {
+          "variant": "avatar",
+          "width": 512,
+          "height": 512,
+          "bytes": 26200
+        }
+      ]
+    },
+    {
+      "id": "c078",
+      "sourceType": "community-wiki",
+      "sourceUrl": "https://raw.githubusercontent.com/SchaleDB/SchaleDB/main/images/student/portrait/10010.webp",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "variants": [
+        {
+          "variant": "gallery",
+          "width": 900,
+          "height": 1200,
+          "bytes": 107860
+        },
+        {
+          "variant": "match",
+          "width": 960,
+          "height": 540,
+          "bytes": 47872
+        },
+        {
+          "variant": "avatar",
+          "width": 512,
+          "height": 512,
+          "bytes": 50262
+        }
+      ]
+    },
+    {
+      "id": "c079",
+      "sourceType": "community-wiki",
+      "sourceUrl": "https://raw.githubusercontent.com/SchaleDB/SchaleDB/main/images/student/portrait/10000.webp",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "variants": [
+        {
+          "variant": "gallery",
+          "width": 900,
+          "height": 1200,
+          "bytes": 111944
+        },
+        {
+          "variant": "match",
+          "width": 960,
+          "height": 540,
+          "bytes": 59492
+        },
+        {
+          "variant": "avatar",
+          "width": 512,
+          "height": 512,
+          "bytes": 41780
+        }
+      ]
+    },
+    {
+      "id": "c080",
+      "sourceType": "community-wiki",
+      "sourceUrl": "https://raw.githubusercontent.com/SchaleDB/SchaleDB/main/images/student/portrait/10004.webp",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "variants": [
+        {
+          "variant": "gallery",
+          "width": 900,
+          "height": 1200,
+          "bytes": 118918
+        },
+        {
+          "variant": "match",
+          "width": 960,
+          "height": 540,
+          "bytes": 96402
+        },
+        {
+          "variant": "avatar",
+          "width": 512,
+          "height": 512,
+          "bytes": 86038
+        }
+      ]
+    },
+    {
+      "id": "c081",
+      "sourceType": "community-wiki",
+      "sourceUrl": "https://raw.githubusercontent.com/SchaleDB/SchaleDB/main/images/student/portrait/10015.webp",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "variants": [
+        {
+          "variant": "gallery",
+          "width": 900,
+          "height": 1200,
+          "bytes": 155408
+        },
+        {
+          "variant": "match",
+          "width": 960,
+          "height": 540,
+          "bytes": 55794
+        },
+        {
+          "variant": "avatar",
+          "width": 512,
+          "height": 512,
+          "bytes": 66924
+        }
+      ]
+    },
+    {
+      "id": "c082",
+      "sourceType": "community-wiki",
+      "sourceUrl": "https://raw.githubusercontent.com/SchaleDB/SchaleDB/main/images/student/portrait/23008.webp",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "variants": [
+        {
+          "variant": "gallery",
+          "width": 900,
+          "height": 1200,
+          "bytes": 62426
+        },
+        {
+          "variant": "match",
+          "width": 960,
+          "height": 540,
+          "bytes": 30300
+        },
+        {
+          "variant": "avatar",
+          "width": 512,
+          "height": 512,
+          "bytes": 33472
+        }
+      ]
+    },
+    {
+      "id": "c083",
+      "sourceType": "community-wiki",
+      "sourceUrl": "https://raw.githubusercontent.com/SchaleDB/SchaleDB/main/images/student/portrait/16001.webp",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "variants": [
+        {
+          "variant": "gallery",
+          "width": 900,
+          "height": 1200,
+          "bytes": 189186
+        },
+        {
+          "variant": "match",
+          "width": 960,
+          "height": 540,
+          "bytes": 70682
+        },
+        {
+          "variant": "avatar",
+          "width": 512,
+          "height": 512,
+          "bytes": 100600
+        }
+      ]
+    },
+    {
+      "id": "c084",
+      "sourceType": "community-wiki",
+      "sourceUrl": "https://raw.githubusercontent.com/SchaleDB/SchaleDB/main/images/student/portrait/13010.webp",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "variants": [
+        {
+          "variant": "gallery",
+          "width": 900,
+          "height": 1200,
+          "bytes": 109650
+        },
+        {
+          "variant": "match",
+          "width": 960,
+          "height": 540,
+          "bytes": 65878
+        },
+        {
+          "variant": "avatar",
+          "width": 512,
+          "height": 512,
+          "bytes": 53446
+        }
+      ]
+    },
+    {
+      "id": "c085",
+      "sourceType": "community-wiki",
+      "sourceUrl": "https://static.atlasacademy.io/NA/CharaGraph/100100/100100b@1.png",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "variants": [
+        {
+          "variant": "gallery",
+          "width": 900,
+          "height": 1200,
+          "bytes": 131588
+        },
+        {
+          "variant": "match",
+          "width": 960,
+          "height": 540,
+          "bytes": 52532
+        },
+        {
+          "variant": "avatar",
+          "width": 512,
+          "height": 512,
+          "bytes": 62738
+        }
+      ]
+    },
+    {
+      "id": "c086",
+      "sourceType": "community-wiki",
+      "sourceUrl": "https://static.atlasacademy.io/NA/CharaGraph/800100/800100b@1.png",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "variants": [
+        {
+          "variant": "gallery",
+          "width": 900,
+          "height": 1200,
+          "bytes": 115380
+        },
+        {
+          "variant": "match",
+          "width": 960,
+          "height": 540,
+          "bytes": 35244
+        },
+        {
+          "variant": "avatar",
+          "width": 512,
+          "height": 512,
+          "bytes": 48844
+        }
+      ]
+    },
+    {
+      "id": "c087",
+      "sourceType": "community-wiki",
+      "sourceUrl": "https://static.atlasacademy.io/NA/CharaGraph/301300/301300b@1.png",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "variants": [
+        {
+          "variant": "gallery",
+          "width": 900,
+          "height": 1200,
+          "bytes": 134442
+        },
+        {
+          "variant": "match",
+          "width": 960,
+          "height": 540,
+          "bytes": 40446
+        },
+        {
+          "variant": "avatar",
+          "width": 512,
+          "height": 512,
+          "bytes": 57846
+        }
+      ]
+    },
+    {
+      "id": "c088",
+      "sourceType": "community-wiki",
+      "sourceUrl": "https://static.atlasacademy.io/NA/CharaGraph/202000/202000b@1.png",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "variants": [
+        {
+          "variant": "gallery",
+          "width": 900,
+          "height": 1200,
+          "bytes": 239636
+        },
+        {
+          "variant": "match",
+          "width": 960,
+          "height": 540,
+          "bytes": 74218
+        },
+        {
+          "variant": "avatar",
+          "width": 512,
+          "height": 512,
+          "bytes": 89300
+        }
+      ]
+    },
+    {
+      "id": "c089",
+      "sourceType": "community-wiki",
+      "sourceUrl": "https://static.atlasacademy.io/NA/CharaGraph/704000/704000b@1.png",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "variants": [
+        {
+          "variant": "gallery",
+          "width": 900,
+          "height": 1200,
+          "bytes": 110614
+        },
+        {
+          "variant": "match",
+          "width": 960,
+          "height": 540,
+          "bytes": 41560
+        },
+        {
+          "variant": "avatar",
+          "width": 512,
+          "height": 512,
+          "bytes": 52294
+        }
+      ]
+    },
+    {
+      "id": "c090",
+      "sourceType": "community-wiki",
+      "sourceUrl": "https://static.atlasacademy.io/NA/CharaGraph/100500/100500b@1.png",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "variants": [
+        {
+          "variant": "gallery",
+          "width": 900,
+          "height": 1200,
+          "bytes": 175068
+        },
+        {
+          "variant": "match",
+          "width": 960,
+          "height": 540,
+          "bytes": 68266
+        },
+        {
+          "variant": "avatar",
+          "width": 512,
+          "height": 512,
+          "bytes": 72980
+        }
+      ]
+    },
+    {
+      "id": "c091",
+      "sourceType": "community-wiki",
+      "sourceUrl": "https://static.atlasacademy.io/NA/CharaGraph/900100/900100b@1.png",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "variants": [
+        {
+          "variant": "gallery",
+          "width": 900,
+          "height": 1200,
+          "bytes": 126902
+        },
+        {
+          "variant": "match",
+          "width": 960,
+          "height": 540,
+          "bytes": 40734
+        },
+        {
+          "variant": "avatar",
+          "width": 512,
+          "height": 512,
+          "bytes": 59212
+        }
+      ]
+    },
+    {
+      "id": "c092",
+      "sourceType": "community-wiki",
+      "sourceUrl": "https://static.atlasacademy.io/NA/CharaGraph/500800/500800b@1.png",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "variants": [
+        {
+          "variant": "gallery",
+          "width": 900,
+          "height": 1200,
+          "bytes": 181958
+        },
+        {
+          "variant": "match",
+          "width": 960,
+          "height": 540,
+          "bytes": 67952
+        },
+        {
+          "variant": "avatar",
+          "width": 512,
+          "height": 512,
+          "bytes": 76106
+        }
+      ]
+    },
+    {
+      "id": "c093",
+      "sourceType": "community-wiki",
+      "sourceUrl": "https://static.atlasacademy.io/NA/CharaGraph/2300100/2300100b@1.png",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "variants": [
+        {
+          "variant": "gallery",
+          "width": 900,
+          "height": 1200,
+          "bytes": 164006
+        },
+        {
+          "variant": "match",
+          "width": 960,
+          "height": 540,
+          "bytes": 76268
+        },
+        {
+          "variant": "avatar",
+          "width": 512,
+          "height": 512,
+          "bytes": 79830
+        }
+      ]
+    },
+    {
+      "id": "c094",
+      "sourceType": "community-wiki",
+      "sourceUrl": "https://static.atlasacademy.io/NA/CharaGraph/102800/102800b@1.png",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "variants": [
+        {
+          "variant": "gallery",
+          "width": 900,
+          "height": 1200,
+          "bytes": 163218
+        },
+        {
+          "variant": "match",
+          "width": 960,
+          "height": 540,
+          "bytes": 41180
+        },
+        {
+          "variant": "avatar",
+          "width": 512,
+          "height": 512,
+          "bytes": 78414
+        }
+      ]
+    },
+    {
+      "id": "c095",
+      "sourceType": "community-wiki",
+      "sourceUrl": "https://img.gamewith.jp/article_tools/nikke/gacha/16_cz.jpg",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "variants": [
+        {
+          "variant": "gallery",
+          "width": 900,
+          "height": 1200,
+          "bytes": 51992
+        },
+        {
+          "variant": "match",
+          "width": 960,
+          "height": 540,
+          "bytes": 15040
+        },
+        {
+          "variant": "avatar",
+          "width": 512,
+          "height": 512,
+          "bytes": 17734
+        }
+      ]
+    },
+    {
+      "id": "c096",
+      "sourceType": "community-wiki",
+      "sourceUrl": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c222_00.png",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "variants": [
+        {
+          "variant": "gallery",
+          "width": 900,
+          "height": 1200,
+          "bytes": 123738
+        },
+        {
+          "variant": "match",
+          "width": 960,
+          "height": 540,
+          "bytes": 63316
+        },
+        {
+          "variant": "avatar",
+          "width": 512,
+          "height": 512,
+          "bytes": 69294
+        }
+      ]
+    },
+    {
+      "id": "c097",
+      "sourceType": "community-wiki",
+      "sourceUrl": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c233_00.png",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "variants": [
+        {
+          "variant": "gallery",
+          "width": 900,
+          "height": 1200,
+          "bytes": 160670
+        },
+        {
+          "variant": "match",
+          "width": 960,
+          "height": 540,
+          "bytes": 55842
+        },
+        {
+          "variant": "avatar",
+          "width": 512,
+          "height": 512,
+          "bytes": 82728
+        }
+      ]
+    },
+    {
+      "id": "c098",
+      "sourceType": "community-wiki",
+      "sourceUrl": "https://patchwiki.biligame.com/images/nikke/5/55/5vcxw6tervu4tjiabo7c4kq1y29bx57.png",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "variants": [
+        {
+          "variant": "gallery",
+          "width": 900,
+          "height": 1200,
+          "bytes": 94960
+        },
+        {
+          "variant": "match",
+          "width": 960,
+          "height": 540,
+          "bytes": 62054
+        },
+        {
+          "variant": "avatar",
+          "width": 512,
+          "height": 512,
+          "bytes": 39736
+        }
+      ]
+    },
+    {
+      "id": "c099",
+      "sourceType": "community-wiki",
+      "sourceUrl": "https://img.gamewith.jp/article_tools/nikke/gacha/44_cz.jpg",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "variants": [
+        {
+          "variant": "gallery",
+          "width": 900,
+          "height": 1200,
+          "bytes": 52756
+        },
+        {
+          "variant": "match",
+          "width": 960,
+          "height": 540,
+          "bytes": 15588
+        },
+        {
+          "variant": "avatar",
+          "width": 512,
+          "height": 512,
+          "bytes": 16786
+        }
+      ]
+    },
+    {
+      "id": "c100",
+      "sourceType": "community-wiki",
+      "sourceUrl": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c260_00.png",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "variants": [
+        {
+          "variant": "gallery",
+          "width": 900,
+          "height": 1200,
+          "bytes": 140248
+        },
+        {
+          "variant": "match",
+          "width": 960,
+          "height": 540,
+          "bytes": 68942
+        },
+        {
+          "variant": "avatar",
+          "width": 512,
+          "height": 512,
+          "bytes": 71568
+        }
+      ]
+    },
+    {
+      "id": "c101",
+      "sourceType": "community-wiki",
+      "sourceUrl": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c352_00.png",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "variants": [
+        {
+          "variant": "gallery",
+          "width": 900,
+          "height": 1200,
+          "bytes": 159606
+        },
+        {
+          "variant": "match",
+          "width": 960,
+          "height": 540,
+          "bytes": 65420
+        },
+        {
+          "variant": "avatar",
+          "width": 512,
+          "height": 512,
+          "bytes": 78714
+        }
+      ]
+    },
+    {
+      "id": "c102",
+      "sourceType": "community-wiki",
+      "sourceUrl": "https://img.gamewith.jp/article_tools/nikke/gacha/57_cz.jpg",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "variants": [
+        {
+          "variant": "gallery",
+          "width": 900,
+          "height": 1200,
+          "bytes": 73486
+        },
+        {
+          "variant": "match",
+          "width": 960,
+          "height": 540,
+          "bytes": 16234
+        },
+        {
+          "variant": "avatar",
+          "width": 512,
+          "height": 512,
+          "bytes": 29822
+        }
+      ]
+    },
+    {
+      "id": "c103",
+      "sourceType": "community-wiki",
+      "sourceUrl": "https://patchwiki.biligame.com/images/nikke/e/e5/a13or3d2sd9ynq8o2q4yr39wceprizi.png",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "variants": [
+        {
+          "variant": "gallery",
+          "width": 900,
+          "height": 1200,
+          "bytes": 85708
+        },
+        {
+          "variant": "match",
+          "width": 960,
+          "height": 540,
+          "bytes": 39942
+        },
+        {
+          "variant": "avatar",
+          "width": 512,
+          "height": 512,
+          "bytes": 38744
+        }
+      ]
+    },
+    {
+      "id": "c104",
+      "sourceType": "community-wiki",
+      "sourceUrl": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c231_00.png",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "variants": [
+        {
+          "variant": "gallery",
+          "width": 900,
+          "height": 1200,
+          "bytes": 165332
+        },
+        {
+          "variant": "match",
+          "width": 960,
+          "height": 540,
+          "bytes": 145138
+        },
+        {
+          "variant": "avatar",
+          "width": 512,
+          "height": 512,
+          "bytes": 89336
+        }
+      ]
+    },
+    {
+      "id": "c105",
+      "sourceType": "community-wiki",
+      "sourceUrl": "https://patchwiki.biligame.com/images/zspms/a/a3/a2qrbegu5uuxkbqivzpu67124qkwj1k.png",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "variants": [
+        {
+          "variant": "gallery",
+          "width": 900,
+          "height": 1200,
+          "bytes": 161112
+        },
+        {
+          "variant": "match",
+          "width": 960,
+          "height": 540,
+          "bytes": 76816
+        },
+        {
+          "variant": "avatar",
+          "width": 512,
+          "height": 512,
+          "bytes": 70728
+        }
+      ]
+    },
+    {
+      "id": "c106",
+      "sourceType": "community-wiki",
+      "sourceUrl": "https://patchwiki.biligame.com/images/zspms/b/b7/ioapm11xp40z6626hn1pcol6notihec.png",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "variants": [
+        {
+          "variant": "gallery",
+          "width": 900,
+          "height": 1200,
+          "bytes": 106400
+        },
+        {
+          "variant": "match",
+          "width": 960,
+          "height": 540,
+          "bytes": 53772
+        },
+        {
+          "variant": "avatar",
+          "width": 512,
+          "height": 512,
+          "bytes": 52564
+        }
+      ]
+    },
+    {
+      "id": "c107",
+      "sourceType": "community-wiki",
+      "sourceUrl": "https://patchwiki.biligame.com/images/zspms/c/c3/91tcc8vo895brl5rsl8pa1t9cvcjuuh.png",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "variants": [
+        {
+          "variant": "gallery",
+          "width": 900,
+          "height": 1200,
+          "bytes": 113880
+        },
+        {
+          "variant": "match",
+          "width": 960,
+          "height": 540,
+          "bytes": 43272
+        },
+        {
+          "variant": "avatar",
+          "width": 512,
+          "height": 512,
+          "bytes": 53802
+        }
+      ]
+    },
+    {
+      "id": "c108",
+      "sourceType": "community-wiki",
+      "sourceUrl": "https://patchwiki.biligame.com/images/zspms/f/f1/jy855wl5akfr4kqtl6sms9cppx25b55.png",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "variants": [
+        {
+          "variant": "gallery",
+          "width": 900,
+          "height": 1200,
+          "bytes": 163220
+        },
+        {
+          "variant": "match",
+          "width": 960,
+          "height": 540,
+          "bytes": 69934
+        },
+        {
+          "variant": "avatar",
+          "width": 512,
+          "height": 512,
+          "bytes": 77318
+        }
+      ]
+    },
+    {
+      "id": "c109",
+      "sourceType": "community-wiki",
+      "sourceUrl": "https://patchwiki.biligame.com/images/zspms/1/11/5vi0m5ciks9a2tvbzupxp2f7exgqe9z.png",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "variants": [
+        {
+          "variant": "gallery",
+          "width": 900,
+          "height": 1200,
+          "bytes": 86478
+        },
+        {
+          "variant": "match",
+          "width": 960,
+          "height": 540,
+          "bytes": 22634
+        },
+        {
+          "variant": "avatar",
+          "width": 512,
+          "height": 512,
+          "bytes": 39642
+        }
+      ]
+    },
+    {
+      "id": "c110",
+      "sourceType": "community-wiki",
+      "sourceUrl": "https://patchwiki.biligame.com/images/zspms/2/23/tul1qiitb5kj126eze91y2o4cxurtdo.png",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "variants": [
+        {
+          "variant": "gallery",
+          "width": 900,
+          "height": 1200,
+          "bytes": 214870
+        },
+        {
+          "variant": "match",
+          "width": 960,
+          "height": 540,
+          "bytes": 87826
+        },
+        {
+          "variant": "avatar",
+          "width": 512,
+          "height": 512,
+          "bytes": 97590
+        }
+      ]
+    },
+    {
+      "id": "c111",
+      "sourceType": "community-wiki",
+      "sourceUrl": "https://patchwiki.biligame.com/images/zspms/8/86/lzabulr4aa25cwaatd6gzqnlteztdnd.png",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "variants": [
+        {
+          "variant": "gallery",
+          "width": 900,
+          "height": 1200,
+          "bytes": 94908
+        },
+        {
+          "variant": "match",
+          "width": 960,
+          "height": 540,
+          "bytes": 35552
+        },
+        {
+          "variant": "avatar",
+          "width": 512,
+          "height": 512,
+          "bytes": 45640
+        }
+      ]
+    },
+    {
+      "id": "c112",
+      "sourceType": "community-wiki",
+      "sourceUrl": "https://patchwiki.biligame.com/images/zspms/a/aa/odeda5czqxpow3pc3vtdb84di6oneuo.png",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "variants": [
+        {
+          "variant": "gallery",
+          "width": 900,
+          "height": 1200,
+          "bytes": 97518
+        },
+        {
+          "variant": "match",
+          "width": 960,
+          "height": 540,
+          "bytes": 30480
+        },
+        {
+          "variant": "avatar",
+          "width": 512,
+          "height": 512,
+          "bytes": 40826
+        }
+      ]
+    },
+    {
+      "id": "c113",
+      "sourceType": "community-wiki",
+      "sourceUrl": "https://patchwiki.biligame.com/images/zmd/0/0a/7oc2v8kqfgzaltfwm42og404l57kha4.png",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "variants": [
+        {
+          "variant": "gallery",
+          "width": 900,
+          "height": 1200,
+          "bytes": 254188
+        },
+        {
+          "variant": "match",
+          "width": 960,
+          "height": 540,
+          "bytes": 141660
+        },
+        {
+          "variant": "avatar",
+          "width": 512,
+          "height": 512,
+          "bytes": 98994
+        }
+      ]
+    },
+    {
+      "id": "c114",
+      "sourceType": "community-wiki",
+      "sourceUrl": "https://patchwiki.biligame.com/images/zmd/c/ca/ofikhhgdqb65qfrhl42dm0fdd08fwpd.png",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "variants": [
+        {
+          "variant": "gallery",
+          "width": 900,
+          "height": 1200,
+          "bytes": 201158
+        },
+        {
+          "variant": "match",
+          "width": 960,
+          "height": 540,
+          "bytes": 107978
+        },
+        {
+          "variant": "avatar",
+          "width": 512,
+          "height": 512,
+          "bytes": 77504
+        }
+      ]
+    },
+    {
+      "id": "c115",
+      "sourceType": "community-wiki",
+      "sourceUrl": "https://patchwiki.biligame.com/images/zmd/0/0e/34s7b2cdxfts8o3mxcg5j4r2nijqtmg.png",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "variants": [
+        {
+          "variant": "gallery",
+          "width": 900,
+          "height": 1200,
+          "bytes": 304318
+        },
+        {
+          "variant": "match",
+          "width": 960,
+          "height": 540,
+          "bytes": 158950
+        },
+        {
+          "variant": "avatar",
+          "width": 512,
+          "height": 512,
+          "bytes": 120004
+        }
+      ]
+    },
+    {
+      "id": "c116",
+      "sourceType": "community-wiki",
+      "sourceUrl": "https://patchwiki.biligame.com/images/zmd/8/88/5bh5tuwy2oloxisg1jg9ezzfe9foupm.png",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "variants": [
+        {
+          "variant": "gallery",
+          "width": 900,
+          "height": 1200,
+          "bytes": 200400
+        },
+        {
+          "variant": "match",
+          "width": 960,
+          "height": 540,
+          "bytes": 113698
+        },
+        {
+          "variant": "avatar",
+          "width": 512,
+          "height": 512,
+          "bytes": 81436
+        }
+      ]
+    },
+    {
+      "id": "c117",
+      "sourceType": "community-wiki",
+      "sourceUrl": "https://dotgg.gg/wp-content/uploads/sites/16/2024/03/image-61-13-849x1024.jpg",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "variants": [
+        {
+          "variant": "gallery",
+          "width": 900,
+          "height": 1200,
+          "bytes": 119918
+        },
+        {
+          "variant": "match",
+          "width": 960,
+          "height": 540,
+          "bytes": 36840
+        },
+        {
+          "variant": "avatar",
+          "width": 512,
+          "height": 512,
+          "bytes": 58396
+        }
+      ]
+    },
+    {
+      "id": "c118",
+      "sourceType": "community-wiki",
+      "sourceUrl": "https://patchwiki.biligame.com/images/zmd/5/5d/7flbuypbon8y8m55euyppps60t74ws3.png",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "variants": [
+        {
+          "variant": "gallery",
+          "width": 900,
+          "height": 1200,
+          "bytes": 308036
+        },
+        {
+          "variant": "match",
+          "width": 960,
+          "height": 540,
+          "bytes": 145658
+        },
+        {
+          "variant": "avatar",
+          "width": 512,
+          "height": 512,
+          "bytes": 120776
+        }
+      ]
+    },
+    {
+      "id": "c119",
+      "sourceType": "community-wiki",
+      "sourceUrl": "https://patchwiki.biligame.com/images/zmd/e/ee/loxtv8kxlkbxbw9s9s1uany6nbgvz1g.png",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "variants": [
+        {
+          "variant": "gallery",
+          "width": 900,
+          "height": 1200,
+          "bytes": 217768
+        },
+        {
+          "variant": "match",
+          "width": 960,
+          "height": 540,
+          "bytes": 119106
+        },
+        {
+          "variant": "avatar",
+          "width": 512,
+          "height": 512,
+          "bytes": 92440
+        }
+      ]
+    },
+    {
+      "id": "c120",
+      "sourceType": "community-wiki",
+      "sourceUrl": "https://patchwiki.biligame.com/images/zmd/4/4f/opip8l1ltjgwul2ixz6s4eaihiwzs9k.png",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "variants": [
+        {
+          "variant": "gallery",
+          "width": 900,
+          "height": 1200,
+          "bytes": 215986
+        },
+        {
+          "variant": "match",
+          "width": 960,
+          "height": 540,
+          "bytes": 109124
+        },
+        {
+          "variant": "avatar",
+          "width": 512,
+          "height": 512,
+          "bytes": 86412
+        }
+      ]
+    },
+    {
+      "id": "c121",
+      "sourceType": "community-wiki",
+      "sourceUrl": "https://cdn.prydwen.gg/images/nte/characters/lacrimosa_full.webp",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "variants": [
+        {
+          "variant": "gallery",
+          "width": 900,
+          "height": 1200,
+          "bytes": 123420
+        },
+        {
+          "variant": "match",
+          "width": 960,
+          "height": 540,
+          "bytes": 60346
+        },
+        {
+          "variant": "avatar",
+          "width": 512,
+          "height": 512,
+          "bytes": 56716
+        }
+      ]
+    },
+    {
+      "id": "c122",
+      "sourceType": "community-wiki",
+      "sourceUrl": "https://patchwiki.biligame.com/images/yh/2/26/5zz3rotr8o0s0u5khek0cukf8prm5cu.jpg",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "variants": [
+        {
+          "variant": "gallery",
+          "width": 900,
+          "height": 1200,
+          "bytes": 119120
+        },
+        {
+          "variant": "match",
+          "width": 960,
+          "height": 540,
+          "bytes": 50100
+        },
+        {
+          "variant": "avatar",
+          "width": 512,
+          "height": 512,
+          "bytes": 50728
+        }
+      ]
+    },
+    {
+      "id": "c123",
+      "sourceType": "community-wiki",
+      "sourceUrl": "https://patchwiki.biligame.com/images/yh/b/b7/gmxy2j1occ1arz0lip6mqg42qk36q6f.jpg",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "variants": [
+        {
+          "variant": "gallery",
+          "width": 900,
+          "height": 1200,
+          "bytes": 153902
+        },
+        {
+          "variant": "match",
+          "width": 960,
+          "height": 540,
+          "bytes": 53422
+        },
+        {
+          "variant": "avatar",
+          "width": 512,
+          "height": 512,
+          "bytes": 60774
+        }
+      ]
+    },
+    {
+      "id": "c124",
+      "sourceType": "community-wiki",
+      "sourceUrl": "https://patchwiki.biligame.com/images/yh/2/2b/kx9g0cmcc1hx0v0wox5wb4xyxkrszzs.jpg",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "variants": [
+        {
+          "variant": "gallery",
+          "width": 900,
+          "height": 1200,
+          "bytes": 82402
+        },
+        {
+          "variant": "match",
+          "width": 960,
+          "height": 540,
+          "bytes": 39930
+        },
+        {
+          "variant": "avatar",
+          "width": 512,
+          "height": 512,
+          "bytes": 33712
+        }
+      ]
+    },
+    {
+      "id": "c125",
+      "sourceType": "community-wiki",
+      "sourceUrl": "https://cdn.prydwen.gg/images/nte/characters/baicang_full.webp",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "variants": [
+        {
+          "variant": "gallery",
+          "width": 900,
+          "height": 1200,
+          "bytes": 85594
+        },
+        {
+          "variant": "match",
+          "width": 960,
+          "height": 540,
+          "bytes": 60366
+        },
+        {
+          "variant": "avatar",
+          "width": 512,
+          "height": 512,
+          "bytes": 38726
+        }
+      ]
+    },
+    {
+      "id": "c126",
+      "sourceType": "community-wiki",
+      "sourceUrl": "https://cdn.prydwen.gg/images/nte/characters/fadia_full.webp",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "variants": [
+        {
+          "variant": "gallery",
+          "width": 900,
+          "height": 1200,
+          "bytes": 134750
+        },
+        {
+          "variant": "match",
+          "width": 960,
+          "height": 540,
+          "bytes": 99518
+        },
+        {
+          "variant": "avatar",
+          "width": 512,
+          "height": 512,
+          "bytes": 58016
+        }
+      ]
+    },
+    {
+      "id": "c127",
+      "sourceType": "community-wiki",
+      "sourceUrl": "https://cdn.prydwen.gg/images/nte/characters/hathor_full.webp",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "variants": [
+        {
+          "variant": "gallery",
+          "width": 900,
+          "height": 1200,
+          "bytes": 97484
+        },
+        {
+          "variant": "match",
+          "width": 960,
+          "height": 540,
+          "bytes": 68730
+        },
+        {
+          "variant": "avatar",
+          "width": 512,
+          "height": 512,
+          "bytes": 45722
+        }
+      ]
+    },
+    {
+      "id": "c128",
+      "sourceType": "community-wiki",
+      "sourceUrl": "https://cdn.prydwen.gg/images/nte/characters/jiuyuan_full.webp",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "variants": [
+        {
+          "variant": "gallery",
+          "width": 900,
+          "height": 1200,
+          "bytes": 113272
+        },
+        {
+          "variant": "match",
+          "width": 960,
+          "height": 540,
+          "bytes": 67098
+        },
+        {
+          "variant": "avatar",
+          "width": 512,
+          "height": 512,
+          "bytes": 51688
+        }
+      ]
+    }
+  ],
+  "rejected": [],
+  "missing": []
+}

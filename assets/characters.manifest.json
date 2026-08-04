@@ -1,0 +1,2182 @@
+{
+  "$schema": "./characters.manifest.schema.json",
+  "version": 1,
+  "characters": [
+    {
+      "id": "c001",
+      "sourceFile": "assets/source/c001.png",
+      "sourceUrl": "https://patchwiki.biligame.com/images/ys/3/36/596ms0f8jjyjb20gxg4nybjz2yc7y0y.png",
+      "discoveryPage": "https://wiki.biligame.com/ys/%E8%8A%99%E5%AE%81%E5%A8%9C",
+      "officialHost": "patchwiki.biligame.com",
+      "sha256": "2e5fe244740c614a74fc551861a93c91f50aaf9374e0c22c7f3430b7c9e0a21b",
+      "sourceType": "community-wiki",
+      "status": "approved",
+      "reviewedBy": "fumoe-one-time-import",
+      "reviewedAt": "2026-07-30",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "notes": "一次性上线前归档；生产环境不再请求第三方来源。"
+    },
+    {
+      "id": "c002",
+      "sourceFile": "assets/source/c002.png",
+      "sourceUrl": "https://patchwiki.biligame.com/images/ys/1/18/37k6tkwpg0j4rp4wno3djauxmi5tcsg.png",
+      "discoveryPage": "https://wiki.biligame.com/ys/%E9%9B%B7%E7%94%B5%E5%B0%86%E5%86%9B",
+      "officialHost": "patchwiki.biligame.com",
+      "sha256": "7fe969e46ac6f68afda0c47275f88eb54a83a3e8f87ee9ee3006df53a1f599d8",
+      "sourceType": "community-wiki",
+      "status": "approved",
+      "reviewedBy": "fumoe-one-time-import",
+      "reviewedAt": "2026-07-30",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "notes": "一次性上线前归档；生产环境不再请求第三方来源。"
+    },
+    {
+      "id": "c003",
+      "sourceFile": "assets/source/c003.png",
+      "sourceUrl": "https://patchwiki.biligame.com/images/ys/2/27/2lajlkv4483cjv65mf5dgg701squhte.png",
+      "discoveryPage": "https://wiki.biligame.com/ys/%E8%83%A1%E6%A1%83",
+      "officialHost": "patchwiki.biligame.com",
+      "sha256": "4465c033b0ffa79898bf3d9626395ca38b37fb1e1f867c098b6ebc6ca3cbf7c0",
+      "sourceType": "community-wiki",
+      "status": "approved",
+      "reviewedBy": "fumoe-one-time-import",
+      "reviewedAt": "2026-07-30",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "notes": "一次性上线前归档；生产环境不再请求第三方来源。"
+    },
+    {
+      "id": "c004",
+      "sourceFile": "assets/source/c004.png",
+      "sourceUrl": "https://patchwiki.biligame.com/images/ys/3/30/7vf3x2md1skhpijpfyznxczi8ohlp71.png",
+      "discoveryPage": "https://wiki.biligame.com/ys/%E7%BA%B3%E8%A5%BF%E5%A6%B2",
+      "officialHost": "patchwiki.biligame.com",
+      "sha256": "43df002725654e392e3ba69482cc2ee1dd94827143696252c1a7bff3c7c78f75",
+      "sourceType": "community-wiki",
+      "status": "approved",
+      "reviewedBy": "fumoe-one-time-import",
+      "reviewedAt": "2026-07-30",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "notes": "一次性上线前归档；生产环境不再请求第三方来源。"
+    },
+    {
+      "id": "c005",
+      "sourceFile": "assets/source/c005.png",
+      "sourceUrl": "https://patchwiki.biligame.com/images/ys/5/52/svbsb24r4gn98gxlltz5f7o3o8rdq82.png",
+      "discoveryPage": "https://wiki.biligame.com/ys/%E5%A4%9C%E5%85%B0",
+      "officialHost": "patchwiki.biligame.com",
+      "sha256": "0065a423b08b961506ca07c87901c9e92ab0a75e212c34b039aa59992fb2d276",
+      "sourceType": "community-wiki",
+      "status": "approved",
+      "reviewedBy": "fumoe-one-time-import",
+      "reviewedAt": "2026-07-30",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "notes": "一次性上线前归档；生产环境不再请求第三方来源。"
+    },
+    {
+      "id": "c006",
+      "sourceFile": "assets/source/c006.png",
+      "sourceUrl": "https://patchwiki.biligame.com/images/ys/7/7c/ly06duqmzi7aclhdyenj02u1w07aj4q.png",
+      "discoveryPage": "https://wiki.biligame.com/ys/%E7%A5%9E%E9%87%8C%E7%BB%AB%E5%8D%8E",
+      "officialHost": "patchwiki.biligame.com",
+      "sha256": "95221b3b5aa0abac0208eda5745f85b9906b2a2d4836885c60444e1e337f842f",
+      "sourceType": "community-wiki",
+      "status": "approved",
+      "reviewedBy": "fumoe-one-time-import",
+      "reviewedAt": "2026-07-30",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "notes": "一次性上线前归档；生产环境不再请求第三方来源。"
+    },
+    {
+      "id": "c007",
+      "sourceFile": "assets/source/c007.png",
+      "sourceUrl": "https://patchwiki.biligame.com/images/ys/2/2f/mtnrz149g7hp4evj1ze7w55pk1ifnlh.png",
+      "discoveryPage": "https://wiki.biligame.com/ys/%E5%A6%AE%E9%9C%B2",
+      "officialHost": "patchwiki.biligame.com",
+      "sha256": "8966f2058d710f6ab30338c644fa190eaa9a8f39932ebd45ecf387f9b6c5356d",
+      "sourceType": "community-wiki",
+      "status": "approved",
+      "reviewedBy": "fumoe-one-time-import",
+      "reviewedAt": "2026-07-30",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "notes": "一次性上线前归档；生产环境不再请求第三方来源。"
+    },
+    {
+      "id": "c008",
+      "sourceFile": "assets/source/c008.png",
+      "sourceUrl": "https://patchwiki.biligame.com/images/ys/5/59/h8guwfomjccchkolh1f9imbalkkpon8.png",
+      "discoveryPage": "https://wiki.biligame.com/ys/%E7%94%B3%E9%B9%A4",
+      "officialHost": "patchwiki.biligame.com",
+      "sha256": "5f4c85ef518621334aba61ea976817fb500856c5e62780d3a0fbaef27b8bf535",
+      "sourceType": "community-wiki",
+      "status": "approved",
+      "reviewedBy": "fumoe-one-time-import",
+      "reviewedAt": "2026-07-30",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "notes": "一次性上线前归档；生产环境不再请求第三方来源。"
+    },
+    {
+      "id": "c009",
+      "sourceFile": "assets/source/c009.png",
+      "sourceUrl": "https://patchwiki.biligame.com/images/ys/f/f9/5sozren3l58ad56quvtotq8xj8n577d.png",
+      "discoveryPage": "https://wiki.biligame.com/ys/%E5%AE%B5%E5%AE%AB",
+      "officialHost": "patchwiki.biligame.com",
+      "sha256": "e2ad582599b20ef01815fd43cf885f539bcf9b87bfd7df49d1182c9a4ba9663a",
+      "sourceType": "community-wiki",
+      "status": "approved",
+      "reviewedBy": "fumoe-one-time-import",
+      "reviewedAt": "2026-07-30",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "notes": "一次性上线前归档；生产环境不再请求第三方来源。"
+    },
+    {
+      "id": "c010",
+      "sourceFile": "assets/source/c010.png",
+      "sourceUrl": "https://patchwiki.biligame.com/images/ys/9/91/rbdy599dw8ivcvy61wfhnyvy3a1qo6f.png",
+      "discoveryPage": "https://wiki.biligame.com/ys/%E5%85%8B%E6%B4%9B%E7%90%B3%E5%BE%B7",
+      "officialHost": "patchwiki.biligame.com",
+      "sha256": "1069e50036785342dc2304b97fbc81fbce40f943311d013832bfcc4b77f67e67",
+      "sourceType": "community-wiki",
+      "status": "approved",
+      "reviewedBy": "fumoe-one-time-import",
+      "reviewedAt": "2026-07-30",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "notes": "一次性上线前归档；生产环境不再请求第三方来源。"
+    },
+    {
+      "id": "c011",
+      "sourceFile": "assets/source/c011.png",
+      "sourceUrl": "https://patchwiki.biligame.com/images/ys/4/4b/ti70pf41ljpspv65sd2xohs4yv366sz.png",
+      "discoveryPage": "https://wiki.biligame.com/ys/%E9%98%BF%E8%95%BE%E5%A5%87%E8%AF%BA",
+      "officialHost": "patchwiki.biligame.com",
+      "sha256": "ff16c76e8901f35d3bc04ea581b28a1f550fc58dc3f0e35b0983945b0e18b713",
+      "sourceType": "community-wiki",
+      "status": "approved",
+      "reviewedBy": "fumoe-one-time-import",
+      "reviewedAt": "2026-07-30",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "notes": "一次性上线前归档；生产环境不再请求第三方来源。"
+    },
+    {
+      "id": "c012",
+      "sourceFile": "assets/source/c012.png",
+      "sourceUrl": "https://patchwiki.biligame.com/images/ys/0/03/r042d5mlhyynxyulmr203d6brigvcn1.png",
+      "discoveryPage": "https://wiki.biligame.com/ys/%E9%97%B2%E4%BA%91",
+      "officialHost": "patchwiki.biligame.com",
+      "sha256": "570f48e1e5db4d9ad005d77c27bc35720fd10826acc351e54a6311abe5a0692c",
+      "sourceType": "community-wiki",
+      "status": "approved",
+      "reviewedBy": "fumoe-one-time-import",
+      "reviewedAt": "2026-07-30",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "notes": "一次性上线前归档；生产环境不再请求第三方来源。"
+    },
+    {
+      "id": "c013",
+      "sourceFile": "assets/source/c013.png",
+      "sourceUrl": "https://patchwiki.biligame.com/images/ys/9/93/ixr7anh0vmi68zs4n4kcjh6cvjw7isp.png",
+      "discoveryPage": "https://wiki.biligame.com/ys/%E5%8D%83%E7%BB%87",
+      "officialHost": "patchwiki.biligame.com",
+      "sha256": "248f794613972475d690b9192b2da6acfad3a53b9b639359f7c112ee2d25f3ca",
+      "sourceType": "community-wiki",
+      "status": "approved",
+      "reviewedBy": "fumoe-one-time-import",
+      "reviewedAt": "2026-07-30",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "notes": "一次性上线前归档；生产环境不再请求第三方来源。"
+    },
+    {
+      "id": "c014",
+      "sourceFile": "assets/source/c014.png",
+      "sourceUrl": "https://patchwiki.biligame.com/images/ys/0/07/kdg14nwggq5g9nct15v2lgqgc52i0is.png",
+      "discoveryPage": "https://wiki.biligame.com/ys/%E5%B8%8C%E6%A0%BC%E9%9B%AF",
+      "officialHost": "patchwiki.biligame.com",
+      "sha256": "f38f8c74a099ecfee794688f844fa23e778262c3581001a04360d985812fcced",
+      "sourceType": "community-wiki",
+      "status": "approved",
+      "reviewedBy": "fumoe-one-time-import",
+      "reviewedAt": "2026-07-30",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "notes": "一次性上线前归档；生产环境不再请求第三方来源。"
+    },
+    {
+      "id": "c015",
+      "sourceFile": "assets/source/c015.png",
+      "sourceUrl": "https://patchwiki.biligame.com/images/ys/2/23/hwbzsww2i4albbp5to9pvo8q6g4h1s5.png",
+      "discoveryPage": "https://wiki.biligame.com/ys/%E7%8E%9B%E6%8B%89%E5%A6%AE",
+      "officialHost": "patchwiki.biligame.com",
+      "sha256": "eaea2667d038773820fc66f16ce904d6a924a67fdcbd8980cb430b5de01090e5",
+      "sourceType": "community-wiki",
+      "status": "approved",
+      "reviewedBy": "fumoe-one-time-import",
+      "reviewedAt": "2026-07-30",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "notes": "一次性上线前归档；生产环境不再请求第三方来源。"
+    },
+    {
+      "id": "c016",
+      "sourceFile": "assets/source/c016.png",
+      "sourceUrl": "https://patchwiki.biligame.com/images/ys/1/1a/fkgmmrffam7rnghpm2eyuff1g97e29s.png",
+      "discoveryPage": "https://wiki.biligame.com/ys/%E8%8C%9C%E7%89%B9%E8%8F%88%E8%8E%89",
+      "officialHost": "patchwiki.biligame.com",
+      "sha256": "83a6b813a2b8d7022f26439fb7c03c609f9fffc521a39077123c28be50532c47",
+      "sourceType": "community-wiki",
+      "status": "approved",
+      "reviewedBy": "fumoe-one-time-import",
+      "reviewedAt": "2026-07-30",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "notes": "一次性上线前归档；生产环境不再请求第三方来源。"
+    },
+    {
+      "id": "c017",
+      "sourceFile": "assets/source/c017.png",
+      "sourceUrl": "https://patchwiki.biligame.com/images/sr/thumb/4/40/ohzhieftz25z05ftzetqds1km8cph4x.png/900px-%E5%8D%A1%E8%8A%99%E5%8D%A1%E7%AB%8B%E7%BB%98.png",
+      "discoveryPage": "https://wiki.biligame.com/sr/%E5%8D%A1%E8%8A%99%E5%8D%A1",
+      "officialHost": "patchwiki.biligame.com",
+      "sha256": "70122646b6a60248b54c10bec92df05ec2f1215236393cc6e4b181ae4f1edcd6",
+      "sourceType": "community-wiki",
+      "status": "approved",
+      "reviewedBy": "fumoe-one-time-import",
+      "reviewedAt": "2026-07-30",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "notes": "一次性上线前归档；生产环境不再请求第三方来源。"
+    },
+    {
+      "id": "c018",
+      "sourceFile": "assets/source/c018.png",
+      "sourceUrl": "https://patchwiki.biligame.com/images/sr/thumb/7/71/fud590c54lodhhcj2bji0zucih5dzm5.png/900px-%E9%BB%84%E6%B3%89%E7%AB%8B%E7%BB%98.png",
+      "discoveryPage": "https://wiki.biligame.com/sr/%E9%BB%84%E6%B3%89",
+      "officialHost": "patchwiki.biligame.com",
+      "sha256": "80bada4e84500df5f0920576c4b36099d9e5a0de36f8f175a3b040efa387fc4c",
+      "sourceType": "community-wiki",
+      "status": "approved",
+      "reviewedBy": "fumoe-one-time-import",
+      "reviewedAt": "2026-07-30",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "notes": "一次性上线前归档；生产环境不再请求第三方来源。"
+    },
+    {
+      "id": "c019",
+      "sourceFile": "assets/source/c019.png",
+      "sourceUrl": "https://patchwiki.biligame.com/images/sr/thumb/d/d3/k7g0ja362py1shisgib2uxl5s5kzbfw.png/900px-%E6%B5%81%E8%90%A4%E7%AB%8B%E7%BB%98.png",
+      "discoveryPage": "https://wiki.biligame.com/sr/%E6%B5%81%E8%90%A4",
+      "officialHost": "patchwiki.biligame.com",
+      "sha256": "37929bc8bc64cc1f474f00e4ea0cfd937c7864c7e58ab792aa8f00a73b0ec941",
+      "sourceType": "community-wiki",
+      "status": "approved",
+      "reviewedBy": "fumoe-one-time-import",
+      "reviewedAt": "2026-07-30",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "notes": "一次性上线前归档；生产环境不再请求第三方来源。"
+    },
+    {
+      "id": "c020",
+      "sourceFile": "assets/source/c020.png",
+      "sourceUrl": "https://patchwiki.biligame.com/images/sr/thumb/7/75/shqgamdstfb3fqluonzq7alip7wbjm6.png/900px-%E9%95%9C%E6%B5%81%E7%AB%8B%E7%BB%98.png",
+      "discoveryPage": "https://wiki.biligame.com/sr/%E9%95%9C%E6%B5%81",
+      "officialHost": "patchwiki.biligame.com",
+      "sha256": "89c895ba275a3b79fab63db70805d85329f1b880e74d6e85f5f84ed74c75ee51",
+      "sourceType": "community-wiki",
+      "status": "approved",
+      "reviewedBy": "fumoe-one-time-import",
+      "reviewedAt": "2026-07-30",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "notes": "一次性上线前归档；生产环境不再请求第三方来源。"
+    },
+    {
+      "id": "c021",
+      "sourceFile": "assets/source/c021.png",
+      "sourceUrl": "https://patchwiki.biligame.com/images/sr/thumb/e/ec/0nrtu7s6jqlq00wzcqqoyjl1doukder.png/900px-%E4%B8%89%E6%9C%88%E4%B8%83%E7%AB%8B%E7%BB%98.png",
+      "discoveryPage": "https://wiki.biligame.com/sr/%E4%B8%89%E6%9C%88%E4%B8%83",
+      "officialHost": "patchwiki.biligame.com",
+      "sha256": "28abf9167765bf692f0bd6e218640363dfdbcd619e8dbfc3158a599f03bf9a93",
+      "sourceType": "community-wiki",
+      "status": "approved",
+      "reviewedBy": "fumoe-one-time-import",
+      "reviewedAt": "2026-07-30",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "notes": "一次性上线前归档；生产环境不再请求第三方来源。"
+    },
+    {
+      "id": "c022",
+      "sourceFile": "assets/source/c022.png",
+      "sourceUrl": "https://patchwiki.biligame.com/images/sr/thumb/6/61/7l1pfiibrkrb7n8snk8m8yqrcplzo60.png/900px-%E7%AC%A6%E7%8E%84%E7%AB%8B%E7%BB%98.png",
+      "discoveryPage": "https://wiki.biligame.com/sr/%E7%AC%A6%E7%8E%84",
+      "officialHost": "patchwiki.biligame.com",
+      "sha256": "66448d17eac5d2851ae880f7968718ba43b9b7129cc334cccf9dfaaa181a7cc7",
+      "sourceType": "community-wiki",
+      "status": "approved",
+      "reviewedBy": "fumoe-one-time-import",
+      "reviewedAt": "2026-07-30",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "notes": "一次性上线前归档；生产环境不再请求第三方来源。"
+    },
+    {
+      "id": "c023",
+      "sourceFile": "assets/source/c023.png",
+      "sourceUrl": "https://patchwiki.biligame.com/images/sr/thumb/a/af/payusvzxpo9mso33fml1trp9qtr39j5.png/900px-%E9%BB%91%E5%A4%A9%E9%B9%85%E7%AB%8B%E7%BB%98.png",
+      "discoveryPage": "https://wiki.biligame.com/sr/%E9%BB%91%E5%A4%A9%E9%B9%85",
+      "officialHost": "patchwiki.biligame.com",
+      "sha256": "3f9b79256f03c732fd5ed6497266cdaf3283e6ca3319e2603ce71d5dc705157a",
+      "sourceType": "community-wiki",
+      "status": "approved",
+      "reviewedBy": "fumoe-one-time-import",
+      "reviewedAt": "2026-07-30",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "notes": "一次性上线前归档；生产环境不再请求第三方来源。"
+    },
+    {
+      "id": "c024",
+      "sourceFile": "assets/source/c024.png",
+      "sourceUrl": "https://patchwiki.biligame.com/images/sr/thumb/3/3f/oy6o9fm6o0rrcwzs9gvgc4rfhvejcts.png/900px-%E9%93%B6%E7%8B%BC%E7%AB%8B%E7%BB%98.png",
+      "discoveryPage": "https://wiki.biligame.com/sr/%E9%93%B6%E7%8B%BC",
+      "officialHost": "patchwiki.biligame.com",
+      "sha256": "401ca09816b2330738cc71b4350baf43cf590a0043e255b38137bbb60cc2d927",
+      "sourceType": "community-wiki",
+      "status": "approved",
+      "reviewedBy": "fumoe-one-time-import",
+      "reviewedAt": "2026-07-30",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "notes": "一次性上线前归档；生产环境不再请求第三方来源。"
+    },
+    {
+      "id": "c025",
+      "sourceFile": "assets/source/c025.png",
+      "sourceUrl": "https://patchwiki.biligame.com/images/sr/thumb/4/4d/0iamwg2dwen149n3ucjxlnx4dw4ym5z.png/900px-%E9%98%AE%E2%80%A2%E6%A2%85%E7%AB%8B%E7%BB%98.png",
+      "discoveryPage": "https://wiki.biligame.com/sr/%E9%98%AE%C2%B7%E6%A2%85",
+      "officialHost": "patchwiki.biligame.com",
+      "sha256": "fb93451ba3fcae1e3f7a2c83c5b2a5fe7056d800df76568e365633f2bf210fe2",
+      "sourceType": "community-wiki",
+      "status": "approved",
+      "reviewedBy": "fumoe-one-time-import",
+      "reviewedAt": "2026-07-30",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "notes": "一次性上线前归档；生产环境不再请求第三方来源。"
+    },
+    {
+      "id": "c026",
+      "sourceFile": "assets/source/c026.png",
+      "sourceUrl": "https://patchwiki.biligame.com/images/sr/thumb/b/b5/7zgd5kv12cw5nkj37vb2wn9u6p7fbbb.png/900px-%E8%8A%B1%E7%81%AB%E7%AB%8B%E7%BB%98.png",
+      "discoveryPage": "https://wiki.biligame.com/sr/%E8%8A%B1%E7%81%AB",
+      "officialHost": "patchwiki.biligame.com",
+      "sha256": "06305fc5c28aca41fb59611384c4cea81a70e4872ad9b470c4dcfd4bd0615c09",
+      "sourceType": "community-wiki",
+      "status": "approved",
+      "reviewedBy": "fumoe-one-time-import",
+      "reviewedAt": "2026-07-30",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "notes": "一次性上线前归档；生产环境不再请求第三方来源。"
+    },
+    {
+      "id": "c027",
+      "sourceFile": "assets/source/c027.png",
+      "sourceUrl": "https://patchwiki.biligame.com/images/sr/thumb/b/b9/q7uxyiej5tg4p3ysts38oxcv23mt76p.png/900px-%E7%9F%A5%E6%9B%B4%E9%B8%9F%E7%AB%8B%E7%BB%98.png",
+      "discoveryPage": "https://wiki.biligame.com/sr/%E7%9F%A5%E6%9B%B4%E9%B8%9F",
+      "officialHost": "patchwiki.biligame.com",
+      "sha256": "8eda0b3faeec3506a844fa51e75055be0c5c5ebacad3ed990b8fcacadff0406d",
+      "sourceType": "community-wiki",
+      "status": "approved",
+      "reviewedBy": "fumoe-one-time-import",
+      "reviewedAt": "2026-07-30",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "notes": "一次性上线前归档；生产环境不再请求第三方来源。"
+    },
+    {
+      "id": "c028",
+      "sourceFile": "assets/source/c028.png",
+      "sourceUrl": "https://patchwiki.biligame.com/images/sr/thumb/d/db/hzxqo1nhxb0on8ntmv58gshidxpue61.png/900px-%E7%BF%A1%E7%BF%A0%E7%AB%8B%E7%BB%98.png",
+      "discoveryPage": "https://wiki.biligame.com/sr/%E7%BF%A1%E7%BF%A0",
+      "officialHost": "patchwiki.biligame.com",
+      "sha256": "dac8db2d4be05ccf6a7cec67b3bd210a165d2b6477c61c6c4c21bc5a66aeb08b",
+      "sourceType": "community-wiki",
+      "status": "approved",
+      "reviewedBy": "fumoe-one-time-import",
+      "reviewedAt": "2026-07-30",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "notes": "一次性上线前归档；生产环境不再请求第三方来源。"
+    },
+    {
+      "id": "c029",
+      "sourceFile": "assets/source/c029.png",
+      "sourceUrl": "https://patchwiki.biligame.com/images/sr/thumb/7/79/0vez7r8jr0vperakdhxgc1uxw0qh5wk.png/900px-%E9%A3%9E%E9%9C%84%E7%AB%8B%E7%BB%98.png",
+      "discoveryPage": "https://wiki.biligame.com/sr/%E9%A3%9E%E9%9C%84",
+      "officialHost": "patchwiki.biligame.com",
+      "sha256": "c5032a051299dfcf32c02a0f6e4ace34cd9c69eb3826b4571f47c6f7953876d7",
+      "sourceType": "community-wiki",
+      "status": "approved",
+      "reviewedBy": "fumoe-one-time-import",
+      "reviewedAt": "2026-07-30",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "notes": "一次性上线前归档；生产环境不再请求第三方来源。"
+    },
+    {
+      "id": "c030",
+      "sourceFile": "assets/source/c030.png",
+      "sourceUrl": "https://patchwiki.biligame.com/images/sr/thumb/8/87/i74ocx6kwo3qxcpl4bqeoi9m2mnn8q2.png/900px-%E7%81%B5%E7%A0%82%E7%AB%8B%E7%BB%98.png",
+      "discoveryPage": "https://wiki.biligame.com/sr/%E7%81%B5%E7%A0%82",
+      "officialHost": "patchwiki.biligame.com",
+      "sha256": "9b047f30b157becf60263e2e3fc8155f35325db941a3a2959e10ffc438df204b",
+      "sourceType": "community-wiki",
+      "status": "approved",
+      "reviewedBy": "fumoe-one-time-import",
+      "reviewedAt": "2026-07-30",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "notes": "一次性上线前归档；生产环境不再请求第三方来源。"
+    },
+    {
+      "id": "c031",
+      "sourceFile": "assets/source/c031.png",
+      "sourceUrl": "https://patchwiki.biligame.com/images/sr/thumb/f/f1/a4xh2fqj236rw5pdcy88vcr2fban63x.png/900px-%E5%A4%A7%E9%BB%91%E5%A1%94%E7%AB%8B%E7%BB%98.png",
+      "discoveryPage": "https://wiki.biligame.com/sr/%E5%A4%A7%E9%BB%91%E5%A1%94",
+      "officialHost": "patchwiki.biligame.com",
+      "sha256": "ef029644cce563441700bf33c6af83694c1bfb7f83afc5384d5d3ba260c60c30",
+      "sourceType": "community-wiki",
+      "status": "approved",
+      "reviewedBy": "fumoe-one-time-import",
+      "reviewedAt": "2026-07-30",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "notes": "一次性上线前归档；生产环境不再请求第三方来源。"
+    },
+    {
+      "id": "c032",
+      "sourceFile": "assets/source/c032.png",
+      "sourceUrl": "https://patchwiki.biligame.com/images/sr/thumb/3/3b/g2i10cu84radhr53nbghm6yidwmrgh2.png/900px-%E9%81%90%E8%9D%B6%E7%AB%8B%E7%BB%98.png",
+      "discoveryPage": "https://wiki.biligame.com/sr/%E9%81%90%E8%9D%B6",
+      "officialHost": "patchwiki.biligame.com",
+      "sha256": "fef379649706e905e1a1470db28e288a30560fcad61a3af882e1e7e439f38cac",
+      "sourceType": "community-wiki",
+      "status": "approved",
+      "reviewedBy": "fumoe-one-time-import",
+      "reviewedAt": "2026-07-30",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "notes": "一次性上线前归档；生产环境不再请求第三方来源。"
+    },
+    {
+      "id": "c033",
+      "sourceFile": "assets/source/c033.png",
+      "sourceUrl": "https://patchwiki.biligame.com/images/zzz/b/b2/q4u9by7enh272ni0pez6xmz92kfjol5.png",
+      "discoveryPage": "https://wiki.biligame.com/zzz/%E8%89%BE%E8%8E%B2",
+      "officialHost": "patchwiki.biligame.com",
+      "sha256": "b734055dd94a579946c41c049909620d25aa0cabc603c2b10b5de61a16dc4f55",
+      "sourceType": "community-wiki",
+      "status": "approved",
+      "reviewedBy": "fumoe-one-time-import",
+      "reviewedAt": "2026-07-30",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "notes": "一次性上线前归档；生产环境不再请求第三方来源。"
+    },
+    {
+      "id": "c034",
+      "sourceFile": "assets/source/c034.png",
+      "sourceUrl": "https://patchwiki.biligame.com/images/zzz/f/f7/5003ndyn0wyuyupnq7pbg1i36x7rna5.png",
+      "discoveryPage": "https://wiki.biligame.com/zzz/%E6%9C%B1%E9%B8%A2",
+      "officialHost": "patchwiki.biligame.com",
+      "sha256": "ea6970fda911aa1e81c2e6626431851cc00d12939f5eb1dd42f11dea6415b49e",
+      "sourceType": "community-wiki",
+      "status": "approved",
+      "reviewedBy": "fumoe-one-time-import",
+      "reviewedAt": "2026-07-30",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "notes": "一次性上线前归档；生产环境不再请求第三方来源。"
+    },
+    {
+      "id": "c035",
+      "sourceFile": "assets/source/c035.png",
+      "sourceUrl": "https://patchwiki.biligame.com/images/zzz/e/ef/ngxyk5tih6lypewmaagsko0vtydg4hg.png",
+      "discoveryPage": "https://wiki.biligame.com/zzz/%E7%AE%80",
+      "officialHost": "patchwiki.biligame.com",
+      "sha256": "5c8e0869476a665c74a475a23e571b176844db9b033e0332ca3c720731a59493",
+      "sourceType": "community-wiki",
+      "status": "approved",
+      "reviewedBy": "fumoe-one-time-import",
+      "reviewedAt": "2026-07-30",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "notes": "一次性上线前归档；生产环境不再请求第三方来源。"
+    },
+    {
+      "id": "c036",
+      "sourceFile": "assets/source/c036.png",
+      "sourceUrl": "https://patchwiki.biligame.com/images/zzz/8/80/t49ztw8oadtgaqrf6ox8kjxmftflc31.png",
+      "discoveryPage": "https://wiki.biligame.com/zzz/%E8%80%80%E5%98%89%E9%9F%B3",
+      "officialHost": "patchwiki.biligame.com",
+      "sha256": "1646fdc596c97e98faaedfa8cf931319d54e34d79eb72c11c1a32c9a154fe39d",
+      "sourceType": "community-wiki",
+      "status": "approved",
+      "reviewedBy": "fumoe-one-time-import",
+      "reviewedAt": "2026-07-30",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "notes": "一次性上线前归档；生产环境不再请求第三方来源。"
+    },
+    {
+      "id": "c037",
+      "sourceFile": "assets/source/c037.png",
+      "sourceUrl": "https://patchwiki.biligame.com/images/zzz/7/7a/qp0041upsamhoguij5ugubegt68ozxh.png",
+      "discoveryPage": "https://wiki.biligame.com/zzz/%E4%BC%8A%E8%8A%99%E7%90%B3",
+      "officialHost": "patchwiki.biligame.com",
+      "sha256": "2b9a5826f744840539fdcf9c9922e9db9b42179f9a19927fc902ef595e2db8d7",
+      "sourceType": "community-wiki",
+      "status": "approved",
+      "reviewedBy": "fumoe-one-time-import",
+      "reviewedAt": "2026-07-30",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "notes": "一次性上线前归档；生产环境不再请求第三方来源。"
+    },
+    {
+      "id": "c038",
+      "sourceFile": "assets/source/c038.png",
+      "sourceUrl": "https://patchwiki.biligame.com/images/zzz/c/cc/fclibwlac725hmi77qdu8r7b64mgziu.png",
+      "discoveryPage": "https://wiki.biligame.com/zzz/%E6%A0%BC%E8%8E%89%E4%B8%9D",
+      "officialHost": "patchwiki.biligame.com",
+      "sha256": "2ad2c9ac9de6f3baaaaaa0ffefbc8b46f8ef60084b08a269c1eb6cabfa2aa511",
+      "sourceType": "community-wiki",
+      "status": "approved",
+      "reviewedBy": "fumoe-one-time-import",
+      "reviewedAt": "2026-07-30",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "notes": "一次性上线前归档；生产环境不再请求第三方来源。"
+    },
+    {
+      "id": "c039",
+      "sourceFile": "assets/source/c039.png",
+      "sourceUrl": "https://patchwiki.biligame.com/images/zzz/d/d2/8i2skjn9mqhk2dcdh5sk832518xbsv3.png",
+      "discoveryPage": "https://wiki.biligame.com/zzz/%E5%A6%AE%E5%8F%AF",
+      "officialHost": "patchwiki.biligame.com",
+      "sha256": "c05552e72c59296c5e75aac2d25252e08f5adcc0ab478737cb788c9be70bfa87",
+      "sourceType": "community-wiki",
+      "status": "approved",
+      "reviewedBy": "manual-contact-sheet-review",
+      "reviewedAt": "2026-08-04",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "notes": "单角色透明全身立绘，身份与绝区零角色页一致，无文字、水印或 UI，适合三种裁切。 一次性上线前归档；生产环境不再请求第三方来源。"
+    },
+    {
+      "id": "c040",
+      "sourceFile": "assets/source/c040.png",
+      "sourceUrl": "https://patchwiki.biligame.com/images/zzz/3/37/2lasbws34i96v3801bsg8bpy8hygj0r.png",
+      "discoveryPage": "https://wiki.biligame.com/zzz/%E9%9B%85",
+      "officialHost": "patchwiki.biligame.com",
+      "sha256": "0d5cafc0cd24ec17f54763a14372fc653f5fef4820f3d1bcc487177603bb5c08",
+      "sourceType": "community-wiki",
+      "status": "approved",
+      "reviewedBy": "manual-contact-sheet-review",
+      "reviewedAt": "2026-08-02",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "notes": "默认单人全身立绘，无大面积文字，适合三种裁切。 一次性上线前归档；生产环境不再请求第三方来源。"
+    },
+    {
+      "id": "c041",
+      "sourceFile": "assets/source/c041.png",
+      "sourceUrl": "https://patchwiki.biligame.com/images/zzz/0/02/23ikriljpiqbgarx45g9m0oogg2i3zp.png",
+      "discoveryPage": "https://wiki.biligame.com/zzz/%E9%9D%92%E8%A1%A3",
+      "officialHost": "patchwiki.biligame.com",
+      "sha256": "b7481355223b4b239fb4f5bf9e769abc499f89e90eab9053bd8d8261aca2d919",
+      "sourceType": "community-wiki",
+      "status": "approved",
+      "reviewedBy": "fumoe-one-time-import",
+      "reviewedAt": "2026-07-30",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "notes": "一次性上线前归档；生产环境不再请求第三方来源。"
+    },
+    {
+      "id": "c042",
+      "sourceFile": "assets/source/c042.png",
+      "sourceUrl": "https://patchwiki.biligame.com/images/zzz/b/b0/89p4i2wg0c5qcfnuuxx0em5ayl2u0r9.png",
+      "discoveryPage": "https://wiki.biligame.com/zzz/%E9%9C%B2%E8%A5%BF",
+      "officialHost": "patchwiki.biligame.com",
+      "sha256": "8757bea1b9dd772ef461b319c0de479f63d19d0603d2019d60de88fda3239bf6",
+      "sourceType": "community-wiki",
+      "status": "approved",
+      "reviewedBy": "fumoe-one-time-import",
+      "reviewedAt": "2026-07-30",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "notes": "一次性上线前归档；生产环境不再请求第三方来源。"
+    },
+    {
+      "id": "c043",
+      "sourceFile": "assets/source/c043.png",
+      "sourceUrl": "https://patchwiki.biligame.com/images/zzz/e/e9/5uguuh7jj7u04x4388o6uzlp3ckz9i6.png",
+      "discoveryPage": "https://wiki.biligame.com/zzz/%E6%B4%BE%E6%B4%BE",
+      "officialHost": "patchwiki.biligame.com",
+      "sha256": "77d9390328200cd018e8cc7ba6858ff921a27d6cd0f07f40340bffb904e71056",
+      "sourceType": "community-wiki",
+      "status": "approved",
+      "reviewedBy": "fumoe-one-time-import",
+      "reviewedAt": "2026-07-30",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "notes": "一次性上线前归档；生产环境不再请求第三方来源。"
+    },
+    {
+      "id": "c044",
+      "sourceFile": "assets/source/c044.png",
+      "sourceUrl": "https://patchwiki.biligame.com/images/zzz/2/2f/771weh4j6k5we5dt69csfem3r659b3s.png",
+      "discoveryPage": "https://wiki.biligame.com/zzz/%E5%8F%AF%E7%90%B3",
+      "officialHost": "patchwiki.biligame.com",
+      "sha256": "bbd7ba4bb772a40ce8b07c8db210d68f88e3ad6324a5af0d3f5337610d923e63",
+      "sourceType": "community-wiki",
+      "status": "approved",
+      "reviewedBy": "fumoe-one-time-import",
+      "reviewedAt": "2026-07-30",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "notes": "一次性上线前归档；生产环境不再请求第三方来源。"
+    },
+    {
+      "id": "c045",
+      "sourceFile": "assets/source/c045.png",
+      "sourceUrl": "https://patchwiki.biligame.com/images/zzz/c/c0/2gntr9rw018n0sjjr86rqzsxbf72lqa.png",
+      "discoveryPage": "https://wiki.biligame.com/zzz/%E8%8B%8D%E8%A7%92",
+      "officialHost": "patchwiki.biligame.com",
+      "sha256": "6c1afb825bb2f5bf690f4bbc8fe1d9fd041e2b54b42a73ef863c6e949778e088",
+      "sourceType": "community-wiki",
+      "status": "approved",
+      "reviewedBy": "fumoe-one-time-import",
+      "reviewedAt": "2026-07-30",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "notes": "一次性上线前归档；生产环境不再请求第三方来源。"
+    },
+    {
+      "id": "c046",
+      "sourceFile": "assets/source/c046.png",
+      "sourceUrl": "https://patchwiki.biligame.com/images/zzz/8/8a/aq8u5iz8xzdd9es547tl24lcppd8i3p.png",
+      "discoveryPage": "https://wiki.biligame.com/zzz/%E6%9F%8F%E5%A6%AE%E6%80%9D",
+      "officialHost": "patchwiki.biligame.com",
+      "sha256": "1eeba91f222f04904495f5a8dd7df1d817bd8db8decaa8fd14c6d54142e45d71",
+      "sourceType": "community-wiki",
+      "status": "approved",
+      "reviewedBy": "fumoe-one-time-import",
+      "reviewedAt": "2026-07-30",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "notes": "一次性上线前归档；生产环境不再请求第三方来源。"
+    },
+    {
+      "id": "c047",
+      "sourceFile": "assets/source/c047.png",
+      "sourceUrl": "https://patchwiki.biligame.com/images/zzz/3/3a/raivzx4lk1g0xcgk24lovem9p0n1uh3.png",
+      "discoveryPage": "https://wiki.biligame.com/zzz/%E6%89%B3%E6%9C%BA",
+      "officialHost": "patchwiki.biligame.com",
+      "sha256": "70e979b3463cfa67bf2ffd04fdad3f9f540d78c7d2eeb4c3e71eb2c126d6c259",
+      "sourceType": "community-wiki",
+      "status": "approved",
+      "reviewedBy": "fumoe-one-time-import",
+      "reviewedAt": "2026-07-30",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "notes": "一次性上线前归档；生产环境不再请求第三方来源。"
+    },
+    {
+      "id": "c048",
+      "sourceFile": "assets/source/c048.png",
+      "sourceUrl": "https://patchwiki.biligame.com/images/zzz/1/1d/k9m7919bfvjgd1kpvztqnzgwmc9799i.png",
+      "discoveryPage": "https://wiki.biligame.com/zzz/%E4%BB%AA%E7%8E%84",
+      "officialHost": "patchwiki.biligame.com",
+      "sha256": "4bce7df2cb9b1800fd025126036e215a6e01a305c7465bbc8d0552ba5e2a63cb",
+      "sourceType": "community-wiki",
+      "status": "approved",
+      "reviewedBy": "fumoe-one-time-import",
+      "reviewedAt": "2026-07-30",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "notes": "一次性上线前归档；生产环境不再请求第三方来源。"
+    },
+    {
+      "id": "c049",
+      "sourceFile": "assets/source/c049.png",
+      "sourceUrl": "https://wuthering.gg/images/iconrolepile/T_IconRole_Pile_changli_UI.png",
+      "discoveryPage": "https://wuthering.gg/characters/changli",
+      "officialHost": "wuthering.gg",
+      "sha256": "c4b9720d0d7c5743409500d6c7ded205887f8f96658546b4cbbdb25dc7339ce9",
+      "sourceType": "community-wiki",
+      "status": "approved",
+      "reviewedBy": "manual-contact-sheet-review",
+      "reviewedAt": "2026-08-04",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "notes": "逐图目视核对为对应角色的单人主立绘；主体完整、清晰，无大型文字、水印或 UI，适合三种裁切。 一次性上线前归档；生产环境不再请求第三方来源。"
+    },
+    {
+      "id": "c050",
+      "sourceFile": "assets/source/c050.png",
+      "sourceUrl": "https://wuthering.gg/images/iconrolepile/T_IconRole_Pile_chun_UI.png",
+      "discoveryPage": "https://wuthering.gg/characters/camellya",
+      "officialHost": "wuthering.gg",
+      "sha256": "9211a5e255e14ebbd2334b98ff7d64e22fda41823e66b0f15986669aa6bb38b6",
+      "sourceType": "community-wiki",
+      "status": "approved",
+      "reviewedBy": "manual-contact-sheet-review",
+      "reviewedAt": "2026-08-04",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "notes": "逐图目视核对为对应角色的单人主立绘；主体完整、清晰，无大型文字、水印或 UI，适合三种裁切。 一次性上线前归档；生产环境不再请求第三方来源。"
+    },
+    {
+      "id": "c051",
+      "sourceFile": "assets/source/c051.png",
+      "sourceUrl": "https://patchwiki.biligame.com/images/wutheringwaves/5/56/101neg0k0er0rkh019ljtj5ev6jgac3.png",
+      "discoveryPage": "https://wiki.biligame.com/wutheringwaves/%E5%85%B1%E9%B8%A3%E8%80%85/%E5%AE%88%E5%B2%B8%E4%BA%BA",
+      "officialHost": "patchwiki.biligame.com",
+      "sha256": "5493fbf628bd6061e3dbcbfe834f4f4cbbc9c13f1cd5ce76da62432e6b00a9d6",
+      "sourceType": "community-wiki",
+      "status": "approved",
+      "reviewedBy": "manual-contact-sheet-review",
+      "reviewedAt": "2026-08-04",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "notes": "逐图目视核对为对应角色的单人主立绘；主体完整、清晰，无大型文字、水印或 UI，适合三种裁切。 一次性上线前归档；生产环境不再请求第三方来源。"
+    },
+    {
+      "id": "c052",
+      "sourceFile": "assets/source/c052.png",
+      "sourceUrl": "https://wuthering.gg/images/iconrolepile/T_IconRole_Pile_jinxi_UI.png",
+      "discoveryPage": "https://wuthering.gg/characters/jinhsi",
+      "officialHost": "wuthering.gg",
+      "sha256": "c6096b2916a65bdf52e70d0269b524a9698ce932a68d406485e4e259baec4cad",
+      "sourceType": "community-wiki",
+      "status": "approved",
+      "reviewedBy": "manual-contact-sheet-review",
+      "reviewedAt": "2026-08-04",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "notes": "逐图目视核对为对应角色的单人主立绘；主体完整、清晰，无大型文字、水印或 UI，适合三种裁切。 一次性上线前归档；生产环境不再请求第三方来源。"
+    },
+    {
+      "id": "c053",
+      "sourceFile": "assets/source/c053.png",
+      "sourceUrl": "https://wuthering.gg/images/iconrolepile/T_IconRole_Pile_katixiya_UI.png",
+      "discoveryPage": "https://wuthering.gg/characters/cartethyia",
+      "officialHost": "wuthering.gg",
+      "sha256": "8d979ff7268c1faf0d2795c46f0411880f31aaa370a0a7c7f589a8cef0f3d8dc",
+      "sourceType": "community-wiki",
+      "status": "approved",
+      "reviewedBy": "manual-contact-sheet-review",
+      "reviewedAt": "2026-08-04",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "notes": "逐图目视核对为对应角色的单人主立绘；主体完整、清晰，无大型文字、水印或 UI，适合三种裁切。 一次性上线前归档；生产环境不再请求第三方来源。"
+    },
+    {
+      "id": "c054",
+      "sourceFile": "assets/source/c054.png",
+      "sourceUrl": "https://wuthering.gg/images/iconrolepile/T_IconRole_Pile_kelaita_UI.png",
+      "discoveryPage": "https://wuthering.gg/characters/carlotta",
+      "officialHost": "wuthering.gg",
+      "sha256": "cb841995dc93a721abf5aa526986dc32f9a5f51ee6a585fc41d29eb2d7a66b72",
+      "sourceType": "community-wiki",
+      "status": "approved",
+      "reviewedBy": "manual-contact-sheet-review",
+      "reviewedAt": "2026-08-04",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "notes": "逐图目视核对为对应角色的单人主立绘；主体完整、清晰，无大型文字、水印或 UI，适合三种裁切。 一次性上线前归档；生产环境不再请求第三方来源。"
+    },
+    {
+      "id": "c055",
+      "sourceFile": "assets/source/c055.png",
+      "sourceUrl": "https://wuthering.gg/images/iconrolepile/T_IconRole_Pile_yinlin_UI.png",
+      "discoveryPage": "https://wuthering.gg/characters/yinlin",
+      "officialHost": "wuthering.gg",
+      "sha256": "318d72cf8d0e46278a222114e0e3644d0cb28154464b8c8078c977e1e304e203",
+      "sourceType": "community-wiki",
+      "status": "approved",
+      "reviewedBy": "manual-contact-sheet-review",
+      "reviewedAt": "2026-08-04",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "notes": "逐图目视核对为对应角色的单人主立绘；主体完整、清晰，无大型文字、水印或 UI，适合三种裁切。 一次性上线前归档；生产环境不再请求第三方来源。"
+    },
+    {
+      "id": "c056",
+      "sourceFile": "assets/source/c056.png",
+      "sourceUrl": "https://wuthering.gg/images/iconrolepile/T_IconRole_Pile_yangyang_UI.png",
+      "discoveryPage": "https://wuthering.gg/characters/yangyang",
+      "officialHost": "wuthering.gg",
+      "sha256": "a3b93d91912a72137a2e9ed035e29366c64f223ea2ea0335cb16b660dc6e9d48",
+      "sourceType": "community-wiki",
+      "status": "approved",
+      "reviewedBy": "manual-contact-sheet-review",
+      "reviewedAt": "2026-08-04",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "notes": "逐图目视核对为对应角色的单人主立绘；主体完整、清晰，无大型文字、水印或 UI，适合三种裁切。 一次性上线前归档；生产环境不再请求第三方来源。"
+    },
+    {
+      "id": "c057",
+      "sourceFile": "assets/source/c057.png",
+      "sourceUrl": "https://wuthering.gg/images/iconrolepile/T_IconRole_Pile_jiexin_UI.png",
+      "discoveryPage": "https://wuthering.gg/characters/jianxin",
+      "officialHost": "wuthering.gg",
+      "sha256": "9d5b357ab9521ed86e7f65c0b42136377f38eff292730507913a7fa8757d1d47",
+      "sourceType": "community-wiki",
+      "status": "approved",
+      "reviewedBy": "manual-contact-sheet-review",
+      "reviewedAt": "2026-08-04",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "notes": "逐图目视核对为对应角色的单人主立绘；主体完整、清晰，无大型文字、水印或 UI，适合三种裁切。 一次性上线前归档；生产环境不再请求第三方来源。"
+    },
+    {
+      "id": "c058",
+      "sourceFile": "assets/source/c058.png",
+      "sourceUrl": "https://wuthering.gg/images/iconrolepile/T_IconRole_Pile_shanhua_UI.png",
+      "discoveryPage": "https://wuthering.gg/characters/sanhua",
+      "officialHost": "wuthering.gg",
+      "sha256": "77b5888c58a9b14fa09edb7b51650880a66f41b7d4cbc532c7c5ca0ae999532e",
+      "sourceType": "community-wiki",
+      "status": "approved",
+      "reviewedBy": "manual-contact-sheet-review",
+      "reviewedAt": "2026-08-04",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "notes": "逐图目视核对为对应角色的单人主立绘；主体完整、清晰，无大型文字、水印或 UI，适合三种裁切。 一次性上线前归档；生产环境不再请求第三方来源。"
+    },
+    {
+      "id": "c059",
+      "sourceFile": "assets/source/c059.png",
+      "sourceUrl": "https://patchwiki.biligame.com/images/wutheringwaves/5/52/r0wr4fjaqwv1pv5a48nzk9a0hwfueq4.png",
+      "discoveryPage": "https://wiki.biligame.com/wutheringwaves/%E7%99%BD%E8%8A%B7",
+      "officialHost": "patchwiki.biligame.com",
+      "sha256": "822a31af761bf34e72b7a79ee36ad723dfe4dd3579d05c593d14bf33043d86a6",
+      "sourceType": "community-wiki",
+      "status": "approved",
+      "reviewedBy": "fumoe-one-time-import",
+      "reviewedAt": "2026-07-30",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "notes": "一次性上线前归档；生产环境不再请求第三方来源。"
+    },
+    {
+      "id": "c060",
+      "sourceFile": "assets/source/c060.png",
+      "sourceUrl": "https://wuthering.gg/images/iconrolepile/T_IconRole_Pile_micai_UI.png",
+      "discoveryPage": "https://wuthering.gg/characters/danjin",
+      "officialHost": "wuthering.gg",
+      "sha256": "2c69c49ee774d4a1876a88f15a403874c8ca8c416a5887c3c89ee9f797966d5e",
+      "sourceType": "community-wiki",
+      "status": "approved",
+      "reviewedBy": "manual-contact-sheet-review",
+      "reviewedAt": "2026-08-04",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "notes": "逐图目视核对为对应角色的单人主立绘；主体完整、清晰，无大型文字、水印或 UI，适合三种裁切。 一次性上线前归档；生产环境不再请求第三方来源。"
+    },
+    {
+      "id": "c061",
+      "sourceFile": "assets/source/c061.png",
+      "sourceUrl": "https://wuthering.gg/images/iconrolepile/T_IconRole_Pile_taohua_UI.png",
+      "discoveryPage": "https://wuthering.gg/characters/taoqi",
+      "officialHost": "wuthering.gg",
+      "sha256": "ecd22d45bf32b531bca3e469849ec88bbb1c3d8b455506a9bed58a8cbd6fb999",
+      "sourceType": "community-wiki",
+      "status": "approved",
+      "reviewedBy": "manual-contact-sheet-review",
+      "reviewedAt": "2026-08-04",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "notes": "逐图目视核对为对应角色的单人主立绘；主体完整、清晰，无大型文字、水印或 UI，适合三种裁切。 一次性上线前归档；生产环境不再请求第三方来源。"
+    },
+    {
+      "id": "c062",
+      "sourceFile": "assets/source/c062.png",
+      "sourceUrl": "https://wuthering.gg/images/iconrolepile/T_IconRole_Pile_Feibi_UI.png",
+      "discoveryPage": "https://wuthering.gg/characters/phoebe",
+      "officialHost": "wuthering.gg",
+      "sha256": "feeea1ed79af5dee260a621f37a743ff1fb3e4d594eb34acf8edb1d4c8eb7f9e",
+      "sourceType": "community-wiki",
+      "status": "approved",
+      "reviewedBy": "manual-contact-sheet-review",
+      "reviewedAt": "2026-08-04",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "notes": "逐图目视核对为对应角色的单人主立绘；主体完整、清晰，无大型文字、水印或 UI，适合三种裁切。 一次性上线前归档；生产环境不再请求第三方来源。"
+    },
+    {
+      "id": "c063",
+      "sourceFile": "assets/source/c063.png",
+      "sourceUrl": "https://wuthering.gg/images/iconrolepile/T_IconRole_Pile_zanni_UI.png",
+      "discoveryPage": "https://wuthering.gg/characters/zani",
+      "officialHost": "wuthering.gg",
+      "sha256": "93b96379b4a639ccdb711216ebbc6f1f8270f647fd8bb9075efe2060fb448dfb",
+      "sourceType": "community-wiki",
+      "status": "approved",
+      "reviewedBy": "manual-contact-sheet-review",
+      "reviewedAt": "2026-08-04",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "notes": "逐图目视核对为对应角色的单人主立绘；主体完整、清晰，无大型文字、水印或 UI，适合三种裁切。 一次性上线前归档；生产环境不再请求第三方来源。"
+    },
+    {
+      "id": "c064",
+      "sourceFile": "assets/source/c064.png",
+      "sourceUrl": "https://wuthering.gg/images/iconrolepile/T_IconRole_Pile_lupa_UI.png",
+      "discoveryPage": "https://wuthering.gg/characters/lupa",
+      "officialHost": "wuthering.gg",
+      "sha256": "c8d1b556048ba8e87037ef632e6ca96993d0535d7e1e43af1a5d57b1ed56f285",
+      "sourceType": "community-wiki",
+      "status": "approved",
+      "reviewedBy": "manual-contact-sheet-review",
+      "reviewedAt": "2026-08-04",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "notes": "逐图目视核对为对应角色的单人主立绘；主体完整、清晰，无大型文字、水印或 UI，适合三种裁切。 一次性上线前归档；生产环境不再请求第三方来源。"
+    },
+    {
+      "id": "c065",
+      "sourceFile": "assets/source/c065.jpg",
+      "sourceUrl": "https://patchwiki.biligame.com/images/blhx/a/a2/1lwxg8c62po6ldaqhzz6ahtz0jshdsq.jpg",
+      "discoveryPage": "https://wiki.biligame.com/blhx/%E4%BC%81%E4%B8%9A",
+      "officialHost": "patchwiki.biligame.com",
+      "sha256": "9b54f328eb222ce51f05bd85c307ad934b1e79c1fb0278ab483e16309fe13ba3",
+      "sourceType": "community-wiki",
+      "status": "approved",
+      "reviewedBy": "manual-contact-sheet-review",
+      "reviewedAt": "2026-08-04",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "notes": "放大联系表逐图目视核对为对应舰船的单人游戏原始立绘；默认身份与阵营匹配，清晰完整，无水印、文字、UI 或其他角色。圣路易斯按名单描述选用白鹰 St. Louis，不误用自由鸢尾 Saint Louis。 一次性上线前归档；生产环境不再请求第三方来源。"
+    },
+    {
+      "id": "c066",
+      "sourceFile": "assets/source/c066.jpg",
+      "sourceUrl": "https://patchwiki.biligame.com/images/blhx/2/2d/td3lgyav6scdx5jnqjhrmvrf5fv5yte.jpg",
+      "discoveryPage": "https://wiki.biligame.com/blhx/%E8%83%BD%E4%BB%A3",
+      "officialHost": "patchwiki.biligame.com",
+      "sha256": "549169fd0abf649cc86780dc3f5163c98c4770b44c84b70554b601fd81e367d0",
+      "sourceType": "community-wiki",
+      "status": "approved",
+      "reviewedBy": "manual-contact-sheet-review",
+      "reviewedAt": "2026-08-04",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "notes": "放大联系表逐图目视核对为对应舰船的单人游戏原始立绘；默认身份与阵营匹配，清晰完整，无水印、文字、UI 或其他角色。圣路易斯按名单描述选用白鹰 St. Louis，不误用自由鸢尾 Saint Louis。 一次性上线前归档；生产环境不再请求第三方来源。"
+    },
+    {
+      "id": "c067",
+      "sourceFile": "assets/source/c067.jpg",
+      "sourceUrl": "https://patchwiki.biligame.com/images/blhx/f/fe/9bemp0mmhbqujua87wfjkcpff4qryt2.jpg",
+      "discoveryPage": "https://wiki.biligame.com/blhx/%E5%A4%A7%E5%87%A4",
+      "officialHost": "patchwiki.biligame.com",
+      "sha256": "871cd09840763d39f35d94caf21565d7398f0aab7164b750d524bc9ec21e4706",
+      "sourceType": "community-wiki",
+      "status": "approved",
+      "reviewedBy": "manual-contact-sheet-review",
+      "reviewedAt": "2026-08-04",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "notes": "放大联系表逐图目视核对为对应舰船的单人游戏原始立绘；默认身份与阵营匹配，清晰完整，无水印、文字、UI 或其他角色。圣路易斯按名单描述选用白鹰 St. Louis，不误用自由鸢尾 Saint Louis。 一次性上线前归档；生产环境不再请求第三方来源。"
+    },
+    {
+      "id": "c068",
+      "sourceFile": "assets/source/c068.png",
+      "sourceUrl": "https://azurlane.netojuu.com/images/4/44/St._Louis.png",
+      "discoveryPage": "https://azurlane.koumakan.jp/wiki/St._Louis",
+      "officialHost": "azurlane.netojuu.com",
+      "sha256": "95470c0a74a596942d111e1a1d3098166eb7a353dc8c427b60aaa7fec2b5e486",
+      "sourceType": "community-wiki",
+      "status": "approved",
+      "reviewedBy": "manual-contact-sheet-review",
+      "reviewedAt": "2026-08-04",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "notes": "放大联系表逐图目视核对为对应舰船的单人游戏原始立绘；默认身份与阵营匹配，清晰完整，无水印、文字、UI 或其他角色。圣路易斯按名单描述选用白鹰 St. Louis，不误用自由鸢尾 Saint Louis。 一次性上线前归档；生产环境不再请求第三方来源。"
+    },
+    {
+      "id": "c069",
+      "sourceFile": "assets/source/c069.jpg",
+      "sourceUrl": "https://patchwiki.biligame.com/images/blhx/6/66/pqzhgas84hebtddal3kf8n9ibp79moc.jpg",
+      "discoveryPage": "https://wiki.biligame.com/blhx/%E4%BF%A1%E6%B5%93",
+      "officialHost": "patchwiki.biligame.com",
+      "sha256": "a8574b692f9a15d90d2f108ed7e28864f29b6593f4703433415e1f326298017e",
+      "sourceType": "community-wiki",
+      "status": "approved",
+      "reviewedBy": "manual-contact-sheet-review",
+      "reviewedAt": "2026-08-04",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "notes": "放大联系表逐图目视核对为对应舰船的单人游戏原始立绘；默认身份与阵营匹配，清晰完整，无水印、文字、UI 或其他角色。圣路易斯按名单描述选用白鹰 St. Louis，不误用自由鸢尾 Saint Louis。 一次性上线前归档；生产环境不再请求第三方来源。"
+    },
+    {
+      "id": "c070",
+      "sourceFile": "assets/source/c070.jpg",
+      "sourceUrl": "https://patchwiki.biligame.com/images/blhx/e/e9/9a6zlv9fdyqbkvvrs91nvcc6hej1qsl.jpg",
+      "discoveryPage": "https://wiki.biligame.com/blhx/%E5%8F%AF%E7%95%8F",
+      "officialHost": "patchwiki.biligame.com",
+      "sha256": "42c8cd0feeba13b262e764b06d5b87d223a5f6fd35f5ae6233f88a259553280e",
+      "sourceType": "community-wiki",
+      "status": "approved",
+      "reviewedBy": "manual-contact-sheet-review",
+      "reviewedAt": "2026-08-04",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "notes": "放大联系表逐图目视核对为对应舰船的单人游戏原始立绘；默认身份与阵营匹配，清晰完整，无水印、文字、UI 或其他角色。圣路易斯按名单描述选用白鹰 St. Louis，不误用自由鸢尾 Saint Louis。 一次性上线前归档；生产环境不再请求第三方来源。"
+    },
+    {
+      "id": "c071",
+      "sourceFile": "assets/source/c071.jpg",
+      "sourceUrl": "https://patchwiki.biligame.com/images/blhx/d/d0/9p78v8i8gh6nqseoggy50zh94r42p6f.jpg",
+      "discoveryPage": "https://wiki.biligame.com/blhx/%E8%8A%B1%E5%9B%AD",
+      "officialHost": "patchwiki.biligame.com",
+      "sha256": "ffe53f045315c2d7010dd4d80ffe663cf07c06cc5c6409b868997bff1414e03c",
+      "sourceType": "community-wiki",
+      "status": "approved",
+      "reviewedBy": "manual-contact-sheet-review",
+      "reviewedAt": "2026-08-04",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "notes": "放大联系表逐图目视核对为对应舰船的单人游戏原始立绘；默认身份与阵营匹配，清晰完整，无水印、文字、UI 或其他角色。圣路易斯按名单描述选用白鹰 St. Louis，不误用自由鸢尾 Saint Louis。 一次性上线前归档；生产环境不再请求第三方来源。"
+    },
+    {
+      "id": "c072",
+      "sourceFile": "assets/source/c072.jpg",
+      "sourceUrl": "https://patchwiki.biligame.com/images/blhx/f/f6/0wfabudfnxluzwf6pmsdyo0c3quhftl.jpg",
+      "discoveryPage": "https://wiki.biligame.com/blhx/%E6%AD%A6%E8%97%8F",
+      "officialHost": "patchwiki.biligame.com",
+      "sha256": "d2598952c71037c495933f8f498d7d7de66c7bce650946672b9bc2fc3b471b34",
+      "sourceType": "community-wiki",
+      "status": "approved",
+      "reviewedBy": "manual-contact-sheet-review",
+      "reviewedAt": "2026-08-04",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "notes": "放大联系表逐图目视核对为对应舰船的单人游戏原始立绘；默认身份与阵营匹配，清晰完整，无水印、文字、UI 或其他角色。圣路易斯按名单描述选用白鹰 St. Louis，不误用自由鸢尾 Saint Louis。 一次性上线前归档；生产环境不再请求第三方来源。"
+    },
+    {
+      "id": "c073",
+      "sourceFile": "assets/source/c073.jpg",
+      "sourceUrl": "https://patchwiki.biligame.com/images/blhx/c/c3/9pr2325f49fit6qe3z1mcagiy1ylfbx.jpg",
+      "discoveryPage": "https://wiki.biligame.com/blhx/%E9%98%BF%E5%B0%94%E8%90%A8%E6%96%AF",
+      "officialHost": "patchwiki.biligame.com",
+      "sha256": "6ea4a1d1a7a9a6e76b252fcc464bf38112eb79f84269218df5528fc1ab9fb949",
+      "sourceType": "community-wiki",
+      "status": "approved",
+      "reviewedBy": "manual-contact-sheet-review",
+      "reviewedAt": "2026-08-04",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "notes": "放大联系表逐图目视核对为对应舰船的单人游戏原始立绘；默认身份与阵营匹配，清晰完整，无水印、文字、UI 或其他角色。圣路易斯按名单描述选用白鹰 St. Louis，不误用自由鸢尾 Saint Louis。 一次性上线前归档；生产环境不再请求第三方来源。"
+    },
+    {
+      "id": "c074",
+      "sourceFile": "assets/source/c074.png",
+      "sourceUrl": "https://azurlane.netojuu.com/images/8/86/Belfast.png",
+      "discoveryPage": "https://azurlane.koumakan.jp/wiki/Belfast",
+      "officialHost": "azurlane.netojuu.com",
+      "sha256": "10b1ba8d0f58a201a77131bbb75fabd1184ba8124ad89c6b8ee41291c58027b3",
+      "sourceType": "community-wiki",
+      "status": "approved",
+      "reviewedBy": "manual-contact-sheet-review",
+      "reviewedAt": "2026-08-04",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "notes": "放大联系表逐图目视核对为对应舰船的单人游戏原始立绘；默认身份与阵营匹配，清晰完整，无水印、文字、UI 或其他角色。圣路易斯按名单描述选用白鹰 St. Louis，不误用自由鸢尾 Saint Louis。 一次性上线前归档；生产环境不再请求第三方来源。"
+    },
+    {
+      "id": "c075",
+      "sourceFile": "assets/source/c075.png",
+      "sourceUrl": "https://sh-anime.shochiku.co.jp/bluearchive-anime/assets/images/common/character/arona/chara-arona-front_03.png",
+      "discoveryPage": "https://sh-anime.shochiku.co.jp/bluearchive-anime/character/arona/",
+      "officialHost": "sh-anime.shochiku.co.jp",
+      "sha256": "f3b6c192795202478905064f408cb3168bb7c9fce02f6a3b53c010b6cb6f15c5",
+      "sourceType": "official",
+      "status": "approved",
+      "reviewedBy": "manual-contact-sheet-review",
+      "reviewedAt": "2026-08-04",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "notes": "逐图目视核对为对应角色的单人游戏立绘；主体清晰完整，无大型文字、水印、UI 或其他角色，适合三种裁切。 松竹《蔚蓝档案》动画官方网站角色页原图；一次性上线前归档；生产环境不再请求第三方来源。"
+    },
+    {
+      "id": "c076",
+      "sourceFile": "assets/source/c076.webp",
+      "sourceUrl": "https://raw.githubusercontent.com/SchaleDB/SchaleDB/main/images/student/portrait/10059.webp",
+      "discoveryPage": "https://schaledb.com/student/10059",
+      "officialHost": "raw.githubusercontent.com",
+      "sha256": "7939f5b48f32cf91a3fbe410517f084ab71530094fb5532ed6257c436566f805",
+      "sourceType": "community-wiki",
+      "status": "approved",
+      "reviewedBy": "manual-contact-sheet-review",
+      "reviewedAt": "2026-08-04",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "notes": "逐图目视核对为对应角色的单人游戏立绘；主体清晰完整，无大型文字、水印、UI 或其他角色，适合三种裁切。 一次性上线前归档；生产环境不再请求第三方来源。"
+    },
+    {
+      "id": "c077",
+      "sourceFile": "assets/source/c077.png",
+      "sourceUrl": "https://static.zerochan.net/Amau.Ako.full.4170027.png",
+      "discoveryPage": "https://www.zerochan.net/4170027",
+      "officialHost": "static.zerochan.net",
+      "sha256": "c5dbb21c3942d25effd4d0d8f67b60549aa4b255df4158cb963e644b88eb53bc",
+      "sourceType": "community-wiki",
+      "status": "approved",
+      "reviewedBy": "manual-contact-sheet-review",
+      "reviewedAt": "2026-08-04",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "notes": "逐图目视核对为对应角色的单人游戏立绘；主体清晰完整，无大型文字、水印、UI 或其他角色，适合三种裁切。 一次性上线前归档；生产环境不再请求第三方来源。"
+    },
+    {
+      "id": "c078",
+      "sourceFile": "assets/source/c078.webp",
+      "sourceUrl": "https://raw.githubusercontent.com/SchaleDB/SchaleDB/main/images/student/portrait/10010.webp",
+      "discoveryPage": "https://schaledb.com/student/10010",
+      "officialHost": "raw.githubusercontent.com",
+      "sha256": "b783577291e014e366e2b9545c4fc6afe3822402df53f7a726007ade385b3e73",
+      "sourceType": "community-wiki",
+      "status": "approved",
+      "reviewedBy": "manual-contact-sheet-review",
+      "reviewedAt": "2026-08-04",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "notes": "逐图目视核对为对应角色的单人游戏立绘；主体清晰完整，无大型文字、水印、UI 或其他角色，适合三种裁切。 一次性上线前归档；生产环境不再请求第三方来源。"
+    },
+    {
+      "id": "c079",
+      "sourceFile": "assets/source/c079.webp",
+      "sourceUrl": "https://raw.githubusercontent.com/SchaleDB/SchaleDB/main/images/student/portrait/10000.webp",
+      "discoveryPage": "https://schaledb.com/student/10000",
+      "officialHost": "raw.githubusercontent.com",
+      "sha256": "e7ca91bc2b0727a4e59750c7ecd4e222a6e0be93b5c01d936f385aa66714f1e9",
+      "sourceType": "community-wiki",
+      "status": "approved",
+      "reviewedBy": "manual-contact-sheet-review",
+      "reviewedAt": "2026-08-04",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "notes": "逐图目视核对为对应角色的单人游戏立绘；主体清晰完整，无大型文字、水印、UI 或其他角色，适合三种裁切。 一次性上线前归档；生产环境不再请求第三方来源。"
+    },
+    {
+      "id": "c080",
+      "sourceFile": "assets/source/c080.webp",
+      "sourceUrl": "https://raw.githubusercontent.com/SchaleDB/SchaleDB/main/images/student/portrait/10004.webp",
+      "discoveryPage": "https://schaledb.com/student/10004",
+      "officialHost": "raw.githubusercontent.com",
+      "sha256": "b3c3e5feabf9581e30f344f2060356a38478aa989a42f0b8cd1bb3da34d7167e",
+      "sourceType": "community-wiki",
+      "status": "approved",
+      "reviewedBy": "manual-contact-sheet-review",
+      "reviewedAt": "2026-08-04",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "notes": "逐图目视核对为对应角色的单人游戏立绘；主体清晰完整，无大型文字、水印、UI 或其他角色，适合三种裁切。 一次性上线前归档；生产环境不再请求第三方来源。"
+    },
+    {
+      "id": "c081",
+      "sourceFile": "assets/source/c081.webp",
+      "sourceUrl": "https://raw.githubusercontent.com/SchaleDB/SchaleDB/main/images/student/portrait/10015.webp",
+      "discoveryPage": "https://schaledb.com/student/10015",
+      "officialHost": "raw.githubusercontent.com",
+      "sha256": "f557778d89c594549a0400b51d53d4c572aac1c129e4dbd9426c56f50e843a7d",
+      "sourceType": "community-wiki",
+      "status": "approved",
+      "reviewedBy": "manual-contact-sheet-review",
+      "reviewedAt": "2026-08-04",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "notes": "逐图目视核对为对应角色的单人游戏立绘；主体清晰完整，无大型文字、水印、UI 或其他角色，适合三种裁切。 一次性上线前归档；生产环境不再请求第三方来源。"
+    },
+    {
+      "id": "c082",
+      "sourceFile": "assets/source/c082.webp",
+      "sourceUrl": "https://raw.githubusercontent.com/SchaleDB/SchaleDB/main/images/student/portrait/23008.webp",
+      "discoveryPage": "https://schaledb.com/student/23008",
+      "officialHost": "raw.githubusercontent.com",
+      "sha256": "df64f0f686242f71c46cc4ca4d6cc443e16b97902b1cd4753fdd3a40b5887bfe",
+      "sourceType": "community-wiki",
+      "status": "approved",
+      "reviewedBy": "manual-contact-sheet-review",
+      "reviewedAt": "2026-08-04",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "notes": "逐图目视核对为对应角色的单人游戏立绘；主体清晰完整，无大型文字、水印、UI 或其他角色，适合三种裁切。 一次性上线前归档；生产环境不再请求第三方来源。"
+    },
+    {
+      "id": "c083",
+      "sourceFile": "assets/source/c083.webp",
+      "sourceUrl": "https://raw.githubusercontent.com/SchaleDB/SchaleDB/main/images/student/portrait/16001.webp",
+      "discoveryPage": "https://schaledb.com/student/16001",
+      "officialHost": "raw.githubusercontent.com",
+      "sha256": "048897f85a94108901d0b6dbfa3d41e2b1b50909f937209022f490c9faf7bd23",
+      "sourceType": "community-wiki",
+      "status": "approved",
+      "reviewedBy": "manual-contact-sheet-review",
+      "reviewedAt": "2026-08-04",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "notes": "逐图目视核对为对应角色的单人游戏立绘；主体清晰完整，无大型文字、水印、UI 或其他角色，适合三种裁切。 一次性上线前归档；生产环境不再请求第三方来源。"
+    },
+    {
+      "id": "c084",
+      "sourceFile": "assets/source/c084.webp",
+      "sourceUrl": "https://raw.githubusercontent.com/SchaleDB/SchaleDB/main/images/student/portrait/13010.webp",
+      "discoveryPage": "https://schaledb.com/student/13010",
+      "officialHost": "raw.githubusercontent.com",
+      "sha256": "bc5e4a65be975bd652b6055adac49c2838bd87f4aadc12db1e18673ff382751b",
+      "sourceType": "community-wiki",
+      "status": "approved",
+      "reviewedBy": "manual-contact-sheet-review",
+      "reviewedAt": "2026-08-04",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "notes": "逐图目视核对为对应角色的单人游戏立绘；主体清晰完整，无大型文字、水印、UI 或其他角色，适合三种裁切。 一次性上线前归档；生产环境不再请求第三方来源。"
+    },
+    {
+      "id": "c085",
+      "sourceFile": "assets/source/c085.png",
+      "sourceUrl": "https://static.atlasacademy.io/NA/CharaGraph/100100/100100b@1.png",
+      "discoveryPage": "https://apps.atlasacademy.io/db/NA/servant/2",
+      "officialHost": "static.atlasacademy.io",
+      "sha256": "16453713536b8fd233dd704da5370f1f32c4baec5f3759b232674c0168c1699b",
+      "sourceType": "community-wiki",
+      "status": "approved",
+      "reviewedBy": "manual-contact-sheet-review",
+      "reviewedAt": "2026-08-04",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "notes": "逐图目视核对为 Atlas Academy 角色页对应的单人游戏立绘；身份、职阶造型与角色匹配，主体完整且无文字、水印或 UI。 一次性上线前归档；生产环境不再请求第三方来源。"
+    },
+    {
+      "id": "c086",
+      "sourceFile": "assets/source/c086.png",
+      "sourceUrl": "https://static.atlasacademy.io/NA/CharaGraph/800100/800100b@1.png",
+      "discoveryPage": "https://apps.atlasacademy.io/db/NA/servant/1",
+      "officialHost": "static.atlasacademy.io",
+      "sha256": "7a947b1b2848af2654601c62caa120af66b70c3a3d793e80ac45bedea9a77343",
+      "sourceType": "community-wiki",
+      "status": "approved",
+      "reviewedBy": "manual-contact-sheet-review",
+      "reviewedAt": "2026-08-04",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "notes": "逐图目视核对为 Atlas Academy 角色页对应的单人游戏立绘；身份、职阶造型与角色匹配，主体完整且无文字、水印或 UI。 一次性上线前归档；生产环境不再请求第三方来源。"
+    },
+    {
+      "id": "c087",
+      "sourceFile": "assets/source/c087.png",
+      "sourceUrl": "https://static.atlasacademy.io/NA/CharaGraph/301300/301300b@1.png",
+      "discoveryPage": "https://apps.atlasacademy.io/db/NA/servant/70",
+      "officialHost": "static.atlasacademy.io",
+      "sha256": "24adbb5e695aef55c625e543c465fa397651c346c7fc77e22fc1b13b1e48e3a7",
+      "sourceType": "community-wiki",
+      "status": "approved",
+      "reviewedBy": "manual-contact-sheet-review",
+      "reviewedAt": "2026-08-04",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "notes": "逐图目视核对为 Atlas Academy 角色页对应的单人游戏立绘；身份、职阶造型与角色匹配，主体完整且无文字、水印或 UI。 一次性上线前归档；生产环境不再请求第三方来源。"
+    },
+    {
+      "id": "c088",
+      "sourceFile": "assets/source/c088.png",
+      "sourceUrl": "https://static.atlasacademy.io/NA/CharaGraph/202000/202000b@1.png",
+      "discoveryPage": "https://apps.atlasacademy.io/db/NA/servant/142",
+      "officialHost": "static.atlasacademy.io",
+      "sha256": "5d4aef16d87aacc4e31116679931f0996032a3465eb8194cae1a979e2fe113bb",
+      "sourceType": "community-wiki",
+      "status": "approved",
+      "reviewedBy": "manual-contact-sheet-review",
+      "reviewedAt": "2026-08-04",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "notes": "逐图目视核对为 Atlas Academy 角色页对应的单人游戏立绘；身份、职阶造型与角色匹配，主体完整且无文字、水印或 UI。 一次性上线前归档；生产环境不再请求第三方来源。"
+    },
+    {
+      "id": "c089",
+      "sourceFile": "assets/source/c089.png",
+      "sourceUrl": "https://static.atlasacademy.io/NA/CharaGraph/704000/704000b@1.png",
+      "discoveryPage": "https://apps.atlasacademy.io/db/NA/servant/309",
+      "officialHost": "static.atlasacademy.io",
+      "sha256": "92bf601a34461ac8e9c9e2b4b601fd775f0ab9fa3242e82cf11edcab29ad3b9a",
+      "sourceType": "community-wiki",
+      "status": "approved",
+      "reviewedBy": "manual-contact-sheet-review",
+      "reviewedAt": "2026-08-04",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "notes": "逐图目视核对为 Atlas Academy 角色页对应的单人游戏立绘；身份、职阶造型与角色匹配，主体完整且无文字、水印或 UI。 一次性上线前归档；生产环境不再请求第三方来源。"
+    },
+    {
+      "id": "c090",
+      "sourceFile": "assets/source/c090.png",
+      "sourceUrl": "https://static.atlasacademy.io/NA/CharaGraph/100500/100500b@1.png",
+      "discoveryPage": "https://apps.atlasacademy.io/db/NA/servant/5",
+      "officialHost": "static.atlasacademy.io",
+      "sha256": "8143397f1268f1f83ca65447f45cdd26d171b48aa7a866ea2ff3209bca72537a",
+      "sourceType": "community-wiki",
+      "status": "approved",
+      "reviewedBy": "manual-contact-sheet-review",
+      "reviewedAt": "2026-08-04",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "notes": "逐图目视核对为 Atlas Academy 角色页对应的单人游戏立绘；身份、职阶造型与角色匹配，主体完整且无文字、水印或 UI。 一次性上线前归档；生产环境不再请求第三方来源。"
+    },
+    {
+      "id": "c091",
+      "sourceFile": "assets/source/c091.png",
+      "sourceUrl": "https://static.atlasacademy.io/NA/CharaGraph/900100/900100b@1.png",
+      "discoveryPage": "https://apps.atlasacademy.io/db/NA/servant/59",
+      "officialHost": "static.atlasacademy.io",
+      "sha256": "df887fd02e2d3d874f2bbff5c2b6dfe6b1100a5dda5248878f319c3009ced578",
+      "sourceType": "community-wiki",
+      "status": "approved",
+      "reviewedBy": "manual-contact-sheet-review",
+      "reviewedAt": "2026-08-04",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "notes": "逐图目视核对为 Atlas Academy 角色页对应的单人游戏立绘；身份、职阶造型与角色匹配，主体完整且无文字、水印或 UI。 一次性上线前归档；生产环境不再请求第三方来源。"
+    },
+    {
+      "id": "c092",
+      "sourceFile": "assets/source/c092.png",
+      "sourceUrl": "https://static.atlasacademy.io/NA/CharaGraph/500800/500800b@1.png",
+      "discoveryPage": "https://apps.atlasacademy.io/db/NA/servant/150",
+      "officialHost": "static.atlasacademy.io",
+      "sha256": "ac815aa1a8130b01f1c15ed4e840245b6f8da8f9f099d1d8870c80f0f1d61f36",
+      "sourceType": "community-wiki",
+      "status": "approved",
+      "reviewedBy": "manual-contact-sheet-review",
+      "reviewedAt": "2026-08-04",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "notes": "逐图目视核对为 Atlas Academy 角色页对应的单人游戏立绘；身份、职阶造型与角色匹配，主体完整且无文字、水印或 UI。 一次性上线前归档；生产环境不再请求第三方来源。"
+    },
+    {
+      "id": "c093",
+      "sourceFile": "assets/source/c093.png",
+      "sourceUrl": "https://static.atlasacademy.io/NA/CharaGraph/2300100/2300100b@1.png",
+      "discoveryPage": "https://apps.atlasacademy.io/db/NA/servant/166",
+      "officialHost": "static.atlasacademy.io",
+      "sha256": "b105e3e44ccce7be31ea1246a91b418e13999c6f62f3c44653214a3a9a6504bd",
+      "sourceType": "community-wiki",
+      "status": "approved",
+      "reviewedBy": "manual-contact-sheet-review",
+      "reviewedAt": "2026-08-04",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "notes": "逐图目视核对为 Atlas Academy 角色页对应的单人游戏立绘；身份、职阶造型与角色匹配，主体完整且无文字、水印或 UI。 一次性上线前归档；生产环境不再请求第三方来源。"
+    },
+    {
+      "id": "c094",
+      "sourceFile": "assets/source/c094.png",
+      "sourceUrl": "https://static.atlasacademy.io/NA/CharaGraph/102800/102800b@1.png",
+      "discoveryPage": "https://apps.atlasacademy.io/db/NA/servant/91",
+      "officialHost": "static.atlasacademy.io",
+      "sha256": "2c16a7e9767bcf0e7895851249830ba92bed5a70316ff6ce85529f04092b20db",
+      "sourceType": "community-wiki",
+      "status": "approved",
+      "reviewedBy": "manual-contact-sheet-review",
+      "reviewedAt": "2026-08-04",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "notes": "逐图目视核对为 Atlas Academy 角色页对应的单人游戏立绘；身份、职阶造型与角色匹配，主体完整且无文字、水印或 UI。 一次性上线前归档；生产环境不再请求第三方来源。"
+    },
+    {
+      "id": "c095",
+      "sourceFile": "assets/source/c095.jpg",
+      "sourceUrl": "https://img.gamewith.jp/article_tools/nikke/gacha/16_cz.jpg",
+      "discoveryPage": "https://gamewith.jp/nikke/article/show/370992",
+      "officialHost": "img.gamewith.jp",
+      "sha256": "6e9768553e37394bc46025fcc65a42d57db91811bc4428470f293da7ee8d5091",
+      "sourceType": "community-wiki",
+      "status": "approved",
+      "reviewedBy": "manual-contact-sheet-review",
+      "reviewedAt": "2026-08-04",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "notes": "逐图目视核对为对应 NIKKE 角色的单人正面主立绘；角色编号与公开数据库姓名匹配，清晰完整，无水印、文本或 UI。 一次性上线前归档；生产环境不再请求第三方来源。"
+    },
+    {
+      "id": "c096",
+      "sourceFile": "assets/source/c096.png",
+      "sourceUrl": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c222_00.png",
+      "discoveryPage": "https://nikke-db.github.io/c.html?id=c222",
+      "officialHost": "raw.githubusercontent.com",
+      "sha256": "6befd21f3518c723a455b5fe9eeb50c2243f84f311cffb1a4b8cb331dc7349dc",
+      "sourceType": "community-wiki",
+      "status": "approved",
+      "reviewedBy": "manual-contact-sheet-review",
+      "reviewedAt": "2026-08-04",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "notes": "逐图目视核对为对应 NIKKE 角色的单人正面主立绘；角色编号与公开数据库姓名匹配，清晰完整，无水印、文本或 UI。 一次性上线前归档；生产环境不再请求第三方来源。"
+    },
+    {
+      "id": "c097",
+      "sourceFile": "assets/source/c097.png",
+      "sourceUrl": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c233_00.png",
+      "discoveryPage": "https://nikke-db.github.io/c.html?id=c233",
+      "officialHost": "raw.githubusercontent.com",
+      "sha256": "9b7621390bd2121d75082a307d01b70ad0e540b2f14ce52ec4a9f846449db48d",
+      "sourceType": "community-wiki",
+      "status": "approved",
+      "reviewedBy": "manual-contact-sheet-review",
+      "reviewedAt": "2026-08-04",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "notes": "逐图目视核对为对应 NIKKE 角色的单人正面主立绘；角色编号与公开数据库姓名匹配，清晰完整，无水印、文本或 UI。 一次性上线前归档；生产环境不再请求第三方来源。"
+    },
+    {
+      "id": "c098",
+      "sourceFile": "assets/source/c098.png",
+      "sourceUrl": "https://patchwiki.biligame.com/images/nikke/5/55/5vcxw6tervu4tjiabo7c4kq1y29bx57.png",
+      "discoveryPage": "https://wiki.biligame.com/nikke/%E6%8B%89%E6%AF%97",
+      "officialHost": "patchwiki.biligame.com",
+      "sha256": "4067b357acfaf2caa70c47051c6581b377d9f24cb0e40a4614c944b080d4e9e2",
+      "sourceType": "community-wiki",
+      "status": "approved",
+      "reviewedBy": "fumoe-one-time-import",
+      "reviewedAt": "2026-07-30",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "notes": "一次性上线前归档；生产环境不再请求第三方来源。"
+    },
+    {
+      "id": "c099",
+      "sourceFile": "assets/source/c099.jpg",
+      "sourceUrl": "https://img.gamewith.jp/article_tools/nikke/gacha/44_cz.jpg",
+      "discoveryPage": "https://gamewith.jp/nikke/article/show/370966",
+      "officialHost": "img.gamewith.jp",
+      "sha256": "594ad3cb39c61abb9f36911f54b8848b8e87d5bca3eaf1dbcb89af131b23842c",
+      "sourceType": "community-wiki",
+      "status": "approved",
+      "reviewedBy": "manual-contact-sheet-review",
+      "reviewedAt": "2026-08-04",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "notes": "逐图目视核对为对应 NIKKE 角色的单人正面主立绘；角色编号与公开数据库姓名匹配，清晰完整，无水印、文本或 UI。 一次性上线前归档；生产环境不再请求第三方来源。"
+    },
+    {
+      "id": "c100",
+      "sourceFile": "assets/source/c100.png",
+      "sourceUrl": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c260_00.png",
+      "discoveryPage": "https://nikke-db.github.io/c.html?id=c260",
+      "officialHost": "raw.githubusercontent.com",
+      "sha256": "43d1077678bfbcfc290e98a13ae95ba94023fff5aa75277c3446800ed005a6ce",
+      "sourceType": "community-wiki",
+      "status": "approved",
+      "reviewedBy": "manual-contact-sheet-review",
+      "reviewedAt": "2026-08-04",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "notes": "逐图目视核对为对应 NIKKE 角色的单人正面主立绘；角色编号与公开数据库姓名匹配，清晰完整，无水印、文本或 UI。 一次性上线前归档；生产环境不再请求第三方来源。"
+    },
+    {
+      "id": "c101",
+      "sourceFile": "assets/source/c101.png",
+      "sourceUrl": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c352_00.png",
+      "discoveryPage": "https://nikke-db.github.io/c.html?id=c352",
+      "officialHost": "raw.githubusercontent.com",
+      "sha256": "5d96ade85c1b778350d363ea49dfbbe032006585e19d9ba40d6b5f2206583a41",
+      "sourceType": "community-wiki",
+      "status": "approved",
+      "reviewedBy": "manual-contact-sheet-review",
+      "reviewedAt": "2026-08-04",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "notes": "逐图目视核对为对应 NIKKE 角色的单人正面主立绘；角色编号与公开数据库姓名匹配，清晰完整，无水印、文本或 UI。 一次性上线前归档；生产环境不再请求第三方来源。"
+    },
+    {
+      "id": "c102",
+      "sourceFile": "assets/source/c102.jpg",
+      "sourceUrl": "https://img.gamewith.jp/article_tools/nikke/gacha/57_cz.jpg",
+      "discoveryPage": "https://gamewith.jp/nikke/article/show/370953",
+      "officialHost": "img.gamewith.jp",
+      "sha256": "d4fe3a1e924bbf3deb5581020c7fbc3046adeda4a2d16d8a4b3e7cea917e654a",
+      "sourceType": "community-wiki",
+      "status": "approved",
+      "reviewedBy": "manual-contact-sheet-review",
+      "reviewedAt": "2026-08-04",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "notes": "逐图目视核对为对应 NIKKE 角色的单人正面主立绘；角色编号与公开数据库姓名匹配，清晰完整，无水印、文本或 UI。 一次性上线前归档；生产环境不再请求第三方来源。"
+    },
+    {
+      "id": "c103",
+      "sourceFile": "assets/source/c103.png",
+      "sourceUrl": "https://patchwiki.biligame.com/images/nikke/e/e5/a13or3d2sd9ynq8o2q4yr39wceprizi.png",
+      "discoveryPage": "https://wiki.biligame.com/nikke/%E6%A8%B1%E8%8A%B1",
+      "officialHost": "patchwiki.biligame.com",
+      "sha256": "1f30530fc790597c25e17907acd72e827885c1e4e4736bd0e3a8c9eb6e269d9f",
+      "sourceType": "community-wiki",
+      "status": "approved",
+      "reviewedBy": "fumoe-one-time-import",
+      "reviewedAt": "2026-07-30",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "notes": "一次性上线前归档；生产环境不再请求第三方来源。"
+    },
+    {
+      "id": "c104",
+      "sourceFile": "assets/source/c104.png",
+      "sourceUrl": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c231_00.png",
+      "discoveryPage": "https://nikke-db.github.io/c.html?id=c231",
+      "officialHost": "raw.githubusercontent.com",
+      "sha256": "b0bce4fec82ea00581ec7749c80d7f010507e6c7c05bf57486ae8dacc3f05df8",
+      "sourceType": "community-wiki",
+      "status": "approved",
+      "reviewedBy": "manual-contact-sheet-review",
+      "reviewedAt": "2026-08-04",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "notes": "逐图目视核对为对应 NIKKE 角色的单人正面主立绘；角色编号与公开数据库姓名匹配，清晰完整，无水印、文本或 UI。 一次性上线前归档；生产环境不再请求第三方来源。"
+    },
+    {
+      "id": "c105",
+      "sourceFile": "assets/source/c105.png",
+      "sourceUrl": "https://patchwiki.biligame.com/images/zspms/a/a3/a2qrbegu5uuxkbqivzpu67124qkwj1k.png",
+      "discoveryPage": "https://wiki.biligame.com/zspms/%E9%9C%B2%E8%A5%BF%E4%BA%9A%C2%B7%E8%AA%93%E7%84%B0",
+      "officialHost": "patchwiki.biligame.com",
+      "sha256": "378dcd17f583e2c8b2332dce53d68a8b64cab966d8dedf7809cd67cfc2233a36",
+      "sourceType": "community-wiki",
+      "status": "approved",
+      "reviewedBy": "manual-contact-sheet-review",
+      "reviewedAt": "2026-08-04",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "notes": "逐图目视核对为对应构造体的单人主立绘；角色机体名称匹配，清晰完整，无水印、文字、UI 或其他角色。 一次性上线前归档；生产环境不再请求第三方来源。"
+    },
+    {
+      "id": "c106",
+      "sourceFile": "assets/source/c106.png",
+      "sourceUrl": "https://patchwiki.biligame.com/images/zspms/b/b7/ioapm11xp40z6626hn1pcol6notihec.png",
+      "discoveryPage": "https://wiki.biligame.com/zspms/%E4%B8%BD%E8%8A%99%C2%B7%E6%9E%81%E6%98%BC",
+      "officialHost": "patchwiki.biligame.com",
+      "sha256": "fdb495c350f6fd1f2b4130a002477bc3dc8b48d8417ac9644674824bad7a42d0",
+      "sourceType": "community-wiki",
+      "status": "approved",
+      "reviewedBy": "manual-contact-sheet-review",
+      "reviewedAt": "2026-08-04",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "notes": "逐图目视核对为对应构造体的单人主立绘；角色机体名称匹配，清晰完整，无水印、文字、UI 或其他角色。 一次性上线前归档；生产环境不再请求第三方来源。"
+    },
+    {
+      "id": "c107",
+      "sourceFile": "assets/source/c107.png",
+      "sourceUrl": "https://patchwiki.biligame.com/images/zspms/c/c3/91tcc8vo895brl5rsl8pa1t9cvcjuuh.png",
+      "discoveryPage": "https://wiki.biligame.com/zspms/%E8%96%87%E6%8B%89%C2%B7%E7%BB%AF%E8%80%80",
+      "officialHost": "patchwiki.biligame.com",
+      "sha256": "498b8292c28e2c7a55fd8094e520bec495904a311278598a184ea756bc83a02b",
+      "sourceType": "community-wiki",
+      "status": "approved",
+      "reviewedBy": "manual-contact-sheet-review",
+      "reviewedAt": "2026-08-04",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "notes": "逐图目视核对为对应构造体的单人主立绘；角色机体名称匹配，清晰完整，无水印、文字、UI 或其他角色。 一次性上线前归档；生产环境不再请求第三方来源。"
+    },
+    {
+      "id": "c108",
+      "sourceFile": "assets/source/c108.png",
+      "sourceUrl": "https://patchwiki.biligame.com/images/zspms/f/f1/jy855wl5akfr4kqtl6sms9cppx25b55.png",
+      "discoveryPage": "https://wiki.biligame.com/zspms/%E6%9B%B2%C2%B7%E5%90%AF%E6%98%8E",
+      "officialHost": "patchwiki.biligame.com",
+      "sha256": "6df443f4da0f877a46e985fb9b3b2dd0d99b0db2bc9d5a8305f3c2c6653a8b58",
+      "sourceType": "community-wiki",
+      "status": "approved",
+      "reviewedBy": "manual-contact-sheet-review",
+      "reviewedAt": "2026-08-04",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "notes": "逐图目视核对为对应构造体的单人主立绘；角色机体名称匹配，清晰完整，无水印、文字、UI 或其他角色。 一次性上线前归档；生产环境不再请求第三方来源。"
+    },
+    {
+      "id": "c109",
+      "sourceFile": "assets/source/c109.png",
+      "sourceUrl": "https://patchwiki.biligame.com/images/zspms/1/11/5vi0m5ciks9a2tvbzupxp2f7exgqe9z.png",
+      "discoveryPage": "https://wiki.biligame.com/zspms/%E8%B5%9B%E7%90%B3%E5%A8%9C%C2%B7%E5%B9%BB%E5%A5%8F",
+      "officialHost": "patchwiki.biligame.com",
+      "sha256": "1b1d83e22b9bf0c3db00dfa7dcd4584a2857b38796337253d5d3425fba3fe48e",
+      "sourceType": "community-wiki",
+      "status": "approved",
+      "reviewedBy": "manual-contact-sheet-review",
+      "reviewedAt": "2026-08-04",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "notes": "逐图目视核对为对应构造体的单人主立绘；角色机体名称匹配，清晰完整，无水印、文字、UI 或其他角色。 一次性上线前归档；生产环境不再请求第三方来源。"
+    },
+    {
+      "id": "c110",
+      "sourceFile": "assets/source/c110.png",
+      "sourceUrl": "https://patchwiki.biligame.com/images/zspms/2/23/tul1qiitb5kj126eze91y2o4cxurtdo.png",
+      "discoveryPage": "https://wiki.biligame.com/zspms/%E7%BD%97%E5%A1%9E%E5%A1%94%C2%B7%E6%9E%81%E9%94%8B",
+      "officialHost": "patchwiki.biligame.com",
+      "sha256": "18f4897a7effec8b29b481a2fa290a7e9a5bd49e61e7edbc88ad0d85291a9169",
+      "sourceType": "community-wiki",
+      "status": "approved",
+      "reviewedBy": "manual-contact-sheet-review",
+      "reviewedAt": "2026-08-04",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "notes": "逐图目视核对为对应构造体的单人主立绘；角色机体名称匹配，清晰完整，无水印、文字、UI 或其他角色。 一次性上线前归档；生产环境不再请求第三方来源。"
+    },
+    {
+      "id": "c111",
+      "sourceFile": "assets/source/c111.png",
+      "sourceUrl": "https://patchwiki.biligame.com/images/zspms/8/86/lzabulr4aa25cwaatd6gzqnlteztdnd.png",
+      "discoveryPage": "https://wiki.biligame.com/zspms/%E5%90%AB%E8%8B%B1%C2%B7%E6%AA%80%E5%BF%83",
+      "officialHost": "patchwiki.biligame.com",
+      "sha256": "94c78e4e83f20f470cfcde29b97d5dfaca16bf45b87489f79e95c124ca8b4635",
+      "sourceType": "community-wiki",
+      "status": "approved",
+      "reviewedBy": "manual-contact-sheet-review",
+      "reviewedAt": "2026-08-04",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "notes": "逐图目视核对为对应构造体的单人主立绘；角色机体名称匹配，清晰完整，无水印、文字、UI 或其他角色。 一次性上线前归档；生产环境不再请求第三方来源。"
+    },
+    {
+      "id": "c112",
+      "sourceFile": "assets/source/c112.png",
+      "sourceUrl": "https://patchwiki.biligame.com/images/zspms/a/aa/odeda5czqxpow3pc3vtdb84di6oneuo.png",
+      "discoveryPage": "https://wiki.biligame.com/zspms/21%E5%8F%B7%C2%B7%E6%A3%AE%E6%81%AF",
+      "officialHost": "patchwiki.biligame.com",
+      "sha256": "41c8f703dcf8df612c900599d7186cfd7fb6dd4c2e09e6a2c482e2bf924dde9a",
+      "sourceType": "community-wiki",
+      "status": "approved",
+      "reviewedBy": "manual-contact-sheet-review",
+      "reviewedAt": "2026-08-04",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "notes": "逐图目视核对为对应构造体的单人主立绘；角色机体名称匹配，清晰完整，无水印、文字、UI 或其他角色。 一次性上线前归档；生产环境不再请求第三方来源。"
+    },
+    {
+      "id": "c113",
+      "sourceFile": "assets/source/c113.png",
+      "sourceUrl": "https://patchwiki.biligame.com/images/zmd/0/0a/7oc2v8kqfgzaltfwm42og404l57kha4.png",
+      "discoveryPage": "https://wiki.biligame.com/zmd/%E9%99%88%E5%8D%83%E8%AF%AD",
+      "officialHost": "patchwiki.biligame.com",
+      "sha256": "1b7fef279813496d53946a9030b938cea07c45cc793b84824db1b4ba3c5b5509",
+      "sourceType": "community-wiki",
+      "status": "approved",
+      "reviewedBy": "manual-contact-sheet-review",
+      "reviewedAt": "2026-08-04",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "notes": "逐图目视核对为对应终末地干员的单人主立绘；角色身份与资料页匹配，清晰完整，无水印、文字、UI 或其他角色。 一次性上线前归档；生产环境不再请求第三方来源。"
+    },
+    {
+      "id": "c114",
+      "sourceFile": "assets/source/c114.png",
+      "sourceUrl": "https://patchwiki.biligame.com/images/zmd/c/ca/ofikhhgdqb65qfrhl42dm0fdd08fwpd.png",
+      "discoveryPage": "https://wiki.biligame.com/zmd/%E7%AE%A1%E7%90%86%E5%91%98",
+      "officialHost": "patchwiki.biligame.com",
+      "sha256": "964c0280ca1a8835f2aa62c7eb56a21bfa983d6fd8b070cc1249d3bb0846710d",
+      "sourceType": "community-wiki",
+      "status": "approved",
+      "reviewedBy": "manual-contact-sheet-review",
+      "reviewedAt": "2026-08-04",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "notes": "逐图目视核对为对应终末地干员的单人主立绘；角色身份与资料页匹配，清晰完整，无水印、文字、UI 或其他角色。 一次性上线前归档；生产环境不再请求第三方来源。"
+    },
+    {
+      "id": "c115",
+      "sourceFile": "assets/source/c115.png",
+      "sourceUrl": "https://patchwiki.biligame.com/images/zmd/0/0e/34s7b2cdxfts8o3mxcg5j4r2nijqtmg.png",
+      "discoveryPage": "https://wiki.biligame.com/zmd/%E8%B5%9B%E5%B8%8C",
+      "officialHost": "patchwiki.biligame.com",
+      "sha256": "fbc610c67fb63caa8f1579c34bcac49ad06b7794e4956e6f7f47a9a3415fdbcf",
+      "sourceType": "community-wiki",
+      "status": "approved",
+      "reviewedBy": "manual-contact-sheet-review",
+      "reviewedAt": "2026-08-04",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "notes": "逐图目视核对为对应终末地干员的单人主立绘；角色身份与资料页匹配，清晰完整，无水印、文字、UI 或其他角色。 一次性上线前归档；生产环境不再请求第三方来源。"
+    },
+    {
+      "id": "c116",
+      "sourceFile": "assets/source/c116.png",
+      "sourceUrl": "https://patchwiki.biligame.com/images/zmd/8/88/5bh5tuwy2oloxisg1jg9ezzfe9foupm.png",
+      "discoveryPage": "https://wiki.biligame.com/zmd/%E4%BD%A9%E4%B8%BD%E5%8D%A1",
+      "officialHost": "patchwiki.biligame.com",
+      "sha256": "3624afa4f32bba7c7bfa3e82ce32eaf3cd842e5a21d52be126ec741f5101efbe",
+      "sourceType": "community-wiki",
+      "status": "approved",
+      "reviewedBy": "manual-contact-sheet-review",
+      "reviewedAt": "2026-08-04",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "notes": "逐图目视核对为对应终末地干员的单人主立绘；角色身份与资料页匹配，清晰完整，无水印、文字、UI 或其他角色。 一次性上线前归档；生产环境不再请求第三方来源。"
+    },
+    {
+      "id": "c117",
+      "sourceFile": "assets/source/c117.jpg",
+      "sourceUrl": "https://dotgg.gg/wp-content/uploads/sites/16/2024/03/image-61-13-849x1024.jpg",
+      "discoveryPage": "https://endfield.gg/introduction/",
+      "officialHost": "dotgg.gg",
+      "sha256": "2615970c749be94bbc9b322e5ea6c65aac61dcecc65f8147583b8ed1d57e092b",
+      "sourceType": "community-wiki",
+      "status": "approved",
+      "reviewedBy": "manual-contact-sheet-review",
+      "reviewedAt": "2026-08-04",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "notes": "逐图目视核对为终末地技术测试版安洁莉娜的单人清晰角色图；页面正文明确对应身份，头部与关键服装特征完整，无水印或界面覆盖。含大面积文字的官方介绍海报候选已拒绝。 一次性上线前归档；生产环境不再请求第三方来源。"
+    },
+    {
+      "id": "c118",
+      "sourceFile": "assets/source/c118.png",
+      "sourceUrl": "https://patchwiki.biligame.com/images/zmd/5/5d/7flbuypbon8y8m55euyppps60t74ws3.png",
+      "discoveryPage": "https://wiki.biligame.com/zmd/%E9%BB%8E%E9%A3%8E",
+      "officialHost": "patchwiki.biligame.com",
+      "sha256": "d3b19fc16854828bf4e02d3c1bbda6082010ea268fb7637b59c32be27af2bc99",
+      "sourceType": "community-wiki",
+      "status": "approved",
+      "reviewedBy": "manual-contact-sheet-review",
+      "reviewedAt": "2026-08-04",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "notes": "逐图目视核对为对应终末地干员的单人主立绘；角色身份与资料页匹配，清晰完整，无水印、文字、UI 或其他角色。 一次性上线前归档；生产环境不再请求第三方来源。"
+    },
+    {
+      "id": "c119",
+      "sourceFile": "assets/source/c119.png",
+      "sourceUrl": "https://patchwiki.biligame.com/images/zmd/e/ee/loxtv8kxlkbxbw9s9s1uany6nbgvz1g.png",
+      "discoveryPage": "https://wiki.biligame.com/zmd/%E8%89%BE%E7%BB%B4%E6%96%87%E5%A8%9C",
+      "officialHost": "patchwiki.biligame.com",
+      "sha256": "4fe85d204ca0118c6bbfd7f6c880103d5058c3b53623e842f6afca4147584ac3",
+      "sourceType": "community-wiki",
+      "status": "approved",
+      "reviewedBy": "manual-contact-sheet-review",
+      "reviewedAt": "2026-08-04",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "notes": "逐图目视核对为对应终末地干员的单人主立绘；角色身份与资料页匹配，清晰完整，无水印、文字、UI 或其他角色。 一次性上线前归档；生产环境不再请求第三方来源。"
+    },
+    {
+      "id": "c120",
+      "sourceFile": "assets/source/c120.png",
+      "sourceUrl": "https://patchwiki.biligame.com/images/zmd/4/4f/opip8l1ltjgwul2ixz6s4eaihiwzs9k.png",
+      "discoveryPage": "https://wiki.biligame.com/zmd/%E4%BD%99%E7%83%AC",
+      "officialHost": "patchwiki.biligame.com",
+      "sha256": "422fcc1924f0689e3fc4cd9c5b62852270b92c6cb1c92e3051ac6fe40e3eccb6",
+      "sourceType": "community-wiki",
+      "status": "approved",
+      "reviewedBy": "manual-contact-sheet-review",
+      "reviewedAt": "2026-08-04",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "notes": "逐图目视核对为对应终末地干员的单人主立绘；角色身份与资料页匹配，清晰完整，无水印、文字、UI 或其他角色。 一次性上线前归档；生产环境不再请求第三方来源。"
+    },
+    {
+      "id": "c121",
+      "sourceFile": "assets/source/c121.webp",
+      "sourceUrl": "https://cdn.prydwen.gg/images/nte/characters/lacrimosa_full.webp",
+      "discoveryPage": "https://www.prydwen.gg/neverness-to-everness/characters/lacrimosa",
+      "officialHost": "cdn.prydwen.gg",
+      "sha256": "bc97677c57402ede4c1d728f295e8bd3b5a8dd9768cfc153b4ffe5a2c7cacca9",
+      "sourceType": "community-wiki",
+      "status": "approved",
+      "reviewedBy": "manual-contact-sheet-review",
+      "reviewedAt": "2026-08-04",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "notes": "逐图目视核对为《异环》安魂曲（Lacrimosa）的单人无字透明角色主图；黑白发、红色外套与角色档案一致，主体完整清晰，无水印、UI 或其他角色。横版图鉴背景及含大量文字的官方档案卡已拒绝。 一次性上线前归档；生产环境不再请求第三方来源。"
+    },
+    {
+      "id": "c122",
+      "sourceFile": "assets/source/c122.jpg",
+      "sourceUrl": "https://patchwiki.biligame.com/images/yh/2/26/5zz3rotr8o0s0u5khek0cukf8prm5cu.jpg",
+      "discoveryPage": "https://wiki.biligame.com/yh/%E5%A8%9C%E5%A8%9C%E8%8E%89",
+      "officialHost": "patchwiki.biligame.com",
+      "sha256": "465364562abd0ca10aab062378227da46005bc16ef93482345b0e95e7200ba83",
+      "sourceType": "community-wiki",
+      "status": "approved",
+      "reviewedBy": "fumoe-one-time-import",
+      "reviewedAt": "2026-07-30",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "notes": "一次性上线前归档；生产环境不再请求第三方来源。"
+    },
+    {
+      "id": "c123",
+      "sourceFile": "assets/source/c123.jpg",
+      "sourceUrl": "https://patchwiki.biligame.com/images/yh/b/b7/gmxy2j1occ1arz0lip6mqg42qk36q6f.jpg",
+      "discoveryPage": "https://wiki.biligame.com/yh/%E8%96%84%E8%8D%B7",
+      "officialHost": "patchwiki.biligame.com",
+      "sha256": "ed3c078f690a3f3e137e38fa27e4581689a98223a1f12f1c05eb080a69bbd1b1",
+      "sourceType": "community-wiki",
+      "status": "approved",
+      "reviewedBy": "fumoe-one-time-import",
+      "reviewedAt": "2026-07-30",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "notes": "一次性上线前归档；生产环境不再请求第三方来源。"
+    },
+    {
+      "id": "c124",
+      "sourceFile": "assets/source/c124.jpg",
+      "sourceUrl": "https://patchwiki.biligame.com/images/yh/2/2b/kx9g0cmcc1hx0v0wox5wb4xyxkrszzs.jpg",
+      "discoveryPage": "https://wiki.biligame.com/yh/%E6%97%A9%E9%9B%BE",
+      "officialHost": "patchwiki.biligame.com",
+      "sha256": "1a32c7838064b2de78802a93bfa70c8e274ea337e45f31586082eb75b8a9ed07",
+      "sourceType": "community-wiki",
+      "status": "approved",
+      "reviewedBy": "fumoe-one-time-import",
+      "reviewedAt": "2026-07-30",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "notes": "一次性上线前归档；生产环境不再请求第三方来源。"
+    },
+    {
+      "id": "c125",
+      "sourceFile": "assets/source/c125.webp",
+      "sourceUrl": "https://cdn.prydwen.gg/images/nte/characters/baicang_full.webp",
+      "discoveryPage": "https://www.prydwen.gg/neverness-to-everness/characters/baicang",
+      "officialHost": "cdn.prydwen.gg",
+      "sha256": "518b65db7b0ee44cbeefb1d84b7bf689cf156bca296a33fbbe61aa668956f68c",
+      "sourceType": "community-wiki",
+      "status": "approved",
+      "reviewedBy": "manual-contact-sheet-review",
+      "reviewedAt": "2026-08-04",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "notes": "逐图目视核对为《异环》白藏（Baicang）的单人透明全身主立绘；银白长发、白蓝制服与角色专页一致，头部和主体完整，无文字、水印、UI 或其他角色。 一次性上线前归档；生产环境不再请求第三方来源。"
+    },
+    {
+      "id": "c126",
+      "sourceFile": "assets/source/c126.webp",
+      "sourceUrl": "https://cdn.prydwen.gg/images/nte/characters/fadia_full.webp",
+      "discoveryPage": "https://www.prydwen.gg/neverness-to-everness/characters/fadia",
+      "officialHost": "cdn.prydwen.gg",
+      "sha256": "6b2dcc9fced33e6694cdc551ad90e9b62eadd0f24df00b06bde876f302f6ca64",
+      "sourceType": "community-wiki",
+      "status": "approved",
+      "reviewedBy": "manual-contact-sheet-review",
+      "reviewedAt": "2026-08-04",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "notes": "逐图目视核对为《异环》法帝娅（Fadia）的单人透明全身主立绘；紫发、眼镜与黑紫服装和角色专页一致，头部和主体完整，无文字、水印、UI 或其他角色。 一次性上线前归档；生产环境不再请求第三方来源。"
+    },
+    {
+      "id": "c127",
+      "sourceFile": "assets/source/c127.webp",
+      "sourceUrl": "https://cdn.prydwen.gg/images/nte/characters/hathor_full.webp",
+      "discoveryPage": "https://www.prydwen.gg/neverness-to-everness/characters/hathor",
+      "officialHost": "cdn.prydwen.gg",
+      "sha256": "b59baf08d833a8d413bc164e50b4705092c6e8fa7922aa4efe79e9a1c94b50cc",
+      "sourceType": "community-wiki",
+      "status": "approved",
+      "reviewedBy": "manual-contact-sheet-review",
+      "reviewedAt": "2026-08-04",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "notes": "逐图目视核对为《异环》哈索尔（Hathor）的单人透明全身主立绘；白发、黑白服装与羽翼和角色专页一致，头部和主体完整，无文字、水印、UI 或其他角色。 一次性上线前归档；生产环境不再请求第三方来源。"
+    },
+    {
+      "id": "c128",
+      "sourceFile": "assets/source/c128.webp",
+      "sourceUrl": "https://cdn.prydwen.gg/images/nte/characters/jiuyuan_full.webp",
+      "discoveryPage": "https://www.prydwen.gg/neverness-to-everness/characters/jiuyuan",
+      "officialHost": "cdn.prydwen.gg",
+      "sha256": "5cbe9beb847506c6391151da8bd46a355515c012f3ab5051c162f5ee32beb7e3",
+      "sourceType": "community-wiki",
+      "status": "approved",
+      "reviewedBy": "manual-contact-sheet-review",
+      "reviewedAt": "2026-08-04",
+      "focus": {
+        "x": 50,
+        "y": 48
+      },
+      "notes": "逐图目视核对为《异环》九原（Jiuyuan）的单人透明全身主立绘；灰发、宽檐帽与黑紫服装和角色专页一致，头部和主体完整，无文字、水印、UI 或其他角色。 一次性上线前归档；生产环境不再请求第三方来源。"
+    }
+  ]
+}

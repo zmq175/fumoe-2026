@@ -1,0 +1,1328 @@
+{
+  "generatedAt": "2026-07-30T21:07:17.824Z",
+  "method": "mediawiki-batched-imageinfo",
+  "candidates": [
+    {
+      "id": "c001",
+      "name": "芙宁娜",
+      "game": "原神",
+      "sourceType": "community-wiki",
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c002",
+      "name": "雷电将军",
+      "game": "原神",
+      "sourceType": "community-wiki",
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c003",
+      "name": "胡桃",
+      "game": "原神",
+      "sourceType": "community-wiki",
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c004",
+      "name": "纳西妲",
+      "game": "原神",
+      "sourceType": "community-wiki",
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c005",
+      "name": "夜兰",
+      "game": "原神",
+      "sourceType": "community-wiki",
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c006",
+      "name": "神里绫华",
+      "game": "原神",
+      "sourceType": "community-wiki",
+      "candidates": [
+        {
+          "url": "https://patchwiki.biligame.com/images/ys/7/7c/ly06duqmzi7aclhdyenj02u1w07aj4q.png",
+          "sourcePage": "https://wiki.biligame.com/ys/%E7%A5%9E%E9%87%8C%E7%BB%AB%E5%8D%8E",
+          "fileTitle": "文件:神里绫华立绘2.png",
+          "width": 750,
+          "height": 1899,
+          "mime": "image/jpeg",
+          "score": 500
+        },
+        {
+          "url": "https://patchwiki.biligame.com/images/ys/2/2d/5t7bdjldztvz7uws8rlc7qszqmklj5k.png",
+          "sourcePage": "https://wiki.biligame.com/ys/%E7%A5%9E%E9%87%8C%E7%BB%AB%E5%8D%8E",
+          "fileTitle": "文件:神里绫华抽卡立绘.png",
+          "width": 2048,
+          "height": 1024,
+          "mime": "image/png",
+          "score": 440
+        },
+        {
+          "url": "https://patchwiki.biligame.com/images/ys/1/1b/qpsc6k80c4fl9xklo0qxy1mznquwa0r.png",
+          "sourcePage": "https://wiki.biligame.com/ys/%E7%A5%9E%E9%87%8C%E7%BB%AB%E5%8D%8E",
+          "fileTitle": "文件:神里绫华立绘.png",
+          "width": 2250,
+          "height": 2250,
+          "mime": "image/png",
+          "score": 440
+        }
+      ],
+      "recommended": {
+        "url": "https://patchwiki.biligame.com/images/ys/7/7c/ly06duqmzi7aclhdyenj02u1w07aj4q.png",
+        "sourcePage": "https://wiki.biligame.com/ys/%E7%A5%9E%E9%87%8C%E7%BB%AB%E5%8D%8E",
+        "fileTitle": "文件:神里绫华立绘2.png",
+        "width": 750,
+        "height": 1899,
+        "mime": "image/jpeg",
+        "score": 500
+      }
+    },
+    {
+      "id": "c007",
+      "name": "妮露",
+      "game": "原神",
+      "sourceType": "community-wiki",
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c008",
+      "name": "申鹤",
+      "game": "原神",
+      "sourceType": "community-wiki",
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c009",
+      "name": "宵宫",
+      "game": "原神",
+      "sourceType": "community-wiki",
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c010",
+      "name": "克洛琳德",
+      "game": "原神",
+      "sourceType": "community-wiki",
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c011",
+      "name": "阿蕾奇诺",
+      "game": "原神",
+      "sourceType": "community-wiki",
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c012",
+      "name": "闲云",
+      "game": "原神",
+      "sourceType": "community-wiki",
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c013",
+      "name": "千织",
+      "game": "原神",
+      "sourceType": "community-wiki",
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c014",
+      "name": "希格雯",
+      "game": "原神",
+      "sourceType": "community-wiki",
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c015",
+      "name": "玛拉妮",
+      "game": "原神",
+      "sourceType": "community-wiki",
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c016",
+      "name": "茜特菈莉",
+      "game": "原神",
+      "sourceType": "community-wiki",
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c017",
+      "name": "卡芙卡",
+      "game": "崩坏：星穹铁道",
+      "sourceType": "community-wiki",
+      "candidates": [
+        {
+          "url": "https://patchwiki.biligame.com/images/sr/4/40/ohzhieftz25z05ftzetqds1km8cph4x.png",
+          "sourcePage": "https://wiki.biligame.com/sr/%E5%8D%A1%E8%8A%99%E5%8D%A1",
+          "fileTitle": "文件:卡芙卡立绘.png",
+          "width": 2048,
+          "height": 2048,
+          "mime": "image/png",
+          "score": 440
+        },
+        {
+          "url": "https://patchwiki.biligame.com/images/sr/4/4d/nknfqbj6ig88564ivr3q079qh960c1b.png",
+          "sourcePage": "https://wiki.biligame.com/sr/%E5%8D%A1%E8%8A%99%E5%8D%A1",
+          "fileTitle": "文件:卡芙卡立绘2.png",
+          "width": 1920,
+          "height": 1080,
+          "mime": "image/jpeg",
+          "score": 440
+        }
+      ],
+      "recommended": {
+        "url": "https://patchwiki.biligame.com/images/sr/4/40/ohzhieftz25z05ftzetqds1km8cph4x.png",
+        "sourcePage": "https://wiki.biligame.com/sr/%E5%8D%A1%E8%8A%99%E5%8D%A1",
+        "fileTitle": "文件:卡芙卡立绘.png",
+        "width": 2048,
+        "height": 2048,
+        "mime": "image/png",
+        "score": 440
+      }
+    },
+    {
+      "id": "c018",
+      "name": "黄泉",
+      "game": "崩坏：星穹铁道",
+      "sourceType": "community-wiki",
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c019",
+      "name": "流萤",
+      "game": "崩坏：星穹铁道",
+      "sourceType": "community-wiki",
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c020",
+      "name": "镜流",
+      "game": "崩坏：星穹铁道",
+      "sourceType": "community-wiki",
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c021",
+      "name": "三月七",
+      "game": "崩坏：星穹铁道",
+      "sourceType": "community-wiki",
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c022",
+      "name": "符玄",
+      "game": "崩坏：星穹铁道",
+      "sourceType": "community-wiki",
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c023",
+      "name": "黑天鹅",
+      "game": "崩坏：星穹铁道",
+      "sourceType": "community-wiki",
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c024",
+      "name": "银狼",
+      "game": "崩坏：星穹铁道",
+      "sourceType": "community-wiki",
+      "candidates": [
+        {
+          "url": "https://patchwiki.biligame.com/images/sr/3/3f/oy6o9fm6o0rrcwzs9gvgc4rfhvejcts.png",
+          "sourcePage": "https://wiki.biligame.com/sr/%E9%93%B6%E7%8B%BC",
+          "fileTitle": "文件:银狼立绘.png",
+          "width": 2048,
+          "height": 2048,
+          "mime": "image/png",
+          "score": 440
+        },
+        {
+          "url": "https://patchwiki.biligame.com/images/sr/e/ea/mavqad0rxp6zttalka56tspnd1t9qi8.png",
+          "sourcePage": "https://wiki.biligame.com/sr/%E9%93%B6%E7%8B%BC",
+          "fileTitle": "文件:银狼立绘2.png",
+          "width": 1920,
+          "height": 1080,
+          "mime": "image/jpeg",
+          "score": 440
+        }
+      ],
+      "recommended": {
+        "url": "https://patchwiki.biligame.com/images/sr/3/3f/oy6o9fm6o0rrcwzs9gvgc4rfhvejcts.png",
+        "sourcePage": "https://wiki.biligame.com/sr/%E9%93%B6%E7%8B%BC",
+        "fileTitle": "文件:银狼立绘.png",
+        "width": 2048,
+        "height": 2048,
+        "mime": "image/png",
+        "score": 440
+      }
+    },
+    {
+      "id": "c025",
+      "name": "阮·梅",
+      "game": "崩坏：星穹铁道",
+      "sourceType": "community-wiki",
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c026",
+      "name": "花火",
+      "game": "崩坏：星穹铁道",
+      "sourceType": "community-wiki",
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c027",
+      "name": "知更鸟",
+      "game": "崩坏：星穹铁道",
+      "sourceType": "community-wiki",
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c028",
+      "name": "翡翠",
+      "game": "崩坏：星穹铁道",
+      "sourceType": "community-wiki",
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c029",
+      "name": "飞霄",
+      "game": "崩坏：星穹铁道",
+      "sourceType": "community-wiki",
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c030",
+      "name": "灵砂",
+      "game": "崩坏：星穹铁道",
+      "sourceType": "community-wiki",
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c031",
+      "name": "大黑塔",
+      "game": "崩坏：星穹铁道",
+      "sourceType": "community-wiki",
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c032",
+      "name": "遐蝶",
+      "game": "崩坏：星穹铁道",
+      "sourceType": "community-wiki",
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c033",
+      "name": "艾莲",
+      "game": "绝区零",
+      "sourceType": "community-wiki",
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c034",
+      "name": "朱鸢",
+      "game": "绝区零",
+      "sourceType": "community-wiki",
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c035",
+      "name": "简",
+      "game": "绝区零",
+      "sourceType": "community-wiki",
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c036",
+      "name": "耀嘉音",
+      "game": "绝区零",
+      "sourceType": "community-wiki",
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c037",
+      "name": "伊芙琳",
+      "game": "绝区零",
+      "sourceType": "community-wiki",
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c038",
+      "name": "格莉丝",
+      "game": "绝区零",
+      "sourceType": "community-wiki",
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c039",
+      "name": "妮可",
+      "game": "绝区零",
+      "sourceType": "community-wiki",
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c040",
+      "name": "雅",
+      "game": "绝区零",
+      "sourceType": "community-wiki",
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c041",
+      "name": "青衣",
+      "game": "绝区零",
+      "sourceType": "community-wiki",
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c042",
+      "name": "露西",
+      "game": "绝区零",
+      "sourceType": "community-wiki",
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c043",
+      "name": "派派",
+      "game": "绝区零",
+      "sourceType": "community-wiki",
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c044",
+      "name": "可琳",
+      "game": "绝区零",
+      "sourceType": "community-wiki",
+      "candidates": [
+        {
+          "url": "https://patchwiki.biligame.com/images/zzz/2/2f/771weh4j6k5we5dt69csfem3r659b3s.png",
+          "sourcePage": "https://wiki.biligame.com/zzz/%E5%8F%AF%E7%90%B3",
+          "fileTitle": "文件:角色立绘-可琳-官方介绍.png",
+          "width": 1440,
+          "height": 1920,
+          "mime": "image/png",
+          "score": 500
+        },
+        {
+          "url": "https://patchwiki.biligame.com/images/zzz/c/c3/g2jka2mr2rway0ou0fnf6jtfqflq4t3.png",
+          "sourcePage": "https://wiki.biligame.com/zzz/%E5%8F%AF%E7%90%B3",
+          "fileTitle": "文件:角色立绘-可琳.png",
+          "width": 833,
+          "height": 1079,
+          "mime": "image/png",
+          "score": 500
+        }
+      ],
+      "recommended": {
+        "url": "https://patchwiki.biligame.com/images/zzz/2/2f/771weh4j6k5we5dt69csfem3r659b3s.png",
+        "sourcePage": "https://wiki.biligame.com/zzz/%E5%8F%AF%E7%90%B3",
+        "fileTitle": "文件:角色立绘-可琳-官方介绍.png",
+        "width": 1440,
+        "height": 1920,
+        "mime": "image/png",
+        "score": 500
+      }
+    },
+    {
+      "id": "c045",
+      "name": "苍角",
+      "game": "绝区零",
+      "sourceType": "community-wiki",
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c046",
+      "name": "柏妮思",
+      "game": "绝区零",
+      "sourceType": "community-wiki",
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c047",
+      "name": "扳机",
+      "game": "绝区零",
+      "sourceType": "community-wiki",
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c048",
+      "name": "仪玄",
+      "game": "绝区零",
+      "sourceType": "community-wiki",
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c049",
+      "name": "长离",
+      "game": "鸣潮",
+      "sourceType": "community-wiki",
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c050",
+      "name": "椿",
+      "game": "鸣潮",
+      "sourceType": "community-wiki",
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c051",
+      "name": "守岸人",
+      "game": "鸣潮",
+      "sourceType": "community-wiki",
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c052",
+      "name": "今汐",
+      "game": "鸣潮",
+      "sourceType": "community-wiki",
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c053",
+      "name": "卡提希娅",
+      "game": "鸣潮",
+      "sourceType": "community-wiki",
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c054",
+      "name": "珂莱塔",
+      "game": "鸣潮",
+      "sourceType": "community-wiki",
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c055",
+      "name": "吟霖",
+      "game": "鸣潮",
+      "sourceType": "community-wiki",
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c056",
+      "name": "秧秧",
+      "game": "鸣潮",
+      "sourceType": "community-wiki",
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c057",
+      "name": "鉴心",
+      "game": "鸣潮",
+      "sourceType": "community-wiki",
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c058",
+      "name": "散华",
+      "game": "鸣潮",
+      "sourceType": "community-wiki",
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c059",
+      "name": "白芷",
+      "game": "鸣潮",
+      "sourceType": "community-wiki",
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c060",
+      "name": "丹瑾",
+      "game": "鸣潮",
+      "sourceType": "community-wiki",
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c061",
+      "name": "桃祈",
+      "game": "鸣潮",
+      "sourceType": "community-wiki",
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c062",
+      "name": "菲比",
+      "game": "鸣潮",
+      "sourceType": "community-wiki",
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c063",
+      "name": "赞妮",
+      "game": "鸣潮",
+      "sourceType": "community-wiki",
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c064",
+      "name": "露帕",
+      "game": "鸣潮",
+      "sourceType": "community-wiki",
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c065",
+      "name": "企业",
+      "game": "碧蓝航线",
+      "sourceType": "community-wiki",
+      "candidates": [
+        {
+          "url": "https://patchwiki.biligame.com/images/blhx/e/e8/5wgz7igqvcpiwdy5tf5vqxvvoie8ib3.png",
+          "sourcePage": "https://wiki.biligame.com/blhx/%E4%BC%81%E4%B8%9A",
+          "fileTitle": "文件:企业Q版立绘.png",
+          "width": 150,
+          "height": 150,
+          "mime": "image/png",
+          "score": 440
+        },
+        {
+          "url": "https://patchwiki.biligame.com/images/blhx/d/dd/0ui39rra80t0mcvunf77wbuzh848j7g.jpg",
+          "sourcePage": "https://wiki.biligame.com/blhx/%E4%BC%81%E4%B8%9A",
+          "fileTitle": "文件:企业换装8立绘废案.jpg",
+          "width": 2200,
+          "height": 2200,
+          "mime": "image/jpeg",
+          "score": 440
+        },
+        {
+          "url": "https://patchwiki.biligame.com/images/blhx/2/25/9p6ecvrbxb3xrysr0nfpgt8lu84bdcw.jpg",
+          "sourcePage": "https://wiki.biligame.com/blhx/%E4%BC%81%E4%B8%9A",
+          "fileTitle": "文件:企业换装8立绘设定.jpg",
+          "width": 4096,
+          "height": 3724,
+          "mime": "image/jpeg",
+          "score": 440
+        }
+      ],
+      "recommended": {
+        "url": "https://patchwiki.biligame.com/images/blhx/e/e8/5wgz7igqvcpiwdy5tf5vqxvvoie8ib3.png",
+        "sourcePage": "https://wiki.biligame.com/blhx/%E4%BC%81%E4%B8%9A",
+        "fileTitle": "文件:企业Q版立绘.png",
+        "width": 150,
+        "height": 150,
+        "mime": "image/png",
+        "score": 440
+      }
+    },
+    {
+      "id": "c066",
+      "name": "能代",
+      "game": "碧蓝航线",
+      "sourceType": "community-wiki",
+      "candidates": [
+        {
+          "url": "https://patchwiki.biligame.com/images/blhx/6/61/7lqckk6pnluya8sns5bp3zeuf7y9z3d.png",
+          "sourcePage": "https://wiki.biligame.com/blhx/%E8%83%BD%E4%BB%A3",
+          "fileTitle": "文件:能代Q版立绘.png",
+          "width": 123,
+          "height": 150,
+          "mime": "image/png",
+          "score": 500
+        },
+        {
+          "url": "https://patchwiki.biligame.com/images/blhx/2/2d/td3lgyav6scdx5jnqjhrmvrf5fv5yte.jpg",
+          "sourcePage": "https://wiki.biligame.com/blhx/%E8%83%BD%E4%BB%A3",
+          "fileTitle": "文件:能代立绘.jpg",
+          "width": 1000,
+          "height": 1500,
+          "mime": "image/jpeg",
+          "score": 500
+        }
+      ],
+      "recommended": {
+        "url": "https://patchwiki.biligame.com/images/blhx/6/61/7lqckk6pnluya8sns5bp3zeuf7y9z3d.png",
+        "sourcePage": "https://wiki.biligame.com/blhx/%E8%83%BD%E4%BB%A3",
+        "fileTitle": "文件:能代Q版立绘.png",
+        "width": 123,
+        "height": 150,
+        "mime": "image/png",
+        "score": 500
+      }
+    },
+    {
+      "id": "c067",
+      "name": "大凤",
+      "game": "碧蓝航线",
+      "sourceType": "community-wiki",
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c068",
+      "name": "圣路易斯",
+      "game": "碧蓝航线",
+      "sourceType": "community-wiki",
+      "candidates": [
+        {
+          "url": "https://patchwiki.biligame.com/images/blhx/f/fb/0ugc2ysi0guk8asthq2prbdgc1smw64.png",
+          "sourcePage": "https://wiki.biligame.com/blhx/%E5%9C%A3%E8%B7%AF%E6%98%93%E6%96%AF",
+          "fileTitle": "文件:圣路易斯Q版立绘.png",
+          "width": 134,
+          "height": 150,
+          "mime": "image/png",
+          "score": 500
+        },
+        {
+          "url": "https://patchwiki.biligame.com/images/blhx/a/a0/me5ax30oed3om48px07tl899nmbhywl.jpg",
+          "sourcePage": "https://wiki.biligame.com/blhx/%E5%9C%A3%E8%B7%AF%E6%98%93%E6%96%AF",
+          "fileTitle": "文件:圣路易斯立绘.jpg",
+          "width": 350,
+          "height": 525,
+          "mime": "image/jpeg",
+          "score": 500
+        }
+      ],
+      "recommended": {
+        "url": "https://patchwiki.biligame.com/images/blhx/f/fb/0ugc2ysi0guk8asthq2prbdgc1smw64.png",
+        "sourcePage": "https://wiki.biligame.com/blhx/%E5%9C%A3%E8%B7%AF%E6%98%93%E6%96%AF",
+        "fileTitle": "文件:圣路易斯Q版立绘.png",
+        "width": 134,
+        "height": 150,
+        "mime": "image/png",
+        "score": 500
+      }
+    },
+    {
+      "id": "c069",
+      "name": "信浓",
+      "game": "碧蓝航线",
+      "sourceType": "community-wiki",
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c070",
+      "name": "可畏",
+      "game": "碧蓝航线",
+      "sourceType": "community-wiki",
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c071",
+      "name": "花园",
+      "game": "碧蓝航线",
+      "sourceType": "community-wiki",
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c072",
+      "name": "武藏",
+      "game": "碧蓝航线",
+      "sourceType": "community-wiki",
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c073",
+      "name": "阿尔萨斯",
+      "game": "碧蓝航线",
+      "sourceType": "community-wiki",
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c074",
+      "name": "贝尔法斯特",
+      "game": "碧蓝航线",
+      "sourceType": "community-wiki",
+      "candidates": [
+        {
+          "url": "https://patchwiki.biligame.com/images/blhx/4/42/eeo7007z941756616857bijv30sufja.jpg",
+          "sourcePage": "https://wiki.biligame.com/blhx/%E8%B4%9D%E5%B0%94%E6%B3%95%E6%96%AF%E7%89%B9",
+          "fileTitle": "文件:贝尔法斯特立绘.jpg",
+          "width": 350,
+          "height": 525,
+          "mime": "image/jpeg",
+          "score": 500
+        },
+        {
+          "url": "https://patchwiki.biligame.com/images/blhx/2/21/9wsz0eyw2bytrebj2jvzqontnx2h7ci.png",
+          "sourcePage": "https://wiki.biligame.com/blhx/%E8%B4%9D%E5%B0%94%E6%B3%95%E6%96%AF%E7%89%B9",
+          "fileTitle": "文件:贝尔法斯特Q版立绘.png",
+          "width": 150,
+          "height": 150,
+          "mime": "image/png",
+          "score": 440
+        }
+      ],
+      "recommended": {
+        "url": "https://patchwiki.biligame.com/images/blhx/4/42/eeo7007z941756616857bijv30sufja.jpg",
+        "sourcePage": "https://wiki.biligame.com/blhx/%E8%B4%9D%E5%B0%94%E6%B3%95%E6%96%AF%E7%89%B9",
+        "fileTitle": "文件:贝尔法斯特立绘.jpg",
+        "width": 350,
+        "height": 525,
+        "mime": "image/jpeg",
+        "score": 500
+      }
+    },
+    {
+      "id": "c075",
+      "name": "阿罗娜",
+      "game": "蔚蓝档案",
+      "sourceType": "community-wiki",
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c076",
+      "name": "圣园未花",
+      "game": "蔚蓝档案",
+      "sourceType": "community-wiki",
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c077",
+      "name": "天雨亚子",
+      "game": "蔚蓝档案",
+      "sourceType": "community-wiki",
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c078",
+      "name": "砂狼白子",
+      "game": "蔚蓝档案",
+      "sourceType": "community-wiki",
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c079",
+      "name": "陆八魔爱露",
+      "game": "蔚蓝档案",
+      "sourceType": "community-wiki",
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c080",
+      "name": "空崎日奈",
+      "game": "蔚蓝档案",
+      "sourceType": "community-wiki",
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c081",
+      "name": "天童爱丽丝",
+      "game": "蔚蓝档案",
+      "sourceType": "community-wiki",
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c082",
+      "name": "伊落玛丽",
+      "game": "蔚蓝档案",
+      "sourceType": "community-wiki",
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c083",
+      "name": "一之濑明日奈",
+      "game": "蔚蓝档案",
+      "sourceType": "community-wiki",
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c084",
+      "name": "早濑优香",
+      "game": "蔚蓝档案",
+      "sourceType": "community-wiki",
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c085",
+      "name": "阿尔托莉雅·潘德拉贡",
+      "game": "Fate/Grand Order",
+      "sourceType": "community-wiki",
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c086",
+      "name": "玛修·基列莱特",
+      "game": "Fate/Grand Order",
+      "sourceType": "community-wiki",
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c087",
+      "name": "斯卡哈",
+      "game": "Fate/Grand Order",
+      "sourceType": "community-wiki",
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c088",
+      "name": "伊什塔尔",
+      "game": "Fate/Grand Order",
+      "sourceType": "community-wiki",
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c089",
+      "name": "摩根",
+      "game": "Fate/Grand Order",
+      "sourceType": "community-wiki",
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c090",
+      "name": "尼禄·克劳狄乌斯",
+      "game": "Fate/Grand Order",
+      "sourceType": "community-wiki",
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c091",
+      "name": "贞德",
+      "game": "Fate/Grand Order",
+      "sourceType": "community-wiki",
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c092",
+      "name": "梅林",
+      "game": "Fate/Grand Order",
+      "sourceType": "community-wiki",
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c093",
+      "name": "BB",
+      "game": "Fate/Grand Order",
+      "sourceType": "community-wiki",
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c094",
+      "name": "两仪式",
+      "game": "Fate/Grand Order",
+      "sourceType": "community-wiki",
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c095",
+      "name": "阿妮斯",
+      "game": "胜利女神：妮姬",
+      "sourceType": "community-wiki",
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c096",
+      "name": "红莲",
+      "game": "胜利女神：妮姬",
+      "sourceType": "community-wiki",
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c097",
+      "name": "桃乐丝",
+      "game": "胜利女神：妮姬",
+      "sourceType": "community-wiki",
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c098",
+      "name": "拉毗",
+      "game": "胜利女神：妮姬",
+      "sourceType": "community-wiki",
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c099",
+      "name": "爱丽丝",
+      "game": "胜利女神：妮姬",
+      "sourceType": "community-wiki",
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c100",
+      "name": "神罚",
+      "game": "胜利女神：妮姬",
+      "sourceType": "community-wiki",
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c101",
+      "name": "海伦",
+      "game": "胜利女神：妮姬",
+      "sourceType": "community-wiki",
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c102",
+      "name": "诺伊斯",
+      "game": "胜利女神：妮姬",
+      "sourceType": "community-wiki",
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c103",
+      "name": "樱花",
+      "game": "胜利女神：妮姬",
+      "sourceType": "community-wiki",
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c104",
+      "name": "伊莎贝尔",
+      "game": "胜利女神：妮姬",
+      "sourceType": "community-wiki",
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c105",
+      "name": "露西亚",
+      "game": "战双帕弥什",
+      "sourceType": "community-wiki",
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c106",
+      "name": "丽芙",
+      "game": "战双帕弥什",
+      "sourceType": "community-wiki",
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c107",
+      "name": "薇拉",
+      "game": "战双帕弥什",
+      "sourceType": "community-wiki",
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c108",
+      "name": "曲",
+      "game": "战双帕弥什",
+      "sourceType": "community-wiki",
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c109",
+      "name": "赛琳娜",
+      "game": "战双帕弥什",
+      "sourceType": "community-wiki",
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c110",
+      "name": "罗塞塔",
+      "game": "战双帕弥什",
+      "sourceType": "community-wiki",
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c111",
+      "name": "含英",
+      "game": "战双帕弥什",
+      "sourceType": "community-wiki",
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c112",
+      "name": "21号",
+      "game": "战双帕弥什",
+      "sourceType": "community-wiki",
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c113",
+      "name": "陈千语",
+      "game": "明日方舟：终末地",
+      "sourceType": "community-wiki",
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c114",
+      "name": "管理员",
+      "game": "明日方舟：终末地",
+      "sourceType": "community-wiki",
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c115",
+      "name": "赛希",
+      "game": "明日方舟：终末地",
+      "sourceType": "community-wiki",
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c116",
+      "name": "佩丽卡",
+      "game": "明日方舟：终末地",
+      "sourceType": "community-wiki",
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c117",
+      "name": "安洁莉娜",
+      "game": "明日方舟：终末地",
+      "sourceType": "community-wiki",
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c118",
+      "name": "黎风",
+      "game": "明日方舟：终末地",
+      "sourceType": "community-wiki",
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c119",
+      "name": "艾维文娜",
+      "game": "明日方舟：终末地",
+      "sourceType": "community-wiki",
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c120",
+      "name": "余烬",
+      "game": "明日方舟：终末地",
+      "sourceType": "community-wiki",
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c121",
+      "name": "安魂曲",
+      "game": "异环",
+      "sourceType": "community-wiki",
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c122",
+      "name": "娜娜莉",
+      "game": "异环",
+      "sourceType": "community-wiki",
+      "candidates": [
+        {
+          "url": "https://patchwiki.biligame.com/images/yh/2/26/5zz3rotr8o0s0u5khek0cukf8prm5cu.jpg",
+          "sourcePage": "https://wiki.biligame.com/yh/%E5%A8%9C%E5%A8%9C%E8%8E%89",
+          "fileTitle": "文件:娜娜莉立绘.jpg",
+          "width": 2160,
+          "height": 2855,
+          "mime": "image/png",
+          "score": 500
+        }
+      ],
+      "recommended": {
+        "url": "https://patchwiki.biligame.com/images/yh/2/26/5zz3rotr8o0s0u5khek0cukf8prm5cu.jpg",
+        "sourcePage": "https://wiki.biligame.com/yh/%E5%A8%9C%E5%A8%9C%E8%8E%89",
+        "fileTitle": "文件:娜娜莉立绘.jpg",
+        "width": 2160,
+        "height": 2855,
+        "mime": "image/png",
+        "score": 500
+      }
+    },
+    {
+      "id": "c123",
+      "name": "薄荷",
+      "game": "异环",
+      "sourceType": "community-wiki",
+      "candidates": [
+        {
+          "url": "https://patchwiki.biligame.com/images/yh/b/b7/gmxy2j1occ1arz0lip6mqg42qk36q6f.jpg",
+          "sourcePage": "https://wiki.biligame.com/yh/%E8%96%84%E8%8D%B7",
+          "fileTitle": "文件:薄荷立绘.jpg",
+          "width": 2160,
+          "height": 2873,
+          "mime": "image/png",
+          "score": 500
+        }
+      ],
+      "recommended": {
+        "url": "https://patchwiki.biligame.com/images/yh/b/b7/gmxy2j1occ1arz0lip6mqg42qk36q6f.jpg",
+        "sourcePage": "https://wiki.biligame.com/yh/%E8%96%84%E8%8D%B7",
+        "fileTitle": "文件:薄荷立绘.jpg",
+        "width": 2160,
+        "height": 2873,
+        "mime": "image/png",
+        "score": 500
+      }
+    },
+    {
+      "id": "c124",
+      "name": "早雾",
+      "game": "异环",
+      "sourceType": "community-wiki",
+      "candidates": [
+        {
+          "url": "https://patchwiki.biligame.com/images/yh/2/2b/kx9g0cmcc1hx0v0wox5wb4xyxkrszzs.jpg",
+          "sourcePage": "https://wiki.biligame.com/yh/%E6%97%A9%E9%9B%BE",
+          "fileTitle": "文件:早雾立绘.jpg",
+          "width": 2160,
+          "height": 2560,
+          "mime": "image/png",
+          "score": 500
+        }
+      ],
+      "recommended": {
+        "url": "https://patchwiki.biligame.com/images/yh/2/2b/kx9g0cmcc1hx0v0wox5wb4xyxkrszzs.jpg",
+        "sourcePage": "https://wiki.biligame.com/yh/%E6%97%A9%E9%9B%BE",
+        "fileTitle": "文件:早雾立绘.jpg",
+        "width": 2160,
+        "height": 2560,
+        "mime": "image/png",
+        "score": 500
+      }
+    },
+    {
+      "id": "c125",
+      "name": "白羽",
+      "game": "异环",
+      "sourceType": "community-wiki",
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c126",
+      "name": "塔塔",
+      "game": "异环",
+      "sourceType": "community-wiki",
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c127",
+      "name": "兰",
+      "game": "异环",
+      "sourceType": "community-wiki",
+      "candidates": [],
+      "recommended": null
+    },
+    {
+      "id": "c128",
+      "name": "郁离",
+      "game": "异环",
+      "sourceType": "community-wiki",
+      "candidates": [],
+      "recommended": null
+    }
+  ],
+  "failures": [
+    {
+      "game": "Fate/Grand Order",
+      "reason": "Unexpected token '<', \"<link rel=\"... is not valid JSON"
+    },
+    {
+      "game": "明日方舟：终末地",
+      "reason": "Unexpected token '<', \"<link rel=\"... is not valid JSON"
+    }
+  ]
+}

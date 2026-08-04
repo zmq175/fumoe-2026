@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "府萌官方角色立绘审核清单",
+  "type": "object",
+  "required": ["version", "characters"],
+  "properties": {
+    "version": { "const": 1 },
+    "characters": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "sourceFile", "sourceUrl", "officialHost", "status", "reviewedBy", "reviewedAt"],
+        "properties": {
+          "id": { "type": "string", "pattern": "^c[0-9]{3}$" },
+          "sourceFile": { "type": "string", "pattern": "^assets/source/c[0-9]{3}\\.(png|jpe?g|webp)$" },
+          "sourceUrl": { "type": "string", "format": "uri" },
+          "discoveryPage": { "type": "string", "format": "uri" },
+          "officialHost": { "type": "string", "minLength": 3 },
+          "sourceType": { "enum": ["official", "community-wiki"] },
+          "sha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+          "status": { "enum": ["pending", "approved", "rejected"] },
+          "reviewedBy": { "type": "string", "minLength": 1 },
+          "reviewedAt": { "type": "string", "format": "date" },
+          "focus": {
+            "type": "object",
+            "properties": { "x": { "type": "integer", "minimum": 0, "maximum": 100 }, "y": { "type": "integer", "minimum": 0, "maximum": 100 } },
+            "additionalProperties": false
+          },
+          "notes": { "type": "string" }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

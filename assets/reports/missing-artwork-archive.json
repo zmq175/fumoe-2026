@@ -1,0 +1,117 @@
+{
+  "generatedAt": "2026-08-04T07:32:52.466Z",
+  "archived": [
+    {
+      "id": "c065",
+      "name": "企业",
+      "candidate": 1,
+      "sourceFile": "assets/source/c065.jpg",
+      "width": 1000,
+      "height": 1500
+    },
+    {
+      "id": "c066",
+      "name": "能代",
+      "candidate": 1,
+      "sourceFile": "assets/source/c066.jpg",
+      "width": 1000,
+      "height": 1500
+    },
+    {
+      "id": "c067",
+      "name": "大凤",
+      "candidate": 1,
+      "sourceFile": "assets/source/c067.jpg",
+      "width": 1000,
+      "height": 1500
+    },
+    {
+      "id": "c068",
+      "name": "圣路易斯",
+      "candidate": 1,
+      "sourceFile": "assets/source/c068.png",
+      "width": 1356,
+      "height": 2048
+    },
+    {
+      "id": "c069",
+      "name": "信浓",
+      "candidate": 1,
+      "sourceFile": "assets/source/c069.jpg",
+      "width": 1000,
+      "height": 1500
+    },
+    {
+      "id": "c070",
+      "name": "可畏",
+      "candidate": 1,
+      "sourceFile": "assets/source/c070.jpg",
+      "width": 1000,
+      "height": 1500
+    },
+    {
+      "id": "c071",
+      "name": "花园",
+      "candidate": 1,
+      "sourceFile": "assets/source/c071.jpg",
+      "width": 1000,
+      "height": 1500
+    },
+    {
+      "id": "c072",
+      "name": "武藏",
+      "candidate": 1,
+      "sourceFile": "assets/source/c072.jpg",
+      "width": 1000,
+      "height": 1500
+    },
+    {
+      "id": "c073",
+      "name": "阿尔萨斯",
+      "candidate": 1,
+      "sourceFile": "assets/source/c073.jpg",
+      "width": 1000,
+      "height": 1500
+    },
+    {
+      "id": "c074",
+      "name": "贝尔法斯特",
+      "candidate": 1,
+      "sourceFile": "assets/source/c074.png",
+      "width": 790,
+      "height": 1023
+    },
+    {
+      "id": "c125",
+      "name": "白藏",
+      "candidate": 1,
+      "sourceFile": "assets/source/c125.webp",
+      "width": 1000,
+      "height": 1000
+    },
+    {
+      "id": "c126",
+      "name": "法帝娅",
+      "candidate": 1,
+      "sourceFile": "assets/source/c126.webp",
+      "width": 1000,
+      "height": 1000
+    },
+    {
+      "id": "c127",
+      "name": "哈索尔",
+      "candidate": 1,
+      "sourceFile": "assets/source/c127.webp",
+      "width": 1000,
+      "height": 1000
+    },
+    {
+      "id": "c128",
+      "name": "九原",
+      "candidate": 1,
+      "sourceFile": "assets/source/c128.webp",
+      "width": 1000,
+      "height": 1000
+    }
+  ]
+}

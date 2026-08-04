@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "policy": "Official sources are preferred. Biligame Wiki is an allowed fallback only when no official portrait is discoverable. Every fallback is labeled community in the manifest.",
+  "games": {
+    "原神": { "wiki": "https://wiki.biligame.com/ys/", "hosts": ["wiki.biligame.com", "patchwiki.biligame.com"] },
+    "崩坏：星穹铁道": { "wiki": "https://wiki.biligame.com/sr/", "hosts": ["wiki.biligame.com", "patchwiki.biligame.com"] },
+    "绝区零": { "wiki": "https://wiki.biligame.com/zzz/", "hosts": ["wiki.biligame.com", "patchwiki.biligame.com"] },
+    "鸣潮": { "wiki": "https://wiki.biligame.com/wutheringwaves/", "hosts": ["wiki.biligame.com", "patchwiki.biligame.com"] },
+    "碧蓝航线": { "wiki": "https://wiki.biligame.com/blhx/", "hosts": ["wiki.biligame.com", "patchwiki.biligame.com"] },
+    "蔚蓝档案": { "wiki": "https://wiki.biligame.com/ba/", "hosts": ["wiki.biligame.com", "patchwiki.biligame.com"] },
+    "Fate/Grand Order": { "wiki": "https://wiki.biligame.com/fgo/", "hosts": ["wiki.biligame.com", "patchwiki.biligame.com"] },
+    "胜利女神：妮姬": { "wiki": "https://wiki.biligame.com/nikke/", "hosts": ["wiki.biligame.com", "patchwiki.biligame.com"] },
+    "战双帕弥什": { "wiki": "https://wiki.biligame.com/zspms/", "hosts": ["wiki.biligame.com", "patchwiki.biligame.com"] },
+    "明日方舟：终末地": { "wiki": "https://wiki.biligame.com/akendfield/", "hosts": ["wiki.biligame.com", "patchwiki.biligame.com"] },
+    "异环": { "wiki": "https://wiki.biligame.com/yh/", "hosts": ["wiki.biligame.com", "patchwiki.biligame.com"] }
+  },
+  "aliases": {
+    "碧蓝航线": {
+      "企业": ["Enterprise"],
+      "能代": ["Noshiro"],
+      "大凤": ["Taihou"],
+      "圣路易斯": ["St. Louis", "Saint Louis"],
+      "信浓": ["Shinano"],
+      "可畏": ["Formidable"],
+      "花园": ["New Jersey"],
+      "武藏": ["Musashi"],
+      "阿尔萨斯": ["Alsace"],
+      "贝尔法斯特": ["Belfast"]
+    }
+  }
+}
