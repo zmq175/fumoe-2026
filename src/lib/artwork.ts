@@ -16,6 +16,11 @@ export function artworkUrls(key:string) {
   return parts.length===3?[fallback]:[`/api/media/${key}`,fallback]
 }
 
+export function portraitArtworkUrls(characterId:string,avatarKey:string|null|undefined) {
+  const avatarUrls=artworkUrls(avatarKey??`characters/${characterId}/avatar.webp`)
+  return [`/portraits/${characterId}.png`,...avatarUrls]
+}
+
 export function withArtworkKeys(character:Character,keys:ArtworkKeys):Character {
   return {...character,...keys}
 }

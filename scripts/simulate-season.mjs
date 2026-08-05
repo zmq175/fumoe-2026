@@ -36,7 +36,7 @@ try {
   progress('导入 128 位角色和首轮数据')
   execFileSync(process.execPath,['scripts/seed-local.mjs','--persist-to',state],{cwd:root,stdio:'pipe',timeout:120_000})
   progress('启动本地 Worker')
-  server=spawn(wrangler,['dev','--local','--persist-to',state,'--port',String(port),'--var',`APP_ORIGIN:http://127.0.0.1:${port}`,'--var','DEV_AUTH_BYPASS:true','--var','ADMIN_EMAILS:admin@fumoe.local','--var','AUTH_SECRET:season-simulation-secret-at-least-32-characters'],{cwd:root,stdio:['ignore','pipe','pipe']})
+  server=spawn(wrangler,['dev','--local','--test-scheduled','--persist-to',state,'--port',String(port),'--var',`APP_ORIGIN:http://127.0.0.1:${port}`,'--var','DEV_AUTH_BYPASS:true','--var','ADMIN_EMAILS:admin@fumoe.local','--var','AUTH_SECRET:season-simulation-secret-at-least-32-characters'],{cwd:root,stdio:['ignore','pipe','pipe']})
   await waitForServer(server)
 
   let cookie=''
@@ -58,11 +58,12 @@ try {
     const round=rounds[index]
     if(!round)throw new Error(`缺少第 ${index+1} 轮`)
     progress(`第 ${index+1}/7 轮：${round.name}`)
-    if(round.status==='scheduled')await request('/api/admin/tournament/control',{method:'POST',body:JSON.stringify({action:'start-now',roundId:round.id,reason:'自动完整赛季演练'})})
+    if(round.status!=='live')throw new Error(`${round.name} 未由 Cron 自动启动`)
     const matches=(await request('/api/public/matches')).matches.filter((match)=>match.roundId===round.id)
     if(matches.length!==expected[index])throw new Error(`${round.name} 对局数错误：${matches.length}，预期 ${expected[index]}`)
     await inBatches(matches,8,(match,matchIndex)=>request(`/api/admin/matches/${match.id}`,{method:'PATCH',body:JSON.stringify({leftVotes:200+matchIndex,rightVotes:100+matchIndex,reason:'自动完整赛季演练'})}))
-    await request('/api/admin/tournament/control',{method:'POST',body:JSON.stringify({action:'close',roundId:round.id,reason:'自动完整赛季演练'})})
+    const scheduled=await fetch(`http://127.0.0.1:${port}/cdn-cgi/handler/scheduled?format=json&time=${Date.parse(round.endsAt)+1}`,{signal:AbortSignal.timeout(30_000)})
+    if(!scheduled.ok)throw new Error(`${round.name} Cron 触发失败：${scheduled.status}`)
   }
 
   const overview=await request('/api/public/overview')

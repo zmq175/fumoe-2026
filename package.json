@@ -41,6 +41,9 @@
     "artwork:preview": "node scripts/prepare-local-artwork-preview.mjs",
     "artwork:validate": "node scripts/validate-artwork.mjs",
     "artwork:upload-plan": "node scripts/upload-artwork.mjs",
+    "portraits:sync": "node scripts/sync-character-portraits.mjs",
+    "portraits:model:process": "node scripts/process-model-portraits.mjs --write",
+    "portraits:model:validate": "node scripts/process-model-portraits.mjs",
     "artwork:one-time-import": "npm run artwork:discover && npm run artwork:sync && npm run artwork:community-discover && npm run artwork:community-archive && npm run artwork:process && npm run artwork:upload-plan"
   },
   "dependencies": {

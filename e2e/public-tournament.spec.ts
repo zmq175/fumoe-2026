@@ -101,12 +101,47 @@ test('keeps the visible login across navigation and a transient session check fa
   await expect(page.getByRole('button', { name: /returning@example\.com/ })).toBeVisible()
 })
 
+test('keeps admin header controls inside the mobile viewport', async ({ page }) => {
+  await page.setViewportSize({width:430,height:932})
+  await mockPublicApi(page,{viewer:{email:'zmq175@qq.com',role:'admin'}})
+  await page.goto('/')
+
+  await expect(page.locator('.admin-nav-button')).toBeHidden()
+  await expect(page.locator('.account-button')).toBeVisible()
+  await expect(page.locator('.menu-button')).toBeVisible()
+  const controls=await page.locator('.site-header > .brand, .site-header .account-button, .site-header .menu-button').evaluateAll((elements)=>elements.map((element)=>{const box=element.getBoundingClientRect();return{left:box.left,right:box.right,width:box.width}}))
+  expect(controls.every(({left,right,width})=>left>=0&&right<=430&&width>0),JSON.stringify(controls)).toBe(true)
+})
+
 test('keeps live standings visible when another public request fails', async ({ page }) => {
   await page.route('**/api/public/characters', (route) => route.fulfill({status:503,contentType:'application/json',body:JSON.stringify({error:'temporary'})}))
   await page.goto('/')
   await page.getByRole('button', { name: '赛程赛况' }).click()
   await expect(page.locator('.standing__row')).toHaveCount(2)
   await expect(page.getByText('实时预估，轮次结束后锁定')).toBeVisible()
+})
+
+test('aggregates current-season votes into developer faction scores',async({page})=>{
+  const factionMatch={...matches[0],id:'faction-match',leftId:'c049',leftName:'长离',leftGame:'鸣潮',leftVotes:30,rightId:'c085',rightName:'阿尔托莉雅·潘德拉贡',rightGame:'Fate/Grand Order',rightVotes:15}
+  await mockPublicApi(page,{matches:[...matches,factionMatch]})
+  await page.goto('/')
+  await page.getByRole('button',{name:'阵营数据'}).click()
+
+  await expect(page).toHaveURL('/factions')
+  await expect(page.getByRole('heading',{name:'阵营数据'})).toBeVisible()
+  const arena=page.getByRole('region',{name:'前二阵营对抗'})
+  await expect(arena).toBeVisible()
+  await expect(arena.getByAltText('米哈游 官方 LOGO')).toBeVisible()
+  const kuroLogo=arena.getByAltText('库洛游戏 官方 LOGO')
+  await expect(kuroLogo).toBeVisible()
+  expect((await kuroLogo.boundingBox())?.height).toBeGreaterThan(100)
+  await expect(arena.getByText('VS',{exact:true})).toBeVisible()
+  await expect(arena.getByText('285 票',{exact:true})).toBeVisible()
+  await expect(arena.getByText('30 票',{exact:true})).toBeVisible()
+  await expect(arena.getByText('领先 255 票',{exact:true})).toBeVisible()
+  await expect(arena.getByRole('meter',{name:'前二阵营票数对抗'})).toHaveAttribute('aria-valuenow','285')
+  await expect(page.getByText('当前赛季共计 330 票')).toBeVisible()
+  await expect(page.getByText('比分按总得票占当前赛季票池比例计算')).toBeVisible()
 })
 
 test('refreshes provisional standings immediately after a vote', async ({ page }) => {
@@ -136,13 +171,23 @@ test('renders standings, knockout bracket, and match history tabs', async ({ pag
 
   await expect(page.getByRole('tab', { name: '小组积分', selected: true })).toBeVisible()
   await expect(page.locator('.standing__row--qualifying')).toHaveCount(2)
+  await expect(page.locator('.standing__row .portrait img')).toHaveCount(2)
+  await expect(page.locator('.standing__row .portrait img').first()).toHaveAttribute('src','/portraits/c001.png')
 
   await page.getByRole('tab', { name: '淘汰赛签表' }).click()
   await expect(page.getByRole('tab', { name: '淘汰赛签表', selected: true })).toBeVisible()
   await expect(page.getByRole('region', { name: '淘汰赛签表' })).toBeVisible()
   await expect(page.getByText('16 强', { exact: true })).toBeVisible()
   await expect(page.locator('.bracket-canvas__side--winner')).toHaveCount(1)
-  await expect(page.locator('.bracket-canvas__score')).toHaveCount(2)
+  await expect(page.locator('.bracket-canvas__match:not(.bracket-canvas__match--placeholder) .bracket-canvas__score')).toHaveCount(2)
+  await expect(page.locator('.bracket-canvas__match:not(.bracket-canvas__match--placeholder) .portrait')).toHaveCount(2)
+  const layouts=await page.locator('.bracket-canvas__match:not(.bracket-canvas__match--placeholder) .bracket-canvas__side').evaluateAll((sides)=>sides.map((side)=>{
+    const values=(selector:string)=>{const box=side.querySelector(selector)?.getBoundingClientRect();return box?{left:box.left,right:box.right,top:box.top,bottom:box.bottom}:null}
+    const box=side.getBoundingClientRect()
+    return {portrait:values('.portrait'),label:values(':scope > span:not(.portrait)'),score:values('.bracket-canvas__score'),bounds:{left:box.left,right:box.right,top:box.top,bottom:box.bottom}}
+  }))
+  expect(layouts,JSON.stringify(layouts)).toHaveLength(2)
+  expect(layouts.every(({portrait,label,score,bounds})=>Boolean(portrait&&label&&score&&bounds&&portrait.left>=bounds.left&&portrait.bottom<=bounds.bottom&&portrait.right<=label.left&&label.right<=score.left)),JSON.stringify(layouts)).toBe(true)
   expect(await page.locator('.bracket-canvas__match').evaluateAll((cards) => cards.every((card) => {
     const footer = card.querySelector('footer')
     if (!footer) return false
@@ -154,6 +199,8 @@ test('renders standings, knockout bracket, and match history tabs', async ({ pag
   await page.getByRole('tab', { name: '对阵历史' }).click()
   await expect(page.getByRole('heading', { name: '瑞士轮 第 1 轮' })).toBeVisible()
   await expect(page.getByText('芙宁娜', { exact: true }).last()).toBeVisible()
+  await expect(page.locator('.history-match .portrait img')).toHaveCount(6)
+  await expect(page.locator('.history-match .portrait img').first()).toHaveAttribute('src','/portraits/c001.png')
   await expect(page.getByRole('heading', { name: '瑞士轮 2' })).toBeVisible()
   await expect(page.getByText('瑞士轮 1 结束后生成具体对阵')).toBeVisible()
   await expect(page.locator('.swiss-preview').first().locator('section')).toHaveCount(8)
@@ -197,6 +244,24 @@ test('uses optimized static match art and falls back for versioned art', async (
   await expect(left).toHaveAttribute('src','/artwork/c001/match.webp')
   await expect(left).toHaveAttribute('loading','eager')
   await expect(left).toHaveAttribute('fetchpriority','high')
+})
+
+test('serves every finalized transparent portrait', async ({ request }) => {
+  for (let index=1;index<=128;index++) {
+    const id=`c${String(index).padStart(3,'0')}`
+    const response=await request.get(`/portraits/${id}.png`)
+    expect(response.ok(),`${id} should be directly accessible`).toBe(true)
+    expect(response.headers()['content-type']).toContain('image/png')
+  }
+})
+
+test('falls back to the frozen avatar when a portrait fails', async ({ page }) => {
+  await mockPublicApi(page,{standings:[{...standings[0],avatarArtworkKey:'characters/c001/rev-2/avatar.webp'}]})
+  await page.route('**/portraits/c001.png',(route)=>route.fulfill({status:404,body:''}))
+  await page.route('**/api/media/characters/c001/rev-2/avatar.webp',(route)=>route.fulfill({status:404,body:''}))
+  await page.goto('/')
+  await page.getByRole('button',{name:'赛程赛况'}).click()
+  await expect(page.locator('.standing__row .portrait img')).toHaveAttribute('src','/artwork/c001/avatar.webp')
 })
 
 test.describe('mobile bracket', () => {
