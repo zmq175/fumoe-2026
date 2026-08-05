@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest'
 import { calculateStandings, firstKnockoutPairs, knockoutPairs, simulateSeasonBracket, sortStandings, swissPairs, winnerFor, type TournamentCharacter, type TournamentMatch } from './tournament'
-import { unresolvedMatchStatus } from './progression'
-import { completionSeasonState } from './lifecycle'
+import { expectedMatchCount, unresolvedMatchStatus } from './progression'
+import { completionSeasonState, shouldRebaseRound } from './lifecycle'
 
 const character=(id:string, groupCode='A', seed=1, game='游戏甲'):TournamentCharacter=>({id,groupCode,seed,game})
 const match=(leftCharacterId:string,rightCharacterId:string,leftVotes:number,rightVotes:number,winnerCharacterId:string|null=null):TournamentMatch=>({id:`${leftCharacterId}-${rightCharacterId}`,groupCode:'A',bracketPosition:1,leftCharacterId,rightCharacterId,leftVotes,rightVotes,winnerCharacterId,status:'closed'})
@@ -64,5 +64,16 @@ describe('赛事推进规则', () => {
   it('决赛关闭后记录冠军并将赛事标记为结束', () => {
     expect(completionSeasonState({ nextRoundId:null, championId:'c128' }, 'ko-4')).toEqual({ status:'completed', currentRoundId:'ko-4', championId:'c128' })
     expect(completionSeasonState({ nextRoundId:'ko-2', championId:null }, 'ko-1')).toEqual({ status:'live', currentRoundId:'ko-2', championId:null })
+  })
+
+  it('校验每阶段完整对局数量',()=>{
+    expect([1,2,3].map((roundNumber)=>expectedMatchCount({stage:'swiss',roundNumber}))).toEqual([64,64,64])
+    expect([1,2,3,4].map((roundNumber)=>expectedMatchCount({stage:'knockout',roundNumber}))).toEqual([8,4,2,1])
+  })
+
+  it('过期时间窗需要从恢复时刻重排',()=>{
+    const now=new Date('2030-08-03T00:00:00.000Z')
+    expect(shouldRebaseRound({startsAt:'2030-08-01T00:00:00.000Z',endsAt:'2030-08-02T00:00:00.000Z'},now)).toBe(true)
+    expect(shouldRebaseRound({startsAt:'2030-08-02T00:00:00.000Z',endsAt:'2030-08-04T00:00:00.000Z'},now)).toBe(false)
   })
 })

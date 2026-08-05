@@ -1,5 +1,5 @@
 import { describe,expect,it } from 'vitest'
-import { artworkKey,artworkUrls,withArtworkKeys } from './artwork'
+import { artworkKey,artworkUrls,portraitArtworkUrls,withArtworkKeys } from './artwork'
 import { characters } from '../data/tournament'
 
 describe('运行时立绘键',()=>{
@@ -17,5 +17,17 @@ describe('运行时立绘键',()=>{
   it('标准素材走静态资源，版本素材失败时回退到同角色静态图',()=>{
     expect(artworkUrls('characters/c001/match.webp')).toEqual(['/artwork/c001/match.webp'])
     expect(artworkUrls('characters/c001/rev-2/match.webp')).toEqual(['/api/media/characters/c001/rev-2/match.webp','/artwork/c001/match.webp'])
+  })
+
+  it('透明头像优先，并保留版本化和静态旧头像回退',()=>{
+    expect(portraitArtworkUrls('c001','characters/c001/rev-2/avatar.webp')).toEqual([
+      '/portraits/c001.png',
+      '/api/media/characters/c001/rev-2/avatar.webp',
+      '/artwork/c001/avatar.webp'
+    ])
+    expect(portraitArtworkUrls('c128','characters/c128/avatar.webp')).toEqual([
+      '/portraits/c128.png',
+      '/artwork/c128/avatar.webp'
+    ])
   })
 })

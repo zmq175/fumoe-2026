@@ -1,0 +1,78 @@
+{
+  "version": 1,
+  "logos": [
+    {
+      "name": "米哈游",
+      "file": "public/factions/mihoyo.png",
+      "sourceUrl": "https://fastcdn.mihoyo.com/mi18n/plat_cn/m202004281054311/upload/fb9fb8e171957fc3a06322e5f19c772f_6978451248621653135.png",
+      "sourcePage": "https://www.mihoyo.com/",
+      "officialHost": "fastcdn.mihoyo.com",
+      "sha256": "bf59f723db106d292c646a80fca0b85c20ac9a2496858c77454b74cc3be58e47",
+      "retrievedAt": "2026-08-05"
+    },
+    {
+      "name": "库洛游戏",
+      "file": "public/factions/kuro.png",
+      "sourceUrl": "user-provided:1.png",
+      "sourcePage": "user-provided",
+      "officialHost": "user-provided",
+      "sha256": "38507f4512ece94304536beabe0243b1df22c5d836f08fc97ceb21f0a630fac7",
+      "retrievedAt": "2026-08-05",
+      "processing": "裁切主品牌标识，移除白色背景并转为透明白色字标"
+    },
+    {
+      "name": "型月",
+      "file": "public/factions/type-moon.png",
+      "sourceUrl": "https://typemoon.com/img/tm-logo01.png",
+      "sourcePage": "https://typemoon.com/",
+      "officialHost": "typemoon.com",
+      "sha256": "50b2d9fdd747734a7860ff9503c77515c76a93de30211bcb09b97e1aa2d0bade",
+      "retrievedAt": "2026-08-05"
+    },
+    {
+      "name": "蛮啾网络",
+      "file": "public/factions/manjuu.png",
+      "sourceUrl": "https://plat-cdn.manjuu.com/platform/OfficialWebsite/prod/_next/static/media/Logo-white.0d1250ac.png",
+      "sourcePage": "https://www.manjuu.com/",
+      "officialHost": "plat-cdn.manjuu.com",
+      "sha256": "b213c8965e9887f88c584ca778da611311da11bf3334bc831d94d20b52fac102",
+      "retrievedAt": "2026-08-05"
+    },
+    {
+      "name": "NEXON Games",
+      "file": "public/factions/nexon-games.png",
+      "sourceUrl": "https://www.nexongames.co.kr/img/main/main_logo.png",
+      "sourcePage": "https://www.nexongames.co.kr/",
+      "officialHost": "www.nexongames.co.kr",
+      "sha256": "10ffd420a34dda45979eab0f29af2bf1ae8a7a79b8375f64b3f5973d8ddccd1a",
+      "retrievedAt": "2026-08-05"
+    },
+    {
+      "name": "SHIFT UP",
+      "file": "public/factions/shift-up.png",
+      "sourceUrl": "https://shiftup.co.kr/about/img/about_logo.png",
+      "sourcePage": "https://shiftup.co.kr/about/about.php",
+      "officialHost": "shiftup.co.kr",
+      "sha256": "a3615c701938a8f4dc313b10fde54d05b60e189f84e40256871dad6885b7b92a",
+      "retrievedAt": "2026-08-05"
+    },
+    {
+      "name": "鹰角网络",
+      "file": "public/factions/hypergryph.svg",
+      "sourceUrl": "https://web-ipv6.hycdn.cn/hypergryph/official/assets/img/logo.a085fd.svg",
+      "sourcePage": "https://www.hypergryph.com/",
+      "officialHost": "web-ipv6.hycdn.cn",
+      "sha256": "06b20b8cbf4fc977b23e463b8c7b38c8200dd5652aa4ceb5c56f725b6e4395dd",
+      "retrievedAt": "2026-08-05"
+    },
+    {
+      "name": "Hotta Studio",
+      "file": "public/factions/hotta-studio.png",
+      "sourceUrl": "https://ids.iwplay.com.tw/includ/footer/hotta_b.png",
+      "sourcePage": "https://www.hotta.com.tw/",
+      "officialHost": "ids.iwplay.com.tw",
+      "sha256": "9bcc1b42c1e7035db6ebe615b5147169e58cccb6f66f6d07e9a52bb3b75dc8af",
+      "retrievedAt": "2026-08-05"
+    }
+  ]
+}

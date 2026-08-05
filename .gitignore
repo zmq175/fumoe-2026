@@ -10,4 +10,10 @@ backups/
 *.tsbuildinfo
 playwright-report/
 test-results/
+tmp/
+*.orig
+assets/portraits/
+assets/reports/model-portrait-*
+assets/reports/portrait-*
+assets/reports/redo-*
 .DS_Store

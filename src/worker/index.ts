@@ -6,7 +6,7 @@ import { sendLoginCode } from './email'
 import { clientIp, cookie, createSession, developmentBypassEnabled, digest, getCookie, id, isDisposableEmail, iso, loginChallengeAllowed, normalizeEmail, readSession, runtimeConfigIssues, sessionForUser, voteRiskDecision } from './security'
 import { normalizeVoteRequest, planBatchVotes, scheduleScorePublications, type ExistingVote, type VoteMatch } from './vote-batch'
 import { MatchRoom } from './match-room'
-import { closeRound, runScheduledLifecycle, startRound } from './lifecycle'
+import { closeRound, runScheduledLifecycle, startRound, withLifecycleLease } from './lifecycle'
 import { buildSeasonSlug, canEditRoster, canEditSeason, validateSeasonRoster, type SeasonStatus } from './seasons'
 import { artworkCacheControl, artworkKeys, mediaFallbackIsImage } from './artwork'
 import type { Env, Role, Session } from './types'
@@ -340,7 +340,7 @@ app.post('/api/admin/tournament/control', zValidator('json', roundControlInput),
     const first = new Date(input.scheduledStartAt).getTime(); if (Number.isNaN(first)) return c.json({ error:'赛程时间无效' },400)
     const rounds=await c.env.DB.prepare(`SELECT id,round_number AS roundNumber,stage FROM tournament_rounds WHERE season_id=? ORDER BY starts_at,round_number`).bind(season.id).all<{id:string;roundNumber:number;stage:string}>()
     const statements = rounds.results.map((round,index) => c.env.DB.prepare(`UPDATE tournament_rounds SET starts_at=?,ends_at=?,status='scheduled' WHERE id=?`).bind(new Date(first + index*86_400_000).toISOString(),new Date(first+(index+1)*86_400_000).toISOString(),round.id))
-    statements.push(c.env.DB.prepare(`UPDATE seasons SET schedule_mode='scheduled',starts_at=?,ends_at=?,status='published',updated_at=?,updated_by=? WHERE id=?`).bind(input.scheduledStartAt,new Date(first+7*86_400_000).toISOString(),now,actor.sub,season.id))
+    statements.push(c.env.DB.prepare(`UPDATE seasons SET schedule_mode='scheduled',starts_at=?,ends_at=?,status='published',current_round_id=NULL,updated_at=?,updated_by=? WHERE id=?`).bind(input.scheduledStartAt,new Date(first+7*86_400_000).toISOString(),now,actor.sub,season.id))
     statements.push(c.env.DB.prepare(`INSERT INTO audit_logs(id,actor_id,action,entity_type,entity_id,reason,after_json,season_id) VALUES(?,?,?,?,?,?,?,?)`).bind(id(),actor.sub,'schedule_published','season',season.id,input.reason,JSON.stringify({scheduledStartAt:input.scheduledStartAt}),season.id))
     await c.env.DB.batch(statements); return c.json({ok:true})
   }
@@ -348,12 +348,12 @@ app.post('/api/admin/tournament/control', zValidator('json', roundControlInput),
   const round=await c.env.DB.prepare(`SELECT id,season_id AS seasonId,stage,round_number AS roundNumber,status FROM tournament_rounds WHERE id=? AND season_id=?`).bind(input.roundId,season.id).first<{id:string;seasonId:string;stage:'swiss'|'knockout';roundNumber:number;status:string}>(); if(!round)return c.json({error:'轮次不存在'},404)
   if (input.action === 'close') {
     if (round.status !== 'live') return c.json({error:'只能关闭进行中的轮次'},409)
-    try { const advancement=await closeRound(c.env,round,actor.sub,input.reason); return c.json({ok:true,status:'closed',advancement}) } catch (error) { return c.json({error:error instanceof Error?error.message:'轮次关闭失败'},409) }
+    try { const advancement=await withLifecycleLease(c.env,season.id,()=>closeRound(c.env,round,actor.sub,input.reason)); return c.json({ok:true,status:'closed',advancement}) } catch (error) { return c.json({error:error instanceof Error?error.message:'轮次关闭失败'},409) }
   }
   if ((input.action === 'start-now' || input.action === 'resume') && round.status === 'closed') return c.json({error:'已关闭轮次不能重新开始'},409)
   if (input.action === 'pause' && round.status !== 'live') return c.json({error:'只能暂停进行中的轮次'},409)
   if (input.action === 'start-now' || input.action === 'resume') {
-    try { await startRound(c.env,round,actor.sub,input.reason); return c.json({ok:true,status:'live'}) } catch (error) { return c.json({error:error instanceof Error?error.message:'无法开始本轮'},409) }
+    try { await withLifecycleLease(c.env,season.id,()=>startRound(c.env,round,actor.sub,input.reason)); return c.json({ok:true,status:'live'}) } catch (error) { return c.json({error:error instanceof Error?error.message:'无法开始本轮'},409) }
   }
   await c.env.DB.batch([
     c.env.DB.prepare(`UPDATE tournament_rounds SET status='scheduled' WHERE id=?`).bind(round.id),
@@ -517,7 +517,7 @@ app.onError((error, c) => { console.error(error); return c.json({ error: '服务
 
 export default {
   fetch: app.fetch,
-  scheduled: async (_controller: ScheduledController, env: Env, ctx: ExecutionContext) => {
-    ctx.waitUntil(runScheduledLifecycle(env))
+  scheduled: async (controller: ScheduledController, env: Env, ctx: ExecutionContext) => {
+    ctx.waitUntil(runScheduledLifecycle(env,new Date(controller.scheduledTime)))
   }
 }

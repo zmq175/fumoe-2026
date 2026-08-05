@@ -45,11 +45,11 @@ type BracketGeometry={width:number;height:number;rounds:BracketRoundGeometry[];c
 
 export function bracketGeometry():BracketGeometry {
   const width=1560
-  const height=920
+  const height=1045
   const cardWidth=258
-  const cardHeight=88
+  const cardHeight=96
   const topOffset=124
-  const playHeight=692
+  const playHeight=800
   const roundXs=[44,380,716,1052]
   const championX=1388
   const championWidth=152
@@ -135,6 +135,18 @@ export function knockoutColumns(matches: PublicMatch[], rounds: PublicRound[]): 
     .filter((round) => round.stage === 'knockout')
     .sort((left, right) => left.roundNumber - right.roundNumber)
     .map((round) => ({ round, matches: matches.filter((match) => match.roundId === round.id).sort((left, right) => (left.bracketPosition ?? 0) - (right.bracketPosition ?? 0)) }))
+}
+
+export function knockoutPlaceholder(roundNumber:number,index:number) {
+  if(roundNumber===1){
+    const pairs=[['A1','B2'],['B1','A2'],['C1','D2'],['D1','C2'],['E1','F2'],['F1','E2'],['G1','H2'],['H1','G2']]
+    const [left,right]=pairs[index]??['待定','待定']
+    const rank=(slot:string)=>slot[1]==='1'?'第一':'第二'
+    return {left,right,leftMeta:`${left[0]}组${rank(left)}`,rightMeta:`${right[0]}组${rank(right)}`,note:'瑞士轮结束后锁定参赛角色'}
+  }
+  const source=roundNumber===2?'16强':roundNumber===3?'8强':'半决赛'
+  const first=index*2+1
+  return {left:`M${first} 胜者`,right:`M${first+1} 胜者`,leftMeta:`${source}第${first}场`,rightMeta:`${source}第${first+1}场`,note:'前序赛果产生后自动晋级'}
 }
 
 export function historySections(matches: PublicMatch[], rounds: PublicRound[]): RoundSection[] {

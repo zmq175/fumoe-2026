@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
 import type { PublicMatch, PublicRound } from './api'
-import { bracketGeometry, bracketLayout, championResult, currentRound, historySections, knockoutColumns, matchResult, swissRoundPreview, updateVoteDrafts, validVoteDrafts } from './tournament-views'
+import { bracketGeometry, bracketLayout, championResult, currentRound, historySections, knockoutColumns, knockoutPlaceholder, matchResult, swissRoundPreview, updateVoteDrafts, validVoteDrafts } from './tournament-views'
 
 const round = (id: string, stage: PublicRound['stage'], roundNumber: number, status: PublicRound['status']): PublicRound => ({ id, stage, roundNumber, status, name: `${stage}-${roundNumber}`, startsAt: `2026-08-0${roundNumber}T12:00:00.000Z`, endsAt: `2026-08-0${roundNumber + 1}T12:00:00.000Z` })
 const match = (id: string, roundId: string, stage: PublicMatch['stage'], roundNumber: number, status: PublicMatch['status'], winnerCharacterId: string | null = null): PublicMatch => ({ id, roundId, stage, roundNumber, roundName: `${stage}-${roundNumber}`, groupCode: stage === 'swiss' ? 'A' : null, bracketPosition: 1, status, winnerCharacterId, leftVotes: 12, rightVotes: 8, startsAt: '2026-08-01T12:00:00.000Z', endsAt: '2026-08-02T12:00:00.000Z', leftId: 'left', leftName: '左方', leftGame: '游戏甲', rightId: 'right', rightName: '右方', rightGame: '游戏乙' })
@@ -32,6 +32,13 @@ describe('赛事视图数据', () => {
     const rounds = [round('k1', 'knockout', 1, 'closed'), round('k2', 'knockout', 2, 'scheduled')]
     const columns = knockoutColumns([match('second', 'k1', 'knockout', 1, 'closed'), { ...match('first', 'k1', 'knockout', 1, 'closed'), bracketPosition: 0 }], rounds)
     expect(columns.map((column) => [column.round.id, column.matches.map((item) => item.id)])).toEqual([['k1', ['first', 'second']], ['k2', []]])
+  })
+
+  it('为尚未生成的淘汰赛对局显示真实晋级来源', () => {
+    expect(knockoutPlaceholder(1,0)).toMatchObject({left:'A1',right:'B2',leftMeta:'A组第一',rightMeta:'B组第二'})
+    expect(knockoutPlaceholder(1,7)).toMatchObject({left:'H1',right:'G2'})
+    expect(knockoutPlaceholder(2,0)).toMatchObject({left:'M1 胜者',right:'M2 胜者',leftMeta:'16强第1场',rightMeta:'16强第2场'})
+    expect(knockoutPlaceholder(4,0)).toMatchObject({left:'M1 胜者',right:'M2 胜者',leftMeta:'半决赛第1场',rightMeta:'半决赛第2场'})
   })
 
   it('按轮次倒序整理对阵历史，并保留尚无对局的轮次', () => {
@@ -72,10 +79,10 @@ describe('赛事视图数据', () => {
   it('在同一画布上生成完整且连续的淘汰赛和冠军连接路径', () => {
     const geometry=bracketGeometry()
     expect(geometry.rounds.map((round)=>round.cards.length)).toEqual([8,4,2,1])
-    expect(geometry.cards.find((card)=>card.roundNumber===1&&card.index===0)).toMatchObject({x:44,y:167})
-    expect(geometry.cards.find((card)=>card.roundNumber===2&&card.index===0)).toMatchObject({x:380,y:211})
-    expect(geometry.paths[0]).toBe('M 302 167 H 341 V 254 H 302 M 341 211 H 380')
-    expect(geometry.championPath).toBe('M 1310 470 H 1388')
+    expect(geometry.cards.find((card)=>card.roundNumber===1&&card.index===0)).toMatchObject({x:44,y:174})
+    expect(geometry.cards.find((card)=>card.roundNumber===2&&card.index===0)).toMatchObject({x:380,y:224})
+    expect(geometry.paths[0]).toBe('M 302 174 H 341 V 274 H 302 M 341 224 H 380')
+    expect(geometry.championPath).toBe('M 1310 524 H 1388')
   })
 
   it('让后一轮卡片始终位于两张来源卡片的垂直中点', () => {

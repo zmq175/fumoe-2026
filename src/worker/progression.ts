@@ -29,23 +29,35 @@ async function insertPairs(db:D1Database,roundId:string,pairs:Array<[TournamentC
   return pairs.length
 }
 
+export function expectedMatchCount(round:Pick<Round,'stage'|'roundNumber'>) {
+  return round.stage==='swiss'?64:[8,4,2,1][round.roundNumber-1]??0
+}
+
 export async function ensureRoundCanStart(db:D1Database,round:Round) {
-  const [count,live]=await Promise.all([
-    db.prepare(`SELECT COUNT(*) AS count FROM matches WHERE round_id=?`).bind(round.id).first<{count:number}>(),
-    db.prepare(`SELECT id FROM tournament_rounds WHERE season_id=? AND status='live' AND id!=? LIMIT 1`).bind(round.seasonId,round.id).first()
+  const order=round.stage==='swiss'?round.roundNumber:3+round.roundNumber
+  const [matches,live,unfinishedPrevious]=await Promise.all([
+    db.prepare(`SELECT COUNT(*) AS count,SUM(CASE WHEN status!='scheduled' THEN 1 ELSE 0 END) AS invalid FROM matches WHERE round_id=?`).bind(round.id).first<{count:number;invalid:number}>(),
+    db.prepare(`SELECT id FROM tournament_rounds WHERE season_id=? AND status='live' AND id!=? LIMIT 1`).bind(round.seasonId,round.id).first(),
+    db.prepare(`SELECT id FROM tournament_rounds WHERE season_id=? AND (CASE stage WHEN 'swiss' THEN round_number ELSE 3+round_number END)<? AND status!='closed' LIMIT 1`).bind(round.seasonId,order).first()
   ])
-  if(!count?.count)throw new Error('本轮对局尚未生成')
+  if(matches?.count!==expectedMatchCount(round))throw new Error('本轮对局数量不完整')
+  if(matches.invalid)throw new Error('本轮对局状态不允许开始')
+  if(unfinishedPrevious)throw new Error('前序轮次尚未结束')
   if(live)throw new Error('已有其他轮次正在进行')
 }
 
 export async function closeRoundAndAdvance(env:Pick<Env,'DB'>,round:Round):Promise<Advancement> {
   const allCharacters=await characters(env.DB,round.seasonId)
   const characterMap=new Map(allCharacters.map((character)=>[character.id,character]))
+  const beforeFreeze=await matchesForRound(env.DB,round.id)
+  if(beforeFreeze.length!==expectedMatchCount(round))throw new Error('本轮对局数量不完整')
+  if(beforeFreeze.some((match)=>match.status==='review'))throw new Error('本轮仍有待审核对局')
+  if(beforeFreeze.some((match)=>!['live','closed'].includes(match.status)))throw new Error('本轮包含不可结算的对局')
+  await env.DB.prepare(`UPDATE matches SET status='closed',updated_at=? WHERE round_id=? AND status='live'`).bind(new Date().toISOString(),round.id).run()
   const matches=await matchesForRound(env.DB,round.id)
-  if(!matches.length)throw new Error('本轮没有可关闭的对局')
-  if(matches.some((match)=>match.status==='review'))throw new Error('本轮仍有待审核对局')
+  if(matches.some((match)=>match.status==='review'))throw new Error('冻结赛果时出现待审核对局')
   const resolved=matches.map((match)=>({...match,winnerCharacterId:winnerFor(match,characterMap)}))
-  await env.DB.batch(resolved.map((match)=>env.DB.prepare(`UPDATE matches SET winner_character_id=?,status='closed',updated_at=? WHERE id=?`).bind(match.winnerCharacterId,new Date().toISOString(),match.id)))
+  await env.DB.batch(resolved.map((match)=>env.DB.prepare(`UPDATE matches SET winner_character_id=?,updated_at=? WHERE id=?`).bind(match.winnerCharacterId,new Date().toISOString(),match.id)))
   if(round.stage==='swiss') {
     const allSwiss=(await env.DB.prepare(`SELECT m.id,m.group_code AS groupCode,m.bracket_position AS bracketPosition,m.left_character_id AS leftCharacterId,m.right_character_id AS rightCharacterId,m.left_votes AS leftVotes,m.right_votes AS rightVotes,m.winner_character_id AS winnerCharacterId,m.status FROM matches m JOIN tournament_rounds r ON r.id=m.round_id WHERE r.season_id=? AND r.stage='swiss' AND r.round_number<=? AND m.status='closed'`).bind(round.seasonId,round.roundNumber).all<TournamentMatch>()).results
     const records=calculateStandings(allCharacters,allSwiss)

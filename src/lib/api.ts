@@ -1,12 +1,12 @@
 export type Viewer = { email:string;role:'voter'|'operator'|'admin' }
 export type PublicSeason = { id:string;slug:string;name:string;status:'draft'|'published'|'live'|'completed'|'archived';isCurrent:boolean;startsAt:string|null;endsAt:string|null;championCharacterId:string|null;championName?:string|null;championGame?:string|null;championArtworkKey?:string|null;announcement:string;historyUnlocked:boolean }
-export type PublicMatch = { id:string;groupCode:string|null;bracketPosition:number|null;leftVotes:number;rightVotes:number;status:'scheduled'|'live'|'closed'|'review';winnerCharacterId:string|null;roundId:string;stage:'swiss'|'knockout';roundNumber:number;roundName:string;startsAt:string;endsAt:string;leftId:string;leftName:string;leftGame:string;leftArtworkKey?:string|null;rightId:string;rightName:string;rightGame:string;rightArtworkKey?:string|null }
+export type PublicMatch = { id:string;groupCode:string|null;bracketPosition:number|null;leftVotes:number;rightVotes:number;status:'scheduled'|'live'|'closed'|'review';winnerCharacterId:string|null;roundId:string;stage:'swiss'|'knockout';roundNumber:number;roundName:string;startsAt:string;endsAt:string;leftId:string;leftName:string;leftGame:string;leftArtworkKey?:string|null;leftAvatarArtworkKey?:string|null;rightId:string;rightName:string;rightGame:string;rightArtworkKey?:string|null;rightAvatarArtworkKey?:string|null }
 export type PublicCharacter = { id:string;name:string;game:string;summary:string;groupCode:string;seed:number;galleryArtworkKey:string|null;matchArtworkKey:string|null;avatarArtworkKey:string|null }
 export type VoteSelection = { matchId:string;characterId:string;riskStatus:'approved'|'pending'|'rejected'|'revoked';createdAt:string }
 export type VoteChoice = { matchId:string;characterId:string }
 export type VoteResult = { status:'counted'|'under_review'|'already_voted';selection:VoteSelection;scores:{leftVotes:number;rightVotes:number} }
 export type PublicRound = { id:string;stage:'swiss'|'knockout';roundNumber:number;name:string;startsAt:string;endsAt:string;status:'scheduled'|'live'|'closed'|'archived' }
-export type PublicStanding = { groupCode:string;id:string;name:string;game:string;seed:number;points:number;voteDifference:number;opponentPoints:number }
+export type PublicStanding = { groupCode:string;id:string;name:string;game:string;seed:number;avatarArtworkKey?:string|null;points:number;voteDifference:number;opponentPoints:number }
 export type PublicOverview = { season:PublicSeason|null;previousSeason:PublicSeason|null;round:PublicRound|null;matches:PublicMatch[];siteAnnouncement:string;seasonAnnouncement:string }
 
 export function apiErrorMessage(error:unknown,fallback='请求暂时失败，请稍后重试') {
