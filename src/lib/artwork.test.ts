@@ -1,3 +1,4 @@
+import { legacyAsset, legacyPortrait } from './legacy-assets'
 import { describe,expect,it } from 'vitest'
 import { artworkKey,artworkUrls,portraitArtworkUrls,withArtworkKeys } from './artwork'
 import { characters } from '../data/tournament'
@@ -14,20 +15,18 @@ describe('运行时立绘键',()=>{
     expect(artworkKey(characters[0],'match')).toBe('characters/c001/match.webp')
   })
 
-  it('标准素材走静态资源，版本素材失败时回退到同角色静态图',()=>{
-    expect(artworkUrls('characters/c001/match.webp')).toEqual(['/artwork/c001/match.webp'])
-    expect(artworkUrls('characters/c001/rev-2/match.webp')).toEqual(['/api/media/characters/c001/rev-2/match.webp','/artwork/c001/match.webp'])
+  it('旧素材使用内容归档，版本素材缺失时不替换为其他版本',()=>{
+    expect(artworkUrls('characters/c001/match.webp')).toEqual([legacyAsset('/artwork/c001/match.webp')])
+    expect(artworkUrls('characters/c001/rev-2/match.webp')).toEqual(['/api/media/characters/c001/rev-2/match.webp'])
   })
 
-  it('透明头像优先，并保留版本化和静态旧头像回退',()=>{
+  it('赛季快照优先，未提供快照的旧头像使用内容归档',()=>{
     expect(portraitArtworkUrls('c001','characters/c001/rev-2/avatar.webp')).toEqual([
-      '/portraits/c001.png',
-      '/api/media/characters/c001/rev-2/avatar.webp',
-      '/artwork/c001/avatar.webp'
+      '/api/media/characters/c001/rev-2/avatar.webp'
     ])
     expect(portraitArtworkUrls('c128','characters/c128/avatar.webp')).toEqual([
-      '/portraits/c128.png',
-      '/artwork/c128/avatar.webp'
+      legacyAsset('/artwork/c128/avatar.webp')
     ])
   })
+  it('未知角色不借用其他头像',()=>{expect(portraitArtworkUrls('new-id',null)).toEqual([]);expect(portraitArtworkUrls('c001',null)).toEqual([legacyPortrait('c001')])})
 })

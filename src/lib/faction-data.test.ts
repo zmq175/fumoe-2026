@@ -1,3 +1,4 @@
+import { legacyAsset } from './legacy-assets'
 import {describe,expect,it} from 'vitest'
 import type {PublicMatch} from './api'
 import {calculateFactionScores,factionBrand} from './faction-data'
@@ -34,8 +35,8 @@ describe('阵营比分',()=>{
   })
 
   it('为已知阵营提供官方 LOGO 与对抗主题色',()=>{
-    expect(factionBrand('米哈游')).toEqual({logoPath:'/factions/mihoyo.png',accent:'#57d4ff'})
-    expect(factionBrand('库洛游戏')).toEqual({logoPath:'/factions/kuro.png',accent:'#ff4d67'})
+    expect(factionBrand('米哈游')).toEqual({logoPath:legacyAsset('/factions/mihoyo.png'),accent:'#57d4ff'})
+    expect(factionBrand('库洛游戏')).toEqual({logoPath:legacyAsset('/factions/kuro.png'),accent:'#ff4d67'})
     expect(factionBrand('未收录游戏')).toEqual({logoPath:null,accent:'#8c98a0'})
   })
 })

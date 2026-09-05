@@ -1,0 +1,50 @@
+.bracket-canvas-wrap.bracket-explorer { overflow: visible; padding: 24px clamp(16px, 3vw, 48px) 32px; }
+.bracket-explorer__toolbar { position: sticky; top: 90px; z-index: 5; padding-block: 10px; background: #0d0f12; display: flex; flex-wrap: wrap; gap: 12px 24px; align-items: center; }
+.bracket-explorer__toolbar button { display: inline-flex; align-items: center; justify-content: center; gap: 6px; }
+.bracket-explorer__toolbar button:not(:disabled):hover { border-color: var(--cyan); }
+.bracket-explorer__toolbar button, .bracket-explorer__toolbar select { min-height: 44px; padding: 10px 14px; border: 1px solid #586970; color: #e2edf2; background: #1c2024; font: inherit; font-size: 14px; }
+.bracket-explorer__toolbar button:disabled { opacity: .55; cursor: not-allowed; }
+.bracket-explorer__toolbar button[aria-pressed='true'] { background: var(--cyan); color: #071015; border-color: var(--cyan); }
+.bracket-explorer__toolbar label { display: flex; align-items: center; gap: 10px; font-size: 14px; }
+.bracket-explorer__modes { display: flex; gap: 6px; }
+.bracket-explorer__help { margin: 16px 0 8px; color: #b5c4cb; font-size: 13px; line-height: 1.6; }
+.bracket-explorer__selection { margin: 0 0 16px; min-height: 22px; color: var(--cyan); font-size: 13px; }
+.bracket-explorer__viewport { overflow: auto; height: clamp(280px, calc(100svh - 300px), 1100px); scroll-margin-top: 280px; overscroll-behavior: auto; scrollbar-color: #57737f #12191d; scrollbar-width: auto; cursor: grab; }
+.bracket-explorer__scaled { position: relative; margin-inline: auto; overflow: clip; }
+.bracket-explorer__modes output { align-self: center; min-width: 42px; text-align: center; font-variant-numeric: tabular-nums; }
+.bracket-explorer__viewport, .bracket-explorer__viewport button { user-select: none; }
+.bracket-explorer__viewport--dragging, .bracket-explorer__viewport--dragging button { cursor: grabbing; }
+.bracket-explorer .bracket-canvas { margin-inline: auto; }
+.bracket-explorer .bracket-canvas__round-title small { color: #aebdc4; font-size: 12px; }
+.bracket-explorer .bracket-canvas__side { background-color: transparent; text-align: left; font: inherit; color: #d3dde2; grid-template-columns: 42px minmax(0, 1fr) auto; padding: 3px 9px 3px 6px; }
+.bracket-explorer .bracket-canvas__side strong { font-size: 15px; }
+.bracket-explorer .bracket-canvas__side small { font-family: 'Noto Sans SC', sans-serif; font-size: 10px; color: #abbac2; }
+.bracket-explorer .bracket-canvas__side--winner { color: #fff; }
+.bracket-explorer .bracket-canvas__score { font-family: 'Space Grotesk', 'Noto Sans SC', sans-serif; font-size: 19px; font-variant-numeric: tabular-nums; }
+.bracket-explorer .bracket-canvas__match--placeholder .bracket-canvas__side { grid-template-columns: minmax(0, 1fr) auto; }
+.bracket-explorer .bracket-canvas__slot { font-size: 12px; }
+.bracket-explorer .portrait--bracket { width: 42px; height: 44px; }
+.bracket-explorer .bracket-canvas__match > footer { color: #abbac2; font-size: 10px; }
+.bracket-explorer .bracket-canvas__match--tracked { border-color: var(--cyan); }
+.bracket-explorer .bracket-canvas__side--tracked { background-color: #234552; }
+.bracket-explorer .bracket-canvas__lines .bracket-canvas__champion-line { stroke: #f4c95d; stroke-width: 2.5; }
+.bracket-explorer .bracket-canvas__lines .bracket-canvas__path--tracked { stroke: var(--cyan); stroke-width: 3; }
+.bracket-explorer .bracket-canvas__champion { padding: 12px; }
+.bracket-explorer .bracket-canvas__champion small { color: #d5c99f; font-size: 12px; }
+.bracket-explorer .bracket-canvas__champion:disabled { cursor: default; }
+.bracket-explorer :focus-visible { outline: 2px solid var(--cyan); outline-offset: -3px; }
+.bracket-explorer .bracket-explorer__mobile { display: none; }
+@media (max-width: 640px) {
+  .bracket-canvas-wrap.bracket-explorer { margin-inline: -17px; padding-top: 8px; }
+  .bracket-explorer .bracket-explorer__desktop, .bracket-explorer .bracket-explorer__view--current { display: none; }
+  .bracket-explorer .bracket-explorer__mobile { display: inline; }
+  .bracket-explorer__toolbar { top: 70px; flex-wrap: nowrap; gap: 10px; }
+  .bracket-explorer__toolbar label { flex: 1; min-width: 0; }
+  .bracket-explorer__toolbar select { width: 100%; min-width: 0; }
+  .bracket-explorer__views { order: 1; flex-shrink: 0; }
+  .bracket-explorer__help { margin: 4px 0 12px; font-size: 12px; }
+  .bracket-explorer__selection { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 8px; }
+  .bracket-explorer__selection--empty { display: none; }
+  .bracket-explorer__selection button { min-height: 44px; padding: 8px; color: var(--cyan); background: transparent; font: inherit; flex-shrink: 0; }
+  .bracket-explorer__viewport { height: max(280px, calc(100svh - 220px)); scroll-margin-top: 190px; }
+}

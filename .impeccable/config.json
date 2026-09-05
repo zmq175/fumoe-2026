@@ -1,0 +1,44 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "border-accent-on-rounded",
+        "value": "*",
+        "files": [
+          "src/styles.css"
+        ],
+        "createdAt": "2026-09-05T19:29:05.242Z",
+        "reason": "Agent review: all seven reported selectors are square header, statboard, focused match, vote draft bar, tab underline, admin stats and season card; no border radius on those elements. Detector associates unrelated nearby rounded rules."
+      },
+      {
+        "rule": "side-tab",
+        "value": "*",
+        "files": [
+          "src/styles.css"
+        ],
+        "createdAt": "2026-09-05T19:29:05.386Z",
+        "reason": "Agent review: preserved incumbent 9916d92 visual language; ten occurrences mark development code, vote feedback, notices, faction identity/rank/method, roster readiness, champion score and bracket placeholders. Existing black/paper/cyan system and finish review require preserving this local extension, not redesigning the site."
+      },
+      {
+        "rule": "overused-font",
+        "value": "space grotesk",
+        "files": [
+          "src/styles.css"
+        ],
+        "createdAt": "2026-09-05T19:29:05.536Z",
+        "reason": "Agent review: incumbent numeric and Latin display face paired with Noto Sans SC for Chinese; brand year, match scores and statistical values intentionally share this typography. Font popularity alone is not a defect in the preserved existing system."
+      },
+      {
+        "rule": "codex-grid-background",
+        "value": "*",
+        "files": [
+          "src/styles.css"
+        ],
+        "createdAt": "2026-09-05T19:30:19.011Z",
+        "reason": "User confirmed: homepage technology-style grid background must remain; future design improvements must preserve the existing overall visual identity."
+      }
+    ]
+  }
+}

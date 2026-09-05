@@ -1,15 +1,16 @@
 import { closeRoundAndAdvance, ensureRoundCanStart } from './progression'
 import { id, iso } from './security'
 import type { Env } from './types'
+import { roundOrderSql } from './season-config'
+import { snapshotSeasonStandings } from './season-results'
 
 type Round = { id:string; seasonId:string; stage:'swiss'|'knockout'; roundNumber:number; status:string; startsAt?:string; endsAt?:string }
 type LifecycleEnv = Pick<Env, 'DB'>
 type Advancement = { nextRoundId:string|null; championId:string|null }
 type Season = { id:string; status:string; scheduleMode:string; currentRoundId:string|null }
 
-const day=86_400_000
 const leaseDuration=5*60_000
-const roundOrder=`CASE stage WHEN 'swiss' THEN round_number ELSE 3+round_number END`
+const roundOrder=roundOrderSql
 
 export function completionSeasonState(advancement: Advancement, closedRoundId: string) {
   return {
@@ -40,10 +41,12 @@ async function releaseLease(db:D1Database,seasonId:string,token:string) {
 }
 
 async function rebaseRemainingSchedule(db:D1Database,round:Round,now:Date) {
-  const rounds=(await db.prepare(`SELECT id FROM tournament_rounds WHERE season_id=? AND status='scheduled' AND ${roundOrder}>=(SELECT ${roundOrder} FROM tournament_rounds WHERE id=?) ORDER BY ${roundOrder}`).bind(round.seasonId,round.id).all<{id:string}>()).results
+  const rounds=(await db.prepare(`SELECT id,starts_at AS startsAt,ends_at AS endsAt FROM tournament_rounds WHERE season_id=? AND status='scheduled' AND ${roundOrder}>=(SELECT ${roundOrder} FROM tournament_rounds WHERE id=?) ORDER BY ${roundOrder}`).bind(round.seasonId,round.id).all<{id:string;startsAt:string;endsAt:string}>()).results
   if(!rounds.length)return
-  const statements=rounds.map((item,index)=>db.prepare('UPDATE tournament_rounds SET starts_at=?,ends_at=? WHERE id=?').bind(new Date(now.getTime()+index*day).toISOString(),new Date(now.getTime()+(index+1)*day).toISOString(),item.id))
-  statements.push(db.prepare('UPDATE seasons SET ends_at=?,updated_at=? WHERE id=?').bind(new Date(now.getTime()+rounds.length*day).toISOString(),now.toISOString(),round.seasonId))
+  const shift=now.getTime()-new Date(rounds[0].startsAt).getTime()
+  const moved=rounds.map(item=>({...item,startsAt:new Date(new Date(item.startsAt).getTime()+shift).toISOString(),endsAt:new Date(new Date(item.endsAt).getTime()+shift).toISOString()}))
+  const statements=moved.map(item=>db.prepare('UPDATE tournament_rounds SET starts_at=?,ends_at=? WHERE id=?').bind(item.startsAt,item.endsAt,item.id))
+  statements.push(db.prepare('UPDATE seasons SET ends_at=?,updated_at=? WHERE id=?').bind(moved.at(-1)!.endsAt,now.toISOString(),round.seasonId))
   await db.batch(statements)
 }
 
@@ -64,6 +67,7 @@ export async function closeRound(env:LifecycleEnv, round:Round, actorId?:string,
   const advancement=await closeRoundAndAdvance(env,round)
   const timestamp=iso()
   const state=completionSeasonState(advancement,round.id)
+  if(state.championId)await snapshotSeasonStandings(env.DB,round.seasonId)
   await env.DB.batch([
     env.DB.prepare(`UPDATE tournament_rounds SET status='closed' WHERE id=?`).bind(round.id),
     env.DB.prepare(`UPDATE seasons SET status=?,current_round_id=?,champion_character_id=?,completed_at=CASE WHEN ?='completed' THEN ? ELSE completed_at END,updated_at=?,updated_by=? WHERE id=?`).bind(state.status,state.currentRoundId,state.championId,state.status,timestamp,timestamp,actorId??null,round.seasonId)
@@ -96,7 +100,7 @@ export async function runScheduledLifecycle(env:LifecycleEnv, now=new Date()) {
     const next=nextRoundId
       ? await env.DB.prepare(`SELECT id,season_id AS seasonId,stage,round_number AS roundNumber,status,starts_at AS startsAt,ends_at AS endsAt FROM tournament_rounds WHERE id=? AND season_id=? AND status='scheduled'`).bind(nextRoundId,season.id).first<Round>()
       : await scheduledRound(env.DB,season)
-    if(!next||!next.startsAt||(!closed&&next.startsAt>timestamp))return {closed,started:0,locked:false}
+    if(!next||!next.startsAt||next.startsAt>timestamp)return {closed,started:0,locked:false}
     try { await startRound(env,next,undefined,undefined,now);return {closed,started:1,locked:false} }
     catch(error) { await audit(env.DB,'round_auto_start_skipped',next,{error:error instanceof Error?error.message:'无法自动开始'});return {closed,started:0,locked:false} }
   } finally { await releaseLease(env.DB,season.id,token) }

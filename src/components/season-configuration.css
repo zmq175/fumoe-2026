@@ -1,0 +1,31 @@
+.season-config { min-width: 0; margin-block: 24px 32px; }
+.season-admin-workspace { min-width: 0; }
+.admin-tabs { overflow-x: auto; }
+.admin-tabs > button { flex: 0 0 auto; white-space: nowrap; min-height: 44px; }
+.season-config .admin-actions .primary-button { background: var(--cyan); color: var(--ink); }
+.season-config__scroll-hint { display: none; }
+.season-config__table:focus-visible { outline: 2px solid #57d4ff; outline-offset: 3px; }
+@media (max-width: 640px) { .season-config__scroll-hint { display: block; } }
+.season-config h3 { margin-bottom: 12px; }
+.season-config p { max-width: 72ch; line-height: 1.65; color: #454545; }
+.season-config fieldset { min-width: 0; border: 1px solid #39414c; padding: 16px; margin-block: 20px; }
+.season-config legend { padding-inline: 6px; font-weight: 700; }
+.season-config__fields, .season-config__faction { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.season-config label { display: flex; flex-direction: column; gap: 8px; min-width: 0; font-size: 14px; }
+.season-config input, .season-config select, .season-config textarea { width: 100%; min-width: 0; min-height: 44px; border: 1px solid #85857e; border-radius: 4px; background: #fff; color: #222; padding: 10px; font: inherit; color-scheme: light; }
+.season-config input:focus-visible, .season-config select:focus-visible, .season-config textarea:focus-visible, .season-config summary:focus-visible { outline: 2px solid #57d4ff; outline-offset: 3px; }
+.season-config :disabled { opacity: .65; cursor: not-allowed; }
+.season-config .season-config__check { flex-direction: row; align-items: center; }
+.season-config__check input { width: 20px; min-height: 20px; flex-shrink: 0; }
+.season-config__preview { font-weight: 700; font-variant-numeric: tabular-nums; }
+.season-config__table { overflow-x: auto; }
+.season-config table { width: 100%; min-width: 420px; border-collapse: collapse; }
+.season-config th, .season-config td { padding: 10px; border-bottom: 1px solid #39414c; text-align: left; font-variant-numeric: tabular-nums; }
+.season-config td input { max-width: 130px; }
+.season-config details { border-block-start: 1px solid #39414c; padding-block: 16px; }
+.season-config summary { cursor: pointer; min-height: 44px; font-weight: 700; padding-block: 10px; }
+.season-config__reason { margin-block: 24px 16px; }
+.season-config textarea { resize: vertical; min-height: 88px; }
+.season-config .season-config__roster { min-height: 240px; white-space: pre; font-family: monospace; }
+.season-config .form-error { color: #9f1529; }
+@media (max-width: 640px) { .season-config__fields, .season-config__faction { grid-template-columns: minmax(0, 1fr); } .season-config fieldset { padding: 12px; } }

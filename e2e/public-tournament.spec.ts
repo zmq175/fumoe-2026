@@ -1,3 +1,4 @@
+import { legacyPortrait } from '../src/lib/legacy-assets'
 import { expect, test } from '@playwright/test'
 import { currentSeason, later, matches, mockPublicApi, now, standings } from './fixtures'
 
@@ -172,12 +173,12 @@ test('renders standings, knockout bracket, and match history tabs', async ({ pag
   await expect(page.getByRole('tab', { name: '小组积分', selected: true })).toBeVisible()
   await expect(page.locator('.standing__row--qualifying')).toHaveCount(2)
   await expect(page.locator('.standing__row .portrait img')).toHaveCount(2)
-  await expect(page.locator('.standing__row .portrait img').first()).toHaveAttribute('src','/portraits/c001.png')
+  await expect(page.locator('.standing__row .portrait img').first()).toHaveAttribute('src',legacyPortrait('c001')!)
 
   await page.getByRole('tab', { name: '淘汰赛签表' }).click()
   await expect(page.getByRole('tab', { name: '淘汰赛签表', selected: true })).toBeVisible()
   await expect(page.getByRole('region', { name: '淘汰赛签表' })).toBeVisible()
-  await expect(page.getByText('16 强', { exact: true })).toBeVisible()
+  await expect(page.getByRole('region', { name: '可滚动淘汰赛画布' }).getByText('16 强', { exact: true })).toBeVisible()
   await expect(page.locator('.bracket-canvas__side--winner')).toHaveCount(1)
   await expect(page.locator('.bracket-canvas__match:not(.bracket-canvas__match--placeholder) .bracket-canvas__score')).toHaveCount(2)
   await expect(page.locator('.bracket-canvas__match:not(.bracket-canvas__match--placeholder) .portrait')).toHaveCount(2)
@@ -200,7 +201,7 @@ test('renders standings, knockout bracket, and match history tabs', async ({ pag
   await expect(page.getByRole('heading', { name: '瑞士轮 第 1 轮' })).toBeVisible()
   await expect(page.getByText('芙宁娜', { exact: true }).last()).toBeVisible()
   await expect(page.locator('.history-match .portrait img')).toHaveCount(6)
-  await expect(page.locator('.history-match .portrait img').first()).toHaveAttribute('src','/portraits/c001.png')
+  await expect(page.locator('.history-match .portrait img').first()).toHaveAttribute('src',legacyPortrait('c001')!)
   await expect(page.getByRole('heading', { name: '瑞士轮 2' })).toBeVisible()
   await expect(page.getByText('瑞士轮 1 结束后生成具体对阵')).toBeVisible()
   await expect(page.locator('.swiss-preview').first().locator('section')).toHaveCount(8)
@@ -233,7 +234,7 @@ test('keeps historical season data after current-season polling', async ({ page 
   await expect(page.getByText('流萤').last()).toBeVisible()
 })
 
-test('uses optimized static match art and falls back for versioned art', async ({ page }) => {
+test('does not replace missing versioned art with another season image', async ({ page }) => {
   const versioned={...matches[0],leftArtworkKey:'characters/c001/rev-2/match.webp'}
   await mockPublicApi(page,{matches:[versioned,matches[1]]})
   let versionedRequests=0
@@ -241,9 +242,8 @@ test('uses optimized static match art and falls back for versioned art', async (
   await page.goto('/')
   const left=page.getByAltText('芙宁娜 角色立绘').first()
   await expect.poll(()=>versionedRequests).toBe(1)
-  await expect(left).toHaveAttribute('src','/artwork/c001/match.webp')
-  await expect(left).toHaveAttribute('loading','eager')
-  await expect(left).toHaveAttribute('fetchpriority','high')
+  await expect(left).toHaveCount(0)
+  await expect(page.getByLabel('投票给芙宁娜').first()).toBeVisible()
 })
 
 test('serves every finalized transparent portrait', async ({ request }) => {
@@ -255,13 +255,14 @@ test('serves every finalized transparent portrait', async ({ request }) => {
   }
 })
 
-test('falls back to the frozen avatar when a portrait fails', async ({ page }) => {
+test('shows a placeholder when the frozen avatar is missing', async ({ page }) => {
   await mockPublicApi(page,{standings:[{...standings[0],avatarArtworkKey:'characters/c001/rev-2/avatar.webp'}]})
   await page.route('**/portraits/c001.png',(route)=>route.fulfill({status:404,body:''}))
   await page.route('**/api/media/characters/c001/rev-2/avatar.webp',(route)=>route.fulfill({status:404,body:''}))
   await page.goto('/')
   await page.getByRole('button',{name:'赛程赛况'}).click()
-  await expect(page.locator('.standing__row .portrait img')).toHaveAttribute('src','/artwork/c001/avatar.webp')
+  await expect(page.locator('.standing__row .portrait img')).toHaveCount(0)
+  await expect(page.locator('.standing__row .portrait b')).toHaveText('芙')
 })
 
 test.describe('mobile bracket', () => {
@@ -275,6 +276,6 @@ test.describe('mobile bracket', () => {
 
     const bracket = page.getByRole('region', { name: '淘汰赛签表' })
     await expect(bracket).toBeVisible()
-    expect(await bracket.evaluate((element) => element.scrollWidth > element.clientWidth)).toBe(true)
+    expect(await bracket.getByRole('region',{name:'可滚动淘汰赛画布'}).evaluate((element) => element.scrollWidth > element.clientWidth)).toBe(true)
   })
 })

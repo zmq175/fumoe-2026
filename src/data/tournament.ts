@@ -3,7 +3,7 @@ export type Game = '原神' | '崩坏：星穹铁道' | '绝区零' | '鸣潮' |
 export type Character = {
   id: string
   name: string
-  game: Game
+  game: string
   group: string
   seed: number
   officialArtworkKey: string

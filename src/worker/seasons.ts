@@ -1,3 +1,4 @@
+import { legacyFormat, validateRoster } from '../lib/season-format'
 export type SeasonStatus = 'draft'|'published'|'live'|'completed'|'archived'
 export type Season = { id:string; slug:string; name:string; status:SeasonStatus; isCurrent:boolean; startsAt:string|null; endsAt:string|null; championCharacterId:string|null; announcement:string; historyUnlocked:boolean }
 export type SeasonEntry = { characterId:string; groupCode:string; seed:number }
@@ -16,17 +17,8 @@ export function canEditRoster(season:{status:SeasonStatus;rosterLocked:boolean})
   return season.status==='draft'&&!season.rosterLocked
 }
 
-export function validateSeasonRoster(entries:SeasonEntry[]) {
-  const groups=['A','B','C','D','E','F','G','H']
-  const groupCounts=Object.fromEntries(groups.map((group)=>[group,0])) as Record<string,number>
-  for(const entry of entries) if(entry.groupCode in groupCounts)groupCounts[entry.groupCode]++
-  const result=(valid:boolean,error:string|null)=>({valid,error,groupCounts})
-  if(entries.length!==128)return result(false,'赛季名单必须包含 128 位角色')
-  if(new Set(entries.map((entry)=>entry.characterId)).size!==entries.length)return result(false,'赛季名单包含重复角色')
-  if(new Set(entries.map((entry)=>entry.seed)).size!==entries.length)return result(false,'赛季名单包含重复种子')
-  if(entries.some((entry)=>entry.seed<1||entry.seed>128))return result(false,'种子必须在 1 到 128 之间')
-  if(groups.some((group)=>groupCounts[group]!==16))return result(false,'每组必须恰好包含 16 位角色')
-  return result(true,null)
+export function validateSeasonRoster(entries:SeasonEntry[],format=legacyFormat()) {
+  return validateRoster(entries,format)
 }
 
 export function homepageMode(input:{currentStatus:SeasonStatus|null;hasPreviousChampion:boolean}) {

@@ -55,8 +55,13 @@ try {
   const expected=[64,64,64,8,4,2,1]
   for(let index=0;index<7;index++){
     const rounds=(await request('/api/public/rounds')).rounds
-    const round=rounds[index]
+    let round=rounds[index]
     if(!round)throw new Error(`缺少第 ${index+1} 轮`)
+    if(round.status==='scheduled'){
+      const started=await fetch(`http://127.0.0.1:${port}/cdn-cgi/handler/scheduled?format=json&time=${Date.parse(round.startsAt)}`,{signal:AbortSignal.timeout(30_000)})
+      if(!started.ok)throw new Error(`${round.name} 开赛 Cron 触发失败`)
+      round=(await request('/api/public/rounds')).rounds.find((item)=>item.id===round.id)
+    }
     progress(`第 ${index+1}/7 轮：${round.name}`)
     if(round.status!=='live')throw new Error(`${round.name} 未由 Cron 自动启动`)
     const matches=(await request('/api/public/matches')).matches.filter((match)=>match.roundId===round.id)

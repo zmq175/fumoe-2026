@@ -54,7 +54,7 @@ describe('赛事推进规则', () => {
   })
 
   it('完整演练三轮瑞士制和四轮淘汰赛', () => {
-    const players=['A','B','C','D','E','F','G','H'].flatMap((group)=>Array.from({length:16},(_,index)=>character(`${group}${index+1}`,group,index+1,`游戏${index%4}`)))
+    const players=['A','B','C','D','E','F','G','H'].flatMap((group,groupIndex)=>Array.from({length:16},(_,index)=>character(`${group}${index+1}`,group,groupIndex*16+index+1,`游戏${index%4}`)))
     const result=simulateSeasonBracket(players,(left,right)=>left.seed<=right.seed?left.id:right.id)
     expect(result.roundMatchCounts).toEqual([64,64,64,8,4,2,1])
     expect(result.championId).toBe('A1')

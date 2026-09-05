@@ -1,4 +1,4 @@
-export type Crop={x:number;y:number;zoom:number;rotation:number}
+export type Crop={x:number;y:number;zoom:number;rotation:number;area?:CropArea}
 export type CropArea={x:number;y:number;width:number;height:number}
 
 export const defaultCrop:Crop={x:0,y:0,zoom:1,rotation:0}
@@ -11,8 +11,20 @@ export function clampCrop(value:Crop):Crop {
 export function parseCrop(value?:string|null):Crop {
   try {
     const parsed=JSON.parse(value??'')
-    return clampCrop({x:Number(parsed.x)||0,y:Number(parsed.y)||0,zoom:Number(parsed.zoom)||1,rotation:Number(parsed.rotation)||0})
+    const crop=clampCrop({x:Number(parsed.x)||0,y:Number(parsed.y)||0,zoom:Number(parsed.zoom)||1,rotation:Number(parsed.rotation)||0})
+    if(validPercentArea(parsed.area))crop.area=parsed.area
+    return crop
   } catch { return defaultCrop }
+}
+
+export function validPercentArea(area:unknown):area is CropArea {
+  if(!area||typeof area!=='object')return false
+  const a=area as CropArea
+  return [a.x,a.y,a.width,a.height].every(Number.isFinite)&&a.x>=0&&a.y>=0&&a.width>0&&a.height>0&&a.x+a.width<=100.001&&a.y+a.height<=100.001
+}
+
+export function percentAreaToPixels(area:CropArea,width:number,height:number):CropArea {
+  return {x:area.x*width/100,y:area.y*height/100,width:area.width*width/100,height:area.height*height/100}
 }
 
 export function rotateCrop(crop:Crop,amount:number):Crop {

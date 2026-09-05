@@ -1,4 +1,11 @@
+import { legacyPortrait } from '../lib/legacy-assets'
+import { calculateSeasonStandingsV1, snapshotSeasonStandings } from './season-results'
+import { readFormat, legacyFormat, formatSchedule, formatGroups, seasonFormatSchema } from '../lib/season-format'
+import { insertPairStatement, loadSeasonFormat, roundStatements } from './season-config'
+import { firstRoundPairs } from './tournament'
+import { configurationRoutes } from './configuration-routes'
 import { Hono } from 'hono'
+import { HTTPException } from 'hono/http-exception'
 import { cors } from 'hono/cors'
 import { zValidator } from '@hono/zod-validator'
 import { z } from 'zod'
@@ -23,41 +30,47 @@ app.use('/api/*', async (c, next) => {
   await next()
 })
 
+app.route('/api/admin/seasons',configurationRoutes)
+
 const requestCodeInput = z.object({ email: z.string().email().max(254), turnstileToken: z.string().min(1).optional() })
 const verifyCodeInput = z.object({ email: z.string().email().max(254), code: z.string().regex(/^\d{6}$/) })
 const voteChoiceInput=z.object({matchId:z.string().min(1).max(80),characterId:z.string().min(1).max(80)})
 const voteInput = z.union([
-  z.object({choices:z.array(voteChoiceInput).min(1).max(64),deviceFingerprint:z.string().min(12).max(256).optional()}),
+  z.object({choices:z.array(voteChoiceInput).min(1).max(128),deviceFingerprint:z.string().min(12).max(256).optional()}),
   voteChoiceInput.extend({deviceFingerprint:z.string().min(12).max(256).optional(),turnstileToken:z.string().optional()})
 ])
 const editMatchInput = z.object({ status: z.enum(['scheduled', 'live', 'closed', 'review']).optional(), leftVotes: z.number().int().min(0).optional(), rightVotes: z.number().int().min(0).optional(), reason: z.string().min(5).max(500) })
 const reviewVoteInput = z.object({ action: z.enum(['approve', 'reject', 'revoke']), reason: z.string().min(5).max(500) })
 const settingInput = z.object({ value: z.string().max(5000), reason: z.string().min(5).max(500) })
-const characterUpdateInput = z.object({ summary: z.string().min(8).max(500).optional(), groupCode: z.enum(['A','B','C','D','E','F','G','H']).optional(), seed: z.number().int().min(1).max(128).optional(), artworkSourceUrl: z.string().url().optional(), artworkSourceNote: z.string().max(500).optional(), artworkSourceType: z.enum(['official','community-wiki','pending']).optional(), artworkQualityStatus: z.enum(['pending','verified','rejected']).optional(), artworkFocusX: z.number().int().min(0).max(100).optional(), artworkFocusY: z.number().int().min(0).max(100).optional(), reason: z.string().min(5).max(500) })
+const characterUpdateInput = z.object({ summary: z.string().min(8).max(500).optional(), groupCode: z.string().regex(/^[A-P]$/).optional(), seed: z.number().int().min(1).max(256).optional(), artworkSourceUrl: z.string().url().optional(), artworkSourceNote: z.string().max(500).optional(), artworkSourceType: z.enum(['official','community-wiki','pending']).optional(), artworkQualityStatus: z.enum(['pending','verified','rejected']).optional(), artworkFocusX: z.number().int().min(0).max(100).optional(), artworkFocusY: z.number().int().min(0).max(100).optional(), reason: z.string().min(5).max(500) })
 const roundControlInput = z.object({ action: z.enum(['start-now','pause','resume','close','publish-schedule','lock-roster','unlock-roster']), roundId: z.string().max(80).optional(), scheduledStartAt: z.string().datetime().optional(), reason: z.string().min(5).max(500) })
 const localActionInput = z.object({ action: z.enum(['reset','simulate-round','clear-votes']), reason: z.string().min(5).max(500) })
-const cropInput = z.object({ x: z.number().min(-5000).max(5000), y: z.number().min(-5000).max(5000), zoom: z.number().min(1).max(4), rotation:z.number().min(0).max(270).optional().default(0) })
+const cropAreaInput=z.object({x:z.number().min(0).max(100),y:z.number().min(0).max(100),width:z.number().positive().max(100),height:z.number().positive().max(100)}).refine(a=>a.x+a.width<=100.001&&a.y+a.height<=100.001)
+const cropInput = z.object({ x: z.number().min(-5000).max(5000), y: z.number().min(-5000).max(5000), zoom: z.number().min(1).max(4), rotation:z.number().min(0).max(270).optional().default(0),area:cropAreaInput.optional() })
 const artworkMetadataInput = z.object({ summary:z.string().min(8).max(500), sourceUrl: z.string().url().optional(), sourceNote: z.string().max(500).optional(), sourceType: z.enum(['official','community-wiki','pending']), reason: z.string().min(5).max(500), galleryCrop: cropInput, matchCrop: cropInput, avatarCrop: cropInput })
-const seasonCreateInput = z.object({ name:z.string().min(3).max(80), slug:z.string().regex(/^[a-z0-9]+(?:-[a-z0-9]+)*$/).optional(), startsAt:z.string().datetime(), copyFromSeasonId:z.string().max(80).optional(), reason:z.string().min(5).max(500) })
+const seasonCreateInput = z.object({ name:z.string().min(3).max(80), slug:z.string().regex(/^[a-z0-9]+(?:-[a-z0-9]+)*$/).optional(), startsAt:z.string().datetime(), copyFromSeasonId:z.string().max(80).optional(), format:seasonFormatSchema.optional(), reason:z.string().min(5).max(500) })
 const seasonActionInput = z.object({ action:z.enum(['publish','archive','unlock-history','lock-history']), reason:z.string().min(5).max(500) })
 const seasonUpdateInput = z.object({ name:z.string().min(3).max(80).optional(), announcement:z.string().max(5000).optional(), reason:z.string().min(5).max(500) })
-const seasonEntryInput = z.object({ groupCode:z.enum(['A','B','C','D','E','F','G','H']), seed:z.number().int().min(1).max(128), reason:z.string().min(5).max(500) })
+const seasonEntryInput = z.object({ groupCode:z.string().regex(/^[A-P]$/), seed:z.number().int().min(1).max(256), reason:z.string().min(5).max(500) })
 const imageMimeTypes = new Set(['image/png','image/jpeg','image/webp'])
 async function validImageSignature(file: File) { const bytes = new Uint8Array(await file.slice(0,16).arrayBuffer()); return (bytes[0]===0x89&&bytes[1]===0x50&&bytes[2]===0x4e&&bytes[3]===0x47)||(bytes[0]===0xff&&bytes[1]===0xd8)||(bytes[0]===0x52&&bytes[1]===0x49&&bytes[2]===0x46&&bytes[3]===0x46&&bytes[8]===0x57&&bytes[9]===0x45&&bytes[10]===0x42&&bytes[11]===0x50) }
 const isLocalDev = (env: Env) => developmentBypassEnabled(env)
 
 function requireRole(session: Session | null, roles: Role[]) { return !!session && roles.includes(session.role) }
 
-type SeasonRow = { id:string;slug:string;name:string;status:SeasonStatus;isCurrent:number;startsAt:string|null;endsAt:string|null;championCharacterId:string|null;championName?:string|null;championGame?:string|null;championArtworkKey?:string|null;announcement:string;historyUnlocked:number;rosterLocked:number;scheduleMode:string;currentRoundId:string|null }
-const seasonColumns = `id,slug,name,status,is_current AS isCurrent,starts_at AS startsAt,ends_at AS endsAt,champion_character_id AS championCharacterId,announcement,history_unlocked AS historyUnlocked,roster_locked AS rosterLocked,schedule_mode AS scheduleMode,current_round_id AS currentRoundId`
+type SeasonRow = { formatJson?:string|null;rulesVersion?:string;id:string;slug:string;name:string;status:SeasonStatus;isCurrent:number;startsAt:string|null;endsAt:string|null;championCharacterId:string|null;championName?:string|null;championGame?:string|null;championArtworkKey?:string|null;announcement:string;historyUnlocked:number;rosterLocked:number;scheduleMode:string;currentRoundId:string|null }
+const seasonColumns = `format_json AS formatJson,rules_version AS rulesVersion,id,slug,name,status,is_current AS isCurrent,starts_at AS startsAt,ends_at AS endsAt,champion_character_id AS championCharacterId,announcement,history_unlocked AS historyUnlocked,roster_locked AS rosterLocked,schedule_mode AS scheduleMode,current_round_id AS currentRoundId`
 async function resolveSeason(db:D1Database,slug?:string|null) {
   return slug
     ? db.prepare(`SELECT ${seasonColumns} FROM seasons WHERE slug=?`).bind(slug).first<SeasonRow>()
     : db.prepare(`SELECT ${seasonColumns} FROM seasons WHERE is_current=1`).first<SeasonRow>()
 }
 
+function publicMatchPortraits(match:Record<string,unknown>,season:SeasonRow){
+  return {...match,leftAvatarArtworkKey:season.rulesVersion==='1'?legacyPortrait(String(match.leftId)):match.leftAvatarArtworkKey,rightAvatarArtworkKey:season.rulesVersion==='1'?legacyPortrait(String(match.rightId)):match.rightAvatarArtworkKey}
+}
 function publicSeason(season:SeasonRow|null) {
-  return season?{...season,isCurrent:Boolean(season.isCurrent),historyUnlocked:Boolean(season.historyUnlocked)}:null
+  return season?{...season,format:readFormat(season.formatJson,season.rulesVersion),isCurrent:Boolean(season.isCurrent),historyUnlocked:Boolean(season.historyUnlocked)}:null
 }
 
 async function checkTurnstile(token: string, action: 'login', request: Request, env: Env) {
@@ -102,7 +115,7 @@ app.get('/api/public/matches', async (c) => {
   const season=await resolveSeason(c.env.DB,c.req.query('season')); if(!season)return c.json({matches:[]})
   const round=c.req.query('round')
   const result=await c.env.DB.prepare(`SELECT m.id,m.group_code AS groupCode,m.bracket_position AS bracketPosition,m.left_votes AS leftVotes,m.right_votes AS rightVotes,m.status,m.winner_character_id AS winnerCharacterId,r.id AS roundId,r.stage,r.round_number AS roundNumber,r.name AS roundName,r.starts_at AS startsAt,r.ends_at AS endsAt,lc.id AS leftId,COALESCE(le.name_snapshot,lc.name) AS leftName,COALESCE(le.game_snapshot,lg.name) AS leftGame,le.artwork_match_key_snapshot AS leftArtworkKey,rc.id AS rightId,COALESCE(re.name_snapshot,rc.name) AS rightName,COALESCE(re.game_snapshot,rg.name) AS rightGame,re.artwork_match_key_snapshot AS rightArtworkKey FROM matches m JOIN tournament_rounds r ON r.id=m.round_id JOIN characters lc ON lc.id=m.left_character_id JOIN games lg ON lg.id=lc.game_id JOIN characters rc ON rc.id=m.right_character_id JOIN games rg ON rg.id=rc.game_id LEFT JOIN season_entries le ON le.season_id=r.season_id AND le.character_id=lc.id LEFT JOIN season_entries re ON re.season_id=r.season_id AND re.character_id=rc.id WHERE r.season_id=? ${round?'AND r.id=?':''} ORDER BY r.starts_at DESC,r.round_number DESC,m.group_code,m.bracket_position`).bind(...(round?[season.id,round]:[season.id])).all()
-  return c.json({matches:result.results})
+  return c.json({matches:result.results.map(match=>publicMatchPortraits(match,season))})
 })
 
 app.get('/api/public/rounds', async (c) => {
@@ -113,17 +126,13 @@ app.get('/api/public/rounds', async (c) => {
 
 app.get('/api/public/standings', async (c) => {
   const season=await resolveSeason(c.env.DB,c.req.query('season')); if(!season)return c.json({standings:[]})
-  const result=await c.env.DB.prepare(`WITH swiss AS (
-    SELECT m.group_code AS groupCode,m.left_character_id AS characterId,m.right_character_id AS opponentId,m.left_votes AS votesFor,m.right_votes AS votesAgainst FROM matches m JOIN tournament_rounds r ON r.id=m.round_id WHERE r.season_id=? AND r.stage='swiss' AND m.status IN ('live','closed')
-    UNION ALL
-    SELECT m.group_code,m.right_character_id,m.left_character_id,m.right_votes,m.left_votes FROM matches m JOIN tournament_rounds r ON r.id=m.round_id WHERE r.season_id=? AND r.stage='swiss' AND m.status IN ('live','closed')
-  ),base AS (
-    SELECT se.group_code AS groupCode,se.character_id AS id,COALESCE(se.name_snapshot,c.name) AS name,COALESCE(se.game_snapshot,g.name) AS game,se.seed FROM season_entries se JOIN characters c ON c.id=se.character_id JOIN games g ON g.id=c.game_id WHERE se.season_id=?
-  ),standings AS (
-    SELECT b.groupCode,b.id,b.name,b.game,b.seed,COALESCE(SUM(CASE WHEN s.votesFor=s.votesAgainst THEN 1 WHEN s.votesFor>s.votesAgainst THEN 3 ELSE 0 END),0) AS points,COALESCE(SUM(s.votesFor-s.votesAgainst),0) AS voteDifference FROM base b LEFT JOIN swiss s ON s.characterId=b.id GROUP BY b.groupCode,b.id,b.name,b.game,b.seed
-  )
-  SELECT standings.groupCode,standings.id,standings.name,standings.game,standings.seed,standings.points,standings.voteDifference,COALESCE(SUM(opponent.points),0) AS opponentPoints FROM standings LEFT JOIN swiss ON swiss.characterId=standings.id LEFT JOIN standings opponent ON opponent.id=swiss.opponentId GROUP BY standings.groupCode,standings.id,standings.name,standings.game,standings.seed,standings.points,standings.voteDifference ORDER BY standings.groupCode,standings.points DESC,opponentPoints DESC,standings.voteDifference DESC,standings.seed ASC`).bind(season.id,season.id,season.id).all()
-  return c.json({standings:result.results})
+  if(['completed','archived'].includes(season.status)){
+    const saved=await c.env.DB.prepare('SELECT standings_json AS standings FROM season_result_snapshots WHERE season_id=?').bind(season.id).first<{standings:string}>()
+    if(saved&&!season.historyUnlocked)return c.json({standings:JSON.parse(saved.standings)})
+  }
+  const entries=(await c.env.DB.prepare('SELECT character_id AS id,artwork_avatar_key_snapshot AS key FROM season_entries WHERE season_id=?').bind(season.id).all<{id:string;key:string|null}>()).results
+  const avatars=new Map(entries.map(e=>[e.id,season.rulesVersion==='1'?legacyPortrait(e.id):e.key]))
+  return c.json({standings:(await calculateSeasonStandingsV1(c.env.DB,season.id)).map(row=>({...row,avatarArtworkKey:avatars.get(row.id)??null}))})
 })
 
 app.get('/api/public/characters',async(c)=>{
@@ -136,6 +145,7 @@ app.get('/api/media/:key{.+}', async (c) => {
   const key = c.req.param('key')
   const object = await c.env.MEDIA.get(key)
   if (!object) {
+    if(key.split('/').length>3)return c.json({error:'该版本素材不存在'},404)
     // The Vite build copies approved preview assets to dist/artwork for complete local E2E runs.
     const fallback=await c.env.ASSETS.fetch(new Request(new URL(`/artwork/${key.replace('characters/', '')}`, c.req.url),c.req.raw))
     return fallback.ok&&mediaFallbackIsImage(fallback.headers.get('content-type'))?fallback:c.json({error:'素材不存在'},404)
@@ -204,10 +214,11 @@ app.post('/api/votes', zValidator('json', voteInput), async (c) => {
   const session=c.get('session');if(!session)return c.json({error:'请先登录后投票'},401)
   const {choices,deviceFingerprint,legacy}=normalizeVoteRequest(c.req.valid('json'))
   const matchIds=choices.map((choice)=>choice.matchId)
-  const placeholders=matchIds.map(()=>'?').join(',')
+  const placeholders='SELECT value FROM json_each(?)'
+  const matchIdsJson=JSON.stringify(matchIds)
   const [matchRows,existingRows]=await Promise.all([
-    c.env.DB.prepare(`SELECT m.id,m.left_character_id AS leftCharacterId,m.right_character_id AS rightCharacterId,m.status,r.starts_at AS startsAt,r.ends_at AS endsAt,s.status AS seasonStatus,s.is_current AS isCurrent FROM matches m JOIN tournament_rounds r ON r.id=m.round_id JOIN seasons s ON s.id=r.season_id WHERE m.id IN (${placeholders})`).bind(...matchIds).all<VoteMatch>(),
-    c.env.DB.prepare(`SELECT match_id AS matchId,character_id AS characterId,risk_status AS riskStatus,created_at AS createdAt FROM votes WHERE voter_id=? AND match_id IN (${placeholders})`).bind(session.sub,...matchIds).all<ExistingVote>()
+    c.env.DB.prepare(`SELECT m.id,m.left_character_id AS leftCharacterId,m.right_character_id AS rightCharacterId,m.status,r.starts_at AS startsAt,r.ends_at AS endsAt,s.status AS seasonStatus,s.is_current AS isCurrent FROM matches m JOIN tournament_rounds r ON r.id=m.round_id JOIN seasons s ON s.id=r.season_id WHERE m.id IN (${placeholders})`).bind(matchIdsJson).all<VoteMatch>(),
+    c.env.DB.prepare(`SELECT match_id AS matchId,character_id AS characterId,risk_status AS riskStatus,created_at AS createdAt FROM votes WHERE voter_id=? AND match_id IN (${placeholders})`).bind(session.sub,matchIdsJson).all<ExistingVote>()
   ])
   const plan=planBatchVotes(choices,matchRows.results,existingRows.results,iso())
   if(!plan.ok)return c.json({error:plan.error},plan.error.includes('角色')?400:409)
@@ -215,14 +226,15 @@ app.post('/api/votes', zValidator('json', voteInput), async (c) => {
   const sameIpVotes=await c.env.DB.prepare("SELECT COUNT(*) AS count FROM votes WHERE ip_hash=? AND created_at > datetime('now','-10 minutes')").bind(ipHash).first<{count:number}>()
   const createdAt=iso()
   const created=plan.newVotes.map((choice,index)=>({choice,voteId:id(),risk:voteRiskDecision((sameIpVotes?.count??0)+index)}))
-  const statements=created.flatMap(({choice,voteId,risk},index)=>[
-    c.env.DB.prepare('INSERT INTO votes(id,match_id,voter_id,character_id,risk_status,ip_hash,device_hash,created_at) VALUES(?,?,?,?,?,?,?,?)').bind(voteId,choice.matchId,session.sub,choice.characterId,risk.riskStatus,ipHash,deviceHash,createdAt),
-    c.env.DB.prepare(`UPDATE matches SET left_votes=left_votes + CASE WHEN left_character_id=? THEN 1 ELSE 0 END,right_votes=right_votes + CASE WHEN right_character_id=? THEN 1 ELSE 0 END,updated_at=? WHERE id=?`).bind(choice.characterId,choice.characterId,createdAt,choice.matchId),
-    c.env.DB.prepare('INSERT INTO audit_logs(id,actor_id,action,entity_type,entity_id,after_json) VALUES(?,?,?,?,?,?)').bind(id(),session.sub,'vote_cast','vote',voteId,JSON.stringify({matchId:choice.matchId,characterId:choice.characterId,riskStatus:risk.riskStatus})),
-    ...(risk.recordVelocityEvent?[c.env.DB.prepare('INSERT INTO risk_events(id,vote_id,user_id,event_type,score,detail_json) VALUES(?,?,?,?,?,?)').bind(id(),voteId,session.sub,'velocity_observed',40,JSON.stringify({count:(sameIpVotes?.count??0)+index,action:'counted'}))]:[])
-  ])
+  const rows=JSON.stringify(created.map(({choice,voteId,risk},index)=>({...choice,voteId,riskStatus:risk.riskStatus,auditId:id(),eventId:id(),recordEvent:risk.recordVelocityEvent?1:0,velocity:(sameIpVotes?.count??0)+index})))
+  const statements=created.length?[
+    c.env.DB.prepare(`INSERT INTO votes(id,match_id,voter_id,character_id,risk_status,ip_hash,device_hash,created_at) SELECT json_extract(value,'$.voteId'),json_extract(value,'$.matchId'),?,json_extract(value,'$.characterId'),json_extract(value,'$.riskStatus'),?,?,? FROM json_each(?)`).bind(session.sub,ipHash,deviceHash,createdAt,rows),
+    c.env.DB.prepare(`WITH selected AS (SELECT json_extract(value,'$.matchId') AS matchId,json_extract(value,'$.characterId') AS characterId FROM json_each(?)) UPDATE matches SET left_votes=left_votes+CASE WHEN left_character_id=(SELECT characterId FROM selected WHERE matchId=matches.id) THEN 1 ELSE 0 END,right_votes=right_votes+CASE WHEN right_character_id=(SELECT characterId FROM selected WHERE matchId=matches.id) THEN 1 ELSE 0 END,updated_at=? WHERE id IN (SELECT matchId FROM selected)`).bind(rows,createdAt),
+    c.env.DB.prepare(`INSERT INTO audit_logs(id,actor_id,action,entity_type,entity_id,after_json) SELECT json_extract(value,'$.auditId'),?,'vote_cast','vote',json_extract(value,'$.voteId'),json_object('matchId',json_extract(value,'$.matchId'),'characterId',json_extract(value,'$.characterId'),'riskStatus',json_extract(value,'$.riskStatus')) FROM json_each(?)`).bind(session.sub,rows),
+    c.env.DB.prepare(`INSERT INTO risk_events(id,vote_id,user_id,event_type,score,detail_json) SELECT json_extract(value,'$.eventId'),json_extract(value,'$.voteId'),?,'velocity_observed',40,json_object('count',json_extract(value,'$.velocity'),'action','counted') FROM json_each(?) WHERE json_extract(value,'$.recordEvent')=1`).bind(session.sub,rows)
+  ]:[]
   if(statements.length)await c.env.DB.batch(statements)
-  const scoreRows=await c.env.DB.prepare(`SELECT id AS matchId,left_votes AS leftVotes,right_votes AS rightVotes FROM matches WHERE id IN (${placeholders})`).bind(...matchIds).all<{matchId:string;leftVotes:number;rightVotes:number}>()
+  const scoreRows=await c.env.DB.prepare(`SELECT id AS matchId,left_votes AS leftVotes,right_votes AS rightVotes FROM matches WHERE id IN (${placeholders})`).bind(matchIdsJson).all<{matchId:string;leftVotes:number;rightVotes:number}>()
   const scoresByMatch=new Map(scoreRows.results.map((scores)=>[scores.matchId,scores]))
   const publications=created.map(({choice})=>{
     const scores=scoresByMatch.get(choice.matchId)
@@ -256,7 +268,7 @@ app.get('/api/admin/dashboard', async (c) => {
 app.get('/api/admin/seasons', async (c) => {
   const session=c.get('session'); if(!requireRole(session,['operator','admin']))return c.json({error:'无权访问'},403)
   const result=await c.env.DB.prepare(`SELECT ${seasonColumns},roster_locked AS rosterLocked,schedule_mode AS scheduleMode FROM seasons ORDER BY is_current DESC,created_at DESC`).all()
-  return c.json({seasons:result.results})
+  return c.json({seasons:result.results.map(row=>publicSeason(row as SeasonRow))})
 })
 
 app.get('/api/admin/seasons/:seasonId/entries',async(c)=>{
@@ -269,6 +281,8 @@ app.patch('/api/admin/seasons/:seasonId/entries/:characterId',zValidator('json',
   const session=c.get('session');if(!requireRole(session,['admin']))return c.json({error:'仅管理员可调整名单'},403)
   const seasonId=c.req.param('seasonId');const characterId=c.req.param('characterId');const input=c.req.valid('json');const season=await c.env.DB.prepare(`SELECT status,roster_locked AS rosterLocked FROM seasons WHERE id=?`).bind(seasonId).first<{status:SeasonStatus;rosterLocked:number}>()
   if(!season)return c.json({error:'赛季不存在'},404);if(!canEditRoster({status:season.status,rosterLocked:Boolean(season.rosterLocked)}))return c.json({error:'只能调整未锁定的草稿赛季名单'},409)
+  const format=await loadSeasonFormat(c.env.DB,seasonId)
+  if(!formatGroups(format).includes(input.groupCode)||input.seed>format.participants)return c.json({error:'分组或种子超出本赛季配置'},400)
   const duplicate=await c.env.DB.prepare(`SELECT character_id FROM season_entries WHERE season_id=? AND seed=? AND character_id!=?`).bind(seasonId,input.seed,characterId).first();if(duplicate)return c.json({error:'种子序号已被占用'},409)
   const updated=await c.env.DB.prepare(`UPDATE season_entries SET group_code=?,seed=? WHERE season_id=? AND character_id=?`).bind(input.groupCode,input.seed,seasonId,characterId).run();if(!updated.meta.changes)return c.json({error:'参赛角色不存在'},404)
   await c.env.DB.prepare(`INSERT INTO audit_logs(id,actor_id,action,entity_type,entity_id,reason,after_json,season_id) VALUES(?,?,?,?,?,?,?,?)`).bind(id(),session!.sub,'season_entry_updated','season_entry',characterId,input.reason,JSON.stringify({groupCode:input.groupCode,seed:input.seed}),seasonId).run();return c.json({ok:true})
@@ -277,32 +291,39 @@ app.patch('/api/admin/seasons/:seasonId/entries/:characterId',zValidator('json',
 app.post('/api/admin/seasons',zValidator('json',seasonCreateInput),async(c)=>{
   const session=c.get('session'); if(!requireRole(session,['admin']))return c.json({error:'仅管理员可创建赛季'},403)
   const input=c.req.valid('json'); const startTime=new Date(input.startsAt).getTime(); if(Number.isNaN(startTime))return c.json({error:'赛季开始时间无效'},400)
-  const seasonId=id(); const slug=input.slug??buildSeasonSlug(input.name,input.startsAt); const sourceId=input.copyFromSeasonId??(await c.env.DB.prepare(`SELECT id FROM seasons ORDER BY COALESCE(starts_at,created_at) DESC LIMIT 1`).first<{id:string}>())?.id
-  const exists=await c.env.DB.prepare(`SELECT id FROM seasons WHERE slug=?`).bind(slug).first(); if(exists)return c.json({error:'赛季链接标识已存在'},409)
-  if(sourceId){const source=await c.env.DB.prepare(`SELECT COUNT(*) AS count FROM season_entries WHERE season_id=?`).bind(sourceId).first<{count:number}>();if(!source||source.count!==128)return c.json({error:'复制来源必须包含完整的 128 人名单'},409)}
-  const statements=[c.env.DB.prepare(`INSERT INTO seasons(id,slug,name,starts_at,ends_at,updated_by) VALUES(?,?,?,?,?,?)`).bind(seasonId,slug,input.name,input.startsAt,new Date(startTime+7*86_400_000).toISOString(),session!.sub)]
+  const seasonId=id(); const slug=input.slug??buildSeasonSlug(input.name,input.startsAt); const sourceId=input.copyFromSeasonId||null
+  const format=input.format??legacyFormat()
+  const schedule=formatSchedule(format,input.startsAt)
+  const exists=await c.env.DB.prepare('SELECT id FROM seasons WHERE slug=?').bind(slug).first();if(exists)return c.json({error:'赛季链接标识已存在'},409)
+  if(sourceId&&!await c.env.DB.prepare('SELECT id FROM seasons WHERE id=?').bind(sourceId).first())return c.json({error:'复制来源不存在'},404)
+  const statements=[c.env.DB.prepare('INSERT INTO seasons(id,slug,name,starts_at,ends_at,updated_by,rules_version,format_json) VALUES(?,?,?,?,?,?,?,?)').bind(seasonId,slug,input.name,input.startsAt,schedule.at(-1)!.endsAt,session!.sub,'2',JSON.stringify(format))]
   if(sourceId)statements.push(c.env.DB.prepare(`INSERT INTO season_entries(id,season_id,character_id,group_code,seed) SELECT ?||'-'||character_id,?,character_id,group_code,seed FROM season_entries WHERE season_id=?`).bind(seasonId,seasonId,sourceId))
-  for(let round=1;round<=3;round++)statements.push(c.env.DB.prepare(`INSERT INTO tournament_rounds(id,season_id,stage,round_number,name,starts_at,ends_at,status) VALUES(?,?,?,?,?,?,?,'scheduled')`).bind(`${seasonId}-swiss-${round}`,seasonId,'swiss',round,`瑞士轮 ${round}`,new Date(startTime+(round-1)*86_400_000).toISOString(),new Date(startTime+round*86_400_000).toISOString()))
-  for(const [index,name] of ['16 强','8 强','半决赛','决赛'].entries())statements.push(c.env.DB.prepare(`INSERT INTO tournament_rounds(id,season_id,stage,round_number,name,starts_at,ends_at,status) VALUES(?,?,?,?,?,?,?,'scheduled')`).bind(`${seasonId}-ko-${index+1}`,seasonId,'knockout',index+1,name,new Date(startTime+(index+3)*86_400_000).toISOString(),new Date(startTime+(index+4)*86_400_000).toISOString()))
+  statements.push(...roundStatements(c.env.DB,seasonId,format,input.startsAt))
   statements.push(c.env.DB.prepare(`INSERT INTO audit_logs(id,actor_id,action,entity_type,entity_id,reason,after_json,season_id) VALUES(?,?,?,?,?,?,?,?)`).bind(id(),session!.sub,'season_created','season',seasonId,input.reason,JSON.stringify({name:input.name,slug,sourceId}),seasonId))
   await c.env.DB.batch(statements); return c.json({ok:true,seasonId,slug},201)
 })
 
 app.post('/api/admin/seasons/:seasonId/action',zValidator('json',seasonActionInput),async(c)=>{
   const session=c.get('session'); if(!requireRole(session,['admin']))return c.json({error:'仅管理员可控制赛季'},403)
-  const seasonId=c.req.param('seasonId'); const input=c.req.valid('json'); const season=await c.env.DB.prepare(`SELECT id,status,history_unlocked AS historyUnlocked FROM seasons WHERE id=?`).bind(seasonId).first<{id:string;status:SeasonStatus;historyUnlocked:number}>(); if(!season)return c.json({error:'赛季不存在'},404)
+  const seasonId=c.req.param('seasonId'); const input=c.req.valid('json');
+  return withLifecycleLease(c.env,seasonId,async()=>{
+  const season=await c.env.DB.prepare(`SELECT id,status,history_unlocked AS historyUnlocked FROM seasons WHERE id=?`).bind(seasonId).first<{id:string;status:SeasonStatus;historyUnlocked:number}>(); if(!season)return c.json({error:'赛季不存在'},404)
   if(input.action==='publish'){
     if(season.status!=='draft')return c.json({error:'只能发布草稿赛季'},409)
-    const entries=(await c.env.DB.prepare(`SELECT character_id AS characterId,group_code AS groupCode,seed FROM season_entries WHERE season_id=?`).bind(seasonId).all<{characterId:string;groupCode:string;seed:number}>()).results; const validation=validateSeasonRoster(entries); if(!validation.valid)return c.json({error:validation.error,groupCounts:validation.groupCounts},409)
-    const firstRound=await c.env.DB.prepare(`SELECT id FROM tournament_rounds WHERE season_id=? AND stage='swiss' AND round_number=1`).bind(seasonId).first<{id:string}>(); if(!firstRound)return c.json({error:'首轮不存在'},409)
+    const entries=(await c.env.DB.prepare(`SELECT character_id AS characterId,group_code AS groupCode,seed FROM season_entries WHERE season_id=?`).bind(seasonId).all<{characterId:string;groupCode:string;seed:number}>()).results; const validation=validateSeasonRoster(entries,await loadSeasonFormat(c.env.DB,seasonId)); if(!validation.valid)return c.json({error:validation.error,groupCounts:validation.groupCounts},409)
+    const other=await c.env.DB.prepare("SELECT id FROM seasons WHERE is_current=1 AND status IN ('published','live') AND id!=?").bind(seasonId).first();if(other)return c.json({error:'请先结束当前赛季，再发布新赛季'},409)
+    const format=await loadSeasonFormat(c.env.DB,seasonId)
+    const firstRound=await c.env.DB.prepare(`SELECT id FROM tournament_rounds WHERE season_id=? AND stage=? AND round_number=1`).bind(seasonId,format.mode==='knockout'?'knockout':'swiss').first<{id:string}>(); if(!firstRound)return c.json({error:'首轮不存在'},409)
     const existing=await c.env.DB.prepare(`SELECT COUNT(*) AS count FROM matches WHERE round_id=?`).bind(firstRound.id).first<{count:number}>(); if((existing?.count??0)!==0)return c.json({error:'草稿首轮已有对局，无法安全发布'},409)
-    await c.env.DB.prepare(`INSERT INTO matches(id,round_id,group_code,bracket_position,left_character_id,right_character_id,status) WITH ranked AS (SELECT character_id,group_code,ROW_NUMBER() OVER(PARTITION BY group_code ORDER BY seed) AS position FROM season_entries WHERE season_id=?) SELECT lower(hex(randomblob(16))),?,a.group_code,(unicode(a.group_code)-65)*8+a.position,a.character_id,b.character_id,'scheduled' FROM ranked a JOIN ranked b ON b.group_code=a.group_code AND b.position=17-a.position WHERE a.position<=8`).bind(seasonId,firstRound.id).run()
-    const generated=await c.env.DB.prepare(`SELECT COUNT(*) AS count FROM matches WHERE round_id=?`).bind(firstRound.id).first<{count:number}>(); if(generated?.count!==64){await c.env.DB.prepare(`DELETE FROM matches WHERE round_id=?`).bind(firstRound.id).run();return c.json({error:'首轮对局生成不完整，赛季未发布'},500)}
-    await c.env.DB.batch([c.env.DB.prepare(`UPDATE seasons SET is_current=0 WHERE is_current=1`),c.env.DB.prepare(`UPDATE seasons SET status='published',is_current=1,roster_locked=1,published_at=?,updated_at=?,updated_by=? WHERE id=?`).bind(iso(),iso(),session!.sub,seasonId),c.env.DB.prepare(`UPDATE season_entries SET name_snapshot=(SELECT name FROM characters WHERE id=character_id),game_snapshot=(SELECT g.name FROM characters c JOIN games g ON g.id=c.game_id WHERE c.id=character_id),summary_snapshot=(SELECT summary FROM characters WHERE id=character_id),artwork_original_key_snapshot=(SELECT artwork_original_key FROM characters WHERE id=character_id),artwork_gallery_key_snapshot=(SELECT artwork_gallery_key FROM characters WHERE id=character_id),artwork_match_key_snapshot=(SELECT artwork_match_key FROM characters WHERE id=character_id),artwork_avatar_key_snapshot=(SELECT artwork_avatar_key FROM characters WHERE id=character_id) WHERE season_id=?`).bind(seasonId)])
+    const pairs=firstRoundPairs(entries.map(e=>({id:e.characterId,game:'',groupCode:e.groupCode,seed:e.seed})),format)
+    const pairStatements=[insertPairStatement(c.env.DB,firstRound.id,pairs,pairs.map(([left])=>format.mode==='knockout'?null:left.groupCode))]
+    await c.env.DB.batch([...pairStatements,c.env.DB.prepare(`UPDATE seasons SET is_current=0 WHERE is_current=1`),c.env.DB.prepare(`UPDATE seasons SET status='published',is_current=1,roster_locked=1,published_at=?,updated_at=?,updated_by=? WHERE id=?`).bind(iso(),iso(),session!.sub,seasonId),c.env.DB.prepare(`UPDATE season_entries SET name_snapshot=(SELECT name FROM characters WHERE id=character_id),game_snapshot=(SELECT g.name FROM characters c JOIN games g ON g.id=c.game_id WHERE c.id=character_id),summary_snapshot=(SELECT summary FROM characters WHERE id=character_id),artwork_original_key_snapshot=(SELECT artwork_original_key FROM characters WHERE id=character_id),artwork_gallery_key_snapshot=(SELECT artwork_gallery_key FROM characters WHERE id=character_id),artwork_match_key_snapshot=(SELECT artwork_match_key FROM characters WHERE id=character_id),artwork_avatar_key_snapshot=(SELECT artwork_avatar_key FROM characters WHERE id=character_id) WHERE season_id=?`).bind(seasonId)])
   } else if(input.action==='archive') { const result=await c.env.DB.prepare(`UPDATE seasons SET status='archived',is_current=0,archived_at=?,updated_at=?,updated_by=? WHERE id=? AND status='completed'`).bind(iso(),iso(),session!.sub,seasonId).run(); if(!result.meta.changes)return c.json({error:'只能归档已结束赛季'},409) }
   else { const result=await c.env.DB.prepare(`UPDATE seasons SET history_unlocked=?,updated_at=?,updated_by=? WHERE id=? AND status IN ('completed','archived')`).bind(input.action==='unlock-history'?1:0,iso(),session!.sub,seasonId).run(); if(!result.meta.changes)return c.json({error:'只有已结束或归档赛季可调整历史锁'},409) }
+  if(input.action==='lock-history')await snapshotSeasonStandings(c.env.DB,seasonId)
   await c.env.DB.prepare(`INSERT INTO audit_logs(id,actor_id,action,entity_type,entity_id,reason,after_json,season_id) VALUES(?,?,?,?,?,?,?,?)`).bind(id(),session!.sub,`season_${input.action}`,'season',seasonId,input.reason,JSON.stringify({action:input.action}),seasonId).run()
   return c.json({ok:true})
+  })
 })
 
 app.patch('/api/admin/seasons/:seasonId',zValidator('json',seasonUpdateInput),async(c)=>{
@@ -337,10 +358,13 @@ app.post('/api/admin/tournament/control', zValidator('json', roundControlInput),
   }
   if (input.action === 'publish-schedule') {
     if (!input.scheduledStartAt) return c.json({ error:'请提供首轮开始时间' },400)
+    if(season.status!=='published')return c.json({error:'只能为未开始的已发布赛季启用自动排期'},409)
+    const used=await c.env.DB.prepare("SELECT id FROM tournament_rounds WHERE season_id=? AND status!='scheduled' LIMIT 1").bind(season.id).first();if(used)return c.json({error:'已有轮次开始，不能重置赛程'},409)
     const first = new Date(input.scheduledStartAt).getTime(); if (Number.isNaN(first)) return c.json({ error:'赛程时间无效' },400)
     const rounds=await c.env.DB.prepare(`SELECT id,round_number AS roundNumber,stage FROM tournament_rounds WHERE season_id=? ORDER BY starts_at,round_number`).bind(season.id).all<{id:string;roundNumber:number;stage:string}>()
-    const statements = rounds.results.map((round,index) => c.env.DB.prepare(`UPDATE tournament_rounds SET starts_at=?,ends_at=?,status='scheduled' WHERE id=?`).bind(new Date(first + index*86_400_000).toISOString(),new Date(first+(index+1)*86_400_000).toISOString(),round.id))
-    statements.push(c.env.DB.prepare(`UPDATE seasons SET schedule_mode='scheduled',starts_at=?,ends_at=?,status='published',current_round_id=NULL,updated_at=?,updated_by=? WHERE id=?`).bind(input.scheduledStartAt,new Date(first+7*86_400_000).toISOString(),now,actor.sub,season.id))
+    const schedule=formatSchedule(await loadSeasonFormat(c.env.DB,season.id),input.scheduledStartAt)
+    const statements=rounds.results.map(round=>{const planned=schedule.find(r=>r.stage===round.stage&&r.roundNumber===round.roundNumber);if(!planned)throw new Error('轮次与赛制不一致');return c.env.DB.prepare('UPDATE tournament_rounds SET starts_at=?,ends_at=? WHERE id=?').bind(planned.startsAt,planned.endsAt,round.id)})
+    statements.push(c.env.DB.prepare("UPDATE seasons SET schedule_mode='scheduled',starts_at=?,ends_at=?,current_round_id=NULL,updated_at=?,updated_by=? WHERE id=?").bind(input.scheduledStartAt,schedule.at(-1)!.endsAt,now,actor.sub,season.id))
     statements.push(c.env.DB.prepare(`INSERT INTO audit_logs(id,actor_id,action,entity_type,entity_id,reason,after_json,season_id) VALUES(?,?,?,?,?,?,?,?)`).bind(id(),actor.sub,'schedule_published','season',season.id,input.reason,JSON.stringify({scheduledStartAt:input.scheduledStartAt}),season.id))
     await c.env.DB.batch(statements); return c.json({ok:true})
   }
@@ -376,7 +400,11 @@ app.get('/api/admin/characters', async (c) => {
 app.patch('/api/admin/characters/:characterId', zValidator('json', characterUpdateInput), async (c) => {
   const session = c.get('session'); if (!requireRole(session,['operator','admin'])) return c.json({error:'无权访问'},403)
   const actor=session!; const characterId=c.req.param('characterId'); const input=c.req.valid('json'); const season=await resolveSeason(c.env.DB); if(!season)return c.json({error:'当前没有赛季'},409)
-  if(season.rosterLocked&&(input.groupCode||input.seed))return c.json({error:'名单已锁定，不能调整分组或种子'},409)
+  if(input.groupCode!==undefined||input.seed!==undefined){
+    if(!canEditRoster({status:season.status,rosterLocked:Boolean(season.rosterLocked)}))return c.json({error:'只能修改草稿赛季的名单'},409)
+    const format=await loadSeasonFormat(c.env.DB,season.id)
+    if(input.groupCode&&!formatGroups(format).includes(input.groupCode)||input.seed&&input.seed>format.participants)return c.json({error:'分组或种子超出本赛季配置'},400)
+  }
   const before=await c.env.DB.prepare(`SELECT c.*,se.group_code AS groupCode,se.seed FROM characters c LEFT JOIN season_entries se ON se.character_id=c.id AND se.season_id=? WHERE c.id=?`).bind(season.id,characterId).first(); if(!before)return c.json({error:'角色不存在'},404)
   const characterFields:Record<string,unknown>={summary:input.summary,artwork_source_url:input.artworkSourceUrl,artwork_source_note:input.artworkSourceNote,artwork_source_type:input.artworkSourceType,artwork_quality_status:input.artworkQualityStatus,artwork_focus_x:input.artworkFocusX,artwork_focus_y:input.artworkFocusY}; const characterUpdates=Object.entries(characterFields).filter(([,value])=>value!==undefined); const statements=[]
   if(characterUpdates.length)statements.push(c.env.DB.prepare(`UPDATE characters SET ${characterUpdates.map(([field])=>`${field}=?`).join(',')},updated_at=? WHERE id=?`).bind(...characterUpdates.map(([,value])=>value),iso(),characterId))
@@ -513,7 +541,7 @@ app.notFound(async (c) => {
   cached.headers.set('cache-control',artworkCacheControl())
   return cached
 })
-app.onError((error, c) => { console.error(error); return c.json({ error: '服务器暂时不可用' }, 500) })
+app.onError((error, c) => { if(error instanceof HTTPException)return c.json({error:error.message},error.status);console.error(error); return c.json({ error: '服务器暂时不可用' }, 500) })
 
 export default {
   fetch: app.fetch,

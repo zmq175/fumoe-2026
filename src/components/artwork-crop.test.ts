@@ -1,7 +1,16 @@
 import { describe,expect,it } from 'vitest'
-import { centerCropArea,clampCrop,parseCrop,rotateCrop } from './artwork-crop'
+import { centerCropArea,clampCrop,parseCrop,rotateCrop,percentAreaToPixels } from './artwork-crop'
 
 describe('素材裁剪状态',()=>{
+  it('按原图百分比保存构图，不依赖工作台屏幕大小',()=>{
+    const area={x:10,y:20,width:80,height:30}
+    expect(parseCrop(JSON.stringify({x:0,y:0,zoom:1,rotation:0,area})).area).toEqual(area)
+    expect(percentAreaToPixels(area,1000,2000)).toEqual({x:100,y:400,width:800,height:600})
+  })
+  it('忽略越界或不完整的旧构图区域',()=>{
+    expect(parseCrop(JSON.stringify({area:{x:80,y:0,width:30,height:20}})).area).toBeUndefined()
+    expect(parseCrop(JSON.stringify({area:{x:0,y:0,width:0,height:20}})).area).toBeUndefined()
+  })
   it('兼容旧裁剪数据并补全旋转角度',()=>{
     expect(parseCrop('{"x":0.2,"y":-0.4,"zoom":1.5}')).toEqual({x:0.2,y:-0.4,zoom:1.5,rotation:0})
   })

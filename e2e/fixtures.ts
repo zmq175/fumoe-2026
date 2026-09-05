@@ -1,3 +1,4 @@
+import { legacyFormat } from '../src/lib/season-format'
 import type { Page } from '@playwright/test'
 import type { PublicMatch, PublicRound, PublicSeason, PublicStanding, Viewer } from '../src/lib/api'
 
@@ -45,7 +46,7 @@ export async function mockPublicApi(page: Page, data: { rounds?: PublicRound[]; 
     const path = url.pathname
     const historical = url.searchParams.get('season') ? data.historical?.[url.searchParams.get('season')!] : path.startsWith('/api/public/seasons/') ? data.historical?.[path.split('/').at(-1)!] : undefined
     const input = (route.request().postDataJSON() ?? {}) as { email?: string; turnstileToken?: string;choices?:Array<{matchId:string;characterId:string}> }
-    const body = path === '/api/auth/me' ? { user: viewer }
+    const body = path.endsWith('/configuration') ? {format:fixtureSeason.format??legacyFormat(),entries:[],rounds:fixtureRounds,validation:{valid:false,error:'名单为空'}} : path === '/api/auth/me' ? { user: viewer }
       : path === '/api/auth/request-code' ? { ok: true, expiresInSeconds: 600, developmentCode: '123456' }
         : path === '/api/auth/verify-code' ? (() => { viewer = { email: input.email ?? 'voter@example.com', role: 'voter' }; return { ok: true, user: viewer } })()
           : path === '/api/votes/mine' ? { votes:[...voterSelections.values()] }

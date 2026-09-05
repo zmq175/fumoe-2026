@@ -1,0 +1,14 @@
+.hero__season-facts { margin: -12px 0 28px; color: #b8dce8; font-size: 14px; }
+.framing-preview { position: relative; }
+.framing-guide { position: absolute; inset: 0; pointer-events: none; }
+.framing-guide::before { content: ''; position: absolute; left: 50%; top: 0; bottom: 0; border-left: 1px dashed #fff; }
+.framing-guide::after { content: ''; position: absolute; top: 42%; left: 0; right: 0; border-top: 1px dashed var(--cyan); }
+.framing-guide i { position: absolute; left: 37.5%; right: 37.5%; top: 12%; bottom: 15%; border: 1px dashed #fff; }
+.framing-guide b { position: absolute; top: 42%; left: 4px; padding: 3px 5px; background: #070c10; color: var(--cyan); font-size: 10px; }
+.framing-toggle { display: flex; align-items: center; gap: 8px; min-height: 44px; font-size: 13px; }
+.framing-toggle input { accent-color: var(--cyan); width: 18px; height: 18px; }
+.framing-help { margin: 0; font-size: 12px; line-height: 1.7; color: #454545; }
+.hero .eyebrow, .hero__statboard p, .page-title > span, .group-badge, .fighter small { font-family: 'Space Grotesk', 'Noto Sans SC', sans-serif; }
+.artwork-editor .crop-toolbar button { min-height: 44px; white-space: nowrap; }
+@media (max-width: 720px) { .artwork-editor .crop-toolbar button { flex: 1 0 auto; } }
+@media (min-width: 721px) and (max-width: 1100px) { .framing-toggle, .framing-help { grid-column: 1 / -1; } }

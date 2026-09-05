@@ -79,10 +79,19 @@ describe('赛事视图数据', () => {
   it('在同一画布上生成完整且连续的淘汰赛和冠军连接路径', () => {
     const geometry=bracketGeometry()
     expect(geometry.rounds.map((round)=>round.cards.length)).toEqual([8,4,2,1])
-    expect(geometry.cards.find((card)=>card.roundNumber===1&&card.index===0)).toMatchObject({x:44,y:174})
-    expect(geometry.cards.find((card)=>card.roundNumber===2&&card.index===0)).toMatchObject({x:380,y:224})
-    expect(geometry.paths[0]).toBe('M 302 174 H 341 V 274 H 302 M 341 224 H 380')
-    expect(geometry.championPath).toBe('M 1310 524 H 1388')
+    expect(geometry.cards.find((card)=>card.roundNumber===1&&card.index===0)).toMatchObject({x:32,y:174})
+    expect(geometry.cards.find((card)=>card.roundNumber===2&&card.index===0)).toMatchObject({x:388,y:244})
+    expect(geometry.paths[0]).toBe('M 316 174 H 352 V 314 H 316 M 352 244 H 388')
+    expect(geometry.championPath).toBe('M 1384 664 H 1456')
+  })
+
+  it('大屏展开轮次但不拉伸卡片，小屏不压缩字体；256 人仍生成完整签表',()=>{
+    const natural=bracketGeometry(16),wide=bracketGeometry(16,2200),small=bracketGeometry(16,390)
+    expect(wide.width).toBe(2200)
+    expect(wide.cards[0].width).toBe(natural.cards[0].width)
+    expect(wide.rounds[1].cards[0].x).toBeGreaterThan(natural.rounds[1].cards[0].x)
+    expect(small.width).toBe(natural.width)
+    expect(bracketGeometry(256,390).cards).toHaveLength(255)
   })
 
   it('让后一轮卡片始终位于两张来源卡片的垂直中点', () => {
