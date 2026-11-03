@@ -17,6 +17,7 @@ import { readCachedViewer, writeCachedViewer } from './lib/viewer-cache'
 import './styles.css'
 import './artwork-editor.css'
 import './components/artwork-framing.css'
+import './components/champion-hero.css'
 
 type Page = 'home' | 'matches' | 'bracket' | 'factions' | 'gallery' | 'rules' | 'notice' | 'seasons' | 'season-detail' | 'admin' | 'artwork-editor'
 
@@ -113,7 +114,7 @@ function PageTitle({ kicker, title, copy }: { kicker: string, title: string, cop
 function ChampionHero({ season, matches, onNavigate }: { season:PublicSeason;matches:PublicMatch[];onNavigate:(page:Page)=>void }) {
   const result=championResult(season,matches); const character=result?displayCharacter(result.championId,result.championName,result.championGame,{galleryArtworkKey:season.championArtworkKey}):null
   if(!result||!character)return null
-  return <section className="champion-hero"><div className="champion-hero__copy"><p className="eyebrow">FU MOE · {season.name.toUpperCase()} CHAMPION</p><span className="champion-hero__crown"><Trophy/> 冠军诞生</span><h1>{result.championName}</h1><h2>{result.championGame}</h2><p>从 {season.format?.participants??128} 位角色中胜出，成为本赛季最终冠军与二游群头像。</p><div className="champion-score"><small>决赛赛果</small><strong>{result.championVotes} : {result.runnerUpVotes}</strong><span>战胜 {result.runnerUpName}</span></div><button className="primary-button" onClick={()=>onNavigate('bracket')}>回顾冠军之路 <ArrowRight/></button></div><div className="champion-hero__art"><Artwork character={character}/><span>CHAMPION</span></div></section>
+  return <section className="champion-hero"><span className="champion-hero__wordmark" aria-hidden="true">CHAMPION</span><div className="champion-hero__copy"><p className="eyebrow">{season.name} · 赛季荣誉</p><span className="champion-hero__crown"><Trophy/> 冠军诞生</span><h1>{result.championName}</h1><h2>{result.championGame}</h2><p>从 {season.format?.participants??128} 位角色中胜出，成为本赛季最终冠军与二游群头像。</p><div className="champion-score"><small>决赛赛果</small><strong>{result.championVotes} : {result.runnerUpVotes}</strong><span>战胜 {result.runnerUpName}</span></div><button className="primary-button" onClick={()=>onNavigate('bracket')}>回顾冠军之路 <ArrowRight/></button></div><div className="champion-hero__art"><Artwork character={character} priority/><span>本赛季冠军</span></div></section>
 }
 
 function Home({onNavigate,onVote,liveMatches,matches,rounds,activeRound,season,previousSeason,selections,drafts}:{onNavigate:(page:Page)=>void;onVote:(match:Match,character:Character)=>void;liveMatches:Match[];matches:PublicMatch[];rounds:PublicRound[];activeRound:PublicRound|null;season:PublicSeason|null;previousSeason:PublicSeason|null;selections:Record<string,VoteSelection>;drafts:VoteDrafts}) {
@@ -177,7 +178,7 @@ function Seasons({ seasons, onOpen }: { seasons:PublicSeason[];onOpen:(slug:stri
 
 function SeasonDetail({ season, matches, rounds, standings, onNavigate }: { season:PublicSeason;matches:PublicMatch[];rounds:PublicRound[];standings:PublicStanding[];onNavigate:(page:Page)=>void }) {
   const result=championResult(season,matches);const champion=season.championCharacterId?displayCharacter(season.championCharacterId,season.championName??'',season.championGame??'',{galleryArtworkKey:season.championArtworkKey}):null
-  return <>{result?<ChampionHero season={season} matches={matches} onNavigate={onNavigate}/>:champion&&season.championName?<section className="champion-hero champion-hero--archive"><div className="champion-hero__copy"><p className="eyebrow">FU MOE · {season.name.toUpperCase()}</p><span className="champion-hero__crown"><Trophy/> 历届冠军</span><h1>{season.championName}</h1><h2>{season.championGame}</h2><p>{season.announcement||'本赛季冠军档案已归档。'}</p></div><div className="champion-hero__art"><Artwork character={champion}/><span>CHAMPION</span></div></section>:<section className="season-archive-header"><PageTitle kicker={season.status.toUpperCase()} title={season.name} copy={season.announcement||'完整赛程、积分与淘汰赛赛果归档。'}/></section>}<Bracket standings={standings} matches={matches} rounds={rounds} format={season.format} initialTab="bracket"/></>
+  return <>{result?<ChampionHero season={season} matches={matches} onNavigate={onNavigate}/>:champion&&season.championName?<section className="champion-hero champion-hero--archive"><span className="champion-hero__wordmark" aria-hidden="true">CHAMPION</span><div className="champion-hero__copy"><p className="eyebrow">FU MOE · {season.name.toUpperCase()}</p><span className="champion-hero__crown"><Trophy/> 历届冠军</span><h1>{season.championName}</h1><h2>{season.championGame}</h2><p>{season.announcement||'本赛季冠军档案已归档。'}</p></div><div className="champion-hero__art"><Artwork character={champion} priority/><span>历届冠军</span></div></section>:<section className="season-archive-header"><PageTitle kicker={season.status.toUpperCase()} title={season.name} copy={season.announcement||'完整赛程、积分与淘汰赛赛果归档。'}/></section>}<Bracket standings={standings} matches={matches} rounds={rounds} format={season.format} initialTab="bracket"/></>
 }
 
 function Gallery({roster}:{roster:Character[]}) { const [game, setGame] = useState<string>('全部'); const [verifiedOnly, setVerifiedOnly] = useState(false)

@@ -38,6 +38,15 @@
         ],
         "createdAt": "2026-09-05T19:30:19.011Z",
         "reason": "User confirmed: homepage technology-style grid background must remain; future design improvements must preserve the existing overall visual identity."
+      },
+      {
+        "rule": "codex-grid-background",
+        "value": "*",
+        "files": [
+          "src/components/champion-hero.css"
+        ],
+        "createdAt": "2026-11-03T16:47:26.303Z",
+        "reason": "user confirmed: docs/visual-style-contract.md 明确要求保留首页科技风网格背景及黑青视觉身份；冠军展示沿用该既有设计约束。"
       }
     ]
   }
