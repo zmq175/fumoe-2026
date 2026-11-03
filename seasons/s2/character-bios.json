@@ -1,0 +1,1799 @@
+{
+  "version": 1,
+  "reviewedAt": "2026-11-04",
+  "scope": "s2",
+  "entries": [
+    {
+      "id": "s2-wutheringwaves-c9114ba8ce",
+      "game": "鸣潮",
+      "name": "爱弥斯",
+      "summary": "曾是星炬学院的隧者适格者，如今以电子幽灵的形态存在。她与星海的联系，藏着一段追逐梦想的往事。",
+      "sourceUrl": "https://wiki.biligame.com/wutheringwaves/%E5%85%B1%E9%B8%A3%E8%80%85/%E7%88%B1%E5%BC%A5%E6%96%AF"
+    },
+    {
+      "id": "c051",
+      "game": "鸣潮",
+      "name": "守岸人",
+      "summary": "黑海岸的守护者，长久履行着守望与引导的职责。在与漂泊者重逢后，开始理解职责之外的情感与羁绊。",
+      "sourceUrl": "https://wiki.biligame.com/wutheringwaves/%E5%85%B1%E9%B8%A3%E8%80%85/%E5%AE%88%E5%B2%B8%E4%BA%BA"
+    },
+    {
+      "id": "c052",
+      "game": "鸣潮",
+      "name": "今汐",
+      "summary": "今州令尹，肩负守护城邦与民众的责任。她温柔而坚定，在岁主的指引与自己的选择之间寻找前路。",
+      "sourceUrl": "https://wiki.biligame.com/wutheringwaves/%E5%85%B1%E9%B8%A3%E8%80%85/%E4%BB%8A%E6%B1%90"
+    },
+    {
+      "id": "c049",
+      "game": "鸣潮",
+      "name": "长离",
+      "summary": "今州令尹参事，曾任明庭中政省长史。擅长谋划与布局，也愿为心中所求亲自走入险局。",
+      "sourceUrl": "https://wiki.biligame.com/wutheringwaves/%E5%85%B1%E9%B8%A3%E8%80%85/%E9%95%BF%E7%A6%BB"
+    },
+    {
+      "id": "c050",
+      "game": "鸣潮",
+      "name": "椿",
+      "summary": "黑海岸的执花，负责在各地寻找有潜力的人才。行事随性而危险，比起过去和未来，更享受眼前的挑战。",
+      "sourceUrl": "https://wiki.biligame.com/wutheringwaves/%E5%85%B1%E9%B8%A3%E8%80%85/%E6%A4%BF"
+    },
+    {
+      "id": "c053",
+      "game": "鸣潮",
+      "name": "卡提希娅",
+      "summary": "在黎那汐塔旅行的流浪骑士，曾被称为芙露德莉斯。走过圣女与神之容器的命运后，她选择自由前行。",
+      "sourceUrl": "https://wiki.biligame.com/wutheringwaves/%E5%85%B1%E9%B8%A3%E8%80%85/%E5%8D%A1%E6%8F%90%E5%B8%8C%E5%A8%85"
+    },
+    {
+      "id": "s2-wutheringwaves-8ffea565fa",
+      "game": "鸣潮",
+      "name": "千咲",
+      "summary": "星炬学院的学生，常以平静的态度面对周遭。她能看见事物之间的结构与联系，辨认其中牵系生命的丝线。",
+      "sourceUrl": "https://wiki.biligame.com/wutheringwaves/%E5%85%B1%E9%B8%A3%E8%80%85/%E5%8D%83%E5%92%B2"
+    },
+    {
+      "id": "s2-wutheringwaves-2545facc3d",
+      "game": "鸣潮",
+      "name": "弗洛洛",
+      "summary": "残星会会监，以指挥家的姿态操纵频率。她的旋律游走于生死之间，优雅的外表下藏着危险。",
+      "sourceUrl": "https://wiki.biligame.com/wutheringwaves/%E5%85%B1%E9%B8%A3%E8%80%85/%E5%BC%97%E6%B4%9B%E6%B4%9B"
+    },
+    {
+      "id": "s2-wutheringwaves-95e5e0ea6c",
+      "game": "鸣潮",
+      "name": "尤诺",
+      "summary": "来自七丘的谕女，与预言和命运紧密相连。即使身处因果的束缚中，她仍执意寻找自己的答案。",
+      "sourceUrl": "https://wiki.biligame.com/wutheringwaves/%E5%85%B1%E9%B8%A3%E8%80%85/%E5%B0%A4%E8%AF%BA"
+    },
+    {
+      "id": "s2-wutheringwaves-4d6d317529",
+      "game": "鸣潮",
+      "name": "绯雪",
+      "summary": "来自苇原的灼樱巫女，目前停留在拉海洛。她以特别对策组唯一成员的身份，面对当地发生的危机。",
+      "sourceUrl": "https://wiki.biligame.com/wutheringwaves/%E5%85%B1%E9%B8%A3%E8%80%85/%E7%BB%AF%E9%9B%AA"
+    },
+    {
+      "id": "s2-wutheringwaves-5808247a98",
+      "game": "鸣潮",
+      "name": "达妮娅",
+      "summary": "星炬学院虚质科学部的学生，常显得懒散困倦。学生活动中总能见到她，温柔笑容之下也有难以读懂的一面。",
+      "sourceUrl": "https://wiki.biligame.com/wutheringwaves/%E5%85%B1%E9%B8%A3%E8%80%85/%E8%BE%BE%E5%A6%AE%E5%A8%85"
+    },
+    {
+      "id": "c054",
+      "game": "鸣潮",
+      "name": "珂莱塔",
+      "summary": "莫塔里家族的二小姐，也是独具眼光的艺术投资人。她周旋于交际场与交易之间，替家族处理隐秘的麻烦。",
+      "sourceUrl": "https://wiki.biligame.com/wutheringwaves/%E5%85%B1%E9%B8%A3%E8%80%85/%E7%8F%82%E8%8E%B1%E5%A1%94"
+    },
+    {
+      "id": "c062",
+      "game": "鸣潮",
+      "name": "菲比",
+      "summary": "隐海修会的年轻教士，待人友善，信仰虔诚。她认真履行圣职，以温和的光与祈祷回应他人的需要。",
+      "sourceUrl": "https://wiki.biligame.com/wutheringwaves/%E5%85%B1%E9%B8%A3%E8%80%85/%E8%8F%B2%E6%AF%94"
+    },
+    {
+      "id": "c063",
+      "game": "鸣潮",
+      "name": "赞妮",
+      "summary": "埃弗拉德金库防卫科的可靠雇员，多次获评最佳员工。工作之外有许多计划，而准时下班往往才是第一步。",
+      "sourceUrl": "https://wiki.biligame.com/wutheringwaves/%E5%85%B1%E9%B8%A3%E8%80%85/%E8%B5%9E%E5%A6%AE"
+    },
+    {
+      "id": "c055",
+      "game": "鸣潮",
+      "name": "吟霖",
+      "summary": "曾是治安署的优秀巡尉，擅长潜伏调查。失去公开身份之后，她仍在暗处追查潜藏的罪恶。",
+      "sourceUrl": "https://wiki.biligame.com/wutheringwaves/%E5%85%B1%E9%B8%A3%E8%80%85/%E5%90%9F%E9%9C%96"
+    },
+    {
+      "id": "c058",
+      "game": "鸣潮",
+      "name": "散华",
+      "summary": "今州令尹的近卫，寡言而忠诚。她将曾经失控的风雪与特殊视野，化作保护他人的力量。",
+      "sourceUrl": "https://wiki.biligame.com/wutheringwaves/%E5%85%B1%E9%B8%A3%E8%80%85/%E6%95%A3%E5%8D%8E"
+    },
+    {
+      "id": "c056",
+      "game": "鸣潮",
+      "name": "秧秧",
+      "summary": "夜归下设的临时调查员，能够感知风中的信息。她待人温柔，正努力从受保护的人，成长为他人的依靠。",
+      "sourceUrl": "https://wiki.biligame.com/wutheringwaves/%E5%85%B1%E9%B8%A3%E8%80%85/%E7%A7%A7%E7%A7%A7"
+    },
+    {
+      "id": "c059",
+      "game": "鸣潮",
+      "name": "白芷",
+      "summary": "华胥研究院的回音生态研究员，做事冷静严谨。她与忧昙相伴，在研究中探索生命与回音的联系。",
+      "sourceUrl": "https://wiki.biligame.com/wutheringwaves/%E5%85%B1%E9%B8%A3%E8%80%85/%E7%99%BD%E8%8A%B7"
+    },
+    {
+      "id": "s2-wutheringwaves-5ad57f64f0",
+      "game": "鸣潮",
+      "name": "莫宁",
+      "summary": "深空联合研究院的工程师，也在星炬学院教授隧者工学。她借助人造双腿行走于大地，目光始终投向群星。",
+      "sourceUrl": "https://wiki.biligame.com/wutheringwaves/%E5%85%B1%E9%B8%A3%E8%80%85/%E8%8E%AB%E5%AE%81"
+    },
+    {
+      "id": "s2-wutheringwaves-c5c4122284",
+      "game": "鸣潮",
+      "name": "琳奈",
+      "summary": "星炬学院的预科学生，个性鲜明，充满活力。张扬的外表之下，是不愿轻易向困境低头的力量。",
+      "sourceUrl": "https://wiki.biligame.com/wutheringwaves/%E5%85%B1%E9%B8%A3%E8%80%85/%E7%90%B3%E5%A5%88"
+    },
+    {
+      "id": "s2-wutheringwaves-0e4e03bafb",
+      "game": "鸣潮",
+      "name": "西格莉卡",
+      "summary": "星炬学院的罗伊族学生，也是罗伊符文的共鸣者。她努力回应大家的期待，希望成为合格的昭日者。",
+      "sourceUrl": "https://wiki.biligame.com/wutheringwaves/%E5%85%B1%E9%B8%A3%E8%80%85/%E8%A5%BF%E6%A0%BC%E8%8E%89%E5%8D%A1"
+    },
+    {
+      "id": "s2-wutheringwaves-8eef188aff",
+      "game": "鸣潮",
+      "name": "清宵",
+      "summary": "隐世剑修，挂名玄方城镇玄司骑。她性情清冷，琴剑皆精，以手中之剑守护一方山河。",
+      "sourceUrl": "https://wiki.biligame.com/wutheringwaves/%E5%85%B1%E9%B8%A3%E8%80%85/%E6%B8%85%E5%AE%B5"
+    },
+    {
+      "id": "s2-wutheringwaves-082c4ae742",
+      "game": "鸣潮",
+      "name": "心",
+      "summary": "梦州的岁主，也是当地文明的引导者。她情感丰沛，喜爱尘世生活，长久守望着城市中的人间烟火。",
+      "sourceUrl": "https://wiki.biligame.com/wutheringwaves/%E5%85%B1%E9%B8%A3%E8%80%85/%E5%BF%83"
+    },
+    {
+      "id": "s2-wutheringwaves-be984a3219",
+      "game": "鸣潮",
+      "name": "锁暝",
+      "summary": "梦州华亭出身的契主，为对抗恶瘴创立禁锁十契。她受岁主任命担任州监，执掌谛天鉴，守护梦州。",
+      "sourceUrl": "https://wutheringwaves.kurogames.com/zh-tw/main/news/detail/5632"
+    },
+    {
+      "id": "s2-wutheringwaves-f698fe9793",
+      "game": "鸣潮",
+      "name": "穗穗",
+      "summary": "出身明庭世家的年轻理事，供职于昭明商会。她擅用商道与人情斡旋，在往来交易中维系一方安稳。",
+      "sourceUrl": "https://wiki.biligame.com/wutheringwaves/%E5%85%B1%E9%B8%A3%E8%80%85/%E7%A9%97%E7%A9%97"
+    },
+    {
+      "id": "s2-wutheringwaves-74a6e9425a",
+      "game": "鸣潮",
+      "name": "洛瑟菈",
+      "summary": "星炬学院的校长，一位重视实干的理想主义者。她守护学生的成长，也支持他们向更高远的天空发起挑战。",
+      "sourceUrl": "https://wiki.biligame.com/wutheringwaves/%E5%85%B1%E9%B8%A3%E8%80%85/%E6%B4%9B%E7%91%9F%E8%8F%88"
+    },
+    {
+      "id": "s2-wutheringwaves-1dd91d7301",
+      "game": "鸣潮",
+      "name": "奥古斯塔",
+      "summary": "七丘的现任总督，以强大的实力与意志引领城邦。面对挑战者和命运，她都选择正面迎战。",
+      "sourceUrl": "https://wiki.biligame.com/wutheringwaves/%E5%85%B1%E9%B8%A3%E8%80%85/%E5%A5%A5%E5%8F%A4%E6%96%AF%E5%A1%94"
+    },
+    {
+      "id": "s2-wutheringwaves-a3555faaa3",
+      "game": "鸣潮",
+      "name": "嘉贝莉娜",
+      "summary": "行走于索拉里斯各地的猎魔人，也是黑海岸客卿。她外表冷峻、行动果断，有着永火恶魔的名号。",
+      "sourceUrl": "https://wiki.biligame.com/wutheringwaves/%E5%85%B1%E9%B8%A3%E8%80%85/%E5%98%89%E8%B4%9D%E8%8E%89%E5%A8%9C"
+    },
+    {
+      "id": "s2-wutheringwaves-46fa1b3af1",
+      "game": "鸣潮",
+      "name": "坎特蕾拉",
+      "summary": "翡萨烈家族的现任家主，以毒药与幻梦闻名。她举止高贵而神秘，擅长让人陷入自己编织的梦境。",
+      "sourceUrl": "https://wiki.biligame.com/wutheringwaves/%E5%85%B1%E9%B8%A3%E8%80%85/%E5%9D%8E%E7%89%B9%E8%95%BE%E6%8B%89"
+    },
+    {
+      "id": "c064",
+      "game": "鸣潮",
+      "name": "露帕",
+      "summary": "七丘的明星角斗士，性格热情率直。她享受竞技本身的快乐，如孤狼般带着野性走向每一次挑战。",
+      "sourceUrl": "https://wiki.biligame.com/wutheringwaves/%E5%85%B1%E9%B8%A3%E8%80%85/%E9%9C%B2%E5%B8%95"
+    },
+    {
+      "id": "s2-wutheringwaves-f276eb8e25",
+      "game": "鸣潮",
+      "name": "折枝",
+      "summary": "以接受委托和售画为生的画师，敏感而不善言辞。她将难以出口的心意寄托在画中，笔下景物能够化为现实。",
+      "sourceUrl": "https://wiki.biligame.com/wutheringwaves/%E5%85%B1%E9%B8%A3%E8%80%85/%E6%8A%98%E6%9E%9D"
+    },
+    {
+      "id": "s2-wutheringwaves-55ee76287b",
+      "game": "鸣潮",
+      "name": "安可",
+      "summary": "黑海岸客卿，身边总有黑白羊咩玩偶相伴。她喜欢糖果和童话，盼望为遇见的人写下幸福的故事。",
+      "sourceUrl": "https://wiki.biligame.com/wutheringwaves/%E5%85%B1%E9%B8%A3%E8%80%85/%E5%AE%89%E5%8F%AF"
+    },
+    {
+      "id": "s2-wutheringwaves-9cea03f679",
+      "game": "鸣潮",
+      "name": "夏空",
+      "summary": "行走黎那汐塔的吟游诗人，为神明也为普通人歌唱。她在旅途中收集故事，再用歌声将它们传给更多人。",
+      "sourceUrl": "https://wiki.biligame.com/wutheringwaves/%E5%85%B1%E9%B8%A3%E8%80%85/%E5%A4%8F%E7%A9%BA"
+    },
+    {
+      "id": "s2-wutheringwaves-09c5285b31",
+      "game": "鸣潮",
+      "name": "洛可可",
+      "summary": "愚人剧团的副手，同时兼任道具师与即兴演员。她将剧团事务打理得有条不紊，随身珍奇箱中总有新惊喜。",
+      "sourceUrl": "https://wiki.biligame.com/wutheringwaves/%E5%85%B1%E9%B8%A3%E8%80%85/%E6%B4%9B%E5%8F%AF%E5%8F%AF"
+    },
+    {
+      "id": "c057",
+      "game": "鸣潮",
+      "name": "鉴心",
+      "summary": "风仪拳的传人，一心钻研武学的道士。她质朴坦然，能够调和周遭气韵，以力场护身御敌。",
+      "sourceUrl": "https://wiki.biligame.com/wutheringwaves/%E5%85%B1%E9%B8%A3%E8%80%85/%E9%89%B4%E5%BF%83"
+    },
+    {
+      "id": "s2-wutheringwaves-063a838bc7",
+      "game": "鸣潮",
+      "name": "维里奈",
+      "summary": "熟悉植物习性的育种员，性格温柔乐观。她用知识和治愈能力照料朋友，也珍惜每一朵花的生命。",
+      "sourceUrl": "https://wiki.biligame.com/wutheringwaves/%E5%85%B1%E9%B8%A3%E8%80%85/%E7%BB%B4%E9%87%8C%E5%A5%88"
+    },
+    {
+      "id": "c060",
+      "game": "鸣潮",
+      "name": "丹瑾",
+      "summary": "行走瑝珑的游侠，能够将自身血液凝成绯刃。她重视善恶是非，以直接而坚定的方式惩恶护人。",
+      "sourceUrl": "https://wiki.biligame.com/wutheringwaves/%E5%85%B1%E9%B8%A3%E8%80%85/%E4%B8%B9%E7%91%BE"
+    },
+    {
+      "id": "c061",
+      "game": "鸣潮",
+      "name": "桃祈",
+      "summary": "天工边防事务的负责人，看似慵懒却十分可靠。她愿为细小的日常愿望出力，用坚实防线守住今州的安宁。",
+      "sourceUrl": "https://wiki.biligame.com/wutheringwaves/%E5%85%B1%E9%B8%A3%E8%80%85/%E6%A1%83%E7%A5%88"
+    },
+    {
+      "id": "s2-wutheringwaves-80fc314163",
+      "game": "鸣潮",
+      "name": "灯灯",
+      "summary": "呜呜物流的领航员兼运输小组长，来自越州山村。她待人真诚热情，将货物和善意一同送往目的地。",
+      "sourceUrl": "https://wiki.biligame.com/wutheringwaves/%E5%85%B1%E9%B8%A3%E8%80%85/%E7%81%AF%E7%81%AF"
+    },
+    {
+      "id": "s2-wutheringwaves-d287b9f3b1",
+      "game": "鸣潮",
+      "name": "卜灵",
+      "summary": "来自梦州的方士，也是黑海岸客卿。她性格开朗，擅长风水卜卦，闲时也爱在论坛里与人交流。",
+      "sourceUrl": "https://wiki.biligame.com/wutheringwaves/%E5%85%B1%E9%B8%A3%E8%80%85/%E5%8D%9C%E7%81%B5"
+    },
+    {
+      "id": "c105",
+      "game": "战双帕弥什",
+      "name": "露西亚",
+      "summary": "灰鸦小队队长，认真执着的军用构造体。她在长期战斗中磨炼出坚定意志，与指挥官并肩守护同伴。",
+      "sourceUrl": "https://wiki.biligame.com/zspms/%E4%B8%96%E7%95%8C%E8%A7%82/%E9%9C%B2%E8%A5%BF%E4%BA%9A"
+    },
+    {
+      "id": "s2-zspms-3e32da9648",
+      "game": "战双帕弥什",
+      "name": "α",
+      "summary": "亦称阿尔法，与灰鸦队长露西亚拥有相连的过去。她以凌厉剑术独行于战场，对露娜有着深厚的牵挂。",
+      "sourceUrl": "https://wiki.biligame.com/zspms/%E4%B8%96%E7%95%8C%E8%A7%82/%E9%98%BF%E5%B0%94%E6%B3%95"
+    },
+    {
+      "id": "c106",
+      "game": "战双帕弥什",
+      "name": "丽芙",
+      "summary": "灰鸦小队的支援型构造体，出身医疗体系。她温柔体贴，也有在危难中挺身而出的勇气。",
+      "sourceUrl": "https://wiki.biligame.com/zspms/%E4%B8%96%E7%95%8C%E8%A7%82/%E4%B8%BD%E8%8A%99"
+    },
+    {
+      "id": "s2-zspms-ba3bf32563",
+      "game": "战双帕弥什",
+      "name": "露娜",
+      "summary": "露西亚的妹妹，升格网络中的代行者。幼年的遭遇改变了她的道路，而对姐姐的感情始终深刻。",
+      "sourceUrl": "https://wiki.biligame.com/zspms/%E4%B8%96%E7%95%8C%E8%A7%82/%E9%9C%B2%E5%A8%9C"
+    },
+    {
+      "id": "c109",
+      "game": "战双帕弥什",
+      "name": "赛琳娜",
+      "summary": "曾是考古小队成员，拥有出色的音乐与艺术天分。经历空间站与红潮事件后，她仍以温和而坚韧的心面对世界。",
+      "sourceUrl": "https://wiki.biligame.com/zspms/%E4%B8%96%E7%95%8C%E8%A7%82/%E8%B5%9B%E7%90%B3%E5%A8%9C"
+    },
+    {
+      "id": "c107",
+      "game": "战双帕弥什",
+      "name": "薇拉",
+      "summary": "三头犬小队队长，言辞锋利，处事果断。她的做法常引来争议，却也是队伍在险境中依靠的主心骨。",
+      "sourceUrl": "https://wiki.biligame.com/zspms/%E4%B8%96%E7%95%8C%E8%A7%82/%E8%96%87%E6%8B%89"
+    },
+    {
+      "id": "s2-zspms-22e5ce8e9d",
+      "game": "战双帕弥什",
+      "name": "比安卡",
+      "summary": "清理部队长官，曾有修女的经历。她举止优雅、作风严谨，在艰难任务与自己的信念之间承担责任。",
+      "sourceUrl": "https://wiki.biligame.com/zspms/%E4%B8%96%E7%95%8C%E8%A7%82/%E6%AF%94%E5%AE%89%E5%8D%A1"
+    },
+    {
+      "id": "c108",
+      "game": "战双帕弥什",
+      "name": "曲",
+      "summary": "最后一代九龙之主，将文明的延续视作己任。她怀着对故土的执念，在动荡中谋划九龙的未来。",
+      "sourceUrl": "https://wiki.biligame.com/zspms/%E4%B8%96%E7%95%8C%E8%A7%82/%E6%9B%B2"
+    },
+    {
+      "id": "c111",
+      "game": "战双帕弥什",
+      "name": "含英",
+      "summary": "诞生于机械之身、逐渐拥有情感的舞者。她曾在九龙夜航船以歌舞谋生，也曾照料年幼的蒲牢。",
+      "sourceUrl": "https://wiki.biligame.com/zspms/%E4%B8%96%E7%95%8C%E8%A7%82/%E5%90%AB%E8%8B%B1"
+    },
+    {
+      "id": "c110",
+      "game": "战双帕弥什",
+      "name": "罗塞塔",
+      "summary": "曾率领极地守林人的战士，后作为特别成员加入空中花园。她坚毅可靠，始终记挂着自己守护的人们。",
+      "sourceUrl": "https://wiki.biligame.com/zspms/%E4%B8%96%E7%95%8C%E8%A7%82/%E7%BD%97%E5%A1%9E%E5%A1%94"
+    },
+    {
+      "id": "s2-zspms-4252de8219",
+      "game": "战双帕弥什",
+      "name": "七实",
+      "summary": "拥有自我意识的机械生命，热爱探索与创造。她驾驶亲手设计的帕瓦，在旅途中寻找人类与机械的可能性。",
+      "sourceUrl": "https://wiki.biligame.com/zspms/%E4%B8%96%E7%95%8C%E8%A7%82/%E4%B8%83%E5%AE%9E"
+    },
+    {
+      "id": "s2-zspms-f04ab13f4e",
+      "game": "战双帕弥什",
+      "name": "卡列尼娜",
+      "summary": "工程部队的构造体，精通机械与爆破。她脾气急躁、表达直接，做起技术工作却有着扎实的本领。",
+      "sourceUrl": "https://wiki.biligame.com/zspms/%E4%B8%96%E7%95%8C%E8%A7%82/%E5%8D%A1%E5%88%97%E5%B0%BC%E5%A8%9C"
+    },
+    {
+      "id": "s2-zspms-d7eccc55d5",
+      "game": "战双帕弥什",
+      "name": "艾拉",
+      "summary": "隶属艺术协会的考古小队成员，对艺术抱有热烈兴趣。她自信开朗，希望在灾难后的世界保留下美的痕迹。",
+      "sourceUrl": "https://wiki.biligame.com/zspms/%E4%B8%96%E7%95%8C%E8%A7%82/%E8%89%BE%E6%8B%89"
+    },
+    {
+      "id": "c112",
+      "game": "战双帕弥什",
+      "name": "21号",
+      "summary": "三头犬小队成员，曾是实验体。她不擅理解和表达情绪，却对队长薇拉与身边同伴怀有强烈信任。",
+      "sourceUrl": "https://wiki.biligame.com/zspms/%E4%B8%96%E7%95%8C%E8%A7%82/21%E5%8F%B7"
+    },
+    {
+      "id": "s2-zspms-2249aa62aa",
+      "game": "战双帕弥什",
+      "name": "拉弥亚",
+      "summary": "在亚特兰蒂斯成长并接受改造的升格者。她带着对故乡的记忆与生存的渴望，寻找自己的容身之处。",
+      "sourceUrl": "https://wiki.biligame.com/zspms/%E4%B8%96%E7%95%8C%E8%A7%82/%E6%8B%89%E5%BC%A5%E4%BA%9A"
+    },
+    {
+      "id": "s2-zspms-2fb9e23cad",
+      "game": "战双帕弥什",
+      "name": "莉莉丝",
+      "summary": "与冯·内古特集团有关的升格者，擅长谋划与操纵。她渴望更高的地位和权力，为此敢于冒险下注。",
+      "sourceUrl": "https://wiki.biligame.com/zspms/%E4%B8%96%E7%95%8C%E8%A7%82/%E8%8E%89%E8%8E%89%E4%B8%9D"
+    },
+    {
+      "id": "s2-zspms-7465b67175",
+      "game": "战双帕弥什",
+      "name": "伊什梅尔",
+      "summary": "与慈悲者有关的神秘存在，以特殊立场观察人类。她的言行常带有深意，难以用寻常阵营关系衡量。",
+      "sourceUrl": "https://wiki.biligame.com/zspms/%E4%B8%96%E7%95%8C%E8%A7%82/%E4%BC%8A%E4%BB%80%E6%A2%85%E5%B0%94"
+    },
+    {
+      "id": "s2-zspms-ffd9a5f469",
+      "game": "战双帕弥什",
+      "name": "哈卡玛",
+      "summary": "来自机械教会的机械体，在地球寻找机械先哲。她对这段追寻有着超出一般使命的执着。",
+      "sourceUrl": "https://wiki.biligame.com/zspms/%E4%B8%96%E7%95%8C%E8%A7%82/%E5%93%88%E5%8D%A1%E7%8E%9B"
+    },
+    {
+      "id": "s2-zspms-f2d56d18e2",
+      "game": "战双帕弥什",
+      "name": "蒲牢",
+      "summary": "九龙夜航船上的九龙众，承担商会安保工作。小巧机体中蕴藏着惊人力量，性格也有孩子般直率的一面。",
+      "sourceUrl": "https://wiki.biligame.com/zspms/%E4%B8%96%E7%95%8C%E8%A7%82/%E8%92%B2%E7%89%A2"
+    },
+    {
+      "id": "s2-zspms-2b457f391e",
+      "game": "战双帕弥什",
+      "name": "邦比娜塔",
+      "summary": "清庭白鹭小队的构造体，动作带着芭蕾般的轻盈。她认真执行指令，在记忆与情感中逐渐理解自己。",
+      "sourceUrl": "https://wiki.biligame.com/zspms/%E4%B8%96%E7%95%8C%E8%A7%82/%E9%82%A6%E6%AF%94%E5%A8%9C%E5%A1%94"
+    },
+    {
+      "id": "s2-zspms-faf440a9f5",
+      "game": "战双帕弥什",
+      "name": "亚里莎",
+      "summary": "来自乌托邦实验基地的构造体，现与空中花园并肩行动。她与能够互通意识的生物武器铠甲「姐姐」共同战斗。",
+      "sourceUrl": "https://wiki.biligame.com/zspms/%E4%B8%96%E7%95%8C%E8%A7%82/%E4%BA%9A%E9%87%8C%E8%8E%8E"
+    },
+    {
+      "id": "s2-zspms-877255f18e",
+      "game": "战双帕弥什",
+      "name": "布偶熊",
+      "summary": "工程部队副队长，本名克里斯蒂娜·诺曼。离开家族后，她凭借技术能力独立工作，也保有鲜明的个人脾气。",
+      "sourceUrl": "https://wiki.biligame.com/zspms/%E4%B8%96%E7%95%8C%E8%A7%82/%E5%B8%83%E5%81%B6%E7%86%8A"
+    },
+    {
+      "id": "s2-zspms-10274e94b4",
+      "game": "战双帕弥什",
+      "name": "洁塔薇",
+      "summary": "从矩阵走向现实的机械生命，在格斯特里戈学院寻找失去的记忆。即使自身受损，她也不愿放弃需要援手的人。",
+      "sourceUrl": "https://wiki.biligame.com/zspms/%E4%B8%96%E7%95%8C%E8%A7%82/%E6%B4%81%E5%A1%94%E8%96%87"
+    },
+    {
+      "id": "s2-zspms-728e690217",
+      "game": "战双帕弥什",
+      "name": "涅缇娅",
+      "summary": "科学理事会的安全总监，兼具科研能力与战斗经验。她做事缜密而执着，将故人的记忆与守护人类的愿望铭记于心。",
+      "sourceUrl": "https://wiki.biligame.com/zspms/%E4%B8%96%E7%95%8C%E8%A7%82/%E6%B6%85%E7%BC%87%E5%A8%85"
+    },
+    {
+      "id": "s2-zspms-1e8d4c8b68",
+      "game": "战双帕弥什",
+      "name": "苏菲亚",
+      "summary": "来自阿迪莱商业联盟的使节，成长于永久列车。她作为灰鸦小队的外援行动，以沉稳的方式履行职责。",
+      "sourceUrl": "https://wiki.biligame.com/zspms/%E4%B8%96%E7%95%8C%E8%A7%82/%E8%8B%8F%E8%8F%B2%E4%BA%9A"
+    },
+    {
+      "id": "s2-zspms-8304bb0fa4",
+      "game": "战双帕弥什",
+      "name": "布丽姬特",
+      "summary": "空中花园支援部队队长，战斗经验丰富。她爽朗可靠，既能在前线迎敌，也懂得照顾部下的处境。",
+      "sourceUrl": "https://wiki.biligame.com/zspms/%E4%B8%96%E7%95%8C%E8%A7%82/%E5%B8%83%E4%B8%BD%E5%A7%AC%E7%89%B9"
+    },
+    {
+      "id": "s2-zspms-3fa6adfa57",
+      "game": "战双帕弥什",
+      "name": "八咫",
+      "summary": "圣甲虫小队的新任队长，承担队伍重整后的责任。她在任务与磨炼中不断寻找适合自己的战斗方式。",
+      "sourceUrl": "https://wiki.biligame.com/zspms/%E4%B8%96%E7%95%8C%E8%A7%82/%E5%85%AB%E5%92%AB"
+    },
+    {
+      "id": "s2-zspms-882c4c7fba",
+      "game": "战双帕弥什",
+      "name": "斜奏",
+      "summary": "曾在清理部队服役，后来加入圣甲虫小队。她在新的队伍关系中继续执行任务，与八咫等人并肩行动。",
+      "sourceUrl": "https://wiki.biligame.com/zspms/%E4%B8%96%E7%95%8C%E8%A7%82/%E6%96%9C%E5%A5%8F"
+    },
+    {
+      "id": "s2-zspms-5cd4133323",
+      "game": "战双帕弥什",
+      "name": "维罗妮卡",
+      "summary": "机械教会「正义」席位的持有者，掌管齐奥尔科夫斯基航天城。她的行动牵动着机械生命与人类之间的关系。",
+      "sourceUrl": "https://wiki.biligame.com/zspms/%E4%B8%96%E7%95%8C%E8%A7%82/%E7%BB%B4%E7%BD%97%E5%A6%AE%E5%8D%A1"
+    },
+    {
+      "id": "s2-zspms-e946a6a6c2",
+      "game": "战双帕弥什",
+      "name": "海伦汀",
+      "summary": "承担外交工作的构造体，礼仪周全，富有责任心。她会认真记下与人相处的细节，也常因不愿拒绝求助而忙碌。",
+      "sourceUrl": "https://wiki.biligame.com/zspms/%E4%B8%96%E7%95%8C%E8%A7%82/%E6%B5%B7%E4%BC%A6%E6%B1%80"
+    },
+    {
+      "id": "s2-zspms-3f26d2e2f5",
+      "game": "战双帕弥什",
+      "name": "阿德莱德",
+      "summary": "环大西洋赫里欧家族的前继承人，现任法奥斯非常驻军事实训教官。她将丰富经历用于训练和指导后辈。",
+      "sourceUrl": "https://wiki.biligame.com/zspms/%E4%B8%96%E7%95%8C%E8%A7%82/%E9%98%BF%E5%BE%B7%E8%8E%B1%E5%BE%B7"
+    },
+    {
+      "id": "s2-zspms-21ff1f9fb4",
+      "game": "战双帕弥什",
+      "name": "赛利卡",
+      "summary": "空中花园的秘书，负责繁杂的联络与行政工作。嘴上常念着不要加班，实际却是勤奋可靠的协调者。",
+      "sourceUrl": "https://wiki.biligame.com/zspms/%E4%B8%96%E7%95%8C%E8%A7%82/%E8%B5%9B%E5%88%A9%E5%8D%A1"
+    },
+    {
+      "id": "s2-zspms-c672ec4341",
+      "game": "战双帕弥什",
+      "name": "凡妮莎",
+      "summary": "清庭白鹭小队指挥官，行事强势，对任务和部下都有严格要求。她与灰鸦指挥官有着不同的处事方式。",
+      "sourceUrl": "https://wiki.biligame.com/zspms/%E4%B8%96%E7%95%8C%E8%A7%82/%E5%87%A1%E5%A6%AE%E8%8E%8E"
+    },
+    {
+      "id": "s2-zspms-94d0356ed1",
+      "game": "战双帕弥什",
+      "name": "莱亚",
+      "summary": "清庭白鹭小队成员，自称大英雄的活跃构造体。她喜欢用彩色炸弹开路，热闹的言行背后也有救人的行动力。",
+      "sourceUrl": "https://wiki.biligame.com/zspms/%E4%B8%96%E7%95%8C%E8%A7%82/%E8%8E%B1%E4%BA%9A"
+    },
+    {
+      "id": "s2-zspms-d2c5701b36",
+      "game": "战双帕弥什",
+      "name": "洛莎",
+      "summary": "阿西莫夫的助手兼教女，常跟随他参与工作。她与科学理事会的研究生活有着密切联系。",
+      "sourceUrl": "https://wiki.biligame.com/zspms/%E4%B8%96%E7%95%8C%E8%A7%82/%E6%B4%9B%E8%8E%8E"
+    },
+    {
+      "id": "s2-zspms-186780ae70",
+      "game": "战双帕弥什",
+      "name": "特洛伊",
+      "summary": "服役多年的早期军用构造体，使用「山铜」机体。尽管意识海留下战伤，她仍作为虹莺小队的一员行动。",
+      "sourceUrl": "https://wiki.biligame.com/zspms/%E4%B8%96%E7%95%8C%E8%A7%82/%E7%89%B9%E6%B4%9B%E4%BC%8A"
+    },
+    {
+      "id": "s2-zspms-419901e9ef",
+      "game": "战双帕弥什",
+      "name": "艾玛·科波菲尔",
+      "summary": "科波菲尔家族的大小姐，在另一段时间线中成为辅助型构造体。她的故事与北极联合航线和海洋馆相连。",
+      "sourceUrl": "https://wiki.biligame.com/zspms/%E4%B8%96%E7%95%8C%E8%A7%82/%E8%89%BE%E7%8E%9B%C2%B7%E7%A7%91%E6%B3%A2%E8%8F%B2%E5%B0%94"
+    },
+    {
+      "id": "s2-zspms-bf363b9dce",
+      "game": "战双帕弥什",
+      "name": "雾岛千子",
+      "summary": "清理部队的前副队长，性格冷峻，曾与比安卡并肩作战。她的命运在科波菲尔海洋馆战役中发生重大转折。",
+      "sourceUrl": "https://wiki.biligame.com/zspms/%E4%B8%96%E7%95%8C%E8%A7%82/%E5%8D%83%E5%AD%90"
+    },
+    {
+      "id": "s2-zspms-a8179be2c0",
+      "game": "战双帕弥什",
+      "name": "帕露玛",
+      "summary": "寒羊小队队长，曾在红鸲小队服役。失去亲近的队友之后，她在重组的队伍中继续承担前线责任。",
+      "sourceUrl": "https://wiki.biligame.com/zspms/%E4%B8%96%E7%95%8C%E8%A7%82/%E5%B8%95%E9%9C%B2%E7%8E%9B"
+    },
+    {
+      "id": "s2-zspms-3bb87660c1",
+      "game": "战双帕弥什",
+      "name": "卡俄斯",
+      "summary": "以灰鸦指挥官的克隆体为基础、经由「卵」孕育的造物。她的存在与身份问题，是相关篇章中的重要线索。",
+      "sourceUrl": "https://wiki.biligame.com/zspms/%E4%B8%96%E7%95%8C%E8%A7%82/%E5%8D%A1%E4%BF%84%E6%96%AF"
+    },
+    {
+      "id": "s2-bh3-a7a331eb46",
+      "game": "崩坏3",
+      "name": "琪亚娜",
+      "summary": "卡斯兰娜家族的少女，从圣芙蕾雅学园踏上女武神之路。她在伙伴的陪伴中成长，始终选择为珍视的人而战。",
+      "sourceUrl": "https://wiki.biligame.com/bh3/%E7%90%AA%E4%BA%9A%E5%A8%9C%C2%B7%E5%8D%A1%E6%96%AF%E5%85%B0%E5%A8%9C"
+    },
+    {
+      "id": "s2-bh3-ee5e2f9e86",
+      "game": "崩坏3",
+      "name": "雷电芽衣",
+      "summary": "与琪亚娜、布洛妮娅共同成长的女武神，擅长剑术。她曾走过不同阵营，守护伙伴的决心却从未动摇。",
+      "sourceUrl": "https://wiki.biligame.com/bh3/%E9%9B%B7%E7%94%B5%E8%8A%BD%E8%A1%A3"
+    },
+    {
+      "id": "s2-bh3-cdfb201cce",
+      "game": "崩坏3",
+      "name": "布洛妮娅",
+      "summary": "出身可可利亚孤儿院的女武神，冷静而善于判断。她珍惜与希儿的约定，也热爱游戏与机械。",
+      "sourceUrl": "https://wiki.biligame.com/bh3/%E5%B8%83%E6%B4%9B%E5%A6%AE%E5%A8%85%C2%B7%E6%89%8E%E4%BC%8A%E5%88%87%E5%85%8B"
+    },
+    {
+      "id": "s2-bh3-6d09bbd07d",
+      "game": "崩坏3",
+      "name": "爱莉希雅",
+      "summary": "逐火十三英桀的一员，以「真我」为刻印。她热情坦率，喜爱美丽的事物，对人类始终抱有温柔的好奇。",
+      "sourceUrl": "https://wiki.biligame.com/bh3/%E7%88%B1%E8%8E%89%E5%B8%8C%E9%9B%85"
+    },
+    {
+      "id": "s2-bh3-cd224df2bc",
+      "game": "崩坏3",
+      "name": "希儿",
+      "summary": "在可可利亚孤儿院长大的少女，温柔且善解人意。经历量子之海的磨难后，她学会为自己珍惜的人主动战斗。",
+      "sourceUrl": "https://wiki.biligame.com/bh3/%E5%B8%8C%E5%84%BF%C2%B7%E8%8A%99%E4%B9%90%E8%89%BE"
+    },
+    {
+      "id": "s2-bh3-9e17ed151b",
+      "game": "崩坏3",
+      "name": "黑希儿",
+      "summary": "与希儿共存、源于圣痕的另一意识，习惯用强硬言辞隐藏关心。她是希儿最亲密的守护者与同行者。",
+      "sourceUrl": "https://bh3.mihoyo.com/gl/character/list"
+    },
+    {
+      "id": "s2-bh3-d8f4174c05",
+      "game": "崩坏3",
+      "name": "符华",
+      "summary": "曾是逐火十三英桀之一，后来以赤鸢仙人的身份守护神州。她沉稳克制，也在漫长岁月中学会重新接纳羁绊。",
+      "sourceUrl": "https://wiki.biligame.com/bh3/%E7%AC%A6%E5%8D%8E"
+    },
+    {
+      "id": "s2-bh3-75da6b69b7",
+      "game": "崩坏3",
+      "name": "识之律者",
+      "summary": "在符华身体中诞生的律者，拥有操纵意识的能力。她张扬直率、好胜爱热闹，与符华维系着特殊的关系。",
+      "sourceUrl": "https://wiki.biligame.com/bh3/%E8%AF%86%E4%B9%8B%E5%BE%8B%E8%80%85"
+    },
+    {
+      "id": "s2-bh3-b1899012a3",
+      "game": "崩坏3",
+      "name": "德丽莎",
+      "summary": "圣芙蕾雅学园的创办者，后接任天命主教。她希望女武神拥有自己的生活，而不只是战斗的使命。",
+      "sourceUrl": "https://wiki.biligame.com/bh3/%E5%BE%B7%E4%B8%BD%E8%8E%8E%C2%B7%E9%98%BF%E6%B3%A2%E5%8D%A1%E5%88%A9%E6%96%AF"
+    },
+    {
+      "id": "s2-bh3-230580ccd7",
+      "game": "崩坏3",
+      "name": "无量塔姬子",
+      "summary": "圣芙蕾雅学园的教师，也是经验丰富的女武神。她用行动教导学生选择自己的道路，并为之承担代价。",
+      "sourceUrl": "https://wiki.biligame.com/bh3/%E6%97%A0%E9%87%8F%E5%A1%94%E5%A7%AC%E5%AD%90"
+    },
+    {
+      "id": "s2-bh3-fddfa1fb03",
+      "game": "崩坏3",
+      "name": "丽塔",
+      "summary": "天命的女武神，以女仆般的礼仪与优雅著称。她常与幽兰黛尔搭档，周到举止下有着敏锐判断和精湛战技。",
+      "sourceUrl": "https://wiki.biligame.com/bh3/%E4%B8%BD%E5%A1%94%C2%B7%E6%B4%9B%E4%B8%9D%E8%96%87%E7%91%9F"
+    },
+    {
+      "id": "s2-bh3-4d1b9929c1",
+      "game": "崩坏3",
+      "name": "幽兰黛尔",
+      "summary": "本名比安卡，天命的精锐女武神。她自律认真，拥有强大战力，也十分重视努力与责任。",
+      "sourceUrl": "https://bh3.mihoyo.com/gl/character/list"
+    },
+    {
+      "id": "s2-bh3-38f1b8d7c5",
+      "game": "崩坏3",
+      "name": "八重樱",
+      "summary": "八重村的巫女，与妹妹八重凛和卡莲的命运紧密相连。她的故事围绕守护、牺牲与难以割舍的思念展开。",
+      "sourceUrl": "https://wiki.biligame.com/bh3/%E5%85%AB%E9%87%8D%E6%A8%B1"
+    },
+    {
+      "id": "s2-bh3-f701815d4d",
+      "game": "崩坏3",
+      "name": "卡莲",
+      "summary": "卡斯兰娜家族的女武神，曾为天命而战。她不愿放弃心中的正义，始终把保护无辜之人放在首位。",
+      "sourceUrl": "https://wiki.biligame.com/bh3/%E5%8D%A1%E8%8E%B2%C2%B7%E5%8D%A1%E6%96%AF%E5%85%B0%E5%A8%9C"
+    },
+    {
+      "id": "s2-bh3-6d01623417",
+      "game": "崩坏3",
+      "name": "伊甸",
+      "summary": "前文明的著名歌者，也是逐火十三英桀之一。她以「黄金」为刻印，在文明的余晖中珍藏艺术与同伴的记忆。",
+      "sourceUrl": "https://wiki.biligame.com/bh3/%E4%BC%8A%E7%94%B8"
+    },
+    {
+      "id": "s2-bh3-a58ebcbea5",
+      "game": "崩坏3",
+      "name": "梅比乌斯",
+      "summary": "逐火之蛾的科学家，以「无限」为刻印的英桀。她执着于生命与进化的研究，常以危险方式突破既有边界。",
+      "sourceUrl": "https://wiki.biligame.com/bh3/%E6%A2%85%E6%AF%94%E4%B9%8C%E6%96%AF"
+    },
+    {
+      "id": "s2-bh3-822704406c",
+      "game": "崩坏3",
+      "name": "阿波尼亚",
+      "summary": "逐火十三英桀之一，以「戒律」为刻印。她能够感知命运的轨迹，温和言语背后有着令人难以抗拒的力量。",
+      "sourceUrl": "https://wiki.biligame.com/bh3/%E9%98%BF%E6%B3%A2%E5%B0%BC%E4%BA%9A"
+    },
+    {
+      "id": "s2-bh3-a92abd0a43",
+      "game": "崩坏3",
+      "name": "帕朵菲莉丝",
+      "summary": "逐火十三英桀中以「空梦」为刻印的成员。她喜欢晒太阳和做小生意，看似怕事，却珍惜与伙伴的羁绊。",
+      "sourceUrl": "https://wiki.biligame.com/bh3/%E5%B8%95%E6%9C%B5%E8%8F%B2%E8%8E%89%E4%B8%9D"
+    },
+    {
+      "id": "s2-bh3-8492dc4806",
+      "game": "崩坏3",
+      "name": "格蕾修",
+      "summary": "以「繁星」为刻印的英桀，用绘画感知与表达世界。色彩承载着她的情绪，也记录着她与他人的相遇。",
+      "sourceUrl": "https://wiki.biligame.com/bh3/%E6%A0%BC%E8%95%BE%E4%BF%AE"
+    },
+    {
+      "id": "s2-bh3-705d278a97",
+      "game": "崩坏3",
+      "name": "维尔薇",
+      "summary": "逐火十三英桀中的机械天才，以「螺旋」为刻印。她兼具工程师与魔术师的创造力，作品常让人惊叹又头疼。",
+      "sourceUrl": "https://wiki.biligame.com/bh3/%E7%BB%B4%E5%B0%94%E8%96%87"
+    },
+    {
+      "id": "s2-bh3-718a7e04d3",
+      "game": "崩坏3",
+      "name": "李素裳",
+      "summary": "来自神州的习武少女，与太虚剑派渊源深厚。她性格直爽，重视侠义，在陌生时代中继续践行自己的信念。",
+      "sourceUrl": "https://wiki.biligame.com/bh3/%E6%9D%8E%E7%B4%A0%E8%A3%B3"
+    },
+    {
+      "id": "s2-bh3-8e67d617b3",
+      "game": "崩坏3",
+      "name": "西琳",
+      "summary": "与第二次崩坏密切相关的少女，也是空之律者的名字。痛苦的经历塑造了她对世界的愤怒与渴望被爱的内心。",
+      "sourceUrl": "https://wiki.biligame.com/bh3/%E8%A5%BF%E7%90%B3"
+    },
+    {
+      "id": "s2-bh3-2c225dc166",
+      "game": "崩坏3",
+      "name": "希娜狄雅",
+      "summary": "在火星篇章中与寻梦者相遇的神秘少女。她活泼而富有感染力，引领同伴探寻被灾难掩埋的旧日故事。",
+      "sourceUrl": "https://wiki.biligame.com/bh3/%E5%B8%8C%E5%A8%9C%E7%8B%84%E9%9B%85"
+    },
+    {
+      "id": "s2-bh3-3ef0f7326d",
+      "game": "崩坏3",
+      "name": "薇塔",
+      "summary": "在量子之海相关事件中登场的神秘旅人。她常带着从容笑意，身份与行动背后隐藏着复杂的来历。",
+      "sourceUrl": "https://bh3.mihoyo.com/gl/character/list"
+    },
+    {
+      "id": "s2-bh3-018f46f4eb",
+      "game": "崩坏3",
+      "name": "松雀",
+      "summary": "琅丘御影七术中的「欺瞒」，嘴快机灵，带着市井气息。她看似擅长蒙混过关，危急时却愿为他人作出选择。",
+      "sourceUrl": "https://bh3.mihoyo.com/gl/character/list"
+    },
+    {
+      "id": "s2-bh3-264d371427",
+      "game": "崩坏3",
+      "name": "普罗米修斯",
+      "summary": "来自前文明的人工智能，拥有独立思考能力。她以理性分析参与对抗崩坏，也与梅博士的计划密切相关。",
+      "sourceUrl": "https://bh3.mihoyo.com/gl/character/list"
+    },
+    {
+      "id": "s2-bh3-cbba1ef9cd",
+      "game": "崩坏3",
+      "name": "赫丽娅",
+      "summary": "来自地球的女武神，与科拉莉共同参与火星探索。她认真负责，在陌生环境中仍坚持履行战士的职责。",
+      "sourceUrl": "https://bh3.mihoyo.com/gl/character/list"
+    },
+    {
+      "id": "s2-bh3-23ced6d1c0",
+      "game": "崩坏3",
+      "name": "科拉莉",
+      "summary": "参与火星探索的年轻研究者，擅长技术与分析。她说话直接，常用冷静观察为团队提供另一种思路。",
+      "sourceUrl": "https://wiki.biligame.com/bh3/%E7%A7%91%E6%8B%89%E8%8E%89"
+    },
+    {
+      "id": "s2-bh3-ab322f651d",
+      "game": "崩坏3",
+      "name": "瑟莉姆",
+      "summary": "琅丘御影七术中的「享乐」，生活奢华，重视个人品味。她以从容姿态看待变化，也有自己坚持的规则。",
+      "sourceUrl": "https://bh3.mihoyo.com/gl/character/list"
+    },
+    {
+      "id": "s2-bh3-28656d4702",
+      "game": "崩坏3",
+      "name": "灯",
+      "summary": "琅丘御影七术中的「破弃」，以冷静而高效的行动著称。面对阴影与危机，她更习惯用实际行动解决问题。",
+      "sourceUrl": "https://bh3.mihoyo.com/gl/character/list"
+    },
+    {
+      "id": "s2-bh3-c1339ab20f",
+      "game": "崩坏3",
+      "name": "渡鸦",
+      "summary": "本名娜塔莎·希奥拉，世界蛇的雇佣兵。她擅长潜伏与战斗，任务之外始终牵挂着自己照料的孩子们。",
+      "sourceUrl": "https://bh3.mihoyo.com/gl/character/list"
+    },
+    {
+      "id": "s2-bh3-a00cf43f50",
+      "game": "崩坏3",
+      "name": "爱衣",
+      "summary": "与休伯利安舰相关的人工智能，参与舰船事务与作战支援。鲜明的个性让她成为舰长和女武神们熟悉的伙伴。",
+      "sourceUrl": "https://bh3.mihoyo.com/gl/character/list"
+    },
+    {
+      "id": "s2-bh3-d2083821d5",
+      "game": "崩坏3",
+      "name": "时雨绮罗",
+      "summary": "曾隶属雪狼小队的女武神，也怀有偶像梦想。她在历经战斗与离别后，仍努力用自己的方式守护他人。",
+      "sourceUrl": "https://bh3.mihoyo.com/gl/character/list"
+    },
+    {
+      "id": "s2-bh3-4922dbcd17",
+      "game": "崩坏3",
+      "name": "米丝忒琳",
+      "summary": "亦以羽兔之名为人所知，与世界蛇相关的特殊存在。她的故事牵连圣痕、记忆，以及人与人之间的联系。",
+      "sourceUrl": "https://bh3.mihoyo.com/gl/character/list"
+    },
+    {
+      "id": "s2-bh3-4e00cc643e",
+      "game": "崩坏3",
+      "name": "萝莎莉娅",
+      "summary": "可可利亚孤儿院出身的少女，莉莉娅的双胞胎姐姐。她活泼爱表现，与妹妹一同追逐成为偶像的梦想。",
+      "sourceUrl": "https://wiki.biligame.com/bh3/%E8%90%9D%E8%8E%8E%E8%8E%89%E5%A8%85%C2%B7%E9%98%BF%E7%90%B3"
+    },
+    {
+      "id": "s2-bh3-5be2f809bb",
+      "game": "崩坏3",
+      "name": "莉莉娅",
+      "summary": "萝莎莉娅的双胞胎妹妹，同样成长于可可利亚孤儿院。她比姐姐安静，常用直白吐槽与默契配合陪伴对方。",
+      "sourceUrl": "https://wiki.biligame.com/bh3/%E8%8E%89%E8%8E%89%E5%A8%85%C2%B7%E9%98%BF%E7%90%B3"
+    },
+    {
+      "id": "c019",
+      "game": "崩坏：星穹铁道",
+      "name": "流萤",
+      "summary": "星核猎手成员，驾驶装甲「萨姆」作战。她为寻找生存的机会而踏上旅途，也珍惜作为普通少女的片刻日常。",
+      "sourceUrl": "https://wiki.biligame.com/sr/%E6%B5%81%E8%90%A4"
+    },
+    {
+      "id": "c017",
+      "game": "崩坏：星穹铁道",
+      "name": "卡芙卡",
+      "summary": "从容神秘的星核猎手，擅长运用言灵术。她依照艾利欧预见的未来行动，闲时喜欢购买和整理大衣。",
+      "sourceUrl": "https://wiki.biligame.com/sr/%E5%8D%A1%E8%8A%99%E5%8D%A1"
+    },
+    {
+      "id": "c024",
+      "game": "崩坏：星穹铁道",
+      "name": "银狼",
+      "summary": "将宇宙当作游戏的天才骇客，也是星核猎手的一员。她掌握以太编辑技术，乐于挑战看似无法攻破的系统。",
+      "sourceUrl": "https://wiki.biligame.com/sr/%E9%93%B6%E7%8B%BC"
+    },
+    {
+      "id": "c026",
+      "game": "崩坏：星穹铁道",
+      "name": "花火",
+      "summary": "假面愚者中的戏剧高手，擅长变装与角色扮演。比起财富和权力，她更在意一场演出是否足够有趣。",
+      "sourceUrl": "https://wiki.biligame.com/sr/%E8%8A%B1%E7%81%AB"
+    },
+    {
+      "id": "c027",
+      "game": "崩坏：星穹铁道",
+      "name": "知更鸟",
+      "summary": "出身匹诺康尼的天环族歌者，歌声闻名银河。她借同谐之力传递情感，希望让不同的人听见彼此。",
+      "sourceUrl": "https://wiki.biligame.com/sr/%E7%9F%A5%E6%9B%B4%E9%B8%9F"
+    },
+    {
+      "id": "c018",
+      "game": "崩坏：星穹铁道",
+      "name": "黄泉",
+      "summary": "自称巡海游侠的独行旅人，随身佩着一柄长刀。她寡言而神秘，在银河间追寻自己的方向。",
+      "sourceUrl": "https://wiki.biligame.com/sr/%E9%BB%84%E6%B3%89"
+    },
+    {
+      "id": "c021",
+      "game": "崩坏：星穹铁道",
+      "name": "三月七",
+      "summary": "从恒冰中醒来的失忆少女，以获救的日期为自己命名。她随星穹列车旅行，爱用相机记录新的回忆。",
+      "sourceUrl": "https://wiki.biligame.com/sr/%E4%B8%89%E6%9C%88%E4%B8%83%E2%80%A2%E5%AD%98%E6%8A%A4"
+    },
+    {
+      "id": "s2-sr-beb377a1cc",
+      "game": "崩坏：星穹铁道",
+      "name": "昔涟",
+      "summary": "与哀丽秘榭和「真我」有关的黄金裔。她珍视记忆与相遇，希望让曾经的故事在未来绽放新的可能。",
+      "sourceUrl": "https://wiki.biligame.com/sr/%E6%98%94%E6%B6%9F"
+    },
+    {
+      "id": "c032",
+      "game": "崩坏：星穹铁道",
+      "name": "遐蝶",
+      "summary": "来自哀地里亚的黄金裔，与「死亡」火种相连。她温柔地对待逝去的生命，在生死旅途中守望魂灵。",
+      "sourceUrl": "https://wiki.biligame.com/sr/%E9%81%90%E8%9D%B6"
+    },
+    {
+      "id": "c031",
+      "game": "崩坏：星穹铁道",
+      "name": "大黑塔",
+      "summary": "天才俱乐部第83席，空间站黑塔的主人。平常多借人偶处理事务，遇到真正感兴趣的难题才会亲自出面。",
+      "sourceUrl": "https://wiki.biligame.com/sr/%E5%A4%A7%E9%BB%91%E5%A1%94"
+    },
+    {
+      "id": "c025",
+      "game": "崩坏：星穹铁道",
+      "name": "阮·梅",
+      "summary": "天才俱乐部第81席，研究生命科学的学者。她参与开发模拟宇宙，温婉仪态之下有着极强的求知执念。",
+      "sourceUrl": "https://wiki.biligame.com/sr/%E9%98%AE%E2%80%A2%E6%A2%85"
+    },
+    {
+      "id": "c020",
+      "game": "崩坏：星穹铁道",
+      "name": "镜流",
+      "summary": "曾经的罗浮剑首，也是云上五骁之一。如今她独行于故土之外，为超越昔日的目标追寻力量。",
+      "sourceUrl": "https://wiki.biligame.com/sr/%E9%95%9C%E6%B5%81"
+    },
+    {
+      "id": "c029",
+      "game": "崩坏：星穹铁道",
+      "name": "飞霄",
+      "summary": "仙舟曜青的天击将军，位列帝弓七天将。她率直洒脱、精通武艺，以不断获胜的战绩赢得军民信任。",
+      "sourceUrl": "https://wiki.biligame.com/sr/%E9%A3%9E%E9%9C%84"
+    },
+    {
+      "id": "c022",
+      "game": "崩坏：星穹铁道",
+      "name": "符玄",
+      "summary": "仙舟罗浮太卜司之首，借第三眼与穷观阵推算吉凶。她自信认真，习惯为复杂事务寻找最优解。",
+      "sourceUrl": "https://wiki.biligame.com/sr/%E7%AC%A6%E7%8E%84"
+    },
+    {
+      "id": "s2-sr-78dbb3e00a",
+      "game": "崩坏：星穹铁道",
+      "name": "藿藿",
+      "summary": "罗浮十王司的见习判官，与岁阳「尾巴」相伴。她胆小怕鬼，却总在职责面前鼓起勇气处理邪祟。",
+      "sourceUrl": "https://wiki.biligame.com/sr/%E8%97%BF%E8%97%BF"
+    },
+    {
+      "id": "c023",
+      "game": "崩坏：星穹铁道",
+      "name": "黑天鹅",
+      "summary": "流光忆庭的忆者，以占卜师的姿态行走各地。她耐心聆听他人，收集独特记忆，心思却不易被看透。",
+      "sourceUrl": "https://wiki.biligame.com/sr/%E9%BB%91%E5%A4%A9%E9%B9%85"
+    },
+    {
+      "id": "s2-sr-3dd482a291",
+      "game": "崩坏：星穹铁道",
+      "name": "姬子",
+      "summary": "修复星穹列车的科学家，也是开拓旅途的同行者。她喜欢亲手冲咖啡，对群星间未知的世界充满兴趣。",
+      "sourceUrl": "https://wiki.biligame.com/sr/%E5%A7%AC%E5%AD%90"
+    },
+    {
+      "id": "s2-sr-cd224df2bc",
+      "game": "崩坏：星穹铁道",
+      "name": "希儿",
+      "summary": "贝洛伯格地下组织「地火」的骨干，行动敏捷，性格直爽。她成长于下层区，习惯以实际行动保护身边的人。",
+      "sourceUrl": "https://wiki.biligame.com/sr/%E5%B8%8C%E5%84%BF"
+    },
+    {
+      "id": "s2-sr-cdfb201cce",
+      "game": "崩坏：星穹铁道",
+      "name": "布洛妮娅",
+      "summary": "贝洛伯格的大守护者，曾统领银鬃铁卫。严格教育赋予她责任感，而亲见下层区的生活也改变了她的思考。",
+      "sourceUrl": "https://wiki.biligame.com/sr/%E5%B8%83%E6%B4%9B%E5%A6%AE%E5%A8%85"
+    },
+    {
+      "id": "s2-sr-500f46cdbb",
+      "game": "崩坏：星穹铁道",
+      "name": "托帕",
+      "summary": "星际和平公司战略投资部干部，石心十人之一。她与次元扑满账账结伴，处理银河各地的债务与投资事务。",
+      "sourceUrl": "https://wiki.biligame.com/sr/%E6%89%98%E5%B8%95%26%E8%B4%A6%E8%B4%A6"
+    },
+    {
+      "id": "c030",
+      "game": "崩坏：星穹铁道",
+      "name": "灵砂",
+      "summary": "罗浮丹鼎司的司鼎，医术精湛的持明族医士。她善于辨香识症，也擅长在复杂人际中维持从容。",
+      "sourceUrl": "https://wiki.biligame.com/sr/%E7%81%B5%E7%A0%82"
+    },
+    {
+      "id": "s2-sr-c0e3e73fff",
+      "game": "崩坏：星穹铁道",
+      "name": "忘归人",
+      "summary": "历经生死后归来的狐人少女，曾失去名字与身份。她带着毁灭留下的烙印，重新寻找属于自己的归途。",
+      "sourceUrl": "https://wiki.biligame.com/sr/%E5%BF%98%E5%BD%92%E4%BA%BA"
+    },
+    {
+      "id": "s2-sr-8e057e882d",
+      "game": "崩坏：星穹铁道",
+      "name": "阿格莱雅",
+      "summary": "被称为「金织」的黄金裔，与「浪漫」火种相连。她以金线编织命运，召集英雄踏上拯救翁法罗斯的征程。",
+      "sourceUrl": "https://wiki.biligame.com/sr/%E9%98%BF%E6%A0%BC%E8%8E%B1%E9%9B%85"
+    },
+    {
+      "id": "s2-sr-8b13e4acdb",
+      "game": "崩坏：星穹铁道",
+      "name": "缇宝",
+      "summary": "雅努萨波利斯圣女缇里西庇俄丝的身影之一。她与「门径」火种相连，以分身奔走各地，传递救世的消息。",
+      "sourceUrl": "https://wiki.biligame.com/sr/%E7%BC%87%E5%AE%9D"
+    },
+    {
+      "id": "s2-sr-7556cffb9d",
+      "game": "崩坏：星穹铁道",
+      "name": "赛飞儿",
+      "summary": "来自多洛斯的黄金裔，本名赛法利娅。她身手敏捷、精于诡计，在谎言与追逐之间走出自己的道路。",
+      "sourceUrl": "https://wiki.biligame.com/sr/%E8%B5%9B%E9%A3%9E%E5%84%BF"
+    },
+    {
+      "id": "s2-sr-556465bf5b",
+      "game": "崩坏：星穹铁道",
+      "name": "风堇",
+      "summary": "医师雅辛忒丝，与「天空」火种相连的黄金裔。她继承先祖的意志，希望为长夜中的大地带回晨光。",
+      "sourceUrl": "https://wiki.biligame.com/sr/%E9%A3%8E%E5%A0%87"
+    },
+    {
+      "id": "s2-sr-9155d9240f",
+      "game": "崩坏：星穹铁道",
+      "name": "刻律德菈",
+      "summary": "北境帝国的君主，与「律法」火种相连。她擅长布局与征伐，将自己的志向投向翁法罗斯之外的群星。",
+      "sourceUrl": "https://wiki.biligame.com/sr/%E5%88%BB%E5%BE%8B%E5%BE%B7%E8%8F%88"
+    },
+    {
+      "id": "s2-sr-0b8213db68",
+      "game": "崩坏：星穹铁道",
+      "name": "海瑟音",
+      "summary": "来自斯缇科西亚的黄金裔，本名海列屈拉。她与「海洋」火种相连，以歌声与盛宴回应旅途中的相遇。",
+      "sourceUrl": "https://wiki.biligame.com/sr/%E6%B5%B7%E7%91%9F%E9%9F%B3"
+    },
+    {
+      "id": "s2-sr-accccf3cc5",
+      "game": "崩坏：星穹铁道",
+      "name": "爻光",
+      "summary": "仙舟玉阙的戎韬将军，擅长观测吉凶与谋划变局。即使预见险境，她也愿亲身入局寻找改变命运的机会。",
+      "sourceUrl": "https://wiki.biligame.com/sr/%E7%88%BB%E5%85%89"
+    },
+    {
+      "id": "s2-sr-fdee458efe",
+      "game": "崩坏：星穹铁道",
+      "name": "绯英",
+      "summary": "出没于二相乐园的神秘少女，对新时代的一切满怀兴趣。她以尺刀裁断正邪，也让人难以看清自身的立场。",
+      "sourceUrl": "https://wiki.biligame.com/sr/%E7%BB%AF%E8%8B%B1"
+    },
+    {
+      "id": "s2-sr-3a3ab47edd",
+      "game": "崩坏：星穹铁道",
+      "name": "真珠",
+      "summary": "与星际和平公司有关、以艺术解析为起点的角色。她珍视文明留下的作品，在追寻美的过程中践行存护。",
+      "sourceUrl": "https://wiki.biligame.com/sr/%E7%9C%9F%E7%8F%A0"
+    },
+    {
+      "id": "s2-sr-612ab12105",
+      "game": "崩坏：星穹铁道",
+      "name": "克拉拉",
+      "summary": "由机器人史瓦罗抚养长大的少女，温柔内向却很有主见。她希望下层区的人与机械，都能成为彼此的家人。",
+      "sourceUrl": "https://wiki.biligame.com/sr/%E5%85%8B%E6%8B%89%E6%8B%89"
+    },
+    {
+      "id": "s2-sr-4e1b3a52f7",
+      "game": "崩坏：星穹铁道",
+      "name": "青雀",
+      "summary": "罗浮太卜司的普通卜者，兼任书库管理员。她最擅长忙里偷闲，工作之外热衷于牌戏与轻松生活。",
+      "sourceUrl": "https://wiki.biligame.com/sr/%E9%9D%92%E9%9B%80"
+    },
+    {
+      "id": "c028",
+      "game": "崩坏：星穹铁道",
+      "name": "翡翠",
+      "summary": "星际和平公司战略投资部干部，石心十人之一。她经营「慈玉典押」，善于看出他人的欲望与潜在价值。",
+      "sourceUrl": "https://wiki.biligame.com/sr/%E7%BF%A1%E7%BF%A0"
+    },
+    {
+      "id": "s2-sr-d846d2ccd1",
+      "game": "崩坏：星穹铁道",
+      "name": "雪衣",
+      "summary": "罗浮十王司负责拘捕的判官，借偃偶身躯继续履职。她持铁索与破魔锥追缉罪犯，与妹妹寒鸦相互牵挂。",
+      "sourceUrl": "https://wiki.biligame.com/sr/%E9%9B%AA%E8%A1%A3"
+    },
+    {
+      "id": "s2-sr-8f448f0249",
+      "game": "崩坏：星穹铁道",
+      "name": "寒鸦",
+      "summary": "罗浮十王司负责审问的判官，使用冥谶天笔判读罪业。长年公务使她疏离世事，姐姐雪衣仍是重要的牵挂。",
+      "sourceUrl": "https://wiki.biligame.com/sr/%E5%AF%92%E9%B8%A6"
+    },
+    {
+      "id": "c001",
+      "game": "原神",
+      "name": "芙宁娜",
+      "summary": "枫丹舞台上的耀眼明星，对表演有着独特见解。走过漫长而特殊的人生阶段后，她正在探索属于自己的日常。",
+      "sourceUrl": "https://wiki.biligame.com/ys/%E8%8A%99%E5%AE%81%E5%A8%9C"
+    },
+    {
+      "id": "c002",
+      "game": "原神",
+      "name": "雷电将军",
+      "summary": "统御稻妻的雷之神，以追求永恒著称。她与稻妻的过去、人民的愿望，以及国家的改变紧密相连。",
+      "sourceUrl": "https://wiki.biligame.com/ys/%E9%9B%B7%E7%94%B5%E5%B0%86%E5%86%9B"
+    },
+    {
+      "id": "c004",
+      "game": "原神",
+      "name": "纳西妲",
+      "summary": "须弥的草之神，被人们称为小吉祥草王。她通过梦境与智慧理解世界，温柔地关注每一个人的愿望。",
+      "sourceUrl": "https://wiki.biligame.com/ys/%E7%BA%B3%E8%A5%BF%E5%A6%B2"
+    },
+    {
+      "id": "c003",
+      "game": "原神",
+      "name": "胡桃",
+      "summary": "往生堂第七十七代堂主，性格古灵精怪，爱写打油诗。她认真对待生死之事，也热衷于推销自家的业务。",
+      "sourceUrl": "https://wiki.biligame.com/ys/%E8%83%A1%E6%A1%83"
+    },
+    {
+      "id": "s2-ys-c48c0a3e98",
+      "game": "原神",
+      "name": "八重神子",
+      "summary": "鸣神大社的宫司，同时担任八重堂总编。她聪慧狡黠，乐于观察人心，也喜欢有趣的故事。",
+      "sourceUrl": "https://wiki.biligame.com/ys/%E5%85%AB%E9%87%8D%E7%A5%9E%E5%AD%90"
+    },
+    {
+      "id": "c006",
+      "game": "原神",
+      "name": "神里绫华",
+      "summary": "稻妻社奉行神里家的大小姐，以优雅礼仪闻名。她认真承担家族职责，也向往普通朋友之间的真诚相处。",
+      "sourceUrl": "https://wiki.biligame.com/ys/%E7%A5%9E%E9%87%8C%E7%BB%AB%E5%8D%8E"
+    },
+    {
+      "id": "s2-ys-1176f25c6a",
+      "game": "原神",
+      "name": "甘雨",
+      "summary": "璃月七星的秘书，身具麒麟血脉。她温和勤勉，在漫长岁月中以日复一日的工作守护璃月港。",
+      "sourceUrl": "https://wiki.biligame.com/ys/%E7%94%98%E9%9B%A8"
+    },
+    {
+      "id": "s2-ys-c020ef0b17",
+      "game": "原神",
+      "name": "刻晴",
+      "summary": "璃月七星中的玉衡星，行动果断，重视效率。她相信人的努力能够决定未来，习惯亲自调查并解决问题。",
+      "sourceUrl": "https://wiki.biligame.com/ys/%E5%88%BB%E6%99%B4"
+    },
+    {
+      "id": "c005",
+      "game": "原神",
+      "name": "夜兰",
+      "summary": "身份神秘的璃月情报工作者，常以总务司人员自称。她擅长追踪、伪装与布局，行事自有一套节奏。",
+      "sourceUrl": "https://wiki.biligame.com/ys/%E5%A4%9C%E5%85%B0"
+    },
+    {
+      "id": "c008",
+      "game": "原神",
+      "name": "申鹤",
+      "summary": "在山野中修行的仙家弟子，跟随留云借风真君习艺。她看似疏离，正逐渐学习与尘世中的人建立联系。",
+      "sourceUrl": "https://wiki.biligame.com/ys/%E7%94%B3%E9%B9%A4"
+    },
+    {
+      "id": "c007",
+      "game": "原神",
+      "name": "妮露",
+      "summary": "须弥祖拜尔剧场的舞者，性格亲切温柔。她将热爱倾注于舞蹈，也努力守护剧场里伙伴们的日常。",
+      "sourceUrl": "https://wiki.biligame.com/ys/%E5%A6%AE%E9%9C%B2"
+    },
+    {
+      "id": "c009",
+      "game": "原神",
+      "name": "宵宫",
+      "summary": "稻妻长野原烟花店的店主，热情健谈。她用烟花记录人们的重要时刻，让转瞬即逝的光成为长久回忆。",
+      "sourceUrl": "https://wiki.biligame.com/ys/%E5%AE%B5%E5%AE%AB"
+    },
+    {
+      "id": "s2-ys-2e9ed422c0",
+      "game": "原神",
+      "name": "珊瑚宫心海",
+      "summary": "海祇岛的现人神巫女，负责岛上的诸多事务。她擅长谋略与统筹，也需要独处阅读来恢复精力。",
+      "sourceUrl": "https://wiki.biligame.com/ys/%E7%8F%8A%E7%91%9A%E5%AE%AB%E5%BF%83%E6%B5%B7"
+    },
+    {
+      "id": "c011",
+      "game": "原神",
+      "name": "阿蕾奇诺",
+      "summary": "愚人众执行官第四席「仆人」，壁炉之家的掌管者。孩子们称她为父亲，她以严明规则维系这个特殊家庭。",
+      "sourceUrl": "https://wiki.biligame.com/ys/%E9%98%BF%E8%95%BE%E5%A5%87%E8%AF%BA"
+    },
+    {
+      "id": "s2-ys-9b244fbaec",
+      "game": "原神",
+      "name": "娜维娅",
+      "summary": "枫丹刺玫会的会长，热情坦率，重视伙伴。她愿为普通人的困难奔走，也擅长在复杂局面中找出线索。",
+      "sourceUrl": "https://wiki.biligame.com/ys/%E5%A8%9C%E7%BB%B4%E5%A8%85"
+    },
+    {
+      "id": "c010",
+      "game": "原神",
+      "name": "克洛琳德",
+      "summary": "枫丹的决斗代理人，以卓越剑术和冷静判断闻名。她严守职责，私下则有沉稳外表之外的兴趣。",
+      "sourceUrl": "https://wiki.biligame.com/ys/%E5%85%8B%E6%B4%9B%E7%90%B3%E5%BE%B7"
+    },
+    {
+      "id": "s2-ys-32fc6b3c4f",
+      "game": "原神",
+      "name": "玛薇卡",
+      "summary": "纳塔的领袖，继承「基扬戈兹」之名。她以坚定意志团结各部族，为纳塔的未来承担战斗与抉择。",
+      "sourceUrl": "https://wiki.biligame.com/ys/%E7%8E%9B%E8%96%87%E5%8D%A1"
+    },
+    {
+      "id": "c016",
+      "game": "原神",
+      "name": "茜特菈莉",
+      "summary": "烟谜主的大萨满，人称黑曜石奶奶。她有着深厚阅历与强大能力，也保留着爱读小说的生活习惯。",
+      "sourceUrl": "https://wiki.biligame.com/ys/%E8%8C%9C%E7%89%B9%E8%8F%88%E8%8E%89"
+    },
+    {
+      "id": "s2-ys-2f050637af",
+      "game": "原神",
+      "name": "丝柯克",
+      "summary": "在深渊磨炼剑技的神秘武者，也是达达利亚的师父。她习惯以强者的尺度看待战斗，对尘世常识颇为疏远。",
+      "sourceUrl": "https://wiki.biligame.com/ys/%E4%B8%9D%E6%9F%AF%E5%85%8B"
+    },
+    {
+      "id": "s2-ys-ea6f231386",
+      "game": "原神",
+      "name": "哥伦比娅",
+      "summary": "与挪德卡莱月亮信仰相连的少女。她追寻归乡的方向，空月与往昔的记忆构成了她故事的重要部分。",
+      "sourceUrl": "https://wiki.biligame.com/ys/%E5%93%A5%E4%BC%A6%E6%AF%94%E5%A8%85"
+    },
+    {
+      "id": "s2-ys-61f5364f33",
+      "game": "原神",
+      "name": "菈乌玛",
+      "summary": "霜月之子的圣女，与森林及月光有着紧密联系。她在自然与信仰之间守望族人，也回应外来者的相遇。",
+      "sourceUrl": "https://wiki.biligame.com/ys/%E8%8F%88%E4%B9%8C%E7%8E%9B"
+    },
+    {
+      "id": "s2-ys-59d3b3bfce",
+      "game": "原神",
+      "name": "奈芙尔",
+      "summary": "挪德卡莱秘闻馆的主人，擅长经营秘密与情报。她善于观察局势，总能从看似寻常的消息中找到价值。",
+      "sourceUrl": "https://wiki.biligame.com/ys/%E5%A5%88%E8%8A%99%E5%B0%94"
+    },
+    {
+      "id": "s2-ys-9e552aac18",
+      "game": "原神",
+      "name": "伊涅芙",
+      "summary": "在挪德卡莱活动的全能机器人，以秘源核心驱动。她用多样的能力协助日常工作，也参与当地的冒险。",
+      "sourceUrl": "https://wiki.biligame.com/ys/%E4%BC%8A%E6%B6%85%E8%8A%99"
+    },
+    {
+      "id": "s2-ys-dca3ebb397",
+      "game": "原神",
+      "name": "尼可",
+      "summary": "被称为无言魔女的神秘人物，亦有弃声天使之名。她以特殊方式传达信息，与世界中的隐秘线索相连。",
+      "sourceUrl": "https://wiki.biligame.com/ys/%E5%B0%BC%E5%8F%AF"
+    },
+    {
+      "id": "s2-ys-a1441b3f21",
+      "game": "原神",
+      "name": "莉奈娅",
+      "summary": "挪德卡莱冒险家协会的顾问，也是一位博物学家。她以观察和研究认识自然，为冒险者提供专业帮助。",
+      "sourceUrl": "https://wiki.biligame.com/ys/%E8%8E%89%E5%A5%88%E5%A8%85"
+    },
+    {
+      "id": "s2-ys-c9c729ede4",
+      "game": "原神",
+      "name": "兹白",
+      "summary": "璃月传说中的白马仙人，与古老的仙人故事相连。她的出现，让遥远传说与当下的旅程产生了交集。",
+      "sourceUrl": "https://wiki.biligame.com/ys/%E5%85%B9%E7%99%BD"
+    },
+    {
+      "id": "s2-ys-27d8e41918",
+      "game": "原神",
+      "name": "爱可菲",
+      "summary": "曾任德波大饭店主厨的料理人，有「甜点大校」之称。她以严谨技艺对待每道甜点，对品质始终要求严格。",
+      "sourceUrl": "https://wiki.biligame.com/ys/%E7%88%B1%E5%8F%AF%E8%8F%B2"
+    },
+    {
+      "id": "s2-ys-9a5ef2ac31",
+      "game": "原神",
+      "name": "薇斯纳",
+      "summary": "至冬冬契军的司令，是女皇麾下的重要战力。她以军人的立场承担职责，参与至冬相关的故事。",
+      "sourceUrl": "https://wiki.biligame.com/ys/%E8%96%87%E6%96%AF%E7%BA%B3"
+    },
+    {
+      "id": "s2-ys-dfae50a2d2",
+      "game": "原神",
+      "name": "沃雅妮莎",
+      "summary": "科洛列夫茨基剧团的首席女高音，也是一位离群的水妖。舞台与歌声，是她连接人类世界的方式。",
+      "sourceUrl": "https://wiki.biligame.com/ys/%E6%B2%83%E9%9B%85%E5%A6%AE%E8%8E%8E"
+    },
+    {
+      "id": "s2-ys-35479920ce",
+      "game": "原神",
+      "name": "可莉",
+      "summary": "西风骑士团的小小火花骑士，热爱冒险与爆炸。她带着嘟嘟可四处探索，也常因惹出麻烦而进禁闭室。",
+      "sourceUrl": "https://wiki.biligame.com/ys/%E5%8F%AF%E8%8E%89"
+    },
+    {
+      "id": "s2-ys-1d65392a5b",
+      "game": "原神",
+      "name": "莫娜",
+      "summary": "学识出众的占星术士，对自己的占卜十分自信。她坚持研究原则，却常因购买器材而为生活费用发愁。",
+      "sourceUrl": "https://wiki.biligame.com/ys/%E8%8E%AB%E5%A8%9C"
+    },
+    {
+      "id": "s2-ys-0e6b9f3dd8",
+      "game": "原神",
+      "name": "菲谢尔",
+      "summary": "自称断罪皇女的冒险家，身边常有夜鸦奥兹陪伴。华丽言辞之下，是认真履职又渴望被理解的少女。",
+      "sourceUrl": "https://wiki.biligame.com/ys/%E8%8F%B2%E8%B0%A2%E5%B0%94"
+    },
+    {
+      "id": "s2-ys-e56b2bf940",
+      "game": "原神",
+      "name": "优菈",
+      "summary": "西风骑士团游击小队队长，出身劳伦斯家族。她以骑士的行动证明自己，常把关心说成日后要算的账。",
+      "sourceUrl": "https://wiki.biligame.com/ys/%E4%BC%98%E8%8F%88"
+    },
+    {
+      "id": "s2-ys-f605099d06",
+      "game": "原神",
+      "name": "琴",
+      "summary": "西风骑士团的代理团长，承担蒙德大小事务。她自律勤勉，希望以自己的努力守护自由之城的安稳。",
+      "sourceUrl": "https://wiki.biligame.com/ys/%E7%90%B4"
+    },
+    {
+      "id": "c012",
+      "game": "原神",
+      "name": "闲云",
+      "summary": "留云借风真君行走人间时的身份，精通机关术。她带着仙家的自信与好奇，尝试融入璃月港的日常生活。",
+      "sourceUrl": "https://wiki.biligame.com/ys/%E9%97%B2%E4%BA%91"
+    },
+    {
+      "id": "s2-ys-a7d5faa04a",
+      "game": "原神",
+      "name": "希诺宁",
+      "summary": "纳塔纳茨卡延的铸名师，技艺精湛。她能认真完成复杂委托，也很珍惜工作之外放松休息的时间。",
+      "sourceUrl": "https://wiki.biligame.com/ys/%E5%B8%8C%E8%AF%BA%E5%AE%81"
+    },
+    {
+      "id": "c040",
+      "game": "绝区零",
+      "name": "星见雅",
+      "summary": "对空洞特别行动部第六课课长，出身名门的剑士。她以严格训练磨炼刀术，承担守护新艾利都的职责。",
+      "sourceUrl": "https://wiki.biligame.com/zzz/%E9%9B%85"
+    },
+    {
+      "id": "s2-zzz-ceafb0cde9",
+      "game": "绝区零",
+      "name": "叶瞬光",
+      "summary": "云岿山的年轻剑士，与山门传承和剑术修行相连。她在都市与空洞的经历中，逐步寻找自己的前行方向。",
+      "sourceUrl": "https://wiki.biligame.com/zzz/%E5%8F%B6%E7%9E%AC%E5%85%89"
+    },
+    {
+      "id": "c048",
+      "game": "绝区零",
+      "name": "仪玄",
+      "summary": "云岿山的掌门，以深厚修为与从容气度闻名。她指导门下弟子，也有远离繁文缛节的一面。",
+      "sourceUrl": "https://wiki.biligame.com/zzz/%E4%BB%AA%E7%8E%84"
+    },
+    {
+      "id": "c036",
+      "game": "绝区零",
+      "name": "耀嘉音",
+      "summary": "天琴座旗下的知名歌手，以歌声吸引众多听众。舞台之外，她同样渴望亲自体验城市里真实的生活。",
+      "sourceUrl": "https://wiki.biligame.com/zzz/%E8%80%80%E5%98%89%E9%9F%B3"
+    },
+    {
+      "id": "c037",
+      "game": "绝区零",
+      "name": "伊芙琳",
+      "summary": "负责耀嘉音安全与日程的贴身护卫，隶属天琴座。她行事专业克制，会果断隔开一切打扰和危险。",
+      "sourceUrl": "https://wiki.biligame.com/zzz/%E4%BC%8A%E8%8A%99%E7%90%B3"
+    },
+    {
+      "id": "c033",
+      "game": "绝区零",
+      "name": "艾莲",
+      "summary": "维多利亚家政的成员，同时过着学生生活。她不喜欢麻烦，工作时却能展现干净利落的战斗能力。",
+      "sourceUrl": "https://wiki.biligame.com/zzz/%E8%89%BE%E8%8E%B2"
+    },
+    {
+      "id": "c034",
+      "game": "绝区零",
+      "name": "朱鸢",
+      "summary": "都市秩序部刑侦特勤组的负责人，认真可靠。她重视程序与市民安全，面对困难总愿意主动承担。",
+      "sourceUrl": "https://wiki.biligame.com/zzz/%E6%9C%B1%E9%B8%A2"
+    },
+    {
+      "id": "c035",
+      "game": "绝区零",
+      "name": "简",
+      "summary": "与刑侦特勤组合作的专业人员，擅长潜入与伪装。她言语轻巧、身份多变，让人难以分辨哪句话才是真心。",
+      "sourceUrl": "https://wiki.biligame.com/zzz/%E7%AE%80"
+    },
+    {
+      "id": "s2-zzz-47f70c7268",
+      "game": "绝区零",
+      "name": "月城柳",
+      "summary": "对空六课副课长，负责协调繁杂的工作事务。她沉稳细致，是团队行动与日常生活中的可靠支柱。",
+      "sourceUrl": "https://wiki.biligame.com/zzz/%E6%9F%B3"
+    },
+    {
+      "id": "s2-zzz-d24d4d248e",
+      "game": "绝区零",
+      "name": "薇薇安",
+      "summary": "反舌鸟的成员，举止优雅，言语带着诗意。她对命运与特定之人抱有强烈执念，行动常出人意料。",
+      "sourceUrl": "https://wiki.biligame.com/zzz/%E8%96%87%E8%96%87%E5%AE%89"
+    },
+    {
+      "id": "s2-zzz-1bf39d30ae",
+      "game": "绝区零",
+      "name": "浮波柚叶",
+      "summary": "怪啖屋的成员，带着狸猫般的机灵与狡黠。她擅长应付城市中的奇闻异事，也爱给人出些特别的主意。",
+      "sourceUrl": "https://wiki.biligame.com/zzz/%E6%9F%9A%E5%8F%B6"
+    },
+    {
+      "id": "s2-zzz-b520b48c45",
+      "game": "绝区零",
+      "name": "卢西娅",
+      "summary": "怪啖屋的成员，对以骸和奇异故事充满兴趣。她喜欢主动与人交谈，常用分享故事的方式结识朋友。",
+      "sourceUrl": "https://wiki.biligame.com/zzz/%E5%8D%A2%E8%A5%BF%E5%A8%85"
+    },
+    {
+      "id": "s2-zzz-a436759ba0",
+      "game": "绝区零",
+      "name": "安比",
+      "summary": "狡兔屋的战斗成员，冷静寡言，喜爱电影。她拥有娴熟的作战技巧，却偶尔会把电影情节当作生活常识。",
+      "sourceUrl": "https://wiki.biligame.com/zzz/%E5%AE%89%E6%AF%94"
+    },
+    {
+      "id": "c039",
+      "game": "绝区零",
+      "name": "妮可",
+      "summary": "狡兔屋的负责人，擅长谈生意，也经常为资金发愁。看似精打细算，面对真正需要帮助的人却难以袖手旁观。",
+      "sourceUrl": "https://wiki.biligame.com/zzz/%E5%A6%AE%E5%8F%AF"
+    },
+    {
+      "id": "c046",
+      "game": "绝区零",
+      "name": "柏妮思",
+      "summary": "卡吕冬之子的调酒师，热情开朗。她喜欢用饮品与热闹气氛招待朋友，战斗风格同样充满火力。",
+      "sourceUrl": "https://wiki.biligame.com/zzz/%E6%9F%8F%E5%A6%AE%E6%80%9D"
+    },
+    {
+      "id": "s2-zzz-66fcd43b05",
+      "game": "绝区零",
+      "name": "凯撒",
+      "summary": "卡吕冬之子的领袖，待人豪爽，重视同伴。她以盾与剑冲在前方，用直接的行动赢得大家信任。",
+      "sourceUrl": "https://wiki.biligame.com/zzz/%E5%87%AF%E6%92%92"
+    },
+    {
+      "id": "c041",
+      "game": "绝区零",
+      "name": "青衣",
+      "summary": "刑侦特勤组的资深成员，经验丰富，处事从容。她喜欢品茶，常以看似轻松的话语点出问题所在。",
+      "sourceUrl": "https://wiki.biligame.com/zzz/%E9%9D%92%E8%A1%A3"
+    },
+    {
+      "id": "c047",
+      "game": "绝区零",
+      "name": "扳机",
+      "summary": "奥波勒斯小队的狙击手，以精确射击支援同伴。她习惯沉着观察，在关键时刻把握出手的机会。",
+      "sourceUrl": "https://wiki.biligame.com/zzz/%E3%80%8C%E6%89%B3%E6%9C%BA%E3%80%8D"
+    },
+    {
+      "id": "s2-zzz-e4b2bfd06d",
+      "game": "绝区零",
+      "name": "橘福福",
+      "summary": "云岿山门下的虎希人弟子，热心行侠仗义。她精神十足，常以威风的姿态迎接修行与战斗。",
+      "sourceUrl": "https://wiki.biligame.com/zzz/%E6%A9%98%E7%A6%8F%E7%A6%8F"
+    },
+    {
+      "id": "s2-zzz-cf2c6c2759",
+      "game": "绝区零",
+      "name": "爱丽丝",
+      "summary": "出身泰姆菲尔德家族的少女，现与怪啖屋一同行动。她重视家族教养，也努力勇敢面对意料之外的挑战。",
+      "sourceUrl": "https://wiki.biligame.com/zzz/%E7%88%B1%E4%B8%BD%E4%B8%9D"
+    },
+    {
+      "id": "s2-zzz-7532b60e27",
+      "game": "绝区零",
+      "name": "爱芮",
+      "summary": "偶像组合妄想天使的成员，对舞台满怀热情。她希望与伙伴和观众一起，创造值得记住的演出。",
+      "sourceUrl": "https://wiki.biligame.com/zzz/%E7%88%B1%E8%8A%AE"
+    },
+    {
+      "id": "s2-zzz-c5b24808f7",
+      "game": "绝区零",
+      "name": "南宫羽",
+      "summary": "妄想天使的成员，舞台表现力鲜明。她擅长调动气氛，以游刃有余的态度与观众互动。",
+      "sourceUrl": "https://wiki.biligame.com/zzz/%E5%8D%97%E5%AE%AB%E7%BE%BD"
+    },
+    {
+      "id": "s2-zzz-bb6e9a9aa3",
+      "game": "绝区零",
+      "name": "千夏",
+      "summary": "妄想天使的成员，登台前也会感到紧张。她把复杂的情绪化为演出动力，与同伴一同面对聚光灯。",
+      "sourceUrl": "https://wiki.biligame.com/zzz/%E5%8D%83%E5%A4%8F"
+    },
+    {
+      "id": "s2-zzz-087cc23afe",
+      "game": "绝区零",
+      "name": "普罗米娅",
+      "summary": "坎卜斯黑枝的裁决官，寡言而审慎，令违规者心生畏惧。她带着不愿轻易提及的过去，履行审查与裁决的职责。",
+      "sourceUrl": "https://wiki.biligame.com/zzz/%E6%99%AE%E7%BD%97%E7%B1%B3%E5%A8%85"
+    },
+    {
+      "id": "s2-zzz-d0e2cc5f2d",
+      "game": "绝区零",
+      "name": "希希芙",
+      "summary": "都市秩序部的成员，对自己的喜好十分坦率。她习惯凭直觉行动，认定的事情就会紧紧抓住不放。",
+      "sourceUrl": "https://wiki.biligame.com/zzz/%E5%B8%8C%E5%B8%8C%E8%8A%99"
+    },
+    {
+      "id": "s2-zzz-2a8a970409",
+      "game": "绝区零",
+      "name": "蕾米埃尔",
+      "summary": "与达识结社有关的神秘人物，言辞优雅而危险。她习惯将接近与试探藏在轻巧的对话之中。",
+      "sourceUrl": "https://wiki.biligame.com/zzz/%E8%95%BE%E7%B1%B3%E5%9F%83%E5%B0%94"
+    },
+    {
+      "id": "s2-zzz-d760742253",
+      "game": "绝区零",
+      "name": "菲欧妮",
+      "summary": "坎卜斯黑枝的裁决官，体质与强大战力形成鲜明反差。她说话轻松，外出时却常需为突发身体状况做好准备。",
+      "sourceUrl": "https://wiki.biligame.com/zzz/%E8%8F%B2%E6%AC%A7%E5%A6%AE"
+    },
+    {
+      "id": "c044",
+      "game": "绝区零",
+      "name": "可琳",
+      "summary": "维多利亚家政的女仆，腼腆且容易紧张。她总担心自己做得不够好，却愿认真完成每一项委托。",
+      "sourceUrl": "https://wiki.biligame.com/zzz/%E5%8F%AF%E7%90%B3"
+    },
+    {
+      "id": "c042",
+      "game": "绝区零",
+      "name": "露西",
+      "summary": "卡吕冬之子的成员，出身优渥却选择了外环生活。她言谈带着大小姐的骄傲，也认真照顾团队的事务。",
+      "sourceUrl": "https://wiki.biligame.com/zzz/%E9%9C%B2%E8%A5%BF"
+    },
+    {
+      "id": "c043",
+      "game": "绝区零",
+      "name": "派派",
+      "summary": "卡吕冬之子的司机，处事悠闲，驾驶经验老到。她喜欢按自己的节奏生活，关键时刻却能稳稳掌握方向。",
+      "sourceUrl": "https://wiki.biligame.com/zzz/%E6%B4%BE%E6%B4%BE"
+    },
+    {
+      "id": "c038",
+      "game": "绝区零",
+      "name": "格莉丝",
+      "summary": "白祇重工的技术专家，对机械抱有近乎痴迷的热爱。她总想拆开设备研究内部结构，技术能力十分出众。",
+      "sourceUrl": "https://wiki.biligame.com/zzz/%E6%A0%BC%E8%8E%89%E4%B8%9D"
+    },
+    {
+      "id": "s2-zzz-c7a4ff6a45",
+      "game": "绝区零",
+      "name": "猫又",
+      "summary": "本名猫宫又奈，狡兔屋的猫希人成员。她敏捷机灵，喜欢恶作剧和青花鱼，也格外看重真正的伙伴。",
+      "sourceUrl": "https://wiki.biligame.com/zzz/%E7%8C%AB%E5%8F%88"
+    },
+    {
+      "id": "c122",
+      "game": "异环",
+      "name": "娜娜莉",
+      "summary": "伊波恩古董店的成员，自称柯林斯家族的领头人。她活跃在桥间地街头，热心仗义，也常把热闹变成麻烦。",
+      "sourceUrl": "https://www.ntestation.com/%E5%A8%9C%E5%A8%9C%E8%8E%89"
+    },
+    {
+      "id": "c121",
+      "game": "异环",
+      "name": "安魂曲",
+      "summary": "异象管理局禁制机动队四队的成员。她拥有惊人力量，却总是犯困，甚至会化作蝙蝠在各种地方睡着。",
+      "sourceUrl": "https://www.ntestation.com/%E5%AE%89%E9%AD%82%E6%9B%B2"
+    },
+    {
+      "id": "c123",
+      "game": "异环",
+      "name": "薄荷",
+      "summary": "异象管理局收容二组的成员，活泼直爽，毫无距离感。她喜欢用闻到的气味称呼别人，认真追逐成为收容骨干的目标。",
+      "sourceUrl": "https://www.ntestation.com/%E8%96%84%E8%8D%B7"
+    },
+    {
+      "id": "c124",
+      "game": "异环",
+      "name": "早雾",
+      "summary": "伊波恩古董店的成员，常与「鬼郎丸」相伴。她喜欢漫画与新鲜事，虽然时常闯祸，关键时也能拉住同伴。",
+      "sourceUrl": "https://www.ntestation.com/%E6%97%A9%E9%9B%BE"
+    },
+    {
+      "id": "c128",
+      "game": "异环",
+      "name": "九原",
+      "summary": "斯特利速递的负责人，熟悉情报与异象相关的委托。她擅长处理普通流程之外的难题，也懂得与各色客人周旋。",
+      "sourceUrl": "https://www.ntestation.com/%E4%B9%9D%E5%8E%9F"
+    },
+    {
+      "id": "c127",
+      "game": "异环",
+      "name": "哈索尔",
+      "summary": "斯特利速递的王牌快递员，精力充沛，工作效率极高。她有时还会兼任异象猎人，在配送途中协助收容工作。",
+      "sourceUrl": "https://www.ntestation.com/%E5%93%88%E7%B4%A2%E5%B0%94"
+    },
+    {
+      "id": "s2-yh-f143b396fa",
+      "game": "异环",
+      "name": "达芙蒂尔",
+      "summary": "伊波恩古董店的保镖，也是娜娜莉的师傅。她寡言少语，实力强大，习惯用行动处理危险与麻烦。",
+      "sourceUrl": "https://www.ntestation.com/%E8%BE%BE%E8%8A%99%E8%92%82%E5%B0%94"
+    },
+    {
+      "id": "c126",
+      "game": "异环",
+      "name": "法帝娅",
+      "summary": "异象管理局禁制机动队四队的成员，举止张扬而难以捉摸。她对欲望有自己的理解，也以独特方式回应他人。",
+      "sourceUrl": "https://www.ntestation.com/%E6%B3%95%E5%B8%9D%E5%A8%85"
+    },
+    {
+      "id": "s2-yh-6cd5d59788",
+      "game": "异环",
+      "name": "小吱",
+      "summary": "粉爪银行的业务人员，平时看起来柔弱胆小。进入工作状态后，她却能展现让同事信服的专业与气势。",
+      "sourceUrl": "https://www.ntestation.com/%E5%B0%8F%E5%90%B1"
+    },
+    {
+      "id": "s2-yh-f90dc6b5b4",
+      "game": "异环",
+      "name": "残虹",
+      "summary": "曾为犯罪组织「红字」效力的异能者，另有「赤葵」之名。她擅长洞察情绪与制造幻觉，行事狡黠而危险。",
+      "sourceUrl": "https://www.ntestation.com/%E6%AE%8B%E8%99%B9"
+    },
+    {
+      "id": "s2-yh-0b11c038a4",
+      "game": "异环",
+      "name": "真红",
+      "summary": "异象管理局收容二组的龙人少女，因担忧异能失控而常独来独往。任务中，她总主动走向最危险的地方保护同伴。",
+      "sourceUrl": "https://www.ntestation.com/%E7%9C%9F%E7%BA%A2"
+    },
+    {
+      "id": "s2-yh-824285ccb0",
+      "game": "异环",
+      "name": "黑羽",
+      "summary": "与魔女之家有关的神秘女性，能够借水晶球观察命运。她寡言端庄，以黑鸟探寻隐藏在时光中的秘密。",
+      "sourceUrl": "https://www.ntestation.com/%E9%BB%91%E7%BE%BD"
+    },
+    {
+      "id": "s2-yh-ea050fb3e3",
+      "game": "异环",
+      "name": "明音凛",
+      "summary": "乐队「猫头音！！！！」的主唱兼吉他手，台下也是LiveHouse店员。她平时喜欢独自听音乐，登台后却格外耀眼。",
+      "sourceUrl": "https://www.ntestation.com/%E6%98%8E%E9%9F%B3%E5%87%9B"
+    },
+    {
+      "id": "s2-yh-7c733ad2ea",
+      "game": "异环",
+      "name": "海月",
+      "summary": "常在玉饼街帮助他人的少女，腿脚不便，却不妨碍她四处行动。她借异能乘着巨大的水母，穿行于街区之间。",
+      "sourceUrl": "https://www.ntestation.com/%E6%B5%B7%E6%9C%88"
+    },
+    {
+      "id": "s2-yh-99acbab3a0",
+      "game": "异环",
+      "name": "伊洛伊",
+      "summary": "异象福利院「一意向阳」的义工，参与简单的异象收治。她主动选择帮助他人，也向往与更多人交流的生活。",
+      "sourceUrl": "https://www.ntestation.com/%E4%BC%8A%E6%B4%9B%E4%BC%8A"
+    },
+    {
+      "id": "s2-yh-cd9955613b",
+      "game": "异环",
+      "name": "哈尼娅",
+      "summary": "斯特利速递的成员，擅长用社交账号推广业务。工作之外，她也热衷创作、交流和经营自己的兴趣世界。",
+      "sourceUrl": "https://www.ntestation.com/%E5%93%88%E5%B0%BC%E5%A8%85"
+    },
+    {
+      "id": "c116",
+      "game": "明日方舟：终末地",
+      "name": "佩丽卡",
+      "summary": "终末地工业的监督，负责协议源石技术的开发应用与帝江号管理。她重视实绩，也时常亲赴行动一线。",
+      "sourceUrl": "https://wiki.biligame.com/zmd/%E4%BD%A9%E4%B8%BD%E5%8D%A1"
+    },
+    {
+      "id": "c113",
+      "game": "明日方舟：终末地",
+      "name": "陈千语",
+      "summary": "出身宏山城，现为终末地危机处理小组的核心成员。她身手敏捷，作战经验丰富，以双剑应对前线挑战。",
+      "sourceUrl": "https://wiki.biligame.com/zmd/%E9%99%88%E5%8D%83%E8%AF%AD"
+    },
+    {
+      "id": "s2-zmd-ca24ddb221",
+      "game": "明日方舟：终末地",
+      "name": "莱万汀",
+      "summary": "由管理员引荐加入终末地的再旅者干员。她言语简短、行动直接，希望前往更多地方，留下属于自己的记忆。",
+      "sourceUrl": "https://wiki.biligame.com/zmd/%E8%8E%B1%E4%B8%87%E6%B1%80"
+    },
+    {
+      "id": "s2-zmd-b22593fc33",
+      "game": "明日方舟：终末地",
+      "name": "伊冯",
+      "summary": "终末地特种技术部门的工程师，研究超域与侵蚀相关装置。她思维敏捷，习惯把鲜明的个人风格融入设计。",
+      "sourceUrl": "https://wiki.biligame.com/zmd/%E4%BC%8A%E5%86%AF"
+    },
+    {
+      "id": "s2-zmd-a6c2bb864e",
+      "game": "明日方舟：终末地",
+      "name": "洁尔佩塔",
+      "summary": "经罗德岛引荐加入终末地的干员，曾以信使身份游历塔卫二。她喜欢分享旅途见闻，也常为同伴捎来礼物。",
+      "sourceUrl": "https://wiki.biligame.com/zmd/%E6%B4%81%E5%B0%94%E4%BD%A9%E5%A1%94"
+    },
+    {
+      "id": "s2-zmd-be2ab7a329",
+      "game": "明日方舟：终末地",
+      "name": "艾尔黛拉",
+      "summary": "来自罗德岛的地质学者，深入研究火山与地质灾害。她常在野外勘探，以好奇心和坚持探索塔卫二的环境。",
+      "sourceUrl": "https://wiki.biligame.com/zmd/%E8%89%BE%E5%B0%94%E9%BB%9B%E6%8B%89"
+    },
+    {
+      "id": "s2-zmd-a072bd87b7",
+      "game": "明日方舟：终末地",
+      "name": "庄方宜",
+      "summary": "来自宏山科学院的干员，与武陵的发展密切相关。她参与当地事务，也在危机中与终末地建立合作。",
+      "sourceUrl": "https://wiki.biligame.com/zmd/%E5%BA%84%E6%96%B9%E5%AE%9C"
+    },
+    {
+      "id": "s2-zmd-c1775a13fc",
+      "game": "明日方舟：终末地",
+      "name": "秋栗",
+      "summary": "本名斯波红叶，毕业于新都筑高等商学院。她选择投身前线，现任终末地特种技术部门Z7行动组组长。",
+      "sourceUrl": "https://wiki.biligame.com/zmd/%E7%A7%8B%E6%A0%97"
+    },
+    {
+      "id": "s2-zmd-2aee7067a9",
+      "game": "明日方舟：终末地",
+      "name": "汤汤",
+      "summary": "与武陵地区及清波寨有关的少女，性格直率。她珍视身边的人，也在与终末地的相遇中迎接新的挑战。",
+      "sourceUrl": "https://wiki.biligame.com/zmd/%E6%B1%A4%E6%B1%A4"
+    },
+    {
+      "id": "s2-zmd-bfb0bc3dc7",
+      "game": "明日方舟：终末地",
+      "name": "洛西",
+      "summary": "在塔卫二的旅程中与终末地相遇的干员。她的故事与狼群、故乡及自己选择的道路相连。",
+      "sourceUrl": "https://endfield.gryphline.com/zh-tw/operator"
+    },
+    {
+      "id": "s2-zmd-af71c8d9c6",
+      "game": "明日方舟：终末地",
+      "name": "别礼",
+      "summary": "本名阿德尔海德，塞什卡的品牌形象代言人。她不擅长与陌生人交流，甜点和善意却能慢慢拉近距离。",
+      "sourceUrl": "https://wiki.biligame.com/zmd/%E5%88%AB%E7%A4%BC"
+    },
+    {
+      "id": "s2-zmd-4cb6e4cf5d",
+      "game": "明日方舟：终末地",
+      "name": "梨诺",
+      "summary": "来自环塔商会的萨卡兹歌手，有「菈梵朵玛的晨星」之称。她专注巡回演出，也以热情与专业完成终末地的委托。",
+      "sourceUrl": "https://wiki.biligame.com/zmd/%E6%A2%A8%E8%AF%BA"
+    },
+    {
+      "id": "s2-zmd-866581d1b9",
+      "game": "明日方舟：终末地",
+      "name": "祀",
+      "summary": "来自宏山科学院的干员，与巨兽「岁」有着特殊联系。作为第十三位代理人，她的身份牵连塔卫二的重要往事。",
+      "sourceUrl": "https://endfield.gryphline.com/zh-tw/operator"
+    },
+    {
+      "id": "s2-zmd-0e586f4f3b",
+      "game": "明日方舟：终末地",
+      "name": "弭弗",
+      "summary": "武陵城巡卫队队长，庄方宜的得力助手。她既是严格的教官，也是照顾部下的上司，与汤汤有着儿时的渊源。",
+      "sourceUrl": "https://bkso.baidu.com/item/明日方舟：终末地/60259970"
+    },
+    {
+      "id": "c120",
+      "game": "明日方舟：终末地",
+      "name": "余烬",
+      "summary": "铁誓军陷阵旗队的战士，曾在北方前线抗击天使。她战斗经验丰富，也懂得尊重并照顾同行者的感受。",
+      "sourceUrl": "https://wiki.biligame.com/zmd/%E4%BD%99%E7%83%AC"
+    },
+    {
+      "id": "s2-zmd-39fd78a8b0",
+      "game": "明日方舟：终末地",
+      "name": "弧光",
+      "summary": "来自众生长地的游人，现为终末地外勤干员。她精通器械与车辆维护，将摩托车视作需要共同成长的伙伴。",
+      "sourceUrl": "https://wiki.biligame.com/zmd/%E5%BC%A7%E5%85%89"
+    },
+    {
+      "id": "c119",
+      "game": "明日方舟：终末地",
+      "name": "艾维文娜",
+      "summary": "经验丰富的武装信使，现加入终末地特种技术部门。她善于处理人际关系，也将替客户保守秘密视作重要原则。",
+      "sourceUrl": "https://www.gamersky.com/handbook/202512/2061583.shtml"
+    },
+    {
+      "id": "s2-zmd-6bb20b1953",
+      "game": "明日方舟：终末地",
+      "name": "昼雪",
+      "summary": "来自罗德岛的干员，擅长应对极端环境中的任务。她可靠的支援能力，让同行者在危险旅途中更有底气。",
+      "sourceUrl": "https://wiki.biligame.com/zmd/%E6%98%BC%E9%9B%AA"
+    },
+    {
+      "id": "c115",
+      "game": "明日方舟：终末地",
+      "name": "赛希",
+      "summary": "来自寂语修会的学者，本名塞拉菲娜·赛希。她知识广博，精通源石技艺与信息技术，谈话思路常令人意想不到。",
+      "sourceUrl": "https://bgm.tv/character/141846"
+    },
+    {
+      "id": "s2-zmd-2cf6f1b724",
+      "game": "明日方舟：终末地",
+      "name": "萤石",
+      "summary": "终末地Z7行动组的成员，经秋栗申请加入。她曾帮助外勤队伍脱险，敏锐的观察与出人意料的言谈令人印象深刻。",
+      "sourceUrl": "https://wiki.biligame.com/zmd/%E8%90%A4%E7%9F%B3"
+    }
+  ]
+}

@@ -38,7 +38,7 @@ export async function ensureRoundCanStart(db:D1Database,round:Round) {
   const format=await loadSeasonFormat(db,round.seasonId)
   const order=round.stage==='swiss'?round.roundNumber:100+round.roundNumber
   const [matches,live,unfinishedPrevious]=await Promise.all([
-    db.prepare(`SELECT COUNT(*) AS count,SUM(CASE WHEN status!='scheduled' THEN 1 ELSE 0 END) AS invalid FROM matches WHERE round_id=?`).bind(round.id).first<{count:number;invalid:number}>(),
+    db.prepare(`SELECT COUNT(*) AS count,SUM(CASE WHEN status NOT IN (${format.version===3?"'scheduled','closed'":"'scheduled'"}) THEN 1 ELSE 0 END) AS invalid FROM matches WHERE round_id=?`).bind(round.id).first<{count:number;invalid:number}>(),
     db.prepare(`SELECT id FROM tournament_rounds WHERE season_id=? AND status='live' AND id!=? LIMIT 1`).bind(round.seasonId,round.id).first(),
     db.prepare(`SELECT id FROM tournament_rounds WHERE season_id=? AND (${roundOrderSql})<? AND status!='closed' LIMIT 1`).bind(round.seasonId,order).first()
   ])

@@ -1,3 +1,4 @@
+import { matchStartsSql, matchEndsSql } from './match-windows'
 import { legacyPortrait } from '../lib/legacy-assets'
 import { calculateSeasonStandingsV1, snapshotSeasonStandings } from './season-results'
 import { readFormat, legacyFormat, formatSchedule, formatGroups, seasonFormatSchema } from '../lib/season-format'
@@ -27,6 +28,16 @@ app.use('/api/*', async (c, next) => {
   const claims=await readSession(getCookie(c.req.header('Cookie'),'fumoe_session'),c.env)
   const user=claims?await c.env.DB.prepare('SELECT id,email,role,status FROM users WHERE id=?').bind(claims.sub).first<{id:string;email:string;role:Role;status:string}>():null
   c.set('session',sessionForUser(claims,user))
+  await next()
+})
+
+// A midnight visitor need not wait for the next cron tick. Legacy seasons keep
+// their existing lifecycle; the lease serializes this with scheduled execution.
+app.use('/api/*',async(c,next)=>{
+  if(['/api/public/overview','/api/public/matches','/api/votes'].includes(c.req.path)){
+    const daily=await c.env.DB.prepare("SELECT id FROM seasons WHERE is_current=1 AND rules_version='3' AND schedule_mode='scheduled' AND status IN ('published','live')").first()
+    if(daily)await runScheduledLifecycle(c.env)
+  }
   await next()
 })
 
@@ -62,12 +73,13 @@ type SeasonRow = { formatJson?:string|null;rulesVersion?:string;id:string;slug:s
 const seasonColumns = `format_json AS formatJson,rules_version AS rulesVersion,id,slug,name,status,is_current AS isCurrent,starts_at AS startsAt,ends_at AS endsAt,champion_character_id AS championCharacterId,announcement,history_unlocked AS historyUnlocked,roster_locked AS rosterLocked,schedule_mode AS scheduleMode,current_round_id AS currentRoundId`
 async function resolveSeason(db:D1Database,slug?:string|null) {
   return slug
-    ? db.prepare(`SELECT ${seasonColumns} FROM seasons WHERE slug=?`).bind(slug).first<SeasonRow>()
-    : db.prepare(`SELECT ${seasonColumns} FROM seasons WHERE is_current=1`).first<SeasonRow>()
+    ? db.prepare(`SELECT ${seasonColumns} FROM seasons WHERE slug=? AND status!='draft'`).bind(slug).first<SeasonRow>()
+    : db.prepare(`SELECT ${seasonColumns} FROM seasons WHERE is_current=1 AND status!='draft'`).first<SeasonRow>()
 }
 
 function publicMatchPortraits(match:Record<string,unknown>,season:SeasonRow){
-  return {...match,leftAvatarArtworkKey:season.rulesVersion==='1'?legacyPortrait(String(match.leftId)):match.leftAvatarArtworkKey,rightAvatarArtworkKey:season.rulesVersion==='1'?legacyPortrait(String(match.rightId)):match.rightAvatarArtworkKey}
+  const now=iso();const status=season.rulesVersion==='3'&&match.status==='live'?(String(match.startsAt)>now?'scheduled':String(match.endsAt)<=now?'closed':'live'):match.status
+  return {...match,status,...(season.rulesVersion==='3'?{leftMobileArtworkKey:match.leftMobileArtworkKey,rightMobileArtworkKey:match.rightMobileArtworkKey}:{}),leftAvatarArtworkKey:season.rulesVersion==='1'?legacyPortrait(String(match.leftId)):match.leftAvatarArtworkKey,rightAvatarArtworkKey:season.rulesVersion==='1'?legacyPortrait(String(match.rightId)):match.rightAvatarArtworkKey}
 }
 function publicSeason(season:SeasonRow|null) {
   return season?{...season,format:readFormat(season.formatJson,season.rulesVersion),isCurrent:Boolean(season.isCurrent),historyUnlocked:Boolean(season.historyUnlocked)}:null
@@ -94,7 +106,7 @@ app.get('/api/public/overview', async (c) => {
   const previous=await c.env.DB.prepare(`SELECT ${seasonColumns.split(',').map((column)=>`s.${column}`).join(',')},COALESCE(se.name_snapshot,c.name) AS championName,COALESCE(se.game_snapshot,g.name) AS championGame,se.artwork_gallery_key_snapshot AS championArtworkKey FROM seasons s LEFT JOIN characters c ON c.id=s.champion_character_id LEFT JOIN games g ON g.id=c.game_id LEFT JOIN season_entries se ON se.season_id=s.id AND se.character_id=s.champion_character_id WHERE s.status IN ('completed','archived') AND s.id!=COALESCE(?, '') ORDER BY COALESCE(s.completed_at,s.ends_at) DESC LIMIT 1`).bind(season?.id??null).first<SeasonRow>()
   const [round,activeMatches,siteAnnouncement]=season?await Promise.all([
     c.env.DB.prepare("SELECT id,stage,round_number AS roundNumber,name,starts_at AS startsAt,ends_at AS endsAt,status FROM tournament_rounds WHERE season_id=? AND status='live' ORDER BY starts_at DESC LIMIT 1").bind(season.id).first(),
-    c.env.DB.prepare(`SELECT m.id,m.group_code AS groupCode,m.bracket_position AS bracketPosition,m.left_votes AS leftVotes,m.right_votes AS rightVotes,m.status,m.winner_character_id AS winnerCharacterId,r.id AS roundId,r.stage,r.round_number AS roundNumber,r.name AS roundName,r.starts_at AS startsAt,r.ends_at AS endsAt,lc.id AS leftId,COALESCE(le.name_snapshot,lc.name) AS leftName,COALESCE(le.game_snapshot,lg.name) AS leftGame,le.artwork_match_key_snapshot AS leftArtworkKey,rc.id AS rightId,COALESCE(re.name_snapshot,rc.name) AS rightName,COALESCE(re.game_snapshot,rg.name) AS rightGame,re.artwork_match_key_snapshot AS rightArtworkKey FROM matches m JOIN tournament_rounds r ON r.id=m.round_id JOIN characters lc ON lc.id=m.left_character_id JOIN games lg ON lg.id=lc.game_id JOIN characters rc ON rc.id=m.right_character_id JOIN games rg ON rg.id=rc.game_id LEFT JOIN season_entries le ON le.season_id=r.season_id AND le.character_id=lc.id LEFT JOIN season_entries re ON re.season_id=r.season_id AND re.character_id=rc.id WHERE r.season_id=? AND m.status='live' ORDER BY m.group_code,m.bracket_position LIMIT 32`).bind(season.id).all(),
+    c.env.DB.prepare(`SELECT m.id,m.group_code AS groupCode,m.bracket_position AS bracketPosition,m.left_votes AS leftVotes,m.right_votes AS rightVotes,m.status,m.winner_character_id AS winnerCharacterId,r.id AS roundId,r.stage,r.round_number AS roundNumber,r.name AS roundName,${matchStartsSql} AS startsAt,${matchEndsSql} AS endsAt,lc.id AS leftId,COALESCE(le.name_snapshot,lc.name) AS leftName,COALESCE(le.game_snapshot,lg.name) AS leftGame,le.artwork_match_key_snapshot AS leftArtworkKey,le.artwork_avatar_key_snapshot AS leftAvatarArtworkKey,rc.id AS rightId,COALESCE(re.name_snapshot,rc.name) AS rightName,COALESCE(re.game_snapshot,rg.name) AS rightGame,re.artwork_match_key_snapshot AS rightArtworkKey,re.artwork_avatar_key_snapshot AS rightAvatarArtworkKey FROM matches m JOIN tournament_rounds r ON r.id=m.round_id JOIN characters lc ON lc.id=m.left_character_id JOIN games lg ON lg.id=lc.game_id JOIN characters rc ON rc.id=m.right_character_id JOIN games rg ON rg.id=rc.game_id LEFT JOIN season_entries le ON le.season_id=r.season_id AND le.character_id=lc.id LEFT JOIN season_entries re ON re.season_id=r.season_id AND re.character_id=rc.id WHERE r.season_id=? AND m.status='live' AND (NOT EXISTS(SELECT 1 FROM match_windows w WHERE w.match_id=m.id) OR (${matchStartsSql}<=strftime('%Y-%m-%dT%H:%M:%fZ','now') AND ${matchEndsSql}>strftime('%Y-%m-%dT%H:%M:%fZ','now'))) ORDER BY m.group_code,m.bracket_position`).bind(season.id).all(),
     c.env.DB.prepare("SELECT value FROM settings WHERE key='announcement'").first<{value:string}>()
   ]):[null,{results:[]},await c.env.DB.prepare("SELECT value FROM settings WHERE key='announcement'").first<{value:string}>()]
   return c.json({season:publicSeason(season),previousSeason:publicSeason(previous),round,matches:activeMatches.results,siteAnnouncement:siteAnnouncement?.value??'',seasonAnnouncement:season?.announcement??''})
@@ -114,8 +126,10 @@ app.get('/api/public/seasons/:slug', async (c) => {
 app.get('/api/public/matches', async (c) => {
   const season=await resolveSeason(c.env.DB,c.req.query('season')); if(!season)return c.json({matches:[]})
   const round=c.req.query('round')
-  const result=await c.env.DB.prepare(`SELECT m.id,m.group_code AS groupCode,m.bracket_position AS bracketPosition,m.left_votes AS leftVotes,m.right_votes AS rightVotes,m.status,m.winner_character_id AS winnerCharacterId,r.id AS roundId,r.stage,r.round_number AS roundNumber,r.name AS roundName,r.starts_at AS startsAt,r.ends_at AS endsAt,lc.id AS leftId,COALESCE(le.name_snapshot,lc.name) AS leftName,COALESCE(le.game_snapshot,lg.name) AS leftGame,le.artwork_match_key_snapshot AS leftArtworkKey,rc.id AS rightId,COALESCE(re.name_snapshot,rc.name) AS rightName,COALESCE(re.game_snapshot,rg.name) AS rightGame,re.artwork_match_key_snapshot AS rightArtworkKey FROM matches m JOIN tournament_rounds r ON r.id=m.round_id JOIN characters lc ON lc.id=m.left_character_id JOIN games lg ON lg.id=lc.game_id JOIN characters rc ON rc.id=m.right_character_id JOIN games rg ON rg.id=rc.game_id LEFT JOIN season_entries le ON le.season_id=r.season_id AND le.character_id=lc.id LEFT JOIN season_entries re ON re.season_id=r.season_id AND re.character_id=rc.id WHERE r.season_id=? ${round?'AND r.id=?':''} ORDER BY r.starts_at DESC,r.round_number DESC,m.group_code,m.bracket_position`).bind(...(round?[season.id,round]:[season.id])).all()
-  return c.json({matches:result.results.map(match=>publicMatchPortraits(match,season))})
+  const result=await c.env.DB.prepare(`SELECT m.id,m.group_code AS groupCode,m.bracket_position AS bracketPosition,m.left_votes AS leftVotes,m.right_votes AS rightVotes,m.status,m.winner_character_id AS winnerCharacterId,r.id AS roundId,r.stage,r.round_number AS roundNumber,r.name AS roundName,${matchStartsSql} AS startsAt,${matchEndsSql} AS endsAt,lc.id AS leftId,COALESCE(le.name_snapshot,lc.name) AS leftName,COALESCE(le.game_snapshot,lg.name) AS leftGame,le.artwork_match_key_snapshot AS leftArtworkKey,le.artwork_avatar_key_snapshot AS leftAvatarArtworkKey,rc.id AS rightId,COALESCE(re.name_snapshot,rc.name) AS rightName,COALESCE(re.game_snapshot,rg.name) AS rightGame,re.artwork_match_key_snapshot AS rightArtworkKey,re.artwork_avatar_key_snapshot AS rightAvatarArtworkKey FROM matches m JOIN tournament_rounds r ON r.id=m.round_id JOIN characters lc ON lc.id=m.left_character_id JOIN games lg ON lg.id=lc.game_id JOIN characters rc ON rc.id=m.right_character_id JOIN games rg ON rg.id=rc.game_id LEFT JOIN season_entries le ON le.season_id=r.season_id AND le.character_id=lc.id LEFT JOIN season_entries re ON re.season_id=r.season_id AND re.character_id=rc.id WHERE r.season_id=? ${round?'AND r.id=?':''} ORDER BY r.starts_at DESC,r.round_number DESC,m.group_code,m.bracket_position`).bind(...(round?[season.id,round]:[season.id])).all()
+  const profiles=season.rulesVersion==='3'?(await c.env.DB.prepare('SELECT character_id AS id,mobile_key AS mobile FROM season_character_profiles WHERE season_id=?').bind(season.id).all<{id:string;mobile:string|null}>()).results:[]
+  const mobile=new Map(profiles.map(p=>[p.id,p.mobile]))
+  return c.json({matches:result.results.map(match=>publicMatchPortraits({...match,...(season.rulesVersion==='3'?{leftMobileArtworkKey:mobile.get(String(match.leftId)),rightMobileArtworkKey:mobile.get(String(match.rightId))}:{})},season))})
 })
 
 app.get('/api/public/rounds', async (c) => {
@@ -138,7 +152,10 @@ app.get('/api/public/standings', async (c) => {
 app.get('/api/public/characters',async(c)=>{
   const season=await resolveSeason(c.env.DB,c.req.query('season'));if(!season)return c.json({characters:[]})
   const result=await c.env.DB.prepare(`SELECT se.character_id AS id,COALESCE(se.name_snapshot,c.name) AS name,COALESCE(se.game_snapshot,g.name) AS game,COALESCE(se.summary_snapshot,c.summary) AS summary,se.group_code AS groupCode,se.seed,se.artwork_gallery_key_snapshot AS galleryArtworkKey,se.artwork_match_key_snapshot AS matchArtworkKey,se.artwork_avatar_key_snapshot AS avatarArtworkKey FROM season_entries se JOIN characters c ON c.id=se.character_id JOIN games g ON g.id=c.game_id WHERE se.season_id=? ORDER BY se.seed`).bind(season.id).all()
-  return c.json({characters:result.results})
+  if(season.rulesVersion!=='3')return c.json({characters:result.results})
+  const profiles=(await c.env.DB.prepare('SELECT character_id AS id,skin_name AS skinName,source_url AS sourceUrl,source_note AS sourceNote,source_type AS sourceType,mobile_key AS mobileArtworkKey,detail_key AS detailArtworkKey FROM season_character_profiles WHERE season_id=?').bind(season.id).all()).results
+  const byId=new Map(profiles.map(p=>[p.id,p]))
+  return c.json({characters:result.results.map(e=>({...e,...byId.get(e.id)}))})
 })
 
 app.get('/api/media/:key{.+}', async (c) => {
@@ -217,7 +234,7 @@ app.post('/api/votes', zValidator('json', voteInput), async (c) => {
   const placeholders='SELECT value FROM json_each(?)'
   const matchIdsJson=JSON.stringify(matchIds)
   const [matchRows,existingRows]=await Promise.all([
-    c.env.DB.prepare(`SELECT m.id,m.left_character_id AS leftCharacterId,m.right_character_id AS rightCharacterId,m.status,r.starts_at AS startsAt,r.ends_at AS endsAt,s.status AS seasonStatus,s.is_current AS isCurrent FROM matches m JOIN tournament_rounds r ON r.id=m.round_id JOIN seasons s ON s.id=r.season_id WHERE m.id IN (${placeholders})`).bind(matchIdsJson).all<VoteMatch>(),
+    c.env.DB.prepare(`SELECT m.id,m.left_character_id AS leftCharacterId,m.right_character_id AS rightCharacterId,m.status,${matchStartsSql} AS startsAt,${matchEndsSql} AS endsAt,s.status AS seasonStatus,s.is_current AS isCurrent FROM matches m JOIN tournament_rounds r ON r.id=m.round_id JOIN seasons s ON s.id=r.season_id WHERE m.id IN (${placeholders})`).bind(matchIdsJson).all<VoteMatch>(),
     c.env.DB.prepare(`SELECT match_id AS matchId,character_id AS characterId,risk_status AS riskStatus,created_at AS createdAt FROM votes WHERE voter_id=? AND match_id IN (${placeholders})`).bind(session.sub,matchIdsJson).all<ExistingVote>()
   ])
   const plan=planBatchVotes(choices,matchRows.results,existingRows.results,iso())
@@ -296,7 +313,7 @@ app.post('/api/admin/seasons',zValidator('json',seasonCreateInput),async(c)=>{
   const schedule=formatSchedule(format,input.startsAt)
   const exists=await c.env.DB.prepare('SELECT id FROM seasons WHERE slug=?').bind(slug).first();if(exists)return c.json({error:'赛季链接标识已存在'},409)
   if(sourceId&&!await c.env.DB.prepare('SELECT id FROM seasons WHERE id=?').bind(sourceId).first())return c.json({error:'复制来源不存在'},404)
-  const statements=[c.env.DB.prepare('INSERT INTO seasons(id,slug,name,starts_at,ends_at,updated_by,rules_version,format_json) VALUES(?,?,?,?,?,?,?,?)').bind(seasonId,slug,input.name,input.startsAt,schedule.at(-1)!.endsAt,session!.sub,'2',JSON.stringify(format))]
+  const statements=[c.env.DB.prepare('INSERT INTO seasons(id,slug,name,starts_at,ends_at,updated_by,rules_version,format_json) VALUES(?,?,?,?,?,?,?,?)').bind(seasonId,slug,input.name,input.startsAt,schedule.at(-1)!.endsAt,session!.sub,String(format.version),JSON.stringify(format))]
   if(sourceId)statements.push(c.env.DB.prepare(`INSERT INTO season_entries(id,season_id,character_id,group_code,seed) SELECT ?||'-'||character_id,?,character_id,group_code,seed FROM season_entries WHERE season_id=?`).bind(seasonId,seasonId,sourceId))
   statements.push(...roundStatements(c.env.DB,seasonId,format,input.startsAt))
   statements.push(c.env.DB.prepare(`INSERT INTO audit_logs(id,actor_id,action,entity_type,entity_id,reason,after_json,season_id) VALUES(?,?,?,?,?,?,?,?)`).bind(id(),session!.sub,'season_created','season',seasonId,input.reason,JSON.stringify({name:input.name,slug,sourceId}),seasonId))
@@ -313,11 +330,15 @@ app.post('/api/admin/seasons/:seasonId/action',zValidator('json',seasonActionInp
     const entries=(await c.env.DB.prepare(`SELECT character_id AS characterId,group_code AS groupCode,seed FROM season_entries WHERE season_id=?`).bind(seasonId).all<{characterId:string;groupCode:string;seed:number}>()).results; const validation=validateSeasonRoster(entries,await loadSeasonFormat(c.env.DB,seasonId)); if(!validation.valid)return c.json({error:validation.error,groupCounts:validation.groupCounts},409)
     const other=await c.env.DB.prepare("SELECT id FROM seasons WHERE is_current=1 AND status IN ('published','live') AND id!=?").bind(seasonId).first();if(other)return c.json({error:'请先结束当前赛季，再发布新赛季'},409)
     const format=await loadSeasonFormat(c.env.DB,seasonId)
+    if(format.version===3){
+      const missing=await c.env.DB.prepare('SELECT COUNT(*) AS n FROM season_entries e LEFT JOIN season_character_profiles p ON p.season_id=e.season_id AND p.character_id=e.character_id WHERE e.season_id=? AND (COALESCE(p.verified,0)!=1 OR e.artwork_gallery_key_snapshot IS NULL OR e.artwork_match_key_snapshot IS NULL OR e.artwork_avatar_key_snapshot IS NULL)').bind(seasonId).first<{n:number}>()
+      if(missing?.n)return c.json({error:`仍有 ${missing.n} 位角色素材未完成核验，不能发布预告`},409)
+    }
     const firstRound=await c.env.DB.prepare(`SELECT id FROM tournament_rounds WHERE season_id=? AND stage=? AND round_number=1`).bind(seasonId,format.mode==='knockout'?'knockout':'swiss').first<{id:string}>(); if(!firstRound)return c.json({error:'首轮不存在'},409)
     const existing=await c.env.DB.prepare(`SELECT COUNT(*) AS count FROM matches WHERE round_id=?`).bind(firstRound.id).first<{count:number}>(); if((existing?.count??0)!==0)return c.json({error:'草稿首轮已有对局，无法安全发布'},409)
     const pairs=firstRoundPairs(entries.map(e=>({id:e.characterId,game:'',groupCode:e.groupCode,seed:e.seed})),format)
     const pairStatements=[insertPairStatement(c.env.DB,firstRound.id,pairs,pairs.map(([left])=>format.mode==='knockout'?null:left.groupCode))]
-    await c.env.DB.batch([...pairStatements,c.env.DB.prepare(`UPDATE seasons SET is_current=0 WHERE is_current=1`),c.env.DB.prepare(`UPDATE seasons SET status='published',is_current=1,roster_locked=1,published_at=?,updated_at=?,updated_by=? WHERE id=?`).bind(iso(),iso(),session!.sub,seasonId),c.env.DB.prepare(`UPDATE season_entries SET name_snapshot=(SELECT name FROM characters WHERE id=character_id),game_snapshot=(SELECT g.name FROM characters c JOIN games g ON g.id=c.game_id WHERE c.id=character_id),summary_snapshot=(SELECT summary FROM characters WHERE id=character_id),artwork_original_key_snapshot=(SELECT artwork_original_key FROM characters WHERE id=character_id),artwork_gallery_key_snapshot=(SELECT artwork_gallery_key FROM characters WHERE id=character_id),artwork_match_key_snapshot=(SELECT artwork_match_key FROM characters WHERE id=character_id),artwork_avatar_key_snapshot=(SELECT artwork_avatar_key FROM characters WHERE id=character_id) WHERE season_id=?`).bind(seasonId)])
+    await c.env.DB.batch([...pairStatements,c.env.DB.prepare(`UPDATE seasons SET is_current=0 WHERE is_current=1`),c.env.DB.prepare(`UPDATE seasons SET status='published',is_current=1,roster_locked=1,published_at=?,updated_at=?,updated_by=? WHERE id=?`).bind(iso(),iso(),session!.sub,seasonId),c.env.DB.prepare(`UPDATE season_entries SET name_snapshot=(SELECT name FROM characters WHERE id=character_id),game_snapshot=(SELECT g.name FROM characters c JOIN games g ON g.id=c.game_id WHERE c.id=character_id),summary_snapshot=CASE WHEN (SELECT rules_version FROM seasons WHERE id=season_id)='3' THEN summary_snapshot ELSE (SELECT summary FROM characters WHERE id=character_id) END,artwork_original_key_snapshot=CASE WHEN (SELECT rules_version FROM seasons WHERE id=season_id)='3' THEN artwork_original_key_snapshot ELSE (SELECT artwork_original_key FROM characters WHERE id=character_id) END,artwork_gallery_key_snapshot=CASE WHEN (SELECT rules_version FROM seasons WHERE id=season_id)='3' THEN artwork_gallery_key_snapshot ELSE (SELECT artwork_gallery_key FROM characters WHERE id=character_id) END,artwork_match_key_snapshot=CASE WHEN (SELECT rules_version FROM seasons WHERE id=season_id)='3' THEN artwork_match_key_snapshot ELSE (SELECT artwork_match_key FROM characters WHERE id=character_id) END,artwork_avatar_key_snapshot=CASE WHEN (SELECT rules_version FROM seasons WHERE id=season_id)='3' THEN artwork_avatar_key_snapshot ELSE (SELECT artwork_avatar_key FROM characters WHERE id=character_id) END WHERE season_id=?`).bind(seasonId)])
   } else if(input.action==='archive') { const result=await c.env.DB.prepare(`UPDATE seasons SET status='archived',is_current=0,archived_at=?,updated_at=?,updated_by=? WHERE id=? AND status='completed'`).bind(iso(),iso(),session!.sub,seasonId).run(); if(!result.meta.changes)return c.json({error:'只能归档已结束赛季'},409) }
   else { const result=await c.env.DB.prepare(`UPDATE seasons SET history_unlocked=?,updated_at=?,updated_by=? WHERE id=? AND status IN ('completed','archived')`).bind(input.action==='unlock-history'?1:0,iso(),session!.sub,seasonId).run(); if(!result.meta.changes)return c.json({error:'只有已结束或归档赛季可调整历史锁'},409) }
   if(input.action==='lock-history')await snapshotSeasonStandings(c.env.DB,seasonId)
@@ -442,7 +463,7 @@ app.post('/api/admin/characters/:characterId/artwork', async (c) => {
     ])
     await c.env.DB.batch([
       c.env.DB.prepare(`UPDATE characters SET summary=?,artwork_original_key=?,artwork_gallery_key=?,artwork_match_key=?,artwork_avatar_key=?,artwork_key=?,artwork_source_url=?,artwork_source_note=?,artwork_source_type=?,artwork_quality_status='verified',artwork_gallery_crop_json=?,artwork_match_crop_json=?,artwork_avatar_crop_json=?,artwork_verified_at=?,artwork_verified_by=?,updated_at=? WHERE id=?`).bind(input.summary,keys.original,keys.gallery,keys.match,keys.avatar,keys.gallery,input.sourceUrl??null,input.sourceNote??null,input.sourceType,JSON.stringify(input.galleryCrop),JSON.stringify(input.matchCrop),JSON.stringify(input.avatarCrop),iso(),actor.sub,iso(),characterId),
-      c.env.DB.prepare(`UPDATE season_entries SET summary_snapshot=?,artwork_original_key_snapshot=?,artwork_gallery_key_snapshot=?,artwork_match_key_snapshot=?,artwork_avatar_key_snapshot=? WHERE character_id=? AND season_id IN (SELECT id FROM seasons WHERE status IN ('draft','published','live'))`).bind(input.summary,keys.original,keys.gallery,keys.match,keys.avatar,characterId),
+      c.env.DB.prepare(`UPDATE season_entries SET summary_snapshot=?,artwork_original_key_snapshot=?,artwork_gallery_key_snapshot=?,artwork_match_key_snapshot=?,artwork_avatar_key_snapshot=? WHERE character_id=? AND season_id IN (SELECT id FROM seasons WHERE status IN ('draft','published','live') AND rules_version!='3')`).bind(input.summary,keys.original,keys.gallery,keys.match,keys.avatar,characterId),
       c.env.DB.prepare(`INSERT INTO audit_logs(id,actor_id,action,entity_type,entity_id,reason,after_json) VALUES(?,?,?,?,?,?,?)`).bind(id(),actor.sub,'artwork_published','character',characterId,input.reason,JSON.stringify({keys,sourceType:input.sourceType,revision}))
     ])
   } catch(error) { await Promise.all(Object.values(keys).map((key)=>c.env.MEDIA.delete(key))); throw error }
@@ -453,7 +474,7 @@ app.delete('/api/admin/characters/:characterId/artwork', async (c) => {
   const session=c.get('session'); if(!requireRole(session,['operator','admin']))return c.json({error:'无权移除素材'},403)
   const actor=session!; const body=await c.req.json<{reason?:string}>(); if(!body.reason||body.reason.trim().length<5)return c.json({error:'请填写至少5字的原因'},400)
   const characterId=c.req.param('characterId'); const row=await c.env.DB.prepare(`SELECT id FROM characters WHERE id=?`).bind(characterId).first(); if(!row)return c.json({error:'角色不存在'},404)
-  await c.env.DB.batch([c.env.DB.prepare(`UPDATE characters SET artwork_original_key=NULL,artwork_gallery_key=NULL,artwork_match_key=NULL,artwork_avatar_key=NULL,artwork_key=NULL,artwork_quality_status='pending',updated_at=? WHERE id=?`).bind(iso(),characterId),c.env.DB.prepare(`UPDATE season_entries SET artwork_original_key_snapshot=NULL,artwork_gallery_key_snapshot=NULL,artwork_match_key_snapshot=NULL,artwork_avatar_key_snapshot=NULL WHERE character_id=? AND season_id IN (SELECT id FROM seasons WHERE status IN ('draft','published','live'))`).bind(characterId),c.env.DB.prepare(`INSERT INTO audit_logs(id,actor_id,action,entity_type,entity_id,reason) VALUES(?,?,?,?,?,?)`).bind(id(),actor.sub,'artwork_removed','character',characterId,body.reason)])
+  await c.env.DB.batch([c.env.DB.prepare(`UPDATE characters SET artwork_original_key=NULL,artwork_gallery_key=NULL,artwork_match_key=NULL,artwork_avatar_key=NULL,artwork_key=NULL,artwork_quality_status='pending',updated_at=? WHERE id=?`).bind(iso(),characterId),c.env.DB.prepare(`UPDATE season_entries SET artwork_original_key_snapshot=NULL,artwork_gallery_key_snapshot=NULL,artwork_match_key_snapshot=NULL,artwork_avatar_key_snapshot=NULL WHERE character_id=? AND season_id IN (SELECT id FROM seasons WHERE status IN ('draft','published','live') AND rules_version!='3')`).bind(characterId),c.env.DB.prepare(`INSERT INTO audit_logs(id,actor_id,action,entity_type,entity_id,reason) VALUES(?,?,?,?,?,?)`).bind(id(),actor.sub,'artwork_removed','character',characterId,body.reason)])
   return c.json({ok:true})
 })
 

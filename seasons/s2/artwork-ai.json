@@ -1,0 +1,10 @@
+{
+  "tool": "GPT Image built-in",
+  "purpose": "S2 isolated review only; source originals and S1 untouched",
+  "prompt": "Background extraction only. Extract exact central character, preserve face, expression, costume, colors, pose and held weapons. Remove scenery, debris, detached effects and typography. Actual transparent alpha, clean edges, no shadow, no chibi, no redesign or invented skin. Full body contained with 5% top/bottom margin.",
+  "export": "Deterministic layout from the same cutout. Gallery 900x1200, silhouette 90% height where width permits, bottom y1140. Avatar 512x512, face width236, eye line215. Match 960x540, face width170, eye line195.",
+  "entries": [
+    {"id":"c116","game":"明日方舟：终末地","file":"ai-candidates/c116-cutout-v1.png","eyes":[636,334],"faceWidth":140,"review":"AI 处理样例；背景已清理，脸部及服装细节仍需与原图复核，未批准上线"},
+    {"id":"c113","game":"明日方舟：终末地","file":"ai-candidates/c113-cutout-v1.png","eyes":[648,168],"faceWidth":140,"review":"AI 处理样例；背景已清理，脸部及服装细节仍需与原图复核，未批准上线"}
+  ]
+}

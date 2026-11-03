@@ -1,0 +1,1798 @@
+{
+  "generatedAt": "2026-11-03T20:58:48.358Z",
+  "processed": 256,
+  "entries": [
+    {
+      "id": "s2-wutheringwaves-082c4ae742",
+      "name": "心",
+      "game": "鸣潮",
+      "method": "source-alpha",
+      "transparentFraction": 0.5300194444444445
+    },
+    {
+      "id": "s2-wutheringwaves-be984a3219",
+      "name": "锁暝",
+      "game": "鸣潮",
+      "method": "gpt-image",
+      "transparentFraction": 0.6201641191568162
+    },
+    {
+      "id": "s2-wutheringwaves-9cea03f679",
+      "name": "夏空",
+      "game": "鸣潮",
+      "method": "source-alpha",
+      "transparentFraction": 0.5563222222222223
+    },
+    {
+      "id": "s2-zspms-186780ae70",
+      "name": "特洛伊",
+      "game": "战双帕弥什",
+      "method": "source-alpha",
+      "transparentFraction": 0.6343018518518518
+    },
+    {
+      "id": "s2-zzz-1bf39d30ae",
+      "name": "浮波柚叶",
+      "game": "绝区零",
+      "method": "gpt-image",
+      "transparentFraction": 0.7429519113493082
+    },
+    {
+      "id": "s2-yh-f143b396fa",
+      "name": "达芙蒂尔",
+      "game": "异环",
+      "method": "source-alpha",
+      "transparentFraction": 0.6589383966244726
+    },
+    {
+      "id": "s2-yh-6cd5d59788",
+      "name": "小吱",
+      "game": "异环",
+      "method": "source-alpha",
+      "transparentFraction": 0.6876101265822785
+    },
+    {
+      "id": "s2-yh-f90dc6b5b4",
+      "name": "残虹",
+      "game": "异环",
+      "method": "source-alpha",
+      "transparentFraction": 0.3963071729957806
+    },
+    {
+      "id": "s2-yh-0b11c038a4",
+      "name": "真红",
+      "game": "异环",
+      "method": "source-alpha",
+      "transparentFraction": 0.5357493670886075
+    },
+    {
+      "id": "s2-yh-824285ccb0",
+      "name": "黑羽",
+      "game": "异环",
+      "method": "gpt-image",
+      "transparentFraction": 0.3269484556529434
+    },
+    {
+      "id": "s2-yh-ea050fb3e3",
+      "name": "明音凛",
+      "game": "异环",
+      "method": "source-alpha",
+      "transparentFraction": 0.6434995780590718
+    },
+    {
+      "id": "s2-yh-7c733ad2ea",
+      "name": "海月",
+      "game": "异环",
+      "method": "source-alpha",
+      "transparentFraction": 0.6347831223628692
+    },
+    {
+      "id": "s2-yh-99acbab3a0",
+      "name": "伊洛伊",
+      "game": "异环",
+      "method": "source-alpha",
+      "transparentFraction": 0.6237814345991561
+    },
+    {
+      "id": "s2-yh-cd9955613b",
+      "name": "哈尼娅",
+      "game": "异环",
+      "method": "source-alpha",
+      "transparentFraction": 0.754546835443038
+    },
+    {
+      "id": "s2-zzz-d760742253",
+      "name": "菲欧妮",
+      "game": "绝区零",
+      "method": "gpt-image",
+      "transparentFraction": 0.5968250275249887
+    },
+    {
+      "id": "s2-zspms-bf363b9dce",
+      "name": "雾岛千子",
+      "game": "战双帕弥什",
+      "method": "gpt-image",
+      "transparentFraction": 0.4720002288809628
+    },
+    {
+      "id": "s2-zspms-a8179be2c0",
+      "name": "帕露玛",
+      "game": "战双帕弥什",
+      "method": "gpt-image",
+      "transparentFraction": 0.4643332485048988
+    },
+    {
+      "id": "s2-zspms-419901e9ef",
+      "name": "艾玛·科波菲尔",
+      "game": "战双帕弥什",
+      "method": "gpt-image",
+      "transparentFraction": 0.5553216368319619
+    },
+    {
+      "id": "s2-zmd-866581d1b9",
+      "name": "祀",
+      "game": "明日方舟：终末地",
+      "method": "gpt-image",
+      "transparentFraction": 0.6521511077880859
+    },
+    {
+      "id": "s2-zmd-bfb0bc3dc7",
+      "name": "洛西",
+      "game": "明日方舟：终末地",
+      "method": "gpt-image",
+      "transparentFraction": 0.5677930118291667
+    },
+    {
+      "id": "s2-zspms-3bb87660c1",
+      "name": "卡俄斯",
+      "game": "战双帕弥什",
+      "method": "gpt-image",
+      "transparentFraction": 0.7522745610950703
+    },
+    {
+      "id": "s2-zmd-4cb6e4cf5d",
+      "name": "梨诺",
+      "game": "明日方舟：终末地",
+      "method": "gpt-image",
+      "transparentFraction": 0.7006372788745329
+    },
+    {
+      "id": "s2-wutheringwaves-c9114ba8ce",
+      "name": "爱弥斯",
+      "game": "鸣潮",
+      "method": "source-alpha",
+      "transparentFraction": 0.770223542461245
+    },
+    {
+      "id": "c051",
+      "name": "守岸人",
+      "game": "鸣潮",
+      "method": "source-alpha",
+      "transparentFraction": 0.6680763490241102
+    },
+    {
+      "id": "c052",
+      "name": "今汐",
+      "game": "鸣潮",
+      "method": "source-alpha",
+      "transparentFraction": 0.7027778025327285
+    },
+    {
+      "id": "c049",
+      "name": "长离",
+      "game": "鸣潮",
+      "method": "source-alpha",
+      "transparentFraction": 0.6542231937262263
+    },
+    {
+      "id": "c050",
+      "name": "椿",
+      "game": "鸣潮",
+      "method": "source-alpha",
+      "transparentFraction": 0.7454158557155832
+    },
+    {
+      "id": "c053",
+      "name": "卡提希娅",
+      "game": "鸣潮",
+      "method": "gpt-image",
+      "transparentFraction": 0.49965858459472656
+    },
+    {
+      "id": "s2-wutheringwaves-8ffea565fa",
+      "name": "千咲",
+      "game": "鸣潮",
+      "method": "source-alpha",
+      "transparentFraction": 0.7512722192497473
+    },
+    {
+      "id": "s2-wutheringwaves-2545facc3d",
+      "name": "弗洛洛",
+      "game": "鸣潮",
+      "method": "source-alpha",
+      "transparentFraction": 0.7166967906397714
+    },
+    {
+      "id": "s2-wutheringwaves-95e5e0ea6c",
+      "name": "尤诺",
+      "game": "鸣潮",
+      "method": "source-alpha",
+      "transparentFraction": 0.5594132640116786
+    },
+    {
+      "id": "s2-wutheringwaves-4d6d317529",
+      "name": "绯雪",
+      "game": "鸣潮",
+      "method": "source-alpha",
+      "transparentFraction": 0.6624033324277823
+    },
+    {
+      "id": "s2-wutheringwaves-5808247a98",
+      "name": "达妮娅",
+      "game": "鸣潮",
+      "method": "source-alpha",
+      "transparentFraction": 0.7724616583876722
+    },
+    {
+      "id": "c054",
+      "name": "珂莱塔",
+      "game": "鸣潮",
+      "method": "source-alpha",
+      "transparentFraction": 0.6951234156504614
+    },
+    {
+      "id": "c062",
+      "name": "菲比",
+      "game": "鸣潮",
+      "method": "source-alpha",
+      "transparentFraction": 0.6188513211108584
+    },
+    {
+      "id": "c063",
+      "name": "赞妮",
+      "game": "鸣潮",
+      "method": "source-alpha",
+      "transparentFraction": 0.6061361084027583
+    },
+    {
+      "id": "c055",
+      "name": "吟霖",
+      "game": "鸣潮",
+      "method": "source-alpha",
+      "transparentFraction": 0.822569363317757
+    },
+    {
+      "id": "c058",
+      "name": "散华",
+      "game": "鸣潮",
+      "method": "source-alpha",
+      "transparentFraction": 0.5319309746168582
+    },
+    {
+      "id": "c056",
+      "name": "秧秧",
+      "game": "鸣潮",
+      "method": "source-alpha",
+      "transparentFraction": 0.810673297702849
+    },
+    {
+      "id": "c059",
+      "name": "白芷",
+      "game": "鸣潮",
+      "method": "gpt-image",
+      "transparentFraction": 0.7204798220527486
+    },
+    {
+      "id": "s2-wutheringwaves-5ad57f64f0",
+      "name": "莫宁",
+      "game": "鸣潮",
+      "method": "source-alpha",
+      "transparentFraction": 0.839633971687377
+    },
+    {
+      "id": "s2-wutheringwaves-c5c4122284",
+      "name": "琳奈",
+      "game": "鸣潮",
+      "method": "source-alpha",
+      "transparentFraction": 0.8254630021222933
+    },
+    {
+      "id": "s2-wutheringwaves-0e4e03bafb",
+      "name": "西格莉卡",
+      "game": "鸣潮",
+      "method": "source-alpha",
+      "transparentFraction": 0.7104558298013796
+    },
+    {
+      "id": "s2-wutheringwaves-8eef188aff",
+      "name": "清宵",
+      "game": "鸣潮",
+      "method": "source-alpha",
+      "transparentFraction": 0.7725587379275345
+    },
+    {
+      "id": "s2-wutheringwaves-f698fe9793",
+      "name": "穗穗",
+      "game": "鸣潮",
+      "method": "source-alpha",
+      "transparentFraction": 0.7808587982898622
+    },
+    {
+      "id": "s2-wutheringwaves-74a6e9425a",
+      "name": "洛瑟菈",
+      "game": "鸣潮",
+      "method": "source-alpha",
+      "transparentFraction": 0.6527713675213676
+    },
+    {
+      "id": "s2-wutheringwaves-1dd91d7301",
+      "name": "奥古斯塔",
+      "game": "鸣潮",
+      "method": "source-alpha",
+      "transparentFraction": 0.6219077193299739
+    },
+    {
+      "id": "s2-wutheringwaves-a3555faaa3",
+      "name": "嘉贝莉娜",
+      "game": "鸣潮",
+      "method": "source-alpha",
+      "transparentFraction": 0.7698871871889352
+    },
+    {
+      "id": "s2-wutheringwaves-46fa1b3af1",
+      "name": "坎特蕾拉",
+      "game": "鸣潮",
+      "method": "gpt-image",
+      "transparentFraction": 0.6326660942022072
+    },
+    {
+      "id": "c064",
+      "name": "露帕",
+      "game": "鸣潮",
+      "method": "source-alpha",
+      "transparentFraction": 0.7128734425785482
+    },
+    {
+      "id": "s2-wutheringwaves-f276eb8e25",
+      "name": "折枝",
+      "game": "鸣潮",
+      "method": "source-alpha",
+      "transparentFraction": 0.6805817674571264
+    },
+    {
+      "id": "s2-wutheringwaves-55ee76287b",
+      "name": "安可",
+      "game": "鸣潮",
+      "method": "source-alpha",
+      "transparentFraction": 0.6785799760670124
+    },
+    {
+      "id": "s2-wutheringwaves-09c5285b31",
+      "name": "洛可可",
+      "game": "鸣潮",
+      "method": "gpt-image",
+      "transparentFraction": 0.6431302161423856
+    },
+    {
+      "id": "c057",
+      "name": "鉴心",
+      "game": "鸣潮",
+      "method": "source-alpha",
+      "transparentFraction": 0.8402666050238866
+    },
+    {
+      "id": "s2-wutheringwaves-063a838bc7",
+      "name": "维里奈",
+      "game": "鸣潮",
+      "method": "source-alpha",
+      "transparentFraction": 0.6954716124148372
+    },
+    {
+      "id": "c060",
+      "name": "丹瑾",
+      "game": "鸣潮",
+      "method": "source-alpha",
+      "transparentFraction": 0.5512721503831418
+    },
+    {
+      "id": "c061",
+      "name": "桃祈",
+      "game": "鸣潮",
+      "method": "source-alpha",
+      "transparentFraction": 0.5326299090038314
+    },
+    {
+      "id": "s2-wutheringwaves-80fc314163",
+      "name": "灯灯",
+      "game": "鸣潮",
+      "method": "source-alpha",
+      "transparentFraction": 0.6677204969107194
+    },
+    {
+      "id": "s2-wutheringwaves-d287b9f3b1",
+      "name": "卜灵",
+      "game": "鸣潮",
+      "method": "source-alpha",
+      "transparentFraction": 0.7062160206718346
+    },
+    {
+      "id": "c105",
+      "name": "露西亚",
+      "game": "战双帕弥什",
+      "method": "source-alpha",
+      "transparentFraction": 0.3959818373631387
+    },
+    {
+      "id": "s2-zspms-3e32da9648",
+      "name": "α",
+      "game": "战双帕弥什",
+      "method": "source-alpha",
+      "transparentFraction": 0.4011796296296296
+    },
+    {
+      "id": "c106",
+      "name": "丽芙",
+      "game": "战双帕弥什",
+      "method": "gpt-image",
+      "transparentFraction": 0.6274098952966172
+    },
+    {
+      "id": "s2-zspms-ba3bf32563",
+      "name": "露娜",
+      "game": "战双帕弥什",
+      "method": "gpt-image",
+      "transparentFraction": 0.5841511740812477
+    },
+    {
+      "id": "c109",
+      "name": "赛琳娜",
+      "game": "战双帕弥什",
+      "method": "source-alpha",
+      "transparentFraction": 0.6061481481481481
+    },
+    {
+      "id": "c107",
+      "name": "薇拉",
+      "game": "战双帕弥什",
+      "method": "source-alpha",
+      "transparentFraction": 0.5648453703703704
+    },
+    {
+      "id": "s2-zspms-22e5ce8e9d",
+      "name": "比安卡",
+      "game": "战双帕弥什",
+      "method": "source-alpha",
+      "transparentFraction": 0.644925
+    },
+    {
+      "id": "c108",
+      "name": "曲",
+      "game": "战双帕弥什",
+      "method": "gpt-image",
+      "transparentFraction": 0.311003032324233
+    },
+    {
+      "id": "c111",
+      "name": "含英",
+      "game": "战双帕弥什",
+      "method": "source-alpha",
+      "transparentFraction": 0.6584
+    },
+    {
+      "id": "c110",
+      "name": "罗塞塔",
+      "game": "战双帕弥什",
+      "method": "source-alpha",
+      "transparentFraction": 0.38968148148148146
+    },
+    {
+      "id": "s2-zspms-4252de8219",
+      "name": "七实",
+      "game": "战双帕弥什",
+      "method": "source-alpha",
+      "transparentFraction": 0.6538287037037037
+    },
+    {
+      "id": "s2-zspms-f04ab13f4e",
+      "name": "卡列尼娜",
+      "game": "战双帕弥什",
+      "method": "source-alpha",
+      "transparentFraction": 0.6212731481481482
+    },
+    {
+      "id": "s2-zspms-d7eccc55d5",
+      "name": "艾拉",
+      "game": "战双帕弥什",
+      "method": "source-alpha",
+      "transparentFraction": 0.6647231481481481
+    },
+    {
+      "id": "c112",
+      "name": "21号",
+      "game": "战双帕弥什",
+      "method": "source-alpha",
+      "transparentFraction": 0.4850657407407407
+    },
+    {
+      "id": "s2-zspms-2249aa62aa",
+      "name": "拉弥亚",
+      "game": "战双帕弥什",
+      "method": "source-alpha",
+      "transparentFraction": 0.6122722222222222
+    },
+    {
+      "id": "s2-zspms-2fb9e23cad",
+      "name": "莉莉丝",
+      "game": "战双帕弥什",
+      "method": "source-alpha",
+      "transparentFraction": 0.5336109381486094
+    },
+    {
+      "id": "s2-zspms-7465b67175",
+      "name": "伊什梅尔",
+      "game": "战双帕弥什",
+      "method": "source-alpha",
+      "transparentFraction": 0.6073041988003428
+    },
+    {
+      "id": "s2-zspms-ffd9a5f469",
+      "name": "哈卡玛",
+      "game": "战双帕弥什",
+      "method": "source-alpha",
+      "transparentFraction": 0.5659046296296296
+    },
+    {
+      "id": "s2-zspms-f2d56d18e2",
+      "name": "蒲牢",
+      "game": "战双帕弥什",
+      "method": "source-alpha",
+      "transparentFraction": 0.6485425925925926
+    },
+    {
+      "id": "s2-zspms-2b457f391e",
+      "name": "邦比娜塔",
+      "game": "战双帕弥什",
+      "method": "source-alpha",
+      "transparentFraction": 0.5693175925925926
+    },
+    {
+      "id": "s2-zspms-faf440a9f5",
+      "name": "亚里莎",
+      "game": "战双帕弥什",
+      "method": "source-alpha",
+      "transparentFraction": 0.6361851851851852
+    },
+    {
+      "id": "s2-zspms-877255f18e",
+      "name": "布偶熊",
+      "game": "战双帕弥什",
+      "method": "source-alpha",
+      "transparentFraction": 0.5461333333333334
+    },
+    {
+      "id": "s2-zspms-10274e94b4",
+      "name": "洁塔薇",
+      "game": "战双帕弥什",
+      "method": "source-alpha",
+      "transparentFraction": 0.5408564814814815
+    },
+    {
+      "id": "s2-zspms-728e690217",
+      "name": "涅缇娅",
+      "game": "战双帕弥什",
+      "method": "source-alpha",
+      "transparentFraction": 0.32258333333333333
+    },
+    {
+      "id": "s2-zspms-1e8d4c8b68",
+      "name": "苏菲亚",
+      "game": "战双帕弥什",
+      "method": "source-alpha",
+      "transparentFraction": 0.7199685185185185
+    },
+    {
+      "id": "s2-zspms-8304bb0fa4",
+      "name": "布丽姬特",
+      "game": "战双帕弥什",
+      "method": "source-alpha",
+      "transparentFraction": 0.5984027777777777
+    },
+    {
+      "id": "s2-zspms-3fa6adfa57",
+      "name": "八咫",
+      "game": "战双帕弥什",
+      "method": "source-alpha",
+      "transparentFraction": 0.5771935185185185
+    },
+    {
+      "id": "s2-zspms-882c4c7fba",
+      "name": "斜奏",
+      "game": "战双帕弥什",
+      "method": "source-alpha",
+      "transparentFraction": 0.4677851851851852
+    },
+    {
+      "id": "s2-zspms-5cd4133323",
+      "name": "维罗妮卡",
+      "game": "战双帕弥什",
+      "method": "source-alpha",
+      "transparentFraction": 0.3845972222222222
+    },
+    {
+      "id": "s2-zspms-e946a6a6c2",
+      "name": "海伦汀",
+      "game": "战双帕弥什",
+      "method": "source-alpha",
+      "transparentFraction": 0.6069064814814815
+    },
+    {
+      "id": "s2-zspms-3f26d2e2f5",
+      "name": "阿德莱德",
+      "game": "战双帕弥什",
+      "method": "source-alpha",
+      "transparentFraction": 0.6470058050717996
+    },
+    {
+      "id": "s2-zspms-21ff1f9fb4",
+      "name": "赛利卡",
+      "game": "战双帕弥什",
+      "method": "source-alpha",
+      "transparentFraction": 0.6377296296296296
+    },
+    {
+      "id": "s2-zspms-c672ec4341",
+      "name": "凡妮莎",
+      "game": "战双帕弥什",
+      "method": "source-alpha",
+      "transparentFraction": 0.4924060922392402
+    },
+    {
+      "id": "s2-zspms-94d0356ed1",
+      "name": "莱亚",
+      "game": "战双帕弥什",
+      "method": "source-alpha",
+      "transparentFraction": 0.4851824074074074
+    },
+    {
+      "id": "s2-zspms-d2c5701b36",
+      "name": "洛莎",
+      "game": "战双帕弥什",
+      "method": "source-alpha",
+      "transparentFraction": 0.7424101851851852
+    },
+    {
+      "id": "s2-bh3-a7a331eb46",
+      "name": "琪亚娜",
+      "game": "崩坏3",
+      "method": "source-alpha",
+      "transparentFraction": 0.7149197802197802
+    },
+    {
+      "id": "s2-bh3-ee5e2f9e86",
+      "name": "雷电芽衣",
+      "game": "崩坏3",
+      "method": "source-alpha",
+      "transparentFraction": 0.6647615384615385
+    },
+    {
+      "id": "s2-bh3-cdfb201cce",
+      "name": "布洛妮娅",
+      "game": "崩坏3",
+      "method": "source-alpha",
+      "transparentFraction": 0.6027298610919735
+    },
+    {
+      "id": "s2-bh3-6d09bbd07d",
+      "name": "爱莉希雅",
+      "game": "崩坏3",
+      "method": "source-alpha",
+      "transparentFraction": 0.7553802197802197
+    },
+    {
+      "id": "s2-bh3-cd224df2bc",
+      "name": "希儿",
+      "game": "崩坏3",
+      "method": "source-alpha",
+      "transparentFraction": 0.7690313186813187
+    },
+    {
+      "id": "s2-bh3-9e17ed151b",
+      "name": "黑希儿",
+      "game": "崩坏3",
+      "method": "source-alpha",
+      "transparentFraction": 0.5663725670789282
+    },
+    {
+      "id": "s2-bh3-d8f4174c05",
+      "name": "符华",
+      "game": "崩坏3",
+      "method": "source-alpha",
+      "transparentFraction": 0.5355965415861071
+    },
+    {
+      "id": "s2-bh3-75da6b69b7",
+      "name": "识之律者",
+      "game": "崩坏3",
+      "method": "source-alpha",
+      "transparentFraction": 0.5413910238465789
+    },
+    {
+      "id": "s2-bh3-b1899012a3",
+      "name": "德丽莎",
+      "game": "崩坏3",
+      "method": "source-alpha",
+      "transparentFraction": 0.7878862637362637
+    },
+    {
+      "id": "s2-bh3-230580ccd7",
+      "name": "无量塔姬子",
+      "game": "崩坏3",
+      "method": "source-alpha",
+      "transparentFraction": 0.42640137269036577
+    },
+    {
+      "id": "s2-bh3-fddfa1fb03",
+      "name": "丽塔",
+      "game": "崩坏3",
+      "method": "source-alpha",
+      "transparentFraction": 0.7348247252747253
+    },
+    {
+      "id": "s2-bh3-4d1b9929c1",
+      "name": "幽兰黛尔",
+      "game": "崩坏3",
+      "method": "source-alpha",
+      "transparentFraction": 0.728195054945055
+    },
+    {
+      "id": "s2-bh3-38f1b8d7c5",
+      "name": "八重樱",
+      "game": "崩坏3",
+      "method": "source-alpha",
+      "transparentFraction": 0.7904747124152766
+    },
+    {
+      "id": "s2-bh3-f701815d4d",
+      "name": "卡莲",
+      "game": "崩坏3",
+      "method": "source-alpha",
+      "transparentFraction": 0.6590639771759768
+    },
+    {
+      "id": "s2-bh3-6d01623417",
+      "name": "伊甸",
+      "game": "崩坏3",
+      "method": "source-alpha",
+      "transparentFraction": 0.6499073898141849
+    },
+    {
+      "id": "s2-bh3-a58ebcbea5",
+      "name": "梅比乌斯",
+      "game": "崩坏3",
+      "method": "source-alpha",
+      "transparentFraction": 0.6091618089227775
+    },
+    {
+      "id": "s2-bh3-822704406c",
+      "name": "阿波尼亚",
+      "game": "崩坏3",
+      "method": "source-alpha",
+      "transparentFraction": 0.6832666375612989
+    },
+    {
+      "id": "s2-bh3-a92abd0a43",
+      "name": "帕朵菲莉丝",
+      "game": "崩坏3",
+      "method": "source-alpha",
+      "transparentFraction": 0.6803229825556351
+    },
+    {
+      "id": "s2-bh3-8492dc4806",
+      "name": "格蕾修",
+      "game": "崩坏3",
+      "method": "source-alpha",
+      "transparentFraction": 0.6274670062615219
+    },
+    {
+      "id": "s2-bh3-705d278a97",
+      "name": "维尔薇",
+      "game": "崩坏3",
+      "method": "source-alpha",
+      "transparentFraction": 0.690150395460723
+    },
+    {
+      "id": "s2-bh3-718a7e04d3",
+      "name": "李素裳",
+      "game": "崩坏3",
+      "method": "gpt-image",
+      "transparentFraction": 0.7440834290234017
+    },
+    {
+      "id": "s2-bh3-8e67d617b3",
+      "name": "西琳",
+      "game": "崩坏3",
+      "method": "source-alpha",
+      "transparentFraction": 0.494483275775293
+    },
+    {
+      "id": "s2-bh3-2c225dc166",
+      "name": "希娜狄雅",
+      "game": "崩坏3",
+      "method": "source-alpha",
+      "transparentFraction": 0.8492186813186813
+    },
+    {
+      "id": "s2-bh3-3ef0f7326d",
+      "name": "薇塔",
+      "game": "崩坏3",
+      "method": "source-alpha",
+      "transparentFraction": 0.6521741758241758
+    },
+    {
+      "id": "s2-bh3-018f46f4eb",
+      "name": "松雀",
+      "game": "崩坏3",
+      "method": "source-alpha",
+      "transparentFraction": 0.5990598901098901
+    },
+    {
+      "id": "s2-bh3-264d371427",
+      "name": "普罗米修斯",
+      "game": "崩坏3",
+      "method": "source-alpha",
+      "transparentFraction": 0.7356722542203992
+    },
+    {
+      "id": "s2-bh3-cbba1ef9cd",
+      "name": "赫丽娅",
+      "game": "崩坏3",
+      "method": "source-alpha",
+      "transparentFraction": 0.6813126373626374
+    },
+    {
+      "id": "s2-bh3-23ced6d1c0",
+      "name": "科拉莉",
+      "game": "崩坏3",
+      "method": "source-alpha",
+      "transparentFraction": 0.6502489010989011
+    },
+    {
+      "id": "s2-bh3-ab322f651d",
+      "name": "瑟莉姆",
+      "game": "崩坏3",
+      "method": "source-alpha",
+      "transparentFraction": 0.7239131868131868
+    },
+    {
+      "id": "s2-bh3-28656d4702",
+      "name": "灯",
+      "game": "崩坏3",
+      "method": "source-alpha",
+      "transparentFraction": 0.7251120879120879
+    },
+    {
+      "id": "s2-bh3-c1339ab20f",
+      "name": "渡鸦",
+      "game": "崩坏3",
+      "method": "source-alpha",
+      "transparentFraction": 0.6153225256690488
+    },
+    {
+      "id": "s2-bh3-a00cf43f50",
+      "name": "爱衣",
+      "game": "崩坏3",
+      "method": "source-alpha",
+      "transparentFraction": 0.5787948057071661
+    },
+    {
+      "id": "s2-bh3-d2083821d5",
+      "name": "时雨绮罗",
+      "game": "崩坏3",
+      "method": "source-alpha",
+      "transparentFraction": 0.6351883895690617
+    },
+    {
+      "id": "s2-bh3-4922dbcd17",
+      "name": "米丝忒琳",
+      "game": "崩坏3",
+      "method": "source-alpha",
+      "transparentFraction": 0.5281311598102253
+    },
+    {
+      "id": "s2-bh3-4e00cc643e",
+      "name": "萝莎莉娅",
+      "game": "崩坏3",
+      "method": "source-alpha",
+      "transparentFraction": 0.6387397762561118
+    },
+    {
+      "id": "s2-bh3-5be2f809bb",
+      "name": "莉莉娅",
+      "game": "崩坏3",
+      "method": "source-alpha",
+      "transparentFraction": 0.6314252395753711
+    },
+    {
+      "id": "c040",
+      "name": "星见雅",
+      "game": "绝区零",
+      "method": "gpt-image",
+      "transparentFraction": 0.7448206408888675
+    },
+    {
+      "id": "s2-zzz-ceafb0cde9",
+      "name": "叶瞬光",
+      "game": "绝区零",
+      "method": "source-alpha",
+      "transparentFraction": 0.6197404966214816
+    },
+    {
+      "id": "c048",
+      "name": "仪玄",
+      "game": "绝区零",
+      "method": "source-alpha",
+      "transparentFraction": 0.7384759583841035
+    },
+    {
+      "id": "c036",
+      "name": "耀嘉音",
+      "game": "绝区零",
+      "method": "source-alpha",
+      "transparentFraction": 0.7617703976310009
+    },
+    {
+      "id": "c037",
+      "name": "伊芙琳",
+      "game": "绝区零",
+      "method": "source-alpha",
+      "transparentFraction": 0.7743894075584532
+    },
+    {
+      "id": "c033",
+      "name": "艾莲",
+      "game": "绝区零",
+      "method": "source-alpha",
+      "transparentFraction": 0.7135598989531574
+    },
+    {
+      "id": "c034",
+      "name": "朱鸢",
+      "game": "绝区零",
+      "method": "source-alpha",
+      "transparentFraction": 0.7786024531187608
+    },
+    {
+      "id": "c035",
+      "name": "简",
+      "game": "绝区零",
+      "method": "source-alpha",
+      "transparentFraction": 0.7643232149675449
+    },
+    {
+      "id": "s2-zzz-47f70c7268",
+      "name": "月城柳",
+      "game": "绝区零",
+      "method": "source-alpha",
+      "transparentFraction": 0.7791437753641887
+    },
+    {
+      "id": "s2-zzz-d24d4d248e",
+      "name": "薇薇安",
+      "game": "绝区零",
+      "method": "gpt-image",
+      "transparentFraction": 0.7125134103123395
+    },
+    {
+      "id": "s2-zzz-b520b48c45",
+      "name": "卢西娅",
+      "game": "绝区零",
+      "method": "source-alpha",
+      "transparentFraction": 0.770249367957302
+    },
+    {
+      "id": "s2-zzz-a436759ba0",
+      "name": "安比",
+      "game": "绝区零",
+      "method": "source-alpha",
+      "transparentFraction": 0.7144031967691468
+    },
+    {
+      "id": "c039",
+      "name": "妮可",
+      "game": "绝区零",
+      "method": "source-alpha",
+      "transparentFraction": 0.7010552252397022
+    },
+    {
+      "id": "c046",
+      "name": "柏妮思",
+      "game": "绝区零",
+      "method": "source-alpha",
+      "transparentFraction": 0.7795945108770741
+    },
+    {
+      "id": "s2-zzz-66fcd43b05",
+      "name": "凯撒",
+      "game": "绝区零",
+      "method": "source-alpha",
+      "transparentFraction": 0.7214979461278829
+    },
+    {
+      "id": "c041",
+      "name": "青衣",
+      "game": "绝区零",
+      "method": "source-alpha",
+      "transparentFraction": 0.7541967555805366
+    },
+    {
+      "id": "c047",
+      "name": "扳机",
+      "game": "绝区零",
+      "method": "source-alpha",
+      "transparentFraction": 0.7439397207561663
+    },
+    {
+      "id": "s2-zzz-e4b2bfd06d",
+      "name": "橘福福",
+      "game": "绝区零",
+      "method": "source-alpha",
+      "transparentFraction": 0.7014558847713185
+    },
+    {
+      "id": "s2-zzz-cf2c6c2759",
+      "name": "爱丽丝",
+      "game": "绝区零",
+      "method": "source-alpha",
+      "transparentFraction": 0.7602284240582113
+    },
+    {
+      "id": "s2-zzz-7532b60e27",
+      "name": "爱芮",
+      "game": "绝区零",
+      "method": "source-alpha",
+      "transparentFraction": 0.573009445501795
+    },
+    {
+      "id": "s2-zzz-c5b24808f7",
+      "name": "南宫羽",
+      "game": "绝区零",
+      "method": "source-alpha",
+      "transparentFraction": 0.6547101534183227
+    },
+    {
+      "id": "s2-zzz-bb6e9a9aa3",
+      "name": "千夏",
+      "game": "绝区零",
+      "method": "source-alpha",
+      "transparentFraction": 0.7460656990068755
+    },
+    {
+      "id": "s2-zzz-087cc23afe",
+      "name": "普罗米娅",
+      "game": "绝区零",
+      "method": "source-alpha",
+      "transparentFraction": 0.7624217686837611
+    },
+    {
+      "id": "s2-zzz-d0e2cc5f2d",
+      "name": "希希芙",
+      "game": "绝区零",
+      "method": "source-alpha",
+      "transparentFraction": 0.6829842802850189
+    },
+    {
+      "id": "s2-zzz-2a8a970409",
+      "name": "蕾米埃尔",
+      "game": "绝区零",
+      "method": "source-alpha",
+      "transparentFraction": 0.5981750953977851
+    },
+    {
+      "id": "c044",
+      "name": "可琳",
+      "game": "绝区零",
+      "method": "source-alpha",
+      "transparentFraction": 0.5726157005897818
+    },
+    {
+      "id": "c042",
+      "name": "露西",
+      "game": "绝区零",
+      "method": "source-alpha",
+      "transparentFraction": 0.5711193296976536
+    },
+    {
+      "id": "c043",
+      "name": "派派",
+      "game": "绝区零",
+      "method": "source-alpha",
+      "transparentFraction": 0.7038315191595734
+    },
+    {
+      "id": "c038",
+      "name": "格莉丝",
+      "game": "绝区零",
+      "method": "source-alpha",
+      "transparentFraction": 0.7079952493279487
+    },
+    {
+      "id": "s2-zzz-c7a4ff6a45",
+      "name": "猫又",
+      "game": "绝区零",
+      "method": "source-alpha",
+      "transparentFraction": 0.6983736495454816
+    },
+    {
+      "id": "c122",
+      "name": "娜娜莉",
+      "game": "异环",
+      "method": "source-alpha",
+      "transparentFraction": 0.7144241746124408
+    },
+    {
+      "id": "c121",
+      "name": "安魂曲",
+      "game": "异环",
+      "method": "source-alpha",
+      "transparentFraction": 0.672188
+    },
+    {
+      "id": "c123",
+      "name": "薄荷",
+      "game": "异环",
+      "method": "source-alpha",
+      "transparentFraction": 0.6696742339276276
+    },
+    {
+      "id": "c124",
+      "name": "早雾",
+      "game": "异环",
+      "method": "source-alpha",
+      "transparentFraction": 0.7722258391203703
+    },
+    {
+      "id": "c128",
+      "name": "九原",
+      "game": "异环",
+      "method": "source-alpha",
+      "transparentFraction": 0.5546661267098633
+    },
+    {
+      "id": "c127",
+      "name": "哈索尔",
+      "game": "异环",
+      "method": "source-alpha",
+      "transparentFraction": 0.6235868389501394
+    },
+    {
+      "id": "c126",
+      "name": "法帝娅",
+      "game": "异环",
+      "method": "source-alpha",
+      "transparentFraction": 0.761411
+    },
+    {
+      "id": "c116",
+      "name": "佩丽卡",
+      "game": "明日方舟：终末地",
+      "method": "gpt-image",
+      "transparentFraction": 0.7209703102265905
+    },
+    {
+      "id": "c113",
+      "name": "陈千语",
+      "game": "明日方舟：终末地",
+      "method": "gpt-image",
+      "transparentFraction": 0.6970856048739803
+    },
+    {
+      "id": "s2-ys-c020ef0b17",
+      "name": "刻晴",
+      "game": "原神",
+      "method": "source-alpha",
+      "transparentFraction": 0.5853249435550082
+    },
+    {
+      "id": "s2-ys-35479920ce",
+      "name": "可莉",
+      "game": "原神",
+      "method": "source-alpha",
+      "transparentFraction": 0.7331761853448275
+    },
+    {
+      "id": "s2-ys-f605099d06",
+      "name": "琴",
+      "game": "原神",
+      "method": "source-alpha",
+      "transparentFraction": 0.6017318349753694
+    },
+    {
+      "id": "c017",
+      "name": "卡芙卡",
+      "game": "崩坏：星穹铁道",
+      "method": "gpt-image",
+      "transparentFraction": 0.6298714925635097
+    },
+    {
+      "id": "c019",
+      "name": "流萤",
+      "game": "崩坏：星穹铁道",
+      "method": "gpt-image",
+      "transparentFraction": 0.7427581023022978
+    },
+    {
+      "id": "s2-ys-1d65392a5b",
+      "name": "莫娜",
+      "game": "原神",
+      "method": "gpt-image",
+      "transparentFraction": 0.7040564219156901
+    },
+    {
+      "id": "c021",
+      "name": "三月七",
+      "game": "崩坏：星穹铁道",
+      "method": "gpt-image",
+      "transparentFraction": 0.7275067471491546
+    },
+    {
+      "id": "c032",
+      "name": "遐蝶",
+      "game": "崩坏：星穹铁道",
+      "method": "gpt-image",
+      "transparentFraction": 0.721247987301878
+    },
+    {
+      "id": "c020",
+      "name": "镜流",
+      "game": "崩坏：星穹铁道",
+      "method": "gpt-image",
+      "transparentFraction": 0.7562460413757316
+    },
+    {
+      "id": "c022",
+      "name": "符玄",
+      "game": "崩坏：星穹铁道",
+      "method": "gpt-image",
+      "transparentFraction": 0.6902403536752567
+    },
+    {
+      "id": "c023",
+      "name": "黑天鹅",
+      "game": "崩坏：星穹铁道",
+      "method": "gpt-image",
+      "transparentFraction": 0.5048376187473301
+    },
+    {
+      "id": "s2-sr-3dd482a291",
+      "name": "姬子",
+      "game": "崩坏：星穹铁道",
+      "method": "gpt-image",
+      "transparentFraction": 0.653192081988355
+    },
+    {
+      "id": "s2-sr-78dbb3e00a",
+      "name": "藿藿",
+      "game": "崩坏：星穹铁道",
+      "method": "gpt-image",
+      "transparentFraction": 0.7048868213348523
+    },
+    {
+      "id": "s2-sr-cd224df2bc",
+      "name": "希儿",
+      "game": "崩坏：星穹铁道",
+      "method": "gpt-image",
+      "transparentFraction": 0.6583595275878906
+    },
+    {
+      "id": "c026",
+      "name": "花火",
+      "game": "崩坏：星穹铁道",
+      "method": "gpt-image",
+      "transparentFraction": 0.6043518794085402
+    },
+    {
+      "id": "c027",
+      "name": "知更鸟",
+      "game": "崩坏：星穹铁道",
+      "method": "gpt-image",
+      "transparentFraction": 0.608079663418369
+    },
+    {
+      "id": "c024",
+      "name": "银狼",
+      "game": "崩坏：星穹铁道",
+      "method": "gpt-image",
+      "transparentFraction": 0.6542419918143917
+    },
+    {
+      "id": "c018",
+      "name": "黄泉",
+      "game": "崩坏：星穹铁道",
+      "method": "gpt-image",
+      "transparentFraction": 0.7145046536887383
+    },
+    {
+      "id": "s2-sr-beb377a1cc",
+      "name": "昔涟",
+      "game": "崩坏：星穹铁道",
+      "method": "gpt-image",
+      "transparentFraction": 0.7536680071935675
+    },
+    {
+      "id": "c031",
+      "name": "大黑塔",
+      "game": "崩坏：星穹铁道",
+      "method": "gpt-image",
+      "transparentFraction": 0.6654236762342602
+    },
+    {
+      "id": "c030",
+      "name": "灵砂",
+      "game": "崩坏：星穹铁道",
+      "method": "gpt-image",
+      "transparentFraction": 0.7760747744379072
+    },
+    {
+      "id": "s2-sr-c0e3e73fff",
+      "name": "忘归人",
+      "game": "崩坏：星穹铁道",
+      "method": "gpt-image",
+      "transparentFraction": 0.6073362687565659
+    },
+    {
+      "id": "s2-sr-8e057e882d",
+      "name": "阿格莱雅",
+      "game": "崩坏：星穹铁道",
+      "method": "gpt-image",
+      "transparentFraction": 0.6853024070979246
+    },
+    {
+      "id": "s2-sr-8b13e4acdb",
+      "name": "缇宝",
+      "game": "崩坏：星穹铁道",
+      "method": "gpt-image",
+      "transparentFraction": 0.7829160402819431
+    },
+    {
+      "id": "s2-sr-7556cffb9d",
+      "name": "赛飞儿",
+      "game": "崩坏：星穹铁道",
+      "method": "gpt-image",
+      "transparentFraction": 0.7672952135304187
+    },
+    {
+      "id": "s2-sr-556465bf5b",
+      "name": "风堇",
+      "game": "崩坏：星穹铁道",
+      "method": "gpt-image",
+      "transparentFraction": 0.7122140569634904
+    },
+    {
+      "id": "s2-sr-9155d9240f",
+      "name": "刻律德菈",
+      "game": "崩坏：星穹铁道",
+      "method": "gpt-image",
+      "transparentFraction": 0.6554890379493754
+    },
+    {
+      "id": "s2-sr-0b8213db68",
+      "name": "海瑟音",
+      "game": "崩坏：星穹铁道",
+      "method": "gpt-image",
+      "transparentFraction": 0.6329385519765777
+    },
+    {
+      "id": "s2-sr-accccf3cc5",
+      "name": "爻光",
+      "game": "崩坏：星穹铁道",
+      "method": "gpt-image",
+      "transparentFraction": 0.6254729551048638
+    },
+    {
+      "id": "s2-sr-fdee458efe",
+      "name": "绯英",
+      "game": "崩坏：星穹铁道",
+      "method": "gpt-image",
+      "transparentFraction": 0.7579076168138161
+    },
+    {
+      "id": "s2-sr-3a3ab47edd",
+      "name": "真珠",
+      "game": "崩坏：星穹铁道",
+      "method": "gpt-image",
+      "transparentFraction": 0.5947442228279664
+    },
+    {
+      "id": "s2-sr-612ab12105",
+      "name": "克拉拉",
+      "game": "崩坏：星穹铁道",
+      "method": "gpt-image",
+      "transparentFraction": 0.6966072205306655
+    },
+    {
+      "id": "s2-sr-4e1b3a52f7",
+      "name": "青雀",
+      "game": "崩坏：星穹铁道",
+      "method": "gpt-image",
+      "transparentFraction": 0.7030229713785878
+    },
+    {
+      "id": "c028",
+      "name": "翡翠",
+      "game": "崩坏：星穹铁道",
+      "method": "gpt-image",
+      "transparentFraction": 0.6984263555243532
+    },
+    {
+      "id": "s2-sr-d846d2ccd1",
+      "name": "雪衣",
+      "game": "崩坏：星穹铁道",
+      "method": "gpt-image",
+      "transparentFraction": 0.6699840455623145
+    },
+    {
+      "id": "c001",
+      "name": "芙宁娜",
+      "game": "原神",
+      "method": "gpt-image",
+      "transparentFraction": 0.7021278354448489
+    },
+    {
+      "id": "c002",
+      "name": "雷电将军",
+      "game": "原神",
+      "method": "gpt-image",
+      "transparentFraction": 0.6117229461669922
+    },
+    {
+      "id": "c003",
+      "name": "胡桃",
+      "game": "原神",
+      "method": "gpt-image",
+      "transparentFraction": 0.5916515795683395
+    },
+    {
+      "id": "s2-sr-8f448f0249",
+      "name": "寒鸦",
+      "game": "崩坏：星穹铁道",
+      "method": "gpt-image",
+      "transparentFraction": 0.6834290822347006
+    },
+    {
+      "id": "c004",
+      "name": "纳西妲",
+      "game": "原神",
+      "method": "gpt-image",
+      "transparentFraction": 0.6380974174151268
+    },
+    {
+      "id": "s2-ys-c48c0a3e98",
+      "name": "八重神子",
+      "game": "原神",
+      "method": "gpt-image",
+      "transparentFraction": 0.6391346192965682
+    },
+    {
+      "id": "c006",
+      "name": "神里绫华",
+      "game": "原神",
+      "method": "gpt-image",
+      "transparentFraction": 0.755530039469401
+    },
+    {
+      "id": "s2-ys-1176f25c6a",
+      "name": "甘雨",
+      "game": "原神",
+      "method": "gpt-image",
+      "transparentFraction": 0.7182230188847148
+    },
+    {
+      "id": "c005",
+      "name": "夜兰",
+      "game": "原神",
+      "method": "gpt-image",
+      "transparentFraction": 0.7140801747639974
+    },
+    {
+      "id": "c008",
+      "name": "申鹤",
+      "game": "原神",
+      "method": "gpt-image",
+      "transparentFraction": 0.6561559041341146
+    },
+    {
+      "id": "c007",
+      "name": "妮露",
+      "game": "原神",
+      "method": "gpt-image",
+      "transparentFraction": 0.6600290989746681
+    },
+    {
+      "id": "c009",
+      "name": "宵宫",
+      "game": "原神",
+      "method": "gpt-image",
+      "transparentFraction": 0.7553652433938851
+    },
+    {
+      "id": "s2-ys-2e9ed422c0",
+      "name": "珊瑚宫心海",
+      "game": "原神",
+      "method": "gpt-image",
+      "transparentFraction": 0.659703080819382
+    },
+    {
+      "id": "c011",
+      "name": "阿蕾奇诺",
+      "game": "原神",
+      "method": "gpt-image",
+      "transparentFraction": 0.7537429365064231
+    },
+    {
+      "id": "s2-ys-9b244fbaec",
+      "name": "娜维娅",
+      "game": "原神",
+      "method": "gpt-image",
+      "transparentFraction": 0.725308848058901
+    },
+    {
+      "id": "s2-ys-32fc6b3c4f",
+      "name": "玛薇卡",
+      "game": "原神",
+      "method": "gpt-image",
+      "transparentFraction": 0.6714856384385361
+    },
+    {
+      "id": "c016",
+      "name": "茜特菈莉",
+      "game": "原神",
+      "method": "gpt-image",
+      "transparentFraction": 0.6768274041178127
+    },
+    {
+      "id": "c010",
+      "name": "克洛琳德",
+      "game": "原神",
+      "method": "gpt-image",
+      "transparentFraction": 0.7486803026912671
+    },
+    {
+      "id": "s2-ys-2f050637af",
+      "name": "丝柯克",
+      "game": "原神",
+      "method": "gpt-image",
+      "transparentFraction": 0.662041792957546
+    },
+    {
+      "id": "s2-ys-ea6f231386",
+      "name": "哥伦比娅",
+      "game": "原神",
+      "method": "gpt-image",
+      "transparentFraction": 0.500769297281901
+    },
+    {
+      "id": "s2-ys-61f5364f33",
+      "name": "菈乌玛",
+      "game": "原神",
+      "method": "gpt-image",
+      "transparentFraction": 0.6871944979437209
+    },
+    {
+      "id": "s2-ys-59d3b3bfce",
+      "name": "奈芙尔",
+      "game": "原神",
+      "method": "gpt-image",
+      "transparentFraction": 0.7467942035029191
+    },
+    {
+      "id": "s2-ys-9e552aac18",
+      "name": "伊涅芙",
+      "game": "原神",
+      "method": "gpt-image",
+      "transparentFraction": 0.7182706879716837
+    },
+    {
+      "id": "s2-ys-dca3ebb397",
+      "name": "尼可",
+      "game": "原神",
+      "method": "gpt-image",
+      "transparentFraction": 0.6167194715108119
+    },
+    {
+      "id": "s2-ys-a1441b3f21",
+      "name": "莉奈娅",
+      "game": "原神",
+      "method": "gpt-image",
+      "transparentFraction": 0.718099051038467
+    },
+    {
+      "id": "s2-ys-c9c729ede4",
+      "name": "兹白",
+      "game": "原神",
+      "method": "gpt-image",
+      "transparentFraction": 0.6848250066112004
+    },
+    {
+      "id": "s2-ys-27d8e41918",
+      "name": "爱可菲",
+      "game": "原神",
+      "method": "gpt-image",
+      "transparentFraction": 0.6567725391077931
+    },
+    {
+      "id": "s2-ys-9a5ef2ac31",
+      "name": "薇斯纳",
+      "game": "原神",
+      "method": "gpt-image",
+      "transparentFraction": 0.7644343166606281
+    },
+    {
+      "id": "s2-ys-dfae50a2d2",
+      "name": "沃雅妮莎",
+      "game": "原神",
+      "method": "gpt-image",
+      "transparentFraction": 0.7027432667466792
+    },
+    {
+      "id": "s2-ys-0e6b9f3dd8",
+      "name": "菲谢尔",
+      "game": "原神",
+      "method": "gpt-image",
+      "transparentFraction": 0.7343155627657194
+    },
+    {
+      "id": "s2-ys-e56b2bf940",
+      "name": "优菈",
+      "game": "原神",
+      "method": "gpt-image",
+      "transparentFraction": 0.8119773864746094
+    },
+    {
+      "id": "c012",
+      "name": "闲云",
+      "game": "原神",
+      "method": "gpt-image",
+      "transparentFraction": 0.6712750201814102
+    },
+    {
+      "id": "s2-ys-a7d5faa04a",
+      "name": "希诺宁",
+      "game": "原神",
+      "method": "gpt-image",
+      "transparentFraction": 0.6768648670640167
+    },
+    {
+      "id": "s2-zmd-ca24ddb221",
+      "name": "莱万汀",
+      "game": "明日方舟：终末地",
+      "method": "gpt-image",
+      "transparentFraction": 0.7645442081352432
+    },
+    {
+      "id": "s2-zmd-b22593fc33",
+      "name": "伊冯",
+      "game": "明日方舟：终末地",
+      "method": "gpt-image",
+      "transparentFraction": 0.5827022289833984
+    },
+    {
+      "id": "s2-zmd-a6c2bb864e",
+      "name": "洁尔佩塔",
+      "game": "明日方舟：终末地",
+      "method": "gpt-image",
+      "transparentFraction": 0.6246728173195059
+    },
+    {
+      "id": "s2-zmd-be2ab7a329",
+      "name": "艾尔黛拉",
+      "game": "明日方舟：终末地",
+      "method": "gpt-image",
+      "transparentFraction": 0.6039073688280437
+    },
+    {
+      "id": "s2-zmd-a072bd87b7",
+      "name": "庄方宜",
+      "game": "明日方舟：终末地",
+      "method": "gpt-image",
+      "transparentFraction": 0.544292880983393
+    },
+    {
+      "id": "s2-zmd-c1775a13fc",
+      "name": "秋栗",
+      "game": "明日方舟：终末地",
+      "method": "gpt-image",
+      "transparentFraction": 0.796511635298081
+    },
+    {
+      "id": "s2-zmd-2aee7067a9",
+      "name": "汤汤",
+      "game": "明日方舟：终末地",
+      "method": "gpt-image",
+      "transparentFraction": 0.7864734354810813
+    },
+    {
+      "id": "s2-zmd-af71c8d9c6",
+      "name": "别礼",
+      "game": "明日方舟：终末地",
+      "method": "gpt-image",
+      "transparentFraction": 0.6587691317608215
+    },
+    {
+      "id": "s2-zmd-0e586f4f3b",
+      "name": "弭弗",
+      "game": "明日方舟：终末地",
+      "method": "gpt-image",
+      "transparentFraction": 0.6576326308509124
+    },
+    {
+      "id": "c120",
+      "name": "余烬",
+      "game": "明日方舟：终末地",
+      "method": "gpt-image",
+      "transparentFraction": 0.650647751755785
+    },
+    {
+      "id": "s2-zmd-39fd78a8b0",
+      "name": "弧光",
+      "game": "明日方舟：终末地",
+      "method": "gpt-image",
+      "transparentFraction": 0.7065369362956937
+    },
+    {
+      "id": "s2-zmd-6bb20b1953",
+      "name": "昼雪",
+      "game": "明日方舟：终末地",
+      "method": "gpt-image",
+      "transparentFraction": 0.6876447355697046
+    },
+    {
+      "id": "c115",
+      "name": "赛希",
+      "game": "明日方舟：终末地",
+      "method": "gpt-image",
+      "transparentFraction": 0.6374394665046934
+    },
+    {
+      "id": "s2-zmd-2cf6f1b724",
+      "name": "萤石",
+      "game": "明日方舟：终末地",
+      "method": "gpt-image",
+      "transparentFraction": 0.7445476328561399
+    },
+    {
+      "id": "c119",
+      "name": "艾维文娜",
+      "game": "明日方舟：终末地",
+      "method": "gpt-image",
+      "transparentFraction": 0.7566738466035087
+    },
+    {
+      "id": "c025",
+      "name": "阮·梅",
+      "game": "崩坏：星穹铁道",
+      "method": "manual-sam-grabcut-alpha",
+      "transparentFraction": 0.900416049382716
+    },
+    {
+      "id": "c029",
+      "name": "飞霄",
+      "game": "崩坏：星穹铁道",
+      "method": "manual-sam-grabcut-alpha",
+      "transparentFraction": 0.9380643367767334
+    },
+    {
+      "id": "s2-sr-cdfb201cce",
+      "name": "布洛妮娅",
+      "game": "崩坏：星穹铁道",
+      "method": "manual-sam-grabcut-alpha",
+      "transparentFraction": 0.9149014949798584
+    },
+    {
+      "id": "s2-sr-500f46cdbb",
+      "name": "托帕",
+      "game": "崩坏：星穹铁道",
+      "method": "manual-sam-grabcut-alpha",
+      "transparentFraction": 0.9302966594696045
+    }
+  ]
+}

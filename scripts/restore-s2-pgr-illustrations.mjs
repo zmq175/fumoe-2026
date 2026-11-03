@@ -1,0 +1,11 @@
+import fs from'node:fs/promises';import sharp from'sharp';
+const base='.local/s2-artwork/',m=JSON.parse(await fs.readFile(base+'manifest.json')),p='seasons/s2/artwork-compositions.json',q='seasons/s2/artwork-portrait-sources.json',s=JSON.parse(await fs.readFile(p)),a=JSON.parse(await fs.readFile(q)),anchors=JSON.parse(await fs.readFile(base+'review-anchors.json')),changes=[];
+for(const spec of s.entries.filter(e=>e.game==='战双帕弥什'&&e.file?.startsWith('full-source-candidates/')&&!e.candidateSource?.userSelected)){
+ const i=m.entries.findIndex(e=>e.id===spec.id),e=m.entries[i];let file=e.original,source=e.selected,eyes,faceWidth,headTop;
+ if(e.id==='c105'){file='clean-candidates/c105-shiyan-original.png';source=e.candidates.find(c=>c.title==='文件:角色 露西亚 誓焰 立绘.png');eyes=[532,260];faceWidth=195;headTop=0;}
+ else{const row=anchors.find(x=>x[0]===i);if(!row)throw Error('Missing original anchor '+e.name);const[,x,y,fw]=row,meta=await sharp(base+file).metadata(),scale=Math.min(280/meta.width,310/meta.height),ox=10+(280-meta.width*scale)/2,oy=(310-meta.height*scale)/2;eyes=[Math.round((x-ox)/scale),Math.round((y-oy)/scale)];faceWidth=Math.round(fw/scale);headTop=Math.max(0,eyes[1]-faceWidth*1.65);}
+ changes.push({id:e.id,name:e.name,rejected:spec.candidateSource,replacement:source,file,reason:'用户指出模型展示图不等于二维立绘'});
+ Object.assign(spec,{file,eyes,faceWidth,headTop,headTopMethod:'original-illustration-face-anchor',method:'source-alpha',galleryKind:'partial',sourceExtentAccepted:true,sourceExtentReason:'优先二维原画，保留原画范围；用户已接受截断来源',candidateSource:{...source,localOriginal:file},cleanupBatch:'pgr-illustration-correction',matchEyeY:285,avatarFaceWidth:155,avatarEyeY:260,review:'撤换自动补选的模型展示图；使用角色二维立绘，保留原画范围；服装最新性未核验'});
+ const portrait=a.entries.find(x=>x.id===e.id);Object.assign(portrait,{file,eyes,faceWidth,avatarFaceWidth:155,avatarEyeY:260,method:'source-alpha',sourceUrl:source.url,sourcePage:source.sourcePage,silhouetteReviewed:true,review:'与二维角色立绘同源的小头像；替换旧模型图头像'});
+}
+await fs.writeFile(p,JSON.stringify(s,null,2)+'\n');await fs.writeFile(q,JSON.stringify(a,null,2)+'\n');await fs.writeFile('seasons/s2/pgr-illustration-correction.json',JSON.stringify({changes,userSelectedPreserved:['露娜','丽芙','曲'],historicalAssetsModified:false},null,2));console.log('Restored',changes.length);

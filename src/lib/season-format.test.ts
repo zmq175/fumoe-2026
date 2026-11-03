@@ -10,8 +10,9 @@ describe('赛季规则隔离和可配置规模',()=>{
   it('旧配置始终解析为原规则，未知和缺失的新版本配置拒绝运行',()=>{
     const f=readFormat(null,'1');f.participants=256
     expect(readFormat(null,'1').participants).toBe(128)
-    expect(()=>readFormat(null,'3')).toThrow('版本')
+    expect(()=>readFormat(null,'4')).toThrow('版本')
     expect(()=>readFormat(null,'2')).toThrow('缺失')
+    expect(()=>readFormat(null,'3')).toThrow('缺失')
   })
   it('256 人、16 组、五轮瑞士轮和 32 强完整运行，排期正好 30 天',()=>{
     const f=seasonFormatSchema.parse(extended())

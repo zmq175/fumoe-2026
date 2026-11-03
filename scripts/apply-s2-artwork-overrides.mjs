@@ -1,0 +1,11 @@
+import {readFile,writeFile} from 'node:fs/promises'
+import {createHash} from 'node:crypto'
+import sharp from 'sharp'
+import {rejectArtwork} from './s2-artwork-policy.mjs'
+const root=new URL('../',import.meta.url).pathname,out=root+'.local/s2-artwork/'
+const manifest=JSON.parse(await readFile(out+'manifest.json','utf8'))
+const overrides=JSON.parse(await readFile(root+'seasons/s2/artwork-overrides.json','utf8'))
+
+for(const e of manifest.entries){e.candidates=e.candidates.filter(c=>!rejectArtwork(c.title));if(e.game==='鸣潮'&&e.name==='心'&&/鉴心/.test(e.selected?.title??'')){delete e.image;delete e.original;delete e.selected;delete e.sha256;delete e.dimensions;e.candidates=[];e.status='pending';e.issues=['需要独立角色「心」的可靠资料；不能使用「鉴心」代替']}}
+for(const override of overrides){const e=manifest.entries.find(e=>e.game===override.game&&e.name===override.name);if(!e)throw Error('Unknown identity');const selected=override.asset;if(rejectArtwork(selected.title))throw Error('Rejected artwork override: '+selected.title);const key=e.id+'-'+createHash('sha256').update(selected.url).digest('hex').slice(0,10);let buffer;try{buffer=await readFile(out+'images/'+key+'-original')}catch{const r=await fetch(selected.url,{signal:AbortSignal.timeout(30000)});if(!r.ok)throw Error('HTTP '+r.status);buffer=Buffer.from(await r.arrayBuffer());await writeFile(out+'images/'+key+'-original',buffer)}const metadata=await sharp(buffer).metadata();await sharp(buffer).resize({width:900,height:1200,fit:'inside',withoutEnlargement:true}).webp({quality:90}).toFile(out+'images/'+e.id+'.webp');Object.assign(e,{image:'images/'+e.id+'.webp',original:'images/'+key+'-original',selected,candidates:[selected,...e.candidates.filter(c=>c.url!==selected.url)],sourceType:override.sourceType??'community-wiki',dimensions:{width:metadata.width,height:metadata.height},sha256:createHash('sha256').update(buffer).digest('hex'),status:'candidate',latestVerified:false,issues:[override.note??'身份来源已匹配，最新服装与构图待核验']});console.log(e.game,e.name,selected.title)}
+await writeFile(out+'manifest.json',JSON.stringify(manifest,null,2));await writeFile(root+'seasons/s2/artwork-inventory.json',JSON.stringify(manifest,null,2));console.log('images',manifest.entries.filter(e=>e.image).length)

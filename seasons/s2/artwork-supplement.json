@@ -1,0 +1,236 @@
+{
+  "batch": "missing-21-20261104",
+  "entries": [
+    {
+      "id": "s2-wutheringwaves-082c4ae742",
+      "name": "心",
+      "game": "鸣潮",
+      "sourcePage": "https://mc.kurogames.com/",
+      "url": "https://mc.kurogames.com/static4.0/assets/xin-e43e31a9.webp",
+      "localSource": "research/xin-2.img",
+      "skin": null,
+      "sourceName": "心",
+      "latestVerified": false
+    },
+    {
+      "id": "s2-wutheringwaves-be984a3219",
+      "name": "锁暝",
+      "game": "鸣潮",
+      "sourcePage": "https://mc.kurogames.com/",
+      "url": "https://mc.kurogames.com/static4.0/assets/suoming-d109487f.webp",
+      "localSource": "research/suoming-2.img",
+      "skin": null,
+      "sourceName": "锁暝",
+      "latestVerified": false
+    },
+    {
+      "id": "s2-wutheringwaves-9cea03f679",
+      "name": "夏空",
+      "game": "鸣潮",
+      "sourcePage": "https://mc.kurogames.com/",
+      "url": "https://mc.kurogames.com/static4.0/assets/xiakong-a4fc0d07.webp",
+      "localSource": "research/xiakong-2.img",
+      "skin": null,
+      "sourceName": "夏空",
+      "latestVerified": false
+    },
+    {
+      "id": "s2-zspms-186780ae70",
+      "name": "特洛伊",
+      "game": "战双帕弥什",
+      "sourcePage": "https://wiki.biligame.com/zspms/世界观/特洛伊",
+      "url": "https://patchwiki.biligame.com/images/zspms/6/6d/1znyoroxpr9v9rw8avn91s5ru3s04nn.png",
+      "localSource": "research/特洛伊.img",
+      "skin": null,
+      "sourceName": "特洛伊",
+      "latestVerified": false
+    },
+    {
+      "id": "s2-zspms-419901e9ef",
+      "name": "艾玛·科波菲尔",
+      "game": "战双帕弥什",
+      "sourcePage": "https://bangumi.tv/character/166603",
+      "url": "https://lain.bgm.tv/pic/crt/l/84/90/166603_crt_iI8P2.jpg",
+      "localSource": "research/艾玛·科波菲尔.img",
+      "skin": null,
+      "sourceName": "艾玛·科波菲尔",
+      "latestVerified": false
+    },
+    {
+      "id": "s2-zspms-bf363b9dce",
+      "name": "雾岛千子",
+      "game": "战双帕弥什",
+      "sourcePage": "https://bangumi.tv/character/150472",
+      "url": "https://lain.bgm.tv/pic/crt/l/83/8f/150472_crt_4ksrD.jpg",
+      "localSource": "research/千子.img",
+      "skin": null,
+      "sourceName": "千子",
+      "latestVerified": false
+    },
+    {
+      "id": "s2-zspms-a8179be2c0",
+      "name": "帕露玛",
+      "game": "战双帕弥什",
+      "sourcePage": "https://bangumi.tv/character/150475",
+      "url": "https://lain.bgm.tv/pic/crt/l/56/f2/150475_crt_D9E56.jpg",
+      "localSource": "research/帕露玛.img",
+      "skin": null,
+      "sourceName": "帕露玛",
+      "latestVerified": false
+    },
+    {
+      "id": "s2-zspms-3bb87660c1",
+      "name": "卡俄斯",
+      "game": "战双帕弥什",
+      "sourcePage": "https://bangumi.tv/character/163794",
+      "url": "https://lain.bgm.tv/pic/crt/l/a0/77/163794_crt_9pi54.jpg?r=1751003055",
+      "localSource": "research/卡俄斯.img",
+      "skin": null,
+      "sourceName": "卡俄斯",
+      "latestVerified": false
+    },
+    {
+      "id": "s2-zzz-1bf39d30ae",
+      "name": "浮波柚叶",
+      "game": "绝区零",
+      "sourcePage": "https://wiki.biligame.com/zzz/柚叶",
+      "url": "https://patchwiki.biligame.com/images/zzz/a/a6/55mbt9v0atbyklz4xp3v4znxl5k9bug.png",
+      "localSource": "research/柚叶.img",
+      "skin": null,
+      "sourceName": "柚叶",
+      "latestVerified": false
+    },
+    {
+      "id": "s2-zzz-d760742253",
+      "name": "菲欧妮",
+      "game": "绝区零",
+      "sourcePage": "https://zenless.hoyoverse.com/m/zh-cn/news/166924",
+      "url": "https://fastcdn.hoyoverse.com/content-v2/nap/166924/a734fe32ccf5b1bf8ce40f05d0d92976_809424640471885167.jpg",
+      "localSource": "research/菲欧妮.img",
+      "skin": "空想症候",
+      "sourceName": "菲欧妮",
+      "latestVerified": false
+    },
+    {
+      "id": "s2-yh-f143b396fa",
+      "name": "达芙蒂尔",
+      "game": "异环",
+      "sourcePage": "https://mygamewiki.com/assets/data/characters.js",
+      "url": "https://mygamewiki.com/assets/img/skins/dafudier/big-01.webp",
+      "localSource": "research/yh-达芙蒂尔.img",
+      "skin": "于镜自视",
+      "sourceName": "达芙蒂尔",
+      "latestVerified": false
+    },
+    {
+      "id": "s2-yh-6cd5d59788",
+      "name": "小吱",
+      "game": "异环",
+      "sourcePage": "https://mygamewiki.com/assets/data/characters.js",
+      "url": "https://mygamewiki.com/assets/img/skins/xiaozhi/big-01.webp",
+      "localSource": "research/yh-小吱.img",
+      "skin": "工作日泡沫",
+      "sourceName": "小吱",
+      "latestVerified": false
+    },
+    {
+      "id": "s2-yh-f90dc6b5b4",
+      "name": "残虹",
+      "game": "异环",
+      "sourcePage": "https://mygamewiki.com/assets/data/characters.js",
+      "url": "https://mygamewiki.com/assets/img/skins/canhong/big-01.webp",
+      "localSource": "research/yh-残虹.img",
+      "skin": "刹那",
+      "sourceName": "残虹",
+      "latestVerified": false
+    },
+    {
+      "id": "s2-yh-0b11c038a4",
+      "name": "真红",
+      "game": "异环",
+      "sourcePage": "https://mygamewiki.com/assets/data/characters.js",
+      "url": "https://mygamewiki.com/assets/img/skins/zhenhong/big-01.webp",
+      "localSource": "research/yh-真红.img",
+      "skin": "仲夏之赤龙",
+      "sourceName": "真红",
+      "latestVerified": false
+    },
+    {
+      "id": "s2-yh-824285ccb0",
+      "name": "黑羽",
+      "game": "异环",
+      "sourcePage": "https://mygamewiki.com/assets/data/characters.js",
+      "url": "https://mygamewiki.com/assets/img/skins/heiyu/big-01.webp",
+      "localSource": "research/yh-黑羽.img",
+      "skin": "黑之「魔女」",
+      "sourceName": "黑羽",
+      "latestVerified": false
+    },
+    {
+      "id": "s2-yh-ea050fb3e3",
+      "name": "明音凛",
+      "game": "异环",
+      "sourcePage": "https://mygamewiki.com/assets/data/characters.js",
+      "url": "https://mygamewiki.com/assets/img/skins/mingyinlin/big-01.webp",
+      "localSource": "research/yh-明音凛.img",
+      "skin": "律动节拍",
+      "sourceName": "明音凛",
+      "latestVerified": false
+    },
+    {
+      "id": "s2-yh-7c733ad2ea",
+      "name": "海月",
+      "game": "异环",
+      "sourcePage": "https://mygamewiki.com/assets/data/characters.js",
+      "url": "https://mygamewiki.com/assets/img/skins/haiyue/big-01.webp",
+      "localSource": "research/yh-海月.img",
+      "skin": "碧海回唱",
+      "sourceName": "海月",
+      "latestVerified": false
+    },
+    {
+      "id": "s2-yh-99acbab3a0",
+      "name": "伊洛伊",
+      "game": "异环",
+      "sourcePage": "https://mygamewiki.com/assets/data/characters.js",
+      "url": "https://mygamewiki.com/assets/img/skins/yiluoyi/big-01.webp",
+      "localSource": "research/yh-伊洛伊.img",
+      "skin": "小小羊群",
+      "sourceName": "伊洛伊",
+      "latestVerified": false
+    },
+    {
+      "id": "s2-yh-cd9955613b",
+      "name": "哈尼娅",
+      "game": "异环",
+      "sourcePage": "https://mygamewiki.com/assets/data/characters.js",
+      "url": "https://mygamewiki.com/assets/img/skins/haniya/big-01.webp",
+      "localSource": "research/yh-哈尼娅.img",
+      "skin": "特工预备役",
+      "sourceName": "哈尼娅",
+      "latestVerified": false
+    },
+    {
+      "id": "s2-zmd-bfb0bc3dc7",
+      "name": "洛西",
+      "game": "明日方舟：终末地",
+      "sourcePage": "https://end.canmoe.com/zh-CN/wiki/characters/chr_0028_wulfa",
+      "url": "https://end.canmoe.com/images/characters/full/chr_0028_wulfa.avif?v=61d77d1d",
+      "localSource": "research/洛西.img",
+      "skin": null,
+      "sourceName": "洛茜",
+      "latestVerified": false
+    },
+    {
+      "id": "s2-zmd-866581d1b9",
+      "name": "祀",
+      "game": "明日方舟：终末地",
+      "sourcePage": "https://end.canmoe.com/zh-CN/wiki/characters/chr_0036_jsspsi",
+      "url": "https://end.canmoe.com/images/characters/full/chr_0036_jsspsi.avif?v=5681c5c4",
+      "localSource": "research/祀.img",
+      "skin": null,
+      "sourceName": "祀",
+      "latestVerified": false
+    }
+  ]
+}

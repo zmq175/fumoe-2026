@@ -1,7 +1,8 @@
+import { refreshDailyMatches } from './match-windows'
 import { closeRoundAndAdvance, ensureRoundCanStart } from './progression'
 import { id, iso } from './security'
 import type { Env } from './types'
-import { roundOrderSql } from './season-config'
+import { loadSeasonFormat, roundOrderSql } from './season-config'
 import { snapshotSeasonStandings } from './season-results'
 
 type Round = { id:string; seasonId:string; stage:'swiss'|'knockout'; roundNumber:number; status:string; startsAt?:string; endsAt?:string }
@@ -52,7 +53,10 @@ async function rebaseRemainingSchedule(db:D1Database,round:Round,now:Date) {
 
 export async function startRound(env:LifecycleEnv, round:Round, actorId?:string, reason?:string, now=new Date()) {
   await ensureRoundCanStart(env.DB,round)
-  const recover=Boolean(actorId)||shouldRebaseRound(round,now)
+  const format=await loadSeasonFormat(env.DB,round.seasonId)
+  if(format.version===3&&(!round.startsAt||round.startsAt>now.toISOString()))throw new Error('尚未到设定的开赛时间')
+  if(format.version===3&&shouldRebaseRound(round,now))throw new Error('排期已过期，请核对赛程后恢复，不能自动移动 S2 时间')
+  const recover=format.version!==3&&(Boolean(actorId)||shouldRebaseRound(round,now))
   if(recover)await rebaseRemainingSchedule(env.DB,round,now)
   const timestamp=now.toISOString()
   await env.DB.batch([
@@ -60,6 +64,7 @@ export async function startRound(env:LifecycleEnv, round:Round, actorId?:string,
     env.DB.prepare(`UPDATE matches SET status='live' WHERE round_id=? AND status='scheduled'`).bind(round.id),
     env.DB.prepare(`UPDATE seasons SET status='live',current_round_id=?,updated_at=?,updated_by=? WHERE id=?`).bind(round.id,timestamp,actorId??null,round.seasonId)
   ])
+  await refreshDailyMatches(env.DB,round.id,timestamp)
   await audit(env.DB,actorId?'round_started':recover?'round_recovered_automatically':'round_started_automatically',round,{status:'live',scheduleRebased:recover},actorId,reason)
 }
 
@@ -91,6 +96,7 @@ export async function runScheduledLifecycle(env:LifecycleEnv, now=new Date()) {
     const timestamp=now.toISOString()
     const live=(await env.DB.prepare(`SELECT id,season_id AS seasonId,stage,round_number AS roundNumber,status,starts_at AS startsAt,ends_at AS endsAt FROM tournament_rounds WHERE season_id=? AND status='live' ORDER BY ${roundOrder}`).bind(season.id).all<Round>()).results
     if(live.length>1)throw new Error('检测到多个进行中轮次，已停止自动推进')
+    if(live[0])await refreshDailyMatches(env.DB,live[0].id,timestamp)
     let closed=0; let nextRoundId:string|null=null
     if(live[0]&&live[0].endsAt&&live[0].endsAt<=timestamp) {
       try { const advancement=await closeRound(env,live[0]);closed=1;nextRoundId=advancement.nextRoundId }

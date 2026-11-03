@@ -3,6 +3,7 @@ import { readdirSync, readFileSync } from 'node:fs'
 import { afterEach, describe, expect, it } from 'vitest'
 import worker from './index'
 import { createSession } from './security'
+import { s2Format } from '../lib/s2-format'
 import { legacyFormat, type SeasonFormat } from '../lib/season-format'
 import { runScheduledLifecycle } from './lifecycle'
 import { calculateSeasonStandingsV1 } from './season-results'
@@ -43,6 +44,53 @@ const reason='隔离数据库配置验证'
 const format256=():SeasonFormat=>({...legacyFormat(),participants:256,groupCount:16,swissRounds:5,rounds:Array.from({length:10},()=>({durationHours:48,breakHours:24})),factions:[{name:'新阵营',games:['新游戏'],accent:'#123456',logoPath:null}]})
 
 describe('真实 SQLite 迁移、路由与赛季推进',()=>{
+  it('S2 分日窗口跑满 30 天，开赛冻结素材，旧赛季所有快照不变',async()=>{
+    const {sql,env,before}=database(),request=await client(env),format=s2Format()
+    const created=await request('/api/admin/seasons','POST',{name:'府萌 S2',slug:'s2',startsAt:'2030-01-01T16:00:00.000Z',format,reason})
+    expect(created.status,JSON.stringify(created.body)).toBe(201)
+    const seasonId=created.body.seasonId
+    const entries=Array.from({length:256},(_,i)=>({characterId:`s2-${i}`,name:`角色${i}`,game:'原神',groupCode:String.fromCharCode(65+Math.floor(i/16)),seed:i+1}))
+    expect((await request(`/api/admin/seasons/${seasonId}/roster`,'PUT',{entries,reason})).status).toBe(200)
+    expect((await request('/api/public/characters?season=s2')).body.characters).toHaveLength(0)
+    expect((await request('/api/public/characters?season=old')).body.characters[0]).not.toHaveProperty('skinName')
+    expect((await request(`/api/admin/seasons/${seasonId}/action`,'POST',{action:'publish',reason})).status).toBe(409)
+    // Fixture-only art; no real source is claimed verified by the production importer.
+    sql.prepare("INSERT INTO season_character_profiles(season_id,character_id,verified) SELECT season_id,character_id,1 FROM season_entries WHERE season_id=?").run(seasonId)
+    sql.prepare("UPDATE season_entries SET artwork_gallery_key_snapshot='fixture/gallery',artwork_match_key_snapshot='fixture/match',artwork_avatar_key_snapshot='fixture/avatar' WHERE season_id=?").run(seasonId)
+    expect((await request(`/api/admin/seasons/${seasonId}/action`,'POST',{action:'publish',reason})).status).toBe(200)
+    expect(sql.prepare('SELECT COUNT(*) AS n FROM match_windows').get()?.n).toBe(128)
+    sql.prepare("UPDATE season_character_profiles SET skin_name='本季选定形态',source_url='https://example.com/source',mobile_key='seasons/s2/preview/mobile.webp',detail_key='seasons/s2/preview/detail.webp' WHERE season_id=? AND character_id='s2-0'").run(seasonId)
+    const publicRoster=(await request('/api/public/characters?season=s2')).body.characters as Array<{id:string;skinName?:string;mobileArtworkKey?:string}>
+    expect(publicRoster.find(e=>e.id==='s2-0')).toMatchObject({skinName:'本季选定形态',mobileArtworkKey:'seasons/s2/preview/mobile.webp'})
+    expect((await request('/api/public/characters?season=old')).body.characters[0]).not.toHaveProperty('skinName')
+    sql.prepare("UPDATE seasons SET schedule_mode='scheduled' WHERE id=?").run(seasonId)
+    expect((await runScheduledLifecycle(env,new Date('2030-01-01T15:59:59.999Z'))).started).toBe(0)
+    const rounds=sql.prepare('SELECT id,starts_at AS startsAt,ends_at AS endsAt FROM tournament_rounds WHERE season_id=? ORDER BY starts_at').all(seasonId) as Array<{id:string;startsAt:string;endsAt:string}>
+    expect((await runScheduledLifecycle(env,new Date(rounds[0].startsAt))).started).toBe(1)
+    expect(()=>sql.prepare("UPDATE season_entries SET artwork_gallery_key_snapshot='changed' WHERE season_id=?").run(seasonId)).toThrow('frozen')
+    expect(()=>sql.prepare("UPDATE season_character_profiles SET skin_name='changed',mobile_key='changed' WHERE season_id=?").run(seasonId)).toThrow('frozen')
+    for(const [i,round] of rounds.entries()){
+      const plan=format.rounds[i]
+      for(const [day,count] of plan.batches!.entries()){
+        await runScheduledLifecycle(env,new Date(Date.parse(round.startsAt)+day*86400000))
+        expect(sql.prepare("SELECT COUNT(*) AS n FROM matches WHERE round_id=? AND status='live'").get(round.id)?.n).toBe(count)
+        sql.prepare("UPDATE matches SET left_votes=20,right_votes=10 WHERE round_id=? AND status='live'").run(round.id)
+      }
+      if(i===rounds.length-1){
+        await runScheduledLifecycle(env,new Date(Date.parse(round.startsAt)+86400000))
+        expect(sql.prepare("SELECT status FROM matches WHERE round_id=?").get(round.id)?.status).toBe('live')
+      }
+      const result=await runScheduledLifecycle(env,new Date(round.endsAt))
+      expect(result.closed).toBe(1)
+    }
+    expect(sql.prepare('SELECT status FROM seasons WHERE id=?').get(seasonId)?.status).toBe('completed')
+    expect(sql.prepare('SELECT COUNT(*) AS n FROM match_windows').get()?.n).toBe(447)
+    expect(sql.prepare("SELECT * FROM matches WHERE round_id='old-final'").all()).toEqual(before.matches)
+    expect(sql.prepare("SELECT * FROM season_entries WHERE season_id='old' ORDER BY id").all()).toEqual(before.entries)
+    expect(sql.prepare("SELECT * FROM tournament_rounds WHERE season_id='old' ORDER BY id").all()).toEqual(before.rounds)
+    expect(sql.prepare('PRAGMA foreign_key_check').all()).toEqual([])
+  })
+
   it('迁移逐项保留旧名单、比分、冠军和轮次，移除 A–H 限制',async()=>{
     const {sql,db,before}=database()
     expect(sql.prepare('SELECT * FROM season_entries ORDER BY id').all()).toEqual(before.entries)

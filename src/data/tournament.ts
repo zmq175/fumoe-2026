@@ -10,6 +10,11 @@ export type Character = {
   galleryArtworkKey?: string | null
   matchArtworkKey?: string | null
   avatarArtworkKey?: string | null
+  skinName?: string
+  sourceUrl?: string
+  sourceNote?: string
+  mobileArtworkKey?: string | null
+  detailArtworkKey?: string | null
   summary: string
   color: string
 }

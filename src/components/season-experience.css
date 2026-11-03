@@ -1,0 +1,190 @@
+/* S2 continues the existing black/cyan identity; original season art stays unchanged. */
+.site-header .brand em { max-width:112px; line-height:1.35; letter-spacing:0; overflow-wrap:anywhere; }
+.defending-mark { display:inline-flex; align-items:center; gap:4px; width:fit-content; padding:3px 6px; margin:4px 0; color:#735000; background:#fff2be; border:1px solid #c4a34b; font-size:11px; font-weight:700; line-height:1.5; }
+.artwork--season .artwork__copy,.artwork--season .artwork__initial,.artwork--season .artwork__grid,.artwork--season .artwork__shape { display:none; }
+.artwork--season::before { display:none; }
+.artwork--season.artwork--compact { aspect-ratio:16/9; min-height:0; }
+.artwork--season.artwork--compact .artwork__image { object-fit:contain; }
+.character-card--interactive { padding:0; text-align:left; color:inherit; font:inherit; cursor:pointer; }
+.character-card--interactive:hover,.character-card--interactive:focus-visible { border-color:var(--cyan); outline:2px solid var(--cyan); outline-offset:2px; }
+.character-card--interactive>.artwork { padding:0; }
+.character-search,.day-picker { display:flex; align-items:center; flex-wrap:wrap; gap:12px; margin-bottom:20px; font-weight:700; }
+.character-search input,.day-picker select { min-height:44px; padding:10px 12px; border:1px solid #888; background:#fff; color:#111; font:inherit; max-width:100%; }
+.day-summary { margin:24px 0; }
+.day-summary h2 { margin:0 0 8px; }.day-summary p { color:#555; }
+.character-detail { width:min(1080px,calc(100% - 32px)); max-height:90svh; padding:0; background:var(--paper,#f5f5f1); color:#111; border:1px solid #777; overflow:auto; }
+.character-detail::backdrop { background:#000b; }
+.character-detail .dialog-close { position:sticky; top:12px; margin:12px 12px -44px auto; display:flex; z-index:5; background:#fff; border:1px solid #aaa; width:44px; height:44px; align-items:center; justify-content:center; }
+.character-detail__layout { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); }
+.character-detail__art { background:#0b141a; padding:24px; min-height:440px; display:flex; flex-direction:column; justify-content:center; color:#fff; text-align:center; gap:14px; }
+.character-detail__art img { width:100%; max-height:72svh; object-fit:contain; }.character-detail__art span { font-size:12px; }
+.character-detail__layout>section { padding:54px 26px 26px; min-width:0; }.character-detail h2 { font-size:36px; margin:8px 0; }.character-detail p { line-height:1.8; }
+.character-detail__facts { display:grid; grid-template-columns:1fr 1fr; gap:16px; padding:20px 0; border-block:1px solid #ccc; }.character-detail__facts dt { color:#666; font-size:12px; }.character-detail__facts dd { margin:6px 0 0; overflow-wrap:anywhere; }
+.character-detail__note { font-size:12px; color:#666; }.character-detail__matches { list-style:none; padding:0; }.character-detail__matches li { padding:12px 0; border-top:1px solid #ccc; display:grid; gap:8px; }.character-detail__matches small { color:#666; }.character-detail__matches span { margin:0 8px; }
+@media(max-width:720px) { .artwork--season.artwork--compact { aspect-ratio:1; }.site-header .brand em { max-width:70px; }.character-detail__layout { grid-template-columns:1fr; }.character-detail__art { min-height:0; }.character-detail__art img { max-height:50svh; }.character-detail__layout>section { padding:24px 18px; }.day-picker select { width:100%; }.fighter .defending-mark { font-size:9px; }.character-detail__facts { gap:12px; } }
+.archive-switch { padding:24px max(17px,6vw) 0; }
+.match-card:has(.artwork--season) .fighter:disabled { color:inherit; opacity:1; cursor:default; }
+.daily-fixtures { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; }
+.daily-fixture { border:1px solid #d2d2ce; padding:16px; background:#fff; }
+.daily-fixture>small,.daily-fixture span small { color:#666; font-size:12px; }
+.daily-fixture>div { display:grid; grid-template-columns:minmax(0,1fr) auto minmax(0,1fr); align-items:center; gap:12px; margin-top:12px; }
+.daily-fixture span { display:grid; gap:4px; overflow-wrap:anywhere; }.daily-fixture span:last-child { text-align:right; }
+@media(max-width:720px) { .daily-fixtures { grid-template-columns:1fr; } }
+/* Match browsing: stable page identity, separate voting state and time window. */
+.match-center { padding-top:clamp(28px,4vw,56px); }
+.match-center__heading { display:flex; align-items:center; justify-content:space-between; gap:24px; padding-bottom:24px; border-bottom:2px solid var(--ink); }
+.match-center__heading h1 { font-size:clamp(32px,4vw,52px); line-height:1.2; letter-spacing:-.02em; margin:0 0 12px; }
+.match-center__heading p { font-size:14px; color:#555; line-height:1.7; margin:0; }
+.match-center__heading button { flex-shrink:0; min-height:44px; }
+.match-window { display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:16px; padding:24px 0; }
+.match-window__state { color:#555; font-size:13px; }
+.match-window h2 { margin:8px 0 0; font-size:24px; }.match-window h2 span { font-size:18px; font-weight:500; }
+.match-window>p { display:flex; align-items:flex-start; gap:8px; margin:0; font-size:14px; line-height:1.6; font-variant-numeric:tabular-nums; }
+.match-window>p svg { margin-top:3px; flex-shrink:0; }.match-window small { display:block; font-size:12px; color:#555; margin-top:4px; }
+.match-card--preview .fighter:disabled { color:var(--ink); opacity:1; cursor:default; }.match-card--preview .fighter:hover strong { color:inherit; }
+.match-card--preview .match-card__footer { margin-top:16px; padding-top:14px; gap:12px; flex-wrap:wrap; }
+.match-card--preview .fighter__game { color:#595959; }.match-card--preview .future-badge { color:#595959; }
+.schedule-controls { display:flex; align-items:end; gap:12px; flex-wrap:wrap; margin:24px 0; }
+.schedule-controls .day-picker { display:grid; gap:8px; margin:0; flex:1; min-width:200px; }
+.schedule-controls button { min-height:44px; }.schedule-controls button:disabled { cursor:default; color:#666; border-color:#bbb; background:#e8e8e2; }
+.schedule-controls select:focus-visible { outline:3px solid var(--cyan); outline-offset:3px; }
+.season-schedule { padding-top:clamp(28px,4vw,56px); }.season-schedule .page-title { margin-bottom:24px; }.season-schedule .page-title h1 { font-size:clamp(32px,4vw,52px); letter-spacing:-.02em; }
+.season-schedule .tabs { overflow-x:auto; }.season-schedule .tabs button { min-height:44px; flex-shrink:0; }
+.countdown--days { font-variant-numeric:tabular-nums; white-space:normal; }
+.hero__statboard .countdown--days { font-size:clamp(22px,2vw,28px); line-height:1.4; }
+@media(max-width:720px) {
+  .site-header .brand em { max-width:110px; }
+  .match-center__heading { align-items:flex-start; flex-direction:column; gap:16px; padding-bottom:20px; }
+  .match-center__heading button { width:100%; justify-content:center; }
+  .match-window { align-items:flex-start; padding:20px 0; }.match-window h2 { font-size:21px; }
+  .match-card--preview .duel { min-height:0; }
+  .schedule-controls .day-picker { order:-1; flex-basis:100%; min-width:0; }.schedule-controls>button { flex:1; }
+}
+
+/* Keep the full progression on one track, regardless of round count. */
+.roadmap { grid-template-columns:none; grid-auto-flow:column; grid-auto-columns:minmax(128px,1fr); overflow-x:auto; scrollbar-color:#647880 #e4e9e8; }
+.roadmap:focus-visible { outline:2px solid var(--cyan); outline-offset:4px; }
+.roadmap .roadmap__item { min-height:124px; }
+/* A quiet studio surface lets both light and dark character silhouettes read. */
+.match-card .artwork--season { background:#e0e9e9; background-image:linear-gradient(145deg,#eff3f1 0%,#d8e5e7 65%,#c6dade 100%); }
+.daily-fixture .daily-fixture__fighter { display:flex; align-items:center; gap:10px; min-width:0; }
+.daily-fixture .daily-fixture__fighter--right { flex-direction:row-reverse; text-align:right; }
+.daily-fixture .daily-fixture__fighter--left span { text-align:left; }
+.daily-fixture .daily-fixture__fighter .portrait { display:flex; flex:none; width:48px; height:56px; align-self:center; }
+.daily-fixture .daily-fixture__fighter>span:not(.portrait) { min-width:0; }
+@media(max-width:720px) {
+ .roadmap { grid-auto-columns:144px; }
+ .daily-fixture { padding:12px; }
+ .daily-fixture>div { gap:8px; }
+ .daily-fixture .daily-fixture__fighter { gap:6px; }
+ .daily-fixture .daily-fixture__fighter .portrait { width:36px; height:44px; }
+ .daily-fixture__fighter b { font-size:14px; }
+}
+
+/* Independent game-colour driver cards, inspired by the supplied reference. */
+.match-center .match-card { padding:16px; background:transparent; border-color:#d0d6d4; }
+.match-center .duel { grid-template-columns:minmax(0,1fr) 36px minmax(0,1fr); min-height:0; align-items:center; }
+.match-center .fighter { position:relative; isolation:isolate; aspect-ratio:16/9; padding:14px; border-radius:4px; align-items:flex-start; text-align:left; background:linear-gradient(110deg,var(--game-base),var(--game-accent)); color:#fff; }
+[data-game] { --game-base:#253b52; --game-accent:#5886aa; }
+[data-game="鸣潮"] { --game-base:#075c58; --game-accent:#19a896; }
+[data-game="战双帕弥什"] { --game-base:#710e2c; --game-accent:#c52b4c; }
+[data-game="崩坏3"] { --game-base:#254477; --game-accent:#5089bf; }
+[data-game="崩坏：星穹铁道"] { --game-base:#40305f; --game-accent:#8465ae; }
+[data-game="原神"] { --game-base:#18526a; --game-accent:#3b98af; }
+[data-game="绝区零"] { --game-base:#754009; --game-accent:#d88b1c; }
+[data-game="异环"] { --game-base:#613363; --game-accent:#bd6a91; }
+[data-game="明日方舟：终末地"] { --game-base:#4b531d; --game-accent:#8b9c39; }
+.match-center .fighter__art { position:absolute; z-index:-2; inset:0; width:100%; }
+.match-center .fighter .artwork--season { width:100%; height:100%; aspect-ratio:auto; background:none; }
+.match-center .fighter .artwork__image { object-fit:cover; object-position:center bottom; }
+.match-center .fighter::before { content:''; position:absolute; inset:0; z-index:-1; background:linear-gradient(90deg,var(--game-base),transparent 55%); pointer-events:none; }
+.match-center .fighter strong { order:-1; margin:0; max-width:58%; font-size:clamp(17px,1.4vw,24px); line-height:1.3; color:#fff; text-shadow:0 1px 3px #0005; }
+.match-center .fighter__game { margin-top:6px; max-width:80%; white-space:normal; color:#fff; font-size:11px; text-shadow:0 1px 3px #0007; }
+.match-center .fighter>small { margin-top:auto; color:#fff; font-size:18px; }
+.match-center .fighter:disabled { color:#fff; }
+.match-center .fighter:focus-visible { outline:3px solid #007a99; outline-offset:3px; }
+.match-center .fighter:not(:disabled):hover { box-shadow:inset 0 0 0 3px #fff9; }
+.match-center .versus span { border:0; font-size:14px; font-style:italic; color:#53646b; }
+.match-center .match-card__footer { padding-top:14px; }
+@media(max-width:720px) {
+ .match-center .match-card { padding:10px; }
+ .match-center .duel { grid-template-columns:minmax(0,1fr) 26px minmax(0,1fr); }
+ .match-center .fighter { aspect-ratio:1; padding:10px; }
+ .match-center .fighter strong { font-size:16px; max-width:100%; }
+ .match-center .fighter__game { font-size:10px; max-width:100%; }
+ .match-center .fighter__art { inset:0; width:100%; }
+ .match-center .fighter::before { background:linear-gradient(180deg,var(--game-base),transparent 45%); }
+ .match-center .fighter .artwork__image { object-fit:contain; }
+}
+
+/* Names, selection and recorded votes have distinct, stable positions. */
+.match-center .fighter strong { font-weight:800; letter-spacing:.01em; text-wrap:balance; overflow-wrap:anywhere; }
+.match-center .fighter:hover strong,.match-center .fighter--selected strong { color:#fff; }
+.match-center .fighter__game { line-height:1.5; opacity:.9; }
+.match-center .fighter--selected { outline:3px solid #007b98; outline-offset:3px; }
+.match-center .fighter[data-submitted] { outline:2px solid #176743; outline-offset:3px; }
+.match-center .fighter__choice,.match-center .fighter__submitted { position:absolute; z-index:5; top:auto; left:auto; right:8px; bottom:8px; display:flex; align-items:center; gap:4px; padding:5px 7px; border-radius:3px; background:#fff; color:#00566d; font-size:11px; line-height:1.3; font-weight:800; }
+.match-center .fighter__submitted { color:#185537; }
+.match-center .fighter__choice svg,.match-center .fighter__submitted svg { width:13px; height:13px; }
+.match-center .fighter>small { font-size:14px; font-variant-numeric:tabular-nums; text-shadow:0 1px 3px #000; }
+.match-center .fighter--selected:not(:disabled):hover { box-shadow:none; }
+@media(max-width:720px) {
+ .match-center .fighter__choice,.match-center .fighter__submitted { font-size:10px; bottom:6px; right:6px; padding:4px 5px; }
+ .match-center .fighter>small { font-size:12px; }
+}
+.match-center .fighter__logo { position:absolute; z-index:-3; width:58%; height:58%; left:5%; bottom:8%; object-fit:contain; opacity:.18; filter:brightness(0) invert(1); pointer-events:none; }
+@media(max-width:720px) { .match-center .fighter__logo { width:72%; height:48%; left:3%; bottom:12%; } }
+/* Voting status already appears in the card header; keep the narrow VS gap clear. */
+.match-center .versus small { display:none; }
+
+
+/* Shared game surfaces: cards, gallery and character details use one palette. */
+.artwork.artwork--season,.character-detail__art--season { background:linear-gradient(135deg,var(--game-base),var(--game-accent)); }
+.artwork__logo { position:absolute; inset:10% 8% auto; width:84%; height:40%; object-fit:contain; opacity:.16; filter:brightness(0) invert(1); pointer-events:none; z-index:0; }
+.match-center .artwork__logo { display:none; }
+.character-detail__art--season { position:relative; isolation:isolate; }
+.character-detail__art--season>img:not(.artwork__logo),.character-detail__art--season>span { position:relative; z-index:1; }
+.character-detail__art--season>.artwork__logo { max-height:none; }
+.home-match-grid.match-center { padding-top:0; }
+.home-match-grid .match-card { background:#f8f8f4; }
+.app-shell--s2 .page { padding-top:clamp(28px,4vw,56px); }
+.app-shell--s2 .page-title { margin-bottom:28px; padding-bottom:24px; }
+.app-shell--s2 .page-title h1 { font-size:clamp(32px,4vw,52px); line-height:1.2; letter-spacing:-.02em; }
+.app-shell--s2 .page-title p { line-height:1.75; max-width:72ch; }
+.app-shell--s2 .page-title>span { display:none; }
+.gallery-page .character-search input { width:min(360px,100%); font-weight:400; }
+.gallery-page .filters { gap:8px; margin-bottom:12px; }
+.gallery-page .filters button { min-height:44px; border-radius:4px; padding:10px 14px; }
+.gallery-count { margin:0 0 20px; font-size:13px; color:#555; }
+.gallery-page .character-card { align-self:stretch; background:#fff; }
+.gallery-page .character-card h3 { letter-spacing:0; line-height:1.35; margin:6px 0; }
+.gallery-page .character-card p { min-height:0; line-height:1.7; margin-bottom:16px; }
+.app-shell--s2 .gallery-page .character-card { display:flex; flex-direction:column; }
+.app-shell--s2 .gallery-page .character-card>.artwork { flex:none; width:100%; }
+.app-shell--s2 .gallery-page .character-card>div:not(.artwork) { flex:1; display:flex; flex-direction:column; }
+.app-shell--s2 .gallery-page .character-card footer { margin-top:auto; }
+.gallery-page .character-card>div:not(.artwork) { padding:16px; }
+.gallery-page .artwork__image { filter:drop-shadow(0 8px 10px #0002); }
+.app-shell--s2 .rules article:first-child { border-top:0; }
+.app-shell--s2 .notices p { max-width:72ch; line-height:1.85; white-space:pre-line; }
+.app-shell--s2 .season-card h2 { line-height:1.45; overflow-wrap:anywhere; }
+.app-shell :is(button,a,input,select,textarea):focus-visible { outline:3px solid #0086aa; outline-offset:3px; }
+.app-shell .fighter:focus-visible { outline-offset:-3px; }
+.app-shell .menu-button,.app-shell .dialog-close { min-width:44px; min-height:44px; }
+.app-shell .login-dialog { max-height:calc(100svh - 32px); overflow-y:auto; }
+.app-shell--s2 .faction-page__header h1 { line-height:1.15; }
+@media(max-width:720px) {
+ .app-shell--s2 .page-title { margin-bottom:24px; padding-bottom:20px; }
+ .gallery-page .character-search { display:grid; gap:8px; }
+ .gallery-page .character-search input { width:100%; }
+ .gallery-page .filters { flex-wrap:nowrap; overflow-x:auto; padding:4px 2px 8px; }
+ .gallery-page .filters button { flex-shrink:0; }
+ .gallery-page .character-card>div:not(.artwork) { padding:12px; }
+ .gallery-page .character-card h3 { font-size:18px; }
+ .app-shell--s2 .faction-page__header { display:flex; flex-direction:column; align-items:flex-start; gap:10px; padding:28px 17px; }
+ .app-shell--s2 .faction-page__header h1 { margin:0; font-size:32px; order:-1; }
+ .app-shell--s2 .faction-page__header p { display:none; }
+ .app-shell--s2 .faction-page__header span { text-align:left; line-height:1.7; }
+ .app-shell--s2 .faction-contender__copy h2 { font-size:21px; line-height:1.4; }
+ .app-shell--s2 .faction-contender__copy strong { font-size:28px; }
+}

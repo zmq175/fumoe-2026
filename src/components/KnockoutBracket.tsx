@@ -6,10 +6,10 @@ import { bracketGeometry,knockoutColumns,knockoutPlaceholder,matchResult,roundSt
 import './knockout-bracket.css'
 
 type PortraitProps={id:string;name:string;avatarArtworkKey?:string|null;size:'bracket'|'champion'}
-type Props={matches:PublicMatch[];rounds:PublicRound[];format:SeasonFormat;renderPortrait:(props:PortraitProps)=>ReactNode}
+type Props={matches:PublicMatch[];rounds:PublicRound[];format:SeasonFormat;renderPortrait:(props:PortraitProps)=>ReactNode;renderBadge?:(id:string)=>ReactNode}
 
 /** Read-only bracket explorer. Larger screens spread columns; smaller screens scroll without shrinking text. */
-export function KnockoutBracket({matches,rounds,format,renderPortrait}:Props){
+export function KnockoutBracket({matches,rounds,format,renderPortrait,renderBadge}:Props){
   const viewport=useRef<HTMLDivElement>(null)
   const drag=useRef<{pointer:number;x:number;y:number;left:number;top:number;moved:boolean}|null>(null)
   const suppressClick=useRef(false)
@@ -47,7 +47,7 @@ export function KnockoutBracket({matches,rounds,format,renderPortrait}:Props){
     const votes=which==='left'?match.leftVotes:match.rightVotes,game=which==='left'?match.leftGame:match.rightGame
     const winner=matchResult(match).winnerId===id
     return <button type="button" className={`bracket-canvas__side${winner?' bracket-canvas__side--winner':''}${selected===id?' bracket-canvas__side--tracked':''}`} aria-label={`${name}，${votes} 票，查看晋级路径`} aria-pressed={pinned===id} onMouseEnter={()=>setHovered(id)} onMouseLeave={()=>setHovered(null)} onFocus={()=>setFocused(id)} onBlur={()=>setFocused(null)} onClick={()=>setPinned(pinned===id?null:id)}>
-      {renderPortrait({id,name,avatarArtworkKey:which==='left'?match.leftAvatarArtworkKey:match.rightAvatarArtworkKey,size:'bracket'})}<span><strong>{tidyName(name)}</strong><small>{game}</small></span><b className="bracket-canvas__score">{votes}</b>
+      {renderPortrait({id,name,avatarArtworkKey:which==='left'?match.leftAvatarArtworkKey:match.rightAvatarArtworkKey,size:'bracket'})}<span><strong>{tidyName(name)}</strong>{renderBadge?.(id)}<small>{game}</small></span><b className="bracket-canvas__score">{votes}</b>
     </button>
   }
   const edges=geometry.rounds.slice(0,-1).flatMap((round,roundIndex)=>round.cards.map(card=>{

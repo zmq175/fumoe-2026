@@ -1,0 +1,4 @@
+import fs from'node:fs/promises';
+const p='seasons/s2/artwork-portrait-sources.json',c=JSON.parse(await fs.readFile(p)),com=JSON.parse(await fs.readFile('seasons/s2/artwork-compositions.json'));
+for(const s of com.entries.filter(s=>s.cleanupBatch==='full-source-v3'||['锁暝','星见雅','薇薇安','浮波柚叶','黑羽'].includes(s.name))){let a=c.entries.find(a=>a.id===s.id&&a.game===s.game);if(!a){a={id:s.id,game:s.game,name:s.name};c.entries.push(a)}Object.assign(a,{file:s.file,eyes:s.eyes,faceWidth:s.faceWidth,avatarFaceWidth:160,avatarEyeY:230,method:s.method,silhouetteReviewed:true,sourceUrl:s.candidateSource?.url??null,sourcePage:s.candidateSource?.sourcePage??null,review:'从同一套独立人物素材裁切证件照式胸像；面部居中，透明背景；待小尺寸全量复核'});}
+await fs.writeFile(p,JSON.stringify(c,null,2));console.log('portrait sources',c.entries.length);

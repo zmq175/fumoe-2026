@@ -44,7 +44,10 @@
     "portraits:sync": "node scripts/sync-character-portraits.mjs",
     "portraits:model:process": "node scripts/process-model-portraits.mjs --write",
     "portraits:model:validate": "node scripts/process-model-portraits.mjs",
-    "artwork:one-time-import": "npm run artwork:discover && npm run artwork:sync && npm run artwork:community-discover && npm run artwork:community-archive && npm run artwork:process && npm run artwork:upload-plan"
+    "artwork:one-time-import": "npm run artwork:discover && npm run artwork:sync && npm run artwork:community-discover && npm run artwork:community-archive && npm run artwork:process && npm run artwork:upload-plan",
+    "preview:s2:prepare": "npm run build && node scripts/prepare-s2-preview.mjs",
+    "preview:s2": "npm run build && node scripts/serve-s2-app-preview.mjs",
+    "prepare:s2:release": "node scripts/prepare-s2-release.mjs"
   },
   "dependencies": {
     "@cloudflare/workers-types": "^5.20260730.1",

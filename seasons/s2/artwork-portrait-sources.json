@@ -1,0 +1,2210 @@
+{
+  "entries": [
+    {
+      "id": "s2-sr-cdfb201cce",
+      "name": "布洛妮娅",
+      "file": "clean-candidates/s2-sr-cdfb201cce-sr-preview.png",
+      "width": 376,
+      "height": 512,
+      "game": "崩坏：星穹铁道",
+      "eyes": [
+        176,
+        160
+      ],
+      "faceWidth": 91,
+      "sourceUrl": "https://raw.githubusercontent.com/Mar-7th/StarRailRes/master/image/character_preview/1101.png",
+      "sourcePage": "https://github.com/Mar-7th/StarRailRes",
+      "review": "透明胸像原画，仅供小头像；不用于高清完整立绘，最新服装待核验"
+    },
+    {
+      "id": "c030",
+      "name": "灵砂",
+      "file": "ai-candidates/c030-full-v3.png",
+      "width": 376,
+      "height": 512,
+      "game": "崩坏：星穹铁道",
+      "eyes": [
+        546,
+        184
+      ],
+      "faceWidth": 111,
+      "sourceUrl": null,
+      "sourcePage": null,
+      "review": "从同一套独立人物素材裁切证件照式胸像；面部居中，透明背景；待小尺寸全量复核",
+      "avatarFaceWidth": 160,
+      "avatarEyeY": 230,
+      "method": "gpt-image",
+      "silhouetteReviewed": true
+    },
+    {
+      "id": "s2-sr-c0e3e73fff",
+      "name": "忘归人",
+      "file": "ai-candidates/s2-sr-c0e3e73fff-full-v3.png",
+      "width": 376,
+      "height": 512,
+      "game": "崩坏：星穹铁道",
+      "eyes": [
+        529,
+        337
+      ],
+      "faceWidth": 100,
+      "sourceUrl": null,
+      "sourcePage": null,
+      "review": "从同一套独立人物素材裁切证件照式胸像；面部居中，透明背景；待小尺寸全量复核",
+      "avatarFaceWidth": 160,
+      "avatarEyeY": 230,
+      "method": "gpt-image",
+      "silhouetteReviewed": true
+    },
+    {
+      "id": "s2-sr-8e057e882d",
+      "name": "阿格莱雅",
+      "file": "ai-candidates/s2-sr-8e057e882d-full-v3.png",
+      "width": 376,
+      "height": 512,
+      "game": "崩坏：星穹铁道",
+      "eyes": [
+        778,
+        241
+      ],
+      "faceWidth": 93,
+      "sourceUrl": null,
+      "sourcePage": null,
+      "review": "从同一套独立人物素材裁切证件照式胸像；面部居中，透明背景；待小尺寸全量复核",
+      "avatarFaceWidth": 160,
+      "avatarEyeY": 230,
+      "method": "gpt-image",
+      "silhouetteReviewed": true
+    },
+    {
+      "id": "s2-sr-8b13e4acdb",
+      "name": "缇宝",
+      "file": "ai-candidates/s2-sr-8b13e4acdb-full-v3.png",
+      "width": 376,
+      "height": 512,
+      "game": "崩坏：星穹铁道",
+      "eyes": [
+        522,
+        376
+      ],
+      "faceWidth": 151,
+      "sourceUrl": null,
+      "sourcePage": null,
+      "review": "从同一套独立人物素材裁切证件照式胸像；面部居中，透明背景；待小尺寸全量复核",
+      "avatarFaceWidth": 160,
+      "avatarEyeY": 230,
+      "method": "gpt-image",
+      "silhouetteReviewed": true
+    },
+    {
+      "id": "s2-sr-7556cffb9d",
+      "name": "赛飞儿",
+      "file": "ai-candidates/s2-sr-7556cffb9d-full-v3.png",
+      "width": 376,
+      "height": 512,
+      "game": "崩坏：星穹铁道",
+      "eyes": [
+        455,
+        599
+      ],
+      "faceWidth": 115,
+      "sourceUrl": null,
+      "sourcePage": null,
+      "review": "从同一套独立人物素材裁切证件照式胸像；面部居中，透明背景；待小尺寸全量复核",
+      "avatarFaceWidth": 160,
+      "avatarEyeY": 230,
+      "method": "gpt-image",
+      "silhouetteReviewed": true
+    },
+    {
+      "id": "s2-sr-556465bf5b",
+      "name": "风堇",
+      "file": "ai-candidates/s2-sr-556465bf5b-full-v3.png",
+      "width": 376,
+      "height": 512,
+      "game": "崩坏：星穹铁道",
+      "eyes": [
+        486,
+        333
+      ],
+      "faceWidth": 135,
+      "sourceUrl": null,
+      "sourcePage": null,
+      "review": "从同一套独立人物素材裁切证件照式胸像；面部居中，透明背景；待小尺寸全量复核",
+      "avatarFaceWidth": 160,
+      "avatarEyeY": 230,
+      "method": "gpt-image",
+      "silhouetteReviewed": true
+    },
+    {
+      "id": "s2-sr-9155d9240f",
+      "name": "刻律德菈",
+      "file": "ai-candidates/s2-sr-9155d9240f-full-v3.png",
+      "width": 376,
+      "height": 512,
+      "game": "崩坏：星穹铁道",
+      "eyes": [
+        733,
+        313
+      ],
+      "faceWidth": 101,
+      "sourceUrl": null,
+      "sourcePage": null,
+      "review": "从同一套独立人物素材裁切证件照式胸像；面部居中，透明背景；待小尺寸全量复核",
+      "avatarFaceWidth": 160,
+      "avatarEyeY": 230,
+      "method": "gpt-image",
+      "silhouetteReviewed": true
+    },
+    {
+      "id": "s2-sr-0b8213db68",
+      "name": "海瑟音",
+      "file": "ai-candidates/s2-sr-0b8213db68-full-v3.png",
+      "width": 376,
+      "height": 512,
+      "game": "崩坏：星穹铁道",
+      "eyes": [
+        291,
+        306
+      ],
+      "faceWidth": 130,
+      "sourceUrl": null,
+      "sourcePage": null,
+      "review": "从同一套独立人物素材裁切证件照式胸像；面部居中，透明背景；待小尺寸全量复核",
+      "avatarFaceWidth": 160,
+      "avatarEyeY": 230,
+      "method": "gpt-image",
+      "silhouetteReviewed": true
+    },
+    {
+      "id": "s2-sr-accccf3cc5",
+      "name": "爻光",
+      "file": "ai-candidates/s2-sr-accccf3cc5-full-v3.png",
+      "width": 376,
+      "height": 512,
+      "game": "崩坏：星穹铁道",
+      "eyes": [
+        717,
+        184
+      ],
+      "faceWidth": 87,
+      "sourceUrl": null,
+      "sourcePage": null,
+      "review": "从同一套独立人物素材裁切证件照式胸像；面部居中，透明背景；待小尺寸全量复核",
+      "avatarFaceWidth": 160,
+      "avatarEyeY": 230,
+      "method": "gpt-image",
+      "silhouetteReviewed": true
+    },
+    {
+      "id": "s2-sr-fdee458efe",
+      "name": "绯英",
+      "file": "ai-candidates/s2-sr-fdee458efe-full-v3.png",
+      "width": 376,
+      "height": 512,
+      "game": "崩坏：星穹铁道",
+      "eyes": [
+        635,
+        365
+      ],
+      "faceWidth": 90,
+      "sourceUrl": null,
+      "sourcePage": null,
+      "review": "从同一套独立人物素材裁切证件照式胸像；面部居中，透明背景；待小尺寸全量复核",
+      "avatarFaceWidth": 160,
+      "avatarEyeY": 230,
+      "method": "gpt-image",
+      "silhouetteReviewed": true
+    },
+    {
+      "id": "s2-sr-612ab12105",
+      "name": "克拉拉",
+      "file": "ai-candidates/s2-sr-612ab12105-full-v3.png",
+      "width": 376,
+      "height": 512,
+      "game": "崩坏：星穹铁道",
+      "eyes": [
+        606,
+        188
+      ],
+      "faceWidth": 109,
+      "sourceUrl": null,
+      "sourcePage": null,
+      "review": "从同一套独立人物素材裁切证件照式胸像；面部居中，透明背景；待小尺寸全量复核",
+      "avatarFaceWidth": 160,
+      "avatarEyeY": 230,
+      "method": "gpt-image",
+      "silhouetteReviewed": true
+    },
+    {
+      "id": "s2-sr-4e1b3a52f7",
+      "name": "青雀",
+      "file": "ai-candidates/s2-sr-4e1b3a52f7-full-v3.png",
+      "width": 376,
+      "height": 512,
+      "game": "崩坏：星穹铁道",
+      "eyes": [
+        572,
+        208
+      ],
+      "faceWidth": 124,
+      "sourceUrl": null,
+      "sourcePage": null,
+      "review": "从同一套独立人物素材裁切证件照式胸像；面部居中，透明背景；待小尺寸全量复核",
+      "avatarFaceWidth": 160,
+      "avatarEyeY": 230,
+      "method": "gpt-image",
+      "silhouetteReviewed": true
+    },
+    {
+      "id": "c028",
+      "name": "翡翠",
+      "file": "ai-candidates/c028-full-v3.png",
+      "width": 376,
+      "height": 512,
+      "game": "崩坏：星穹铁道",
+      "eyes": [
+        543,
+        240
+      ],
+      "faceWidth": 91,
+      "sourceUrl": null,
+      "sourcePage": null,
+      "review": "从同一套独立人物素材裁切证件照式胸像；面部居中，透明背景；待小尺寸全量复核",
+      "avatarFaceWidth": 160,
+      "avatarEyeY": 230,
+      "method": "gpt-image",
+      "silhouetteReviewed": true
+    },
+    {
+      "id": "s2-sr-d846d2ccd1",
+      "name": "雪衣",
+      "file": "ai-candidates/s2-sr-d846d2ccd1-full-v3.png",
+      "width": 376,
+      "height": 512,
+      "game": "崩坏：星穹铁道",
+      "eyes": [
+        557,
+        161
+      ],
+      "faceWidth": 90,
+      "sourceUrl": null,
+      "sourcePage": null,
+      "review": "从同一套独立人物素材裁切证件照式胸像；面部居中，透明背景；待小尺寸全量复核",
+      "avatarFaceWidth": 160,
+      "avatarEyeY": 230,
+      "method": "gpt-image",
+      "silhouetteReviewed": true
+    },
+    {
+      "id": "s2-sr-8f448f0249",
+      "name": "寒鸦",
+      "file": "ai-candidates/s2-sr-8f448f0249-full-v3.png",
+      "width": 376,
+      "height": 512,
+      "game": "崩坏：星穹铁道",
+      "eyes": [
+        783,
+        225
+      ],
+      "faceWidth": 128,
+      "sourceUrl": null,
+      "sourcePage": null,
+      "review": "从同一套独立人物素材裁切证件照式胸像；面部居中，透明背景；待小尺寸全量复核",
+      "avatarFaceWidth": 160,
+      "avatarEyeY": 230,
+      "method": "gpt-image",
+      "silhouetteReviewed": true
+    },
+    {
+      "id": "c059",
+      "game": "鸣潮",
+      "name": "白芷",
+      "file": "ai-candidates/baizhi-bust-v1.png",
+      "eyes": [
+        620,
+        440
+      ],
+      "faceWidth": 290,
+      "avatarEyeY": 230,
+      "method": "gpt-image",
+      "sourceUrl": "https://patchwiki.biligame.com/images/wutheringwaves/5/52/r0wr4fjaqwv1pv5a48nzk9a0hwfueq4.png",
+      "sourcePage": "https://wiki.biligame.com/wutheringwaves/%E6%96%87%E4%BB%B6:%E8%A7%92%E8%89%B2_%E7%99%BD%E8%8A%B7_%E7%AB%8B%E7%BB%98.png",
+      "silhouetteReviewed": true,
+      "review": "胸像专用 AI 背景提取；已检查无龙、伞或方形场景，仅保留人物头肩。原始立绘保留，服装最新性未核验。"
+    },
+    {
+      "id": "s2-wutheringwaves-46fa1b3af1",
+      "game": "鸣潮",
+      "name": "坎特蕾拉",
+      "file": "ai-candidates/cantarella-bust-v1.png",
+      "eyes": [
+        677,
+        464
+      ],
+      "faceWidth": 310,
+      "avatarEyeY": 230,
+      "method": "gpt-image",
+      "sourceUrl": "https://patchwiki.biligame.com/images/wutheringwaves/c/c2/g46w2lg08ro12kn1s9be1i0ezmy5z1v.png",
+      "sourcePage": "https://wiki.biligame.com/wutheringwaves/%E6%96%87%E4%BB%B6:%E8%A7%92%E8%89%B2_%E5%9D%8E%E7%89%B9%E8%95%BE%E6%8B%89_%E7%AB%8B%E7%BB%98.png",
+      "silhouetteReviewed": true,
+      "review": "胸像专用 AI 背景提取；已检查无龙、伞或方形场景，仅保留人物头肩。原始立绘保留，服装最新性未核验。"
+    },
+    {
+      "id": "s2-wutheringwaves-09c5285b31",
+      "game": "鸣潮",
+      "name": "洛可可",
+      "file": "ai-candidates/roccia-bust-v1.png",
+      "eyes": [
+        655,
+        650
+      ],
+      "faceWidth": 290,
+      "avatarFaceWidth": 170,
+      "avatarEyeY": 230,
+      "method": "gpt-image",
+      "silhouetteReviewed": true,
+      "review": "独立透明人物胸像；已清除背景道具，待预览复核"
+    },
+    {
+      "id": "s2-bh3-718a7e04d3",
+      "game": "崩坏3",
+      "name": "李素裳",
+      "file": "ai-candidates/sushang-bust-v1.png",
+      "eyes": [
+        690,
+        443
+      ],
+      "faceWidth": 300,
+      "avatarFaceWidth": 170,
+      "avatarEyeY": 230,
+      "method": "gpt-image",
+      "silhouetteReviewed": true,
+      "review": "独立透明人物胸像；已清除背景道具，待预览复核"
+    },
+    {
+      "id": "c021",
+      "game": "崩坏：星穹铁道",
+      "name": "三月七",
+      "file": "ai-candidates/march-full-v1.png",
+      "eyes": [
+        230,
+        350
+      ],
+      "faceWidth": 145,
+      "method": "gpt-image",
+      "review": "已提取独立人物，清除大场景与特效；完整立绘/对局/头像同服装，待视觉复核",
+      "silhouetteReviewed": true,
+      "avatarFaceWidth": 150,
+      "avatarEyeY": 260,
+      "matchEyeY": 270
+    },
+    {
+      "id": "c032",
+      "game": "崩坏：星穹铁道",
+      "name": "遐蝶",
+      "file": "ai-candidates/castorice-full-v1.png",
+      "eyes": [
+        866,
+        321
+      ],
+      "faceWidth": 90,
+      "method": "gpt-image",
+      "review": "已提取独立人物，清除大场景与特效；完整立绘/对局/头像同服装，待视觉复核",
+      "silhouetteReviewed": true,
+      "avatarFaceWidth": 150,
+      "avatarEyeY": 260,
+      "matchEyeY": 270
+    },
+    {
+      "id": "c020",
+      "game": "崩坏：星穹铁道",
+      "name": "镜流",
+      "file": "ai-candidates/jingliu-full-v1.png",
+      "eyes": [
+        614,
+        230
+      ],
+      "faceWidth": 100,
+      "method": "gpt-image",
+      "review": "已提取独立人物，清除大场景与特效；完整立绘/对局/头像同服装，待视觉复核",
+      "silhouetteReviewed": true,
+      "avatarFaceWidth": 150,
+      "avatarEyeY": 260,
+      "matchEyeY": 270
+    },
+    {
+      "id": "c022",
+      "game": "崩坏：星穹铁道",
+      "name": "符玄",
+      "file": "ai-candidates/fuxuan-full-v1.png",
+      "eyes": [
+        603,
+        270
+      ],
+      "faceWidth": 100,
+      "method": "gpt-image",
+      "review": "已提取独立人物，清除大场景与特效；完整立绘/对局/头像同服装，待视觉复核",
+      "silhouetteReviewed": true,
+      "avatarFaceWidth": 150,
+      "avatarEyeY": 260,
+      "matchEyeY": 270
+    },
+    {
+      "id": "c023",
+      "game": "崩坏：星穹铁道",
+      "name": "黑天鹅",
+      "file": "ai-candidates/blackswan-full-v1.png",
+      "eyes": [
+        401,
+        185
+      ],
+      "faceWidth": 130,
+      "method": "gpt-image",
+      "review": "已提取独立人物，清除大场景与特效；完整立绘/对局/头像同服装，待视觉复核",
+      "silhouetteReviewed": true,
+      "avatarFaceWidth": 150,
+      "avatarEyeY": 260,
+      "matchEyeY": 270
+    },
+    {
+      "id": "s2-sr-3dd482a291",
+      "game": "崩坏：星穹铁道",
+      "name": "姬子",
+      "file": "ai-candidates/himeko-full-v1.png",
+      "eyes": [
+        720,
+        188
+      ],
+      "faceWidth": 100,
+      "method": "gpt-image",
+      "review": "已提取独立人物，清除大场景与特效；完整立绘/对局/头像同服装，待视觉复核",
+      "silhouetteReviewed": true,
+      "avatarFaceWidth": 150,
+      "avatarEyeY": 260,
+      "matchEyeY": 270
+    },
+    {
+      "id": "s2-sr-78dbb3e00a",
+      "name": "藿藿",
+      "game": "崩坏：星穹铁道",
+      "file": "ai-candidates/huohuo-full-v1.png",
+      "eyes": [
+        623,
+        242
+      ],
+      "faceWidth": 152,
+      "method": "gpt-image",
+      "review": "已提取独立人物，清除大场景与特效；各构图同服装，待视觉复核",
+      "silhouetteReviewed": true,
+      "avatarFaceWidth": 150,
+      "avatarEyeY": 260,
+      "matchEyeY": 270
+    },
+    {
+      "id": "s2-sr-cd224df2bc",
+      "game": "崩坏：星穹铁道",
+      "name": "希儿",
+      "file": "ai-candidates/seele-full-v1.png",
+      "eyes": [
+        590,
+        548
+      ],
+      "faceWidth": 94,
+      "method": "gpt-image",
+      "cleanupBatch": "scene-removal-v1",
+      "review": "独立人物透明提取，去除场景和特效；完整立绘/对局/头像同服装，待视觉复核",
+      "avatarFaceWidth": 140,
+      "avatarEyeY": 270,
+      "matchFaceWidth": 140,
+      "matchEyeY": 280
+    },
+    {
+      "id": "c026",
+      "game": "崩坏：星穹铁道",
+      "name": "花火",
+      "file": "ai-candidates/sparkle-full-v1.png",
+      "eyes": [
+        562,
+        250
+      ],
+      "faceWidth": 142,
+      "method": "gpt-image",
+      "cleanupBatch": "scene-removal-v1",
+      "review": "独立人物透明提取，去除场景和特效；完整立绘/对局/头像同服装，待视觉复核",
+      "avatarFaceWidth": 150,
+      "avatarEyeY": 260,
+      "matchEyeY": 270
+    },
+    {
+      "id": "c027",
+      "game": "崩坏：星穹铁道",
+      "name": "知更鸟",
+      "file": "ai-candidates/robin-full-v1.png",
+      "eyes": [
+        672,
+        192
+      ],
+      "faceWidth": 110,
+      "method": "gpt-image",
+      "cleanupBatch": "scene-removal-v1",
+      "review": "独立人物透明提取，去除场景和特效；完整立绘/对局/头像同服装，待视觉复核",
+      "avatarFaceWidth": 150,
+      "avatarEyeY": 260,
+      "matchEyeY": 270,
+      "matchFaceWidth": 150
+    },
+    {
+      "id": "s2-wutheringwaves-be984a3219",
+      "game": "鸣潮",
+      "name": "锁暝",
+      "file": "ai-candidates/suoming-full-audit-v2.png",
+      "eyes": [
+        639,
+        328
+      ],
+      "faceWidth": 155,
+      "avatarFaceWidth": 160,
+      "avatarEyeY": 230,
+      "method": "gpt-image",
+      "silhouetteReviewed": true,
+      "sourceUrl": null,
+      "sourcePage": null,
+      "review": "从同一套独立人物素材裁切证件照式胸像；面部居中，透明背景；待小尺寸全量复核"
+    },
+    {
+      "id": "s2-zzz-1bf39d30ae",
+      "game": "绝区零",
+      "name": "浮波柚叶",
+      "file": "ai-candidates/yuzuha-full-audit-v2.png",
+      "eyes": [
+        560,
+        160
+      ],
+      "faceWidth": 130,
+      "avatarFaceWidth": 160,
+      "avatarEyeY": 230,
+      "method": "gpt-image",
+      "silhouetteReviewed": true,
+      "sourceUrl": null,
+      "sourcePage": null,
+      "review": "从同一套独立人物素材裁切证件照式胸像；面部居中，透明背景；待小尺寸全量复核"
+    },
+    {
+      "id": "s2-yh-824285ccb0",
+      "game": "异环",
+      "name": "黑羽",
+      "file": "ai-candidates/blackfeather-full-audit-v2.png",
+      "eyes": [
+        541,
+        202
+      ],
+      "faceWidth": 115,
+      "avatarFaceWidth": 160,
+      "avatarEyeY": 230,
+      "method": "gpt-image",
+      "silhouetteReviewed": true,
+      "sourceUrl": null,
+      "sourcePage": null,
+      "review": "从同一套独立人物素材裁切证件照式胸像；面部居中，透明背景；待小尺寸全量复核"
+    },
+    {
+      "id": "c105",
+      "game": "战双帕弥什",
+      "name": "露西亚",
+      "file": "clean-candidates/c105-shiyan-original.png",
+      "eyes": [
+        532,
+        260
+      ],
+      "faceWidth": 195,
+      "avatarFaceWidth": 155,
+      "avatarEyeY": 260,
+      "method": "source-alpha",
+      "silhouetteReviewed": true,
+      "sourceUrl": "https://patchwiki.biligame.com/images/zspms/a/a3/a2qrbegu5uuxkbqivzpu67124qkwj1k.png",
+      "sourcePage": "https://wiki.biligame.com/zspms/%E9%9C%B2%E8%A5%BF%E4%BA%9A%C2%B7%E8%AA%93%E7%84%B0",
+      "review": "与二维角色立绘同源的小头像；替换旧模型图头像"
+    },
+    {
+      "id": "s2-zspms-3e32da9648",
+      "game": "战双帕弥什",
+      "name": "α",
+      "file": "images/s2-zspms-3e32da9648-c4b45588c5-original",
+      "eyes": [
+        507,
+        354
+      ],
+      "faceWidth": 171,
+      "avatarFaceWidth": 155,
+      "avatarEyeY": 260,
+      "method": "source-alpha",
+      "silhouetteReviewed": true,
+      "sourceUrl": "https://patchwiki.biligame.com/images/zspms/8/85/9o9vl9p21od2axez20lj3oatpdpsn6l.png",
+      "sourcePage": "https://wiki.biligame.com/zspms/%E9%9C%B2%E8%A5%BF%E4%BA%9A%C2%B7%E6%B7%B1%E7%BA%A2%E4%B9%8B%E6%B8%8A",
+      "review": "与二维角色立绘同源的小头像；替换旧模型图头像"
+    },
+    {
+      "id": "c106",
+      "game": "战双帕弥什",
+      "name": "丽芙",
+      "file": "ai-candidates/c106-user-selected-20261104.png",
+      "eyes": [
+        493,
+        246
+      ],
+      "faceWidth": 110,
+      "avatarFaceWidth": 130,
+      "avatarEyeY": 280,
+      "method": "gpt-image",
+      "silhouetteReviewed": true,
+      "sourceUrl": "user-sources/liv-235c695845b7.png",
+      "sourcePage": "user-sources/liv-235c695845b7.png",
+      "review": "用户指定同服装整图导出的小头像；替换旧皮肤头像"
+    },
+    {
+      "id": "s2-zspms-ba3bf32563",
+      "game": "战双帕弥什",
+      "name": "露娜",
+      "file": "ai-candidates/s2-zspms-ba3bf32563-user-selected-20261104.png",
+      "eyes": [
+        505,
+        287
+      ],
+      "faceWidth": 95,
+      "avatarFaceWidth": 145,
+      "avatarEyeY": 270,
+      "method": "gpt-image",
+      "silhouetteReviewed": true,
+      "sourceUrl": "user-sources/luna-2e3151435926.png",
+      "sourcePage": "user-sources/luna-2e3151435926.png",
+      "review": "用户指定同服装整图导出的小头像；替换旧皮肤头像"
+    },
+    {
+      "id": "c109",
+      "game": "战双帕弥什",
+      "name": "赛琳娜",
+      "file": "images/c109-042ddebd70-original",
+      "eyes": [
+        486,
+        365
+      ],
+      "faceWidth": 164,
+      "avatarFaceWidth": 155,
+      "avatarEyeY": 260,
+      "method": "source-alpha",
+      "silhouetteReviewed": true,
+      "sourceUrl": "https://patchwiki.biligame.com/images/zspms/2/2b/6nnihfs66798hp80q7nhl7jdtntb3px.png",
+      "sourcePage": "https://wiki.biligame.com/zspms/%E6%96%87%E4%BB%B6:%E8%A7%92%E8%89%B2_%E8%B5%9B%E7%90%B3%E5%A8%9C_%E5%B2%9A%E9%9F%B3_%E7%AB%8B%E7%BB%98.png",
+      "review": "与二维角色立绘同源的小头像；替换旧模型图头像"
+    },
+    {
+      "id": "c107",
+      "game": "战双帕弥什",
+      "name": "薇拉",
+      "file": "images/c107-8a9cb59549-original",
+      "eyes": [
+        496,
+        361
+      ],
+      "faceWidth": 157,
+      "avatarFaceWidth": 155,
+      "avatarEyeY": 260,
+      "method": "source-alpha",
+      "silhouetteReviewed": true,
+      "sourceUrl": "https://patchwiki.biligame.com/images/zspms/b/bf/6tg9m3uh57i5mv5h7ldb0jvy3z0mf33.png",
+      "sourcePage": "https://wiki.biligame.com/zspms/%E6%96%87%E4%BB%B6:%E8%A7%92%E8%89%B2_%E8%96%87%E6%8B%89_%E7%91%B0%E4%B8%BD_%E7%AB%8B%E7%BB%98.png",
+      "review": "与二维角色立绘同源的小头像；替换旧模型图头像"
+    },
+    {
+      "id": "s2-zspms-22e5ce8e9d",
+      "game": "战双帕弥什",
+      "name": "比安卡",
+      "file": "images/s2-zspms-22e5ce8e9d-c5a8579964-original",
+      "eyes": [
+        482,
+        379
+      ],
+      "faceWidth": 154,
+      "avatarFaceWidth": 155,
+      "avatarEyeY": 260,
+      "method": "source-alpha",
+      "silhouetteReviewed": true,
+      "sourceUrl": "https://patchwiki.biligame.com/images/zspms/2/2b/1g134ynjb0d6ybh7ksztm09fmt8n764.png",
+      "sourcePage": "https://wiki.biligame.com/zspms/%E6%96%87%E4%BB%B6:%E8%A7%92%E8%89%B2_%E6%AF%94%E5%AE%89%E5%8D%A1_%E9%9B%B6%E5%BA%A6_%E7%AB%8B%E7%BB%98.png",
+      "review": "与二维角色立绘同源的小头像；替换旧模型图头像"
+    },
+    {
+      "id": "c108",
+      "game": "战双帕弥什",
+      "name": "曲",
+      "file": "ai-candidates/c108-user-selected-20261104.png",
+      "eyes": [
+        642,
+        275
+      ],
+      "faceWidth": 240,
+      "avatarFaceWidth": 160,
+      "avatarEyeY": 230,
+      "method": "gpt-image",
+      "silhouetteReviewed": true,
+      "sourceUrl": "user-sources/qu-41158227fb62.png",
+      "sourcePage": "user-sources/qu-41158227fb62.png",
+      "review": "用户指定曲原画，去黑底；保留原画半身范围，不补画身体"
+    },
+    {
+      "id": "c111",
+      "game": "战双帕弥什",
+      "name": "含英",
+      "file": "images/c111-2ac11d9e58-original",
+      "eyes": [
+        482,
+        369
+      ],
+      "faceWidth": 150,
+      "avatarFaceWidth": 155,
+      "avatarEyeY": 260,
+      "method": "source-alpha",
+      "silhouetteReviewed": true,
+      "sourceUrl": "https://patchwiki.biligame.com/images/zspms/d/d7/0eiot5rfrbdd0p5bx708do802qr4kk3.png",
+      "sourcePage": "https://wiki.biligame.com/zspms/%E6%96%87%E4%BB%B6:%E8%A7%92%E8%89%B2_%E5%90%AB%E8%8B%B1_%E6%B8%85%E5%95%86_%E7%AB%8B%E7%BB%98.png",
+      "review": "与二维角色立绘同源的小头像；替换旧模型图头像"
+    },
+    {
+      "id": "c110",
+      "game": "战双帕弥什",
+      "name": "罗塞塔",
+      "file": "images/c110-24622b0d84-original",
+      "eyes": [
+        496,
+        244
+      ],
+      "faceWidth": 182,
+      "avatarFaceWidth": 155,
+      "avatarEyeY": 260,
+      "method": "source-alpha",
+      "silhouetteReviewed": true,
+      "sourceUrl": "https://patchwiki.biligame.com/images/zspms/2/23/tul1qiitb5kj126eze91y2o4cxurtdo.png",
+      "sourcePage": "https://wiki.biligame.com/zspms/%E6%96%87%E4%BB%B6:%E8%A7%92%E8%89%B2_%E7%BD%97%E5%A1%9E%E5%A1%94_%E6%9E%81%E9%94%8B_%E7%AB%8B%E7%BB%98.png",
+      "review": "与二维角色立绘同源的小头像；替换旧模型图头像"
+    },
+    {
+      "id": "s2-zspms-4252de8219",
+      "game": "战双帕弥什",
+      "name": "七实",
+      "file": "images/s2-zspms-4252de8219-d7089f59dc-original",
+      "eyes": [
+        425,
+        358
+      ],
+      "faceWidth": 154,
+      "avatarFaceWidth": 155,
+      "avatarEyeY": 260,
+      "method": "source-alpha",
+      "silhouetteReviewed": true,
+      "sourceUrl": "https://patchwiki.biligame.com/images/zspms/8/8b/4pdlmzpunyucs9b2aq7jjej317o0m8w.png",
+      "sourcePage": "https://wiki.biligame.com/zspms/%E6%96%87%E4%BB%B6:%E8%A7%92%E8%89%B2_%E4%B8%83%E5%AE%9E_%E8%84%89%E5%86%B2_%E7%AB%8B%E7%BB%98.png",
+      "review": "与二维角色立绘同源的小头像；替换旧模型图头像"
+    },
+    {
+      "id": "s2-zspms-f04ab13f4e",
+      "game": "战双帕弥什",
+      "name": "卡列尼娜",
+      "file": "images/s2-zspms-f04ab13f4e-501a8113e4-original",
+      "eyes": [
+        475,
+        358
+      ],
+      "faceWidth": 171,
+      "avatarFaceWidth": 155,
+      "avatarEyeY": 260,
+      "method": "source-alpha",
+      "silhouetteReviewed": true,
+      "sourceUrl": "https://patchwiki.biligame.com/images/zspms/5/55/m3yoe9h3jf1zh7hu4zgmgcorgswkbd3.png",
+      "sourcePage": "https://wiki.biligame.com/zspms/%E6%96%87%E4%BB%B6:%E7%AB%8B%E7%BB%98_%E5%8D%A1%E5%88%97%E5%B0%BC%E5%A8%9C_%E7%83%AC%E7%87%83.png",
+      "review": "与二维角色立绘同源的小头像；替换旧模型图头像"
+    },
+    {
+      "id": "s2-zspms-d7eccc55d5",
+      "game": "战双帕弥什",
+      "name": "艾拉",
+      "file": "images/s2-zspms-d7eccc55d5-f259a29dd1-original",
+      "eyes": [
+        518,
+        394
+      ],
+      "faceWidth": 150,
+      "avatarFaceWidth": 155,
+      "avatarEyeY": 260,
+      "method": "source-alpha",
+      "silhouetteReviewed": true,
+      "sourceUrl": "https://patchwiki.biligame.com/images/zspms/e/ed/r9i1nycewf9x25n718dcg45u4s806x9.png",
+      "sourcePage": "https://wiki.biligame.com/zspms/%E6%96%87%E4%BB%B6:%E8%A7%92%E8%89%B2_%E8%89%BE%E6%8B%89_%E4%B8%87%E5%8D%8E_%E7%AB%8B%E7%BB%98.png",
+      "review": "与二维角色立绘同源的小头像；替换旧模型图头像"
+    },
+    {
+      "id": "c112",
+      "game": "战双帕弥什",
+      "name": "21号",
+      "file": "images/c112-d5c16e7756-original",
+      "eyes": [
+        479,
+        311
+      ],
+      "faceWidth": 182,
+      "avatarFaceWidth": 155,
+      "avatarEyeY": 260,
+      "method": "source-alpha",
+      "silhouetteReviewed": true,
+      "sourceUrl": "https://patchwiki.biligame.com/images/zspms/8/88/gde1i18k0kjcyxvn6ed88doq7vbqihx.png",
+      "sourcePage": "https://wiki.biligame.com/zspms/%E6%96%87%E4%BB%B6:%E8%A7%92%E8%89%B2_21%E5%8F%B7_XXI_%E7%AB%8B%E7%BB%98.png",
+      "review": "与二维角色立绘同源的小头像；替换旧模型图头像"
+    },
+    {
+      "id": "s2-zspms-2249aa62aa",
+      "game": "战双帕弥什",
+      "name": "拉弥亚",
+      "file": "images/s2-zspms-2249aa62aa-41d7ddad1c-original",
+      "eyes": [
+        489,
+        386
+      ],
+      "faceWidth": 143,
+      "avatarFaceWidth": 155,
+      "avatarEyeY": 260,
+      "method": "source-alpha",
+      "silhouetteReviewed": true,
+      "sourceUrl": "https://patchwiki.biligame.com/images/zspms/1/15/c6vw16b72u7k4jgceiar2z4shhgfd4s.png",
+      "sourcePage": "https://wiki.biligame.com/zspms/%E6%96%87%E4%BB%B6:%E8%A7%92%E8%89%B2_%E6%8B%89%E5%BC%A5%E4%BA%9A_%E6%B7%B1%E8%B0%A3_%E7%AB%8B%E7%BB%98.png",
+      "review": "与二维角色立绘同源的小头像；替换旧模型图头像"
+    },
+    {
+      "id": "s2-zspms-2fb9e23cad",
+      "game": "战双帕弥什",
+      "name": "莉莉丝",
+      "file": "images/s2-zspms-2fb9e23cad-8f3a6bd644-original",
+      "eyes": [
+        554,
+        422
+      ],
+      "faceWidth": 166,
+      "avatarFaceWidth": 155,
+      "avatarEyeY": 260,
+      "method": "source-alpha",
+      "silhouetteReviewed": true,
+      "sourceUrl": "https://patchwiki.biligame.com/images/zspms/a/a5/5vm3imzpioqkkfw8fgm74hjsmdmtbmy.png",
+      "sourcePage": "https://wiki.biligame.com/zspms/%E6%96%87%E4%BB%B6:%E8%A7%92%E8%89%B2_%E8%8E%89%E8%8E%89%E4%B8%9D_%E8%B0%AC%E5%BD%B1_%E7%AB%8B%E7%BB%98.png",
+      "review": "与二维角色立绘同源的小头像；替换旧模型图头像"
+    },
+    {
+      "id": "s2-zspms-7465b67175",
+      "game": "战双帕弥什",
+      "name": "伊什梅尔",
+      "file": "images/s2-zspms-7465b67175-2f7b5448bc-original",
+      "eyes": [
+        511,
+        369
+      ],
+      "faceWidth": 162,
+      "avatarFaceWidth": 155,
+      "avatarEyeY": 260,
+      "method": "source-alpha",
+      "silhouetteReviewed": true,
+      "sourceUrl": "https://patchwiki.biligame.com/images/zspms/8/8b/jja7is1bu7p5pjdxsbnt312xfxg9mmi.png",
+      "sourcePage": "https://wiki.biligame.com/zspms/%E6%96%87%E4%BB%B6:%E8%A7%92%E8%89%B2_%E4%BC%8A%E4%BB%80%E6%A2%85%E5%B0%94_%E5%B9%BB%E6%97%A5_%E7%AB%8B%E7%BB%98.png",
+      "review": "与二维角色立绘同源的小头像；替换旧模型图头像"
+    },
+    {
+      "id": "s2-zspms-ffd9a5f469",
+      "game": "战双帕弥什",
+      "name": "哈卡玛",
+      "file": "images/s2-zspms-ffd9a5f469-6a10b9d847-original",
+      "eyes": [
+        446,
+        286
+      ],
+      "faceWidth": 161,
+      "avatarFaceWidth": 155,
+      "avatarEyeY": 260,
+      "method": "source-alpha",
+      "silhouetteReviewed": true,
+      "sourceUrl": "https://patchwiki.biligame.com/images/zspms/d/dc/5h528hqamcv5rzdiyfo6zh2mr4hp0m6.png",
+      "sourcePage": "https://wiki.biligame.com/zspms/%E6%96%87%E4%BB%B6:%E8%A7%92%E8%89%B2_%E5%93%88%E5%8D%A1%E7%8E%9B_%E9%9A%90%E6%98%9F_%E7%AB%8B%E7%BB%98.png",
+      "review": "与二维角色立绘同源的小头像；替换旧模型图头像"
+    },
+    {
+      "id": "s2-zspms-f2d56d18e2",
+      "game": "战双帕弥什",
+      "name": "蒲牢",
+      "file": "images/s2-zspms-f2d56d18e2-c96a8daf7a-original",
+      "eyes": [
+        514,
+        326
+      ],
+      "faceWidth": 171,
+      "avatarFaceWidth": 155,
+      "avatarEyeY": 260,
+      "method": "source-alpha",
+      "silhouetteReviewed": true,
+      "sourceUrl": "https://patchwiki.biligame.com/images/zspms/f/f2/kse8c7qlqvstxnduoikbqkup9lgb5iy.png",
+      "sourcePage": "https://wiki.biligame.com/zspms/%E6%96%87%E4%BB%B6:%E8%A7%92%E8%89%B2_%E8%92%B2%E7%89%A2_%E5%8D%8E%E9%92%9F_%E7%AB%8B%E7%BB%98.png",
+      "review": "与二维角色立绘同源的小头像；替换旧模型图头像"
+    },
+    {
+      "id": "s2-zspms-2b457f391e",
+      "game": "战双帕弥什",
+      "name": "邦比娜塔",
+      "file": "images/s2-zspms-2b457f391e-abac73b731-original",
+      "eyes": [
+        471,
+        311
+      ],
+      "faceWidth": 189,
+      "avatarFaceWidth": 155,
+      "avatarEyeY": 260,
+      "method": "source-alpha",
+      "silhouetteReviewed": true,
+      "sourceUrl": "https://patchwiki.biligame.com/images/zspms/0/0d/qcorqpz34i1kf4167xycuwsgf37h42t.png",
+      "sourcePage": "https://wiki.biligame.com/zspms/%E6%96%87%E4%BB%B6:%E8%A7%92%E8%89%B2_%E9%82%A6%E6%AF%94%E5%A8%9C%E5%A1%94_%E7%90%89%E7%92%83_%E7%AB%8B%E7%BB%98.png",
+      "review": "与二维角色立绘同源的小头像；替换旧模型图头像"
+    },
+    {
+      "id": "s2-zspms-faf440a9f5",
+      "game": "战双帕弥什",
+      "name": "亚里莎",
+      "file": "images/s2-zspms-faf440a9f5-5f52eaaa08-original",
+      "eyes": [
+        425,
+        358
+      ],
+      "faceWidth": 154,
+      "avatarFaceWidth": 155,
+      "avatarEyeY": 260,
+      "method": "source-alpha",
+      "silhouetteReviewed": true,
+      "sourceUrl": "https://patchwiki.biligame.com/images/zspms/e/e0/mws3i88x4ihr7omnen5qjyk9mi97u56.png",
+      "sourcePage": "https://wiki.biligame.com/zspms/%E6%96%87%E4%BB%B6:%E8%A7%92%E8%89%B2_%E4%BA%9A%E9%87%8C%E8%8E%8E_%E5%9B%9E%E9%9F%B3_%E7%AB%8B%E7%BB%98.png",
+      "review": "与二维角色立绘同源的小头像；替换旧模型图头像"
+    },
+    {
+      "id": "s2-zspms-877255f18e",
+      "game": "战双帕弥什",
+      "name": "布偶熊",
+      "file": "images/s2-zspms-877255f18e-4192bf32fd-original",
+      "eyes": [
+        489,
+        379
+      ],
+      "faceWidth": 157,
+      "avatarFaceWidth": 155,
+      "avatarEyeY": 260,
+      "method": "source-alpha",
+      "silhouetteReviewed": true,
+      "sourceUrl": "https://patchwiki.biligame.com/images/zspms/f/f2/96z2btp2y8n7peihnrrqxq30jtzayxr.png",
+      "sourcePage": "https://wiki.biligame.com/zspms/%E6%96%87%E4%BB%B6:%E8%A7%92%E8%89%B2_%E5%B8%83%E5%81%B6%E7%86%8A_%E8%A7%85%E8%AF%AD_%E7%AB%8B%E7%BB%98.png",
+      "review": "与二维角色立绘同源的小头像；替换旧模型图头像"
+    },
+    {
+      "id": "s2-zspms-10274e94b4",
+      "game": "战双帕弥什",
+      "name": "洁塔薇",
+      "file": "images/s2-zspms-10274e94b4-d185b2f04e-original",
+      "eyes": [
+        539,
+        394
+      ],
+      "faceWidth": 143,
+      "avatarFaceWidth": 155,
+      "avatarEyeY": 260,
+      "method": "source-alpha",
+      "silhouetteReviewed": true,
+      "sourceUrl": "https://patchwiki.biligame.com/images/zspms/0/0e/14iey0j48g22hth27i27e05rjewte5r.png",
+      "sourcePage": "https://wiki.biligame.com/zspms/%E6%96%87%E4%BB%B6:%E8%A7%92%E8%89%B2_%E6%B4%81%E5%A1%94%E8%96%87_%E7%A0%B4%E6%99%93_%E7%AB%8B%E7%BB%98.png",
+      "review": "与二维角色立绘同源的小头像；替换旧模型图头像"
+    },
+    {
+      "id": "s2-zspms-728e690217",
+      "game": "战双帕弥什",
+      "name": "涅缇娅",
+      "file": "images/s2-zspms-728e690217-fcf19d1e8c-original",
+      "eyes": [
+        457,
+        244
+      ],
+      "faceWidth": 146,
+      "avatarFaceWidth": 155,
+      "avatarEyeY": 260,
+      "method": "source-alpha",
+      "silhouetteReviewed": true,
+      "sourceUrl": "https://patchwiki.biligame.com/images/zspms/b/b1/2lgi2xzpvdi4enznlxqyco9m0ica9u5.png",
+      "sourcePage": "https://wiki.biligame.com/zspms/%E6%96%87%E4%BB%B6:%E8%A7%92%E8%89%B2_%E6%B6%85%E7%BC%87%E5%A8%85_%E4%BA%A1%E6%AD%8C_%E7%AB%8B%E7%BB%98.png",
+      "review": "与二维角色立绘同源的小头像；替换旧模型图头像"
+    },
+    {
+      "id": "s2-zspms-1e8d4c8b68",
+      "game": "战双帕弥什",
+      "name": "苏菲亚",
+      "file": "images/s2-zspms-1e8d4c8b68-0d062b8365-original",
+      "eyes": [
+        479,
+        415
+      ],
+      "faceWidth": 171,
+      "avatarFaceWidth": 155,
+      "avatarEyeY": 260,
+      "method": "source-alpha",
+      "silhouetteReviewed": true,
+      "sourceUrl": "https://patchwiki.biligame.com/images/zspms/e/ec/quu9itx8zgqeuxm3qanfea8ze5ip14p.png",
+      "sourcePage": "https://wiki.biligame.com/zspms/%E6%96%87%E4%BB%B6:%E8%A7%92%E8%89%B2_%E8%8B%8F%E8%8F%B2%E4%BA%9A_%E9%93%B6%E7%89%99_%E7%AB%8B%E7%BB%98.png",
+      "review": "与二维角色立绘同源的小头像；替换旧模型图头像"
+    },
+    {
+      "id": "s2-zspms-8304bb0fa4",
+      "game": "战双帕弥什",
+      "name": "布丽姬特",
+      "file": "images/s2-zspms-8304bb0fa4-7f2e106a36-original",
+      "eyes": [
+        543,
+        301
+      ],
+      "faceWidth": 171,
+      "avatarFaceWidth": 155,
+      "avatarEyeY": 260,
+      "method": "source-alpha",
+      "silhouetteReviewed": true,
+      "sourceUrl": "https://patchwiki.biligame.com/images/zspms/d/d1/49t17c5530761xcoo4hpeo45ddkjrm1.png",
+      "sourcePage": "https://wiki.biligame.com/zspms/%E6%96%87%E4%BB%B6:%E8%A7%92%E8%89%B2_%E5%B8%83%E4%B8%BD%E5%A7%AC%E7%89%B9_%E8%80%80%E7%82%8E_%E7%AB%8B%E7%BB%98.png",
+      "review": "与二维角色立绘同源的小头像；替换旧模型图头像"
+    },
+    {
+      "id": "s2-zspms-3fa6adfa57",
+      "game": "战双帕弥什",
+      "name": "八咫",
+      "file": "images/s2-zspms-3fa6adfa57-c26bb6b887-original",
+      "eyes": [
+        550,
+        294
+      ],
+      "faceWidth": 164,
+      "avatarFaceWidth": 155,
+      "avatarEyeY": 260,
+      "method": "source-alpha",
+      "silhouetteReviewed": true,
+      "sourceUrl": "https://patchwiki.biligame.com/images/zspms/1/1c/8sy1683yywu64vop3xtyhmhsdoyje0r.png",
+      "sourcePage": "https://wiki.biligame.com/zspms/%E6%96%87%E4%BB%B6:%E8%A7%92%E8%89%B2_%E5%85%AB%E5%92%AB_%E5%BE%8A%E9%97%AA_%E7%AB%8B%E7%BB%98.png",
+      "review": "与二维角色立绘同源的小头像；替换旧模型图头像"
+    },
+    {
+      "id": "s2-zspms-882c4c7fba",
+      "game": "战双帕弥什",
+      "name": "斜奏",
+      "file": "images/s2-zspms-882c4c7fba-41801132c3-original",
+      "eyes": [
+        536,
+        251
+      ],
+      "faceWidth": 168,
+      "avatarFaceWidth": 155,
+      "avatarEyeY": 260,
+      "method": "source-alpha",
+      "silhouetteReviewed": true,
+      "sourceUrl": "https://patchwiki.biligame.com/images/zspms/9/90/1rf89cczwiqixpr7c7nup3orowyfaxr.png",
+      "sourcePage": "https://wiki.biligame.com/zspms/%E6%96%87%E4%BB%B6:%E8%A7%92%E8%89%B2_%E6%96%9C%E5%A5%8F_%E8%A3%81%E5%BE%8B_%E7%AB%8B%E7%BB%98.png",
+      "review": "与二维角色立绘同源的小头像；替换旧模型图头像"
+    },
+    {
+      "id": "s2-zspms-5cd4133323",
+      "game": "战双帕弥什",
+      "name": "维罗妮卡",
+      "file": "images/s2-zspms-5cd4133323-e1f5b1ad63-original",
+      "eyes": [
+        539,
+        233
+      ],
+      "faceWidth": 182,
+      "avatarFaceWidth": 155,
+      "avatarEyeY": 260,
+      "method": "source-alpha",
+      "silhouetteReviewed": true,
+      "sourceUrl": "https://patchwiki.biligame.com/images/zspms/7/72/43s5m37caqaovf814mhv3m6szsnea1m.png",
+      "sourcePage": "https://wiki.biligame.com/zspms/%E6%96%87%E4%BB%B6:%E8%A7%92%E8%89%B2_%E7%BB%B4%E7%BD%97%E5%A6%AE%E5%8D%A1_%E9%93%AE%E9%AA%A8_%E7%AB%8B%E7%BB%98.png",
+      "review": "与二维角色立绘同源的小头像；替换旧模型图头像"
+    },
+    {
+      "id": "s2-zspms-e946a6a6c2",
+      "game": "战双帕弥什",
+      "name": "海伦汀",
+      "file": "images/s2-zspms-e946a6a6c2-3cdd1d1c99-original",
+      "eyes": [
+        532,
+        294
+      ],
+      "faceWidth": 146,
+      "avatarFaceWidth": 155,
+      "avatarEyeY": 260,
+      "method": "source-alpha",
+      "silhouetteReviewed": true,
+      "sourceUrl": "https://patchwiki.biligame.com/images/zspms/b/be/eokapbx8f14d5g2s1elqg9lgqkxu88y.png",
+      "sourcePage": "https://wiki.biligame.com/zspms/%E6%96%87%E4%BB%B6:%E8%A7%92%E8%89%B2_%E6%B5%B7%E4%BC%A6%E6%B1%80_%E5%AE%89%E9%AD%82_%E7%AB%8B%E7%BB%98.png",
+      "review": "与二维角色立绘同源的小头像；替换旧模型图头像"
+    },
+    {
+      "id": "s2-zspms-3f26d2e2f5",
+      "game": "战双帕弥什",
+      "name": "阿德莱德",
+      "file": "images/s2-zspms-3f26d2e2f5-c28e969238-original",
+      "eyes": [
+        627,
+        263
+      ],
+      "faceWidth": 136,
+      "avatarFaceWidth": 155,
+      "avatarEyeY": 260,
+      "method": "source-alpha",
+      "silhouetteReviewed": true,
+      "sourceUrl": "https://patchwiki.biligame.com/images/zspms/4/44/fdkp5ix50qb1jokj5yy3moktt2gwqjg.png",
+      "sourcePage": "https://wiki.biligame.com/zspms/%E6%96%87%E4%BB%B6:%E8%A7%92%E8%89%B2_%E9%98%BF%E5%BE%B7%E8%8E%B1%E5%BE%B7_%E7%A0%B4%E6%B8%8A_%E7%AB%8B%E7%BB%98.png",
+      "review": "与二维角色立绘同源的小头像；替换旧模型图头像"
+    },
+    {
+      "id": "c040",
+      "game": "绝区零",
+      "name": "星见雅",
+      "file": "ai-candidates/miyabi-full-audit-v2.png",
+      "eyes": [
+        549,
+        294
+      ],
+      "faceWidth": 100,
+      "avatarFaceWidth": 160,
+      "avatarEyeY": 230,
+      "method": "gpt-image",
+      "silhouetteReviewed": true,
+      "sourceUrl": null,
+      "sourcePage": null,
+      "review": "从同一套独立人物素材裁切证件照式胸像；面部居中，透明背景；待小尺寸全量复核"
+    },
+    {
+      "id": "s2-zzz-d24d4d248e",
+      "game": "绝区零",
+      "name": "薇薇安",
+      "file": "ai-candidates/vivian-full-audit-v2.png",
+      "eyes": [
+        584,
+        163
+      ],
+      "faceWidth": 115,
+      "avatarFaceWidth": 160,
+      "avatarEyeY": 230,
+      "method": "gpt-image",
+      "silhouetteReviewed": true,
+      "sourceUrl": null,
+      "sourcePage": null,
+      "review": "从同一套独立人物素材裁切证件照式胸像；面部居中，透明背景；待小尺寸全量复核"
+    },
+    {
+      "id": "c024",
+      "game": "崩坏：星穹铁道",
+      "name": "银狼",
+      "file": "ai-candidates/c024-full-v3.png",
+      "eyes": [
+        819,
+        313
+      ],
+      "faceWidth": 156,
+      "avatarFaceWidth": 160,
+      "avatarEyeY": 230,
+      "method": "gpt-image",
+      "silhouetteReviewed": true,
+      "sourceUrl": null,
+      "sourcePage": null,
+      "review": "从同一套独立人物素材裁切证件照式胸像；面部居中，透明背景；待小尺寸全量复核"
+    },
+    {
+      "id": "c018",
+      "game": "崩坏：星穹铁道",
+      "name": "黄泉",
+      "file": "ai-candidates/c018-full-v3.png",
+      "eyes": [
+        568,
+        331
+      ],
+      "faceWidth": 90,
+      "avatarFaceWidth": 160,
+      "avatarEyeY": 230,
+      "method": "gpt-image",
+      "silhouetteReviewed": true,
+      "sourceUrl": null,
+      "sourcePage": null,
+      "review": "从同一套独立人物素材裁切证件照式胸像；面部居中，透明背景；待小尺寸全量复核"
+    },
+    {
+      "id": "s2-sr-beb377a1cc",
+      "game": "崩坏：星穹铁道",
+      "name": "昔涟",
+      "file": "ai-candidates/s2-sr-beb377a1cc-full-v3.png",
+      "eyes": [
+        616,
+        453
+      ],
+      "faceWidth": 103,
+      "avatarFaceWidth": 160,
+      "avatarEyeY": 230,
+      "method": "gpt-image",
+      "silhouetteReviewed": true,
+      "sourceUrl": null,
+      "sourcePage": null,
+      "review": "从同一套独立人物素材裁切证件照式胸像；面部居中，透明背景；待小尺寸全量复核"
+    },
+    {
+      "id": "c031",
+      "game": "崩坏：星穹铁道",
+      "name": "大黑塔",
+      "file": "ai-candidates/c031-full-v3.png",
+      "eyes": [
+        695,
+        280
+      ],
+      "faceWidth": 104,
+      "avatarFaceWidth": 160,
+      "avatarEyeY": 230,
+      "method": "gpt-image",
+      "silhouetteReviewed": true,
+      "sourceUrl": null,
+      "sourcePage": null,
+      "review": "从同一套独立人物素材裁切证件照式胸像；面部居中，透明背景；待小尺寸全量复核"
+    },
+    {
+      "id": "s2-sr-3a3ab47edd",
+      "game": "崩坏：星穹铁道",
+      "name": "真珠",
+      "file": "ai-candidates/s2-sr-3a3ab47edd-full-v3.png",
+      "eyes": [
+        739,
+        499
+      ],
+      "faceWidth": 92,
+      "avatarFaceWidth": 160,
+      "avatarEyeY": 230,
+      "method": "gpt-image",
+      "silhouetteReviewed": true,
+      "sourceUrl": null,
+      "sourcePage": null,
+      "review": "从同一套独立人物素材裁切证件照式胸像；面部居中，透明背景；待小尺寸全量复核"
+    },
+    {
+      "id": "c001",
+      "game": "原神",
+      "name": "芙宁娜",
+      "file": "ai-candidates/c001-full-v3.png",
+      "eyes": [
+        609,
+        297
+      ],
+      "faceWidth": 105,
+      "avatarFaceWidth": 160,
+      "avatarEyeY": 230,
+      "method": "gpt-image",
+      "silhouetteReviewed": true,
+      "sourceUrl": null,
+      "sourcePage": null,
+      "review": "从同一套独立人物素材裁切证件照式胸像；面部居中，透明背景；待小尺寸全量复核"
+    },
+    {
+      "id": "c002",
+      "game": "原神",
+      "name": "雷电将军",
+      "file": "ai-candidates/c002-full-v3.png",
+      "eyes": [
+        512,
+        320
+      ],
+      "faceWidth": 101,
+      "avatarFaceWidth": 160,
+      "avatarEyeY": 230,
+      "method": "gpt-image",
+      "silhouetteReviewed": true,
+      "sourceUrl": null,
+      "sourcePage": null,
+      "review": "从同一套独立人物素材裁切证件照式胸像；面部居中，透明背景；待小尺寸全量复核"
+    },
+    {
+      "id": "c003",
+      "game": "原神",
+      "name": "胡桃",
+      "file": "ai-candidates/c003-full-v3.png",
+      "eyes": [
+        713,
+        228
+      ],
+      "faceWidth": 105,
+      "avatarFaceWidth": 160,
+      "avatarEyeY": 230,
+      "method": "gpt-image",
+      "silhouetteReviewed": true,
+      "sourceUrl": null,
+      "sourcePage": null,
+      "review": "从同一套独立人物素材裁切证件照式胸像；面部居中，透明背景；待小尺寸全量复核"
+    },
+    {
+      "id": "c004",
+      "game": "原神",
+      "name": "纳西妲",
+      "file": "ai-candidates/c004-full-v3.png",
+      "eyes": [
+        561,
+        251
+      ],
+      "faceWidth": 137,
+      "avatarFaceWidth": 160,
+      "avatarEyeY": 230,
+      "method": "gpt-image",
+      "silhouetteReviewed": true,
+      "sourceUrl": null,
+      "sourcePage": null,
+      "review": "从同一套独立人物素材裁切证件照式胸像；面部居中，透明背景；待小尺寸全量复核"
+    },
+    {
+      "id": "s2-ys-c48c0a3e98",
+      "game": "原神",
+      "name": "八重神子",
+      "file": "ai-candidates/s2-ys-c48c0a3e98-full-v3.png",
+      "eyes": [
+        611,
+        180
+      ],
+      "faceWidth": 96,
+      "avatarFaceWidth": 160,
+      "avatarEyeY": 230,
+      "method": "gpt-image",
+      "silhouetteReviewed": true,
+      "sourceUrl": null,
+      "sourcePage": null,
+      "review": "从同一套独立人物素材裁切证件照式胸像；面部居中，透明背景；待小尺寸全量复核"
+    },
+    {
+      "id": "c006",
+      "game": "原神",
+      "name": "神里绫华",
+      "file": "ai-candidates/c006-full-v3.png",
+      "eyes": [
+        503,
+        413
+      ],
+      "faceWidth": 110,
+      "avatarFaceWidth": 160,
+      "avatarEyeY": 230,
+      "method": "gpt-image",
+      "silhouetteReviewed": true,
+      "sourceUrl": null,
+      "sourcePage": null,
+      "review": "从同一套独立人物素材裁切证件照式胸像；面部居中，透明背景；待小尺寸全量复核"
+    },
+    {
+      "id": "s2-ys-1176f25c6a",
+      "game": "原神",
+      "name": "甘雨",
+      "file": "ai-candidates/s2-ys-1176f25c6a-full-v3.png",
+      "eyes": [
+        639,
+        212
+      ],
+      "faceWidth": 98,
+      "avatarFaceWidth": 160,
+      "avatarEyeY": 230,
+      "method": "gpt-image",
+      "silhouetteReviewed": true,
+      "sourceUrl": null,
+      "sourcePage": null,
+      "review": "从同一套独立人物素材裁切证件照式胸像；面部居中，透明背景；待小尺寸全量复核"
+    },
+    {
+      "id": "c005",
+      "game": "原神",
+      "name": "夜兰",
+      "file": "ai-candidates/c005-full-v3.png",
+      "eyes": [
+        490,
+        224
+      ],
+      "faceWidth": 101,
+      "avatarFaceWidth": 160,
+      "avatarEyeY": 230,
+      "method": "gpt-image",
+      "silhouetteReviewed": true,
+      "sourceUrl": null,
+      "sourcePage": null,
+      "review": "从同一套独立人物素材裁切证件照式胸像；面部居中，透明背景；待小尺寸全量复核"
+    },
+    {
+      "id": "c008",
+      "game": "原神",
+      "name": "申鹤",
+      "file": "ai-candidates/c008-full-v3.png",
+      "eyes": [
+        626,
+        250
+      ],
+      "faceWidth": 114,
+      "avatarFaceWidth": 160,
+      "avatarEyeY": 230,
+      "method": "gpt-image",
+      "silhouetteReviewed": true,
+      "sourceUrl": null,
+      "sourcePage": null,
+      "review": "从同一套独立人物素材裁切证件照式胸像；面部居中，透明背景；待小尺寸全量复核"
+    },
+    {
+      "id": "c007",
+      "game": "原神",
+      "name": "妮露",
+      "file": "ai-candidates/c007-full-v3.png",
+      "eyes": [
+        579,
+        202
+      ],
+      "faceWidth": 93,
+      "avatarFaceWidth": 160,
+      "avatarEyeY": 230,
+      "method": "gpt-image",
+      "silhouetteReviewed": true,
+      "sourceUrl": null,
+      "sourcePage": null,
+      "review": "从同一套独立人物素材裁切证件照式胸像；面部居中，透明背景；待小尺寸全量复核"
+    },
+    {
+      "id": "c009",
+      "game": "原神",
+      "name": "宵宫",
+      "file": "ai-candidates/c009-full-v3.png",
+      "eyes": [
+        611,
+        256
+      ],
+      "faceWidth": 112,
+      "avatarFaceWidth": 160,
+      "avatarEyeY": 230,
+      "method": "gpt-image",
+      "silhouetteReviewed": true,
+      "sourceUrl": null,
+      "sourcePage": null,
+      "review": "从同一套独立人物素材裁切证件照式胸像；面部居中，透明背景；待小尺寸全量复核"
+    },
+    {
+      "id": "s2-ys-2e9ed422c0",
+      "game": "原神",
+      "name": "珊瑚宫心海",
+      "file": "ai-candidates/s2-ys-2e9ed422c0-full-v3.png",
+      "eyes": [
+        669,
+        206
+      ],
+      "faceWidth": 122,
+      "avatarFaceWidth": 160,
+      "avatarEyeY": 230,
+      "method": "gpt-image",
+      "silhouetteReviewed": true,
+      "sourceUrl": null,
+      "sourcePage": null,
+      "review": "从同一套独立人物素材裁切证件照式胸像；面部居中，透明背景；待小尺寸全量复核"
+    },
+    {
+      "id": "c011",
+      "game": "原神",
+      "name": "阿蕾奇诺",
+      "file": "ai-candidates/c011-full-v3.png",
+      "eyes": [
+        553,
+        165
+      ],
+      "faceWidth": 82,
+      "avatarFaceWidth": 160,
+      "avatarEyeY": 230,
+      "method": "gpt-image",
+      "silhouetteReviewed": true,
+      "sourceUrl": null,
+      "sourcePage": null,
+      "review": "从同一套独立人物素材裁切证件照式胸像；面部居中，透明背景；待小尺寸全量复核"
+    },
+    {
+      "id": "s2-ys-9b244fbaec",
+      "game": "原神",
+      "name": "娜维娅",
+      "file": "ai-candidates/s2-ys-9b244fbaec-full-v3.png",
+      "eyes": [
+        546,
+        341
+      ],
+      "faceWidth": 90,
+      "avatarFaceWidth": 160,
+      "avatarEyeY": 230,
+      "method": "gpt-image",
+      "silhouetteReviewed": true,
+      "sourceUrl": null,
+      "sourcePage": null,
+      "review": "从同一套独立人物素材裁切证件照式胸像；面部居中，透明背景；待小尺寸全量复核"
+    },
+    {
+      "id": "s2-ys-32fc6b3c4f",
+      "game": "原神",
+      "name": "玛薇卡",
+      "file": "ai-candidates/s2-ys-32fc6b3c4f-full-v3.png",
+      "eyes": [
+        569,
+        298
+      ],
+      "faceWidth": 87,
+      "avatarFaceWidth": 160,
+      "avatarEyeY": 230,
+      "method": "gpt-image",
+      "silhouetteReviewed": true,
+      "sourceUrl": null,
+      "sourcePage": null,
+      "review": "从同一套独立人物素材裁切证件照式胸像；面部居中，透明背景；待小尺寸全量复核"
+    },
+    {
+      "id": "c016",
+      "game": "原神",
+      "name": "茜特菈莉",
+      "file": "ai-candidates/c016-full-v3.png",
+      "eyes": [
+        700,
+        234
+      ],
+      "faceWidth": 101,
+      "avatarFaceWidth": 160,
+      "avatarEyeY": 230,
+      "method": "gpt-image",
+      "silhouetteReviewed": true,
+      "sourceUrl": null,
+      "sourcePage": null,
+      "review": "从同一套独立人物素材裁切证件照式胸像；面部居中，透明背景；待小尺寸全量复核"
+    },
+    {
+      "id": "c010",
+      "game": "原神",
+      "name": "克洛琳德",
+      "file": "ai-candidates/c010-full-v3.png",
+      "eyes": [
+        932,
+        302
+      ],
+      "faceWidth": 79,
+      "avatarFaceWidth": 160,
+      "avatarEyeY": 230,
+      "method": "gpt-image",
+      "silhouetteReviewed": true,
+      "sourceUrl": null,
+      "sourcePage": null,
+      "review": "从同一套独立人物素材裁切证件照式胸像；面部居中，透明背景；待小尺寸全量复核"
+    },
+    {
+      "id": "s2-ys-2f050637af",
+      "game": "原神",
+      "name": "丝柯克",
+      "file": "ai-candidates/s2-ys-2f050637af-full-v3.png",
+      "eyes": [
+        472,
+        175
+      ],
+      "faceWidth": 105,
+      "avatarFaceWidth": 160,
+      "avatarEyeY": 230,
+      "method": "gpt-image",
+      "silhouetteReviewed": true,
+      "sourceUrl": null,
+      "sourcePage": null,
+      "review": "从同一套独立人物素材裁切证件照式胸像；面部居中，透明背景；待小尺寸全量复核"
+    },
+    {
+      "id": "s2-ys-ea6f231386",
+      "game": "原神",
+      "name": "哥伦比娅",
+      "file": "ai-candidates/s2-ys-ea6f231386-full-v3.png",
+      "eyes": [
+        855,
+        261
+      ],
+      "faceWidth": 92,
+      "avatarFaceWidth": 160,
+      "avatarEyeY": 230,
+      "method": "gpt-image",
+      "silhouetteReviewed": true,
+      "sourceUrl": null,
+      "sourcePage": null,
+      "review": "从同一套独立人物素材裁切证件照式胸像；面部居中，透明背景；待小尺寸全量复核"
+    },
+    {
+      "id": "s2-ys-61f5364f33",
+      "game": "原神",
+      "name": "菈乌玛",
+      "file": "ai-candidates/s2-ys-61f5364f33-full-v3.png",
+      "eyes": [
+        631,
+        342
+      ],
+      "faceWidth": 79,
+      "avatarFaceWidth": 160,
+      "avatarEyeY": 230,
+      "method": "gpt-image",
+      "silhouetteReviewed": true,
+      "sourceUrl": null,
+      "sourcePage": null,
+      "review": "从同一套独立人物素材裁切证件照式胸像；面部居中，透明背景；待小尺寸全量复核"
+    },
+    {
+      "id": "s2-ys-59d3b3bfce",
+      "game": "原神",
+      "name": "奈芙尔",
+      "file": "ai-candidates/s2-ys-59d3b3bfce-full-v3.png",
+      "eyes": [
+        639,
+        193
+      ],
+      "faceWidth": 92,
+      "avatarFaceWidth": 160,
+      "avatarEyeY": 230,
+      "method": "gpt-image",
+      "silhouetteReviewed": true,
+      "sourceUrl": null,
+      "sourcePage": null,
+      "review": "从同一套独立人物素材裁切证件照式胸像；面部居中，透明背景；待小尺寸全量复核"
+    },
+    {
+      "id": "s2-ys-9e552aac18",
+      "game": "原神",
+      "name": "伊涅芙",
+      "file": "ai-candidates/s2-ys-9e552aac18-full-v3.png",
+      "eyes": [
+        652,
+        193
+      ],
+      "faceWidth": 96,
+      "avatarFaceWidth": 160,
+      "avatarEyeY": 230,
+      "method": "gpt-image",
+      "silhouetteReviewed": true,
+      "sourceUrl": null,
+      "sourcePage": null,
+      "review": "从同一套独立人物素材裁切证件照式胸像；面部居中，透明背景；待小尺寸全量复核"
+    },
+    {
+      "id": "s2-ys-dca3ebb397",
+      "game": "原神",
+      "name": "尼可",
+      "file": "ai-candidates/s2-ys-dca3ebb397-full-v3.png",
+      "eyes": [
+        813,
+        184
+      ],
+      "faceWidth": 105,
+      "avatarFaceWidth": 160,
+      "avatarEyeY": 230,
+      "method": "gpt-image",
+      "silhouetteReviewed": true,
+      "sourceUrl": null,
+      "sourcePage": null,
+      "review": "从同一套独立人物素材裁切证件照式胸像；面部居中，透明背景；待小尺寸全量复核"
+    },
+    {
+      "id": "s2-ys-a1441b3f21",
+      "game": "原神",
+      "name": "莉奈娅",
+      "file": "ai-candidates/s2-ys-a1441b3f21-full-v3.png",
+      "eyes": [
+        761,
+        180
+      ],
+      "faceWidth": 92,
+      "avatarFaceWidth": 160,
+      "avatarEyeY": 230,
+      "method": "gpt-image",
+      "silhouetteReviewed": true,
+      "sourceUrl": null,
+      "sourcePage": null,
+      "review": "从同一套独立人物素材裁切证件照式胸像；面部居中，透明背景；待小尺寸全量复核"
+    },
+    {
+      "id": "s2-ys-c9c729ede4",
+      "game": "原神",
+      "name": "兹白",
+      "file": "ai-candidates/s2-ys-c9c729ede4-full-v3.png",
+      "eyes": [
+        608,
+        167
+      ],
+      "faceWidth": 87,
+      "avatarFaceWidth": 160,
+      "avatarEyeY": 230,
+      "method": "gpt-image",
+      "silhouetteReviewed": true,
+      "sourceUrl": null,
+      "sourcePage": null,
+      "review": "从同一套独立人物素材裁切证件照式胸像；面部居中，透明背景；待小尺寸全量复核"
+    },
+    {
+      "id": "s2-ys-27d8e41918",
+      "game": "原神",
+      "name": "爱可菲",
+      "file": "ai-candidates/s2-ys-27d8e41918-full-v3.png",
+      "eyes": [
+        726,
+        254
+      ],
+      "faceWidth": 105,
+      "avatarFaceWidth": 160,
+      "avatarEyeY": 230,
+      "method": "gpt-image",
+      "silhouetteReviewed": true,
+      "sourceUrl": null,
+      "sourcePage": null,
+      "review": "从同一套独立人物素材裁切证件照式胸像；面部居中，透明背景；待小尺寸全量复核"
+    },
+    {
+      "id": "s2-ys-9a5ef2ac31",
+      "game": "原神",
+      "name": "薇斯纳",
+      "file": "ai-candidates/s2-ys-9a5ef2ac31-full-v3.png",
+      "eyes": [
+        502,
+        283
+      ],
+      "faceWidth": 90,
+      "avatarFaceWidth": 160,
+      "avatarEyeY": 230,
+      "method": "gpt-image",
+      "silhouetteReviewed": true,
+      "sourceUrl": null,
+      "sourcePage": null,
+      "review": "从同一套独立人物素材裁切证件照式胸像；面部居中，透明背景；待小尺寸全量复核"
+    },
+    {
+      "id": "s2-ys-dfae50a2d2",
+      "game": "原神",
+      "name": "沃雅妮莎",
+      "file": "ai-candidates/s2-ys-dfae50a2d2-full-v3.png",
+      "eyes": [
+        971,
+        591
+      ],
+      "faceWidth": 87,
+      "avatarFaceWidth": 160,
+      "avatarEyeY": 230,
+      "method": "gpt-image",
+      "silhouetteReviewed": true,
+      "sourceUrl": null,
+      "sourcePage": null,
+      "review": "从同一套独立人物素材裁切证件照式胸像；面部居中，透明背景；待小尺寸全量复核"
+    },
+    {
+      "id": "s2-ys-0e6b9f3dd8",
+      "game": "原神",
+      "name": "菲谢尔",
+      "file": "ai-candidates/s2-ys-0e6b9f3dd8-full-v3.png",
+      "eyes": [
+        700,
+        158
+      ],
+      "faceWidth": 101,
+      "avatarFaceWidth": 160,
+      "avatarEyeY": 230,
+      "method": "gpt-image",
+      "silhouetteReviewed": true,
+      "sourceUrl": null,
+      "sourcePage": null,
+      "review": "从同一套独立人物素材裁切证件照式胸像；面部居中，透明背景；待小尺寸全量复核"
+    },
+    {
+      "id": "s2-ys-e56b2bf940",
+      "game": "原神",
+      "name": "优菈",
+      "file": "ai-candidates/s2-ys-e56b2bf940-full-v3.png",
+      "eyes": [
+        569,
+        404
+      ],
+      "faceWidth": 97,
+      "avatarFaceWidth": 160,
+      "avatarEyeY": 230,
+      "method": "gpt-image",
+      "silhouetteReviewed": true,
+      "sourceUrl": null,
+      "sourcePage": null,
+      "review": "从同一套独立人物素材裁切证件照式胸像；面部居中，透明背景；待小尺寸全量复核"
+    },
+    {
+      "id": "c012",
+      "game": "原神",
+      "name": "闲云",
+      "file": "ai-candidates/c012-full-v3.png",
+      "eyes": [
+        643,
+        192
+      ],
+      "faceWidth": 90,
+      "avatarFaceWidth": 160,
+      "avatarEyeY": 230,
+      "method": "gpt-image",
+      "silhouetteReviewed": true,
+      "sourceUrl": null,
+      "sourcePage": null,
+      "review": "从同一套独立人物素材裁切证件照式胸像；面部居中，透明背景；待小尺寸全量复核"
+    },
+    {
+      "id": "s2-ys-a7d5faa04a",
+      "game": "原神",
+      "name": "希诺宁",
+      "file": "ai-candidates/s2-ys-a7d5faa04a-full-v3.png",
+      "eyes": [
+        630,
+        171
+      ],
+      "faceWidth": 101,
+      "avatarFaceWidth": 160,
+      "avatarEyeY": 230,
+      "method": "gpt-image",
+      "silhouetteReviewed": true,
+      "sourceUrl": null,
+      "sourcePage": null,
+      "review": "从同一套独立人物素材裁切证件照式胸像；面部居中，透明背景；待小尺寸全量复核"
+    },
+    {
+      "id": "s2-zmd-ca24ddb221",
+      "game": "明日方舟：终末地",
+      "name": "莱万汀",
+      "file": "ai-candidates/s2-zmd-ca24ddb221-full-v3.png",
+      "eyes": [
+        619,
+        326
+      ],
+      "faceWidth": 84,
+      "avatarFaceWidth": 160,
+      "avatarEyeY": 230,
+      "method": "gpt-image",
+      "silhouetteReviewed": true,
+      "sourceUrl": null,
+      "sourcePage": null,
+      "review": "从同一套独立人物素材裁切证件照式胸像；面部居中，透明背景；待小尺寸全量复核"
+    },
+    {
+      "id": "s2-zmd-b22593fc33",
+      "game": "明日方舟：终末地",
+      "name": "伊冯",
+      "file": "ai-candidates/s2-zmd-b22593fc33-full-v3.png",
+      "eyes": [
+        589,
+        265
+      ],
+      "faceWidth": 101,
+      "avatarFaceWidth": 160,
+      "avatarEyeY": 230,
+      "method": "gpt-image",
+      "silhouetteReviewed": true,
+      "sourceUrl": null,
+      "sourcePage": null,
+      "review": "从同一套独立人物素材裁切证件照式胸像；面部居中，透明背景；待小尺寸全量复核"
+    },
+    {
+      "id": "s2-zmd-a6c2bb864e",
+      "game": "明日方舟：终末地",
+      "name": "洁尔佩塔",
+      "file": "ai-candidates/s2-zmd-a6c2bb864e-full-v3.png",
+      "eyes": [
+        422,
+        464
+      ],
+      "faceWidth": 88,
+      "avatarFaceWidth": 160,
+      "avatarEyeY": 230,
+      "method": "gpt-image",
+      "silhouetteReviewed": true,
+      "sourceUrl": null,
+      "sourcePage": null,
+      "review": "从同一套独立人物素材裁切证件照式胸像；面部居中，透明背景；待小尺寸全量复核"
+    },
+    {
+      "id": "s2-zmd-be2ab7a329",
+      "game": "明日方舟：终末地",
+      "name": "艾尔黛拉",
+      "file": "ai-candidates/s2-zmd-be2ab7a329-full-v3.png",
+      "eyes": [
+        614,
+        276
+      ],
+      "faceWidth": 88,
+      "avatarFaceWidth": 160,
+      "avatarEyeY": 230,
+      "method": "gpt-image",
+      "silhouetteReviewed": true,
+      "sourceUrl": null,
+      "sourcePage": null,
+      "review": "从同一套独立人物素材裁切证件照式胸像；面部居中，透明背景；待小尺寸全量复核"
+    },
+    {
+      "id": "s2-zmd-a072bd87b7",
+      "game": "明日方舟：终末地",
+      "name": "庄方宜",
+      "file": "ai-candidates/s2-zmd-a072bd87b7-full-v3.png",
+      "eyes": [
+        639,
+        238
+      ],
+      "faceWidth": 83,
+      "avatarFaceWidth": 160,
+      "avatarEyeY": 230,
+      "method": "gpt-image",
+      "silhouetteReviewed": true,
+      "sourceUrl": null,
+      "sourcePage": null,
+      "review": "从同一套独立人物素材裁切证件照式胸像；面部居中，透明背景；待小尺寸全量复核"
+    },
+    {
+      "id": "s2-zmd-c1775a13fc",
+      "game": "明日方舟：终末地",
+      "name": "秋栗",
+      "file": "ai-candidates/s2-zmd-c1775a13fc-full-v3.png",
+      "eyes": [
+        694,
+        236
+      ],
+      "faceWidth": 90,
+      "avatarFaceWidth": 160,
+      "avatarEyeY": 230,
+      "method": "gpt-image",
+      "silhouetteReviewed": true,
+      "sourceUrl": null,
+      "sourcePage": null,
+      "review": "从同一套独立人物素材裁切证件照式胸像；面部居中，透明背景；待小尺寸全量复核"
+    },
+    {
+      "id": "s2-zmd-2aee7067a9",
+      "game": "明日方舟：终末地",
+      "name": "汤汤",
+      "file": "ai-candidates/s2-zmd-2aee7067a9-full-v3.png",
+      "eyes": [
+        535,
+        375
+      ],
+      "faceWidth": 84,
+      "avatarFaceWidth": 160,
+      "avatarEyeY": 230,
+      "method": "gpt-image",
+      "silhouetteReviewed": true,
+      "sourceUrl": null,
+      "sourcePage": null,
+      "review": "从同一套独立人物素材裁切证件照式胸像；面部居中，透明背景；待小尺寸全量复核"
+    },
+    {
+      "id": "s2-zmd-af71c8d9c6",
+      "game": "明日方舟：终末地",
+      "name": "别礼",
+      "file": "ai-candidates/s2-zmd-af71c8d9c6-full-v3.png",
+      "eyes": [
+        644,
+        217
+      ],
+      "faceWidth": 92,
+      "avatarFaceWidth": 160,
+      "avatarEyeY": 230,
+      "method": "gpt-image",
+      "silhouetteReviewed": true,
+      "sourceUrl": null,
+      "sourcePage": null,
+      "review": "从同一套独立人物素材裁切证件照式胸像；面部居中，透明背景；待小尺寸全量复核"
+    },
+    {
+      "id": "s2-zmd-0e586f4f3b",
+      "game": "明日方舟：终末地",
+      "name": "弭弗",
+      "file": "ai-candidates/s2-zmd-0e586f4f3b-full-v3.png",
+      "eyes": [
+        556,
+        224
+      ],
+      "faceWidth": 92,
+      "avatarFaceWidth": 160,
+      "avatarEyeY": 230,
+      "method": "gpt-image",
+      "silhouetteReviewed": true,
+      "sourceUrl": null,
+      "sourcePage": null,
+      "review": "从同一套独立人物素材裁切证件照式胸像；面部居中，透明背景；待小尺寸全量复核"
+    },
+    {
+      "id": "c120",
+      "game": "明日方舟：终末地",
+      "name": "余烬",
+      "file": "ai-candidates/c120-full-v3.png",
+      "eyes": [
+        757,
+        263
+      ],
+      "faceWidth": 88,
+      "avatarFaceWidth": 160,
+      "avatarEyeY": 230,
+      "method": "gpt-image",
+      "silhouetteReviewed": true,
+      "sourceUrl": null,
+      "sourcePage": null,
+      "review": "从同一套独立人物素材裁切证件照式胸像；面部居中，透明背景；待小尺寸全量复核"
+    },
+    {
+      "id": "s2-zmd-39fd78a8b0",
+      "game": "明日方舟：终末地",
+      "name": "弧光",
+      "file": "ai-candidates/s2-zmd-39fd78a8b0-full-v3.png",
+      "eyes": [
+        532,
+        190
+      ],
+      "faceWidth": 74,
+      "avatarFaceWidth": 160,
+      "avatarEyeY": 230,
+      "method": "gpt-image",
+      "silhouetteReviewed": true,
+      "sourceUrl": null,
+      "sourcePage": null,
+      "review": "从同一套独立人物素材裁切证件照式胸像；面部居中，透明背景；待小尺寸全量复核"
+    },
+    {
+      "id": "s2-zmd-6bb20b1953",
+      "game": "明日方舟：终末地",
+      "name": "昼雪",
+      "file": "ai-candidates/s2-zmd-6bb20b1953-full-v3.png",
+      "eyes": [
+        637,
+        301
+      ],
+      "faceWidth": 78,
+      "avatarFaceWidth": 160,
+      "avatarEyeY": 230,
+      "method": "gpt-image",
+      "silhouetteReviewed": true,
+      "sourceUrl": null,
+      "sourcePage": null,
+      "review": "从同一套独立人物素材裁切证件照式胸像；面部居中，透明背景；待小尺寸全量复核"
+    },
+    {
+      "id": "c115",
+      "game": "明日方舟：终末地",
+      "name": "赛希",
+      "file": "ai-candidates/c115-full-v3.png",
+      "eyes": [
+        498,
+        303
+      ],
+      "faceWidth": 85,
+      "avatarFaceWidth": 160,
+      "avatarEyeY": 230,
+      "method": "gpt-image",
+      "silhouetteReviewed": true,
+      "sourceUrl": null,
+      "sourcePage": null,
+      "review": "从同一套独立人物素材裁切证件照式胸像；面部居中，透明背景；待小尺寸全量复核"
+    },
+    {
+      "id": "s2-zmd-2cf6f1b724",
+      "game": "明日方舟：终末地",
+      "name": "萤石",
+      "file": "ai-candidates/s2-zmd-2cf6f1b724-full-v3.png",
+      "eyes": [
+        551,
+        223
+      ],
+      "faceWidth": 95,
+      "avatarFaceWidth": 160,
+      "avatarEyeY": 230,
+      "method": "gpt-image",
+      "silhouetteReviewed": true,
+      "sourceUrl": null,
+      "sourcePage": null,
+      "review": "从同一套独立人物素材裁切证件照式胸像；面部居中，透明背景；待小尺寸全量复核"
+    },
+    {
+      "id": "c119",
+      "game": "明日方舟：终末地",
+      "name": "艾维文娜",
+      "file": "ai-candidates/c119-full-v3.png",
+      "eyes": [
+        776,
+        275
+      ],
+      "faceWidth": 80,
+      "avatarFaceWidth": 160,
+      "avatarEyeY": 230,
+      "method": "gpt-image",
+      "silhouetteReviewed": true,
+      "sourceUrl": null,
+      "sourcePage": null,
+      "review": "从同一套独立人物素材裁切证件照式胸像；面部居中，透明背景；待小尺寸全量复核"
+    },
+    {
+      "id": "c025",
+      "game": "崩坏：星穹铁道",
+      "name": "阮·梅",
+      "file": "clean-candidates/c025-sr-preview.png",
+      "eyes": [
+        177,
+        128
+      ],
+      "faceWidth": 90,
+      "avatarFaceWidth": 160,
+      "avatarEyeY": 230,
+      "method": "source-alpha",
+      "sourceUrl": "https://raw.githubusercontent.com/Mar-7th/StarRailRes/master/image/character_preview/1303.png",
+      "review": "同服装透明原画胸像；仅用于小头像，不用低分辨率头像代替完整立绘",
+      "silhouetteReviewed": true
+    },
+    {
+      "id": "c029",
+      "game": "崩坏：星穹铁道",
+      "name": "飞霄",
+      "file": "clean-candidates/c029-sr-preview.png",
+      "eyes": [
+        173,
+        160
+      ],
+      "faceWidth": 102,
+      "avatarFaceWidth": 160,
+      "avatarEyeY": 230,
+      "method": "source-alpha",
+      "sourceUrl": "https://raw.githubusercontent.com/Mar-7th/StarRailRes/master/image/character_preview/1220.png",
+      "review": "同服装透明原画胸像；仅用于小头像，不用低分辨率头像代替完整立绘",
+      "silhouetteReviewed": true
+    },
+    {
+      "id": "s2-sr-500f46cdbb",
+      "game": "崩坏：星穹铁道",
+      "name": "托帕",
+      "file": "clean-candidates/s2-sr-500f46cdbb-sr-preview.png",
+      "eyes": [
+        181,
+        145
+      ],
+      "faceWidth": 111,
+      "avatarFaceWidth": 160,
+      "avatarEyeY": 230,
+      "method": "source-alpha",
+      "sourceUrl": "https://raw.githubusercontent.com/Mar-7th/StarRailRes/master/image/character_preview/1112.png",
+      "review": "同服装透明原画胸像；仅用于小头像，不用低分辨率头像代替完整立绘",
+      "silhouetteReviewed": true
+    },
+    {
+      "id": "c053",
+      "name": "卡提希娅",
+      "game": "鸣潮",
+      "file": "ai-candidates/c053-fleurdelys-portrait-20261104.png",
+      "eyes": [
+        525,
+        560
+      ],
+      "faceWidth": 280,
+      "avatarFaceWidth": 100,
+      "avatarEyeY": 230,
+      "sourceUrl": "https://res.lootbar.gg/pic/20250528/db620f09-bcf4-495e-9e0e-efc0c1b0ad12.png",
+      "method": "gpt-image",
+      "silhouetteReviewed": true,
+      "review": "用户指定大卡形态；基于同一成年形态提取独立头肩像，保留头冠并清除裁切残留手部，仅用于头像。"
+    }
+  ]
+}

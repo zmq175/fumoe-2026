@@ -1,0 +1,567 @@
+{
+  "total": 256,
+  "framingConfigured": 185,
+  "pending": [
+    {
+      "id": "c024",
+      "game": "崩坏：星穹铁道",
+      "name": "银狼",
+      "original": "images/c024-2626b08513-original",
+      "reason": "仍需提取纯人物；场景透明不等于人物独立"
+    },
+    {
+      "id": "c018",
+      "game": "崩坏：星穹铁道",
+      "name": "黄泉",
+      "original": "images/c018-64ed185673-original",
+      "reason": "仍需提取纯人物；场景透明不等于人物独立"
+    },
+    {
+      "id": "s2-sr-beb377a1cc",
+      "game": "崩坏：星穹铁道",
+      "name": "昔涟",
+      "original": "images/s2-sr-beb377a1cc-78ea72253c-original",
+      "reason": "仍需提取纯人物；场景透明不等于人物独立"
+    },
+    {
+      "id": "c031",
+      "game": "崩坏：星穹铁道",
+      "name": "大黑塔",
+      "original": "images/c031-96a0d2a72a-original",
+      "reason": "仍需提取纯人物；场景透明不等于人物独立"
+    },
+    {
+      "id": "c025",
+      "game": "崩坏：星穹铁道",
+      "name": "阮·梅",
+      "original": "images/c025-original",
+      "reason": "仍需提取纯人物；场景透明不等于人物独立"
+    },
+    {
+      "id": "c029",
+      "game": "崩坏：星穹铁道",
+      "name": "飞霄",
+      "original": "images/c029-f2105c1a48-original",
+      "reason": "仍需提取纯人物；场景透明不等于人物独立"
+    },
+    {
+      "id": "s2-sr-cdfb201cce",
+      "game": "崩坏：星穹铁道",
+      "name": "布洛妮娅",
+      "original": "images/s2-sr-cdfb201cce-563bdb990b-original",
+      "reason": "仍需提取纯人物；场景透明不等于人物独立"
+    },
+    {
+      "id": "s2-sr-500f46cdbb",
+      "game": "崩坏：星穹铁道",
+      "name": "托帕",
+      "original": "images/s2-sr-500f46cdbb-f04e53346d-original",
+      "reason": "仍需提取纯人物；场景透明不等于人物独立"
+    },
+    {
+      "id": "c030",
+      "game": "崩坏：星穹铁道",
+      "name": "灵砂",
+      "original": "images/c030-97da04d64f-original",
+      "reason": "仍需提取纯人物；场景透明不等于人物独立"
+    },
+    {
+      "id": "s2-sr-c0e3e73fff",
+      "game": "崩坏：星穹铁道",
+      "name": "忘归人",
+      "original": "images/s2-sr-c0e3e73fff-30e16a8e62-original",
+      "reason": "仍需提取纯人物；场景透明不等于人物独立"
+    },
+    {
+      "id": "s2-sr-8e057e882d",
+      "game": "崩坏：星穹铁道",
+      "name": "阿格莱雅",
+      "original": "images/s2-sr-8e057e882d-c468ac2d97-original",
+      "reason": "仍需提取纯人物；场景透明不等于人物独立"
+    },
+    {
+      "id": "s2-sr-8b13e4acdb",
+      "game": "崩坏：星穹铁道",
+      "name": "缇宝",
+      "original": "images/s2-sr-8b13e4acdb-08135c516b-original",
+      "reason": "仍需提取纯人物；场景透明不等于人物独立"
+    },
+    {
+      "id": "s2-sr-7556cffb9d",
+      "game": "崩坏：星穹铁道",
+      "name": "赛飞儿",
+      "original": "images/s2-sr-7556cffb9d-a4a69510e1-original",
+      "reason": "仍需提取纯人物；场景透明不等于人物独立"
+    },
+    {
+      "id": "s2-sr-556465bf5b",
+      "game": "崩坏：星穹铁道",
+      "name": "风堇",
+      "original": "images/s2-sr-556465bf5b-78eae1ea2b-original",
+      "reason": "仍需提取纯人物；场景透明不等于人物独立"
+    },
+    {
+      "id": "s2-sr-9155d9240f",
+      "game": "崩坏：星穹铁道",
+      "name": "刻律德菈",
+      "original": "images/s2-sr-9155d9240f-95ca8d46e3-original",
+      "reason": "仍需提取纯人物；场景透明不等于人物独立"
+    },
+    {
+      "id": "s2-sr-0b8213db68",
+      "game": "崩坏：星穹铁道",
+      "name": "海瑟音",
+      "original": "images/s2-sr-0b8213db68-3c4fc8fbf2-original",
+      "reason": "仍需提取纯人物；场景透明不等于人物独立"
+    },
+    {
+      "id": "s2-sr-accccf3cc5",
+      "game": "崩坏：星穹铁道",
+      "name": "爻光",
+      "original": "images/s2-sr-accccf3cc5-4722ad8621-original",
+      "reason": "仍需提取纯人物；场景透明不等于人物独立"
+    },
+    {
+      "id": "s2-sr-fdee458efe",
+      "game": "崩坏：星穹铁道",
+      "name": "绯英",
+      "original": "images/s2-sr-fdee458efe-54a38fabb7-original",
+      "reason": "仍需提取纯人物；场景透明不等于人物独立"
+    },
+    {
+      "id": "s2-sr-3a3ab47edd",
+      "game": "崩坏：星穹铁道",
+      "name": "真珠",
+      "original": "images/s2-sr-3a3ab47edd-4432ad8430-original",
+      "reason": "仍需提取纯人物；场景透明不等于人物独立"
+    },
+    {
+      "id": "s2-sr-612ab12105",
+      "game": "崩坏：星穹铁道",
+      "name": "克拉拉",
+      "original": "images/s2-sr-612ab12105-83f5a0ad57-original",
+      "reason": "仍需提取纯人物；场景透明不等于人物独立"
+    },
+    {
+      "id": "s2-sr-4e1b3a52f7",
+      "game": "崩坏：星穹铁道",
+      "name": "青雀",
+      "original": "images/s2-sr-4e1b3a52f7-ac01cec42e-original",
+      "reason": "仍需提取纯人物；场景透明不等于人物独立"
+    },
+    {
+      "id": "c028",
+      "game": "崩坏：星穹铁道",
+      "name": "翡翠",
+      "original": "images/c028-fc8fdbb0c3-original",
+      "reason": "仍需提取纯人物；场景透明不等于人物独立"
+    },
+    {
+      "id": "s2-sr-d846d2ccd1",
+      "game": "崩坏：星穹铁道",
+      "name": "雪衣",
+      "original": "images/s2-sr-d846d2ccd1-42df805822-original",
+      "reason": "仍需提取纯人物；场景透明不等于人物独立"
+    },
+    {
+      "id": "s2-sr-8f448f0249",
+      "game": "崩坏：星穹铁道",
+      "name": "寒鸦",
+      "original": "images/s2-sr-8f448f0249-5805339a9f-original",
+      "reason": "仍需提取纯人物；场景透明不等于人物独立"
+    },
+    {
+      "id": "c001",
+      "game": "原神",
+      "name": "芙宁娜",
+      "original": "images/c001-69095eabaf-original",
+      "reason": "仍需提取纯人物；场景透明不等于人物独立"
+    },
+    {
+      "id": "c002",
+      "game": "原神",
+      "name": "雷电将军",
+      "original": "images/c002-a212fd874d-original",
+      "reason": "仍需提取纯人物；场景透明不等于人物独立"
+    },
+    {
+      "id": "c004",
+      "game": "原神",
+      "name": "纳西妲",
+      "original": "images/c004-da711884f8-original",
+      "reason": "仍需提取纯人物；场景透明不等于人物独立"
+    },
+    {
+      "id": "c003",
+      "game": "原神",
+      "name": "胡桃",
+      "original": "images/c003-a28621f43f-original",
+      "reason": "仍需提取纯人物；场景透明不等于人物独立"
+    },
+    {
+      "id": "s2-ys-c48c0a3e98",
+      "game": "原神",
+      "name": "八重神子",
+      "original": "images/s2-ys-c48c0a3e98-cc6967514c-original",
+      "reason": "仍需提取纯人物；场景透明不等于人物独立"
+    },
+    {
+      "id": "c006",
+      "game": "原神",
+      "name": "神里绫华",
+      "original": "images/c006-135911cea3-original",
+      "reason": "仍需提取纯人物；场景透明不等于人物独立"
+    },
+    {
+      "id": "s2-ys-1176f25c6a",
+      "game": "原神",
+      "name": "甘雨",
+      "original": "images/s2-ys-1176f25c6a-86e7657894-original",
+      "reason": "仍需提取纯人物；场景透明不等于人物独立"
+    },
+    {
+      "id": "c005",
+      "game": "原神",
+      "name": "夜兰",
+      "original": "images/c005-ce3b7cd760-original",
+      "reason": "仍需提取纯人物；场景透明不等于人物独立"
+    },
+    {
+      "id": "c008",
+      "game": "原神",
+      "name": "申鹤",
+      "original": "images/c008-6e9887ebc7-original",
+      "reason": "仍需提取纯人物；场景透明不等于人物独立"
+    },
+    {
+      "id": "c007",
+      "game": "原神",
+      "name": "妮露",
+      "original": "images/c007-1c73915d06-original",
+      "reason": "仍需提取纯人物；场景透明不等于人物独立"
+    },
+    {
+      "id": "c009",
+      "game": "原神",
+      "name": "宵宫",
+      "original": "images/c009-6a30a7da5d-original",
+      "reason": "仍需提取纯人物；场景透明不等于人物独立"
+    },
+    {
+      "id": "s2-ys-2e9ed422c0",
+      "game": "原神",
+      "name": "珊瑚宫心海",
+      "original": "images/s2-ys-2e9ed422c0-d16c722f54-original",
+      "reason": "仍需提取纯人物；场景透明不等于人物独立"
+    },
+    {
+      "id": "c011",
+      "game": "原神",
+      "name": "阿蕾奇诺",
+      "original": "images/c011-2435c13309-original",
+      "reason": "仍需提取纯人物；场景透明不等于人物独立"
+    },
+    {
+      "id": "s2-ys-9b244fbaec",
+      "game": "原神",
+      "name": "娜维娅",
+      "original": "images/s2-ys-9b244fbaec-b754bddf1a-original",
+      "reason": "仍需提取纯人物；场景透明不等于人物独立"
+    },
+    {
+      "id": "c010",
+      "game": "原神",
+      "name": "克洛琳德",
+      "original": "images/c010-f37f9f0c08-original",
+      "reason": "仍需提取纯人物；场景透明不等于人物独立"
+    },
+    {
+      "id": "s2-ys-32fc6b3c4f",
+      "game": "原神",
+      "name": "玛薇卡",
+      "original": "images/s2-ys-32fc6b3c4f-706757ef5e-original",
+      "reason": "仍需提取纯人物；场景透明不等于人物独立"
+    },
+    {
+      "id": "c016",
+      "game": "原神",
+      "name": "茜特菈莉",
+      "original": "images/c016-137fdd3b55-original",
+      "reason": "仍需提取纯人物；场景透明不等于人物独立"
+    },
+    {
+      "id": "s2-ys-2f050637af",
+      "game": "原神",
+      "name": "丝柯克",
+      "original": "images/s2-ys-2f050637af-dbbe1a8669-original",
+      "reason": "仍需提取纯人物；场景透明不等于人物独立"
+    },
+    {
+      "id": "s2-ys-ea6f231386",
+      "game": "原神",
+      "name": "哥伦比娅",
+      "original": "images/s2-ys-ea6f231386-8531f82ca9-original",
+      "reason": "仍需提取纯人物；场景透明不等于人物独立"
+    },
+    {
+      "id": "s2-ys-61f5364f33",
+      "game": "原神",
+      "name": "菈乌玛",
+      "original": "images/s2-ys-61f5364f33-196de84e3e-original",
+      "reason": "仍需提取纯人物；场景透明不等于人物独立"
+    },
+    {
+      "id": "s2-ys-59d3b3bfce",
+      "game": "原神",
+      "name": "奈芙尔",
+      "original": "images/s2-ys-59d3b3bfce-beb844c709-original",
+      "reason": "仍需提取纯人物；场景透明不等于人物独立"
+    },
+    {
+      "id": "s2-ys-9e552aac18",
+      "game": "原神",
+      "name": "伊涅芙",
+      "original": "images/s2-ys-9e552aac18-c272388352-original",
+      "reason": "仍需提取纯人物；场景透明不等于人物独立"
+    },
+    {
+      "id": "s2-ys-dca3ebb397",
+      "game": "原神",
+      "name": "尼可",
+      "original": "images/s2-ys-dca3ebb397-083e0634d0-original",
+      "reason": "仍需提取纯人物；场景透明不等于人物独立"
+    },
+    {
+      "id": "s2-ys-a1441b3f21",
+      "game": "原神",
+      "name": "莉奈娅",
+      "original": "images/s2-ys-a1441b3f21-dd18e17bb3-original",
+      "reason": "仍需提取纯人物；场景透明不等于人物独立"
+    },
+    {
+      "id": "s2-ys-c9c729ede4",
+      "game": "原神",
+      "name": "兹白",
+      "original": "images/s2-ys-c9c729ede4-462ba224ff-original",
+      "reason": "仍需提取纯人物；场景透明不等于人物独立"
+    },
+    {
+      "id": "s2-ys-27d8e41918",
+      "game": "原神",
+      "name": "爱可菲",
+      "original": "images/s2-ys-27d8e41918-d6935d5868-original",
+      "reason": "仍需提取纯人物；场景透明不等于人物独立"
+    },
+    {
+      "id": "s2-ys-9a5ef2ac31",
+      "game": "原神",
+      "name": "薇斯纳",
+      "original": "images/s2-ys-9a5ef2ac31-92f7f1f44e-original",
+      "reason": "仍需提取纯人物；场景透明不等于人物独立"
+    },
+    {
+      "id": "s2-ys-dfae50a2d2",
+      "game": "原神",
+      "name": "沃雅妮莎",
+      "original": "images/s2-ys-dfae50a2d2-c37bf637ba-original",
+      "reason": "仍需提取纯人物；场景透明不等于人物独立"
+    },
+    {
+      "id": "s2-ys-0e6b9f3dd8",
+      "game": "原神",
+      "name": "菲谢尔",
+      "original": "images/s2-ys-0e6b9f3dd8-d62b91d78b-original",
+      "reason": "仍需提取纯人物；场景透明不等于人物独立"
+    },
+    {
+      "id": "s2-ys-e56b2bf940",
+      "game": "原神",
+      "name": "优菈",
+      "original": "images/s2-ys-e56b2bf940-2d3210e093-original",
+      "reason": "仍需提取纯人物；场景透明不等于人物独立"
+    },
+    {
+      "id": "c012",
+      "game": "原神",
+      "name": "闲云",
+      "original": "images/c012-77458fff19-original",
+      "reason": "仍需提取纯人物；场景透明不等于人物独立"
+    },
+    {
+      "id": "s2-ys-a7d5faa04a",
+      "game": "原神",
+      "name": "希诺宁",
+      "original": "images/s2-ys-a7d5faa04a-08c84ecf07-original",
+      "reason": "仍需提取纯人物；场景透明不等于人物独立"
+    },
+    {
+      "id": "s2-zmd-ca24ddb221",
+      "game": "明日方舟：终末地",
+      "name": "莱万汀",
+      "original": "images/s2-zmd-ca24ddb221-26edf993ca-original",
+      "reason": "仍需提取纯人物；场景透明不等于人物独立"
+    },
+    {
+      "id": "s2-zmd-b22593fc33",
+      "game": "明日方舟：终末地",
+      "name": "伊冯",
+      "original": "images/s2-zmd-b22593fc33-d68b35ebc7-original",
+      "reason": "仍需提取纯人物；场景透明不等于人物独立"
+    },
+    {
+      "id": "s2-zmd-a6c2bb864e",
+      "game": "明日方舟：终末地",
+      "name": "洁尔佩塔",
+      "original": "images/s2-zmd-a6c2bb864e-c3ff6ec423-original",
+      "reason": "仍需提取纯人物；场景透明不等于人物独立"
+    },
+    {
+      "id": "s2-zmd-be2ab7a329",
+      "game": "明日方舟：终末地",
+      "name": "艾尔黛拉",
+      "original": "images/s2-zmd-be2ab7a329-007a2e9470-original",
+      "reason": "仍需提取纯人物；场景透明不等于人物独立"
+    },
+    {
+      "id": "s2-zmd-a072bd87b7",
+      "game": "明日方舟：终末地",
+      "name": "庄方宜",
+      "original": "images/s2-zmd-a072bd87b7-62a933f2b4-original",
+      "reason": "仍需提取纯人物；场景透明不等于人物独立"
+    },
+    {
+      "id": "s2-zmd-c1775a13fc",
+      "game": "明日方舟：终末地",
+      "name": "秋栗",
+      "original": "images/s2-zmd-c1775a13fc-409d9919d8-original",
+      "reason": "仍需提取纯人物；场景透明不等于人物独立"
+    },
+    {
+      "id": "s2-zmd-2aee7067a9",
+      "game": "明日方舟：终末地",
+      "name": "汤汤",
+      "original": "images/s2-zmd-2aee7067a9-1eaf43295c-original",
+      "reason": "仍需提取纯人物；场景透明不等于人物独立"
+    },
+    {
+      "id": "s2-zmd-af71c8d9c6",
+      "game": "明日方舟：终末地",
+      "name": "别礼",
+      "original": "images/s2-zmd-af71c8d9c6-3b49dff69c-original",
+      "reason": "仍需提取纯人物；场景透明不等于人物独立"
+    },
+    {
+      "id": "s2-zmd-0e586f4f3b",
+      "game": "明日方舟：终末地",
+      "name": "弭弗",
+      "original": "images/s2-zmd-0e586f4f3b-fb966992fd-original",
+      "reason": "仍需提取纯人物；场景透明不等于人物独立"
+    },
+    {
+      "id": "c120",
+      "game": "明日方舟：终末地",
+      "name": "余烬",
+      "original": "images/c120-c676ea3c71-original",
+      "reason": "仍需提取纯人物；场景透明不等于人物独立"
+    },
+    {
+      "id": "s2-zmd-39fd78a8b0",
+      "game": "明日方舟：终末地",
+      "name": "弧光",
+      "original": "images/s2-zmd-39fd78a8b0-77f2b300dc-original",
+      "reason": "仍需提取纯人物；场景透明不等于人物独立"
+    },
+    {
+      "id": "c119",
+      "game": "明日方舟：终末地",
+      "name": "艾维文娜",
+      "original": "images/c119-a2d691b8a5-original",
+      "reason": "仍需提取纯人物；场景透明不等于人物独立"
+    },
+    {
+      "id": "s2-zmd-6bb20b1953",
+      "game": "明日方舟：终末地",
+      "name": "昼雪",
+      "original": "images/s2-zmd-6bb20b1953-4c32cb4e9d-original",
+      "reason": "仍需提取纯人物；场景透明不等于人物独立"
+    },
+    {
+      "id": "c115",
+      "game": "明日方舟：终末地",
+      "name": "赛希",
+      "original": "images/c115-2c9a528a4c-original",
+      "reason": "仍需提取纯人物；场景透明不等于人物独立"
+    },
+    {
+      "id": "s2-zmd-2cf6f1b724",
+      "game": "明日方舟：终末地",
+      "name": "萤石",
+      "original": "images/s2-zmd-2cf6f1b724-99295b1cd5-original",
+      "reason": "仍需提取纯人物；场景透明不等于人物独立"
+    }
+  ],
+  "avatarCleanup": [
+    {
+      "id": "s2-wutheringwaves-be984a3219",
+      "name": "锁暝",
+      "game": "鸣潮"
+    },
+    {
+      "id": "s2-zzz-1bf39d30ae",
+      "name": "浮波柚叶",
+      "game": "绝区零"
+    },
+    {
+      "id": "s2-yh-824285ccb0",
+      "name": "黑羽",
+      "game": "异环"
+    },
+    {
+      "id": "c059",
+      "name": "白芷",
+      "game": "鸣潮"
+    },
+    {
+      "id": "s2-wutheringwaves-46fa1b3af1",
+      "name": "坎特蕾拉",
+      "game": "鸣潮"
+    },
+    {
+      "id": "s2-wutheringwaves-09c5285b31",
+      "name": "洛可可",
+      "game": "鸣潮"
+    }
+  ],
+  "avatarRejected": [
+    {
+      "id": "s2-wutheringwaves-be984a3219",
+      "game": "鸣潮",
+      "name": "锁暝",
+      "reason": "人物后仍有召唤物、伞或大幅道具，不能作为透明证件照式胸像"
+    },
+    {
+      "id": "c040",
+      "game": "绝区零",
+      "name": "星见雅",
+      "reason": "人物后仍有召唤物、伞或大幅道具，不能作为透明证件照式胸像"
+    },
+    {
+      "id": "s2-zzz-d24d4d248e",
+      "game": "绝区零",
+      "name": "薇薇安",
+      "reason": "人物后仍有召唤物、伞或大幅道具，不能作为透明证件照式胸像"
+    },
+    {
+      "id": "s2-zzz-1bf39d30ae",
+      "game": "绝区零",
+      "name": "浮波柚叶",
+      "reason": "人物后仍有召唤物、伞或大幅道具，不能作为透明证件照式胸像"
+    },
+    {
+      "id": "s2-yh-824285ccb0",
+      "game": "异环",
+      "name": "黑羽",
+      "reason": "人物后仍有召唤物、伞或大幅道具，不能作为透明证件照式胸像"
+    }
+  ]
+}

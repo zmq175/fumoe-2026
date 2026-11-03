@@ -1,0 +1,10 @@
+{
+  "pgr": "https://pns.kurogames.com/ (embedded pns-logo image)",
+  "genshin": "https://ys.mihoyo.com/ (embedded pc-logo image)",
+  "hi3": "https://fastcdn.mihoyo.com/mi18n/bh3_cn/m20230317hy14h0glc0/upload/8f02ca5c3e2e93394b6834c24641efe2_6979556397869994021.png",
+  "nte": "https://yh.wanmei.com/images/cover260226/logo.png",
+  "wuwa": "https://mc.kurogames.com/website-preface/assets/logo-7a7d21d1.png",
+  "hsr": "https://webstatic.mihoyo.com/upload/static-resource/2021/09/28/18c74ced250b6fca07bcd005be118379_1363702967341956951.png",
+  "zzz": "https://zenless.hoyoverse.com/_nuxt/img/logo.1e072ee.png",
+  "endfield": "https://endfield.hypergryph.com/ (inline header SVG)"
+}
