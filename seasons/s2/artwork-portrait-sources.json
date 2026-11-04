@@ -1352,19 +1352,31 @@
       "id": "s2-sr-beb377a1cc",
       "game": "崩坏：星穹铁道",
       "name": "昔涟",
-      "file": "ai-candidates/s2-sr-beb377a1cc-full-v3.png",
+      "file": "ai-candidates/s2-sr-beb377a1cc-20261104-clean.png",
       "eyes": [
-        616,
-        453
+        560,
+        518
       ],
-      "faceWidth": 103,
-      "avatarFaceWidth": 160,
+      "faceWidth": 105,
+      "headTop": 400,
+      "headTopMethod": "manual-source-review",
+      "matchEyeY": 265,
+      "avatarFaceWidth": 145,
       "avatarEyeY": 230,
-      "method": "gpt-image",
-      "silhouetteReviewed": true,
-      "sourceUrl": null,
-      "sourcePage": null,
-      "review": "从同一套独立人物素材裁切证件照式胸像；面部居中，透明背景；待小尺寸全量复核"
+      "galleryKind": "full",
+      "method": "gpt-image-and-alpha-cleanup",
+      "review": "用户上传指定立绘；去除背景特效，面部使用原图像素缩放合成，保留原眼睛及笑容。",
+      "candidateSource": {
+        "title": "用户选定：昔涟原画面部保留版",
+        "url": "",
+        "sourcePage": "",
+        "localOriginal": "user-sources/s2-sr-beb377a1cc-20261104.png"
+      },
+      "cleanupBatch": "pgr-refresh-20261104",
+      "avatarCleanupRequired": false,
+      "sourceUrl": "",
+      "sourcePage": "",
+      "silhouetteReviewed": true
     },
     {
       "id": "c031",

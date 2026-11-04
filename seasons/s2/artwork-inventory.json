@@ -22590,83 +22590,62 @@
         "matchReview": "自动上部构图，待逐图校准"
       },
       "processedArtwork": {
-        "image": "images/s2-sr-beb377a1cc-27591557af56-composed-v1-gallery.webp",
-        "avatarImage": "images/s2-sr-beb377a1cc-27591557af56-composed-v1-avatar.png",
+        "image": "images/s2-sr-beb377a1cc-0a055b8e5796-refresh-gallery.webp",
+        "avatarImage": "images/s2-sr-beb377a1cc-0a055b8e5796-refresh-avatar.png",
         "avatarStyle": "transparent-id-bust-512-padding26",
-        "matchImage": "images/s2-sr-beb377a1cc-27591557af56-composed-v1-match.webp",
-        "mobileImage": "images/s2-sr-beb377a1cc-27591557af56-composed-v1-mobile.webp",
-        "detailImage": "images/s2-sr-beb377a1cc-27591557af56-composed-v1-detail.webp",
-        "method": "gpt-image",
-        "review": "独立人物透明提取；人工定位面部；服装最新性与最终小尺寸观感待复核",
+        "matchImage": "images/s2-sr-beb377a1cc-0a055b8e5796-refresh-match.webp",
+        "mobileImage": "images/s2-sr-beb377a1cc-0a055b8e5796-refresh-mobile.webp",
+        "detailImage": "images/s2-sr-beb377a1cc-0a055b8e5796-refresh-detail.webp",
+        "method": "gpt-image-and-alpha-cleanup",
+        "review": "用户上传指定立绘；去除背景特效，面部使用原图像素缩放合成，保留原眼睛及笑容。",
         "galleryKind": "full",
-        "cleanupBatch": "full-source-v3",
-        "candidateSource": null,
+        "cleanupBatch": "pgr-refresh-20261104",
+        "candidateSource": {
+          "title": "用户选定：昔涟原画面部保留版",
+          "url": "",
+          "sourcePage": "",
+          "localOriginal": "user-sources/s2-sr-beb377a1cc-20261104.png"
+        },
         "avatarCleanupRequired": false,
         "visualApproved": false,
-        "sourceSha256": "289209e8573ca268e65ecaa3af6173ce3069bf4841bf184e1744444b8f75d8cf",
-        "cutoutSha256": "663e8969aed10bca9143c225172d890a0e8f58b07b03e869af39d36dc83f5b7d",
+        "sourceSha256": "adaed44724c2bf71a7251f5855ea33d5202d9b5c59c47d69cdf60994c108a75a",
+        "cutoutSha256": "0a055b8e5796f3a0131cda1328765ccf00bda362e484670ee041ba04b1b7571a",
         "transparentFraction": 0.7536680071935675,
         "framing": {
           "eyes": [
-            616,
-            453
+            560,
+            518
           ],
-          "faceWidth": 103,
+          "faceWidth": 105,
           "sourceDimensions": [
-            1254,
-            1254
+            1123,
+            1401
           ],
           "outputs": {
-            "gallery": {
-              "width": 900,
-              "height": 1200,
-              "scale": 0.8702659145850121,
-              "anchor": [
-                626.5,
-                627
-              ],
-              "target": [
-                450,
-                600
-              ]
-            },
-            "avatar": {
-              "width": 460,
-              "height": 460,
-              "scale": 1.5533980582524272,
-              "anchor": [
-                616,
-                453
-              ],
-              "target": [
-                230,
-                230
-              ]
-            },
             "match": {
               "width": 960,
               "height": 540,
-              "scale": 1.5555555555555556,
+              "scale": 1.619047619047619,
               "anchor": [
-                616,
-                453
+                560,
+                518
               ],
               "target": [
                 480,
-                270
+                265
               ]
             },
             "mobile": {
               "width": 540,
               "height": 540,
-              "scale": 1.5555555555555556,
+              "scale": 1.619047619047619,
               "anchor": [
-                616,
-                453
+                560,
+                518
               ],
               "target": [
                 270,
-                270
+                265
               ]
             }
           }
@@ -22675,21 +22654,21 @@
         "skinVerified": false
       },
       "portraitArtwork": {
-        "avatarImage": "images/s2-sr-beb377a1cc-d6a45562a653-portrait-bust.png",
-        "source": "ai-candidates/s2-sr-beb377a1cc-full-v3.png",
-        "sourceUrl": null,
-        "sourceSha256": "663e8969aed10bca9143c225172d890a0e8f58b07b03e869af39d36dc83f5b7d",
-        "review": "从同一套独立人物素材裁切证件照式胸像；面部居中，透明背景；待小尺寸全量复核",
+        "avatarImage": "images/s2-sr-beb377a1cc-0a055b8e5796-refresh-avatar.png",
+        "source": "ai-candidates/s2-sr-beb377a1cc-20261104-clean.png",
+        "sourceUrl": "",
+        "sourceSha256": "0a055b8e5796f3a0131cda1328765ccf00bda362e484670ee041ba04b1b7571a",
+        "review": "用户上传指定立绘；去除背景特效，面部使用原图像素缩放合成，保留原眼睛及笑容。",
         "method": "gpt-image",
         "silhouetteReviewed": true,
         "visualApproved": false,
         "latestSkinVerified": false,
         "usage": "avatar-only",
         "eyes": [
-          616,
-          453
+          560,
+          518
         ],
-        "faceWidth": 103
+        "faceWidth": 105
       }
     },
     {
