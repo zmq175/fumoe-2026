@@ -630,19 +630,31 @@
       "id": "s2-zspms-3e32da9648",
       "game": "战双帕弥什",
       "name": "α",
-      "file": "images/s2-zspms-3e32da9648-c4b45588c5-original",
+      "file": "pgr-refresh/α-original.png",
       "eyes": [
-        507,
-        354
+        447,
+        245
       ],
-      "faceWidth": 171,
-      "avatarFaceWidth": 155,
-      "avatarEyeY": 260,
+      "faceWidth": 180,
+      "headTop": 0,
+      "headTopMethod": "manual-source-review",
+      "matchEyeY": 270,
+      "avatarFaceWidth": 145,
+      "avatarEyeY": 230,
+      "galleryKind": "partial",
       "method": "source-alpha",
-      "silhouetteReviewed": true,
-      "sourceUrl": "https://patchwiki.biligame.com/images/zspms/8/85/9o9vl9p21od2axez20lj3oatpdpsn6l.png",
-      "sourcePage": "https://wiki.biligame.com/zspms/%E9%9C%B2%E8%A5%BF%E4%BA%9A%C2%B7%E6%B7%B1%E7%BA%A2%E4%B9%8B%E6%B8%8A",
-      "review": "与二维角色立绘同源的小头像；替换旧模型图头像"
+      "review": "新版机体官方立绘，保留原画范围及透明通道；统一人物构图，不补画身体。",
+      "candidateSource": {
+        "title": "文件:角色 露西亚 逆冕 立绘.png",
+        "url": "https://patchwiki.biligame.com/images/zspms/7/73/iql00wx01aglaoql1levuo71ps8lkti.png",
+        "sourcePage": "https://wiki.biligame.com/zspms/露西亚·逆冕",
+        "localOriginal": "pgr-refresh/α-original.png"
+      },
+      "cleanupBatch": "pgr-refresh-20261104",
+      "avatarCleanupRequired": false,
+      "sourceUrl": "https://patchwiki.biligame.com/images/zspms/7/73/iql00wx01aglaoql1levuo71ps8lkti.png",
+      "sourcePage": "https://wiki.biligame.com/zspms/露西亚·逆冕",
+      "silhouetteReviewed": true
     },
     {
       "id": "c106",
@@ -698,55 +710,91 @@
       "id": "c109",
       "game": "战双帕弥什",
       "name": "赛琳娜",
-      "file": "images/c109-042ddebd70-original",
+      "file": "pgr-refresh/赛琳娜-original.png",
       "eyes": [
-        486,
-        365
+        615,
+        325
       ],
-      "faceWidth": 164,
-      "avatarFaceWidth": 155,
-      "avatarEyeY": 260,
+      "faceWidth": 160,
+      "headTop": 95,
+      "headTopMethod": "manual-source-review",
+      "matchEyeY": 270,
+      "avatarFaceWidth": 145,
+      "avatarEyeY": 230,
+      "galleryKind": "partial",
       "method": "source-alpha",
-      "silhouetteReviewed": true,
-      "sourceUrl": "https://patchwiki.biligame.com/images/zspms/2/2b/6nnihfs66798hp80q7nhl7jdtntb3px.png",
-      "sourcePage": "https://wiki.biligame.com/zspms/%E6%96%87%E4%BB%B6:%E8%A7%92%E8%89%B2_%E8%B5%9B%E7%90%B3%E5%A8%9C_%E5%B2%9A%E9%9F%B3_%E7%AB%8B%E7%BB%98.png",
-      "review": "与二维角色立绘同源的小头像；替换旧模型图头像"
+      "review": "新版机体官方立绘，保留原画范围及透明通道；统一人物构图，不补画身体。",
+      "candidateSource": {
+        "title": "文件:角色 赛琳娜 希声 立绘.png",
+        "url": "https://patchwiki.biligame.com/images/zspms/f/f2/io3pd0jc37xf8c3dtlg4iqrf2pb2a3t.png",
+        "sourcePage": "https://wiki.biligame.com/zspms/赛琳娜·希声",
+        "localOriginal": "pgr-refresh/赛琳娜-original.png"
+      },
+      "cleanupBatch": "pgr-refresh-20261104",
+      "avatarCleanupRequired": false,
+      "sourceUrl": "https://patchwiki.biligame.com/images/zspms/f/f2/io3pd0jc37xf8c3dtlg4iqrf2pb2a3t.png",
+      "sourcePage": "https://wiki.biligame.com/zspms/赛琳娜·希声",
+      "silhouetteReviewed": true
     },
     {
       "id": "c107",
       "game": "战双帕弥什",
       "name": "薇拉",
-      "file": "images/c107-8a9cb59549-original",
+      "file": "pgr-refresh/薇拉-original.png",
       "eyes": [
-        496,
-        361
+        535,
+        315
       ],
-      "faceWidth": 157,
-      "avatarFaceWidth": 155,
-      "avatarEyeY": 260,
+      "faceWidth": 170,
+      "headTop": 0,
+      "headTopMethod": "manual-source-review",
+      "matchEyeY": 270,
+      "avatarFaceWidth": 145,
+      "avatarEyeY": 230,
+      "galleryKind": "partial",
       "method": "source-alpha",
-      "silhouetteReviewed": true,
-      "sourceUrl": "https://patchwiki.biligame.com/images/zspms/b/bf/6tg9m3uh57i5mv5h7ldb0jvy3z0mf33.png",
-      "sourcePage": "https://wiki.biligame.com/zspms/%E6%96%87%E4%BB%B6:%E8%A7%92%E8%89%B2_%E8%96%87%E6%8B%89_%E7%91%B0%E4%B8%BD_%E7%AB%8B%E7%BB%98.png",
-      "review": "与二维角色立绘同源的小头像；替换旧模型图头像"
+      "review": "新版机体官方立绘，保留原画范围及透明通道；统一人物构图，不补画身体。",
+      "candidateSource": {
+        "title": "文件:角色 薇拉 灼惘 立绘.png",
+        "url": "https://patchwiki.biligame.com/images/zspms/c/c4/06g8ah0jwsuzaw59y1abt52b3ddj12k.png",
+        "sourcePage": "https://wiki.biligame.com/zspms/薇拉·灼惘",
+        "localOriginal": "pgr-refresh/薇拉-original.png"
+      },
+      "cleanupBatch": "pgr-refresh-20261104",
+      "avatarCleanupRequired": false,
+      "sourceUrl": "https://patchwiki.biligame.com/images/zspms/c/c4/06g8ah0jwsuzaw59y1abt52b3ddj12k.png",
+      "sourcePage": "https://wiki.biligame.com/zspms/薇拉·灼惘",
+      "silhouetteReviewed": true
     },
     {
       "id": "s2-zspms-22e5ce8e9d",
       "game": "战双帕弥什",
       "name": "比安卡",
-      "file": "images/s2-zspms-22e5ce8e9d-c5a8579964-original",
+      "file": "pgr-refresh/比安卡-original.png",
       "eyes": [
-        482,
-        379
+        646,
+        337
       ],
-      "faceWidth": 154,
-      "avatarFaceWidth": 155,
-      "avatarEyeY": 260,
+      "faceWidth": 150,
+      "headTop": 0,
+      "headTopMethod": "manual-source-review",
+      "matchEyeY": 270,
+      "avatarFaceWidth": 145,
+      "avatarEyeY": 230,
+      "galleryKind": "partial",
       "method": "source-alpha",
-      "silhouetteReviewed": true,
-      "sourceUrl": "https://patchwiki.biligame.com/images/zspms/2/2b/1g134ynjb0d6ybh7ksztm09fmt8n764.png",
-      "sourcePage": "https://wiki.biligame.com/zspms/%E6%96%87%E4%BB%B6:%E8%A7%92%E8%89%B2_%E6%AF%94%E5%AE%89%E5%8D%A1_%E9%9B%B6%E5%BA%A6_%E7%AB%8B%E7%BB%98.png",
-      "review": "与二维角色立绘同源的小头像；替换旧模型图头像"
+      "review": "新版机体官方立绘，保留原画范围及透明通道；统一人物构图，不补画身体。",
+      "candidateSource": {
+        "title": "文件:角色 比安卡 晖暮 立绘.png",
+        "url": "https://patchwiki.biligame.com/images/zspms/8/80/fmwpdrm8befyipoqcb785blewzdcbq8.png",
+        "sourcePage": "https://wiki.biligame.com/zspms/比安卡·晖暮",
+        "localOriginal": "pgr-refresh/比安卡-original.png"
+      },
+      "cleanupBatch": "pgr-refresh-20261104",
+      "avatarCleanupRequired": false,
+      "sourceUrl": "https://patchwiki.biligame.com/images/zspms/8/80/fmwpdrm8befyipoqcb785blewzdcbq8.png",
+      "sourcePage": "https://wiki.biligame.com/zspms/比安卡·晖暮",
+      "silhouetteReviewed": true
     },
     {
       "id": "c108",
@@ -806,37 +854,61 @@
       "id": "s2-zspms-4252de8219",
       "game": "战双帕弥什",
       "name": "七实",
-      "file": "images/s2-zspms-4252de8219-d7089f59dc-original",
+      "file": "pgr-refresh/七实-original.png",
       "eyes": [
-        425,
-        358
+        450,
+        410
       ],
-      "faceWidth": 154,
-      "avatarFaceWidth": 155,
-      "avatarEyeY": 260,
+      "faceWidth": 200,
+      "headTop": 95,
+      "headTopMethod": "manual-source-review",
+      "matchEyeY": 270,
+      "avatarFaceWidth": 145,
+      "avatarEyeY": 230,
+      "galleryKind": "partial",
       "method": "source-alpha",
-      "silhouetteReviewed": true,
-      "sourceUrl": "https://patchwiki.biligame.com/images/zspms/8/8b/4pdlmzpunyucs9b2aq7jjej317o0m8w.png",
-      "sourcePage": "https://wiki.biligame.com/zspms/%E6%96%87%E4%BB%B6:%E8%A7%92%E8%89%B2_%E4%B8%83%E5%AE%9E_%E8%84%89%E5%86%B2_%E7%AB%8B%E7%BB%98.png",
-      "review": "与二维角色立绘同源的小头像；替换旧模型图头像"
+      "review": "新版机体官方立绘，保留原画范围及透明通道；统一人物构图，不补画身体。",
+      "candidateSource": {
+        "title": "文件:角色 七实 芒星之迹 立绘.png",
+        "url": "https://patchwiki.biligame.com/images/zspms/4/48/4uuv376acf8y8c4ddj6tsq2dafg0c7w.png",
+        "sourcePage": "https://wiki.biligame.com/zspms/七实·芒星之迹",
+        "localOriginal": "pgr-refresh/七实-original.png"
+      },
+      "cleanupBatch": "pgr-refresh-20261104",
+      "avatarCleanupRequired": false,
+      "sourceUrl": "https://patchwiki.biligame.com/images/zspms/4/48/4uuv376acf8y8c4ddj6tsq2dafg0c7w.png",
+      "sourcePage": "https://wiki.biligame.com/zspms/七实·芒星之迹",
+      "silhouetteReviewed": true
     },
     {
       "id": "s2-zspms-f04ab13f4e",
       "game": "战双帕弥什",
       "name": "卡列尼娜",
-      "file": "images/s2-zspms-f04ab13f4e-501a8113e4-original",
+      "file": "pgr-refresh/卡列尼娜-original.png",
       "eyes": [
-        475,
-        358
+        652,
+        339
       ],
-      "faceWidth": 171,
-      "avatarFaceWidth": 155,
-      "avatarEyeY": 260,
+      "faceWidth": 180,
+      "headTop": 170,
+      "headTopMethod": "manual-source-review",
+      "matchEyeY": 270,
+      "avatarFaceWidth": 145,
+      "avatarEyeY": 230,
+      "galleryKind": "partial",
       "method": "source-alpha",
-      "silhouetteReviewed": true,
-      "sourceUrl": "https://patchwiki.biligame.com/images/zspms/5/55/m3yoe9h3jf1zh7hu4zgmgcorgswkbd3.png",
-      "sourcePage": "https://wiki.biligame.com/zspms/%E6%96%87%E4%BB%B6:%E7%AB%8B%E7%BB%98_%E5%8D%A1%E5%88%97%E5%B0%BC%E5%A8%9C_%E7%83%AC%E7%87%83.png",
-      "review": "与二维角色立绘同源的小头像；替换旧模型图头像"
+      "review": "新版机体官方立绘，保留原画范围及透明通道；统一人物构图，不补画身体。",
+      "candidateSource": {
+        "title": "文件:角色 卡列尼娜 烬航 立绘.png",
+        "url": "https://patchwiki.biligame.com/images/zspms/e/e8/fbgw7qwlauv4y6a8nz1k0kv09voe8qr.png",
+        "sourcePage": "https://wiki.biligame.com/zspms/卡列尼娜·烬航",
+        "localOriginal": "pgr-refresh/卡列尼娜-original.png"
+      },
+      "cleanupBatch": "pgr-refresh-20261104",
+      "avatarCleanupRequired": false,
+      "sourceUrl": "https://patchwiki.biligame.com/images/zspms/e/e8/fbgw7qwlauv4y6a8nz1k0kv09voe8qr.png",
+      "sourcePage": "https://wiki.biligame.com/zspms/卡列尼娜·烬航",
+      "silhouetteReviewed": true
     },
     {
       "id": "s2-zspms-d7eccc55d5",
@@ -1004,19 +1076,31 @@
       "id": "s2-zspms-877255f18e",
       "game": "战双帕弥什",
       "name": "布偶熊",
-      "file": "images/s2-zspms-877255f18e-4192bf32fd-original",
+      "file": "pgr-refresh/布偶熊-original.png",
       "eyes": [
-        489,
-        379
+        545,
+        245
       ],
-      "faceWidth": 157,
-      "avatarFaceWidth": 155,
-      "avatarEyeY": 260,
+      "faceWidth": 190,
+      "headTop": 0,
+      "headTopMethod": "manual-source-review",
+      "matchEyeY": 270,
+      "avatarFaceWidth": 145,
+      "avatarEyeY": 230,
+      "galleryKind": "partial",
       "method": "source-alpha",
-      "silhouetteReviewed": true,
-      "sourceUrl": "https://patchwiki.biligame.com/images/zspms/f/f2/96z2btp2y8n7peihnrrqxq30jtzayxr.png",
-      "sourcePage": "https://wiki.biligame.com/zspms/%E6%96%87%E4%BB%B6:%E8%A7%92%E8%89%B2_%E5%B8%83%E5%81%B6%E7%86%8A_%E8%A7%85%E8%AF%AD_%E7%AB%8B%E7%BB%98.png",
-      "review": "与二维角色立绘同源的小头像；替换旧模型图头像"
+      "review": "新版机体官方立绘，保留原画范围及透明通道；统一人物构图，不补画身体。",
+      "candidateSource": {
+        "title": "文件:角色 布偶熊 骇影 立绘.png",
+        "url": "https://patchwiki.biligame.com/images/zspms/7/7c/hbv3xull598wjckn8sbw2ie6afka1i9.png",
+        "sourcePage": "https://wiki.biligame.com/zspms/布偶熊·骇影",
+        "localOriginal": "pgr-refresh/布偶熊-original.png"
+      },
+      "cleanupBatch": "pgr-refresh-20261104",
+      "avatarCleanupRequired": false,
+      "sourceUrl": "https://patchwiki.biligame.com/images/zspms/7/7c/hbv3xull598wjckn8sbw2ie6afka1i9.png",
+      "sourcePage": "https://wiki.biligame.com/zspms/布偶熊·骇影",
+      "silhouetteReviewed": true
     },
     {
       "id": "s2-zspms-10274e94b4",

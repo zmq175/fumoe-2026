@@ -6708,96 +6708,62 @@
         "matchReview": "自动上部构图，待逐图校准"
       },
       "processedArtwork": {
-        "image": "images/s2-zspms-3e32da9648-c663a83cb02f-composed-v1-gallery.webp",
-        "avatarImage": "images/s2-zspms-3e32da9648-c663a83cb02f-composed-v1-avatar.png",
+        "image": "images/s2-zspms-3e32da9648-669fc0777e35-refresh-gallery.webp",
+        "avatarImage": "images/s2-zspms-3e32da9648-669fc0777e35-refresh-avatar.png",
         "avatarStyle": "transparent-id-bust-512-padding26",
-        "matchImage": "images/s2-zspms-3e32da9648-c663a83cb02f-composed-v1-match.webp",
-        "mobileImage": "images/s2-zspms-3e32da9648-c663a83cb02f-composed-v1-mobile.webp",
-        "detailImage": "images/s2-zspms-3e32da9648-c663a83cb02f-composed-v1-detail.webp",
+        "matchImage": "images/s2-zspms-3e32da9648-669fc0777e35-refresh-match.webp",
+        "mobileImage": "images/s2-zspms-3e32da9648-669fc0777e35-refresh-mobile.webp",
+        "detailImage": "images/s2-zspms-3e32da9648-669fc0777e35-refresh-detail.webp",
         "method": "source-alpha",
-        "review": "撤换自动补选的模型展示图；使用角色二维立绘，保留原画范围；服装最新性未核验",
+        "review": "新版机体官方立绘，保留原画范围及透明通道；统一人物构图，不补画身体。",
         "galleryKind": "partial",
-        "cleanupBatch": "pgr-illustration-correction",
+        "cleanupBatch": "pgr-refresh-20261104",
         "candidateSource": {
-          "title": "文件:角色 露西亚 深红之渊 立绘.png",
-          "timestamp": "2025-03-18T02:09:54Z",
-          "size": 633358,
-          "width": 1000,
-          "height": 1080,
-          "url": "https://patchwiki.biligame.com/images/zspms/8/85/9o9vl9p21od2axez20lj3oatpdpsn6l.png",
-          "descriptionurl": "https://wiki.biligame.com/zspms/%E6%96%87%E4%BB%B6:%E8%A7%92%E8%89%B2_%E9%9C%B2%E8%A5%BF%E4%BA%9A_%E6%B7%B1%E7%BA%A2%E4%B9%8B%E6%B8%8A_%E7%AB%8B%E7%BB%98.png",
-          "descriptionshorturl": "https://wiki.biligame.com/zspms/index.php?curid=1937",
-          "mime": "image/png",
-          "score": 125,
-          "sourcePage": "https://wiki.biligame.com/zspms/%E9%9C%B2%E8%A5%BF%E4%BA%9A%C2%B7%E6%B7%B1%E7%BA%A2%E4%B9%8B%E6%B8%8A",
-          "localOriginal": "images/s2-zspms-3e32da9648-c4b45588c5-original"
+          "title": "文件:角色 露西亚 逆冕 立绘.png",
+          "url": "https://patchwiki.biligame.com/images/zspms/7/73/iql00wx01aglaoql1levuo71ps8lkti.png",
+          "sourcePage": "https://wiki.biligame.com/zspms/露西亚·逆冕",
+          "localOriginal": "pgr-refresh/α-original.png"
         },
         "avatarCleanupRequired": false,
         "visualApproved": false,
-        "sourceSha256": "9abd886aaf36b2e0d633abc051aa4e330e33b422d4a222df1febde035a066e39",
-        "cutoutSha256": "9abd886aaf36b2e0d633abc051aa4e330e33b422d4a222df1febde035a066e39",
+        "sourceSha256": "669fc0777e35017a9e26f52ff109459fe9832c825b6ae960005121c56d997e33",
+        "cutoutSha256": "669fc0777e35017a9e26f52ff109459fe9832c825b6ae960005121c56d997e33",
         "transparentFraction": 0.4011796296296296,
         "framing": {
           "eyes": [
-            507,
-            354
+            447,
+            245
           ],
-          "faceWidth": 171,
+          "faceWidth": 180,
           "sourceDimensions": [
             1000,
             1080
           ],
           "outputs": {
-            "gallery": {
-              "width": 900,
-              "height": 1200,
-              "scale": 0.84472049689441,
-              "anchor": [
-                482.5,
-                554.5
-              ],
-              "target": [
-                450,
-                600
-              ]
-            },
-            "avatar": {
-              "width": 460,
-              "height": 460,
-              "scale": 0.9064327485380117,
-              "anchor": [
-                507,
-                354
-              ],
-              "target": [
-                230,
-                260
-              ]
-            },
             "match": {
               "width": 960,
               "height": 540,
-              "scale": 0.8966861598440546,
+              "scale": 0.9444444444444444,
               "anchor": [
-                507,
-                354
+                447,
+                245
               ],
               "target": [
                 480,
-                285
+                270
               ]
             },
             "mobile": {
               "width": 540,
               "height": 540,
-              "scale": 0.8966861598440546,
+              "scale": 0.9444444444444444,
               "anchor": [
-                507,
-                354
+                447,
+                245
               ],
               "target": [
                 270,
-                285
+                270
               ]
             }
           }
@@ -6806,21 +6772,21 @@
         "skinVerified": false
       },
       "portraitArtwork": {
-        "avatarImage": "images/s2-zspms-3e32da9648-dd6427be7f76-portrait-bust.png",
-        "source": "images/s2-zspms-3e32da9648-c4b45588c5-original",
-        "sourceUrl": "https://patchwiki.biligame.com/images/zspms/8/85/9o9vl9p21od2axez20lj3oatpdpsn6l.png",
-        "sourceSha256": "9abd886aaf36b2e0d633abc051aa4e330e33b422d4a222df1febde035a066e39",
-        "review": "与二维角色立绘同源的小头像；替换旧模型图头像",
+        "avatarImage": "images/s2-zspms-3e32da9648-669fc0777e35-refresh-avatar.png",
+        "source": "pgr-refresh/α-original.png",
+        "sourceUrl": "https://patchwiki.biligame.com/images/zspms/7/73/iql00wx01aglaoql1levuo71ps8lkti.png",
+        "sourceSha256": "669fc0777e35017a9e26f52ff109459fe9832c825b6ae960005121c56d997e33",
+        "review": "新版机体官方立绘，保留原画范围及透明通道；统一人物构图，不补画身体。",
         "method": "source-alpha",
         "silhouetteReviewed": true,
         "visualApproved": false,
         "latestSkinVerified": false,
         "usage": "avatar-only",
         "eyes": [
-          507,
-          354
+          447,
+          245
         ],
-        "faceWidth": 171
+        "faceWidth": 180
       }
     },
     {
@@ -7475,96 +7441,62 @@
         "matchReview": "自动上部构图，待逐图校准"
       },
       "processedArtwork": {
-        "image": "images/c109-2e965970a329-composed-v1-gallery.webp",
-        "avatarImage": "images/c109-2e965970a329-composed-v1-avatar.png",
+        "image": "images/c109-07298bcb1993-refresh-gallery.webp",
+        "avatarImage": "images/c109-07298bcb1993-refresh-avatar.png",
         "avatarStyle": "transparent-id-bust-512-padding26",
-        "matchImage": "images/c109-2e965970a329-composed-v1-match.webp",
-        "mobileImage": "images/c109-2e965970a329-composed-v1-mobile.webp",
-        "detailImage": "images/c109-2e965970a329-composed-v1-detail.webp",
+        "matchImage": "images/c109-07298bcb1993-refresh-match.webp",
+        "mobileImage": "images/c109-07298bcb1993-refresh-mobile.webp",
+        "detailImage": "images/c109-07298bcb1993-refresh-detail.webp",
         "method": "source-alpha",
-        "review": "撤换自动补选的模型展示图；使用角色二维立绘，保留原画范围；服装最新性未核验",
+        "review": "新版机体官方立绘，保留原画范围及透明通道；统一人物构图，不补画身体。",
         "galleryKind": "partial",
-        "cleanupBatch": "pgr-illustration-correction",
+        "cleanupBatch": "pgr-refresh-20261104",
         "candidateSource": {
-          "title": "文件:角色 赛琳娜 岚音 立绘.png",
-          "timestamp": "2021-03-05T04:17:54Z",
-          "size": 517899,
-          "width": 1000,
-          "height": 1080,
-          "url": "https://patchwiki.biligame.com/images/zspms/2/2b/6nnihfs66798hp80q7nhl7jdtntb3px.png",
-          "descriptionurl": "https://wiki.biligame.com/zspms/%E6%96%87%E4%BB%B6:%E8%A7%92%E8%89%B2_%E8%B5%9B%E7%90%B3%E5%A8%9C_%E5%B2%9A%E9%9F%B3_%E7%AB%8B%E7%BB%98.png",
-          "descriptionshorturl": "https://wiki.biligame.com/zspms/index.php?curid=6461",
-          "mime": "image/png",
-          "score": 125,
-          "sourcePage": "https://wiki.biligame.com/zspms/%E6%96%87%E4%BB%B6:%E8%A7%92%E8%89%B2_%E8%B5%9B%E7%90%B3%E5%A8%9C_%E5%B2%9A%E9%9F%B3_%E7%AB%8B%E7%BB%98.png",
-          "localOriginal": "images/c109-042ddebd70-original"
+          "title": "文件:角色 赛琳娜 希声 立绘.png",
+          "url": "https://patchwiki.biligame.com/images/zspms/f/f2/io3pd0jc37xf8c3dtlg4iqrf2pb2a3t.png",
+          "sourcePage": "https://wiki.biligame.com/zspms/赛琳娜·希声",
+          "localOriginal": "pgr-refresh/赛琳娜-original.png"
         },
         "avatarCleanupRequired": false,
         "visualApproved": false,
-        "sourceSha256": "33a9755e5d428a6a0667d0e5c7bbff31a1d157a24a8a7656cc04ca76797d66c0",
-        "cutoutSha256": "33a9755e5d428a6a0667d0e5c7bbff31a1d157a24a8a7656cc04ca76797d66c0",
+        "sourceSha256": "07298bcb199354daa9d63aed2bcefc35e6aa99fcd0a2ffc7a371e31afa627b1e",
+        "cutoutSha256": "07298bcb199354daa9d63aed2bcefc35e6aa99fcd0a2ffc7a371e31afa627b1e",
         "transparentFraction": 0.6061481481481481,
         "framing": {
           "eyes": [
-            486,
-            365
+            615,
+            325
           ],
-          "faceWidth": 164,
+          "faceWidth": 160,
           "sourceDimensions": [
             1000,
             1080
           ],
           "outputs": {
-            "gallery": {
-              "width": 900,
-              "height": 1200,
-              "scale": 0.9368541905855339,
-              "anchor": [
-                550,
-                614
-              ],
-              "target": [
-                450,
-                600
-              ]
-            },
-            "avatar": {
-              "width": 460,
-              "height": 460,
-              "scale": 0.9451219512195121,
-              "anchor": [
-                486,
-                365
-              ],
-              "target": [
-                230,
-                260
-              ]
-            },
             "match": {
               "width": 960,
               "height": 540,
-              "scale": 0.934959349593496,
+              "scale": 1.0347826086956522,
               "anchor": [
-                486,
-                365
+                615,
+                325
               ],
               "target": [
                 480,
-                285
+                270
               ]
             },
             "mobile": {
               "width": 540,
               "height": 540,
-              "scale": 0.934959349593496,
+              "scale": 1.0347826086956522,
               "anchor": [
-                486,
-                365
+                615,
+                325
               ],
               "target": [
                 270,
-                285
+                270
               ]
             }
           }
@@ -7573,21 +7505,21 @@
         "skinVerified": false
       },
       "portraitArtwork": {
-        "avatarImage": "images/c109-ddb571cd0632-portrait-bust.png",
-        "source": "images/c109-042ddebd70-original",
-        "sourceUrl": "https://patchwiki.biligame.com/images/zspms/2/2b/6nnihfs66798hp80q7nhl7jdtntb3px.png",
-        "sourceSha256": "33a9755e5d428a6a0667d0e5c7bbff31a1d157a24a8a7656cc04ca76797d66c0",
-        "review": "与二维角色立绘同源的小头像；替换旧模型图头像",
+        "avatarImage": "images/c109-07298bcb1993-refresh-avatar.png",
+        "source": "pgr-refresh/赛琳娜-original.png",
+        "sourceUrl": "https://patchwiki.biligame.com/images/zspms/f/f2/io3pd0jc37xf8c3dtlg4iqrf2pb2a3t.png",
+        "sourceSha256": "07298bcb199354daa9d63aed2bcefc35e6aa99fcd0a2ffc7a371e31afa627b1e",
+        "review": "新版机体官方立绘，保留原画范围及透明通道；统一人物构图，不补画身体。",
         "method": "source-alpha",
         "silhouetteReviewed": true,
         "visualApproved": false,
         "latestSkinVerified": false,
         "usage": "avatar-only",
         "eyes": [
-          486,
-          365
+          615,
+          325
         ],
-        "faceWidth": 164
+        "faceWidth": 160
       }
     },
     {
@@ -7722,96 +7654,62 @@
         "matchReview": "自动上部构图，待逐图校准"
       },
       "processedArtwork": {
-        "image": "images/c107-56cad83b8762-composed-v1-gallery.webp",
-        "avatarImage": "images/c107-56cad83b8762-composed-v1-avatar.png",
+        "image": "images/c107-659f555994cf-refresh-gallery.webp",
+        "avatarImage": "images/c107-659f555994cf-refresh-avatar.png",
         "avatarStyle": "transparent-id-bust-512-padding26",
-        "matchImage": "images/c107-56cad83b8762-composed-v1-match.webp",
-        "mobileImage": "images/c107-56cad83b8762-composed-v1-mobile.webp",
-        "detailImage": "images/c107-56cad83b8762-composed-v1-detail.webp",
+        "matchImage": "images/c107-659f555994cf-refresh-match.webp",
+        "mobileImage": "images/c107-659f555994cf-refresh-mobile.webp",
+        "detailImage": "images/c107-659f555994cf-refresh-detail.webp",
         "method": "source-alpha",
-        "review": "撤换自动补选的模型展示图；使用角色二维立绘，保留原画范围；服装最新性未核验",
+        "review": "新版机体官方立绘，保留原画范围及透明通道；统一人物构图，不补画身体。",
         "galleryKind": "partial",
-        "cleanupBatch": "pgr-illustration-correction",
+        "cleanupBatch": "pgr-refresh-20261104",
         "candidateSource": {
-          "title": "文件:立绘 薇拉 瑰丽.png",
-          "timestamp": "2020-07-23T10:49:21Z",
-          "size": 636919,
-          "width": 1000,
-          "height": 1080,
-          "url": "https://patchwiki.biligame.com/images/zspms/b/bf/6tg9m3uh57i5mv5h7ldb0jvy3z0mf33.png",
-          "descriptionurl": "https://wiki.biligame.com/zspms/%E6%96%87%E4%BB%B6:%E8%A7%92%E8%89%B2_%E8%96%87%E6%8B%89_%E7%91%B0%E4%B8%BD_%E7%AB%8B%E7%BB%98.png",
-          "descriptionshorturl": "https://wiki.biligame.com/zspms/index.php?curid=3301",
-          "mime": "image/png",
-          "score": 125,
-          "sourcePage": "https://wiki.biligame.com/zspms/%E6%96%87%E4%BB%B6:%E8%A7%92%E8%89%B2_%E8%96%87%E6%8B%89_%E7%91%B0%E4%B8%BD_%E7%AB%8B%E7%BB%98.png",
-          "localOriginal": "images/c107-8a9cb59549-original"
+          "title": "文件:角色 薇拉 灼惘 立绘.png",
+          "url": "https://patchwiki.biligame.com/images/zspms/c/c4/06g8ah0jwsuzaw59y1abt52b3ddj12k.png",
+          "sourcePage": "https://wiki.biligame.com/zspms/薇拉·灼惘",
+          "localOriginal": "pgr-refresh/薇拉-original.png"
         },
         "avatarCleanupRequired": false,
         "visualApproved": false,
-        "sourceSha256": "92e95c207ecf395b67f4aea2df4e2cbbcaada73b12461ff458bdf7d2343fd60c",
-        "cutoutSha256": "92e95c207ecf395b67f4aea2df4e2cbbcaada73b12461ff458bdf7d2343fd60c",
+        "sourceSha256": "659f555994cfce8e3d3ebcdc6b5b9d6bb2b4224a982919a0a1957d3afd24034a",
+        "cutoutSha256": "659f555994cfce8e3d3ebcdc6b5b9d6bb2b4224a982919a0a1957d3afd24034a",
         "transparentFraction": 0.5648453703703704,
         "framing": {
           "eyes": [
-            496,
-            361
+            535,
+            315
           ],
-          "faceWidth": 157,
+          "faceWidth": 170,
           "sourceDimensions": [
             1000,
             1080
           ],
           "outputs": {
-            "gallery": {
-              "width": 900,
-              "height": 1200,
-              "scale": 1.031605562579014,
-              "anchor": [
-                497,
-                597
-              ],
-              "target": [
-                450,
-                600
-              ]
-            },
-            "avatar": {
-              "width": 460,
-              "height": 460,
-              "scale": 0.9872611464968153,
-              "anchor": [
-                496,
-                361
-              ],
-              "target": [
-                230,
-                260
-              ]
-            },
             "match": {
               "width": 960,
               "height": 540,
-              "scale": 0.9766454352441614,
+              "scale": 0.7555555555555555,
               "anchor": [
-                496,
-                361
+                535,
+                315
               ],
               "target": [
                 480,
-                285
+                270
               ]
             },
             "mobile": {
               "width": 540,
               "height": 540,
-              "scale": 0.9766454352441614,
+              "scale": 0.7555555555555555,
               "anchor": [
-                496,
-                361
+                535,
+                315
               ],
               "target": [
                 270,
-                285
+                270
               ]
             }
           }
@@ -7820,21 +7718,21 @@
         "skinVerified": false
       },
       "portraitArtwork": {
-        "avatarImage": "images/c107-94fe60af6b74-portrait-bust.png",
-        "source": "images/c107-8a9cb59549-original",
-        "sourceUrl": "https://patchwiki.biligame.com/images/zspms/b/bf/6tg9m3uh57i5mv5h7ldb0jvy3z0mf33.png",
-        "sourceSha256": "92e95c207ecf395b67f4aea2df4e2cbbcaada73b12461ff458bdf7d2343fd60c",
-        "review": "与二维角色立绘同源的小头像；替换旧模型图头像",
+        "avatarImage": "images/c107-659f555994cf-refresh-avatar.png",
+        "source": "pgr-refresh/薇拉-original.png",
+        "sourceUrl": "https://patchwiki.biligame.com/images/zspms/c/c4/06g8ah0jwsuzaw59y1abt52b3ddj12k.png",
+        "sourceSha256": "659f555994cfce8e3d3ebcdc6b5b9d6bb2b4224a982919a0a1957d3afd24034a",
+        "review": "新版机体官方立绘，保留原画范围及透明通道；统一人物构图，不补画身体。",
         "method": "source-alpha",
         "silhouetteReviewed": true,
         "visualApproved": false,
         "latestSkinVerified": false,
         "usage": "avatar-only",
         "eyes": [
-          496,
-          361
+          535,
+          315
         ],
-        "faceWidth": 157
+        "faceWidth": 170
       }
     },
     {
@@ -8008,96 +7906,62 @@
         "matchReview": "自动上部构图，待逐图校准"
       },
       "processedArtwork": {
-        "image": "images/s2-zspms-22e5ce8e9d-8e1ae6c9bbf7-composed-v1-gallery.webp",
-        "avatarImage": "images/s2-zspms-22e5ce8e9d-8e1ae6c9bbf7-composed-v1-avatar.png",
+        "image": "images/s2-zspms-22e5ce8e9d-20026cd1cae4-refresh-gallery.webp",
+        "avatarImage": "images/s2-zspms-22e5ce8e9d-20026cd1cae4-refresh-avatar.png",
         "avatarStyle": "transparent-id-bust-512-padding26",
-        "matchImage": "images/s2-zspms-22e5ce8e9d-8e1ae6c9bbf7-composed-v1-match.webp",
-        "mobileImage": "images/s2-zspms-22e5ce8e9d-8e1ae6c9bbf7-composed-v1-mobile.webp",
-        "detailImage": "images/s2-zspms-22e5ce8e9d-8e1ae6c9bbf7-composed-v1-detail.webp",
+        "matchImage": "images/s2-zspms-22e5ce8e9d-20026cd1cae4-refresh-match.webp",
+        "mobileImage": "images/s2-zspms-22e5ce8e9d-20026cd1cae4-refresh-mobile.webp",
+        "detailImage": "images/s2-zspms-22e5ce8e9d-20026cd1cae4-refresh-detail.webp",
         "method": "source-alpha",
-        "review": "撤换自动补选的模型展示图；使用角色二维立绘，保留原画范围；服装最新性未核验",
+        "review": "新版机体官方立绘，保留原画范围及透明通道；统一人物构图，不补画身体。",
         "galleryKind": "partial",
-        "cleanupBatch": "pgr-illustration-correction",
+        "cleanupBatch": "pgr-refresh-20261104",
         "candidateSource": {
-          "title": "文件:角色 比安卡 零度 立绘.png",
-          "timestamp": "2021-01-28T12:35:49Z",
-          "size": 337953,
-          "width": 1000,
-          "height": 1080,
-          "url": "https://patchwiki.biligame.com/images/zspms/2/2b/1g134ynjb0d6ybh7ksztm09fmt8n764.png",
-          "descriptionurl": "https://wiki.biligame.com/zspms/%E6%96%87%E4%BB%B6:%E8%A7%92%E8%89%B2_%E6%AF%94%E5%AE%89%E5%8D%A1_%E9%9B%B6%E5%BA%A6_%E7%AB%8B%E7%BB%98.png",
-          "descriptionshorturl": "https://wiki.biligame.com/zspms/index.php?curid=5429",
-          "mime": "image/png",
-          "score": 125,
-          "sourcePage": "https://wiki.biligame.com/zspms/%E6%96%87%E4%BB%B6:%E8%A7%92%E8%89%B2_%E6%AF%94%E5%AE%89%E5%8D%A1_%E9%9B%B6%E5%BA%A6_%E7%AB%8B%E7%BB%98.png",
-          "localOriginal": "images/s2-zspms-22e5ce8e9d-c5a8579964-original"
+          "title": "文件:角色 比安卡 晖暮 立绘.png",
+          "url": "https://patchwiki.biligame.com/images/zspms/8/80/fmwpdrm8befyipoqcb785blewzdcbq8.png",
+          "sourcePage": "https://wiki.biligame.com/zspms/比安卡·晖暮",
+          "localOriginal": "pgr-refresh/比安卡-original.png"
         },
         "avatarCleanupRequired": false,
         "visualApproved": false,
-        "sourceSha256": "2df8c819bc618a01042e8bf42066ffb6d051e3ecd5f6277db87948a22ebd6d3a",
-        "cutoutSha256": "2df8c819bc618a01042e8bf42066ffb6d051e3ecd5f6277db87948a22ebd6d3a",
+        "sourceSha256": "20026cd1cae493ef03d4ce74bf9c29838e5fbffcf009bf5af6ce760474f0f771",
+        "cutoutSha256": "20026cd1cae493ef03d4ce74bf9c29838e5fbffcf009bf5af6ce760474f0f771",
         "transparentFraction": 0.644925,
         "framing": {
           "eyes": [
-            482,
-            379
+            646,
+            337
           ],
-          "faceWidth": 154,
+          "faceWidth": 150,
           "sourceDimensions": [
-            1000,
+            1174,
             1080
           ],
           "outputs": {
-            "gallery": {
-              "width": 900,
-              "height": 1200,
-              "scale": 1.0619469026548674,
-              "anchor": [
-                507,
-                571
-              ],
-              "target": [
-                450,
-                600
-              ]
-            },
-            "avatar": {
-              "width": 460,
-              "height": 460,
-              "scale": 1.0064935064935066,
-              "anchor": [
-                482,
-                379
-              ],
-              "target": [
-                230,
-                260
-              ]
-            },
             "match": {
               "width": 960,
               "height": 540,
-              "scale": 0.9956709956709957,
+              "scale": 0.7062314540059347,
               "anchor": [
-                482,
-                379
+                646,
+                337
               ],
               "target": [
                 480,
-                285
+                270
               ]
             },
             "mobile": {
               "width": 540,
               "height": 540,
-              "scale": 0.9956709956709957,
+              "scale": 0.7062314540059347,
               "anchor": [
-                482,
-                379
+                646,
+                337
               ],
               "target": [
                 270,
-                285
+                270
               ]
             }
           }
@@ -8106,21 +7970,21 @@
         "skinVerified": false
       },
       "portraitArtwork": {
-        "avatarImage": "images/s2-zspms-22e5ce8e9d-c2d50fb014a0-portrait-bust.png",
-        "source": "images/s2-zspms-22e5ce8e9d-c5a8579964-original",
-        "sourceUrl": "https://patchwiki.biligame.com/images/zspms/2/2b/1g134ynjb0d6ybh7ksztm09fmt8n764.png",
-        "sourceSha256": "2df8c819bc618a01042e8bf42066ffb6d051e3ecd5f6277db87948a22ebd6d3a",
-        "review": "与二维角色立绘同源的小头像；替换旧模型图头像",
+        "avatarImage": "images/s2-zspms-22e5ce8e9d-20026cd1cae4-refresh-avatar.png",
+        "source": "pgr-refresh/比安卡-original.png",
+        "sourceUrl": "https://patchwiki.biligame.com/images/zspms/8/80/fmwpdrm8befyipoqcb785blewzdcbq8.png",
+        "sourceSha256": "20026cd1cae493ef03d4ce74bf9c29838e5fbffcf009bf5af6ce760474f0f771",
+        "review": "新版机体官方立绘，保留原画范围及透明通道；统一人物构图，不补画身体。",
         "method": "source-alpha",
         "silhouetteReviewed": true,
         "visualApproved": false,
         "latestSkinVerified": false,
         "usage": "avatar-only",
         "eyes": [
-          482,
-          379
+          646,
+          337
         ],
-        "faceWidth": 154
+        "faceWidth": 150
       }
     },
     {
@@ -9093,96 +8957,62 @@
         "matchReview": "自动上部构图，待逐图校准"
       },
       "processedArtwork": {
-        "image": "images/s2-zspms-4252de8219-60860407acd2-composed-v1-gallery.webp",
-        "avatarImage": "images/s2-zspms-4252de8219-60860407acd2-composed-v1-avatar.png",
+        "image": "images/s2-zspms-4252de8219-45987425cc2b-refresh-gallery.webp",
+        "avatarImage": "images/s2-zspms-4252de8219-45987425cc2b-refresh-avatar.png",
         "avatarStyle": "transparent-id-bust-512-padding26",
-        "matchImage": "images/s2-zspms-4252de8219-60860407acd2-composed-v1-match.webp",
-        "mobileImage": "images/s2-zspms-4252de8219-60860407acd2-composed-v1-mobile.webp",
-        "detailImage": "images/s2-zspms-4252de8219-60860407acd2-composed-v1-detail.webp",
+        "matchImage": "images/s2-zspms-4252de8219-45987425cc2b-refresh-match.webp",
+        "mobileImage": "images/s2-zspms-4252de8219-45987425cc2b-refresh-mobile.webp",
+        "detailImage": "images/s2-zspms-4252de8219-45987425cc2b-refresh-detail.webp",
         "method": "source-alpha",
-        "review": "撤换自动补选的模型展示图；使用角色二维立绘，保留原画范围；服装最新性未核验",
+        "review": "新版机体官方立绘，保留原画范围及透明通道；统一人物构图，不补画身体。",
         "galleryKind": "partial",
-        "cleanupBatch": "pgr-illustration-correction",
+        "cleanupBatch": "pgr-refresh-20261104",
         "candidateSource": {
-          "title": "文件:角色 七实 脉冲 立绘.png",
-          "timestamp": "2020-11-30T05:15:47Z",
-          "size": 422165,
-          "width": 1000,
-          "height": 1080,
-          "url": "https://patchwiki.biligame.com/images/zspms/8/8b/4pdlmzpunyucs9b2aq7jjej317o0m8w.png",
-          "descriptionurl": "https://wiki.biligame.com/zspms/%E6%96%87%E4%BB%B6:%E8%A7%92%E8%89%B2_%E4%B8%83%E5%AE%9E_%E8%84%89%E5%86%B2_%E7%AB%8B%E7%BB%98.png",
-          "descriptionshorturl": "https://wiki.biligame.com/zspms/index.php?curid=1701",
-          "mime": "image/png",
-          "score": 125,
-          "sourcePage": "https://wiki.biligame.com/zspms/%E6%96%87%E4%BB%B6:%E8%A7%92%E8%89%B2_%E4%B8%83%E5%AE%9E_%E8%84%89%E5%86%B2_%E7%AB%8B%E7%BB%98.png",
-          "localOriginal": "images/s2-zspms-4252de8219-d7089f59dc-original"
+          "title": "文件:角色 七实 芒星之迹 立绘.png",
+          "url": "https://patchwiki.biligame.com/images/zspms/4/48/4uuv376acf8y8c4ddj6tsq2dafg0c7w.png",
+          "sourcePage": "https://wiki.biligame.com/zspms/七实·芒星之迹",
+          "localOriginal": "pgr-refresh/七实-original.png"
         },
         "avatarCleanupRequired": false,
         "visualApproved": false,
-        "sourceSha256": "388667f0a05d1167e277d44b015315b161007030f8ef9bd8c316f4bedbbc3741",
-        "cutoutSha256": "388667f0a05d1167e277d44b015315b161007030f8ef9bd8c316f4bedbbc3741",
+        "sourceSha256": "45987425cc2b2ebefe1ad91520734d5a025c17906e5df7f65e7d1d1a979b4bd3",
+        "cutoutSha256": "45987425cc2b2ebefe1ad91520734d5a025c17906e5df7f65e7d1d1a979b4bd3",
         "transparentFraction": 0.6538287037037037,
         "framing": {
           "eyes": [
-            425,
-            358
+            450,
+            410
           ],
-          "faceWidth": 154,
+          "faceWidth": 200,
           "sourceDimensions": [
             1000,
             1080
           ],
           "outputs": {
-            "gallery": {
-              "width": 900,
-              "height": 1200,
-              "scale": 1.0865512649800266,
-              "anchor": [
-                535,
-                616.5
-              ],
-              "target": [
-                450,
-                600
-              ]
-            },
-            "avatar": {
-              "width": 460,
-              "height": 460,
-              "scale": 1.0064935064935066,
-              "anchor": [
-                425,
-                358
-              ],
-              "target": [
-                230,
-                260
-              ]
-            },
             "match": {
               "width": 960,
               "height": 540,
-              "scale": 0.9956709956709957,
+              "scale": 0.7555555555555555,
               "anchor": [
-                425,
-                358
+                450,
+                410
               ],
               "target": [
                 480,
-                285
+                270
               ]
             },
             "mobile": {
               "width": 540,
               "height": 540,
-              "scale": 0.9956709956709957,
+              "scale": 0.7555555555555555,
               "anchor": [
-                425,
-                358
+                450,
+                410
               ],
               "target": [
                 270,
-                285
+                270
               ]
             }
           }
@@ -9191,21 +9021,21 @@
         "skinVerified": false
       },
       "portraitArtwork": {
-        "avatarImage": "images/s2-zspms-4252de8219-7738e6982388-portrait-bust.png",
-        "source": "images/s2-zspms-4252de8219-d7089f59dc-original",
-        "sourceUrl": "https://patchwiki.biligame.com/images/zspms/8/8b/4pdlmzpunyucs9b2aq7jjej317o0m8w.png",
-        "sourceSha256": "388667f0a05d1167e277d44b015315b161007030f8ef9bd8c316f4bedbbc3741",
-        "review": "与二维角色立绘同源的小头像；替换旧模型图头像",
+        "avatarImage": "images/s2-zspms-4252de8219-45987425cc2b-refresh-avatar.png",
+        "source": "pgr-refresh/七实-original.png",
+        "sourceUrl": "https://patchwiki.biligame.com/images/zspms/4/48/4uuv376acf8y8c4ddj6tsq2dafg0c7w.png",
+        "sourceSha256": "45987425cc2b2ebefe1ad91520734d5a025c17906e5df7f65e7d1d1a979b4bd3",
+        "review": "新版机体官方立绘，保留原画范围及透明通道；统一人物构图，不补画身体。",
         "method": "source-alpha",
         "silhouetteReviewed": true,
         "visualApproved": false,
         "latestSkinVerified": false,
         "usage": "avatar-only",
         "eyes": [
-          425,
-          358
+          450,
+          410
         ],
-        "faceWidth": 154
+        "faceWidth": 200
       }
     },
     {
@@ -9392,96 +9222,62 @@
         "matchReview": "自动上部构图，待逐图校准"
       },
       "processedArtwork": {
-        "image": "images/s2-zspms-f04ab13f4e-85cff1f0aa6b-composed-v1-gallery.webp",
-        "avatarImage": "images/s2-zspms-f04ab13f4e-85cff1f0aa6b-composed-v1-avatar.png",
+        "image": "images/s2-zspms-f04ab13f4e-ed7e30a4feed-refresh-gallery.webp",
+        "avatarImage": "images/s2-zspms-f04ab13f4e-ed7e30a4feed-refresh-avatar.png",
         "avatarStyle": "transparent-id-bust-512-padding26",
-        "matchImage": "images/s2-zspms-f04ab13f4e-85cff1f0aa6b-composed-v1-match.webp",
-        "mobileImage": "images/s2-zspms-f04ab13f4e-85cff1f0aa6b-composed-v1-mobile.webp",
-        "detailImage": "images/s2-zspms-f04ab13f4e-85cff1f0aa6b-composed-v1-detail.webp",
+        "matchImage": "images/s2-zspms-f04ab13f4e-ed7e30a4feed-refresh-match.webp",
+        "mobileImage": "images/s2-zspms-f04ab13f4e-ed7e30a4feed-refresh-mobile.webp",
+        "detailImage": "images/s2-zspms-f04ab13f4e-ed7e30a4feed-refresh-detail.webp",
         "method": "source-alpha",
-        "review": "撤换自动补选的模型展示图；使用角色二维立绘，保留原画范围；服装最新性未核验",
+        "review": "新版机体官方立绘，保留原画范围及透明通道；统一人物构图，不补画身体。",
         "galleryKind": "partial",
-        "cleanupBatch": "pgr-illustration-correction",
+        "cleanupBatch": "pgr-refresh-20261104",
         "candidateSource": {
-          "title": "文件:立绘 卡列尼娜 烬燃.png",
-          "timestamp": "2020-02-10T02:10:29Z",
-          "size": 581518,
-          "width": 1000,
-          "height": 1080,
-          "url": "https://patchwiki.biligame.com/images/zspms/5/55/m3yoe9h3jf1zh7hu4zgmgcorgswkbd3.png",
-          "descriptionurl": "https://wiki.biligame.com/zspms/%E6%96%87%E4%BB%B6:%E7%AB%8B%E7%BB%98_%E5%8D%A1%E5%88%97%E5%B0%BC%E5%A8%9C_%E7%83%AC%E7%87%83.png",
-          "descriptionshorturl": "https://wiki.biligame.com/zspms/index.php?curid=902",
-          "mime": "image/png",
-          "score": 125,
-          "sourcePage": "https://wiki.biligame.com/zspms/%E6%96%87%E4%BB%B6:%E7%AB%8B%E7%BB%98_%E5%8D%A1%E5%88%97%E5%B0%BC%E5%A8%9C_%E7%83%AC%E7%87%83.png",
-          "localOriginal": "images/s2-zspms-f04ab13f4e-501a8113e4-original"
+          "title": "文件:角色 卡列尼娜 烬航 立绘.png",
+          "url": "https://patchwiki.biligame.com/images/zspms/e/e8/fbgw7qwlauv4y6a8nz1k0kv09voe8qr.png",
+          "sourcePage": "https://wiki.biligame.com/zspms/卡列尼娜·烬航",
+          "localOriginal": "pgr-refresh/卡列尼娜-original.png"
         },
         "avatarCleanupRequired": false,
         "visualApproved": false,
-        "sourceSha256": "6540e527f0ea762d319c6956706a778a7828e87a8e7bdf56b49ba0abb9682ebe",
-        "cutoutSha256": "6540e527f0ea762d319c6956706a778a7828e87a8e7bdf56b49ba0abb9682ebe",
+        "sourceSha256": "ed7e30a4feed9ca9655d4f9c55cf3ef65c515395255cc3741fe3832e0fb9e637",
+        "cutoutSha256": "ed7e30a4feed9ca9655d4f9c55cf3ef65c515395255cc3741fe3832e0fb9e637",
         "transparentFraction": 0.6212731481481482,
         "framing": {
           "eyes": [
-            475,
-            358
+            652,
+            339
           ],
-          "faceWidth": 171,
+          "faceWidth": 180,
           "sourceDimensions": [
-            1000,
+            1304,
             1080
           ],
           "outputs": {
-            "gallery": {
-              "width": 900,
-              "height": 1200,
-              "scale": 1.1637931034482758,
-              "anchor": [
-                451,
-                615.5
-              ],
-              "target": [
-                450,
-                600
-              ]
-            },
-            "avatar": {
-              "width": 460,
-              "height": 460,
-              "scale": 0.9064327485380117,
-              "anchor": [
-                475,
-                358
-              ],
-              "target": [
-                230,
-                260
-              ]
-            },
             "match": {
               "width": 960,
               "height": 540,
-              "scale": 0.8966861598440546,
+              "scale": 0.9444444444444444,
               "anchor": [
-                475,
-                358
+                652,
+                339
               ],
               "target": [
                 480,
-                285
+                270
               ]
             },
             "mobile": {
               "width": 540,
               "height": 540,
-              "scale": 0.8966861598440546,
+              "scale": 0.9444444444444444,
               "anchor": [
-                475,
-                358
+                652,
+                339
               ],
               "target": [
                 270,
-                285
+                270
               ]
             }
           }
@@ -9490,21 +9286,21 @@
         "skinVerified": false
       },
       "portraitArtwork": {
-        "avatarImage": "images/s2-zspms-f04ab13f4e-a4b53223f0a2-portrait-bust.png",
-        "source": "images/s2-zspms-f04ab13f4e-501a8113e4-original",
-        "sourceUrl": "https://patchwiki.biligame.com/images/zspms/5/55/m3yoe9h3jf1zh7hu4zgmgcorgswkbd3.png",
-        "sourceSha256": "6540e527f0ea762d319c6956706a778a7828e87a8e7bdf56b49ba0abb9682ebe",
-        "review": "与二维角色立绘同源的小头像；替换旧模型图头像",
+        "avatarImage": "images/s2-zspms-f04ab13f4e-ed7e30a4feed-refresh-avatar.png",
+        "source": "pgr-refresh/卡列尼娜-original.png",
+        "sourceUrl": "https://patchwiki.biligame.com/images/zspms/e/e8/fbgw7qwlauv4y6a8nz1k0kv09voe8qr.png",
+        "sourceSha256": "ed7e30a4feed9ca9655d4f9c55cf3ef65c515395255cc3741fe3832e0fb9e637",
+        "review": "新版机体官方立绘，保留原画范围及透明通道；统一人物构图，不补画身体。",
         "method": "source-alpha",
         "silhouetteReviewed": true,
         "visualApproved": false,
         "latestSkinVerified": false,
         "usage": "avatar-only",
         "eyes": [
-          475,
-          358
+          652,
+          339
         ],
-        "faceWidth": 171
+        "faceWidth": 180
       }
     },
     {
@@ -12070,96 +11866,62 @@
         "matchReview": "自动上部构图，待逐图校准"
       },
       "processedArtwork": {
-        "image": "images/s2-zspms-877255f18e-d4e0eff9d77f-composed-v1-gallery.webp",
-        "avatarImage": "images/s2-zspms-877255f18e-d4e0eff9d77f-composed-v1-avatar.png",
+        "image": "images/s2-zspms-877255f18e-930d5b490475-refresh-gallery.webp",
+        "avatarImage": "images/s2-zspms-877255f18e-930d5b490475-refresh-avatar.png",
         "avatarStyle": "transparent-id-bust-512-padding26",
-        "matchImage": "images/s2-zspms-877255f18e-d4e0eff9d77f-composed-v1-match.webp",
-        "mobileImage": "images/s2-zspms-877255f18e-d4e0eff9d77f-composed-v1-mobile.webp",
-        "detailImage": "images/s2-zspms-877255f18e-d4e0eff9d77f-composed-v1-detail.webp",
+        "matchImage": "images/s2-zspms-877255f18e-930d5b490475-refresh-match.webp",
+        "mobileImage": "images/s2-zspms-877255f18e-930d5b490475-refresh-mobile.webp",
+        "detailImage": "images/s2-zspms-877255f18e-930d5b490475-refresh-detail.webp",
         "method": "source-alpha",
-        "review": "撤换自动补选的模型展示图；使用角色二维立绘，保留原画范围；服装最新性未核验",
+        "review": "新版机体官方立绘，保留原画范围及透明通道；统一人物构图，不补画身体。",
         "galleryKind": "partial",
-        "cleanupBatch": "pgr-illustration-correction",
+        "cleanupBatch": "pgr-refresh-20261104",
         "candidateSource": {
-          "title": "文件:角色 布偶熊 觅语 立绘.png",
-          "timestamp": "2024-03-23T13:24:34Z",
-          "size": 501969,
-          "width": 1000,
-          "height": 1080,
-          "url": "https://patchwiki.biligame.com/images/zspms/f/f2/96z2btp2y8n7peihnrrqxq30jtzayxr.png",
-          "descriptionurl": "https://wiki.biligame.com/zspms/%E6%96%87%E4%BB%B6:%E8%A7%92%E8%89%B2_%E5%B8%83%E5%81%B6%E7%86%8A_%E8%A7%85%E8%AF%AD_%E7%AB%8B%E7%BB%98.png",
-          "descriptionshorturl": "https://wiki.biligame.com/zspms/index.php?curid=31575",
-          "mime": "image/png",
-          "score": 125,
-          "sourcePage": "https://wiki.biligame.com/zspms/%E6%96%87%E4%BB%B6:%E8%A7%92%E8%89%B2_%E5%B8%83%E5%81%B6%E7%86%8A_%E8%A7%85%E8%AF%AD_%E7%AB%8B%E7%BB%98.png",
-          "localOriginal": "images/s2-zspms-877255f18e-4192bf32fd-original"
+          "title": "文件:角色 布偶熊 骇影 立绘.png",
+          "url": "https://patchwiki.biligame.com/images/zspms/7/7c/hbv3xull598wjckn8sbw2ie6afka1i9.png",
+          "sourcePage": "https://wiki.biligame.com/zspms/布偶熊·骇影",
+          "localOriginal": "pgr-refresh/布偶熊-original.png"
         },
         "avatarCleanupRequired": false,
         "visualApproved": false,
-        "sourceSha256": "fb12f1a1c48c6967cf828d3b0777b1d858a0f509dff53ee2304950dd45c7495d",
-        "cutoutSha256": "fb12f1a1c48c6967cf828d3b0777b1d858a0f509dff53ee2304950dd45c7495d",
+        "sourceSha256": "930d5b4904752d459f73ef3929c04ddc15aae2e24616e15ab2102a74e8db7552",
+        "cutoutSha256": "930d5b4904752d459f73ef3929c04ddc15aae2e24616e15ab2102a74e8db7552",
         "transparentFraction": 0.5461333333333334,
         "framing": {
           "eyes": [
-            489,
-            379
+            545,
+            245
           ],
-          "faceWidth": 157,
+          "faceWidth": 190,
           "sourceDimensions": [
             1000,
             1080
           ],
           "outputs": {
-            "gallery": {
-              "width": 900,
-              "height": 1200,
-              "scale": 0.8275862068965517,
-              "anchor": [
-                506.5,
-                614
-              ],
-              "target": [
-                450,
-                600
-              ]
-            },
-            "avatar": {
-              "width": 460,
-              "height": 460,
-              "scale": 0.9872611464968153,
-              "anchor": [
-                489,
-                379
-              ],
-              "target": [
-                230,
-                260
-              ]
-            },
             "match": {
               "width": 960,
               "height": 540,
-              "scale": 0.9766454352441614,
+              "scale": 0.8947368421052632,
               "anchor": [
-                489,
-                379
+                545,
+                245
               ],
               "target": [
                 480,
-                285
+                270
               ]
             },
             "mobile": {
               "width": 540,
               "height": 540,
-              "scale": 0.9766454352441614,
+              "scale": 0.8947368421052632,
               "anchor": [
-                489,
-                379
+                545,
+                245
               ],
               "target": [
                 270,
-                285
+                270
               ]
             }
           }
@@ -12168,21 +11930,21 @@
         "skinVerified": false
       },
       "portraitArtwork": {
-        "avatarImage": "images/s2-zspms-877255f18e-4551ddf0b608-portrait-bust.png",
-        "source": "images/s2-zspms-877255f18e-4192bf32fd-original",
-        "sourceUrl": "https://patchwiki.biligame.com/images/zspms/f/f2/96z2btp2y8n7peihnrrqxq30jtzayxr.png",
-        "sourceSha256": "fb12f1a1c48c6967cf828d3b0777b1d858a0f509dff53ee2304950dd45c7495d",
-        "review": "与二维角色立绘同源的小头像；替换旧模型图头像",
+        "avatarImage": "images/s2-zspms-877255f18e-930d5b490475-refresh-avatar.png",
+        "source": "pgr-refresh/布偶熊-original.png",
+        "sourceUrl": "https://patchwiki.biligame.com/images/zspms/7/7c/hbv3xull598wjckn8sbw2ie6afka1i9.png",
+        "sourceSha256": "930d5b4904752d459f73ef3929c04ddc15aae2e24616e15ab2102a74e8db7552",
+        "review": "新版机体官方立绘，保留原画范围及透明通道；统一人物构图，不补画身体。",
         "method": "source-alpha",
         "silhouetteReviewed": true,
         "visualApproved": false,
         "latestSkinVerified": false,
         "usage": "avatar-only",
         "eyes": [
-          489,
-          379
+          545,
+          245
         ],
-        "faceWidth": 157
+        "faceWidth": 190
       }
     },
     {
