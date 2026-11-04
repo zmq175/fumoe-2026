@@ -22590,14 +22590,14 @@
         "matchReview": "自动上部构图，待逐图校准"
       },
       "processedArtwork": {
-        "image": "images/s2-sr-beb377a1cc-0a055b8e5796-refresh-gallery.webp",
-        "avatarImage": "images/s2-sr-beb377a1cc-0a055b8e5796-refresh-avatar.png",
+        "image": "images/s2-sr-beb377a1cc-8f3229ddc447-refresh-gallery.webp",
+        "avatarImage": "images/s2-sr-beb377a1cc-8f3229ddc447-refresh-avatar.png",
         "avatarStyle": "transparent-id-bust-512-padding26",
-        "matchImage": "images/s2-sr-beb377a1cc-0a055b8e5796-refresh-match.webp",
-        "mobileImage": "images/s2-sr-beb377a1cc-0a055b8e5796-refresh-mobile.webp",
-        "detailImage": "images/s2-sr-beb377a1cc-0a055b8e5796-refresh-detail.webp",
+        "matchImage": "images/s2-sr-beb377a1cc-8f3229ddc447-refresh-match.webp",
+        "mobileImage": "images/s2-sr-beb377a1cc-8f3229ddc447-refresh-mobile.webp",
+        "detailImage": "images/s2-sr-beb377a1cc-8f3229ddc447-refresh-detail.webp",
         "method": "gpt-image-and-alpha-cleanup",
-        "review": "用户上传指定立绘；去除背景特效，面部使用原图像素缩放合成，保留原眼睛及笑容。",
+        "review": "用户上传指定立绘；去除背景特效，面部使用原图像素缩放合成，保留原眼睛及笑容；清理边缘杂点和白色溢边。",
         "galleryKind": "full",
         "cleanupBatch": "pgr-refresh-20261104",
         "candidateSource": {
@@ -22609,7 +22609,7 @@
         "avatarCleanupRequired": false,
         "visualApproved": false,
         "sourceSha256": "adaed44724c2bf71a7251f5855ea33d5202d9b5c59c47d69cdf60994c108a75a",
-        "cutoutSha256": "0a055b8e5796f3a0131cda1328765ccf00bda362e484670ee041ba04b1b7571a",
+        "cutoutSha256": "8f3229ddc4471be13388f381f46faa88eec0680222e05b734ab102bb8e7e1323",
         "transparentFraction": 0.7536680071935675,
         "framing": {
           "eyes": [
@@ -22654,11 +22654,11 @@
         "skinVerified": false
       },
       "portraitArtwork": {
-        "avatarImage": "images/s2-sr-beb377a1cc-0a055b8e5796-refresh-avatar.png",
-        "source": "ai-candidates/s2-sr-beb377a1cc-20261104-clean.png",
+        "avatarImage": "images/s2-sr-beb377a1cc-8f3229ddc447-refresh-avatar.png",
+        "source": "ai-candidates/s2-sr-beb377a1cc-20261104-edge-v2.png",
         "sourceUrl": "",
-        "sourceSha256": "0a055b8e5796f3a0131cda1328765ccf00bda362e484670ee041ba04b1b7571a",
-        "review": "用户上传指定立绘；去除背景特效，面部使用原图像素缩放合成，保留原眼睛及笑容。",
+        "sourceSha256": "8f3229ddc4471be13388f381f46faa88eec0680222e05b734ab102bb8e7e1323",
+        "review": "用户上传指定立绘；去除背景特效，面部使用原图像素缩放合成，保留原眼睛及笑容；清理边缘杂点和白色溢边。",
         "method": "gpt-image",
         "silhouetteReviewed": true,
         "visualApproved": false,
