@@ -44,12 +44,25 @@ const reason='隔离数据库配置验证'
 const format256=():SeasonFormat=>({...legacyFormat(),participants:256,groupCount:16,swissRounds:5,rounds:Array.from({length:10},()=>({durationHours:48,breakHours:24})),factions:[{name:'新阵营',games:['新游戏'],accent:'#123456',logoPath:null}]})
 
 describe('真实 SQLite 迁移、路由与赛季推进',()=>{
+  it('用户提供素材可保留真实归属，网页来源仍须提供链接',async()=>{
+    const {sql,env}=database(),request=await client(env)
+    env.MEDIA={head:async()=>({httpMetadata:{contentType:'image/png'}})} as unknown as R2Bucket
+    const created=await request('/api/admin/seasons','POST',{name:'素材归属验证',slug:'source-test',startsAt:'2030-01-01T16:00:00.000Z',format:s2Format(),reason})
+    const seasonId=created.body.seasonId
+    expect((await request(`/api/admin/seasons/${seasonId}/roster`,'PUT',{entries:[{characterId:'source-character',name:'用户角色',game:'原神',groupCode:'A',seed:1}],reason})).status).toBe(200)
+    const prefix=`seasons/${seasonId}/source-character/revision/`
+    const entry={characterId:'source-character',skinName:'用户选定素材',summary:'用户为本次赛季提供的原图素材。',sourceUrl:'',sourceNote:'由用户提供原图，保留原始归属，不虚构网页来源。',sourceType:'user-supplied',originalKey:prefix+'original.png',galleryKey:prefix+'gallery.png',matchKey:prefix+'match.png',avatarKey:prefix+'avatar.png'}
+    expect((await request(`/api/admin/seasons/${seasonId}/artwork`,'PUT',{entries:[entry],reason})).status).toBe(200)
+    expect(sql.prepare('SELECT source_type,source_url FROM season_character_profiles WHERE season_id=?').get(seasonId)).toMatchObject({source_type:'user-supplied',source_url:''})
+    expect((await request(`/api/admin/seasons/${seasonId}/artwork`,'PUT',{entries:[{...entry,sourceType:'community-wiki'}],reason})).status).toBe(400)
+  })
+
   it('S2 分日窗口跑满 30 天，开赛冻结素材，旧赛季所有快照不变',async()=>{
     const {sql,env,before}=database(),request=await client(env),format=s2Format()
     const created=await request('/api/admin/seasons','POST',{name:'府萌 S2',slug:'s2',startsAt:'2030-01-01T16:00:00.000Z',format,reason})
     expect(created.status,JSON.stringify(created.body)).toBe(201)
     const seasonId=created.body.seasonId
-    const entries=Array.from({length:256},(_,i)=>({characterId:`s2-${i}`,name:`角色${i}`,game:'原神',groupCode:String.fromCharCode(65+Math.floor(i/16)),seed:i+1}))
+    const entries=Array.from({length:256},(_,i)=>({characterId:`s2-${i}`,name:`角色${i}`,displayName:i===0?'本季完整角色名':undefined,game:'原神',groupCode:String.fromCharCode(65+Math.floor(i/16)),seed:i+1}))
     expect((await request(`/api/admin/seasons/${seasonId}/roster`,'PUT',{entries,reason})).status).toBe(200)
     expect((await request('/api/public/characters?season=s2')).body.characters).toHaveLength(0)
     expect((await request('/api/public/characters?season=old')).body.characters[0]).not.toHaveProperty('skinName')
@@ -60,6 +73,8 @@ describe('真实 SQLite 迁移、路由与赛季推进',()=>{
     expect((await request(`/api/admin/seasons/${seasonId}/action`,'POST',{action:'publish',reason})).status).toBe(200)
     expect(sql.prepare('SELECT COUNT(*) AS n FROM match_windows').get()?.n).toBe(128)
     sql.prepare("UPDATE season_character_profiles SET skin_name='本季选定形态',source_url='https://example.com/source',mobile_key='seasons/s2/preview/mobile.webp',detail_key='seasons/s2/preview/detail.webp' WHERE season_id=? AND character_id='s2-0'").run(seasonId)
+    expect(sql.prepare("SELECT name FROM characters WHERE id='s2-0'").get()?.name).toBe('角色0')
+    expect(sql.prepare("SELECT name_snapshot FROM season_entries WHERE season_id=? AND character_id='s2-0'").get(seasonId)?.name_snapshot).toBe('本季完整角色名')
     const publicRoster=(await request('/api/public/characters?season=s2')).body.characters as Array<{id:string;skinName?:string;mobileArtworkKey?:string}>
     expect(publicRoster.find(e=>e.id==='s2-0')).toMatchObject({skinName:'本季选定形态',mobileArtworkKey:'seasons/s2/preview/mobile.webp'})
     expect((await request('/api/public/characters?season=old')).body.characters[0]).not.toHaveProperty('skinName')

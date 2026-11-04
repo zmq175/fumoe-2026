@@ -11,14 +11,14 @@ import type { Env, Session } from './types'
 
 export const configurationRoutes=new Hono<{Bindings:Env;Variables:{session:Session|null}}>()
 const reason=z.string().trim().min(5).max(500)
-const entrySchema=z.object({characterId:z.string().regex(/^[a-zA-Z0-9_-]{1,80}$/),name:z.string().trim().min(1).max(100),game:z.string().trim().min(1).max(100),summary:z.string().max(500).default(''),groupCode:z.string().regex(/^[A-P]$/),seed:z.number().int().min(1).max(256)})
+const entrySchema=z.object({characterId:z.string().regex(/^[a-zA-Z0-9_-]{1,80}$/),name:z.string().trim().min(1).max(100),displayName:z.string().trim().min(1).max(100).optional(),game:z.string().trim().min(1).max(100),summary:z.string().max(500).default(''),groupCode:z.string().regex(/^[A-P]$/),seed:z.number().int().min(1).max(256)})
 const rosterSchema=z.object({entries:z.array(entrySchema).max(256),reason})
 const seasonArtSchema=z.object({
   characterId:entrySchema.shape.characterId,skinName:z.string().trim().min(1).max(150),
-  summary:z.string().trim().min(8).max(500),sourceUrl:z.url().refine(url=>url.startsWith('https://')),
-  sourceNote:z.string().trim().min(5).max(1000),sourceType:z.enum(['official','community-wiki']),
+  summary:z.string().trim().min(8).max(500),sourceUrl:z.union([z.literal(''),z.url().refine(url=>url.startsWith('https://'))]),
+  sourceNote:z.string().trim().min(5).max(1000),sourceType:z.enum(['official','community-wiki','user-supplied']),
   originalKey:z.string().min(1),galleryKey:z.string().min(1),matchKey:z.string().min(1),avatarKey:z.string().min(1),mobileKey:z.string().min(1).optional(),detailKey:z.string().min(1).optional()
-})
+}).refine(entry=>entry.sourceType==='user-supplied'||Boolean(entry.sourceUrl),{message:'网页来源必须提供 HTTPS 地址',path:['sourceUrl']})
 
 configurationRoutes.use('*',async(c,next)=>{
   const session=c.get('session')
@@ -108,7 +108,7 @@ configurationRoutes.put('/:seasonId/roster',zValidator('json',rosterSchema),asyn
       c.env.DB.prepare('DELETE FROM season_entries WHERE season_id=?').bind(seasonId),
       c.env.DB.prepare("INSERT INTO games(id,name,sort_order) SELECT json_extract(value,'$.id'),json_extract(value,'$.name'),999 FROM json_each(?) WHERE 1 ON CONFLICT(name) DO NOTHING").bind(games),
       c.env.DB.prepare("INSERT INTO characters(id,game_id,name,summary,status) SELECT json_extract(value,'$.characterId'),(SELECT id FROM games WHERE name=json_extract(value,'$.game')),json_extract(value,'$.name'),json_extract(value,'$.summary'),'published' FROM json_each(?) WHERE 1 ON CONFLICT(id) DO NOTHING").bind(rows),
-      c.env.DB.prepare("INSERT INTO season_entries(id,season_id,character_id,group_code,seed) SELECT json_extract(value,'$.entryId'),?,json_extract(value,'$.characterId'),json_extract(value,'$.groupCode'),json_extract(value,'$.seed') FROM json_each(?)").bind(seasonId,rows)
+      c.env.DB.prepare("INSERT INTO season_entries(id,season_id,character_id,group_code,seed,name_snapshot) SELECT json_extract(value,'$.entryId'),?,json_extract(value,'$.characterId'),json_extract(value,'$.groupCode'),json_extract(value,'$.seed'),COALESCE(json_extract(value,'$.displayName'),json_extract(value,'$.name')) FROM json_each(?)").bind(seasonId,rows)
     ]
     statements.push(audit(c.env.DB,seasonId,c.get('session')!.sub,'season_roster_imported',input.reason,{count:entries.length}))
     await c.env.DB.batch(statements)
