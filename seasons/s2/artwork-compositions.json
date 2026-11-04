@@ -1084,28 +1084,27 @@
       "id": "s2-zspms-ba3bf32563",
       "game": "战双帕弥什",
       "name": "露娜",
+      "file": "ai-candidates/s2-zspms-ba3bf32563-20261104-clean.png",
       "eyes": [
-        505,
-        287
+        532,
+        466
       ],
-      "faceWidth": 95,
-      "method": "gpt-image",
-      "review": "用户指定原图；去除黑底及分离的背景武器，保留人物与服装；以用户选图优先于自动皮肤候选",
-      "galleryKind": "full",
-      "cleanupBatch": "user-selected-20261104",
-      "headTop": 125,
-      "headTopMethod": "manual-user-selected-source",
-      "matchEyeY": 300,
-      "file": "ai-candidates/s2-zspms-ba3bf32563-user-selected-20261104.png",
-      "candidateSource": {
-        "title": "用户指定：露娜全身原画",
-        "localOriginal": "user-sources/luna-2e3151435926.png",
-        "sourcePage": "user-sources/luna-2e3151435926.png",
-        "userSelected": true,
-        "selectionDate": "2026-11-04"
-      },
+      "faceWidth": 230,
+      "headTop": 85,
+      "headTopMethod": "manual-source-review",
+      "matchEyeY": 270,
       "avatarFaceWidth": 145,
-      "avatarEyeY": 270,
+      "avatarEyeY": 230,
+      "galleryKind": "partial",
+      "method": "gpt-image-and-alpha-cleanup",
+      "review": "用户上传指定立绘；清理背景并统一构图，保留原画范围，不补画身体。",
+      "candidateSource": {
+        "title": "用户选定：露娜新立绘",
+        "url": "",
+        "sourcePage": "",
+        "localOriginal": "user-sources/s2-zspms-ba3bf32563-20261104.png"
+      },
+      "cleanupBatch": "pgr-refresh-20261104",
       "avatarCleanupRequired": false
     },
     {

@@ -7214,89 +7214,62 @@
         "matchReview": "自动上部构图，待逐图校准"
       },
       "processedArtwork": {
-        "image": "images/s2-zspms-ba3bf32563-4f9c5145869f-composed-v1-gallery.webp",
-        "avatarImage": "images/s2-zspms-ba3bf32563-4f9c5145869f-composed-v1-avatar.png",
+        "image": "images/s2-zspms-ba3bf32563-5e281b8c44ee-refresh-gallery.webp",
+        "avatarImage": "images/s2-zspms-ba3bf32563-5e281b8c44ee-refresh-avatar.png",
         "avatarStyle": "transparent-id-bust-512-padding26",
-        "matchImage": "images/s2-zspms-ba3bf32563-4f9c5145869f-composed-v1-match.webp",
-        "mobileImage": "images/s2-zspms-ba3bf32563-4f9c5145869f-composed-v1-mobile.webp",
-        "detailImage": "images/s2-zspms-ba3bf32563-4f9c5145869f-composed-v1-detail.webp",
-        "method": "gpt-image",
-        "review": "用户指定原图；去除黑底及分离的背景武器，保留人物与服装；以用户选图优先于自动皮肤候选",
-        "galleryKind": "full",
-        "cleanupBatch": "user-selected-20261104",
+        "matchImage": "images/s2-zspms-ba3bf32563-5e281b8c44ee-refresh-match.webp",
+        "mobileImage": "images/s2-zspms-ba3bf32563-5e281b8c44ee-refresh-mobile.webp",
+        "detailImage": "images/s2-zspms-ba3bf32563-5e281b8c44ee-refresh-detail.webp",
+        "method": "gpt-image-and-alpha-cleanup",
+        "review": "用户上传指定立绘；清理背景并统一构图，保留原画范围，不补画身体。",
+        "galleryKind": "partial",
+        "cleanupBatch": "pgr-refresh-20261104",
         "candidateSource": {
-          "title": "用户指定：露娜全身原画",
-          "localOriginal": "user-sources/luna-2e3151435926.png",
-          "sourcePage": "user-sources/luna-2e3151435926.png",
-          "userSelected": true,
-          "selectionDate": "2026-11-04"
+          "title": "用户选定：露娜新立绘",
+          "url": "",
+          "sourcePage": "",
+          "localOriginal": "user-sources/s2-zspms-ba3bf32563-20261104.png"
         },
         "avatarCleanupRequired": false,
         "visualApproved": false,
-        "sourceSha256": "2a887e94848f483148f02a598173985b219c5c35480a0e7cb82d2ad29ccc18d6",
-        "cutoutSha256": "5af90404cbcc2b57181e5aa0ac46150e1d5a7743511a22760f3d46cc23ee5394",
+        "sourceSha256": "4e0f7ee47b27e2001c89b91e657ee5b77c8cea9cff2518cb2baf712eb8d6c79b",
+        "cutoutSha256": "5e281b8c44ee71cba61224c41960ddb4c4f8d032fbccebf44cafa1cf55dcdcd3",
         "transparentFraction": 0.5841511740812477,
         "framing": {
           "eyes": [
-            505,
-            287
+            532,
+            466
           ],
-          "faceWidth": 95,
+          "faceWidth": 230,
           "sourceDimensions": [
-            986,
-            1596
+            1207,
+            1303
           ],
           "outputs": {
-            "gallery": {
-              "width": 900,
-              "height": 1200,
-              "scale": 0.7976366322008862,
-              "anchor": [
-                490,
-                801.5
-              ],
-              "target": [
-                450,
-                600
-              ]
-            },
-            "avatar": {
-              "width": 460,
-              "height": 460,
-              "scale": 1.5263157894736843,
-              "anchor": [
-                505,
-                287
-              ],
-              "target": [
-                230,
-                270
-              ]
-            },
             "match": {
               "width": 960,
               "height": 540,
-              "scale": 1.654320987654321,
+              "scale": 0.6246719160104987,
               "anchor": [
-                505,
-                287
+                532,
+                466
               ],
               "target": [
                 480,
-                300
+                270
               ]
             },
             "mobile": {
               "width": 540,
               "height": 540,
-              "scale": 1.654320987654321,
+              "scale": 0.6246719160104987,
               "anchor": [
-                505,
-                287
+                532,
+                466
               ],
               "target": [
                 270,
-                300
+                270
               ]
             }
           }
@@ -7305,21 +7278,21 @@
         "skinVerified": false
       },
       "portraitArtwork": {
-        "avatarImage": "images/s2-zspms-ba3bf32563-711709177a66-portrait-bust.png",
-        "source": "ai-candidates/s2-zspms-ba3bf32563-user-selected-20261104.png",
-        "sourceUrl": "user-sources/luna-2e3151435926.png",
-        "sourceSha256": "5af90404cbcc2b57181e5aa0ac46150e1d5a7743511a22760f3d46cc23ee5394",
-        "review": "用户指定同服装整图导出的小头像；替换旧皮肤头像",
+        "avatarImage": "images/s2-zspms-ba3bf32563-5e281b8c44ee-refresh-avatar.png",
+        "source": "ai-candidates/s2-zspms-ba3bf32563-20261104-clean.png",
+        "sourceUrl": "",
+        "sourceSha256": "5e281b8c44ee71cba61224c41960ddb4c4f8d032fbccebf44cafa1cf55dcdcd3",
+        "review": "用户上传指定立绘；清理背景并统一构图，保留原画范围，不补画身体。",
         "method": "gpt-image",
         "silhouetteReviewed": true,
         "visualApproved": false,
         "latestSkinVerified": false,
         "usage": "avatar-only",
         "eyes": [
-          505,
-          287
+          532,
+          466
         ],
-        "faceWidth": 95
+        "faceWidth": 230
       }
     },
     {
