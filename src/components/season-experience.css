@@ -188,3 +188,46 @@
  .app-shell--s2 .faction-contender__copy h2 { font-size:21px; line-height:1.4; }
  .app-shell--s2 .faction-contender__copy strong { font-size:28px; }
 }
+
+/* Phone duels give the square portrait its own space between identity and result. */
+@media(max-width:720px) {
+ .match-center .duel { align-items:stretch; gap:0; grid-template-columns:minmax(0,1fr) 28px minmax(0,1fr); }
+ .match-center .versus { align-self:center; min-width:0; }
+ .match-center .versus span { width:100%; height:auto; font-size:12px; font-style:normal; }
+ .match-center .fighter { display:grid; grid-template-columns:minmax(0,1fr) auto; grid-template-rows:auto auto 1fr auto; aspect-ratio:auto; padding:0; align-content:start; align-items:start; min-width:0; overflow:hidden; }
+ .match-center .fighter::before { display:none; }
+ .match-center .fighter::after { content:''; grid-column:1/-1; grid-row:4; align-self:stretch; min-height:41px; background:#fff; pointer-events:none; }
+ .match-center .fighter--selected::after { background:#e5f6fb; }
+ .match-center .fighter[data-submitted]::after { background:#edf6ef; }
+ .match-center .fighter[data-submitted] { outline-offset:2px; }
+ .match-center .fighter--selected { outline-width:2px; outline-offset:2px; }
+ .match-center .fighter strong { order:0; grid-column:1/-1; grid-row:1; margin:10px 10px 0; min-height:21px; font-size:16px; line-height:1.3; text-wrap:wrap; justify-content:flex-start; align-items:start; }
+ .match-center .fighter__game { grid-column:1/-1; grid-row:2; margin:3px 10px 0; min-height:16px; font-size:11px; line-height:1.4; }
+ .match-center .fighter__art { position:relative; z-index:0; inset:auto; grid-column:1/-1; grid-row:3; align-self:end; width:100%; aspect-ratio:1; }
+ .match-center .fighter .artwork__image { object-fit:contain; object-position:center bottom; }
+ .match-center .fighter__logo { width:88%; height:48%; left:6%; bottom:42px; }
+ .match-center .fighter>small { grid-column:1; grid-row:4; align-self:center; margin:0; padding:10px 0 10px 8px; font-size:14px; line-height:1.5; white-space:nowrap; color:var(--ink); text-shadow:none; position:relative; z-index:1; }
+ .match-center .fighter__choice,.match-center .fighter__submitted { position:static; grid-column:2; grid-row:4; align-self:center; justify-self:end; max-width:82px; margin:6px 8px 6px 3px; padding:4px 0; font-size:11px; background:transparent; }
+ .match-center .fighter__choice svg,.match-center .fighter__submitted svg { flex:none; width:12px; height:12px; }
+ .match-center .fighter .defending-mark { position:absolute; z-index:3; top:68px; left:6px; margin:0; }
+ .match-center .match-card__meta { gap:12px; align-items:center; margin-bottom:14px; min-height:22px; }
+ .match-center .group-badge { border:0; padding:0; font-size:11px; letter-spacing:.02em; color:#53646b; }
+ .match-center .voted-badge { font-size:11px; color:#176743; }
+ .match-center .match-card__footer>span { color:#53646b; }
+ .match-center .match-card__footer>small { color:#53646b; }
+ .match-center .match-card__footer>small b { color:var(--ink); }
+ .match-center .draft-badge { text-align:right; justify-content:flex-end; min-width:0; }
+ .match-center .match-card__footer { flex-wrap:wrap; gap:8px 12px; padding-top:12px; }
+ .match-center .match-card__footer>small { font-size:12px; line-height:1.5; }
+ .match-center .vote-progress { margin-top:14px; height:6px; }
+}
+
+/* Share row sizing so long names and game labels cannot stagger the portraits. */
+@supports (grid-template-rows:subgrid) {
+ @media(max-width:720px) {
+  .match-center .duel { grid-template-rows:auto auto auto auto; }
+  .match-center .fighter { grid-column:1; grid-row:1/5; grid-template-rows:subgrid; }
+  .match-center .fighter--right { grid-column:3; }
+  .match-center .versus { grid-column:2; grid-row:3; }
+ }
+}
