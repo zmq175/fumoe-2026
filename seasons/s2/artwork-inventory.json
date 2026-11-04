@@ -7059,89 +7059,64 @@
         "matchReview": "自动上部构图，待逐图校准"
       },
       "processedArtwork": {
-        "image": "images/c106-09e88b4c1187-composed-v1-gallery.webp",
-        "avatarImage": "images/c106-09e88b4c1187-composed-v1-avatar.png",
+        "image": "images/c106-8d64452a9fc8-kurobbs-gallery.webp",
+        "avatarImage": "images/c106-8d64452a9fc8-kurobbs-avatar.png",
         "avatarStyle": "transparent-id-bust-512-padding26",
-        "matchImage": "images/c106-09e88b4c1187-composed-v1-match.webp",
-        "mobileImage": "images/c106-09e88b4c1187-composed-v1-mobile.webp",
-        "detailImage": "images/c106-09e88b4c1187-composed-v1-detail.webp",
-        "method": "gpt-image",
-        "review": "用户指定原图；去除黑底及分离的背景武器，保留人物与服装；以用户选图优先于自动皮肤候选",
-        "galleryKind": "full",
-        "cleanupBatch": "user-selected-20261104",
+        "matchImage": "images/c106-8d64452a9fc8-kurobbs-match.webp",
+        "mobileImage": "images/c106-8d64452a9fc8-kurobbs-mobile.webp",
+        "detailImage": "images/c106-8d64452a9fc8-kurobbs-detail.webp",
+        "method": "gpt-image-and-alpha-cleanup",
+        "review": "用户指定库街区图片；清理背景装饰，保留原图腰部范围，不补画身体。",
+        "galleryKind": "partial",
+        "cleanupBatch": "liv-kurobbs-20261104",
         "candidateSource": {
-          "title": "用户指定：丽芙全身原画",
-          "localOriginal": "user-sources/liv-235c695845b7.png",
-          "sourcePage": "user-sources/liv-235c695845b7.png",
+          "title": "用户选定：丽芙新立绘",
+          "localOriginal": "user-sources/liv-kurobbs-20261104.png",
+          "url": "https://prod-alicdn-community.kurobbs.com/forum/a4c436c13bf246dfb190734284d0b9f820251104.png",
+          "sourcePage": "https://prod-alicdn-community.kurobbs.com/forum/a4c436c13bf246dfb190734284d0b9f820251104.png",
           "userSelected": true,
           "selectionDate": "2026-11-04"
         },
         "avatarCleanupRequired": false,
         "visualApproved": false,
-        "sourceSha256": "0ce692b435501bb02cac411cef577ad31d0cddfb916045892d31c744c1a9ee10",
-        "cutoutSha256": "a1cf1eb6faa18e1aaf36c6a481d68bf9d19a85cc74351ba4ce419a754ae79050",
+        "sourceSha256": "898c57850fbac124e84b921310e3f8c19dc1150f2697c3f29882954ecb83970a",
+        "cutoutSha256": "8d64452a9fc87be550db5474fc2fa94bb0a5d51535211eaf26a84fb210d69919",
         "transparentFraction": 0.6274098952966172,
         "framing": {
           "eyes": [
-            493,
-            246
+            575,
+            310
           ],
-          "faceWidth": 110,
+          "faceWidth": 230,
           "sourceDimensions": [
-            985,
-            1596
+            1207,
+            1303
           ],
           "outputs": {
-            "gallery": {
-              "width": 900,
-              "height": 1200,
-              "scale": 0.7035830618892508,
-              "anchor": [
-                489.5,
-                796
-              ],
-              "target": [
-                450,
-                600
-              ]
-            },
-            "avatar": {
-              "width": 460,
-              "height": 460,
-              "scale": 1.1818181818181819,
-              "anchor": [
-                493,
-                246
-              ],
-              "target": [
-                230,
-                280
-              ]
-            },
             "match": {
               "width": 960,
               "height": 540,
-              "scale": 1.4259259259259258,
+              "scale": 0.7391304347826086,
               "anchor": [
-                493,
-                246
+                575,
+                310
               ],
               "target": [
                 480,
-                340
+                270
               ]
             },
             "mobile": {
               "width": 540,
               "height": 540,
-              "scale": 1.4259259259259258,
+              "scale": 0.7391304347826086,
               "anchor": [
-                493,
-                246
+                575,
+                310
               ],
               "target": [
                 270,
-                340
+                270
               ]
             }
           }
@@ -7150,21 +7125,21 @@
         "skinVerified": false
       },
       "portraitArtwork": {
-        "avatarImage": "images/c106-95ff574b11fb-portrait-bust.png",
-        "source": "ai-candidates/c106-user-selected-20261104.png",
-        "sourceUrl": "user-sources/liv-235c695845b7.png",
-        "sourceSha256": "a1cf1eb6faa18e1aaf36c6a481d68bf9d19a85cc74351ba4ce419a754ae79050",
-        "review": "用户指定同服装整图导出的小头像；替换旧皮肤头像",
+        "avatarImage": "images/c106-8d64452a9fc8-kurobbs-avatar.png",
+        "source": "ai-candidates/c106-kurobbs-20261104-clean.png",
+        "sourceUrl": "https://prod-alicdn-community.kurobbs.com/forum/a4c436c13bf246dfb190734284d0b9f820251104.png",
+        "sourceSha256": "8d64452a9fc87be550db5474fc2fa94bb0a5d51535211eaf26a84fb210d69919",
+        "review": "用户指定库街区图片；清理背景装饰，保留原图腰部范围，不补画身体。",
         "method": "gpt-image",
         "silhouetteReviewed": true,
         "visualApproved": false,
         "latestSkinVerified": false,
         "usage": "avatar-only",
         "eyes": [
-          493,
-          246
+          575,
+          310
         ],
-        "faceWidth": 110
+        "faceWidth": 230
       }
     },
     {
