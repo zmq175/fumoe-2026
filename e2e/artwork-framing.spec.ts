@@ -6,7 +6,7 @@ import { legacyFormat } from '../src/lib/season-format'
 test('首页宣传语不绑定人数，实际人数单独展示',async({page})=>{
   await mockPublicApi(page,{season:{...currentSeason,format:{...legacyFormat(),participants:256}}})
   await page.goto('/')
-  await expect(page.locator('.hero h1')).toHaveText('你来投票选出下一位群头像主角')
+  await expect(page.locator('.hero h1')).toHaveText('三瓜争夺，战火再燃')
   await expect(page.locator('.hero__season-facts')).toContainText('256 位角色')
   await page.setViewportSize({width:390,height:844})
   expect(await page.evaluate(()=>document.documentElement.scrollWidth)).toBeLessThanOrEqual(390)
