@@ -14344,66 +14344,45 @@
         "matchReview": "自动上部构图，待逐图校准"
       },
       "processedArtwork": {
-        "image": "images/s2-zspms-c672ec4341-8f600678f5c9-composed-v1-gallery.webp",
-        "avatarImage": "images/s2-zspms-c672ec4341-8f600678f5c9-composed-v1-avatar.png",
+        "image": "images/s2-zspms-c672ec4341-730b44d3a5c6-refresh-gallery.webp",
+        "avatarImage": "images/s2-zspms-c672ec4341-730b44d3a5c6-refresh-avatar.png",
         "avatarStyle": "transparent-id-bust-512-padding26",
-        "matchImage": "images/s2-zspms-c672ec4341-8f600678f5c9-composed-v1-match.webp",
-        "mobileImage": "images/s2-zspms-c672ec4341-8f600678f5c9-composed-v1-mobile.webp",
-        "detailImage": "images/s2-zspms-c672ec4341-8f600678f5c9-composed-v1-detail.webp",
-        "method": "source-alpha",
-        "review": "已目视定位面部；证件照式胸像首轮导出，仍需检查头饰及小尺寸，最新服装未核验",
+        "matchImage": "images/s2-zspms-c672ec4341-730b44d3a5c6-refresh-match.webp",
+        "mobileImage": "images/s2-zspms-c672ec4341-730b44d3a5c6-refresh-mobile.webp",
+        "detailImage": "images/s2-zspms-c672ec4341-730b44d3a5c6-refresh-detail.webp",
+        "method": "gpt-image-and-alpha-cleanup",
+        "review": "用户上传指定立绘；清理白底并统一构图，保留原画范围，不补画身体。",
         "galleryKind": "partial",
-        "cleanupBatch": null,
-        "candidateSource": null,
+        "cleanupBatch": "pgr-refresh-20261104",
+        "candidateSource": {
+          "title": "用户选定：凡妮莎新立绘",
+          "url": "",
+          "sourcePage": "",
+          "localOriginal": "user-sources/s2-zspms-c672ec4341-20261104.png"
+        },
         "avatarCleanupRequired": false,
         "visualApproved": false,
-        "sourceSha256": "6f6eb0b176264d0bffe64a72e9b0c5aab5af7893e64df9725338df36d6fc1b6b",
-        "cutoutSha256": "6f6eb0b176264d0bffe64a72e9b0c5aab5af7893e64df9725338df36d6fc1b6b",
+        "sourceSha256": "fa49f4704b495bf934c8ceb38d5e4e2050cca6f7cbcbd10fbe48fbe4fc5de4fe",
+        "cutoutSha256": "730b44d3a5c6c227d8aea2eafdf26bd3594f599d62bd3b57a88776a5af685ba2",
         "transparentFraction": 0.4924060922392402,
         "framing": {
           "eyes": [
-            392,
-            331
+            600,
+            478
           ],
-          "faceWidth": 116,
+          "faceWidth": 240,
           "sourceDimensions": [
-            832,
-            899
+            1207,
+            1303
           ],
           "outputs": {
-            "gallery": {
-              "width": 900,
-              "height": 1200,
-              "scale": 1.4634146341463414,
-              "anchor": [
-                428,
-                529.5
-              ],
-              "target": [
-                450,
-                600
-              ]
-            },
-            "avatar": {
-              "width": 460,
-              "height": 460,
-              "scale": 1.4655172413793103,
-              "anchor": [
-                392,
-                331
-              ],
-              "target": [
-                230,
-                210
-              ]
-            },
             "match": {
               "width": 960,
               "height": 540,
-              "scale": 1.4082840236686391,
+              "scale": 0.7083333333333334,
               "anchor": [
-                392,
-                331
+                600,
+                478
               ],
               "target": [
                 480,
@@ -14413,10 +14392,10 @@
             "mobile": {
               "width": 540,
               "height": 540,
-              "scale": 1.4082840236686391,
+              "scale": 0.7083333333333334,
               "anchor": [
-                392,
-                331
+                600,
+                478
               ],
               "target": [
                 270,
@@ -14427,6 +14406,18 @@
         },
         "originalPreserved": true,
         "skinVerified": false
+      },
+      "portraitArtwork": {
+        "avatarImage": "images/s2-zspms-c672ec4341-730b44d3a5c6-refresh-avatar.png",
+        "source": "ai-candidates/s2-zspms-c672ec4341-20261104-clean.png",
+        "sourceUrl": "",
+        "sourceSha256": "730b44d3a5c6c227d8aea2eafdf26bd3594f599d62bd3b57a88776a5af685ba2",
+        "review": "用户上传指定立绘；清理白底并统一构图，保留原画范围，不补画身体。",
+        "eyes": [
+          600,
+          478
+        ],
+        "faceWidth": 240
       }
     },
     {
@@ -14493,66 +14484,45 @@
         "matchReview": "自动上部构图，待逐图校准"
       },
       "processedArtwork": {
-        "image": "images/s2-zspms-94d0356ed1-ceafcef6b458-composed-v1-gallery.webp",
-        "avatarImage": "images/s2-zspms-94d0356ed1-ceafcef6b458-composed-v1-avatar.png",
+        "image": "images/s2-zspms-94d0356ed1-4e94940c4536-refresh-gallery.webp",
+        "avatarImage": "images/s2-zspms-94d0356ed1-4e94940c4536-refresh-avatar.png",
         "avatarStyle": "transparent-id-bust-512-padding26",
-        "matchImage": "images/s2-zspms-94d0356ed1-ceafcef6b458-composed-v1-match.webp",
-        "mobileImage": "images/s2-zspms-94d0356ed1-ceafcef6b458-composed-v1-mobile.webp",
-        "detailImage": "images/s2-zspms-94d0356ed1-ceafcef6b458-composed-v1-detail.webp",
-        "method": "source-alpha",
-        "review": "已目视定位面部；证件照式胸像首轮导出，仍需检查头饰及小尺寸，最新服装未核验",
+        "matchImage": "images/s2-zspms-94d0356ed1-4e94940c4536-refresh-match.webp",
+        "mobileImage": "images/s2-zspms-94d0356ed1-4e94940c4536-refresh-mobile.webp",
+        "detailImage": "images/s2-zspms-94d0356ed1-4e94940c4536-refresh-detail.webp",
+        "method": "gpt-image-and-alpha-cleanup",
+        "review": "用户上传指定立绘；清理白底并统一构图，保留原画范围，不补画身体。",
         "galleryKind": "partial",
-        "cleanupBatch": null,
-        "candidateSource": null,
+        "cleanupBatch": "pgr-refresh-20261104",
+        "candidateSource": {
+          "title": "用户选定：莱亚新立绘",
+          "url": "",
+          "sourcePage": "",
+          "localOriginal": "user-sources/s2-zspms-94d0356ed1-20261104.png"
+        },
         "avatarCleanupRequired": false,
         "visualApproved": false,
-        "sourceSha256": "d9350c686a7b3068dd82c03f1d1609ba883b1f391a6677d26bcdeb273e399e76",
-        "cutoutSha256": "d9350c686a7b3068dd82c03f1d1609ba883b1f391a6677d26bcdeb273e399e76",
+        "sourceSha256": "ae38df9937845a7018d2cd77e26f5fc08816abf5af1f64a0fc5dbda1f97a22cf",
+        "cutoutSha256": "4e94940c4536107ecd75aa6ebdd4a5b10349dbb65375c9a1850f280b9f401b11",
         "transparentFraction": 0.4851824074074074,
         "framing": {
           "eyes": [
-            493,
-            322
+            723,
+            275
           ],
-          "faceWidth": 164,
+          "faceWidth": 230,
           "sourceDimensions": [
-            1000,
-            1080
+            1556,
+            1011
           ],
           "outputs": {
-            "gallery": {
-              "width": 900,
-              "height": 1200,
-              "scale": 1.0303030303030303,
-              "anchor": [
-                539.5,
-                578
-              ],
-              "target": [
-                450,
-                600
-              ]
-            },
-            "avatar": {
-              "width": 460,
-              "height": 460,
-              "scale": 1.0365853658536586,
-              "anchor": [
-                493,
-                322
-              ],
-              "target": [
-                230,
-                210
-              ]
-            },
             "match": {
               "width": 960,
               "height": 540,
-              "scale": 0.9834710743801653,
+              "scale": 0.7391304347826086,
               "anchor": [
-                493,
-                322
+                723,
+                275
               ],
               "target": [
                 480,
@@ -14562,10 +14532,10 @@
             "mobile": {
               "width": 540,
               "height": 540,
-              "scale": 0.9834710743801653,
+              "scale": 0.7391304347826086,
               "anchor": [
-                493,
-                322
+                723,
+                275
               ],
               "target": [
                 270,
@@ -14576,6 +14546,18 @@
         },
         "originalPreserved": true,
         "skinVerified": false
+      },
+      "portraitArtwork": {
+        "avatarImage": "images/s2-zspms-94d0356ed1-4e94940c4536-refresh-avatar.png",
+        "source": "ai-candidates/s2-zspms-94d0356ed1-20261104-clean.png",
+        "sourceUrl": "",
+        "sourceSha256": "4e94940c4536107ecd75aa6ebdd4a5b10349dbb65375c9a1850f280b9f401b11",
+        "review": "用户上传指定立绘；清理白底并统一构图，保留原画范围，不补画身体。",
+        "eyes": [
+          723,
+          275
+        ],
+        "faceWidth": 230
       }
     },
     {

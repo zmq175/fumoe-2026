@@ -2062,37 +2062,55 @@
       "id": "s2-zspms-c672ec4341",
       "game": "战双帕弥什",
       "name": "凡妮莎",
+      "file": "ai-candidates/s2-zspms-c672ec4341-20261104-clean.png",
       "eyes": [
-        392,
-        331
+        600,
+        478
       ],
-      "faceWidth": 116,
-      "method": "source-alpha",
-      "review": "已目视定位面部；证件照式胸像首轮导出，仍需检查头饰及小尺寸，最新服装未核验",
-      "headTop": 162,
-      "headTopMethod": "alpha-head-band-candidate",
+      "faceWidth": 240,
+      "headTop": 210,
+      "headTopMethod": "manual-source-review",
       "matchEyeY": 270,
+      "avatarFaceWidth": 145,
+      "avatarEyeY": 230,
       "galleryKind": "partial",
-      "sourceExtentAccepted": true,
-      "sourceExtentReason": "用户确认接受保留原画范围，不虚构身体（2026-11-04）"
+      "method": "gpt-image-and-alpha-cleanup",
+      "review": "用户上传指定立绘；清理白底并统一构图，保留原画范围，不补画身体。",
+      "candidateSource": {
+        "title": "用户选定：凡妮莎新立绘",
+        "url": "",
+        "sourcePage": "",
+        "localOriginal": "user-sources/s2-zspms-c672ec4341-20261104.png"
+      },
+      "cleanupBatch": "pgr-refresh-20261104",
+      "avatarCleanupRequired": false
     },
     {
       "id": "s2-zspms-94d0356ed1",
       "game": "战双帕弥什",
       "name": "莱亚",
+      "file": "ai-candidates/s2-zspms-94d0356ed1-20261104-clean.png",
       "eyes": [
-        493,
-        322
+        723,
+        275
       ],
-      "faceWidth": 164,
-      "method": "source-alpha",
-      "review": "已目视定位面部；证件照式胸像首轮导出，仍需检查头饰及小尺寸，最新服装未核验",
-      "headTop": 80,
-      "headTopMethod": "alpha-head-band-candidate",
+      "faceWidth": 230,
+      "headTop": 25,
+      "headTopMethod": "manual-source-review",
       "matchEyeY": 270,
+      "avatarFaceWidth": 145,
+      "avatarEyeY": 230,
       "galleryKind": "partial",
-      "sourceExtentAccepted": true,
-      "sourceExtentReason": "用户确认接受保留原画范围，不虚构身体（2026-11-04）"
+      "method": "gpt-image-and-alpha-cleanup",
+      "review": "用户上传指定立绘；清理白底并统一构图，保留原画范围，不补画身体。",
+      "candidateSource": {
+        "title": "用户选定：莱亚新立绘",
+        "url": "",
+        "sourcePage": "",
+        "localOriginal": "user-sources/s2-zspms-94d0356ed1-20261104.png"
+      },
+      "cleanupBatch": "pgr-refresh-20261104",
+      "avatarCleanupRequired": false
     },
     {
       "id": "s2-zspms-d2c5701b36",

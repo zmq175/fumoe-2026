@@ -2303,6 +2303,66 @@
       "method": "gpt-image",
       "silhouetteReviewed": true,
       "review": "用户指定大卡形态；基于同一成年形态提取独立头肩像，保留头冠并清除裁切残留手部，仅用于头像。"
+    },
+    {
+      "id": "s2-zspms-c672ec4341",
+      "game": "战双帕弥什",
+      "name": "凡妮莎",
+      "file": "ai-candidates/s2-zspms-c672ec4341-20261104-clean.png",
+      "eyes": [
+        600,
+        478
+      ],
+      "faceWidth": 240,
+      "headTop": 210,
+      "headTopMethod": "manual-source-review",
+      "matchEyeY": 270,
+      "avatarFaceWidth": 145,
+      "avatarEyeY": 230,
+      "galleryKind": "partial",
+      "method": "gpt-image-and-alpha-cleanup",
+      "review": "用户上传指定立绘；清理白底并统一构图，保留原画范围，不补画身体。",
+      "candidateSource": {
+        "title": "用户选定：凡妮莎新立绘",
+        "url": "",
+        "sourcePage": "",
+        "localOriginal": "user-sources/s2-zspms-c672ec4341-20261104.png"
+      },
+      "cleanupBatch": "pgr-refresh-20261104",
+      "avatarCleanupRequired": false,
+      "sourceUrl": "",
+      "sourcePage": "",
+      "silhouetteReviewed": true
+    },
+    {
+      "id": "s2-zspms-94d0356ed1",
+      "game": "战双帕弥什",
+      "name": "莱亚",
+      "file": "ai-candidates/s2-zspms-94d0356ed1-20261104-clean.png",
+      "eyes": [
+        723,
+        275
+      ],
+      "faceWidth": 230,
+      "headTop": 25,
+      "headTopMethod": "manual-source-review",
+      "matchEyeY": 270,
+      "avatarFaceWidth": 145,
+      "avatarEyeY": 230,
+      "galleryKind": "partial",
+      "method": "gpt-image-and-alpha-cleanup",
+      "review": "用户上传指定立绘；清理白底并统一构图，保留原画范围，不补画身体。",
+      "candidateSource": {
+        "title": "用户选定：莱亚新立绘",
+        "url": "",
+        "sourcePage": "",
+        "localOriginal": "user-sources/s2-zspms-94d0356ed1-20261104.png"
+      },
+      "cleanupBatch": "pgr-refresh-20261104",
+      "avatarCleanupRequired": false,
+      "sourceUrl": "",
+      "sourcePage": "",
+      "silhouetteReviewed": true
     }
   ]
 }
