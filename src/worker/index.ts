@@ -2,7 +2,7 @@ import { matchesRevalidation } from './matches-revalidation'
 import { publicRosterCache } from './public-cache'
 import { matchStartsSql, matchEndsSql } from './match-windows'
 import { legacyPortrait } from '../lib/legacy-assets'
-import { seasonStandingsStatement, snapshotSeasonStandings } from './season-results'
+import { publicStandingsStatements, snapshotSeasonStandings } from './season-results'
 import { legacyFormat, formatSchedule, formatGroups } from '../lib/season-format'
 import { readFormat, seasonFormatSchema } from '../lib/season-format-schema'
 import { insertPairStatement, loadSeasonFormat, roundStatements } from './season-config'
@@ -200,14 +200,10 @@ app.get('/api/public/rounds', async (c) => {
 
 app.get('/api/public/standings', async (c) => {
   const slug=c.req.query('season')
-  const [seasonRows]=await readPublic(c,[c.env.DB.prepare(`SELECT ${seasonColumns.split(',').map(column=>`s.${column}`).join(',')},snap.standings_json AS savedStandings FROM seasons s LEFT JOIN season_result_snapshots snap ON snap.season_id=s.id AND s.status IN ('completed','archived') AND s.history_unlocked=0 WHERE ${slug?'s.slug=?':'s.is_current=1'} AND s.status!='draft'`).bind(...(slug?[slug]:[]))])
-  const season=seasonRows.results[0] as (SeasonRow&{savedStandings:string|null})|undefined
+  const [seasonRows,entryResult,standingResult]=await readPublic(c,publicStandingsStatements(c.env.DB,slug))
+  const season=seasonRows.results[0] as {id:string;rulesVersion:string;savedStandings:string|null}|undefined
   if(!season)return c.json({standings:[]})
   if(season.savedStandings)return c.json({standings:JSON.parse(season.savedStandings)})
-  const [entryResult,standingResult]=await readPublic(c,[
-    c.env.DB.prepare('SELECT character_id AS id,artwork_avatar_key_snapshot AS key FROM season_entries WHERE season_id=?').bind(season.id),
-    seasonStandingsStatement(c.env.DB,season.id)
-  ])
   const avatars=new Map(entryResult.results.map(e=>[e.id,season.rulesVersion==='1'?legacyPortrait(String(e.id)):e.key]))
   return c.json({standings:standingResult.results.map(row=>({...row,avatarArtworkKey:avatars.get(row.id)??null}))})
 })

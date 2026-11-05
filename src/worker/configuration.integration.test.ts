@@ -48,13 +48,23 @@ const format256=():SeasonFormat=>({...legacyFormat(),participants:256,groupCount
 describe('真实 SQLite 迁移、路由与赛季推进',()=>{
   it('积分与头像一次批量读取，锁定的历史积分直接返回快照',async()=>{
     const {sql,env,batches}=database(),request=await client(env)
+    const sizes:number[][]=[]
+    const original=env.DB.batch.bind(env.DB)
+    vi.spyOn(env.DB,'batch').mockImplementation(async statements=>{const results=await original(statements);sizes.push(results.map(result=>result.results.length));return results})
     const saved=JSON.parse(String(sql.prepare("SELECT standings_json FROM season_result_snapshots WHERE season_id='old'").get()?.standings_json))
     expect((await request('/api/public/standings?season=old')).body).toEqual({standings:saved})
-    expect(batches).toEqual([])
+    expect(batches).toEqual([3])
+    expect(sizes[0]).toEqual([1,0,0]) // locked history never recalculates rows
+    batches.length=0
     sql.exec("UPDATE seasons SET history_unlocked=1 WHERE id='old'")
-    expect((await request('/api/public/standings?season=old')).status).toBe(200)
-    expect(batches).toEqual([2])
+    const unlocked=await request('/api/public/standings?season=old')
+    expect(unlocked.body).toEqual({standings:saved.map((row:Record<string,unknown>)=>({...row,avatarArtworkKey:null}))})
+    expect(unlocked.headers.get('server-timing')).toContain('db_calls;desc="1"')
+    expect(batches).toEqual([3])
     expect(JSON.parse(String(sql.prepare("SELECT standings_json FROM season_result_snapshots WHERE season_id='old'").get()?.standings_json))).toEqual(saved)
+    expect((await request('/api/public/standings?season=missing')).body).toEqual({standings:[]})
+    sql.exec("UPDATE seasons SET status='draft' WHERE id='old'")
+    expect((await request('/api/public/standings?season=old')).body).toEqual({standings:[]})
   })
 
   it('首页五项读取合为一个数据库批次，保留无当前赛季时的历史冠军和公告',async()=>{
