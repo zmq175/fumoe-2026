@@ -11,6 +11,7 @@ export interface Env {
   TURNSTILE_SECRET: string
   APP_ORIGIN: string
   ADMIN_EMAILS: string
+  PUBLIC_ROSTER_CACHE?: string
   DEV_AUTH_BYPASS?: string
 }
 

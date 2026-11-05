@@ -1,3 +1,4 @@
+import { publicRosterCache } from './public-cache'
 import { matchStartsSql, matchEndsSql } from './match-windows'
 import { legacyPortrait } from '../lib/legacy-assets'
 import { seasonStandingsStatement, snapshotSeasonStandings } from './season-results'
@@ -57,6 +58,8 @@ app.use('/api/*',async(c,next)=>{
   }
   await next()
 })
+
+app.use('/api/public/characters', publicRosterCache)
 
 app.route('/api/admin/seasons',configurationRoutes)
 
