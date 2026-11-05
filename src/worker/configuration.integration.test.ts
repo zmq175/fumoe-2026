@@ -14,14 +14,15 @@ afterEach(()=>{databases.splice(0).forEach(db=>db.close())})
 function database(){
   const sql=new DatabaseSync(':memory:');databases.push(sql)
   const queries:string[]=[]
+  const batches:number[]=[]
   sql.exec('PRAGMA foreign_keys=ON')
   const prepare=(query:string,values:Array<string|number|null>=[])=>({
     bind:(...args:Array<string|number|null>)=>{if(args.length>100)throw new Error('D1 bound parameter limit exceeded');return prepare(query,args)},
     first:async(column?:string)=>{queries.push(query);const row=sql.prepare(query).get(...values);return column?row?.[column]??null:row??null},
     all:async()=>{queries.push(query);return {results:sql.prepare(query).all(...values),success:true}},
-    run:async()=>{queries.push(query);const result=sql.prepare(query).run(...values);return {success:true,results:[],meta:{changes:Number(result.changes)}}}
+    run:async()=>{queries.push(query);const statement=sql.prepare(query);if(statement.columns().length)return {success:true,results:statement.all(...values),meta:{changes:0}};const result=statement.run(...values);return {success:true,results:[],meta:{changes:Number(result.changes)}}}
   })
-  const db={prepare,batch:async(statements:ReturnType<typeof prepare>[])=>{sql.exec('BEGIN');try{const result=[];for(const statement of statements)result.push(await statement.run());sql.exec('COMMIT');return result}catch(error){sql.exec('ROLLBACK');throw error}}} as unknown as D1Database
+  const db={prepare,batch:async(statements:ReturnType<typeof prepare>[])=>{batches.push(statements.length);sql.exec('BEGIN');try{const result=[];for(const statement of statements)result.push(await statement.run());sql.exec('COMMIT');return result}catch(error){sql.exec('ROLLBACK');throw error}}} as unknown as D1Database
   const files=readdirSync('migrations').filter(f=>f.endsWith('.sql')).sort()
   for(const file of files.filter(f=>f<'0008'))sql.exec(readFileSync(`migrations/${file}`,'utf8'))
   sql.exec("INSERT INTO users(id,email,role) VALUES('admin','admin@test.example','admin'); INSERT INTO games(id,name,sort_order) VALUES('old-game','旧游戏',1)")
@@ -32,7 +33,7 @@ function database(){
   const before={entries:sql.prepare('SELECT * FROM season_entries ORDER BY id').all(),matches:sql.prepare('SELECT * FROM matches ORDER BY id').all(),rounds:sql.prepare('SELECT * FROM tournament_rounds ORDER BY id').all()}
   for(const file of files.filter(f=>f>='0008'))sql.exec(readFileSync(`migrations/${file}`,'utf8'))
   const env={DB:db,APP_ORIGIN:'http://localhost',AUTH_SECRET:'integration-test-secret-at-least-32-characters',MATCH_ROOM:{idFromName:()=>({}),get:()=>({fetch:async()=>new Response('{}')})}} as unknown as Env
-  return {sql,db,env,before,queries}
+  return {sql,db,env,before,queries,batches}
 }
 async function client(env:Env){
   const cookie=`fumoe_session=${await createSession({sub:'admin',email:'admin@test.example',role:'admin'},env)}`
@@ -45,6 +46,69 @@ const reason='隔离数据库配置验证'
 const format256=():SeasonFormat=>({...legacyFormat(),participants:256,groupCount:16,swissRounds:5,rounds:Array.from({length:10},()=>({durationHours:48,breakHours:24})),factions:[{name:'新阵营',games:['新游戏'],accent:'#123456',logoPath:null}]})
 
 describe('真实 SQLite 迁移、路由与赛季推进',()=>{
+  it('积分与头像一次批量读取，锁定的历史积分直接返回快照',async()=>{
+    const {sql,env,batches}=database(),request=await client(env)
+    const saved=JSON.parse(String(sql.prepare("SELECT standings_json FROM season_result_snapshots WHERE season_id='old'").get()?.standings_json))
+    expect((await request('/api/public/standings?season=old')).body).toEqual({standings:saved})
+    expect(batches).toEqual([])
+    sql.exec("UPDATE seasons SET history_unlocked=1 WHERE id='old'")
+    expect((await request('/api/public/standings?season=old')).status).toBe(200)
+    expect(batches).toEqual([2])
+    expect(JSON.parse(String(sql.prepare("SELECT standings_json FROM season_result_snapshots WHERE season_id='old'").get()?.standings_json))).toEqual(saved)
+  })
+
+  it('首页五项读取合为一个数据库批次，保留无当前赛季时的历史冠军和公告',async()=>{
+    const {sql,env,batches}=database(),request=await client(env)
+    const originalBatch=env.DB.batch.bind(env.DB)
+    vi.spyOn(env.DB,'batch').mockImplementation(async statements=>(await originalBatch(statements)).map(result=>({...result,meta:{...result.meta,duration:2}})))
+    const response=await request('/api/public/overview')
+    expect(response.status).toBe(200)
+    expect(response.body.season).toMatchObject({id:'old'})
+    expect(batches).toEqual([5])
+    expect(response.headers.get('server-timing')).toContain('db_calls;desc="1", db_queries;desc="5", db_sql;dur=10.00')
+    sql.exec("UPDATE seasons SET is_current=0; INSERT INTO settings(key,value) VALUES('announcement','测试公告') ON CONFLICT(key) DO UPDATE SET value=excluded.value")
+    const empty=await request('/api/public/overview')
+    expect(empty.body).toMatchObject({season:null,previousSeason:{id:'old',championName:'旧角色0'},round:null,matches:[],siteAnnouncement:'测试公告',seasonAnnouncement:''})
+  })
+
+  it('公开名单与轮次单次查询，对局仅多一次日切换检查，历史字段不变',async()=>{
+    const {sql,env,queries}=database(),request=await client(env)
+    sql.prepare("INSERT INTO seasons(id,slug,name,status,is_current,rules_version,format_json) VALUES('query-season','query-season','查询测试','draft',0,'3',?)").run(JSON.stringify(s2Format()))
+    sql.exec("INSERT INTO season_entries(id,season_id,character_id,group_code,seed,name_snapshot,game_snapshot,summary_snapshot) VALUES('query-entry','query-season','old-0','A',1,'赛季名称','赛季游戏','赛季简介'); INSERT INTO season_character_profiles(season_id,character_id,skin_name,mobile_key,detail_key) VALUES('query-season','old-0','赛季形态','version/mobile','version/detail'); UPDATE seasons SET status='published' WHERE id='query-season'")
+    queries.length=0
+    const roster=await request('/api/public/characters?season=query-season')
+    expect(roster.body.characters).toEqual([expect.objectContaining({id:'old-0',name:'赛季名称',game:'赛季游戏',summary:'赛季简介',skinName:'赛季形态',mobileArtworkKey:'version/mobile',detailArtworkKey:'version/detail'})])
+    expect(queries).toHaveLength(1)
+    const plan=sql.prepare('EXPLAIN QUERY PLAN '+queries[0]).all('query-season').map(row=>String(row.detail)).join('\n')
+    expect(plan).toContain('SEARCH se USING INDEX sqlite_autoindex_season_entries_3')
+    expect(plan).toContain('SEARCH p USING INDEX sqlite_autoindex_season_character_profiles_1')
+    expect(plan).not.toContain('USE TEMP B-TREE')
+    expect(roster.body.characters[0]).not.toHaveProperty('_profileId')
+    sql.exec("INSERT INTO tournament_rounds(id,season_id,stage,round_number,name,starts_at,ends_at,status) VALUES('query-round','query-season','swiss',1,'瑞士轮','2030-01-01T00:00:00.000Z','2030-01-07T00:00:00.000Z','scheduled'); INSERT INTO matches(id,round_id,group_code,bracket_position,left_character_id,right_character_id,status) VALUES('query-match','query-round','A',1,'old-0','old-1','scheduled')")
+    const modernMatches=await request('/api/public/matches?season=query-season&round=query-round')
+    expect(modernMatches.body.matches).toEqual([expect.objectContaining({id:'query-match',leftName:'赛季名称',leftMobileArtworkKey:'version/mobile',startsAt:'2030-01-01T00:00:00.000Z',endsAt:'2030-01-02T00:00:00.000Z'})])
+    expect(modernMatches.body.matches[0]).not.toHaveProperty('rightMobileArtworkKey')
+    expect(modernMatches.body.matches[0]).not.toHaveProperty('_rulesVersion')
+    queries.length=0
+    const legacy=await request('/api/public/characters?season=old')
+    expect(legacy.body.characters).toHaveLength(128)
+    expect(legacy.body.characters[0]).not.toHaveProperty('skinName')
+    expect(queries).toHaveLength(1)
+    queries.length=0
+    expect((await request('/api/public/rounds?season=old')).body.rounds).toHaveLength(1)
+    expect(queries).toHaveLength(1)
+    queries.length=0
+    const matches=await request('/api/public/matches?season=old&round=old-final')
+    expect(matches.body.matches).toHaveLength(1)
+    expect(matches.body.matches[0]).not.toHaveProperty('leftMobileArtworkKey')
+    expect(queries).toHaveLength(2)
+    expect(queries.every(q=>/^\s*(SELECT|WITH)\b/i.test(q))).toBe(true)
+    sql.exec("UPDATE seasons SET status='draft' WHERE id='query-season'")
+    for(const endpoint of ['characters','rounds','matches'])for(const slug of ['missing','query-season']){
+      expect((await request(`/api/public/${endpoint}?season=${slug}`)).body[endpoint as 'characters'|'rounds'|'matches']).toEqual([])
+    }
+  })
+
   it('公开 GET 不查账号，受保护接口仍校验账号状态，并提供分段耗时',async()=>{
     const {sql,env,queries}=database(),request=await client(env)
     queries.length=0

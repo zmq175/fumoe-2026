@@ -1,11 +1,11 @@
 import { matchStartsSql, matchEndsSql } from './match-windows'
 import { legacyPortrait } from '../lib/legacy-assets'
-import { calculateSeasonStandingsV1, snapshotSeasonStandings } from './season-results'
+import { seasonStandingsStatement, snapshotSeasonStandings } from './season-results'
 import { readFormat, legacyFormat, formatSchedule, formatGroups, seasonFormatSchema } from '../lib/season-format'
 import { insertPairStatement, loadSeasonFormat, roundStatements } from './season-config'
 import { firstRoundPairs } from './tournament'
 import { configurationRoutes } from './configuration-routes'
-import { Hono } from 'hono'
+import { Hono, type Context } from 'hono'
 import { HTTPException } from 'hono/http-exception'
 import { cors } from 'hono/cors'
 import { zValidator } from '@hono/zod-validator'
@@ -22,13 +22,15 @@ import type { Env, Role, Session } from './types'
 
 export { MatchRoom }
 
-type Variables = { session: Session | null; timings:{auth:number;lifecycle:number} }
+type Variables = { session: Session | null; timings:{auth:number;lifecycle:number;database?:{wait:number;sql:number|undefined;queries:number;calls:number}} }
 const app = new Hono<{ Bindings: Env, Variables: Variables }>()
 app.use('/api/*',async(c,next)=>{
   const start=performance.now(),timings={auth:0,lifecycle:0};c.set('timings',timings)
   await next()
   const total=performance.now()-start
-  c.header('Server-Timing',`auth;dur=${timings.auth.toFixed(1)}, lifecycle;dur=${timings.lifecycle.toFixed(1)}, app;dur=${Math.max(0,total-timings.auth-timings.lifecycle).toFixed(1)}, total;dur=${total.toFixed(1)}`)
+  const database=c.get('timings').database
+  const dbTiming=database?`, db_wait;dur=${database.wait.toFixed(1)}, db_calls;desc="${database.calls}", db_queries;desc="${database.queries}"${database.sql===undefined?'':`, db_sql;dur=${database.sql.toFixed(2)}`}`:''
+  c.header('Server-Timing',`auth;dur=${timings.auth.toFixed(1)}, lifecycle;dur=${timings.lifecycle.toFixed(1)}, app;dur=${Math.max(0,total-timings.auth-timings.lifecycle).toFixed(1)}, total;dur=${total.toFixed(1)}${dbTiming}`)
 })
 app.use('/api/*', cors({ origin: (origin, c) => origin === c.env.APP_ORIGIN ? origin : c.env.APP_ORIGIN, credentials: true }))
 app.use('/api/*', async (c, next) => {
@@ -92,7 +94,23 @@ async function resolveSeason(db:D1Database,slug?:string|null) {
     : db.prepare(`SELECT ${seasonColumns} FROM seasons WHERE is_current=1 AND status!='draft'`).first<SeasonRow>()
 }
 
-function publicMatchPortraits(match:Record<string,unknown>,season:SeasonRow){
+// Resolve the public season inside each read, avoiding a separate D1 round trip.
+function selectedSeasonSql(slug?:string){
+  return `WITH selected_season AS (SELECT id,rules_version FROM seasons WHERE ${slug?'slug=?':'is_current=1'} AND status!='draft')`
+}
+
+// Public route reads only; lifecycle/auth retain their own timing buckets.
+async function readPublic(c:Context<{Bindings:Env;Variables:Variables}>,statements:D1PreparedStatement[]){
+  const start=performance.now()
+  const results=statements.length===1?[await statements[0].all<Record<string,unknown>>()]:await c.env.DB.batch<Record<string,unknown>>(statements)
+  const durations=results.map(result=>result.meta?.duration)
+  const previous=c.get('timings').database
+  const sql=durations.every(value=>typeof value==='number')?durations.reduce((sum,value)=>sum+value,0):undefined
+  c.get('timings').database={wait:(previous?.wait??0)+performance.now()-start,queries:(previous?.queries??0)+statements.length,calls:(previous?.calls??0)+1,sql:sql!==undefined&&(!previous||previous.sql!==undefined)?(previous?.sql??0)+sql:undefined}
+  return results
+}
+
+function publicMatchPortraits(match:Record<string,unknown>,season:Pick<SeasonRow,'rulesVersion'>){
   const now=iso();const status=season.rulesVersion==='3'&&match.status==='live'?(String(match.startsAt)>now?'scheduled':String(match.endsAt)<=now?'closed':'live'):match.status
   return {...match,status,...(season.rulesVersion==='3'?{leftMobileArtworkKey:match.leftMobileArtworkKey,rightMobileArtworkKey:match.rightMobileArtworkKey}:{}),leftAvatarArtworkKey:season.rulesVersion==='1'?legacyPortrait(String(match.leftId)):match.leftAvatarArtworkKey,rightAvatarArtworkKey:season.rulesVersion==='1'?legacyPortrait(String(match.rightId)):match.rightAvatarArtworkKey}
 }
@@ -117,14 +135,17 @@ app.get('/api/health', (c) => {
 })
 
 app.get('/api/public/overview', async (c) => {
-  const season=await resolveSeason(c.env.DB)
-  const previous=await c.env.DB.prepare(`SELECT ${seasonColumns.split(',').map((column)=>`s.${column}`).join(',')},COALESCE(se.name_snapshot,c.name) AS championName,COALESCE(se.game_snapshot,g.name) AS championGame,se.artwork_gallery_key_snapshot AS championArtworkKey FROM seasons s LEFT JOIN characters c ON c.id=s.champion_character_id LEFT JOIN games g ON g.id=c.game_id LEFT JOIN season_entries se ON se.season_id=s.id AND se.character_id=s.champion_character_id WHERE s.status IN ('completed','archived') AND s.id!=COALESCE(?, '') ORDER BY COALESCE(s.completed_at,s.ends_at) DESC LIMIT 1`).bind(season?.id??null).first<SeasonRow>()
-  const [round,activeMatches,siteAnnouncement]=season?await Promise.all([
-    c.env.DB.prepare("SELECT id,stage,round_number AS roundNumber,name,starts_at AS startsAt,ends_at AS endsAt,status FROM tournament_rounds WHERE season_id=? AND status='live' ORDER BY starts_at DESC LIMIT 1").bind(season.id).first(),
-    c.env.DB.prepare(`SELECT m.id,m.group_code AS groupCode,m.bracket_position AS bracketPosition,m.left_votes AS leftVotes,m.right_votes AS rightVotes,m.status,m.winner_character_id AS winnerCharacterId,r.id AS roundId,r.stage,r.round_number AS roundNumber,r.name AS roundName,${matchStartsSql} AS startsAt,${matchEndsSql} AS endsAt,lc.id AS leftId,COALESCE(le.name_snapshot,lc.name) AS leftName,COALESCE(le.game_snapshot,lg.name) AS leftGame,le.artwork_match_key_snapshot AS leftArtworkKey,le.artwork_avatar_key_snapshot AS leftAvatarArtworkKey,rc.id AS rightId,COALESCE(re.name_snapshot,rc.name) AS rightName,COALESCE(re.game_snapshot,rg.name) AS rightGame,re.artwork_match_key_snapshot AS rightArtworkKey,re.artwork_avatar_key_snapshot AS rightAvatarArtworkKey FROM matches m JOIN tournament_rounds r ON r.id=m.round_id JOIN characters lc ON lc.id=m.left_character_id JOIN games lg ON lg.id=lc.game_id JOIN characters rc ON rc.id=m.right_character_id JOIN games rg ON rg.id=rc.game_id LEFT JOIN season_entries le ON le.season_id=r.season_id AND le.character_id=lc.id LEFT JOIN season_entries re ON re.season_id=r.season_id AND re.character_id=rc.id WHERE r.season_id=? AND m.status='live' AND (NOT EXISTS(SELECT 1 FROM match_windows w WHERE w.match_id=m.id) OR (${matchStartsSql}<=strftime('%Y-%m-%dT%H:%M:%fZ','now') AND ${matchEndsSql}>strftime('%Y-%m-%dT%H:%M:%fZ','now'))) ORDER BY m.group_code,m.bracket_position`).bind(season.id).all(),
-    c.env.DB.prepare("SELECT value FROM settings WHERE key='announcement'").first<{value:string}>()
-  ]):[null,{results:[]},await c.env.DB.prepare("SELECT value FROM settings WHERE key='announcement'").first<{value:string}>()]
-  return c.json({season:publicSeason(season),previousSeason:publicSeason(previous),round,matches:activeMatches.results,siteAnnouncement:siteAnnouncement?.value??'',seasonAnnouncement:season?.announcement??''})
+  // The five reads share a D1 batch: one round trip and a consistent read transaction.
+  const [seasonRows,previousRows,roundRows,activeMatches,announcements]=await readPublic(c,[
+    c.env.DB.prepare(`SELECT ${seasonColumns} FROM seasons WHERE is_current=1 AND status!='draft'`),
+    c.env.DB.prepare(`SELECT ${seasonColumns.split(',').map((column)=>`s.${column}`).join(',')},COALESCE(se.name_snapshot,c.name) AS championName,COALESCE(se.game_snapshot,g.name) AS championGame,se.artwork_gallery_key_snapshot AS championArtworkKey FROM seasons s LEFT JOIN characters c ON c.id=s.champion_character_id LEFT JOIN games g ON g.id=c.game_id LEFT JOIN season_entries se ON se.season_id=s.id AND se.character_id=s.champion_character_id WHERE s.status IN ('completed','archived') AND s.id!=COALESCE((SELECT id FROM seasons WHERE is_current=1 AND status!='draft'),'') ORDER BY COALESCE(s.completed_at,s.ends_at) DESC LIMIT 1`),
+    c.env.DB.prepare("SELECT id,stage,round_number AS roundNumber,name,starts_at AS startsAt,ends_at AS endsAt,status FROM tournament_rounds WHERE season_id=(SELECT id FROM seasons WHERE is_current=1 AND status!='draft') AND status='live' ORDER BY starts_at DESC LIMIT 1"),
+    c.env.DB.prepare(`SELECT m.id,m.group_code AS groupCode,m.bracket_position AS bracketPosition,m.left_votes AS leftVotes,m.right_votes AS rightVotes,m.status,m.winner_character_id AS winnerCharacterId,r.id AS roundId,r.stage,r.round_number AS roundNumber,r.name AS roundName,${matchStartsSql} AS startsAt,${matchEndsSql} AS endsAt,lc.id AS leftId,COALESCE(le.name_snapshot,lc.name) AS leftName,COALESCE(le.game_snapshot,lg.name) AS leftGame,le.artwork_match_key_snapshot AS leftArtworkKey,le.artwork_avatar_key_snapshot AS leftAvatarArtworkKey,rc.id AS rightId,COALESCE(re.name_snapshot,rc.name) AS rightName,COALESCE(re.game_snapshot,rg.name) AS rightGame,re.artwork_match_key_snapshot AS rightArtworkKey,re.artwork_avatar_key_snapshot AS rightAvatarArtworkKey FROM matches m JOIN tournament_rounds r ON r.id=m.round_id JOIN characters lc ON lc.id=m.left_character_id JOIN games lg ON lg.id=lc.game_id JOIN characters rc ON rc.id=m.right_character_id JOIN games rg ON rg.id=rc.game_id LEFT JOIN season_entries le ON le.season_id=r.season_id AND le.character_id=lc.id LEFT JOIN season_entries re ON re.season_id=r.season_id AND re.character_id=rc.id WHERE r.season_id=(SELECT id FROM seasons WHERE is_current=1 AND status!='draft') AND m.status='live' AND (NOT EXISTS(SELECT 1 FROM match_windows w WHERE w.match_id=m.id) OR (${matchStartsSql}<=strftime('%Y-%m-%dT%H:%M:%fZ','now') AND ${matchEndsSql}>strftime('%Y-%m-%dT%H:%M:%fZ','now'))) ORDER BY m.group_code,m.bracket_position`),
+    c.env.DB.prepare("SELECT value FROM settings WHERE key='announcement'")
+  ])
+  const season=(seasonRows.results[0] as SeasonRow|undefined)??null
+  const previous=(previousRows.results[0] as SeasonRow|undefined)??null
+  return c.json({season:publicSeason(season),previousSeason:publicSeason(previous),round:roundRows.results[0]??null,matches:activeMatches.results,siteAnnouncement:announcements.results[0]?.value??'',seasonAnnouncement:season?.announcement??''})
 })
 
 app.get('/api/public/seasons', async (c) => {
@@ -139,42 +160,41 @@ app.get('/api/public/seasons/:slug', async (c) => {
 })
 
 app.get('/api/public/matches', async (c) => {
-  const season=await resolveSeason(c.env.DB,c.req.query('season')); if(!season)return c.json({matches:[]})
-  const round=c.req.query('round')
-  const [result,profileResult]=await Promise.all([
-    c.env.DB.prepare(`SELECT m.id,m.group_code AS groupCode,m.bracket_position AS bracketPosition,m.left_votes AS leftVotes,m.right_votes AS rightVotes,m.status,m.winner_character_id AS winnerCharacterId,r.id AS roundId,r.stage,r.round_number AS roundNumber,r.name AS roundName,${matchStartsSql} AS startsAt,${matchEndsSql} AS endsAt,lc.id AS leftId,COALESCE(le.name_snapshot,lc.name) AS leftName,COALESCE(le.game_snapshot,lg.name) AS leftGame,le.artwork_match_key_snapshot AS leftArtworkKey,le.artwork_avatar_key_snapshot AS leftAvatarArtworkKey,rc.id AS rightId,COALESCE(re.name_snapshot,rc.name) AS rightName,COALESCE(re.game_snapshot,rg.name) AS rightGame,re.artwork_match_key_snapshot AS rightArtworkKey,re.artwork_avatar_key_snapshot AS rightAvatarArtworkKey FROM matches m JOIN tournament_rounds r ON r.id=m.round_id JOIN characters lc ON lc.id=m.left_character_id JOIN games lg ON lg.id=lc.game_id JOIN characters rc ON rc.id=m.right_character_id JOIN games rg ON rg.id=rc.game_id LEFT JOIN season_entries le ON le.season_id=r.season_id AND le.character_id=lc.id LEFT JOIN season_entries re ON re.season_id=r.season_id AND re.character_id=rc.id WHERE r.season_id=? ${round?'AND r.id=?':''} ORDER BY r.starts_at DESC,r.round_number DESC,m.group_code,m.bracket_position`).bind(...(round?[season.id,round]:[season.id])).all(),
-    season.rulesVersion==='3'?c.env.DB.prepare('SELECT character_id AS id,mobile_key AS mobile FROM season_character_profiles WHERE season_id=?').bind(season.id).all<{id:string;mobile:string|null}>():Promise.resolve({results:[]})
-  ])
-  const profiles=profileResult.results
-  const mobile=new Map(profiles.map(p=>[p.id,p.mobile]))
-  return c.json({matches:result.results.map(match=>publicMatchPortraits({...match,...(season.rulesVersion==='3'?{leftMobileArtworkKey:mobile.get(String(match.leftId)),rightMobileArtworkKey:mobile.get(String(match.rightId))}:{})},season))})
+  const slug=c.req.query('season'),round=c.req.query('round')
+  const [result]=await readPublic(c,[c.env.DB.prepare(`${selectedSeasonSql(slug)} SELECT s.rules_version AS _rulesVersion,lp.character_id AS _leftProfileId,rp.character_id AS _rightProfileId,lp.mobile_key AS leftMobileArtworkKey,rp.mobile_key AS rightMobileArtworkKey,m.id,m.group_code AS groupCode,m.bracket_position AS bracketPosition,m.left_votes AS leftVotes,m.right_votes AS rightVotes,m.status,m.winner_character_id AS winnerCharacterId,r.id AS roundId,r.stage,r.round_number AS roundNumber,r.name AS roundName,COALESCE(strftime('%Y-%m-%dT%H:%M:%fZ',r.starts_at,'+'||w.offset_hours||' hours'),r.starts_at) AS startsAt,COALESCE(strftime('%Y-%m-%dT%H:%M:%fZ',r.starts_at,'+'||(w.offset_hours+w.duration_hours)||' hours'),r.ends_at) AS endsAt,lc.id AS leftId,COALESCE(le.name_snapshot,lc.name) AS leftName,COALESCE(le.game_snapshot,lg.name) AS leftGame,le.artwork_match_key_snapshot AS leftArtworkKey,le.artwork_avatar_key_snapshot AS leftAvatarArtworkKey,rc.id AS rightId,COALESCE(re.name_snapshot,rc.name) AS rightName,COALESCE(re.game_snapshot,rg.name) AS rightGame,re.artwork_match_key_snapshot AS rightArtworkKey,re.artwork_avatar_key_snapshot AS rightAvatarArtworkKey FROM selected_season s JOIN tournament_rounds r ON r.season_id=s.id JOIN matches m ON m.round_id=r.id LEFT JOIN match_windows w ON w.match_id=m.id JOIN characters lc ON lc.id=m.left_character_id JOIN games lg ON lg.id=lc.game_id JOIN characters rc ON rc.id=m.right_character_id JOIN games rg ON rg.id=rc.game_id LEFT JOIN season_entries le ON le.season_id=r.season_id AND le.character_id=lc.id LEFT JOIN season_entries re ON re.season_id=r.season_id AND re.character_id=rc.id LEFT JOIN season_character_profiles lp ON s.rules_version='3' AND lp.season_id=s.id AND lp.character_id=lc.id LEFT JOIN season_character_profiles rp ON s.rules_version='3' AND rp.season_id=s.id AND rp.character_id=rc.id ${round?'WHERE r.id=?':''} ORDER BY r.starts_at DESC,r.round_number DESC,m.group_code,m.bracket_position`).bind(...[...(slug?[slug]:[]),...(round?[round]:[])])])
+  return c.json({matches:result.results.map(row=>{
+    const {_rulesVersion,_leftProfileId,_rightProfileId,leftMobileArtworkKey,rightMobileArtworkKey,...match}=row
+    return publicMatchPortraits({...match,...(_rulesVersion==='3'?{leftMobileArtworkKey:_leftProfileId?leftMobileArtworkKey:undefined,rightMobileArtworkKey:_rightProfileId?rightMobileArtworkKey:undefined}:{})},{rulesVersion:String(_rulesVersion)})
+  })})
 })
 
 app.get('/api/public/rounds', async (c) => {
-  const season=await resolveSeason(c.env.DB,c.req.query('season')); if(!season)return c.json({rounds:[]})
-  const result=await c.env.DB.prepare(`SELECT id,stage,round_number AS roundNumber,name,starts_at AS startsAt,ends_at AS endsAt,status FROM tournament_rounds WHERE season_id=? ORDER BY starts_at,round_number`).bind(season.id).all()
+  const slug=c.req.query('season')
+  const [result]=await readPublic(c,[c.env.DB.prepare(`${selectedSeasonSql(slug)} SELECT r.id,r.stage,r.round_number AS roundNumber,r.name,r.starts_at AS startsAt,r.ends_at AS endsAt,r.status FROM selected_season s JOIN tournament_rounds r ON r.season_id=s.id ORDER BY r.starts_at,r.round_number`).bind(...(slug?[slug]:[]))])
   return c.json({rounds:result.results})
 })
 
 app.get('/api/public/standings', async (c) => {
-  const season=await resolveSeason(c.env.DB,c.req.query('season')); if(!season)return c.json({standings:[]})
-  if(['completed','archived'].includes(season.status)){
-    const saved=await c.env.DB.prepare('SELECT standings_json AS standings FROM season_result_snapshots WHERE season_id=?').bind(season.id).first<{standings:string}>()
-    if(saved&&!season.historyUnlocked)return c.json({standings:JSON.parse(saved.standings)})
-  }
-  const [entryResult,standings]=await Promise.all([c.env.DB.prepare('SELECT character_id AS id,artwork_avatar_key_snapshot AS key FROM season_entries WHERE season_id=?').bind(season.id).all<{id:string;key:string|null}>(),calculateSeasonStandingsV1(c.env.DB,season.id)])
-  const entries=entryResult.results
-  const avatars=new Map(entries.map(e=>[e.id,season.rulesVersion==='1'?legacyPortrait(e.id):e.key]))
-  return c.json({standings:standings.map(row=>({...row,avatarArtworkKey:avatars.get(row.id)??null}))})
+  const slug=c.req.query('season')
+  const [seasonRows]=await readPublic(c,[c.env.DB.prepare(`SELECT ${seasonColumns.split(',').map(column=>`s.${column}`).join(',')},snap.standings_json AS savedStandings FROM seasons s LEFT JOIN season_result_snapshots snap ON snap.season_id=s.id AND s.status IN ('completed','archived') AND s.history_unlocked=0 WHERE ${slug?'s.slug=?':'s.is_current=1'} AND s.status!='draft'`).bind(...(slug?[slug]:[]))])
+  const season=seasonRows.results[0] as (SeasonRow&{savedStandings:string|null})|undefined
+  if(!season)return c.json({standings:[]})
+  if(season.savedStandings)return c.json({standings:JSON.parse(season.savedStandings)})
+  const [entryResult,standingResult]=await readPublic(c,[
+    c.env.DB.prepare('SELECT character_id AS id,artwork_avatar_key_snapshot AS key FROM season_entries WHERE season_id=?').bind(season.id),
+    seasonStandingsStatement(c.env.DB,season.id)
+  ])
+  const avatars=new Map(entryResult.results.map(e=>[e.id,season.rulesVersion==='1'?legacyPortrait(String(e.id)):e.key]))
+  return c.json({standings:standingResult.results.map(row=>({...row,avatarArtworkKey:avatars.get(row.id)??null}))})
 })
 
 app.get('/api/public/characters',async(c)=>{
-  const season=await resolveSeason(c.env.DB,c.req.query('season'));if(!season)return c.json({characters:[]})
-  const result=await c.env.DB.prepare(`SELECT se.character_id AS id,COALESCE(se.name_snapshot,c.name) AS name,COALESCE(se.game_snapshot,g.name) AS game,COALESCE(se.summary_snapshot,c.summary) AS summary,se.group_code AS groupCode,se.seed,se.artwork_gallery_key_snapshot AS galleryArtworkKey,se.artwork_match_key_snapshot AS matchArtworkKey,se.artwork_avatar_key_snapshot AS avatarArtworkKey FROM season_entries se JOIN characters c ON c.id=se.character_id JOIN games g ON g.id=c.game_id WHERE se.season_id=? ORDER BY se.seed`).bind(season.id).all()
-  if(season.rulesVersion!=='3')return c.json({characters:result.results})
-  const profiles=(await c.env.DB.prepare('SELECT character_id AS id,skin_name AS skinName,source_url AS sourceUrl,source_note AS sourceNote,source_type AS sourceType,mobile_key AS mobileArtworkKey,detail_key AS detailArtworkKey FROM season_character_profiles WHERE season_id=?').bind(season.id).all()).results
-  const byId=new Map(profiles.map(p=>[p.id,p]))
-  return c.json({characters:result.results.map(e=>({...e,...byId.get(e.id)}))})
+  const slug=c.req.query('season')
+  const [result]=await readPublic(c,[c.env.DB.prepare(`${selectedSeasonSql(slug)} SELECT se.character_id AS id,COALESCE(se.name_snapshot,c.name) AS name,COALESCE(se.game_snapshot,g.name) AS game,COALESCE(se.summary_snapshot,c.summary) AS summary,se.group_code AS groupCode,se.seed,se.artwork_gallery_key_snapshot AS galleryArtworkKey,se.artwork_match_key_snapshot AS matchArtworkKey,se.artwork_avatar_key_snapshot AS avatarArtworkKey,p.character_id AS _profileId,p.skin_name AS skinName,p.source_url AS sourceUrl,p.source_note AS sourceNote,p.source_type AS sourceType,p.mobile_key AS mobileArtworkKey,p.detail_key AS detailArtworkKey FROM selected_season s JOIN season_entries se ON se.season_id=s.id JOIN characters c ON c.id=se.character_id JOIN games g ON g.id=c.game_id LEFT JOIN season_character_profiles p ON s.rules_version='3' AND p.season_id=s.id AND p.character_id=se.character_id ORDER BY se.seed`).bind(...(slug?[slug]:[]))])
+  return c.json({characters:result.results.map(row=>{
+    const {_profileId,skinName,sourceUrl,sourceNote,sourceType,mobileArtworkKey,detailArtworkKey,...entry}=row
+    return {...entry,...(_profileId?{skinName,sourceUrl,sourceNote,sourceType,mobileArtworkKey,detailArtworkKey}:{})}
+  })})
 })
 
 app.get('/api/media/:key{.+}', async (c) => {
