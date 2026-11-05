@@ -1,4 +1,4 @@
-import { refreshDailyMatches } from './match-windows'
+import { matchStartsSql, matchEndsSql, refreshDailyMatches } from './match-windows'
 import { closeRoundAndAdvance, ensureRoundCanStart } from './progression'
 import { id, iso } from './security'
 import type { Env } from './types'
@@ -85,6 +85,26 @@ async function scheduledRound(db:D1Database,season:Season) {
   if(season.status==='published'&&season.currentRoundId)return null
   if(season.currentRoundId)return db.prepare(`SELECT id,season_id AS seasonId,stage,round_number AS roundNumber,status,starts_at AS startsAt,ends_at AS endsAt FROM tournament_rounds WHERE id=? AND season_id=? AND status='scheduled'`).bind(season.currentRoundId,season.id).first<Round>()
   return db.prepare(`SELECT id,season_id AS seasonId,stage,round_number AS roundNumber,status,starts_at AS startsAt,ends_at AS endsAt FROM tournament_rounds WHERE season_id=? AND status='scheduled' ORDER BY ${roundOrder} LIMIT 1`).bind(season.id).first<Round>()
+}
+
+// One read on the visitor path. Only acquire a lease/write when a real boundary
+// is due; Cron still performs its full check independently every minute.
+export async function hasDueRequestLifecycle(db:D1Database,now=new Date()) {
+  const due=await db.prepare(`SELECT 1 AS due FROM seasons s
+    WHERE s.is_current=1 AND s.rules_version='3' AND s.schedule_mode='scheduled'
+      AND s.status IN ('published','live') AND (
+        EXISTS(SELECT 1 FROM tournament_rounds r WHERE r.season_id=s.id AND r.status='live' AND (
+          r.ends_at<=?1 OR EXISTS(SELECT 1 FROM matches m WHERE m.round_id=r.id
+            AND m.status IN ('scheduled','live') AND EXISTS(SELECT 1 FROM match_windows w WHERE w.match_id=m.id)
+            AND m.status!=CASE WHEN ${matchEndsSql}<=?1 THEN 'closed' WHEN ${matchStartsSql}<=?1 THEN 'live' ELSE 'scheduled' END)
+        )) OR (
+          NOT EXISTS(SELECT 1 FROM tournament_rounds r WHERE r.season_id=s.id AND r.status='live')
+          AND NOT(s.status='published' AND s.current_round_id IS NOT NULL)
+          AND EXISTS(SELECT 1 FROM tournament_rounds r WHERE r.season_id=s.id AND r.status='scheduled'
+            AND (s.current_round_id IS NULL OR r.id=s.current_round_id) AND r.starts_at<=?1)
+        )
+      ) LIMIT 1`).bind(now.toISOString()).first()
+  return Boolean(due)
 }
 
 export async function runScheduledLifecycle(env:LifecycleEnv, now=new Date()) {

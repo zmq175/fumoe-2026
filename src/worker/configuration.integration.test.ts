@@ -5,7 +5,7 @@ import worker from './index'
 import { createSession } from './security'
 import { s2Format } from '../lib/s2-format'
 import { legacyFormat, type SeasonFormat } from '../lib/season-format'
-import { runScheduledLifecycle } from './lifecycle'
+import { hasDueRequestLifecycle, runScheduledLifecycle } from './lifecycle'
 import { calculateSeasonStandingsV1 } from './season-results'
 import type { Env } from './types'
 
@@ -13,12 +13,13 @@ const databases:DatabaseSync[]=[]
 afterEach(()=>{databases.splice(0).forEach(db=>db.close())})
 function database(){
   const sql=new DatabaseSync(':memory:');databases.push(sql)
+  const queries:string[]=[]
   sql.exec('PRAGMA foreign_keys=ON')
   const prepare=(query:string,values:Array<string|number|null>=[])=>({
     bind:(...args:Array<string|number|null>)=>{if(args.length>100)throw new Error('D1 bound parameter limit exceeded');return prepare(query,args)},
-    first:async(column?:string)=>{const row=sql.prepare(query).get(...values);return column?row?.[column]??null:row??null},
-    all:async()=>({results:sql.prepare(query).all(...values),success:true}),
-    run:async()=>{const result=sql.prepare(query).run(...values);return {success:true,results:[],meta:{changes:Number(result.changes)}}}
+    first:async(column?:string)=>{queries.push(query);const row=sql.prepare(query).get(...values);return column?row?.[column]??null:row??null},
+    all:async()=>{queries.push(query);return {results:sql.prepare(query).all(...values),success:true}},
+    run:async()=>{queries.push(query);const result=sql.prepare(query).run(...values);return {success:true,results:[],meta:{changes:Number(result.changes)}}}
   })
   const db={prepare,batch:async(statements:ReturnType<typeof prepare>[])=>{sql.exec('BEGIN');try{const result=[];for(const statement of statements)result.push(await statement.run());sql.exec('COMMIT');return result}catch(error){sql.exec('ROLLBACK');throw error}}} as unknown as D1Database
   const files=readdirSync('migrations').filter(f=>f.endsWith('.sql')).sort()
@@ -31,19 +32,33 @@ function database(){
   const before={entries:sql.prepare('SELECT * FROM season_entries ORDER BY id').all(),matches:sql.prepare('SELECT * FROM matches ORDER BY id').all(),rounds:sql.prepare('SELECT * FROM tournament_rounds ORDER BY id').all()}
   for(const file of files.filter(f=>f>='0008'))sql.exec(readFileSync(`migrations/${file}`,'utf8'))
   const env={DB:db,APP_ORIGIN:'http://localhost',AUTH_SECRET:'integration-test-secret-at-least-32-characters',MATCH_ROOM:{idFromName:()=>({}),get:()=>({fetch:async()=>new Response('{}')})}} as unknown as Env
-  return {sql,db,env,before}
+  return {sql,db,env,before,queries}
 }
 async function client(env:Env){
   const cookie=`fumoe_session=${await createSession({sub:'admin',email:'admin@test.example',role:'admin'},env)}`
   return async(path:string,method='GET',body?:unknown)=>{
     const response=await worker.fetch(new Request(`http://localhost${path}`,{method,headers:{cookie,'content-type':'application/json'},body:body===undefined?undefined:JSON.stringify(body)}),env,{waitUntil:()=>{}} as unknown as ExecutionContext)
-    return {status:response.status,body:await response.json() as {seasonId:string;simulation:{roundMatchCounts:number[]};season:{format:SeasonFormat;championCharacterId:string};characters:unknown[];matches:unknown[];rounds:Array<{id:string;startsAt:string;endsAt:string}>}}
+    return {status:response.status,headers:response.headers,body:await response.json() as {seasonId:string;simulation:{roundMatchCounts:number[]};season:{format:SeasonFormat;championCharacterId:string};characters:unknown[];matches:unknown[];rounds:Array<{id:string;startsAt:string;endsAt:string}>}}
   }
 }
 const reason='隔离数据库配置验证'
 const format256=():SeasonFormat=>({...legacyFormat(),participants:256,groupCount:16,swissRounds:5,rounds:Array.from({length:10},()=>({durationHours:48,breakHours:24})),factions:[{name:'新阵营',games:['新游戏'],accent:'#123456',logoPath:null}]})
 
 describe('真实 SQLite 迁移、路由与赛季推进',()=>{
+  it('公开 GET 不查账号，受保护接口仍校验账号状态，并提供分段耗时',async()=>{
+    const {sql,env,queries}=database(),request=await client(env)
+    queries.length=0
+    const response=await request('/api/public/rounds')
+    expect(response.status).toBe(200)
+    expect(response.headers.get('server-timing')).toMatch(/auth;dur=0.0, lifecycle;dur=0.0, app;dur=/)
+    expect(queries.some(query=>query.includes('FROM users'))).toBe(false)
+    await request('/api/admin/seasons')
+    expect(queries.some(query=>query.includes('FROM users'))).toBe(true)
+    sql.exec("UPDATE users SET status='frozen' WHERE id='admin'")
+    expect((await request('/api/admin/seasons')).status).toBe(403)
+    expect((await request('/api/public/rounds')).status).toBe(200)
+  })
+
   it('用户提供素材可保留真实归属，网页来源仍须提供链接',async()=>{
     const {sql,env}=database(),request=await client(env)
     env.MEDIA={head:async()=>({httpMetadata:{contentType:'image/png'}})} as unknown as R2Bucket
@@ -58,7 +73,7 @@ describe('真实 SQLite 迁移、路由与赛季推进',()=>{
   })
 
   it('S2 分日窗口跑满 30 天，开赛冻结素材，旧赛季所有快照不变',async()=>{
-    const {sql,env,before}=database(),request=await client(env),format=s2Format()
+    const {sql,env,before,queries}=database(),request=await client(env),format=s2Format()
     const created=await request('/api/admin/seasons','POST',{name:'府萌 S2',slug:'s2',startsAt:'2030-01-01T16:00:00.000Z',format,reason})
     expect(created.status,JSON.stringify(created.body)).toBe(201)
     const seasonId=created.body.seasonId
@@ -79,6 +94,8 @@ describe('真实 SQLite 迁移、路由与赛季推进',()=>{
     expect(publicRoster.find(e=>e.id==='s2-0')).toMatchObject({skinName:'本季选定形态',mobileArtworkKey:'seasons/s2/preview/mobile.webp'})
     expect((await request('/api/public/characters?season=old')).body.characters[0]).not.toHaveProperty('skinName')
     sql.prepare("UPDATE seasons SET schedule_mode='scheduled' WHERE id=?").run(seasonId)
+    expect(await hasDueRequestLifecycle(env.DB,new Date('2030-01-01T15:59:59.999Z'))).toBe(false)
+    expect(await hasDueRequestLifecycle(env.DB,new Date('2030-01-01T16:00:00.000Z'))).toBe(true)
     expect((await runScheduledLifecycle(env,new Date('2030-01-01T15:59:59.999Z'))).started).toBe(0)
     const rounds=sql.prepare('SELECT id,starts_at AS startsAt,ends_at AS endsAt FROM tournament_rounds WHERE season_id=? ORDER BY starts_at').all(seasonId) as Array<{id:string;startsAt:string;endsAt:string}>
     // A delayed tick scheduled before midnight must use actual execution time.
@@ -108,13 +125,30 @@ describe('真实 SQLite 迁移、路由与赛季推进',()=>{
       expect(sql.prepare("SELECT COUNT(*) AS n FROM audit_logs WHERE action='round_started_automatically' AND season_id=?").get(seasonId)?.n).toBe(1)
       expect(sql.prepare('SELECT status FROM tournament_rounds WHERE id=?').get(rounds[0].id)?.status).toBe('live')
       expect(sql.prepare('SELECT COUNT(*) AS n FROM tournament_lifecycle_leases').get()?.n).toBe(0)
+      // A normal visitor must not acquire a lease or rewrite live matches.
+      queries.length=0
+      const publicRead=await request('/api/public/matches?season=s2')
+      expect(publicRead.status).toBe(200)
+      expect(queries.some(query=>/^(INSERT|UPDATE|DELETE)/i.test(query.trim()))).toBe(false)
+      expect(await hasDueRequestLifecycle(env.DB)).toBe(false)
+      expect(await hasDueRequestLifecycle(env.DB,new Date(Date.parse(rounds[0].startsAt)+86400000))).toBe(true)
+      // The request fallback still advances the next daily window exactly at its boundary.
+      vi.setSystemTime(new Date(Date.parse(rounds[0].startsAt)+86400000))
+      await request('/api/public/matches?season=s2')
+      expect(await hasDueRequestLifecycle(env.DB)).toBe(false)
+      expect(sql.prepare("SELECT COUNT(*) AS n FROM matches WHERE round_id=? AND status='live'").get(rounds[0].id)?.n).toBe(24)
+      // Reset only fixture match statuses so the existing 30-day simulation starts at day 1.
+      sql.prepare("UPDATE matches SET status='scheduled' WHERE round_id=?").run(rounds[0].id)
     } finally {vi.useRealTimers()}
     expect(()=>sql.prepare("UPDATE season_entries SET artwork_gallery_key_snapshot='changed' WHERE season_id=?").run(seasonId)).toThrow('frozen')
     expect(()=>sql.prepare("UPDATE season_character_profiles SET skin_name='changed',mobile_key='changed' WHERE season_id=?").run(seasonId)).toThrow('frozen')
     for(const [i,round] of rounds.entries()){
       const plan=format.rounds[i]
       for(const [day,count] of plan.batches!.entries()){
-        await runScheduledLifecycle(env,new Date(Date.parse(round.startsAt)+day*86400000))
+        const dayStart=new Date(Date.parse(round.startsAt)+day*86400000)
+        if(day>0)expect(await hasDueRequestLifecycle(env.DB,dayStart)).toBe(true)
+        await runScheduledLifecycle(env,dayStart)
+        expect(await hasDueRequestLifecycle(env.DB,dayStart)).toBe(false)
         expect(sql.prepare("SELECT COUNT(*) AS n FROM matches WHERE round_id=? AND status='live'").get(round.id)?.n).toBe(count)
         sql.prepare("UPDATE matches SET left_votes=20,right_votes=10 WHERE round_id=? AND status='live'").run(round.id)
       }
@@ -122,6 +156,7 @@ describe('真实 SQLite 迁移、路由与赛季推进',()=>{
         await runScheduledLifecycle(env,new Date(Date.parse(round.startsAt)+86400000))
         expect(sql.prepare("SELECT status FROM matches WHERE round_id=?").get(round.id)?.status).toBe('live')
       }
+      expect(await hasDueRequestLifecycle(env.DB,new Date(round.endsAt))).toBe(true)
       const result=await runScheduledLifecycle(env,new Date(round.endsAt))
       expect(result.closed).toBe(1)
     }

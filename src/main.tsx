@@ -303,19 +303,38 @@ function App() {
  useEffect(()=>{void api.me().then((result)=>{setViewer(result.user);writeCachedViewer(window.localStorage,result.user)}).catch(()=>{})},[])
  useEffect(()=>{if(!viewer){setVoteSelections({});return}void api.myVotes().then((result)=>setVoteSelections(Object.fromEntries(result.votes.map((vote)=>[vote.matchId,vote])))).catch(()=>setVoteSelections({}))},[viewer,currentSeason?.id])
  useEffect(()=>{if(!voteNotice)return;const timer=window.setTimeout(()=>setVoteNotice(''),3500);return()=>window.clearTimeout(timer)},[voteNotice])
- useEffect(()=>{let active=true,busy=false,lastSeasonId:string|undefined;const load=async()=>{if(busy)return;busy=true;try{
-  const overview=await api.publicOverview(),slug=overview.season?.slug
-  const [matchData,roundData,standingData,seasonData,rosterData]=await Promise.allSettled([api.publicMatches(slug),api.publicRounds(slug),api.publicStandings(slug),api.publicSeasons(),api.publicCharacters(slug)])
-  if(!active)return
-  setCurrentSeason(overview.season);setPreviousSeason(overview.previousSeason);setAnnouncement([overview.siteAnnouncement,overview.seasonAnnouncement].filter(Boolean).join('\n\n'))
-  const changed=lastSeasonId!==overview.season?.id;lastSeasonId=overview.season?.id
-  if(matchData.status==='fulfilled'){setPublicMatches(matchData.value.matches.map(toDisplayMatch));setPublicMatchData(matchData.value.matches)}else if(changed){setPublicMatches([]);setPublicMatchData([])}
-  if(roundData.status==='fulfilled')setPublicRounds(roundData.value.rounds);else if(changed)setPublicRounds([])
-  if(standingData.status==='fulfilled')setPublicStandings(standingData.value.standings);else if(changed)setPublicStandings([])
-  if(seasonData.status==='fulfilled')setSeasons(seasonData.value.seasons)
-  if(rosterData.status==='fulfilled')setPublicCharacters(rosterData.value.characters.map((item:PublicCharacter)=>({...displayCharacter(item.id,item.name,item.game,item),...item,group:item.groupCode})));else if(changed)setPublicCharacters([])
-
- }catch{/* Keep the last coherent season snapshot during a transient network error. */}finally{busy=false}};void load();const timer=window.setInterval(()=>void load(),15_000);return()=>{active=false;window.clearInterval(timer)}},[])
+ useEffect(()=>{
+  let active=true,busy=false,lastSeasonId:string|undefined,lastRosterAt=-Infinity,lastSeasonsAt=-Infinity
+  const load=async(forceMetadata=false)=>{
+   if(busy||document.hidden)return
+   busy=true
+   try{
+    const overview=await api.publicOverview(),slug=overview.season?.slug
+    if(!active)return
+    const changed=lastSeasonId!==overview.season?.id;lastSeasonId=overview.season?.id
+    setCurrentSeason(overview.season);setPreviousSeason(overview.previousSeason);setAnnouncement([overview.siteAnnouncement,overview.seasonAnnouncement].filter(Boolean).join('\n\n'))
+    if(changed){
+     // The overview already contains the live cards: show them before secondary requests.
+     setPublicMatches(overview.matches.map(toDisplayMatch));setPublicMatchData(overview.matches)
+     setPublicRounds(overview.round?[overview.round]:[]);setPublicStandings([]);setPublicCharacters([])
+    }
+    const tasks:Promise<unknown>[]=[
+     api.publicMatches(slug).then(data=>{if(active){setPublicMatches(data.matches.map(toDisplayMatch));setPublicMatchData(data.matches)}}),
+     api.publicRounds(slug).then(data=>{if(active)setPublicRounds(data.rounds)}),
+     api.publicStandings(slug).then(data=>{if(active)setPublicStandings(data.standings)})
+    ]
+    if(changed||forceMetadata||Date.now()-lastSeasonsAt>=60_000)tasks.push(api.publicSeasons().then(data=>{if(active){setSeasons(data.seasons);lastSeasonsAt=Date.now()}}))
+    if(changed||forceMetadata||Date.now()-lastRosterAt>=60_000)tasks.push(api.publicCharacters(slug).then(data=>{if(active){setPublicCharacters(data.characters.map((item:PublicCharacter)=>({...displayCharacter(item.id,item.name,item.game,item),...item,group:item.groupCode})));lastRosterAt=Date.now()}}))
+    // Each successful region renders independently; a slow roster cannot hold up voting.
+    await Promise.allSettled(tasks)
+   }catch{/* Keep the last coherent snapshot during transient network errors. */}
+   finally{busy=false}
+  }
+  const visible=()=>{if(!document.hidden)void load(true)}
+  void load();const timer=window.setInterval(()=>void load(),15_000)
+  document.addEventListener('visibilitychange',visible)
+  return()=>{active=false;window.clearInterval(timer);document.removeEventListener('visibilitychange',visible)}
+ },[])
  useEffect(()=>{document.title=currentSeason?.name??'府萌'},[currentSeason?.name])
  useEffect(()=>{let active=true;if(!seasonSlug){setDetailData(null);return()=>{active=false}}setDetailData(null);void Promise.all([api.publicSeason(seasonSlug),api.publicMatches(seasonSlug),api.publicRounds(seasonSlug),api.publicStandings(seasonSlug)]).then(([meta,matchData,roundData,standingData])=>{if(active)setDetailData({season:meta.season,matches:matchData.matches,rounds:roundData.rounds,standings:standingData.standings})}).catch(()=>{if(active)setDetailData(null)});return()=>{active=false}},[seasonSlug])
  const openLogin=()=>setLoginOpen(true); const loggedIn=(next:Viewer)=>{setViewer(next);writeCachedViewer(window.localStorage,next);if(pendingLoginVote){setVoteDrafts((current)=>updateVoteDrafts(current,pendingLoginVote.match.id,pendingLoginVote.character.id));setPendingLoginVote(null)}}; const logout=async()=>{await api.logout();setViewer(null);writeCachedViewer(window.localStorage,null);setVoteSelections({});setVoteDrafts({});navigate('home')}; const beginVote=(match:Match,character:Character)=>{if(voteSelections[match.id]||match.status!=='live'||seasonSlug)return;if(!viewer){setPendingLoginVote({match,character});openLogin();return}setVoteDrafts((current)=>updateVoteDrafts(current,match.id,character.id))}; const activeRound=currentRound(publicRounds);const voteChoices=validVoteDrafts(voteDrafts,publicMatchData,voteSelections); const completeVotes=(votes:VoteResult[])=>{const byMatch=new Map(votes.map((vote)=>[vote.selection.matchId,vote]));setVoteSelections((current)=>({...current,...Object.fromEntries(votes.map((vote)=>[vote.selection.matchId,vote.selection]))}));setPublicMatches((current)=>current.map((match)=>{const vote=byMatch.get(match.id);return vote?{...match,...vote.scores}:match}));setPublicMatchData((current)=>current.map((match)=>{const vote=byMatch.get(match.id);return vote?{...match,...vote.scores}:match}));setVoteDrafts((current)=>Object.fromEntries(Object.entries(current).filter(([matchId])=>!byMatch.has(matchId))));void api.publicStandings().then((result)=>setPublicStandings(result.standings)).catch(()=>{});setVoteDialogOpen(false);setVoteNotice(`已提交 ${votes.length} 场投票，选择不可修改。`)}
