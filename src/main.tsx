@@ -1,3 +1,4 @@
+import { DisplayImage } from './components/DisplayImage'
 import { GameWatermark } from './components/GameWatermark'
 import { CharacterDetail } from './components/CharacterDetail'
 import { seasonDays, defaultDay, beijingTime } from './lib/season-days'
@@ -53,7 +54,7 @@ function Artwork({character,compact=false,priority=false}:{character:Character;c
     {composed&&<GameWatermark game={character.game} className="artwork__logo"/>}<span className="artwork__grid"/>
     <span className="artwork__shape artwork__shape--one"/>
     <span className="artwork__shape artwork__shape--two"/>
-    {hasArtwork&&sourceIndex<urls.length&&<picture>{mobile&&<source media="(max-width: 720px)" srcSet={mobile}/>}<img className="artwork__image" src={urls[sourceIndex]} alt={`${character.name} 角色立绘`} loading={priority?'eager':'lazy'} fetchPriority={priority?'high':'auto'} decoding="async" onError={()=>setSourceIndex((index)=>index+1)}/></picture>}
+    {hasArtwork&&sourceIndex<urls.length&&<DisplayImage mobileSrc={mobile} className="artwork__image" src={urls[sourceIndex]} alt={`${character.name} 角色立绘`} loading={priority?'eager':'lazy'} fetchPriority={priority?'high':'auto'} decoding="async" onError={()=>setSourceIndex((index)=>index+1)}/>}
     <span className="artwork__copy">{hasArtwork?<>ARTWORK<br/>VERIFIED</>:<>ARTWORK<br/>PENDING</>}</span>
     <span className="artwork__initial">{character.name.slice(0,1)}</span>
     <span className="artwork__hint">{hasArtwork?'已验证立绘':'素材待补全'}</span>
@@ -66,7 +67,7 @@ function Portrait({id,name,avatarArtworkKey,size='standing'}:{id:string;name:str
   useEffect(()=>setSourceIndex(0),[id,avatarArtworkKey])
   return <span className={`portrait portrait--${size}`} aria-hidden="true">
     {sourceIndex<urls.length
-      ?<img src={urls[sourceIndex]} alt="" loading="lazy" decoding="async" onError={()=>setSourceIndex((index)=>index+1)}/>
+      ?<DisplayImage src={urls[sourceIndex]} alt="" loading="lazy" decoding="async" onError={()=>setSourceIndex((index)=>index+1)}/>
       :<b>{name.slice(0,1)}</b>}
   </span>
 }
@@ -193,7 +194,7 @@ function Bracket({ standings, matches, rounds, format=legacyFormat(), initialTab
 
 function FactionLogo({faction,compact=false,factions}:{faction:FactionScore;compact?:boolean;factions?:SeasonFaction[]}) {
   const brand=factionBrand(faction.name,factions)
-  return <div className={compact?'faction-logo faction-logo--compact':'faction-logo'}>{brand.logoPath?<img src={brand.logoPath} alt={`${faction.name} 官方 LOGO`}/>:<b>{faction.name}</b>}</div>
+  return <div className={compact?'faction-logo faction-logo--compact':'faction-logo'}>{brand.logoPath?<DisplayImage src={brand.logoPath} alt={`${faction.name} 官方 LOGO`}/>:<b>{faction.name}</b>}</div>
 }
 
 function FactionData({matches,roster,season}:{matches:PublicMatch[];roster:Character[];season:PublicSeason|null}) {

@@ -40,6 +40,7 @@
     "artwork:process": "node scripts/process-artwork.mjs",
     "artwork:preview": "node scripts/prepare-local-artwork-preview.mjs",
     "artwork:validate": "node scripts/validate-artwork.mjs",
+    "images:compress": "node scripts/compress-display-images.mjs",
     "artwork:upload-plan": "node scripts/upload-artwork.mjs",
     "portraits:sync": "node scripts/sync-character-portraits.mjs",
     "portraits:model:process": "node scripts/process-model-portraits.mjs --write",

@@ -1,3 +1,4 @@
+import { optimizedImageUrl } from '../src/lib/image-variants'
 import { legacyPortrait } from '../src/lib/legacy-assets'
 import { expect, test } from '@playwright/test'
 import { currentSeason, later, matches, mockPublicApi, now, standings } from './fixtures'
@@ -173,7 +174,7 @@ test('renders standings, knockout bracket, and match history tabs', async ({ pag
   await expect(page.getByRole('tab', { name: '小组积分', selected: true })).toBeVisible()
   await expect(page.locator('.standing__row--qualifying')).toHaveCount(2)
   await expect(page.locator('.standing__row .portrait img')).toHaveCount(2)
-  await expect(page.locator('.standing__row .portrait img').first()).toHaveAttribute('src',legacyPortrait('c001')!)
+  await expect(page.locator('.standing__row .portrait img').first()).toHaveAttribute('src',optimizedImageUrl(legacyPortrait('c001')!))
 
   await page.getByRole('tab', { name: '淘汰赛签表' }).click()
   await expect(page.getByRole('tab', { name: '淘汰赛签表', selected: true })).toBeVisible()
@@ -201,7 +202,7 @@ test('renders standings, knockout bracket, and match history tabs', async ({ pag
   await expect(page.getByRole('heading', { name: '瑞士轮 第 1 轮' })).toBeVisible()
   await expect(page.getByText('芙宁娜', { exact: true }).last()).toBeVisible()
   await expect(page.locator('.history-match .portrait img')).toHaveCount(6)
-  await expect(page.locator('.history-match .portrait img').first()).toHaveAttribute('src',legacyPortrait('c001')!)
+  await expect(page.locator('.history-match .portrait img').first()).toHaveAttribute('src',optimizedImageUrl(legacyPortrait('c001')!))
   await expect(page.getByRole('heading', { name: '瑞士轮 2' })).toBeVisible()
   await expect(page.getByText('瑞士轮 1 结束后生成具体对阵')).toBeVisible()
   await expect(page.locator('.swiss-preview').first().locator('section')).toHaveCount(8)

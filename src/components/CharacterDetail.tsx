@@ -1,3 +1,4 @@
+import { DisplayImage } from './DisplayImage'
 import { GameWatermark } from './GameWatermark'
 import { useEffect, useRef } from 'react'
 import { Trophy, X } from 'lucide-react'
@@ -28,7 +29,7 @@ export function CharacterDetail({character,season,seasons,matches,standings,roun
   return <dialog ref={ref} className="character-detail" onCancel={onClose} onClick={e=>{if(e.target===e.currentTarget)onClose()}} aria-labelledby="character-detail-title">
     <button className="dialog-close" onClick={onClose} aria-label="关闭角色详情" autoFocus><X/></button>
     <div className="character-detail__layout">
-      <a className={season?.format?.version===3?'character-detail__art character-detail__art--season':'character-detail__art'} data-game={character.game} href={image} target="_blank" rel="noreferrer" aria-label={`放大${character.name}立绘`}>{season?.format?.version===3&&<GameWatermark game={character.game} className="artwork__logo"/>}<img src={image} alt={`${character.game} · ${character.name}本季立绘`}/><span>查看完整原尺寸 ↗</span></a>
+      <a className={season?.format?.version===3?'character-detail__art character-detail__art--season':'character-detail__art'} data-game={character.game} href={image} target="_blank" rel="noreferrer" aria-label={`放大${character.name}立绘`}>{season?.format?.version===3&&<GameWatermark game={character.game} className="artwork__logo"/>}<DisplayImage src={image} alt={`${character.game} · ${character.name}本季立绘`}/><span>查看完整原尺寸 ↗</span></a>
       <section><p className="eyebrow">{season?.name??'角色档案'} · {character.game}</p><h2 id="character-detail-title">{character.name}</h2>{defending&&<span className="defending-mark"><Trophy size={14}/> 卫冕冠军</span>}<p>{character.summary||'角色介绍待补充。'}</p>
         {bioSource&&<p className="character-detail__note"><a href={bioSource} target="_blank" rel="noreferrer">角色资料参考 ↗</a></p>}
         <dl className="character-detail__facts"><div><dt>本季形态 / 服装</dt><dd>{character.skinName||'使用本季存档素材'}</dd></div><div><dt>分组</dt><dd>{character.group} 组 · 种子 #{character.seed}</dd></div><div><dt>当前积分</dt><dd>{standing?.points??0} 分</dd></div><div><dt>赛事状态</dt><dd>{status}</dd></div></dl>
