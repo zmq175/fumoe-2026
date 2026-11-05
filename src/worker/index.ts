@@ -15,6 +15,7 @@ import { clientIp, cookie, createSession, developmentBypassEnabled, digest, getC
 import { normalizeVoteRequest, planBatchVotes, scheduleScorePublications, type ExistingVote, type VoteMatch } from './vote-batch'
 import { MatchRoom } from './match-room'
 import { closeRound, runScheduledLifecycle, startRound, withLifecycleLease } from './lifecycle'
+import { runScheduledTick } from './scheduler'
 import { buildSeasonSlug, canEditRoster, canEditSeason, validateSeasonRoster, type SeasonStatus } from './seasons'
 import { artworkCacheControl, artworkKeys, mediaFallbackIsImage } from './artwork'
 import type { Env, Role, Session } from './types'
@@ -567,6 +568,6 @@ app.onError((error, c) => { if(error instanceof HTTPException)return c.json({err
 export default {
   fetch: app.fetch,
   scheduled: async (controller: ScheduledController, env: Env, ctx: ExecutionContext) => {
-    ctx.waitUntil(runScheduledLifecycle(env,new Date(controller.scheduledTime)))
+    ctx.waitUntil(runScheduledTick(env,controller.scheduledTime))
   }
 }

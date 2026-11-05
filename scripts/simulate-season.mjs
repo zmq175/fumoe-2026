@@ -11,6 +11,13 @@ let server
 
 const run=(args)=>execFileSync('npx',args,{cwd:root,stdio:'pipe',timeout:120_000})
 const progress=(message)=>console.log(`[赛季演练] ${message}`)
+// Accelerate fixture deadlines in the isolated database, not the production clock.
+// Cron's planned delivery time must never serve as a clock override.
+const sqlText=(value)=>`'${String(value).replaceAll("'","''")}'`
+const updateFixtureRound=(roundId,values)=>{
+  const assignments=Object.entries(values).map(([column,value])=>`${column}=${sqlText(value)}`).join(',')
+  run(['wrangler','d1','execute','fumoe-2026','--local','--persist-to',state,'--command',`UPDATE tournament_rounds SET ${assignments} WHERE id=${sqlText(roundId)}`])
+}
 const waitForServer=(child)=>new Promise((resolveReady,reject)=>{
   const timeout=setTimeout(()=>reject(new Error('本地 Worker 启动超时')),60_000)
   const onData=(data)=>{const text=String(data);if(text.includes('Ready on')){clearTimeout(timeout);resolveReady()}}
@@ -41,7 +48,7 @@ try {
 
   let cookie=''
   async function request(path,init={}){
-    const response=await fetch(`http://127.0.0.1:${port}${path}`,{...init,signal:AbortSignal.timeout(15_000),headers:{'content-type':'application/json',cookie,...init.headers}})
+    const response=await fetch(`http://127.0.0.1:${port}${path}`,{...init,signal:AbortSignal.timeout(15_000),headers:{'content-type':'application/json',connection:'close',cookie,...init.headers}})
     const setCookie=response.headers.get('set-cookie');if(setCookie)cookie=setCookie.split(';')[0]
     const body=await response.json().catch(()=>({}))
     if(!response.ok)throw new Error(`${path}: ${response.status} ${body.error??'请求失败'}`)
@@ -58,7 +65,8 @@ try {
     let round=rounds[index]
     if(!round)throw new Error(`缺少第 ${index+1} 轮`)
     if(round.status==='scheduled'){
-      const started=await fetch(`http://127.0.0.1:${port}/cdn-cgi/handler/scheduled?format=json&time=${Date.parse(round.startsAt)}`,{signal:AbortSignal.timeout(30_000)})
+      updateFixtureRound(round.id,{starts_at:new Date(Date.now()-60_000).toISOString(),ends_at:new Date(Date.now()+3600_000).toISOString()})
+      const started=await fetch(`http://127.0.0.1:${port}/cdn-cgi/handler/scheduled?format=json`,{signal:AbortSignal.timeout(30_000),headers:{connection:'close'}})
       if(!started.ok)throw new Error(`${round.name} 开赛 Cron 触发失败`)
       round=(await request('/api/public/rounds')).rounds.find((item)=>item.id===round.id)
     }
@@ -67,7 +75,8 @@ try {
     const matches=(await request('/api/public/matches')).matches.filter((match)=>match.roundId===round.id)
     if(matches.length!==expected[index])throw new Error(`${round.name} 对局数错误：${matches.length}，预期 ${expected[index]}`)
     await inBatches(matches,8,(match,matchIndex)=>request(`/api/admin/matches/${match.id}`,{method:'PATCH',body:JSON.stringify({leftVotes:200+matchIndex,rightVotes:100+matchIndex,reason:'自动完整赛季演练'})}))
-    const scheduled=await fetch(`http://127.0.0.1:${port}/cdn-cgi/handler/scheduled?format=json&time=${Date.parse(round.endsAt)+1}`,{signal:AbortSignal.timeout(30_000)})
+    updateFixtureRound(round.id,{ends_at:new Date(Date.now()-1_000).toISOString()})
+    const scheduled=await fetch(`http://127.0.0.1:${port}/cdn-cgi/handler/scheduled?format=json`,{signal:AbortSignal.timeout(30_000),headers:{connection:'close'}})
     if(!scheduled.ok)throw new Error(`${round.name} Cron 触发失败：${scheduled.status}`)
   }
 

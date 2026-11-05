@@ -1,6 +1,6 @@
 import { DatabaseSync } from 'node:sqlite'
 import { readdirSync, readFileSync } from 'node:fs'
-import { afterEach, describe, expect, it } from 'vitest'
+import { afterEach, describe, expect, it, vi } from 'vitest'
 import worker from './index'
 import { createSession } from './security'
 import { s2Format } from '../lib/s2-format'
@@ -81,7 +81,34 @@ describe('真实 SQLite 迁移、路由与赛季推进',()=>{
     sql.prepare("UPDATE seasons SET schedule_mode='scheduled' WHERE id=?").run(seasonId)
     expect((await runScheduledLifecycle(env,new Date('2030-01-01T15:59:59.999Z'))).started).toBe(0)
     const rounds=sql.prepare('SELECT id,starts_at AS startsAt,ends_at AS endsAt FROM tournament_rounds WHERE season_id=? ORDER BY starts_at').all(seasonId) as Array<{id:string;startsAt:string;endsAt:string}>
-    expect((await runScheduledLifecycle(env,new Date(rounds[0].startsAt))).started).toBe(1)
+    // A delayed tick scheduled before midnight must use actual execution time.
+    vi.useFakeTimers({toFake:['Date']})
+    vi.setSystemTime(new Date(Date.parse(rounds[0].startsAt)+30_000))
+    try {
+      const invoke=async()=>{
+        const tasks:Promise<unknown>[]=[]
+        await worker.scheduled({scheduledTime:Date.parse(rounds[0].startsAt)-60_000,cron:'* * * * *'} as ScheduledController,env,{waitUntil:(task:Promise<unknown>)=>tasks.push(task)} as unknown as ExecutionContext)
+        return Promise.all(tasks)
+      }
+      // Active lease must block, while an expired lease must be recoverable.
+      sql.prepare('INSERT INTO tournament_lifecycle_leases(season_id,token,expires_at) VALUES(?,?,?)').run(seasonId,'test-lock',new Date(Date.now()+60_000).toISOString())
+      await invoke()
+      expect(sql.prepare('SELECT status FROM tournament_rounds WHERE id=?').get(rounds[0].id)?.status).toBe('scheduled')
+      sql.prepare('UPDATE tournament_lifecycle_leases SET expires_at=? WHERE season_id=?').run(rounds[0].startsAt,seasonId)
+      // Business failure must reject the scheduled invocation and release its lock.
+      sql.prepare("UPDATE matches SET status='review' WHERE round_id=?").run(rounds[0].id)
+      await expect(invoke()).rejects.toThrow('自动开赛失败')
+      expect(sql.prepare('SELECT COUNT(*) AS n FROM tournament_lifecycle_leases').get()?.n).toBe(0)
+      expect(sql.prepare("SELECT COUNT(*) AS n FROM audit_logs WHERE action='round_auto_start_skipped' AND season_id=?").get(seasonId)?.n).toBe(1)
+      sql.prepare("UPDATE matches SET status='scheduled' WHERE round_id=?").run(rounds[0].id)
+      const tasks:Promise<unknown>[]=[]
+      await worker.scheduled({scheduledTime:Date.parse(rounds[0].startsAt)-60_000,cron:'* * * * *'} as ScheduledController,env,{waitUntil:(task:Promise<unknown>)=>tasks.push(task)} as unknown as ExecutionContext)
+      await Promise.all(tasks)
+      await invoke() // duplicate delivery cannot start the round twice
+      expect(sql.prepare("SELECT COUNT(*) AS n FROM audit_logs WHERE action='round_started_automatically' AND season_id=?").get(seasonId)?.n).toBe(1)
+      expect(sql.prepare('SELECT status FROM tournament_rounds WHERE id=?').get(rounds[0].id)?.status).toBe('live')
+      expect(sql.prepare('SELECT COUNT(*) AS n FROM tournament_lifecycle_leases').get()?.n).toBe(0)
+    } finally {vi.useRealTimers()}
     expect(()=>sql.prepare("UPDATE season_entries SET artwork_gallery_key_snapshot='changed' WHERE season_id=?").run(seasonId)).toThrow('frozen')
     expect(()=>sql.prepare("UPDATE season_character_profiles SET skin_name='changed',mobile_key='changed' WHERE season_id=?").run(seasonId)).toThrow('frozen')
     for(const [i,round] of rounds.entries()){

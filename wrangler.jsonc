@@ -24,6 +24,7 @@
     { "tag": "v1", "new_sqlite_classes": ["MatchRoom"] }
   ],
   "triggers": { "crons": ["* * * * *"] },
+  "observability": { "logs": { "enabled": true, "head_sampling_rate": 1, "invocation_logs": false } },
   "vars": {
     "APP_ORIGIN": "https://moe.hooxi.co",
     "BREVO_SENDER": "府萌 <noreply@hooxi.co>",

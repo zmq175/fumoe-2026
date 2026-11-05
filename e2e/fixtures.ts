@@ -29,6 +29,9 @@ export const currentSeason:PublicSeason={id:'season-2030',slug:'2030-season',nam
 type HistoricalFixture={season:PublicSeason;rounds:PublicRound[];matches:PublicMatch[];standings:PublicStanding[]}
 
 export async function mockPublicApi(page: Page, data: { rounds?: PublicRound[]; matches?: PublicMatch[]; standings?: PublicStanding[]; season?:PublicSeason; seasons?:PublicSeason[]; previousSeason?:PublicSeason|null; viewer?:Viewer|null; historical?:Record<string,HistoricalFixture> } = {}) {
+  // Interaction tests must not wait for third-party font downloads on navigation.
+  await page.route('https://fonts.googleapis.com/**',route=>route.fulfill({contentType:'text/css',body:''}))
+  await page.route('https://fonts.gstatic.com/**',route=>route.abort())
   const fixtureRounds = data.rounds ?? rounds
   const fixtureMatches = data.matches ?? matches
   const fixtureStandings = data.standings ?? standings

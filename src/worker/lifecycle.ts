@@ -108,7 +108,7 @@ export async function runScheduledLifecycle(env:LifecycleEnv, now=new Date()) {
       : await scheduledRound(env.DB,season)
     if(!next||!next.startsAt||next.startsAt>timestamp)return {closed,started:0,locked:false}
     try { await startRound(env,next,undefined,undefined,now);return {closed,started:1,locked:false} }
-    catch(error) { await audit(env.DB,'round_auto_start_skipped',next,{error:error instanceof Error?error.message:'无法自动开始'});return {closed,started:0,locked:false} }
+    catch(error) { await audit(env.DB,'round_auto_start_skipped',next,{error:error instanceof Error?error.message:'无法自动开始'});return {closed,started:0,locked:false,failed:true} }
   } finally { await releaseLease(env.DB,season.id,token) }
 }
 
