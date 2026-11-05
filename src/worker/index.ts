@@ -1,3 +1,4 @@
+import { matchesRevalidation } from './matches-revalidation'
 import { publicRosterCache } from './public-cache'
 import { matchStartsSql, matchEndsSql } from './match-windows'
 import { legacyPortrait } from '../lib/legacy-assets'
@@ -60,6 +61,7 @@ app.use('/api/*',async(c,next)=>{
 })
 
 app.use('/api/public/characters', publicRosterCache)
+app.use('/api/public/matches', matchesRevalidation)
 
 app.route('/api/admin/seasons',configurationRoutes)
 
