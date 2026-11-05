@@ -43,8 +43,8 @@
   .bracket-explorer__toolbar select { width: 100%; min-width: 0; }
   .bracket-explorer__views { order: 1; flex-shrink: 0; }
   .bracket-explorer__help { margin: 4px 0 12px; font-size: 12px; }
-  .bracket-explorer__selection { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 8px; }
-  .bracket-explorer__selection--empty { display: none; }
+  .bracket-explorer__selection { display: flex; align-items: center; justify-content: space-between; gap: 8px; min-height: 44px; margin-bottom: 8px; }
+  .bracket-explorer__selection--empty { visibility: hidden; }
   .bracket-explorer__selection button { min-height: 44px; padding: 8px; color: var(--cyan); background: transparent; font: inherit; flex-shrink: 0; }
   .bracket-explorer__viewport { height: max(280px, calc(100svh - 220px)); scroll-margin-top: 190px; }
 }
