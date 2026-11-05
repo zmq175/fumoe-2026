@@ -23,7 +23,7 @@
   "migrations": [
     { "tag": "v1", "new_sqlite_classes": ["MatchRoom"] }
   ],
-  "triggers": { "crons": ["*/5 * * * *"] },
+  "triggers": { "crons": ["* * * * *"] },
   "vars": {
     "APP_ORIGIN": "https://moe.hooxi.co",
     "BREVO_SENDER": "府萌 <noreply@hooxi.co>",

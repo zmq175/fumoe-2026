@@ -7,7 +7,7 @@ const valid={
   d1_databases:[{binding:'DB',database_name:'fumoe-2026',database_id:'11111111-2222-4333-8444-555555555555'}],
   r2_buckets:[{binding:'MEDIA',bucket_name:'fumoe-assets'}],
   durable_objects:{bindings:[{name:'MATCH_ROOM',class_name:'MatchRoom'}]},
-  triggers:{crons:['*/5 * * * *']},
+  triggers:{crons:['* * * * *']},
   vars:{APP_ORIGIN:'https://vote.fumoe.cn',BREVO_SENDER:'府萌 <vote@mail.fumoe.cn>',ADMIN_EMAILS:'admin@fumoe.cn'}
 }
 
