@@ -21,11 +21,31 @@ export function apiErrorMessage(error:unknown,fallback='请求暂时失败，请
   return fallback
 }
 
-async function request<T>(path:string,init?:RequestInit):Promise<T> {
+async function performRequest<T>(path:string,init?:RequestInit):Promise<T> {
   const response=await fetch(path,{credentials:'include',headers:{'content-type':'application/json',...(init?.headers??{})},...(path.startsWith('/api/public/')?{signal:AbortSignal.timeout(12_000)}:{}),...init})
   const body=await response.json().catch(()=>({})) as T&{error?:unknown}
   if(!response.ok)throw new Error(apiErrorMessage(body.error))
   return body
+}
+const publicReads=new Map<string,Promise<unknown>>()
+function request<T>(path:string,init?:RequestInit):Promise<T> {
+  // Coalesce overlapping identical public GETs only; never cache settled data
+  // or combine writes, authentication, or callers with their own request options.
+  if(init||!path.startsWith('/api/public/'))return performRequest<T>(path,init)
+  const pending=publicReads.get(path)
+  if(pending)return pending as Promise<T>
+  const read=performRequest<T>(path).finally(()=>publicReads.delete(path))
+  publicReads.set(path,read)
+  return read
+}
+declare global { interface Window { __fumoeOverview?: Promise<Response|null> } }
+async function initialPublicOverview():Promise<PublicOverview> {
+  const early=typeof window==='undefined'?undefined:window.__fumoeOverview
+  if(typeof window!=='undefined')delete window.__fumoeOverview
+  if(early){
+    try { const response=await early;if(response?.ok)return await response.json() as PublicOverview } catch { /* Retry through the normal request path. */ }
+  }
+  return request<PublicOverview>('/api/public/overview')
 }
 const seasonQuery=(slug?:string)=>slug?`?season=${encodeURIComponent(slug)}`:''
 
@@ -37,7 +57,7 @@ export const api={
   simulateSeason:(id:string)=>request<{simulation:{roundMatchCounts:number[];championId:string;uniqueParticipants:number};notice:string}>(`/api/admin/seasons/${id}/simulation`),
   saveSeasonSchedule:(id:string,rounds:Array<{id:string;startsAt:string;endsAt:string}>,reason:string)=>request<{ok:true}>(`/api/admin/seasons/${id}/schedule`,{method:'PUT',body:JSON.stringify({rounds,reason})}),
   me:()=>request<{user:Viewer|null}>('/api/auth/me'),requestCode:(email:string,turnstileToken?:string)=>request<{ok:true;expiresInSeconds:number;developmentCode?:string}>('/api/auth/request-code',{method:'POST',body:JSON.stringify({email,turnstileToken})}),verifyCode:(email:string,code:string)=>request<{ok:true;user:Viewer}>('/api/auth/verify-code',{method:'POST',body:JSON.stringify({email,code})}),logout:()=>request<{ok:true}>('/api/auth/logout',{method:'POST'}),
-  publicOverview:()=>request<PublicOverview>('/api/public/overview'),publicSeasons:()=>request<{seasons:PublicSeason[]}>('/api/public/seasons'),publicSeason:(slug:string)=>request<{season:PublicSeason}>(`/api/public/seasons/${slug}`),publicMatches:(slug?:string)=>request<{matches:PublicMatch[]}>(`/api/public/matches${seasonQuery(slug)}`),publicRounds:(slug?:string)=>request<{rounds:PublicRound[]}>(`/api/public/rounds${seasonQuery(slug)}`),publicStandings:(slug?:string)=>request<{standings:PublicStanding[]}>(`/api/public/standings${seasonQuery(slug)}`),publicCharacters:(slug?:string)=>request<{characters:PublicCharacter[]}>(`/api/public/characters${seasonQuery(slug)}`),
+  publicOverview:initialPublicOverview,publicSeasons:()=>request<{seasons:PublicSeason[]}>('/api/public/seasons'),publicSeason:(slug:string)=>request<{season:PublicSeason}>(`/api/public/seasons/${slug}`),publicMatches:(slug?:string)=>request<{matches:PublicMatch[]}>(`/api/public/matches${seasonQuery(slug)}`),publicRounds:(slug?:string)=>request<{rounds:PublicRound[]}>(`/api/public/rounds${seasonQuery(slug)}`),publicStandings:(slug?:string)=>request<{standings:PublicStanding[]}>(`/api/public/standings${seasonQuery(slug)}`),publicCharacters:(slug?:string)=>request<{characters:PublicCharacter[]}>(`/api/public/characters${seasonQuery(slug)}`),
   myVotes:(slug?:string)=>request<{votes:VoteSelection[]}>(`/api/votes/mine${seasonQuery(slug)}`),vote:(choices:VoteChoice[],deviceFingerprint?:string)=>request<{ok:true;votes:VoteResult[]}>('/api/votes',{method:'POST',body:JSON.stringify({choices,deviceFingerprint})}),dashboard:()=>request<{pendingVotes:number;activeMatches:number}>('/api/admin/dashboard'),adminMatches:()=>request<{matches:Array<{id:string;groupCode:string;leftName:string;rightName:string;leftVotes:number;rightVotes:number;status:string}>}>('/api/admin/matches'),riskVotes:()=>request<{votes:Array<{id:string;matchId:string;characterId:string;createdAt:string;email:string}>}>('/api/admin/risk/votes'),updateMatch:(matchId:string,input:{status?:string;leftVotes?:number;rightVotes?:number;reason:string})=>request<{ok:true}>(`/api/admin/matches/${matchId}`,{method:'PATCH',body:JSON.stringify(input)}),reviewRiskVote:(voteId:string,action:'approve'|'reject'|'revoke',reason:string)=>request<{ok:true}>(`/api/admin/risk/votes/${voteId}`,{method:'POST',body:JSON.stringify({action,reason})}),
   tournament:()=>request<{season:PublicSeason;settings:Record<string,string>;rounds:Array<{id:string;name:string;status:string;startsAt:string;endsAt:string}>;artwork:Array<{status:string;count:number}>}>('/api/admin/tournament'),adminSeasons:()=>request<{seasons:PublicSeason[]}>('/api/admin/seasons'),seasonEntries:(seasonId:string)=>request<{entries:Array<{characterId:string;groupCode:string;seed:number;name:string;game:string}>}>(`/api/admin/seasons/${seasonId}/entries`),updateSeasonEntry:(seasonId:string,characterId:string,input:{groupCode:string;seed:number;reason:string})=>request<{ok:true}>(`/api/admin/seasons/${seasonId}/entries/${characterId}`,{method:'PATCH',body:JSON.stringify(input)}),createSeason:(input:{name:string;slug?:string;startsAt:string;copyFromSeasonId?:string;reason:string})=>request<{ok:true;seasonId:string;slug:string}>('/api/admin/seasons',{method:'POST',body:JSON.stringify(input)}),seasonAction:(seasonId:string,action:'publish'|'archive'|'unlock-history'|'lock-history',reason:string)=>request<{ok:true}>(`/api/admin/seasons/${seasonId}/action`,{method:'POST',body:JSON.stringify({action,reason})}),updateSeason:(seasonId:string,input:{name?:string;announcement?:string;reason:string})=>request<{ok:true}>(`/api/admin/seasons/${seasonId}`,{method:'PATCH',body:JSON.stringify(input)}),controlTournament:(input:{action:'start-now'|'pause'|'resume'|'close'|'publish-schedule'|'lock-roster'|'unlock-roster';roundId?:string;scheduledStartAt?:string;reason:string})=>request<{ok:true}>('/api/admin/tournament/control',{method:'POST',body:JSON.stringify(input)}),updateSetting:(key:string,value:string,reason:string)=>request<{ok:true}>(`/api/admin/settings/${key}`,{method:'PUT',body:JSON.stringify({value,reason})}),
   characters:()=>request<{characters:Array<{id:string;name:string;game:string;summary:string;groupCode:string;seed:number;artworkSourceUrl:string|null;artworkSourceType:string;artworkQualityStatus:string;artworkFocusX:number;artworkFocusY:number}>}>('/api/admin/characters'),character:(id:string)=>request<{character:unknown}>(`/api/admin/characters/${id}`),updateCharacter:(id:string,input:Record<string,unknown>)=>request<{ok:true}>(`/api/admin/characters/${id}`,{method:'PATCH',body:JSON.stringify(input)}),localData:(action:'clear-votes'|'simulate-round'|'reset',reason:string)=>request<{ok:true}>('/api/admin/local-data',{method:'POST',body:JSON.stringify({action,reason})}),

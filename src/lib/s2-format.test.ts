@@ -1,7 +1,8 @@
 import { describe, expect, it } from 'vitest'
 import { readFileSync } from 'node:fs'
 import { drawSeasonRoster, s2Format } from './s2-format'
-import { formatSchedule, legacyFormat, seasonFormatSchema } from './season-format'
+import { formatSchedule, legacyFormat } from './season-format'
+import { seasonFormatSchema } from './season-format-schema'
 
 describe('S2 独立配置',()=>{
   it('256 人 30 天，每日最多 24 场，决赛 48 小时，不改变旧配置',()=>{

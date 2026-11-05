@@ -1,4 +1,5 @@
-import { legacyFactions, seasonFormatSchema, type SeasonFormat } from './season-format'
+import { legacyFactions, type SeasonFormat } from './season-format'
+import { seasonFormatSchema } from './season-format-schema'
 
 /** S2 is opt-in. Never change legacyFormat or an existing season to select this preset. */
 export function s2Format():SeasonFormat {

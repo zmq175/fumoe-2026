@@ -1,4 +1,5 @@
-import { readFormat, formatSchedule, type SeasonFormat } from '../lib/season-format'
+import { formatSchedule, type SeasonFormat } from '../lib/season-format'
+import { readFormat } from '../lib/season-format-schema'
 import { id } from './security'
 import type { TournamentCharacter } from './tournament'
 

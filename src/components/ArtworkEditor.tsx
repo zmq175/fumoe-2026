@@ -1,3 +1,4 @@
+import '../artwork-editor.css'
 import { useEffect,useRef,useState,type ComponentType } from 'react'
 import Cropper,{type Area,type Point} from 'react-easy-crop'
 import { ArrowLeft,ImagePlus,Minus,Plus,RotateCcw,RotateCw,Save,Trash2,Upload } from 'lucide-react'

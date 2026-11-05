@@ -1,5 +1,6 @@
 import { describe, expect, it } from 'vitest'
-import { formatSchedule, legacyFormat, readFormat, seasonFormatSchema, validateRoster } from './season-format'
+import { formatSchedule, legacyFormat, validateRoster } from './season-format'
+import { readFormat, seasonFormatSchema } from './season-format-schema'
 import { firstKnockoutPairs, simulateSeasonBracket, type TournamentCharacter } from '../worker/tournament'
 import { bracketGeometry, championResult } from './tournament-views'
 import { calculateFactionScores } from './faction-data'

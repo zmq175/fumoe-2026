@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { api, type PublicRound, type PublicSeason } from '../lib/api'
-import { formatRoundPlans, formatSchedule, knockoutSize, legacyFormat, roundCount, seasonFormatSchema, type SeasonFormat } from '../lib/season-format'
+import { formatRoundPlans, formatSchedule, knockoutSize, legacyFormat, roundCount, type SeasonFormat } from '../lib/season-format'
+import { seasonFormatSchema } from '../lib/season-format-schema'
 import type { AdminSeasonEntry } from '../lib/season-admin'
 import './season-configuration.css'
 

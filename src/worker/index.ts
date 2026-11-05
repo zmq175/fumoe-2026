@@ -3,7 +3,8 @@ import { publicRosterCache } from './public-cache'
 import { matchStartsSql, matchEndsSql } from './match-windows'
 import { legacyPortrait } from '../lib/legacy-assets'
 import { seasonStandingsStatement, snapshotSeasonStandings } from './season-results'
-import { readFormat, legacyFormat, formatSchedule, formatGroups, seasonFormatSchema } from '../lib/season-format'
+import { legacyFormat, formatSchedule, formatGroups } from '../lib/season-format'
+import { readFormat, seasonFormatSchema } from '../lib/season-format-schema'
 import { insertPairStatement, loadSeasonFormat, roundStatements } from './season-config'
 import { firstRoundPairs } from './tournament'
 import { configurationRoutes } from './configuration-routes'
@@ -52,7 +53,7 @@ app.use('/api/*', async (c, next) => {
 // A midnight visitor need not wait for the next cron tick. Legacy seasons keep
 // their existing lifecycle; the lease serializes this with scheduled execution.
 app.use('/api/*',async(c,next)=>{
-  if(['/api/public/overview','/api/votes'].includes(c.req.path)){
+  if(['/api/votes'].includes(c.req.path)){
     const start=performance.now()
     if(await hasDueRequestLifecycle(c.env.DB))await runScheduledLifecycle(c.env)
     c.get('timings').lifecycle=performance.now()-start
@@ -61,7 +62,7 @@ app.use('/api/*',async(c,next)=>{
 })
 
 app.use('/api/public/characters', publicRosterCache)
-app.use('/api/public/matches', matchesRevalidation)
+for(const path of ['/api/public/matches','/api/public/overview','/api/public/rounds','/api/public/standings','/api/public/seasons','/api/public/seasons/:slug'])app.use(path, matchesRevalidation)
 
 app.route('/api/admin/seasons',configurationRoutes)
 
@@ -140,14 +141,22 @@ app.get('/api/health', (c) => {
 })
 
 app.get('/api/public/overview', async (c) => {
-  // The five reads share a D1 batch: one round trip and a consistent read transaction.
-  const [seasonRows,previousRows,roundRows,activeMatches,announcements]=await readPublic(c,[
+  const statements=[
     c.env.DB.prepare(`SELECT ${seasonColumns} FROM seasons WHERE is_current=1 AND status!='draft'`),
     c.env.DB.prepare(`SELECT ${seasonColumns.split(',').map((column)=>`s.${column}`).join(',')},COALESCE(se.name_snapshot,c.name) AS championName,COALESCE(se.game_snapshot,g.name) AS championGame,se.artwork_gallery_key_snapshot AS championArtworkKey FROM seasons s LEFT JOIN characters c ON c.id=s.champion_character_id LEFT JOIN games g ON g.id=c.game_id LEFT JOIN season_entries se ON se.season_id=s.id AND se.character_id=s.champion_character_id WHERE s.status IN ('completed','archived') AND s.id!=COALESCE((SELECT id FROM seasons WHERE is_current=1 AND status!='draft'),'') ORDER BY COALESCE(s.completed_at,s.ends_at) DESC LIMIT 1`),
     c.env.DB.prepare("SELECT id,stage,round_number AS roundNumber,name,starts_at AS startsAt,ends_at AS endsAt,status FROM tournament_rounds WHERE season_id=(SELECT id FROM seasons WHERE is_current=1 AND status!='draft') AND status='live' ORDER BY starts_at DESC LIMIT 1"),
     c.env.DB.prepare(`SELECT m.id,m.group_code AS groupCode,m.bracket_position AS bracketPosition,m.left_votes AS leftVotes,m.right_votes AS rightVotes,m.status,m.winner_character_id AS winnerCharacterId,r.id AS roundId,r.stage,r.round_number AS roundNumber,r.name AS roundName,${matchStartsSql} AS startsAt,${matchEndsSql} AS endsAt,lc.id AS leftId,COALESCE(le.name_snapshot,lc.name) AS leftName,COALESCE(le.game_snapshot,lg.name) AS leftGame,le.artwork_match_key_snapshot AS leftArtworkKey,le.artwork_avatar_key_snapshot AS leftAvatarArtworkKey,rc.id AS rightId,COALESCE(re.name_snapshot,rc.name) AS rightName,COALESCE(re.game_snapshot,rg.name) AS rightGame,re.artwork_match_key_snapshot AS rightArtworkKey,re.artwork_avatar_key_snapshot AS rightAvatarArtworkKey FROM matches m JOIN tournament_rounds r ON r.id=m.round_id JOIN characters lc ON lc.id=m.left_character_id JOIN games lg ON lg.id=lc.game_id JOIN characters rc ON rc.id=m.right_character_id JOIN games rg ON rg.id=rc.game_id LEFT JOIN season_entries le ON le.season_id=r.season_id AND le.character_id=lc.id LEFT JOIN season_entries re ON re.season_id=r.season_id AND re.character_id=rc.id WHERE r.season_id=(SELECT id FROM seasons WHERE is_current=1 AND status!='draft') AND m.status='live' AND (NOT EXISTS(SELECT 1 FROM match_windows w WHERE w.match_id=m.id) OR (${matchStartsSql}<=strftime('%Y-%m-%dT%H:%M:%fZ','now') AND ${matchEndsSql}>strftime('%Y-%m-%dT%H:%M:%fZ','now'))) ORDER BY m.group_code,m.bracket_position`),
     c.env.DB.prepare("SELECT value FROM settings WHERE key='announcement'")
-  ])
+  ]
+  const [due,...initial]=await readPublic(c,[requestLifecycleDueStatement(c.env.DB),...statements])
+  let results=initial
+  if(due.results.length){
+    const start=performance.now()
+    await runScheduledLifecycle(c.env)
+    c.get('timings').lifecycle=performance.now()-start
+    results=await readPublic(c,statements)
+  }
+  const [seasonRows,previousRows,roundRows,activeMatches,announcements]=results
   const season=(seasonRows.results[0] as SeasonRow|undefined)??null
   const previous=(previousRows.results[0] as SeasonRow|undefined)??null
   return c.json({season:publicSeason(season),previousSeason:publicSeason(previous),round:roundRows.results[0]??null,matches:activeMatches.results,siteAnnouncement:announcements.results[0]?.value??'',seasonAnnouncement:season?.announcement??''})

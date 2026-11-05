@@ -2,15 +2,13 @@ import { DisplayImage } from './components/DisplayImage'
 import { GameWatermark } from './components/GameWatermark'
 import { CharacterDetail } from './components/CharacterDetail'
 import { seasonDays, defaultDay, beijingTime } from './lib/season-days'
-import { SeasonConfiguration } from './components/SeasonConfiguration'
 import { KnockoutBracket } from './components/KnockoutBracket'
 import { formatGroups, knockoutSize, legacyFormat, type SeasonFormat, type SeasonFaction } from './lib/season-format'
-import { createContext, useContext, useEffect, useMemo, useState } from 'react'
+import { createContext, lazy, Suspense, useContext, useEffect, useMemo, useState } from 'react'
 import { createRoot } from 'react-dom/client'
 import { ArrowRight, Check, ChevronRight, Clock3, ExternalLink, Menu, Play, ShieldCheck, Trophy, UserRound, X } from 'lucide-react'
 import { characters, type Character, type Match } from './data/tournament'
 import { artworkIds } from './data/artwork-index'
-import { ArtworkEditor } from './components/ArtworkEditor'
 import { TurnstileWidget } from './components/TurnstileWidget'
 import { api, browserFingerprint, type PublicCharacter, type PublicMatch, type PublicRound, type PublicSeason, type PublicStanding, type Viewer, type VoteResult, type VoteSelection } from './lib/api'
 import { artworkKey, artworkUrls, portraitArtworkUrls } from './lib/artwork'
@@ -19,10 +17,14 @@ import { championResult, currentRound, groupStandings, historySections, matchRes
 import { seasonRosterSummary, type AdminSeasonEntry } from './lib/season-admin'
 import { readCachedViewer, writeCachedViewer } from './lib/viewer-cache'
 import './styles.css'
-import './artwork-editor.css'
 import './components/artwork-framing.css'
 import './components/champion-hero.css'
 import './components/season-experience.css'
+
+const LazyArtworkEditor=lazy(()=>import('./components/ArtworkEditor').then(module=>({default:module.ArtworkEditor})))
+const LazySeasonConfiguration=lazy(()=>import('./components/SeasonConfiguration').then(module=>({default:module.SeasonConfiguration})))
+function ArtworkEditor(props:React.ComponentProps<typeof LazyArtworkEditor>){return <Suspense fallback={<p role="status">正在加载素材编辑器…</p>}><LazyArtworkEditor {...props}/></Suspense>}
+function SeasonConfiguration(props:React.ComponentProps<typeof LazySeasonConfiguration>){return <Suspense fallback={<p role="status">正在加载赛季配置…</p>}><LazySeasonConfiguration {...props}/></Suspense>}
 
 type Page = 'home' | 'matches' | 'bracket' | 'factions' | 'gallery' | 'rules' | 'notice' | 'seasons' | 'season-detail' | 'admin' | 'artwork-editor'
 
@@ -100,7 +102,7 @@ function Header({ page, onNavigate, onLogin, viewer, onLogout, seasonName }: { s
 }
 
 
-function VoteCard({match,focus=false,onVote,selection,draftCharacterId,daily=false}:{match:Match;focus?:boolean;onVote:(match:Match,character:Character)=>void;selection?:VoteSelection;draftCharacterId?:string;daily?:boolean}) {
+function VoteCard({match,focus=false,priority=focus,onVote,selection,draftCharacterId,daily=false}:{match:Match;focus?:boolean;priority?:boolean;onVote:(match:Match,character:Character)=>void;selection?:VoteSelection;draftCharacterId?:string;daily?:boolean}) {
   const total=match.leftVotes+match.rightVotes
   const leftPercent=total?Math.round(match.leftVotes/total*100):50
   const submitted=selection?.characterId===match.left.id?match.left:selection?.characterId===match.right.id?match.right:null
@@ -111,9 +113,9 @@ function VoteCard({match,focus=false,onVote,selection,draftCharacterId,daily=fal
   return <article className={`match-card ${focus?'match-card--focus':''} ${selection?'match-card--voted':draft?'match-card--draft':''} ${awaitingStart?'match-card--preview':''}`}>
     <div className="match-card__meta"><span className="group-badge">{match.group} 组 · 第 {match.round} 轮</span>{submitted?<span className="voted-badge"><Check size={14}/> {selection?.riskStatus==='pending'?'选票审核中':'选票已记录'}</span>:draft?<span className="draft-badge"><Check size={14}/> 待提交 · {draft.name}</span>:match.status==='live'?<span className="live-badge"><i/> 投票中</span>:<span className="future-badge">{match.status==='closed'?'已结束':'即将开始'}</span>}</div>
     <div className="duel">
-      <button className={draft?.id===match.left.id?'fighter fighter--selected':'fighter'} aria-pressed={daily?draft?.id===match.left.id||submitted?.id===match.left.id:undefined} data-submitted={submitted?.id===match.left.id?true:undefined} data-game={match.left.game} disabled={locked} onClick={()=>onVote(match,match.left)} aria-label={label(match.left)}>{daily&&<GameWatermark game={match.left.game}/>}<div className="fighter__art"><Artwork character={match.left} compact priority={focus}/>{!daily&&submitted?.id===match.left.id&&<span className="vote-stamp" aria-label={`我的选票：${match.left.name}`}><b>已投</b><small>MY VOTE</small></span>}</div>{draft?.id===match.left.id&&<span className="fighter__choice"><Check/> 待提交</span>}{daily&&submitted?.id===match.left.id&&<span className="fighter__submitted"><Check/> {selection?.riskStatus==='pending'?'选票审核中':'已投票'}</span>}<span className="fighter__game">{match.left.game}</span><strong>{match.left.name}</strong><DefendingMark id={match.left.id}/>{!awaitingStart&&<small>{match.leftVotes.toLocaleString()} 票</small>}</button>
+      <button className={draft?.id===match.left.id?'fighter fighter--selected':'fighter'} aria-pressed={daily?draft?.id===match.left.id||submitted?.id===match.left.id:undefined} data-submitted={submitted?.id===match.left.id?true:undefined} data-game={match.left.game} disabled={locked} onClick={()=>onVote(match,match.left)} aria-label={label(match.left)}>{daily&&<GameWatermark game={match.left.game}/>}<div className="fighter__art"><Artwork character={match.left} compact priority={priority}/>{!daily&&submitted?.id===match.left.id&&<span className="vote-stamp" aria-label={`我的选票：${match.left.name}`}><b>已投</b><small>MY VOTE</small></span>}</div>{draft?.id===match.left.id&&<span className="fighter__choice"><Check/> 待提交</span>}{daily&&submitted?.id===match.left.id&&<span className="fighter__submitted"><Check/> {selection?.riskStatus==='pending'?'选票审核中':'已投票'}</span>}<span className="fighter__game">{match.left.game}</span><strong>{match.left.name}</strong><DefendingMark id={match.left.id}/>{!awaitingStart&&<small>{match.leftVotes.toLocaleString()} 票</small>}</button>
       <div className="versus"><span>VS</span>{!locked&&<small>{draft?'已加入清单':match.status==='live'?'实时赛况':match.status==='closed'?'已结束':'等待开赛'}</small>}</div>
-      <button className={draft?.id===match.right.id?'fighter fighter--right fighter--selected':'fighter fighter--right'} aria-pressed={daily?draft?.id===match.right.id||submitted?.id===match.right.id:undefined} data-submitted={submitted?.id===match.right.id?true:undefined} data-game={match.right.game} disabled={locked} onClick={()=>onVote(match,match.right)} aria-label={label(match.right)}>{daily&&<GameWatermark game={match.right.game}/>}<div className="fighter__art"><Artwork character={match.right} compact priority={focus}/>{!daily&&submitted?.id===match.right.id&&<span className="vote-stamp" aria-label={`我的选票：${match.right.name}`}><b>已投</b><small>MY VOTE</small></span>}</div>{draft?.id===match.right.id&&<span className="fighter__choice"><Check/> 待提交</span>}{daily&&submitted?.id===match.right.id&&<span className="fighter__submitted"><Check/> {selection?.riskStatus==='pending'?'选票审核中':'已投票'}</span>}<span className="fighter__game">{match.right.game}</span><strong>{match.right.name}</strong><DefendingMark id={match.right.id}/>{!awaitingStart&&<small>{match.rightVotes.toLocaleString()} 票</small>}</button>
+      <button className={draft?.id===match.right.id?'fighter fighter--right fighter--selected':'fighter fighter--right'} aria-pressed={daily?draft?.id===match.right.id||submitted?.id===match.right.id:undefined} data-submitted={submitted?.id===match.right.id?true:undefined} data-game={match.right.game} disabled={locked} onClick={()=>onVote(match,match.right)} aria-label={label(match.right)}>{daily&&<GameWatermark game={match.right.game}/>}<div className="fighter__art"><Artwork character={match.right} compact priority={priority}/>{!daily&&submitted?.id===match.right.id&&<span className="vote-stamp" aria-label={`我的选票：${match.right.name}`}><b>已投</b><small>MY VOTE</small></span>}</div>{draft?.id===match.right.id&&<span className="fighter__choice"><Check/> 待提交</span>}{daily&&submitted?.id===match.right.id&&<span className="fighter__submitted"><Check/> {selection?.riskStatus==='pending'?'选票审核中':'已投票'}</span>}<span className="fighter__game">{match.right.game}</span><strong>{match.right.name}</strong><DefendingMark id={match.right.id}/>{!awaitingStart&&<small>{match.rightVotes.toLocaleString()} 票</small>}</button>
     </div>
     {!awaitingStart&&<div className="vote-progress" aria-label={`${match.left.name} ${match.leftVotes} 票，${match.right.name} ${match.rightVotes} 票`}><span className="vote-progress__left" style={{width:`${leftPercent}%`}}/><span className="vote-progress__right" style={{width:`${100-leftPercent}%`}}/></div>}
     <footer className="match-card__footer"><span><Clock3 size={15}/> {match.status==='closed'?'本场已结束':match.status==='upcoming'?`${beijingTime(match.startsAt)} 开始`:<><Countdown endsAt={match.endsAt}/> 后截止</>}</span><small>{submitted?<>我的选择：<b>{submitted.name}</b> · {selection?.riskStatus==='pending'?'审核中':'已锁定'}</>:draft?'可继续选择其他场次后统一提交':match.status==='live'?'点击角色加入待投清单':match.status==='closed'?'本场投票已截止':'等待开赛'}</small></footer>
@@ -149,7 +151,7 @@ function DailyMatches({matches,rounds,format,onVote,selections,drafts,onSchedule
   const state=!day?'赛程待公布':upcoming?(day.id===days[0].id?'尚未开赛 · 首日对阵':'下一比赛日预告'):finished?'本季比赛已结束':day.matches.some(m=>m.status==='live')?'今日投票进行中':'今日比赛安排'
   return <main className="page match-center"><header className="match-center__heading"><div><h1>对局中心</h1><p>普通对局 24 小时 · 决赛 48 小时 · 北京时间 00:00 切换</p></div><button className="outline-button" onClick={onSchedule}>查看每日赛程预告 <ArrowRight size={16}/></button></header>
     <div className="match-window"><div><span className="match-window__state">{state}</span>{day&&<h2>{day.round.name} <span>· {day.count} 场</span></h2>}</div>{day&&<p><Clock3 size={16}/><span>{beijingTime(day.startsAt)} — {beijingTime(day.endsAt)}<small>北京时间 · {upcoming?'到时开放投票':finished?'投票已截止':'以各场投票状态为准'}</small></span></p>}</div>
-    {day?<><div className="match-grid match-grid--full">{day.matches.map(m=><VoteCard daily key={m.id} match={toDisplayMatch(m)} onVote={onVote} selection={selections[m.id]} draftCharacterId={drafts[m.id]}/> )}</div>{!day.matches.length&&<div className="notice-bar">本日共 {day.count} 场，对手将在前序轮次结束后确定。</div>}</>:<p>赛程发布后将在这里显示比赛安排。</p>}
+    {day?<><div className="match-grid match-grid--full">{day.matches.map((m,index)=><VoteCard daily priority={index<2} key={m.id} match={toDisplayMatch(m)} onVote={onVote} selection={selections[m.id]} draftCharacterId={drafts[m.id]}/> )}</div>{!day.matches.length&&<div className="notice-bar">本日共 {day.count} 场，对手将在前序轮次结束后确定。</div>}</>:<p>赛程发布后将在这里显示比赛安排。</p>}
   </main>
 }
 
@@ -305,28 +307,42 @@ function App() {
  useEffect(()=>{if(!viewer){setVoteSelections({});return}void api.myVotes().then((result)=>setVoteSelections(Object.fromEntries(result.votes.map((vote)=>[vote.matchId,vote])))).catch(()=>setVoteSelections({}))},[viewer,currentSeason?.id])
  useEffect(()=>{if(!voteNotice)return;const timer=window.setTimeout(()=>setVoteNotice(''),3500);return()=>window.clearTimeout(timer)},[voteNotice])
  useEffect(()=>{
-  let active=true,busy=false,lastSeasonId:string|undefined,lastRosterAt=-Infinity,lastSeasonsAt=-Infinity
+  let active=true,busy=false,lastSeasonId:string|undefined,lastSeasonSlug:string|undefined,lastRosterAt=-Infinity,lastSeasonsAt=-Infinity
   const load=async(forceMetadata=false)=>{
    if(busy||document.hidden)return
    busy=true
+   const tasks:Promise<unknown>[]=[]
+   const consume=<T,>(read:Promise<T>,valid:Promise<boolean>,apply:(value:T)=>void)=>read.then(async value=>{if(await valid&&active)apply(value)}).catch(()=>{})
+   const seasonReads=(slug:string|undefined,valid:Promise<boolean>,roster:boolean)=>{
+    tasks.push(
+     consume(api.publicMatches(slug),valid,data=>{setPublicMatches(data.matches.map(toDisplayMatch));setPublicMatchData(data.matches)}),
+     consume(api.publicRounds(slug),valid,data=>setPublicRounds(data.rounds)),
+     consume(api.publicStandings(slug),valid,data=>setPublicStandings(data.standings))
+    )
+    if(roster)tasks.push(consume(api.publicCharacters(slug),valid,data=>{setPublicCharacters(data.characters.map((item:PublicCharacter)=>({...displayCharacter(item.id,item.name,item.game,item),...item,group:item.groupCode})));lastRosterAt=Date.now()}))
+   }
+   const seasonList=()=>tasks.push(consume(api.publicSeasons(),Promise.resolve(true),data=>{setSeasons(data.seasons);lastSeasonsAt=Date.now()}))
    try{
-    const overview=await api.publicOverview(),slug=overview.season?.slug
+    const knownId=lastSeasonId,knownSlug=lastSeasonSlug
+    const overviewRead=api.publicOverview()
+    const refreshRoster=forceMetadata||Date.now()-lastRosterAt>=60_000
+    const refreshSeasons=forceMetadata||Date.now()-lastSeasonsAt>=60_000
+    // Start independent reads immediately. Only apply speculative season data
+    // after overview confirms the same identity; a rollover discards it.
+    if(knownSlug)seasonReads(knownSlug,overviewRead.then(value=>value.season?.id===knownId&&value.season?.slug===knownSlug,()=>false),refreshRoster)
+    if(refreshSeasons)seasonList()
+    const overview=await overviewRead,slug=overview.season?.slug
     if(!active)return
-    const changed=lastSeasonId!==overview.season?.id;lastSeasonId=overview.season?.id
+    const changed=knownId!==overview.season?.id||knownSlug!==slug
+    lastSeasonId=overview.season?.id;lastSeasonSlug=slug
     setCurrentSeason(overview.season);setPreviousSeason(overview.previousSeason);setAnnouncement([overview.siteAnnouncement,overview.seasonAnnouncement].filter(Boolean).join('\n\n'))
     if(changed){
-     // The overview already contains the live cards: show them before secondary requests.
      setPublicMatches(overview.matches.map(toDisplayMatch));setPublicMatchData(overview.matches)
      setPublicRounds(overview.round?[overview.round]:[]);setPublicStandings([]);setPublicCharacters([])
     }
-    const tasks:Promise<unknown>[]=[
-     api.publicMatches(slug).then(data=>{if(active){setPublicMatches(data.matches.map(toDisplayMatch));setPublicMatchData(data.matches)}}),
-     api.publicRounds(slug).then(data=>{if(active)setPublicRounds(data.rounds)}),
-     api.publicStandings(slug).then(data=>{if(active)setPublicStandings(data.standings)})
-    ]
-    if(changed||forceMetadata||Date.now()-lastSeasonsAt>=60_000)tasks.push(api.publicSeasons().then(data=>{if(active){setSeasons(data.seasons);lastSeasonsAt=Date.now()}}))
-    if(changed||forceMetadata||Date.now()-lastRosterAt>=60_000)tasks.push(api.publicCharacters(slug).then(data=>{if(active){setPublicCharacters(data.characters.map((item:PublicCharacter)=>({...displayCharacter(item.id,item.name,item.game,item),...item,group:item.groupCode})));lastRosterAt=Date.now()}}))
-    // Each successful region renders independently; a slow roster cannot hold up voting.
+    if(!knownSlug||changed)seasonReads(slug,Promise.resolve(true),changed||refreshRoster)
+    if(changed&&!refreshSeasons)seasonList()
+    // Regions render independently, and concurrent polling cycles never overlap.
     await Promise.allSettled(tasks)
    }catch{/* Keep the last coherent snapshot during transient network errors. */}
    finally{busy=false}
