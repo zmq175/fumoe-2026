@@ -71,8 +71,8 @@ describe('真实 SQLite 迁移、路由与赛季推进',()=>{
     expect(empty.body).toMatchObject({season:null,previousSeason:{id:'old',championName:'旧角色0'},round:null,matches:[],siteAnnouncement:'测试公告',seasonAnnouncement:''})
   })
 
-  it('公开名单与轮次单次查询，对局仅多一次日切换检查，历史字段不变',async()=>{
-    const {sql,env,queries}=database(),request=await client(env)
+  it('公开名单与轮次单次查询，对局与日切换检查一次批量读取，历史字段不变',async()=>{
+    const {sql,env,queries,batches}=database(),request=await client(env)
     sql.prepare("INSERT INTO seasons(id,slug,name,status,is_current,rules_version,format_json) VALUES('query-season','query-season','查询测试','draft',0,'3',?)").run(JSON.stringify(s2Format()))
     sql.exec("INSERT INTO season_entries(id,season_id,character_id,group_code,seed,name_snapshot,game_snapshot,summary_snapshot) VALUES('query-entry','query-season','old-0','A',1,'赛季名称','赛季游戏','赛季简介'); INSERT INTO season_character_profiles(season_id,character_id,skin_name,mobile_key,detail_key) VALUES('query-season','old-0','赛季形态','version/mobile','version/detail'); UPDATE seasons SET status='published' WHERE id='query-season'")
     queries.length=0
@@ -98,7 +98,10 @@ describe('真实 SQLite 迁移、路由与赛季推进',()=>{
     expect((await request('/api/public/rounds?season=old')).body.rounds).toHaveLength(1)
     expect(queries).toHaveLength(1)
     queries.length=0
+    batches.length=0
     const matches=await request('/api/public/matches?season=old&round=old-final')
+    expect(batches).toEqual([2])
+    expect(matches.headers.get('server-timing')).toContain('db_calls;desc="1"')
     expect(matches.body.matches).toHaveLength(1)
     expect(matches.body.matches[0]).not.toHaveProperty('leftMobileArtworkKey')
     expect(queries).toHaveLength(2)
@@ -198,7 +201,8 @@ describe('真实 SQLite 迁移、路由与赛季推进',()=>{
       expect(await hasDueRequestLifecycle(env.DB,new Date(Date.parse(rounds[0].startsAt)+86400000))).toBe(true)
       // The request fallback still advances the next daily window exactly at its boundary.
       vi.setSystemTime(new Date(Date.parse(rounds[0].startsAt)+86400000))
-      await request('/api/public/matches?season=s2')
+      const advanced=await request('/api/public/matches?season=s2')
+      expect(advanced.body.matches.filter(m=>typeof m==='object'&&m!==null&&'status' in m&&m.status==='live')).toHaveLength(24)
       expect(await hasDueRequestLifecycle(env.DB)).toBe(false)
       expect(sql.prepare("SELECT COUNT(*) AS n FROM matches WHERE round_id=? AND status='live'").get(rounds[0].id)?.n).toBe(24)
       // Reset only fixture match statuses so the existing 30-day simulation starts at day 1.

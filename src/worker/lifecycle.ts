@@ -89,8 +89,8 @@ async function scheduledRound(db:D1Database,season:Season) {
 
 // One read on the visitor path. Only acquire a lease/write when a real boundary
 // is due; Cron still performs its full check independently every minute.
-export async function hasDueRequestLifecycle(db:D1Database,now=new Date()) {
-  const due=await db.prepare(`SELECT 1 AS due FROM seasons s
+export function requestLifecycleDueStatement(db:D1Database,now=new Date()) {
+  return db.prepare(`SELECT 1 AS due FROM seasons s
     WHERE s.is_current=1 AND s.rules_version='3' AND s.schedule_mode='scheduled'
       AND s.status IN ('published','live') AND (
         EXISTS(SELECT 1 FROM tournament_rounds r WHERE r.season_id=s.id AND r.status='live' AND (
@@ -103,8 +103,11 @@ export async function hasDueRequestLifecycle(db:D1Database,now=new Date()) {
           AND EXISTS(SELECT 1 FROM tournament_rounds r WHERE r.season_id=s.id AND r.status='scheduled'
             AND (s.current_round_id IS NULL OR r.id=s.current_round_id) AND r.starts_at<=?1)
         )
-      ) LIMIT 1`).bind(now.toISOString()).first()
-  return Boolean(due)
+      ) LIMIT 1`).bind(now.toISOString())
+}
+
+export async function hasDueRequestLifecycle(db:D1Database,now=new Date()) {
+  return Boolean(await requestLifecycleDueStatement(db,now).first())
 }
 
 export async function runScheduledLifecycle(env:LifecycleEnv, now=new Date()) {

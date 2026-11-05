@@ -15,7 +15,7 @@ import { sendLoginCode } from './email'
 import { clientIp, cookie, createSession, developmentBypassEnabled, digest, getCookie, id, isDisposableEmail, iso, loginChallengeAllowed, normalizeEmail, readSession, runtimeConfigIssues, sessionForUser, voteRiskDecision } from './security'
 import { normalizeVoteRequest, planBatchVotes, scheduleScorePublications, type ExistingVote, type VoteMatch } from './vote-batch'
 import { MatchRoom } from './match-room'
-import { closeRound, hasDueRequestLifecycle, runScheduledLifecycle, startRound, withLifecycleLease } from './lifecycle'
+import { closeRound, hasDueRequestLifecycle, requestLifecycleDueStatement, runScheduledLifecycle, startRound, withLifecycleLease } from './lifecycle'
 import { runScheduledTick } from './scheduler'
 import { buildSeasonSlug, canEditRoster, canEditSeason, validateSeasonRoster, type SeasonStatus } from './seasons'
 import { artworkCacheControl, artworkKeys, mediaFallbackIsImage } from './artwork'
@@ -51,7 +51,7 @@ app.use('/api/*', async (c, next) => {
 // A midnight visitor need not wait for the next cron tick. Legacy seasons keep
 // their existing lifecycle; the lease serializes this with scheduled execution.
 app.use('/api/*',async(c,next)=>{
-  if(['/api/public/overview','/api/public/matches','/api/votes'].includes(c.req.path)){
+  if(['/api/public/overview','/api/votes'].includes(c.req.path)){
     const start=performance.now()
     if(await hasDueRequestLifecycle(c.env.DB))await runScheduledLifecycle(c.env)
     c.get('timings').lifecycle=performance.now()-start
@@ -164,7 +164,17 @@ app.get('/api/public/seasons/:slug', async (c) => {
 
 app.get('/api/public/matches', async (c) => {
   const slug=c.req.query('season'),round=c.req.query('round')
-  const [result]=await readPublic(c,[c.env.DB.prepare(`${selectedSeasonSql(slug)} SELECT s.rules_version AS _rulesVersion,lp.character_id AS _leftProfileId,rp.character_id AS _rightProfileId,lp.mobile_key AS leftMobileArtworkKey,rp.mobile_key AS rightMobileArtworkKey,m.id,m.group_code AS groupCode,m.bracket_position AS bracketPosition,m.left_votes AS leftVotes,m.right_votes AS rightVotes,m.status,m.winner_character_id AS winnerCharacterId,r.id AS roundId,r.stage,r.round_number AS roundNumber,r.name AS roundName,COALESCE(strftime('%Y-%m-%dT%H:%M:%fZ',r.starts_at,'+'||w.offset_hours||' hours'),r.starts_at) AS startsAt,COALESCE(strftime('%Y-%m-%dT%H:%M:%fZ',r.starts_at,'+'||(w.offset_hours+w.duration_hours)||' hours'),r.ends_at) AS endsAt,lc.id AS leftId,COALESCE(le.name_snapshot,lc.name) AS leftName,COALESCE(le.game_snapshot,lg.name) AS leftGame,le.artwork_match_key_snapshot AS leftArtworkKey,le.artwork_avatar_key_snapshot AS leftAvatarArtworkKey,rc.id AS rightId,COALESCE(re.name_snapshot,rc.name) AS rightName,COALESCE(re.game_snapshot,rg.name) AS rightGame,re.artwork_match_key_snapshot AS rightArtworkKey,re.artwork_avatar_key_snapshot AS rightAvatarArtworkKey FROM selected_season s JOIN tournament_rounds r ON r.season_id=s.id JOIN matches m ON m.round_id=r.id LEFT JOIN match_windows w ON w.match_id=m.id JOIN characters lc ON lc.id=m.left_character_id JOIN games lg ON lg.id=lc.game_id JOIN characters rc ON rc.id=m.right_character_id JOIN games rg ON rg.id=rc.game_id LEFT JOIN season_entries le ON le.season_id=r.season_id AND le.character_id=lc.id LEFT JOIN season_entries re ON re.season_id=r.season_id AND re.character_id=rc.id LEFT JOIN season_character_profiles lp ON s.rules_version='3' AND lp.season_id=s.id AND lp.character_id=lc.id LEFT JOIN season_character_profiles rp ON s.rules_version='3' AND rp.season_id=s.id AND rp.character_id=rc.id ${round?'WHERE r.id=?':''} ORDER BY r.starts_at DESC,r.round_number DESC,m.group_code,m.bracket_position`).bind(...[...(slug?[slug]:[]),...(round?[round]:[])])])
+  const statement=c.env.DB.prepare(`${selectedSeasonSql(slug)} SELECT s.rules_version AS _rulesVersion,lp.character_id AS _leftProfileId,rp.character_id AS _rightProfileId,lp.mobile_key AS leftMobileArtworkKey,rp.mobile_key AS rightMobileArtworkKey,m.id,m.group_code AS groupCode,m.bracket_position AS bracketPosition,m.left_votes AS leftVotes,m.right_votes AS rightVotes,m.status,m.winner_character_id AS winnerCharacterId,r.id AS roundId,r.stage,r.round_number AS roundNumber,r.name AS roundName,COALESCE(strftime('%Y-%m-%dT%H:%M:%fZ',r.starts_at,'+'||w.offset_hours||' hours'),r.starts_at) AS startsAt,COALESCE(strftime('%Y-%m-%dT%H:%M:%fZ',r.starts_at,'+'||(w.offset_hours+w.duration_hours)||' hours'),r.ends_at) AS endsAt,lc.id AS leftId,COALESCE(le.name_snapshot,lc.name) AS leftName,COALESCE(le.game_snapshot,lg.name) AS leftGame,le.artwork_match_key_snapshot AS leftArtworkKey,le.artwork_avatar_key_snapshot AS leftAvatarArtworkKey,rc.id AS rightId,COALESCE(re.name_snapshot,rc.name) AS rightName,COALESCE(re.game_snapshot,rg.name) AS rightGame,re.artwork_match_key_snapshot AS rightArtworkKey,re.artwork_avatar_key_snapshot AS rightAvatarArtworkKey FROM selected_season s JOIN tournament_rounds r ON r.season_id=s.id JOIN matches m ON m.round_id=r.id LEFT JOIN match_windows w ON w.match_id=m.id JOIN characters lc ON lc.id=m.left_character_id JOIN games lg ON lg.id=lc.game_id JOIN characters rc ON rc.id=m.right_character_id JOIN games rg ON rg.id=rc.game_id LEFT JOIN season_entries le ON le.season_id=r.season_id AND le.character_id=lc.id LEFT JOIN season_entries re ON re.season_id=r.season_id AND re.character_id=rc.id LEFT JOIN season_character_profiles lp ON s.rules_version='3' AND lp.season_id=s.id AND lp.character_id=lc.id LEFT JOIN season_character_profiles rp ON s.rules_version='3' AND rp.season_id=s.id AND rp.character_id=rc.id ${round?'WHERE r.id=?':''} ORDER BY r.starts_at DESC,r.round_number DESC,m.group_code,m.bracket_position`).bind(...[...(slug?[slug]:[]),...(round?[round]:[])])
+  // Read the boundary flag and matches in one transaction/round trip.
+  // When due, discard this snapshot and return only the post-transition read.
+  const [due,initial]=await readPublic(c,[requestLifecycleDueStatement(c.env.DB),statement])
+  let result=initial
+  if(due.results.length){
+    const start=performance.now()
+    await runScheduledLifecycle(c.env)
+    c.get('timings').lifecycle=performance.now()-start
+    ;[result]=await readPublic(c,[statement])
+  }
   return c.json({matches:result.results.map(row=>{
     const {_rulesVersion,_leftProfileId,_rightProfileId,leftMobileArtworkKey,rightMobileArtworkKey,...match}=row
     return publicMatchPortraits({...match,...(_rulesVersion==='3'?{leftMobileArtworkKey:_leftProfileId?leftMobileArtworkKey:undefined,rightMobileArtworkKey:_rightProfileId?rightMobileArtworkKey:undefined}:{})},{rulesVersion:String(_rulesVersion)})
