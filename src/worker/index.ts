@@ -1,3 +1,4 @@
+import { MAX_DEVICE_FINGERPRINT_LENGTH } from '../lib/device-fingerprint'
 import { matchesRevalidation } from './matches-revalidation'
 import { publicRosterCache } from './public-cache'
 import { matchStartsSql, matchEndsSql } from './match-windows'
@@ -70,8 +71,8 @@ const requestCodeInput = z.object({ email: z.string().email().max(254), turnstil
 const verifyCodeInput = z.object({ email: z.string().email().max(254), code: z.string().regex(/^\d{6}$/) })
 const voteChoiceInput=z.object({matchId:z.string().min(1).max(80),characterId:z.string().min(1).max(80)})
 const voteInput = z.union([
-  z.object({choices:z.array(voteChoiceInput).min(1).max(128),deviceFingerprint:z.string().min(12).max(256).optional()}),
-  voteChoiceInput.extend({deviceFingerprint:z.string().min(12).max(256).optional(),turnstileToken:z.string().optional()})
+  z.object({choices:z.array(voteChoiceInput).min(1).max(128),deviceFingerprint:z.string().min(12).max(MAX_DEVICE_FINGERPRINT_LENGTH).optional()}),
+  voteChoiceInput.extend({deviceFingerprint:z.string().min(12).max(MAX_DEVICE_FINGERPRINT_LENGTH).optional(),turnstileToken:z.string().optional()})
 ])
 const editMatchInput = z.object({ status: z.enum(['scheduled', 'live', 'closed', 'review']).optional(), leftVotes: z.number().int().min(0).optional(), rightVotes: z.number().int().min(0).optional(), reason: z.string().min(5).max(500) })
 const reviewVoteInput = z.object({ action: z.enum(['approve', 'reject', 'revoke']), reason: z.string().min(5).max(500) })

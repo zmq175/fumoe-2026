@@ -1,3 +1,4 @@
+import { boundedDeviceFingerprint } from './device-fingerprint'
 import type { SeasonFormat } from './season-format'
 import type { AdminSeasonEntry } from './season-admin'
 export type Viewer = { email:string;role:'voter'|'operator'|'admin' }
@@ -63,4 +64,4 @@ export const api={
   characters:()=>request<{characters:Array<{id:string;name:string;game:string;summary:string;groupCode:string;seed:number;artworkSourceUrl:string|null;artworkSourceType:string;artworkQualityStatus:string;artworkFocusX:number;artworkFocusY:number}>}>('/api/admin/characters'),character:(id:string)=>request<{character:unknown}>(`/api/admin/characters/${id}`),updateCharacter:(id:string,input:Record<string,unknown>)=>request<{ok:true}>(`/api/admin/characters/${id}`,{method:'PATCH',body:JSON.stringify(input)}),localData:(action:'clear-votes'|'simulate-round'|'reset',reason:string)=>request<{ok:true}>('/api/admin/local-data',{method:'POST',body:JSON.stringify({action,reason})}),
   artwork:async(id:string,data:FormData)=>{const response=await fetch(`/api/admin/characters/${id}/artwork`,{method:'POST',credentials:'include',body:data});const body=await response.json().catch(()=>({})) as {ok?:boolean;error?:string};if(!response.ok)throw new Error(body.error??'素材上传失败');return body as {ok:true;keys:Record<string,string>;character:Record<string,unknown>}},deleteArtwork:(id:string,reason:string)=>request<{ok:true}>(`/api/admin/characters/${id}/artwork`,{method:'DELETE',body:JSON.stringify({reason})})
 }
-export function browserFingerprint(){return[navigator.userAgent,navigator.language,screen.width,screen.height,Intl.DateTimeFormat().resolvedOptions().timeZone].join('|')}
+export function browserFingerprint(){return boundedDeviceFingerprint([navigator.userAgent,navigator.language,screen.width,screen.height,Intl.DateTimeFormat().resolvedOptions().timeZone])}

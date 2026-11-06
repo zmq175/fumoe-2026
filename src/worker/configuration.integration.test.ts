@@ -311,6 +311,17 @@ describe('真实 SQLite 迁移、路由与赛季推进',()=>{
     expect((await runScheduledLifecycle(env)).started).toBe(1)
     const choices=sql.prepare("SELECT m.id AS matchId,m.left_character_id AS characterId FROM matches m JOIN tournament_rounds r ON r.id=m.round_id WHERE r.season_id=? AND m.status='live'").all(seasonId)
     expect(choices).toHaveLength(128)
+    // Representative Android QQ-style UA; synthetic, not a captured user identifier.
+    const qqFingerprint='Mozilla/5.0 (Linux; Android 14; V2307A Build/UP1A.231005.007; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/120.0.6099.230 Mobile Safari/537.36 V1_AND_SQ_9.0.95_9999_YYB_D QQ/9.0.95.19320 NetType/WIFI WebP/0.3.0 Pixel/1080 StatusBarHeight/96 SimpleUISwitch/0 QQTheme/1000 InMagicWin/0 StudyMode/0 CurrentMode/0 CurrentFontScale/1.0 GlobalDensityScale/0.9 AppId/537260987|zh-CN|393|873|Asia/Shanghai'
+    expect(qqFingerprint.length).toBeGreaterThan(256)
+    const oversizedVote=await request('/api/votes','POST',{choices:choices.slice(0,24),deviceFingerprint:'x'.repeat(4097)})
+    expect(oversizedVote.status).toBe(400)
+    expect(sql.prepare('SELECT COUNT(*) AS n FROM votes').get()?.n).toBe(0)
+    const qqVote=await request('/api/votes','POST',{choices:choices.slice(0,24),deviceFingerprint:qqFingerprint})
+    expect(qqVote.status,JSON.stringify(qqVote.body)).toBe(200)
+    expect(sql.prepare('SELECT COUNT(*) AS n FROM votes').get()?.n).toBe(24)
+    const legacyQqVote=await request('/api/votes','POST',{...choices[24],deviceFingerprint:qqFingerprint})
+    expect(legacyQqVote.status,JSON.stringify(legacyQqVote.body)).toBe(200)
     const voted=await request('/api/votes','POST',{choices})
     expect(voted.status,JSON.stringify(voted.body)).toBe(200)
     expect(sql.prepare('SELECT COUNT(*) AS n FROM votes').get()?.n).toBe(128)
