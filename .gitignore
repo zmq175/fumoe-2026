@@ -18,3 +18,4 @@ assets/reports/portrait-*
 assets/reports/redo-*
 .DS_Store
 .impeccable/review/
+test-results-firefox/
