@@ -7,6 +7,7 @@ const origin=process.env.ARTWORK_ORIGIN??'https://moe.hooxi.co'
 const out='public/image-variants',cache='.local/image-compression',hash=b=>createHash('sha256').update(b).digest('hex')
 await mkdir(out,{recursive:true});await mkdir(cache,{recursive:true})
 const legacy=JSON.parse(await readFile('src/data/legacy-assets.json','utf8'))
+const previous=JSON.parse(await readFile('src/data/image-variants.json','utf8'))
 const inputs=new Map(),localByHash=new Map()
 const add=(url,kind,file)=>{if(!inputs.has(url))inputs.set(url,{url,kind,file})}
 const artworkUrl=key=>key.startsWith('/')?(legacy[key]??key):key.split('/').length===3?(legacy['/artwork/'+key.split('/').slice(1).join('/')]??'/artwork/'+key.split('/').slice(1).join('/')):'/api/media/'+key
@@ -28,7 +29,7 @@ for(const season of seasons){
  await writeFile(cache+'/'+season.slug+'.json',JSON.stringify(roster))
  for(const c of roster.characters)for(const [field,kind]of Object.entries({galleryArtworkKey:'gallery',matchArtworkKey:'match',avatarArtworkKey:'avatar',mobileArtworkKey:'mobile',detailArtworkKey:'detail'}))if(c[field])add(artworkUrl(c[field]),kind)
 }
-const hashes={},paths={},report=[],outputHashes=new Map(),encoded=new Map()
+const hashes={...previous.hashes},paths={...previous.paths},report=[],outputHashes=new Map(),processedIds=new Map(),encoded=new Map()
 const sourceId=url=>url.match(/^\/archive\/([a-f0-9]{64})\./)?.[1]?.slice(0,20)??url.match(/^\/api\/media\/.+\/([a-f0-9]{20,64})\/[^/]+$/)?.[1]?.slice(0,20)
 async function processImage(item){
  const id=sourceId(item.url),cached=cache+'/'+hash(Buffer.from(item.url))+'.source'
@@ -45,16 +46,21 @@ async function processImage(item){
   let pipeline=sharp(bytes)
   if(item.kind==='avatar')pipeline=pipeline.resize({width:192,height:192,fit:'inside',withoutEnlargement:true})
   if(item.kind==='detail')pipeline=pipeline.resize({width:1280,height:1920,fit:'inside',withoutEnlargement:true})
-  return pipeline.webp(item.kind==='graphic'?{lossless:true,effort:4}:{quality:item.kind==='detail'?85:80,alphaQuality:100,effort:4}).toBuffer()
+  return pipeline.webp({quality:item.kind==='detail'?78:item.kind==='avatar'?75:70,alphaQuality:100,effort:4}).toBuffer()
  })())
- const compressed=await encoded.get(policy)
- const result={source:item.url,kind:item.kind,originalBytes:bytes.length,displayBytes:bytes.length,width:meta.width,height:meta.height,sourceSha256:digest,status:'original-smaller'}
+ const candidate=await encoded.get(policy)
+ const previousId=sourceId(legacy[item.url]??item.url)
+ const oldRevision=(previousId?previous.hashes[previousId]:undefined)??previous.paths[item.url]
+ const oldBytes=oldRevision?await readFile(`${out}/${oldRevision}.webp`):bytes
+ // Always encode the original, never a previous lossy derivative. Keep the smaller display.
+ const compressed=candidate.length<oldBytes.length?candidate:oldBytes
+ const result={source:item.url,kind:item.kind,originalBytes:bytes.length,previousBytes:oldBytes.length,displayBytes:bytes.length,width:meta.width,height:meta.height,sourceSha256:digest,status:'original-smaller'}
  if(compressed.length<bytes.length){
   const outputDigest=hash(compressed),outputId=outputDigest.slice(0,20)
   if(outputHashes.has(outputId)&&outputHashes.get(outputId)!==outputDigest)throw Error('Output hash collision')
   outputHashes.set(outputId,outputDigest)
   await writeFile(`${out}/${outputId}.webp`,compressed)
-  if(id){if(hashes[id]&&hashes[id]!==outputId)throw Error('Conflicting source policies: '+item.url);hashes[id]=outputId}else paths[item.url]=outputId
+  if(id){if(processedIds.has(id)&&processedIds.get(id)!==outputId)throw Error('Conflicting source policies: '+item.url);processedIds.set(id,outputId);hashes[id]=outputId}else paths[item.url]=outputId
   const m=await sharp(compressed).metadata()
   Object.assign(result,{status:'optimized',displayBytes:compressed.length,displayWidth:m.width,displayHeight:m.height,hasAlpha:m.hasAlpha,outputSha256:outputDigest,output:`/image-variants/${outputId}.webp`})
   if(meta.hasAlpha&&!m.hasAlpha)throw Error('Transparency lost: '+item.url)
@@ -68,7 +74,7 @@ for(const [source,target]of Object.entries(legacy))if(hashes[sourceId(target)])d
 const sorted=o=>Object.fromEntries(Object.entries(o).sort(([a],[b])=>a.localeCompare(b)))
 await writeFile('src/data/image-variants.json',JSON.stringify({hashes:sorted(hashes),paths:sorted(paths)})+'\n')
 const uniqueSources=[...new Map(report.map(r=>[r.sourceSha256??r.source,r])).values()]
-const totals=uniqueSources.reduce((a,r)=>({originalBytes:a.originalBytes+r.originalBytes,displayBytes:a.displayBytes+r.displayBytes}),{originalBytes:0,displayBytes:0})
+const totals=uniqueSources.reduce((a,r)=>({originalBytes:a.originalBytes+r.originalBytes,previousBytes:a.previousBytes+(r.previousBytes??r.originalBytes),displayBytes:a.displayBytes+r.displayBytes}),{originalBytes:0,previousBytes:0,displayBytes:0})
 const unique=[...new Set(report.filter(r=>r.output).map(r=>r.output))]
 const outputBytes=(await Promise.all(unique.map(p=>stat('public'+p)))).reduce((a,s)=>a+s.size,0)
 const summary={sourceUrls:report.length,uniqueSources:uniqueSources.length,optimizedUrls:report.filter(r=>r.status==='optimized').length,uniqueFiles:unique.length,outputBytes,...totals,savedPercent:Math.round((1-totals.displayBytes/totals.originalBytes)*100)}
