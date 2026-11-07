@@ -48,7 +48,8 @@
     "artwork:one-time-import": "npm run artwork:discover && npm run artwork:sync && npm run artwork:community-discover && npm run artwork:community-archive && npm run artwork:process && npm run artwork:upload-plan",
     "preview:s2:prepare": "npm run build && node scripts/prepare-s2-preview.mjs",
     "preview:s2": "npm run build && node scripts/serve-s2-app-preview.mjs",
-    "prepare:s2:release": "node scripts/prepare-s2-release.mjs"
+    "prepare:s2:release": "node scripts/prepare-s2-release.mjs",
+    "images:compress:logos": "node scripts/compress-brand-logos.mjs"
   },
   "dependencies": {
     "@cloudflare/workers-types": "^5.20260730.1",
@@ -74,6 +75,7 @@
     "eslint-plugin-react-refresh": "^0.4.20",
     "globals": "^16.3.0",
     "playwright-core": "^1.62.1",
+    "svgo": "^4.1.0",
     "typescript": "^5.9.2",
     "typescript-eslint": "^8.41.0",
     "vite": "^7.1.5",
