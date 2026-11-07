@@ -26,8 +26,11 @@ for(const directory of ['factions','game-logos'])for(const file of (await readdi
     const render=b=>sharp(b).resize({width:880}).ensureAlpha().raw().toBuffer()
     if(candidate.length<bytes.length&&(await render(original)).equals(await render(candidate))){bytes=candidate;extension='svg'}
   }else{
-    const candidate=await sharp(original).webp({lossless:true,effort:6}).toBuffer()
-    if(candidate.length<bytes.length){bytes=candidate;extension='webp'}
+    const lossless=await sharp(original).webp({lossless:true,effort:6}).toBuffer()
+    if(lossless.length<bytes.length){bytes=lossless;extension='webp'}
+    // Keep the original resolution and exact alpha; only accept worthwhile lossy savings.
+    const lossy=await sharp(original).webp({quality:80,alphaQuality:100,effort:6}).toBuffer()
+    if(lossy.length<bytes.length*0.95){bytes=lossy;extension='webp'}
   }
   const output=`/image-variants/${hash(bytes)}.${extension}`
   await writeFile('public'+output,bytes)
