@@ -1,5 +1,5 @@
-import { describe, expect, it } from 'vitest'
-import { developmentBypassEnabled, loginChallengeAllowed, runtimeConfigIssues, sessionForUser, voteRiskDecision } from './security'
+import { describe, expect, it, vi } from 'vitest'
+import { createSession, inspectSession, developmentBypassEnabled, loginChallengeAllowed, runtimeConfigIssues, sessionForUser, voteRiskDecision } from './security'
 
 describe('开发认证绕过', () => {
   it('只允许显式启用的本机来源使用绕过', () => {
@@ -50,5 +50,22 @@ describe('投票风控决策', () => {
 
   it('正常投票自动计票且不产生异常记录', () => {
     expect(voteRiskDecision(11)).toEqual({riskStatus:'approved',recordVelocityEvent:false})
+  })
+})
+
+describe('登录诊断不返回凭证内容',()=>{
+  it('区分缺失、无效、过期与有效凭证',async()=>{
+    const env={AUTH_SECRET:'isolated-test-secret-at-least-32-characters'} as Parameters<typeof createSession>[1]
+    vi.useFakeTimers({toFake:['Date']})
+    try {
+      vi.setSystemTime(new Date('2026-11-07T12:00:00Z'))
+      const token=await createSession({sub:'test',email:'test@example.com',role:'voter'},env)
+      expect(await inspectSession(undefined,env)).toEqual({session:null,reason:'missing'})
+      expect(await inspectSession('invalid-token',env)).toEqual({session:null,reason:'invalid'})
+      expect((await inspectSession(token,env)).reason).toBe('valid')
+      expect((await inspectSession(token,{...env,AUTH_SECRET:'different-test-secret-at-least-32-characters'})).reason).toBe('invalid')
+      vi.setSystemTime(new Date('2026-12-08T12:00:00Z'))
+      expect(await inspectSession(token,env)).toEqual({session:null,reason:'expired'})
+    } finally {vi.useRealTimers()}
   })
 })

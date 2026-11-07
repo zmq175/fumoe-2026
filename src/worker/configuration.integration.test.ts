@@ -2,7 +2,7 @@ import { DatabaseSync } from 'node:sqlite'
 import { readdirSync, readFileSync } from 'node:fs'
 import { afterEach, describe, expect, it, vi } from 'vitest'
 import worker from './index'
-import { createSession } from './security'
+import { createSession, digest } from './security'
 import { s2Format } from '../lib/s2-format'
 import { legacyFormat, type SeasonFormat } from '../lib/season-format'
 import { hasDueRequestLifecycle, runScheduledLifecycle } from './lifecycle'
@@ -46,6 +46,32 @@ const reason='隔离数据库配置验证'
 const format256=():SeasonFormat=>({...legacyFormat(),participants:256,groupCount:16,swissRounds:5,rounds:Array.from({length:10},()=>({durationHours:48,breakHours:24})),factions:[{name:'新阵营',games:['新游戏'],accent:'#123456',logoPath:null}]})
 
 describe('真实 SQLite 迁移、路由与赛季推进',()=>{
+  it('登录凭证跨天保留，30 天到期，登录状态禁止缓存',async()=>{
+    const {sql,env}=database()
+    env.ADMIN_EMAILS=''
+    const start=new Date('2026-11-07T12:00:00Z')
+    vi.useFakeTimers({toFake:['Date']})
+    try {
+      vi.setSystemTime(start)
+      sql.prepare('INSERT INTO auth_challenges(id,email,code_hash,expires_at,ip_hash) VALUES(?,?,?,?,?)')
+        .run('login-test','admin@test.example',await digest('123456'),new Date(start.getTime()+600000).toISOString(),'test-ip')
+      const context={waitUntil:()=>{}} as unknown as ExecutionContext
+      const login=await worker.fetch(new Request('https://localhost/api/auth/verify-code',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({email:'admin@test.example',code:'123456'})}),env,context)
+      expect(login.status).toBe(200)
+      const setCookie=login.headers.get('set-cookie')!
+      expect(setCookie).toContain('Max-Age=2592000')
+      expect(setCookie).toContain('HttpOnly; Secure; SameSite=Lax')
+      const cookie=setCookie.split(';')[0]
+      for(const days of [1,2,29,31]){
+        vi.setSystemTime(new Date(start.getTime()+days*86400000))
+        const response=await worker.fetch(new Request('https://localhost/api/auth/me',{headers:{cookie}}),env,context)
+        const body=await response.json() as {user:unknown}
+        expect(body.user).toEqual(days<30?{email:'admin@test.example',role:'admin'}:null)
+        expect(response.headers.get('cache-control')).toBe('private, no-store')
+      }
+    } finally {vi.useRealTimers()}
+  })
+
   it('积分与头像一次批量读取，锁定的历史积分直接返回快照',async()=>{
     const {sql,env,batches}=database(),request=await client(env)
     const sizes:number[][]=[]

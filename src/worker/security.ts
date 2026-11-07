@@ -1,4 +1,4 @@
-import { jwtVerify, SignJWT } from 'jose'
+import { errors, jwtVerify, SignJWT } from 'jose'
 import type { Env, Session } from './types'
 
 const encoder = new TextEncoder()
@@ -50,13 +50,19 @@ export async function createSession(session: Session, env: Env) {
     .sign(secret(env.AUTH_SECRET))
 }
 
-export async function readSession(token: string | undefined, env: Env): Promise<Session | null> {
-  if (!token) return null
+export type SessionInspection = { session: Session | null; reason: 'valid' | 'missing' | 'expired' | 'invalid' }
+
+export async function inspectSession(token: string | undefined, env: Env): Promise<SessionInspection> {
+  if (!token) return {session:null,reason:'missing'}
   try {
     const { payload } = await jwtVerify(token, secret(env.AUTH_SECRET))
-    if (typeof payload.sub !== 'string' || typeof payload.email !== 'string' || !['voter', 'operator', 'admin'].includes(String(payload.role))) return null
-    return { sub: payload.sub, email: payload.email, role: payload.role as Session['role'] }
-  } catch { return null }
+    if (typeof payload.sub !== 'string' || typeof payload.email !== 'string' || !['voter', 'operator', 'admin'].includes(String(payload.role))) return {session:null,reason:'invalid'}
+    return {session:{sub:payload.sub,email:payload.email,role:payload.role as Session['role']},reason:'valid'}
+  } catch(error) {return {session:null,reason:error instanceof errors.JWTExpired?'expired':'invalid'}}
+}
+
+export async function readSession(token: string | undefined, env: Env): Promise<Session | null> {
+  return (await inspectSession(token,env)).session
 }
 
 type SessionUser = { id:string;email:string;role:Session['role'];status:string }

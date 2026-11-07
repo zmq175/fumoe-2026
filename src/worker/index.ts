@@ -15,7 +15,7 @@ import { cors } from 'hono/cors'
 import { zValidator } from '@hono/zod-validator'
 import { z } from 'zod'
 import { sendLoginCode } from './email'
-import { clientIp, cookie, createSession, developmentBypassEnabled, digest, getCookie, id, isDisposableEmail, iso, loginChallengeAllowed, normalizeEmail, readSession, runtimeConfigIssues, sessionForUser, voteRiskDecision } from './security'
+import { clientIp, cookie, createSession, developmentBypassEnabled, digest, getCookie, id, isDisposableEmail, iso, loginChallengeAllowed, normalizeEmail, inspectSession, runtimeConfigIssues, sessionForUser, voteRiskDecision } from './security'
 import { normalizeVoteRequest, planBatchVotes, scheduleScorePublications, type ExistingVote, type VoteMatch } from './vote-batch'
 import { MatchRoom } from './match-room'
 import { closeRound, hasDueRequestLifecycle, requestLifecycleDueStatement, runScheduledLifecycle, startRound, withLifecycleLease } from './lifecycle'
@@ -36,6 +36,14 @@ app.use('/api/*',async(c,next)=>{
   const dbTiming=database?`, db_wait;dur=${database.wait.toFixed(1)}, db_calls;desc="${database.calls}", db_queries;desc="${database.queries}"${database.sql===undefined?'':`, db_sql;dur=${database.sql.toFixed(2)}`}`:''
   c.header('Server-Timing',`auth;dur=${timings.auth.toFixed(1)}, lifecycle;dur=${timings.lifecycle.toFixed(1)}, app;dur=${Math.max(0,total-timings.auth-timings.lifecycle).toFixed(1)}, total;dur=${total.toFixed(1)}${dbTiming}`)
 })
+// Authentication and personal vote state must never reuse an old browser/proxy response.
+app.use('/api/*',async(c,next)=>{
+  if(c.req.path.startsWith('/api/auth/')||c.req.path==='/api/votes/mine'){
+    c.header('Cache-Control','private, no-store')
+    c.header('Vary','Cookie')
+  }
+  await next()
+})
 app.use('/api/*', cors({ origin: (origin, c) => origin === c.env.APP_ORIGIN ? origin : c.env.APP_ORIGIN, credentials: true }))
 app.use('/api/*', async (c, next) => {
   // These GET responses are identical for signed-in and anonymous visitors.
@@ -44,9 +52,14 @@ app.use('/api/*', async (c, next) => {
     c.set('session',null);await next();return
   }
   const start=performance.now()
-  const claims=await readSession(getCookie(c.req.header('Cookie'),'fumoe_session'),c.env)
+  const inspection=await inspectSession(getCookie(c.req.header('Cookie'),'fumoe_session'),c.env)
+  const claims=inspection.session
   const user=claims?await c.env.DB.prepare('SELECT id,email,role,status FROM users WHERE id=?').bind(claims.sub).first<{id:string;email:string;role:Role;status:string}>():null
   c.set('session',sessionForUser(claims,user))
+  if(c.req.path==='/api/auth/me'&&!c.get('session')){
+    // Deliberately exclude tokens, email, IP, and full user-agent from diagnostics.
+    console.info(JSON.stringify({event:'session_unavailable',reason:claims?'account_unavailable':inspection.reason}))
+  }
   c.get('timings').auth=performance.now()-start
   await next()
 })
