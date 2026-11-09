@@ -42,3 +42,10 @@
 }
 
 .turnstile__help p { margin:8px 0; line-height:1.6; }.turnstile__help button { min-height:44px; padding:8px 0; }.turnstile__help a { color:#246d94; text-decoration:underline; }.turnstile>small { line-height:1.6; overflow-wrap:anywhere; }
+
+.data-freshness { width: min(1440px, calc(100% - 40px)); margin: 12px auto; font-size: 13px; }
+.data-freshness:empty { display: none; }
+.data-freshness > div { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 12px; border: 1px solid currentColor; }
+.data-freshness > small { display: block; margin-top: 6px; }
+.data-freshness button { flex-shrink: 0; }
+@media (max-width: 600px) { .data-freshness > div { align-items: flex-start; flex-direction: column; } }

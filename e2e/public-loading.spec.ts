@@ -62,6 +62,7 @@ test('关键总览在主脚本下载完成前发出，首页不加载后台编�
   await expect(page.getByLabel('投票给芙宁娜').first()).toBeVisible()
   expect(overviewReads).toBe(1)
   expect(scripts.some(url=>/ArtworkEditor|SeasonConfiguration/.test(url))).toBe(false)
+  await expect(page.locator('script[type="module"][src^="/assets/index-"]')).toHaveAttribute('data-cfasync','false')
 })
 
 for(const rollover of [false,true])test(`轮询并发请求且${rollover?'切季丢弃旧响应':'等待身份确认后应用结果'}`,async({page})=>{
@@ -100,4 +101,31 @@ for(const rollover of [false,true])test(`轮询并发请求且${rollover?'切季
     await expect(page.getByLabel(rollover?'投票给新赛季角色':'投票给更新角色').first()).toBeVisible()
     await expect(page.getByText('旧赛季返回',{exact:true})).toHaveCount(0)
   }finally{release()}
+})
+
+test('首次总览失败不会显示旧赛制布局，并可重试恢复',async({page})=>{
+  await mockPublicApi(page)
+  await page.route('**/api/public/overview',route=>route.fulfill({status:503,json:{error:'unavailable'}}))
+  await page.goto('/')
+  await expect(page.getByRole('alert')).toContainText('无法获取当前赛季')
+  await expect(page.getByRole('heading',{name:'正在发生的对局',exact:true})).toHaveCount(0)
+  await page.unroute('**/api/public/overview')
+  await page.getByRole('button',{name:'重新获取'}).click()
+  await expect(page.getByLabel('投票给芙宁娜').first()).toBeVisible()
+  await expect(page.getByRole('alert')).toHaveCount(0)
+})
+
+test('部分接口更新失败提示旧数据，恢复后清除警告',async({page})=>{
+  await mockPublicApi(page)
+  await page.clock.install()
+  await page.goto('/matches')
+  await expect(page.getByLabel('投票给芙宁娜').first()).toBeVisible()
+  await expect(page.getByText(/赛事数据更新于/)).toBeVisible()
+  await page.route('**/api/public/standings*',route=>route.fulfill({status:503,json:{error:'unavailable'}}))
+  await page.clock.fastForward(15_001)
+  await expect(page.getByRole('alert')).toContainText('部分数据可能停留在上次成功获取时')
+  await expect(page.getByLabel('投票给芙宁娜').first()).toBeVisible()
+  await page.unroute('**/api/public/standings*')
+  await page.getByRole('button',{name:'重新获取'}).click()
+  await expect(page.getByRole('alert')).toHaveCount(0)
 })

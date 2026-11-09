@@ -75,8 +75,8 @@ app.use('/api/*',async(c,next)=>{
   await next()
 })
 
+app.use('/api/public/*', matchesRevalidation)
 app.use('/api/public/characters', publicRosterCache)
-for(const path of ['/api/public/matches','/api/public/overview','/api/public/rounds','/api/public/standings','/api/public/seasons','/api/public/seasons/:slug'])app.use(path, matchesRevalidation)
 
 app.route('/api/admin/seasons',configurationRoutes)
 

@@ -26,3 +26,10 @@ it('does not combine authentication requests',async()=>{
   await Promise.all([api.me(),api.me()])
   expect(fetcher).toHaveBeenCalledTimes(2)
 })
+
+it('bypasses browser caches for public reads without changing stable URLs',async()=>{
+  const fetcher=vi.fn(async()=>new Response(JSON.stringify({matches:[]})))
+  vi.stubGlobal('fetch',fetcher)
+  await api.publicMatches('s2')
+  expect(fetcher).toHaveBeenCalledWith('/api/public/matches?season=s2',expect.objectContaining({cache:'no-store'}))
+})

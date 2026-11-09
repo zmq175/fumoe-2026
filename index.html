@@ -7,17 +7,17 @@
     <meta name="theme-color" content="#000000" />
     <meta name="description" content="府萌 2026：64 位二次元女性角色，一周决出群头像冠军。" />
     <title>府萌 2026</title>
-    <script>
+    <script data-cfasync="false">
       // Start the critical public read while the application bundle downloads.
       if (location.pathname === '/' || location.pathname === '/matches') {
         window.__fumoeOverview = fetch('/api/public/overview', {
-          credentials: 'include', signal: AbortSignal.timeout(12000)
+          credentials: 'include', cache: 'no-store', signal: AbortSignal.timeout(12000)
         }).catch(function () { return null; });
       }
     </script>
   </head>
   <body>
     <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
+    <script data-cfasync="false" type="module" src="/src/main.tsx"></script>
   </body>
 </html>

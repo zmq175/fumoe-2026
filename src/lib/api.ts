@@ -23,7 +23,7 @@ export function apiErrorMessage(error:unknown,fallback='请求暂时失败，请
 }
 
 async function performRequest<T>(path:string,init?:RequestInit):Promise<T> {
-  const response=await fetch(path,{credentials:'include',headers:{'content-type':'application/json',...(init?.headers??{})},...(path.startsWith('/api/public/')?{signal:AbortSignal.timeout(12_000)}:{}),...init})
+  const response=await fetch(path,{credentials:'include',headers:{'content-type':'application/json',...(init?.headers??{})},...(path.startsWith('/api/public/')?{cache:'no-store',signal:AbortSignal.timeout(12_000)}:{}),...init})
   const body=await response.json().catch(()=>({})) as T&{error?:unknown}
   if(!response.ok)throw new Error(apiErrorMessage(body.error))
   return body
