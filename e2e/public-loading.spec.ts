@@ -120,7 +120,7 @@ test('部分接口更新失败提示旧数据，恢复后清除警告',async({pa
   await page.clock.install()
   await page.goto('/matches')
   await expect(page.getByLabel('投票给芙宁娜').first()).toBeVisible()
-  await expect(page.getByText(/赛事数据更新于/)).toBeVisible()
+  await expect(page.locator('.data-freshness')).toHaveCount(0)
   await page.route('**/api/public/standings*',route=>route.fulfill({status:503,json:{error:'unavailable'}}))
   await page.clock.fastForward(15_001)
   await expect(page.getByRole('alert')).toContainText('部分数据可能停留在上次成功获取时')
