@@ -11,7 +11,7 @@
       // Start the critical public read while the application bundle downloads.
       if (location.pathname === '/' || location.pathname === '/matches') {
         window.__fumoeOverview = fetch('/api/public/overview', {
-          credentials: 'include', cache: 'no-store', signal: AbortSignal.timeout(12000)
+          credentials: 'include', cache: 'no-store', signal: AbortSignal.timeout(30000)
         }).catch(function () { return null; });
       }
     </script>

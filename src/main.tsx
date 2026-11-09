@@ -28,6 +28,8 @@ function SeasonConfiguration(props:React.ComponentProps<typeof LazySeasonConfigu
 
 type Page = 'home' | 'matches' | 'bracket' | 'factions' | 'gallery' | 'rules' | 'notice' | 'seasons' | 'season-detail' | 'admin' | 'artwork-editor'
 
+const publicPageReads:Partial<Record<Page,string[]>>={home:['matches','rounds'],matches:['matches','rounds'],bracket:['matches','rounds','standings'],factions:['matches','characters'],gallery:['characters','matches','rounds','standings','seasons'],seasons:['seasons']}
+
 const navItems: Array<[Page, string]> = [['home', '首页'], ['matches', '对局中心'], ['bracket', '赛程赛况'], ['factions', '阵营数据'], ['seasons', '历届赛事'], ['gallery', '角色图鉴'], ['rules', '赛制说明'], ['notice', '公告']]
 const DefendingChampionContext=createContext<string|undefined>(undefined)
 function DefendingMark({id}:{id:string}){const champion=useContext(DefendingChampionContext);return champion===id?<span className="defending-mark"><Trophy size={13}/> 卫冕冠军</span>:null}
@@ -295,13 +297,23 @@ function VoteDialog({choices,matches,onClose,onCompleted}:{choices:Array<{matchI
 function pageForPath(path:string):Page { if(path==='/admin')return'admin';if(path==='/factions')return'factions';if(path==='/matches')return'matches';if(path==='/gallery')return'gallery';if(path==='/bracket')return'bracket';if(path==='/seasons')return'seasons';if(/^\/seasons\/[^/]+$/.test(path))return'season-detail';if(/^\/admin\/characters\/[a-zA-Z0-9_-]+$/.test(path))return'artwork-editor';return'home' }
 function pathForPage(page:Page){if(['matches','gallery','bracket'].includes(page))return'/'+page;return page==='admin'?'/admin':page==='factions'?'/factions':page==='seasons'?'/seasons':'/'}
 
+const publicPageTitles:Partial<Record<Page,string>>={home:'赛事',matches:'对局中心',bracket:'赛程赛况',factions:'阵营数据',gallery:'角色图鉴',seasons:'历届赛事','season-detail':'历史赛季'}
+function PublicLoading({page,failed,busy}:{page:Page;failed:boolean;busy:boolean}) {
+ const title=publicPageTitles[page]??'赛事'
+ return <main className="hero" aria-busy={busy}><div className="hero__grid"/><div className="hero__aurora"/><div className="hero__beam hero__beam--one"/><div className="hero__particles"/><div className="hero__copy"><p className="eyebrow">府萌赛事</p><h1><span className="hero__line">{failed?(page==='home'?'连接暂未恢复':`${title}暂未加载完成`):`正在加载${title}`}</span></h1><p className="hero__description" role="status">{failed?'网络暂时无法连接，页面会自动重试，也可以点击上方按钮重新获取。':'数据正在加载，请稍候。'}</p></div></main>
+}
+
 function App() {
  const sessionRevision=useRef(0)
  const retryPublic=useRef<()=>void>(()=>{})
  const [overviewLoaded,setOverviewLoaded]=useState(false)
- const [syncState,setSyncState]=useState({busy:true,failed:false})
+ const [readyReads,setReadyReads]=useState<string[]>([])
+ const [detailReload,setDetailReload]=useState(0)
+ const [detailState,setDetailState]=useState({busy:true,failed:false})
+ const [syncState,setSyncState]=useState<{busy:boolean;failures:string[]}>({busy:true,failures:[]})
  const path=window.location.pathname; const initialId=path.match(/^\/admin\/characters\/([a-zA-Z0-9_-]+)$/)?.[1]??null; const initialSlug=path.match(/^\/seasons\/([^/]+)$/)?.[1]??null
  const [page,setPage]=useState<Page>(()=>pageForPath(path)); const [editingCharacterId,setEditingCharacterId]=useState<string|null>(initialId); const [seasonSlug,setSeasonSlug]=useState<string|null>(initialSlug); const [loginOpen,setLoginOpen]=useState(false); const [viewer,setViewer]=useState<Viewer|null>(()=>readCachedViewer(window.localStorage)); const [voteDrafts,setVoteDrafts]=useState<VoteDrafts>({}); const [pendingLoginVote,setPendingLoginVote]=useState<{match:Match;character:Character}|null>(null); const [voteDialogOpen,setVoteDialogOpen]=useState(false); const [voteSelections,setVoteSelections]=useState<Record<string,VoteSelection>>({}); const [voteNotice,setVoteNotice]=useState(''); const [publicMatches,setPublicMatches]=useState<Match[]>([]); const [publicMatchData,setPublicMatchData]=useState<PublicMatch[]>([]); const [publicRounds,setPublicRounds]=useState<PublicRound[]>([]); const [publicStandings,setPublicStandings]=useState<PublicStanding[]>([]); const [publicCharacters,setPublicCharacters]=useState<Character[]>([]); const [seasons,setSeasons]=useState<PublicSeason[]>([]); const [currentSeason,setCurrentSeason]=useState<PublicSeason|null>(null); const [previousSeason,setPreviousSeason]=useState<PublicSeason|null>(null); const [detailData,setDetailData]=useState<{season:PublicSeason;matches:PublicMatch[];rounds:PublicRound[];standings:PublicStanding[]}|null>(null); const [announcement,setAnnouncement]=useState('')
+ const publicPage=useRef(page)
  const navigate=(next:Page)=>{window.history.pushState({},'',pathForPage(next));setEditingCharacterId(null);setSeasonSlug(null);setPage(next)}
  const openSeason=(slug:string)=>{window.history.pushState({},'',`/seasons/${slug}`);setSeasonSlug(slug);setPage('season-detail')}
  const openEditor=(id:string)=>{window.history.pushState({},'',`/admin/characters/${id}`);setEditingCharacterId(id);setPage('artwork-editor')}
@@ -312,22 +324,26 @@ function App() {
  useEffect(()=>{if(!voteNotice)return;const timer=window.setTimeout(()=>setVoteNotice(''),3500);return()=>window.clearTimeout(timer)},[voteNotice])
  useEffect(()=>{
   let active=true,busy=false,lastSeasonId:string|undefined,lastSeasonSlug:string|undefined,lastRosterAt=-Infinity,lastSeasonsAt=-Infinity
+  let queued=false,generation=0
+  const ready=new Set<string>()
+  const failures=new Set<string>()
   const load=async(forceMetadata=false)=>{
-   if(busy||document.hidden)return
+   if(document.hidden)return
+   if(busy){if(forceMetadata)queued=true;return}
    busy=true
+   const requestGeneration=generation
+   const isCurrent=()=>active&&requestGeneration===generation
    if(active)setSyncState(previous=>({...previous,busy:true}))
-   let failed=false
+   const needed=publicPageReads[publicPage.current]??[]
    const tasks:Promise<unknown>[]=[]
-   const consume=<T,>(read:Promise<T>,valid:Promise<boolean>,apply:(value:T)=>void)=>read.then(async value=>{if(await valid&&active)apply(value)}).catch(async()=>{if(await valid)failed=true})
+   const consume=<T,>(key:string,read:Promise<T>,valid:Promise<boolean>,apply:(value:T)=>void)=>read.then(async value=>{if(await valid&&isCurrent()){apply(value);failures.delete(key);ready.add(key);setReadyReads([...ready]);setSyncState(previous=>({...previous,failures:[...failures]}))}}).catch(async()=>{if(await valid&&isCurrent()){failures.add(key);setSyncState(previous=>({...previous,failures:[...failures]}))}})
    const seasonReads=(slug:string|undefined,valid:Promise<boolean>,roster:boolean)=>{
-    tasks.push(
-     consume(api.publicMatches(slug),valid,data=>{setPublicMatches(data.matches.map(toDisplayMatch));setPublicMatchData(data.matches)}),
-     consume(api.publicRounds(slug),valid,data=>setPublicRounds(data.rounds)),
-     consume(api.publicStandings(slug),valid,data=>setPublicStandings(data.standings))
-    )
-    if(roster)tasks.push(consume(api.publicCharacters(slug),valid,data=>{setPublicCharacters(data.characters.map((item:PublicCharacter)=>({...displayCharacter(item.id,item.name,item.game,item),...item,group:item.groupCode})));lastRosterAt=Date.now()}))
+    if(needed.includes('matches'))tasks.push(consume('matches',api.publicMatches(slug),valid,data=>{setPublicMatches(data.matches.map(toDisplayMatch));setPublicMatchData(data.matches)}))
+    if(needed.includes('rounds'))tasks.push(consume('rounds',api.publicRounds(slug),valid,data=>setPublicRounds(data.rounds)))
+    if(needed.includes('standings'))tasks.push(consume('standings',api.publicStandings(slug),valid,data=>setPublicStandings(data.standings)))
+    if(roster&&needed.includes('characters'))tasks.push(consume('characters',api.publicCharacters(slug),valid,data=>{setPublicCharacters(data.characters.map((item:PublicCharacter)=>({...displayCharacter(item.id,item.name,item.game,item),...item,group:item.groupCode})));lastRosterAt=Date.now()}))
    }
-   const seasonList=()=>tasks.push(consume(api.publicSeasons(),Promise.resolve(true),data=>{setSeasons(data.seasons);lastSeasonsAt=Date.now()}))
+   const seasonList=()=>tasks.push(consume('seasons',api.publicSeasons(),Promise.resolve(true),data=>{setSeasons(data.seasons);lastSeasonsAt=Date.now()}))
    try{
     const knownId=lastSeasonId,knownSlug=lastSeasonSlug
     const overviewRead=api.publicOverview()
@@ -336,41 +352,71 @@ function App() {
     // Start independent reads immediately. Only apply speculative season data
     // after overview confirms the same identity; a rollover discards it.
     if(knownSlug)seasonReads(knownSlug,overviewRead.then(value=>value.season?.id===knownId&&value.season?.slug===knownSlug,()=>false),refreshRoster)
-    if(refreshSeasons)seasonList()
+    if(refreshSeasons&&needed.includes('seasons'))seasonList()
     const overview=await overviewRead,slug=overview.season?.slug
-    if(!active)return
+    if(!isCurrent())return
     const changed=knownId!==overview.season?.id||knownSlug!==slug
     lastSeasonId=overview.season?.id;lastSeasonSlug=slug
+    failures.delete('overview')
     setOverviewLoaded(true)
     setCurrentSeason(overview.season);setPreviousSeason(overview.previousSeason);setAnnouncement([overview.siteAnnouncement,overview.seasonAnnouncement].filter(Boolean).join('\n\n'))
     if(changed){
+     for(const key of ['matches','rounds','standings','characters']){failures.delete(key);ready.delete(key)}
+     setReadyReads([...ready])
      setPublicMatches(overview.matches.map(toDisplayMatch));setPublicMatchData(overview.matches)
      setPublicRounds(overview.round?[overview.round]:[]);setPublicStandings([]);setPublicCharacters([])
     }
     if(slug&&(!knownSlug||changed))seasonReads(slug,Promise.resolve(true),changed||refreshRoster)
-    if(changed&&!refreshSeasons)seasonList()
-    // Regions render independently, and concurrent polling cycles never overlap.
-   }catch{failed=true}
+    if(changed&&!refreshSeasons&&needed.includes('seasons'))seasonList()
+    // Regions render independently; periodic polling within a generation is serialized.
+   }catch{if(isCurrent()){failures.add('overview');setSyncState(previous=>({...previous,failures:[...failures]}))}}
    finally{
-    // Drain speculative reads even if overview fails, so polling never overlaps.
+    // Drain this cycle; a navigation may start a newer generation independently.
     await Promise.allSettled(tasks)
-    if(active)setSyncState({busy:false,failed})
-    busy=false
+    if(isCurrent()){
+     setSyncState({busy:false,failures:[...failures]})
+     busy=false
+     if(queued){queued=false;void load(true)}
+    }
    }
   }
   const visible=()=>{if(!document.hidden)void load(true)}
   void load();const timer=window.setInterval(()=>void load(),15_000)
-  retryPublic.current=()=>{void load(true)}
+  retryPublic.current=()=>{generation++;busy=false;queued=false;void load(true)}
   document.addEventListener('visibilitychange',visible)
   window.addEventListener('online',visible)
   return()=>{active=false;retryPublic.current=()=>{};window.clearInterval(timer);document.removeEventListener('visibilitychange',visible);window.removeEventListener('online',visible)}
  },[])
+ useEffect(()=>{if(publicPage.current!==page){publicPage.current=page;retryPublic.current()}},[page])
  useEffect(()=>{document.title=currentSeason?.name??'府萌'},[currentSeason?.name])
- useEffect(()=>{let active=true;if(!seasonSlug){setDetailData(null);return()=>{active=false}}setDetailData(null);void Promise.all([api.publicSeason(seasonSlug),api.publicMatches(seasonSlug),api.publicRounds(seasonSlug),api.publicStandings(seasonSlug)]).then(([meta,matchData,roundData,standingData])=>{if(active)setDetailData({season:meta.season,matches:matchData.matches,rounds:roundData.rounds,standings:standingData.standings})}).catch(()=>{if(active)setDetailData(null)});return()=>{active=false}},[seasonSlug])
+ useEffect(()=>{
+  let active=true,busy=false
+  if(!seasonSlug){setDetailData(null);return()=>{active=false}}
+  setDetailData(previous=>previous?.season.slug===seasonSlug?previous:null)
+  const load=async()=>{
+   if(busy||document.hidden)return
+   busy=true;setDetailState(previous=>({...previous,busy:true}))
+   try{
+    const [meta,matchData,roundData,standingData]=await Promise.all([api.publicSeason(seasonSlug),api.publicMatches(seasonSlug),api.publicRounds(seasonSlug),api.publicStandings(seasonSlug)])
+    if(!meta.season||meta.season.slug!==seasonSlug||!Array.isArray(matchData.matches)||!Array.isArray(roundData.rounds)||!Array.isArray(standingData.standings))throw new Error('历史赛季响应不完整')
+    if(active){setDetailData({season:meta.season,matches:matchData.matches,rounds:roundData.rounds,standings:standingData.standings});setDetailState({busy:false,failed:false})}
+   }catch{if(active)setDetailState({busy:false,failed:true})}
+   finally{busy=false}
+  }
+  const visible=()=>{if(!document.hidden)void load()}
+  void load();const timer=window.setInterval(()=>void load(),15_000)
+  window.addEventListener('online',visible);document.addEventListener('visibilitychange',visible)
+  return()=>{active=false;window.clearInterval(timer);window.removeEventListener('online',visible);document.removeEventListener('visibilitychange',visible)}
+ },[seasonSlug,detailReload])
  const openLogin=()=>setLoginOpen(true); const loggedIn=(next:Viewer)=>{sessionRevision.current+=1;setViewer(next);writeCachedViewer(window.localStorage,next);if(pendingLoginVote){setVoteDrafts((current)=>updateVoteDrafts(current,pendingLoginVote.match.id,pendingLoginVote.character.id));setPendingLoginVote(null)}}; const logout=async()=>{sessionRevision.current+=1;await api.logout();setViewer(null);writeCachedViewer(window.localStorage,null);setVoteSelections({});setVoteDrafts({});navigate('home')}; const beginVote=(match:Match,character:Character)=>{if(voteSelections[match.id]||match.status!=='live'||seasonSlug)return;if(!viewer){setPendingLoginVote({match,character});openLogin();return}setVoteDrafts((current)=>updateVoteDrafts(current,match.id,character.id))}; const activeRound=currentRound(publicRounds);const voteChoices=validVoteDrafts(voteDrafts,publicMatchData,voteSelections); const completeVotes=(votes:VoteResult[])=>{const byMatch=new Map(votes.map((vote)=>[vote.selection.matchId,vote]));setVoteSelections((current)=>({...current,...Object.fromEntries(votes.map((vote)=>[vote.selection.matchId,vote.selection]))}));setPublicMatches((current)=>current.map((match)=>{const vote=byMatch.get(match.id);return vote?{...match,...vote.scores}:match}));setPublicMatchData((current)=>current.map((match)=>{const vote=byMatch.get(match.id);return vote?{...match,...vote.scores}:match}));setVoteDrafts((current)=>Object.fromEntries(Object.entries(current).filter(([matchId])=>!byMatch.has(matchId))));void api.publicStandings().then((result)=>setPublicStandings(result.standings)).catch(()=>{});setVoteDialogOpen(false);setVoteNotice(`已提交 ${votes.length} 场投票，选择不可修改。`)}
+ const publicReadFailed=syncState.failures.some(key=>(key==='overview'&&!['seasons','season-detail'].includes(page))||(publicPageReads[page]??[]).includes(key))
+ const waitingReads:Partial<Record<Page,string[]>>={matches:publicMatchData.length?[]:['matches'],bracket:['matches','rounds','standings'],factions:['matches','characters'],gallery:['characters'],seasons:['seasons']}
+ const pageWaiting=(waitingReads[page]??[]).some(key=>!readyReads.includes(key))
+ const pageFailed=page==='season-detail'?detailState.failed:publicReadFailed
+ const pageBusy=page==='season-detail'?detailState.busy:syncState.busy
  const needsCurrentSeason=!['admin','artwork-editor','seasons','season-detail'].includes(page)
- const content=needsCurrentSeason&&!overviewLoaded?<main className="page" aria-busy={syncState.busy}><p role="status">{syncState.failed?'请重新获取赛事数据。':'正在获取当前赛季…'}</p></main>:needsCurrentSeason&&!currentSeason?<main className="page"><p>当前暂无公开赛季。</p></main>:page==='home'?<Home onNavigate={navigate} onVote={beginVote} liveMatches={publicMatches.filter((match)=>match.status==='live')} matches={publicMatchData} rounds={publicRounds} activeRound={activeRound} season={currentSeason} previousSeason={previousSeason} selections={voteSelections} drafts={voteDrafts}/>:page==='matches'&&currentSeason?.format?.version===3?<DailyMatches onSchedule={()=>navigate('bracket')} key={currentSeason.id} matches={publicMatchData} rounds={publicRounds} format={currentSeason.format} onVote={beginVote} selections={voteSelections} drafts={voteDrafts}/>:page==='matches'?<Matches onVote={beginVote} matches={publicMatchData.filter((match)=>match.roundId===activeRound?.id).map(toDisplayMatch)} activeRound={activeRound} selections={voteSelections} drafts={voteDrafts}/>:page==='bracket'?<Bracket key={currentSeason?.id} standings={publicStandings} matches={publicMatchData} rounds={publicRounds} format={currentSeason?.format} initialTab={currentSeason?.format?.version===3?'schedule':'standings'}/>:page==='factions'?<FactionData matches={publicMatchData} roster={publicCharacters} season={currentSeason}/>:page==='seasons'?<Seasons seasons={seasons} onOpen={openSeason}/>:page==='season-detail'&&detailData?<SeasonDetail key={detailData.season.id} seasons={seasons} season={detailData.season} matches={detailData.matches} rounds={detailData.rounds} standings={detailData.standings} onNavigate={navigate}/>:page==='gallery'?<Gallery key={currentSeason?.id} roster={publicCharacters} season={currentSeason} seasons={seasons} matches={publicMatchData} standings={publicStandings} rounds={publicRounds}/>:page==='rules'?<Rules format={currentSeason?.format}/>:page==='admin'?<Admin viewer={viewer} onEditCharacter={openEditor}/>:page==='artwork-editor'&&viewer&&editingCharacterId?<ArtworkEditor id={editingCharacterId} viewer={viewer} onBack={()=>navigate('admin')}/>:<Notices announcement={announcement} season={currentSeason}/>
- return <DefendingChampionContext.Provider value={page==='season-detail'?detailData?.season.format?.defendingChampionId:currentSeason?.format?.defendingChampionId}><div className={currentSeason?.format?.version===3&&page!=='season-detail'?'app-shell app-shell--s2':'app-shell'}><Header seasonName={currentSeason?.name} page={page} onNavigate={navigate} onLogin={openLogin} viewer={viewer} onLogout={()=>void logout()}/>{needsCurrentSeason&&syncState.failed&&<section className="data-freshness" aria-label="数据更新状态"><div role="alert"><span>{overviewLoaded?'更新失败，部分数据可能停留在上次成功获取时。':'无法获取当前赛季，请检查网络后重试。'}</span><button className="outline-button" disabled={syncState.busy} onClick={()=>retryPublic.current()}>{syncState.busy?'正在重试…':'重新获取'}</button></div></section>}{content}<footer className="site-footer"><button className="brand" onClick={()=>navigate('home')}><span>府</span><b>萌</b><em>SEASONS</em></button><p>{viewer?`${viewer.email} 已登录 · `:''}非商业化同人活动 · 角色及相关素材权利归各权利人所有</p><a href="https://live.bilibili.com/21195828" target="_blank" rel="noreferrer">乐府直播间 <ExternalLink size={14}/></a></footer>{voteChoices.length>0&&<div className="vote-draft-bar" role="region" aria-label="待提交投票"><span>已选 <b>{voteChoices.length}</b> 场</span><button onClick={()=>setVoteDrafts({})}>清空</button><button className="primary-button" onClick={()=>setVoteDialogOpen(true)}>确认提交 {voteChoices.length} 场</button></div>}{voteNotice&&<div className="vote-toast" role="status"><Check/>{voteNotice}</div>}{loginOpen&&<LoginDialog onClose={()=>{setLoginOpen(false);setPendingLoginVote(null)}} onLoggedIn={loggedIn}/>} {voteDialogOpen&&<VoteDialog choices={voteChoices} matches={publicMatches} onClose={()=>setVoteDialogOpen(false)} onCompleted={completeVotes}/>}</div></DefendingChampionContext.Provider>
+ const content=needsCurrentSeason&&!overviewLoaded?<PublicLoading page={page} failed={pageFailed} busy={pageBusy}/>:pageWaiting&&(!needsCurrentSeason||currentSeason)?<PublicLoading page={page} failed={pageFailed} busy={pageBusy}/>:needsCurrentSeason&&!currentSeason?<main className="page"><p>当前暂无公开赛季。</p></main>:page==='home'?<Home onNavigate={navigate} onVote={beginVote} liveMatches={publicMatches.filter((match)=>match.status==='live')} matches={publicMatchData} rounds={publicRounds} activeRound={activeRound} season={currentSeason} previousSeason={previousSeason} selections={voteSelections} drafts={voteDrafts}/>:page==='matches'&&currentSeason?.format?.version===3?<DailyMatches onSchedule={()=>navigate('bracket')} key={currentSeason.id} matches={publicMatchData} rounds={publicRounds} format={currentSeason.format} onVote={beginVote} selections={voteSelections} drafts={voteDrafts}/>:page==='matches'?<Matches onVote={beginVote} matches={publicMatchData.filter((match)=>match.roundId===activeRound?.id).map(toDisplayMatch)} activeRound={activeRound} selections={voteSelections} drafts={voteDrafts}/>:page==='bracket'?<Bracket key={currentSeason?.id} standings={publicStandings} matches={publicMatchData} rounds={publicRounds} format={currentSeason?.format} initialTab={currentSeason?.format?.version===3?'schedule':'standings'}/>:page==='factions'?<FactionData matches={publicMatchData} roster={publicCharacters} season={currentSeason}/>:page==='seasons'?<Seasons seasons={seasons} onOpen={openSeason}/>:page==='season-detail'?(detailData&&detailData.season.slug===seasonSlug?<SeasonDetail key={detailData.season.id} seasons={seasons} season={detailData.season} matches={detailData.matches} rounds={detailData.rounds} standings={detailData.standings} onNavigate={navigate}/>:<PublicLoading page={page} failed={pageFailed} busy={pageBusy}/>):page==='gallery'?<Gallery key={currentSeason?.id} roster={publicCharacters} season={currentSeason} seasons={seasons} matches={publicMatchData} standings={publicStandings} rounds={publicRounds}/>:page==='rules'?<Rules format={currentSeason?.format}/>:page==='admin'?<Admin viewer={viewer} onEditCharacter={openEditor}/>:page==='artwork-editor'&&viewer&&editingCharacterId?<ArtworkEditor id={editingCharacterId} viewer={viewer} onBack={()=>navigate('admin')}/>:<Notices announcement={announcement} season={currentSeason}/>
+ return <DefendingChampionContext.Provider value={page==='season-detail'?detailData?.season.format?.defendingChampionId:currentSeason?.format?.defendingChampionId}><div className={currentSeason?.format?.version===3&&page!=='season-detail'?'app-shell app-shell--s2':'app-shell'}><Header seasonName={currentSeason?.name} page={page} onNavigate={navigate} onLogin={openLogin} viewer={viewer} onLogout={()=>void logout()}/>{(needsCurrentSeason||page==='seasons'||page==='season-detail')&&pageFailed&&<section className="data-freshness" aria-label="数据更新状态"><div role="alert"><span>{page==='season-detail'?'历史赛季暂未更新，请重试。':overviewLoaded?'更新失败，部分数据可能停留在上次成功获取时。':'无法获取当前赛季，请检查网络后重试。'}</span><button className="outline-button" disabled={pageBusy} onClick={()=>page==='season-detail'?setDetailReload(value=>value+1):retryPublic.current()}>{pageBusy?'正在重试…':'重新获取'}</button></div></section>}{content}<footer className="site-footer"><button className="brand" onClick={()=>navigate('home')}><span>府</span><b>萌</b><em>SEASONS</em></button><p>{viewer?`${viewer.email} 已登录 · `:''}非商业化同人活动 · 角色及相关素材权利归各权利人所有</p><a href="https://live.bilibili.com/21195828" target="_blank" rel="noreferrer">乐府直播间 <ExternalLink size={14}/></a></footer>{voteChoices.length>0&&<div className="vote-draft-bar" role="region" aria-label="待提交投票"><span>已选 <b>{voteChoices.length}</b> 场</span><button onClick={()=>setVoteDrafts({})}>清空</button><button className="primary-button" onClick={()=>setVoteDialogOpen(true)}>确认提交 {voteChoices.length} 场</button></div>}{voteNotice&&<div className="vote-toast" role="status"><Check/>{voteNotice}</div>}{loginOpen&&<LoginDialog onClose={()=>{setLoginOpen(false);setPendingLoginVote(null)}} onLoggedIn={loggedIn}/>} {voteDialogOpen&&<VoteDialog choices={voteChoices} matches={publicMatches} onClose={()=>setVoteDialogOpen(false)} onCompleted={completeVotes}/>}</div></DefendingChampionContext.Provider>
 }
 
 createRoot(document.getElementById('root')!).render(<App />)

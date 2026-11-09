@@ -22,11 +22,33 @@ export function apiErrorMessage(error:unknown,fallback='请求暂时失败，请
   return fallback
 }
 
+class HttpRequestError extends Error {
+  constructor(message:string,readonly status:number){super(message)}
+}
+
 async function performRequest<T>(path:string,init?:RequestInit):Promise<T> {
-  const response=await fetch(path,{credentials:'include',headers:{'content-type':'application/json',...(init?.headers??{})},...(path.startsWith('/api/public/')?{cache:'no-store',signal:AbortSignal.timeout(12_000)}:{}),...init})
-  const body=await response.json().catch(()=>({})) as T&{error?:unknown}
-  if(!response.ok)throw new Error(apiErrorMessage(body.error))
+  const response=await fetch(path,{credentials:'include',headers:{'content-type':'application/json',...(init?.headers??{})},...(path.startsWith('/api/public/')?{cache:'no-store',signal:AbortSignal.timeout(30_000)}:{}),...init})
+  const body=await response.json().catch((error:unknown)=>{
+    if(response.ok&&path.startsWith('/api/public/')){
+      if(error instanceof TypeError||(error instanceof DOMException&&error.name==='TimeoutError'))throw error
+      throw new Error('赛事数据响应不完整，请重试')
+    }
+    return {}
+  }) as T&{error?:unknown}
+  if(!response.ok)throw new HttpRequestError(apiErrorMessage(body?.error),response.status)
+  const listKey=path.match(/^\/api\/public\/(matches|rounds|standings|characters|seasons)(?:\?|$)/)?.[1]
+  if(listKey&&!Array.isArray((body as Record<string,unknown>|null)?.[listKey]))throw new Error('赛事数据响应不完整，请重试')
   return body
+}
+async function readPublic<T>(path:string):Promise<T> {
+  try{return await performRequest<T>(path)}catch(error){
+    // One immediate retry for transient failures; no retries for writes,
+    // caller-owned signals, rate limits, or permanent HTTP failures.
+    const transient=error instanceof HttpRequestError?[408,502,503,504].includes(error.status)
+      :error instanceof TypeError||(error instanceof DOMException&&error.name==='TimeoutError')
+    if(!transient)throw error
+    return performRequest<T>(path)
+  }
 }
 const publicReads=new Map<string,Promise<unknown>>()
 function request<T>(path:string,init?:RequestInit):Promise<T> {
@@ -35,18 +57,25 @@ function request<T>(path:string,init?:RequestInit):Promise<T> {
   if(init||!path.startsWith('/api/public/'))return performRequest<T>(path,init)
   const pending=publicReads.get(path)
   if(pending)return pending as Promise<T>
-  const read=performRequest<T>(path).finally(()=>publicReads.delete(path))
+  const read=readPublic<T>(path).finally(()=>publicReads.delete(path))
   publicReads.set(path,read)
   return read
 }
 declare global { interface Window { __fumoeOverview?: Promise<Response|null> } }
+function checkedOverview(value:PublicOverview):PublicOverview {
+  if(!value||!Array.isArray(value.matches)||!(value.season===null||(value.season&&typeof value.season.id==='string'&&typeof value.season.slug==='string'))){
+    throw new Error('赛事数据响应不完整，请重试')
+  }
+  return value
+}
 async function initialPublicOverview():Promise<PublicOverview> {
   const early=typeof window==='undefined'?undefined:window.__fumoeOverview
   if(typeof window!=='undefined')delete window.__fumoeOverview
   if(early){
-    try { const response=await early;if(response?.ok)return await response.json() as PublicOverview } catch { /* Retry through the normal request path. */ }
+    try { const response=await early;if(response?.ok)return checkedOverview(await response.json() as PublicOverview) } catch { /* Retry once through the normal request path. */ }
+    return checkedOverview(await performRequest<PublicOverview>('/api/public/overview'))
   }
-  return request<PublicOverview>('/api/public/overview')
+  return checkedOverview(await request<PublicOverview>('/api/public/overview'))
 }
 const seasonQuery=(slug?:string)=>slug?`?season=${encodeURIComponent(slug)}`:''
 
