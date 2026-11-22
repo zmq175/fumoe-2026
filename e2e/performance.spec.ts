@@ -53,3 +53,44 @@ test('白屏、首页内容、站内投票页与图片完成分别计时', async
   await page.goBack()
   await expect.poll(() => samples.filter(s => s.name === 'home_visible').length).toBe(2)
 })
+
+test('投票页按入口区分白屏、身份和选票就绪、全部图片完成', async ({ page }) => {
+  await mockPublicApi(page, { viewer: { email: 'voter@example.com', role: 'voter' } })
+  await page.addInitScript(() => { Math.random = () => 0.05 })
+  const samples: Array<{ name: string; entry?: string; ms: number; status: number }> = []
+  await page.route('**/api/perf', route => {
+    samples.push(...route.request().postDataJSON())
+    return route.fulfill({ status: 204 })
+  })
+  function gate() {
+    let release!: () => void
+    const wait = new Promise<void>(resolve => { release = resolve })
+    return { wait, release }
+  }
+  const identity = gate(), votes = gate(), images = gate()
+  await page.route('**/api/auth/me', async route => { await identity.wait; await route.fallback() })
+  await page.route('**/api/votes/mine*', async route => { await votes.wait; await route.fallback() })
+  await page.route('**/image-variants/*', async route => { await images.wait; await route.fallback() })
+  const count = (name: string, entry: string) => samples.filter(s => s.name === name && s.entry === entry && s.status === 200).length
+  try {
+    await page.goto('/matches', { waitUntil: 'domcontentloaded' })
+    await expect(page.getByLabel('投票给芙宁娜').first()).toBeVisible()
+    identity.release()
+    await page.waitForFunction(() => performance.getEntriesByType('resource').some(e => e.name.endsWith('/api/auth/me')))
+    const voteReleaseTime = await page.evaluate(() => performance.now())
+    votes.release()
+    await expect.poll(() => count('vote_interactive', 'direct')).toBe(1)
+    expect(samples.find(s => s.name === 'vote_interactive')!.ms).toBeGreaterThanOrEqual(Math.floor(voteReleaseTime))
+    expect(count('vote_all_images', 'direct')).toBe(0)
+    images.release()
+    await expect.poll(() => count('vote_all_images', 'direct')).toBe(1)
+    expect(count('vote_fcp', 'direct')).toBe(1)
+    expect(count('vote_viewport_images', 'direct')).toBe(1)
+    await page.getByRole('button', { name: '首页', exact: true }).click()
+    await page.getByRole('button', { name: '对局中心', exact: true }).click()
+    await expect.poll(() => count('vote_interactive', 'spa')).toBe(1)
+    await expect.poll(() => count('vote_all_images', 'spa')).toBe(1)
+    expect(count('vote_entry_paint', 'spa')).toBe(1)
+    expect(count('vote_fcp', 'spa')).toBe(0)
+  } finally { identity.release(); votes.release(); images.release() }
+})

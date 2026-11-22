@@ -55,3 +55,30 @@ ORDER BY metric
 | `image_eager`、`image_lazy` | 单张展示图从挂载或更换图片到浏览器触发 load，单位毫秒。懒加载图含等待进入加载范围的时间。优化图失败后回退到原图的等待也计入。成功为 200，最终错误为 0。 |
 
 首页和投票页用绘制帧近似内容出现的时间。图片含缓存命中，覆盖使用 DisplayImage 的立绘、头像及标志。每批最多随机保留 12 个已结束的图片样本。分析图片加载速度时按 `double2 = 200` 筛选成功样本。页面加载前退出、应用脚本未执行等访问可能没有上报。
+
+### 投票页节点
+
+以下指标只针对 `/matches`，按 `blob2` 区分直接打开（direct）和站内切换或历史返回（spa）。耗时均从本次进入页面开始计算。
+
+| 指标 | 结束条件 |
+| --- | --- |
+| `vote_fcp` | 直接打开投票页后浏览器报告首次内容绘制，包含加载提示。 |
+| `vote_entry_paint` | 站内路由切换后，投票页或其加载提示完成首轮绘制的近似时间。 |
+| `vote_interactive` | 赛事界面已显示，身份检查成功，已登录用户的当季选票已返回，且页面存在可操作的选手按钮。游客可以点击后进入登录。无可投对局、已全部投过或身份读取失败时不产生就绪样本。 |
+| `vote_viewport_images` | 首批对局列表出现时与视口相交的图片均已加载。 |
+| `vote_all_images` | 同一批对局列表内的全部图片均已加载，含屏外懒加载图片。 |
+
+图片使用浏览器的完成状态与实际图片宽度检查缓存及加载结果。状态 200 表示该组图片全部成功，0 表示存在失败或移除的图片。没有图片、未滚动触发懒加载或提前离开的访问可能没有完成样本。统计保持 10% 抽样，沿用页面 load 后的异步批量上报。
+
+```sql
+SELECT blob2 AS entry, blob1 AS milestone,
+       SUM(_sample_interval) AS samples,
+       quantileExactWeighted(0.50)(double1, _sample_interval) AS p50_ms,
+       quantileExactWeighted(0.95)(double1, _sample_interval) AS p95_ms
+FROM fumoe_performance
+WHERE timestamp >= NOW() - INTERVAL '1' DAY
+  AND blob1 IN ('vote_fcp', 'vote_entry_paint', 'vote_interactive', 'vote_viewport_images', 'vote_all_images')
+  AND double2 = 200
+GROUP BY blob2, blob1
+ORDER BY entry, milestone
+```

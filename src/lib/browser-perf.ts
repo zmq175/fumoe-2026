@@ -1,6 +1,7 @@
 import type { MetricName, PerfSample } from './perf-metrics'
 
 const sampled = typeof window !== 'undefined' && Math.random() < 0.1
+const openedOnVotes = sampled && location.pathname === '/matches'
 const queue: PerfSample[] = []
 const images: PerfSample[] = []
 let imageCount = 0
@@ -26,6 +27,10 @@ function record(sample: PerfSample) {
     const slot = images.length < 12 ? images.length : Math.floor(Math.random() * imageCount)
     if (slot < 12) images[slot] = sample
   } else if (queue.length < 20) queue.push(sample)
+  else if (sample.entry) {
+    const replace = queue.findIndex(item => !item.entry)
+    if (replace >= 0) queue[replace] = sample
+  }
   if (!ready || scheduled) return
   scheduled = true
   window.setTimeout(() => {
@@ -45,16 +50,55 @@ export function afterPaint(name: 'vote_feedback' | 'standings_visible', start: n
   }))
 }
 
-export function observePagePaint(name: 'home_visible' | 'vote_page_visible', start: number, done: () => void) {
+export function observePagePaint(name: 'home_visible' | 'vote_page_visible' | 'vote_entry_paint' | 'vote_interactive', start: number, done: () => void, entry?: PerfSample['entry'], eligible?: () => boolean) {
   if (!sampled || document.hidden) return
   let frame = requestAnimationFrame(() => {
     frame = requestAnimationFrame(() => {
-      if (document.hidden) return
-      record({ name, ms: Math.round(performance.now() - start), status: 200 })
+      if (document.hidden || (eligible && !eligible())) return
+      record({ name, ms: Math.round(performance.now() - start), status: 200, entry })
       done()
     })
   })
   return () => cancelAnimationFrame(frame)
+}
+
+// Freeze the image cohort at the first rendered voting list. Never scroll or force a lazy image to load.
+export function observeVoteImages(root: HTMLElement, start: number) {
+  if (!sampled || document.hidden) return
+  const entry = start === 0 ? 'direct' : 'spa'
+  let frame = requestAnimationFrame(snapshot)
+  let groups: { name: 'vote_all_images' | 'vote_viewport_images'; images: HTMLImageElement[] }[] = []
+  function snapshot() {
+    const images = Array.from(root.querySelectorAll('img'))
+    const visible = images.filter(img => {
+      const r = img.getBoundingClientRect()
+      return r.width > 0 && r.height > 0 && r.bottom > 0 && r.top < innerHeight && r.right > 0 && r.left < innerWidth
+    })
+    groups = [{ name: 'vote_viewport_images', images: visible }, { name: 'vote_all_images', images }]
+    root.addEventListener('load', schedule, true)
+    root.addEventListener('error', schedule, true)
+    check()
+  }
+  function schedule() {
+    cancelAnimationFrame(frame)
+    frame = requestAnimationFrame(check)
+  }
+  function check() {
+    groups = groups.filter(group => {
+      if (!group.images.length) return false
+      if (group.images.some(img => img.isConnected && !img.complete)) return true
+      const ok = group.images.every(img => img.isConnected && img.naturalWidth > 0)
+      if (!document.hidden) record({ name: group.name, entry, ms: Math.round(performance.now() - start), status: ok ? 200 : 0 })
+      return false
+    })
+    if (!groups.length) stop()
+  }
+  function stop() {
+    cancelAnimationFrame(frame)
+    root.removeEventListener('load', schedule, true)
+    root.removeEventListener('error', schedule, true)
+  }
+  return stop
 }
 
 export function imageFinished(start: number | undefined, image: HTMLImageElement, success: boolean) {
@@ -83,6 +127,7 @@ function observe() {
       const fcp = list.getEntriesByName('first-contentful-paint')[0]
       if (!fcp) return
       record({ name: 'white_screen', ms: Math.round(fcp.startTime), status: 200 })
+      if (openedOnVotes) record({ name: 'vote_fcp', entry: 'direct', ms: Math.round(fcp.startTime), status: 200 })
       paint.disconnect()
     })
     paint.observe({ type: 'paint', buffered: true })

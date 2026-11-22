@@ -6,7 +6,7 @@ import type { Env } from './types'
 
 const duration = z.number().int().min(0).max(3_600_000)
 const batch = z.array(z.object({
-  name: z.enum(metricNames), ms: duration, status: z.number().int().min(0).max(599), serverMs: duration.optional(),
+  name: z.enum(metricNames), ms: duration, status: z.number().int().min(0).max(599), serverMs: duration.optional(), entry: z.enum(['direct','spa']).optional(),
 }).strict()).min(1).max(32)
 
 export const perfRoutes = new Hono<{ Bindings: Env }>()
@@ -16,8 +16,8 @@ perfRoutes.post('/', bodyLimit({ maxSize: 4096 }), async c => {
   const samples = batch.safeParse(await c.req.json().catch(() => null))
   if (!samples.success) return c.body(null, 400)
   if (!c.env.PERF) return c.body(null, 503)
-  for (const { name, ms, status, serverMs } of samples.data) {
-    c.env.PERF.writeDataPoint({ indexes: [name], blobs: [name], doubles: [ms, status, serverMs ?? -1] })
+  for (const { name, ms, status, serverMs, entry } of samples.data) {
+    c.env.PERF.writeDataPoint({ indexes: [name], blobs: entry ? [name, entry] : [name], doubles: [ms, status, serverMs ?? -1] })
   }
   return c.body(null, 204)
 })
