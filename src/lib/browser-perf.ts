@@ -69,11 +69,15 @@ export function observeVoteImages(root: HTMLElement, start: number) {
   let frame = requestAnimationFrame(snapshot)
   let groups: { name: 'vote_all_images' | 'vote_viewport_images'; images: HTMLImageElement[] }[] = []
   function snapshot() {
-    const images = Array.from(root.querySelectorAll('img'))
-    const visible = images.filter(img => {
+    const images: HTMLImageElement[] = []
+    const visible: HTMLImageElement[] = []
+    for (const img of root.querySelectorAll('img')) {
       const r = img.getBoundingClientRect()
-      return r.width > 0 && r.height > 0 && r.bottom > 0 && r.top < innerHeight && r.right > 0 && r.left < innerWidth
-    })
+      // Hidden decorative images may stay lazy forever, even after scrolling through the list.
+      if (r.width <= 0 || r.height <= 0) continue
+      images.push(img)
+      if (r.bottom > 0 && r.top < innerHeight && r.right > 0 && r.left < innerWidth) visible.push(img)
+    }
     groups = [{ name: 'vote_viewport_images', images: visible }, { name: 'vote_all_images', images }]
     root.addEventListener('load', schedule, true)
     root.addEventListener('error', schedule, true)

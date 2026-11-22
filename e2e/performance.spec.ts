@@ -57,6 +57,19 @@ test('白屏、首页内容、站内投票页与图片完成分别计时', async
 test('投票页按入口区分白屏、身份和选票就绪、全部图片完成', async ({ page }) => {
   await mockPublicApi(page, { viewer: { email: 'voter@example.com', role: 'voter' } })
   await page.addInitScript(() => { Math.random = () => 0.05 })
+  await page.addInitScript(() => {
+    const observer = new MutationObserver(() => {
+      const grid = document.querySelector('.match-grid')
+      if (!grid) return
+      const decoration = document.createElement('img')
+      decoration.style.display = 'none'
+      decoration.loading = 'lazy'
+      decoration.src = '/hidden-decoration-test.png'
+      grid.append(decoration)
+      observer.disconnect()
+    })
+    observer.observe(document, { childList: true, subtree: true })
+  })
   const samples: Array<{ name: string; entry?: string; ms: number; status: number }> = []
   await page.route('**/api/perf', route => {
     samples.push(...route.request().postDataJSON())

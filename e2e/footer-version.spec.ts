@@ -15,7 +15,7 @@ test('手机页脚保留登录状态，版本入口可打开和关闭更新日�
   const notes = page.getByRole('dialog', { name: '更新日志' })
   await expect(notes.getByRole('heading', { name: `v${version}`, exact: true })).toBeVisible()
   const versions = await notes.getByRole('heading', { level: 3 }).allTextContents()
-  expect(versions.slice(0, 2)).toEqual([`v${version}`, 'v1.5.0'])
+  expect(versions.slice(0, 3)).toEqual([`v${version}`, 'v1.6.0', 'v1.5.0'])
   expect(versions.at(-1)).toBe('v1.0.0')
   expect(new Set(versions).size).toBe(versions.length)
   expect(versions.indexOf('v1.4.10')).toBeLessThan(versions.indexOf('v1.4.9'))
