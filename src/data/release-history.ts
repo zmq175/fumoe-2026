@@ -1,6 +1,7 @@
-export type Release = { version: string; date?: string; changes: string[] }
+export type Release = { version: string; date: string; changes: string[] }
 
 export const publishedReleases: Release[] = [
+  { version: '1.6.0', date: '2026-11-22', changes: ['新增投票页白屏、可交互、首屏与整页图片耗时统计。', '页脚增加版本号与更新日志，可查看从 S1 上线至今的发布记录。'] },
   { version: '1.5.0', date: '2026-11-22', changes: ['新增真实访客的页面、接口、图片及投票反馈耗时统计，页面加载后异步上报。'] },
   { version: '1.4.25', date: '2026-11-10', changes: ['改善慢网络下的页面恢复，总览返回后即可显示比赛。'] },
   { version: '1.4.24', date: '2026-11-10', changes: ['移除常驻的更新时间提示，保留异常时的提醒。'] },

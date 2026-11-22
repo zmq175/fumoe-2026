@@ -19,7 +19,7 @@ test('手机页脚保留登录状态，版本入口可打开和关闭更新日�
   expect(versions.at(-1)).toBe('v1.0.0')
   expect(new Set(versions).size).toBe(versions.length)
   expect(versions.indexOf('v1.4.10')).toBeLessThan(versions.indexOf('v1.4.9'))
-  await expect(notes.getByText('候选版本 · 待上线')).toBeVisible()
+  await expect(notes.locator('section').first().locator('time')).toHaveAttribute('datetime', '2026-11-22')
   expect(versions).toEqual([...versions].sort((a, b) => b.localeCompare(a, 'en', { numeric: true })))
   await page.keyboard.press('Escape')
   await expect(notes).toBeHidden()
