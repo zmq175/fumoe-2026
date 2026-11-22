@@ -21,7 +21,7 @@
 .bracket-explorer .bracket-canvas__side small { font-family: 'Noto Sans SC', sans-serif; font-size: 10px; color: #abbac2; }
 .bracket-explorer .bracket-canvas__side--winner { color: #fff; }
 .bracket-explorer .bracket-canvas__score { font-family: 'Space Grotesk', 'Noto Sans SC', sans-serif; font-size: 19px; font-variant-numeric: tabular-nums; }
-.bracket-explorer .bracket-canvas__match--placeholder .bracket-canvas__side { grid-template-columns: minmax(0, 1fr) auto; }
+.bracket-explorer .bracket-canvas__match--placeholder .bracket-canvas__side--unknown { grid-template-columns: minmax(0, 1fr) auto; }
 .bracket-explorer .bracket-canvas__slot { font-size: 12px; }
 .bracket-explorer .portrait--bracket { width: 42px; height: 44px; }
 .bracket-explorer .bracket-canvas__match > footer { color: #abbac2; font-size: 10px; }

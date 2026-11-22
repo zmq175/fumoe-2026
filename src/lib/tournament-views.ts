@@ -171,6 +171,7 @@ export function swissRoundPreview(round:PublicRound,matches:PublicMatch[],format
 
 export function matchResult(match: PublicMatch): MatchResult {
   if (match.status === 'closed' && match.winnerCharacterId) return { label: `${match.winnerCharacterId === match.leftId ? match.leftName : match.rightName} 胜出`, winnerId: match.winnerCharacterId }
+  if (match.status === 'closed') return { label: '已结束', winnerId: null }
   if (match.status === 'live') return { label: '投票中', winnerId: null }
   if (match.status === 'review') return { label: '审核中', winnerId: null }
   return { label: '待开始', winnerId: null }

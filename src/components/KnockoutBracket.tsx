@@ -1,15 +1,16 @@
 import { useEffect,useRef,useState,type ReactNode } from 'react'
 import { ArrowLeft,ArrowRight,Trophy } from 'lucide-react'
-import type { PublicMatch,PublicRound } from '../lib/api'
+import type { PublicMatch,PublicRound,PublicStanding } from '../lib/api'
 import { knockoutSize,type SeasonFormat } from '../lib/season-format'
 import { bracketGeometry,knockoutColumns,knockoutPlaceholder,matchResult,roundStatusLabel,tidyName } from '../lib/tournament-views'
+import { feederWinner } from '../lib/clinched-seats'
 import './knockout-bracket.css'
 
 type PortraitProps={id:string;name:string;avatarArtworkKey?:string|null;size:'bracket'|'champion'}
-type Props={matches:PublicMatch[];rounds:PublicRound[];format:SeasonFormat;renderPortrait:(props:PortraitProps)=>ReactNode;renderBadge?:(id:string)=>ReactNode}
+type Props={seats:{slots:Map<string,PublicStanding>;qualified:Set<string>};standings:PublicStanding[];matches:PublicMatch[];rounds:PublicRound[];format:SeasonFormat;renderPortrait:(props:PortraitProps)=>ReactNode;renderBadge?:(id:string)=>ReactNode}
 
 /** Read-only bracket explorer. Larger screens spread columns; smaller screens scroll without shrinking text. */
-export function KnockoutBracket({matches,rounds,format,renderPortrait,renderBadge}:Props){
+export function KnockoutBracket({matches,rounds,format,seats,standings,renderPortrait,renderBadge}:Props){
   const viewport=useRef<HTMLDivElement>(null)
   const drag=useRef<{pointer:number;x:number;y:number;left:number;top:number;moved:boolean}|null>(null)
   const suppressClick=useRef(false)
@@ -20,6 +21,9 @@ export function KnockoutBracket({matches,rounds,format,renderPortrait,renderBadg
   const [jump,setJump]=useState('1')
   useEffect(()=>{const el=viewport.current;if(!el)return;const observer=new ResizeObserver(([entry])=>setSize({width:entry.contentRect.width,height:entry.contentRect.height}));observer.observe(el);return()=>observer.disconnect()},[])
   const columns=knockoutColumns(matches,rounds)
+  const roster=new Map(standings.map(row=>[row.id,row]))
+  const placed=new Set([...seats.slots.values()].map(row=>row.id))
+  const awaitingRank=standings.filter(row=>seats.qualified.has(row.id)&&!placed.has(row.id))
   const geometry=bracketGeometry(knockoutSize(format))
   const scale=mode==='fit'?Math.min(1,(size.width||1)/geometry.width,(size.height||1)/geometry.height):zoom
   const changeZoom=(next:number)=>{setMode('actual');setZoom(Math.max(.1,Math.min(2,next)))}
@@ -57,6 +61,7 @@ export function KnockoutBracket({matches,rounds,format,renderPortrait,renderBadg
     return <path key={`${roundIndex}-${card.index}`} className={active?'bracket-canvas__path--tracked':undefined} d={`M ${x} ${card.y} H ${join} V ${target.y} H ${target.x}`}/>
   }))
   return <section className="bracket-canvas-wrap bracket-explorer" aria-label="淘汰赛签表" onKeyDown={e=>{if(e.key==='Escape')clear()}}>
+    {!columns[0]?.matches.length&&awaitingRank.length>0&&<p className="bracket-explorer__help">已晋级，组内名次待定 · {awaitingRank.map(row=>row.name).join('、')}</p>}
     <div className="bracket-explorer__toolbar">
       <div className="bracket-explorer__modes bracket-explorer__views" role="group" aria-label="签表显示方式"><button type="button" className={mode==='fit'?'bracket-explorer__view--current':undefined} aria-pressed={mode==='fit'} onClick={()=>{setMode('fit');viewport.current?.scrollTo({left:0,top:0,behavior:'instant'})}}>全图概览</button><button type="button" className={mode==='actual'?'bracket-explorer__view--current':undefined} aria-pressed={mode==='actual'&&zoom===1} onClick={()=>changeZoom(1)}>清晰大图</button></div>
       <div className="bracket-explorer__modes bracket-explorer__desktop" role="group" aria-label="签表缩放"><button type="button" disabled={scale<=.1} onClick={()=>changeZoom(scale-.2)}>缩小</button><output aria-label="当前缩放比例">{Math.round(scale*100)}%</output><button type="button" disabled={scale>=2} onClick={()=>changeZoom(scale+.2)}>放大</button></div>
@@ -81,7 +86,20 @@ export function KnockoutBracket({matches,rounds,format,renderPortrait,renderBadg
           {layout.cards.map(card=>{
             const match=columns[roundIndex]?.matches[card.index]
             const style={left:card.x,top:card.y-card.height/2,width:card.width,height:card.height}
-            if(!match){const p=knockoutPlaceholder(layout.roundNumber,card.index,format);return <article className="bracket-canvas__match bracket-canvas__match--placeholder" style={style} key={card.index}><div className="bracket-canvas__side"><span><strong>{p.left}</strong><small>{p.leftMeta}</small></span><b className="bracket-canvas__score bracket-canvas__slot">待定</b></div><div className="bracket-canvas__side"><span><strong>{p.right}</strong><small>{p.rightMeta}</small></span><b className="bracket-canvas__score bracket-canvas__slot">待定</b></div><footer>{p.note}</footer></article>}
+            if(!match){
+              const p=knockoutPlaceholder(layout.roundNumber,card.index,format)
+              const source=columns[roundIndex-1]?.matches
+              const sides=([p.left,p.right] as const).map((slot,i)=>{
+                const entry=roundIndex===0?seats.slots.get(slot):feederWinner(source?.[card.index*2+i],roster)
+                const meta=i===0?p.leftMeta:p.rightMeta
+                return <div className={entry?"bracket-canvas__side":"bracket-canvas__side bracket-canvas__side--unknown"} key={slot}>
+                  {entry&&renderPortrait({...entry,size:'bracket'})}
+                  <span><strong>{entry?tidyName(entry.name):slot}</strong><small>{meta}</small></span>
+                  <b className="bracket-canvas__score bracket-canvas__slot">{entry?'已锁定':'待定'}</b>
+                </div>
+              })
+              return <article className="bracket-canvas__match bracket-canvas__match--placeholder" style={style} key={card.index}>{sides}<footer>{roundIndex===0&&format.mode==='swiss-knockout'?'按小组最终名次落位':p.note}</footer></article>
+            }
             return <article key={match.id} className={`bracket-canvas__match${includes(match)?' bracket-canvas__match--tracked':''}`} style={style}>{side(match,'left')}{side(match,'right')}<footer>{matchResult(match).label}</footer></article>
           })}
         </div>)}

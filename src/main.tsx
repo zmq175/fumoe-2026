@@ -4,6 +4,7 @@ import { DisplayImage } from './components/DisplayImage'
 import { GameWatermark } from './components/GameWatermark'
 import { CharacterDetail } from './components/CharacterDetail'
 import { seasonDays, defaultDay, beijingTime } from './lib/season-days'
+import { swissSeats } from './lib/clinched-seats'
 import { KnockoutBracket } from './components/KnockoutBracket'
 import { formatGroups, knockoutSize, legacyFormat, type SeasonFormat, type SeasonFaction } from './lib/season-format'
 import { createContext, useCallback, lazy, Suspense, useContext, useEffect, useMemo, useRef, useState } from 'react'
@@ -169,13 +170,9 @@ function DailySchedule({matches,rounds,format}:{matches:PublicMatch[];rounds:Pub
   </section>
 }
 
-function KnockoutTree({matches,rounds,format}:{matches:PublicMatch[];rounds:PublicRound[];format:SeasonFormat}) {
-  return <KnockoutBracket matches={matches} rounds={rounds} format={format} renderBadge={id=><DefendingMark id={id}/>} renderPortrait={props=><Portrait {...props}/>}/>
-}
-
 let standingsStart: number | undefined
 
-function StandingsBoard({ standings, format }: { standings:PublicStanding[];format:SeasonFormat }) {
+function StandingsBoard({ standings, format, qualified }: { standings:PublicStanding[];format:SeasonFormat;qualified:Set<string> }) {
   useEffect(() => {
     afterPaint('standings_visible', standingsStart, 200)
     standingsStart = undefined
@@ -186,7 +183,7 @@ function StandingsBoard({ standings, format }: { standings:PublicStanding[];form
       {rows.map((row,index)=><div className={index<format.qualifiersPerGroup?'standing__row standing__row--qualifying':'standing__row'} key={row.id}>
         <em>{index+1}</em>
         <Portrait id={row.id} name={row.name} avatarArtworkKey={row.avatarArtworkKey}/>
-        <strong>{tidyName(row.name)}<DefendingMark id={row.id}/><small>{row.game}</small></strong>
+        <strong>{tidyName(row.name)}<DefendingMark id={row.id}/><small>{row.game}{qualified.has(row.id) && ' · 已晋级'}</small></strong>
         <span>{row.points} 分<small>对手分 {row.opponentPoints} · 净票差 {row.voteDifference >= 0 ? '+' : ''}{row.voteDifference}</small></span>
       </div>)}{!rows.length&&<p className="standing__empty">本组尚无已结束对局。</p>}</section>)}
   </div></>
@@ -201,7 +198,8 @@ function HistoryBoard({matches,rounds,format}:{matches:PublicMatch[];rounds:Publ
 
 function Bracket({ standings, matches, rounds, format=legacyFormat(), initialTab='standings' }: { standings:PublicStanding[];matches:PublicMatch[];rounds:PublicRound[];format?:SeasonFormat;initialTab?:'standings'|'bracket'|'history'|'schedule' }) {
   const [tab, setTab] = useState<'standings'|'bracket'|'history'|'schedule'>(format.mode==='knockout'?'bracket':initialTab)
-  return <main className={format.version===3?'page season-schedule':'page'}><PageTitle kicker="LIVE TOURNAMENT" title="赛程与赛况" copy={format.mode==='knockout'?`${format.participants} 人单败淘汰；平票按种子晋级。`:`依次比较积分、对手分、净票差和种子；每组前 ${format.qualifiersPerGroup} 名晋级 ${knockoutSize(format)} 强。`} /><div className="tabs" role="tablist" aria-label="赛事数据">{format.version===3&&<button role="tab" aria-selected={tab==='schedule'} className={tab==='schedule'?'tabs__active':''} onClick={()=>setTab('schedule')}>每日赛程</button>}<button role="tab" aria-selected={tab==='standings'} className={tab==='standings'?'tabs__active':''} onClick={()=>{if(tab!=='standings')standingsStart=metricStart();setTab('standings')}}>小组积分</button><button role="tab" aria-selected={tab==='bracket'} className={tab==='bracket'?'tabs__active':''} onClick={()=>setTab('bracket')}>淘汰赛签表</button><button role="tab" aria-selected={tab==='history'} className={tab==='history'?'tabs__active':''} onClick={()=>setTab('history')}>对阵历史</button></div>{tab==='schedule'&&<DailySchedule matches={matches} rounds={rounds} format={format}/>} {tab==='bracket'&&<KnockoutTree matches={matches} rounds={rounds} format={format}/>} {tab==='standings'&&<StandingsBoard standings={standings} format={format}/>} {tab==='history'&&<HistoryBoard matches={matches} rounds={rounds} format={format}/>}</main>
+  const seats = useMemo(() => swissSeats(matches,standings,format), [matches,standings,format])
+  return <main className={format.version===3?'page season-schedule':'page'}><PageTitle kicker="LIVE TOURNAMENT" title="赛程与赛况" copy={format.mode==='knockout'?`${format.participants} 人单败淘汰；平票按种子晋级。`:`依次比较积分、对手分、净票差和种子；每组前 ${format.qualifiersPerGroup} 名晋级 ${knockoutSize(format)} 强。`} /><div className="tabs" role="tablist" aria-label="赛事数据">{format.version===3&&<button role="tab" aria-selected={tab==='schedule'} className={tab==='schedule'?'tabs__active':''} onClick={()=>setTab('schedule')}>每日赛程</button>}<button role="tab" aria-selected={tab==='standings'} className={tab==='standings'?'tabs__active':''} onClick={()=>{if(tab!=='standings')standingsStart=metricStart();setTab('standings')}}>小组积分</button><button role="tab" aria-selected={tab==='bracket'} className={tab==='bracket'?'tabs__active':''} onClick={()=>setTab('bracket')}>淘汰赛签表</button><button role="tab" aria-selected={tab==='history'} className={tab==='history'?'tabs__active':''} onClick={()=>setTab('history')}>对阵历史</button></div>{tab==='schedule'&&<DailySchedule matches={matches} rounds={rounds} format={format}/>} {tab==='bracket'&&<KnockoutBracket seats={seats} standings={standings} renderBadge={id=><DefendingMark id={id}/>} renderPortrait={props=><Portrait {...props}/>} matches={matches} rounds={rounds} format={format}/>} {tab==='standings'&&<StandingsBoard qualified={seats.qualified} standings={standings} format={format}/>} {tab==='history'&&<HistoryBoard matches={matches} rounds={rounds} format={format}/>}</main>
 }
 
 function FactionLogo({faction,compact=false,factions}:{faction:FactionScore;compact?:boolean;factions?:SeasonFaction[]}) {

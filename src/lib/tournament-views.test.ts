@@ -1,3 +1,5 @@
+import { swissSeats, feederWinner } from './clinched-seats'
+import { legacyFormat } from './season-format'
 import { describe, expect, it } from 'vitest'
 import type { PublicMatch, PublicRound } from './api'
 import { bracketGeometry, bracketLayout, championResult, currentRound, historySections, knockoutColumns, knockoutPlaceholder, matchResult, swissRoundPreview, updateVoteDrafts, validVoteDrafts } from './tournament-views'
@@ -103,5 +105,35 @@ describe('赛事视图数据', () => {
         expect(Math.abs(target.y-(upper.y+lower.y)/2)).toBeLessThanOrEqual(0.5)
       })
     })
+  })
+})
+
+
+describe('提前锁定的席位', () => {
+  const roster = ['a','b','c','d'].map((id,seed) => ({
+    id,name:id,game:'game',seed,groupCode:'A',points:99,opponentPoints:99,voteDifference:99
+  }))
+  const format = {...legacyFormat(),participants:8,groupCount:2,swissRounds:2}
+  const game = (leftId:string,rightId:string,round:number,status:PublicMatch['status']='closed') => ({
+    ...match(leftId+rightId,'s'+round,'swiss',round,status),leftId,rightId
+  })
+  it('只按结算积分确认出线，组内排位确定后才落签', () => {
+    const games = [game('a','c',1),game('b','d',1),game('a','d',2),game('b','c',2,'live')]
+    const partial = swissSeats(games,roster,format)
+    expect([...partial.qualified]).toEqual(['a'])
+    expect(partial.slots.size).toBe(0)
+    const complete = swissSeats([...games.slice(0,3),game('b','c',2)],roster,format)
+    expect(complete.slots.get('A1')?.id).toBe('a')
+    expect(complete.slots.get('A2')?.id).toBe('b')
+    expect(swissSeats(games,roster.slice(0,3),format).qualified.size).toBe(0)
+  })
+
+  it('已结束的淘汰赛按票数或种子落位，审核中保留待定', () => {
+    const players = new Map(roster.map(row => [row.id,row]))
+    const result = {...match('m','k','knockout',1,'closed'),leftId:'b',rightId:'a'}
+    expect(feederWinner(result,players)?.id).toBe('b')
+    expect(feederWinner({...result,rightVotes:result.leftVotes},players)?.id).toBe('a')
+    expect(feederWinner({...result,status:'review'},players)).toBeUndefined()
+    expect(feederWinner({...result,status:'live'},players)).toBeUndefined()
   })
 })
