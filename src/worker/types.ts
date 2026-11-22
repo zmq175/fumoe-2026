@@ -1,6 +1,7 @@
 export type Role = 'voter' | 'operator' | 'admin'
 
 export interface Env {
+  PERF?: AnalyticsEngineDataset
   DB: D1Database
   MEDIA: R2Bucket
   ASSETS: Fetcher

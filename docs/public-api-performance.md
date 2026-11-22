@@ -26,3 +26,32 @@ SQLite 集成测试验证正常公开读取没有数据库写入、日切换/轮
 浏览器测试阻塞对局、名单与积分接口，验证首页比赛仍先展示；使用虚拟时钟验证名单不随每次比分轮询重拉，以及隐藏/恢复行为。既有投票、历史赛季和手机布局测试继续执行。
 
 发布后应在相同网络、相同登录状态下比较接口 P50/P95、Server-Timing、首屏可见时间和请求数量。开发环境验证不能宣称国内端到端耗时已经降低到某个数值。
+
+## 查询真实访客耗时
+
+部署带有 `PERF` 绑定的 Worker 后，首次写入会产生 `fumoe_performance` 数据集。通过 Analytics Engine SQL API 可查询最近一天各指标的样本量、中位数和 P95，单位为毫秒。
+
+```sql
+SELECT blob1 AS metric, SUM(_sample_interval) AS samples,
+       quantileExactWeighted(0.50)(double1, _sample_interval) AS p50_ms,
+       quantileExactWeighted(0.95)(double1, _sample_interval) AS p95_ms
+FROM fumoe_performance
+WHERE timestamp >= NOW() - INTERVAL '1' DAY
+GROUP BY metric
+ORDER BY metric
+```
+
+每次打开页面独立抽样 10%。只统计加载完成且成功送达的样本，过早退出、网络断开等情况可能缺失。`page_load` 是整页加载时间，`dns`、`connect`、`request_wait`、`download` 是文档加载阶段。`standings_visible` 和 `vote_feedback` 通过浏览器绘制帧近似测量界面出现的时间。投票反馈的 `double2` 为 200 表示提交得到正常响应，为 0 表示失败。接口指标的 `double2` 是浏览器提供的 HTTP 状态码，0 表示未知。`double3` 是 Worker 报告的服务端总耗时，-1 表示缺少该数据。
+
+[Analytics Engine SQL API](https://developers.cloudflare.com/analytics/analytics-engine/sql-api/) · [加权分位数](https://developers.cloudflare.com/analytics/analytics-engine/sql-reference/aggregate-functions/)
+
+### 白屏、首页、投票页和图片
+
+| 指标 | 起点与终点 |
+| --- | --- |
+| `white_screen` | 打开文档到浏览器首次绘制文字或图像（FCP）。加载提示也能结束白屏。支持 Paint Timing 的浏览器每次文档加载记录一次。 |
+| `home_visible` | 打开首页、点击进入首页或通过浏览器历史返回，到赛事内容或「当前暂无公开赛季」显示。加载提示和错误重试界面均不算完成。 |
+| `vote_page_visible` | 打开或切换到对局中心（`/matches`），到对局列表或有效空状态显示。实际投票提交另看 `vote_feedback`。 |
+| `image_eager`、`image_lazy` | 单张展示图从挂载或更换图片到浏览器触发 load，单位毫秒。懒加载图含等待进入加载范围的时间。优化图失败后回退到原图的等待也计入。成功为 200，最终错误为 0。 |
+
+首页和投票页用绘制帧近似内容出现的时间。图片含缓存命中，覆盖使用 DisplayImage 的立绘、头像及标志。每批最多随机保留 12 个已结束的图片样本。分析图片加载速度时按 `double2 = 200` 筛选成功样本。页面加载前退出、应用脚本未执行等访问可能没有上报。

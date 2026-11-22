@@ -1,3 +1,4 @@
+import { perfRoutes } from './perf'
 import { MAX_DEVICE_FINGERPRINT_LENGTH } from '../lib/device-fingerprint'
 import { matchesRevalidation } from './matches-revalidation'
 import { publicRosterCache } from './public-cache'
@@ -28,6 +29,7 @@ export { MatchRoom }
 
 type Variables = { session: Session | null; timings:{auth:number;lifecycle:number;database?:{wait:number;sql:number|undefined;queries:number;calls:number}} }
 const app = new Hono<{ Bindings: Env, Variables: Variables }>()
+app.route('/api/perf', perfRoutes)
 app.use('/api/*',async(c,next)=>{
   const start=performance.now(),timings={auth:0,lifecycle:0};c.set('timings',timings)
   await next()
