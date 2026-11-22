@@ -47,3 +47,11 @@
 .data-freshness > div { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 12px; border: 1px solid currentColor; }
 .data-freshness button { flex-shrink: 0; }
 @media (max-width: 600px) { .data-freshness > div { align-items: flex-start; flex-direction: column; } }
+
+.site-footer .footer-version { min-height: 32px; text-decoration: underline; text-underline-offset: 3px; }
+.release-notes { width: min(440px, calc(100vw - 32px)); max-height: 80vh; margin: auto; overflow: auto; padding: 28px; background: #f8f8f4; color: #151515; border: 1px solid #333; }
+.release-notes::backdrop { background: rgba(0,0,0,.7); }
+.release-notes h2 { margin: 0 40px 20px 0; }
+.release-notes section + section { margin-top: 18px; border-top: 1px solid #ccc; padding-top: 16px; }
+.release-notes h3 { margin: 0; }
+.release-notes ul { margin: 8px 0 0; padding-left: 1.3em; font-size: 14px; line-height: 1.6; }
