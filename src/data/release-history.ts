@@ -1,6 +1,7 @@
 export type Release = { version: string; date: string; changes: string[] }
 
 export const publishedReleases: Release[] = [
+  { version: '1.7.1', date: '2026-11-24', changes: ['修复淘汰赛签表里卫冕冠军头像被裁切的问题，冠军徽标与角色名并排显示。'] },
   { version: '1.7.0', date: '2026-11-23', changes: ['瑞士轮选手锁定出线资格后显示「已晋级」，组内名次确定后即可在淘汰赛签表查看具体席位。', '淘汰赛单场胜者可提前进入下一轮签表，对手待定时保留其晋级来源。'] },
   { version: '1.6.1', date: '2026-11-22', changes: ['修正投票页整页图片完成计时，隐藏的装饰图标不会延迟上报。'] },
   { version: '1.6.0', date: '2026-11-22', changes: ['新增投票页白屏、可交互、首屏与整页图片耗时统计。', '页脚增加版本号与更新日志，可查看从 S1 上线至今的发布记录。'] },
