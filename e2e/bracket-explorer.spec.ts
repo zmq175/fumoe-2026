@@ -12,7 +12,7 @@ for(const round of rounds.filter(r=>r.stage==='knockout')){
   entrants=winners
 }
 
-test.beforeEach(async({page})=>{await mockPublicApi(page,{season:{...currentSeason,format:legacyFormat()},rounds,matches:knockoutMatches});await page.goto('/');await page.getByRole('button',{name:'赛程赛况',exact:true}).click();await page.getByRole('tab',{name:'淘汰赛签表'}).click()})
+test.beforeEach(async({page})=>{await mockPublicApi(page,{season:{...currentSeason,format:{...legacyFormat(),defendingChampionId:'c001'}},rounds,matches:knockoutMatches});await page.goto('/');await page.getByRole('button',{name:'赛程赛况',exact:true}).click();await page.getByRole('tab',{name:'淘汰赛签表'}).click()})
 
 test('大屏展开、冠军连线和角色路径锁定可用',async({page})=>{
   await page.setViewportSize({width:2200,height:1100})
@@ -80,4 +80,14 @@ test('鼠标拖动不会误锁定角色，按钮可横移，边界可继续滚�
   const pageTop=await page.evaluate(()=>window.scrollY)
   await page.mouse.wheel(0,400)
   await expect.poll(()=>page.evaluate(()=>window.scrollY)).toBeGreaterThan(pageTop)
+})
+
+test('卫冕冠军的头像、徽标和游戏名完整显示在选手行内',async({page})=>{
+  const row=page.getByRole('button',{name:'角色1，1500 票，查看晋级路径'}).first()
+  const bounds=await row.boundingBox()
+  for(const selector of ['.portrait','strong','.defending-mark','small']){
+    const box=await row.locator(selector).boundingBox()
+    expect(box!.y).toBeGreaterThanOrEqual(bounds!.y)
+    expect(box!.y+box!.height).toBeLessThanOrEqual(bounds!.y+bounds!.height)
+  }
 })

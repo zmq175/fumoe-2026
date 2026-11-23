@@ -51,7 +51,11 @@ export function KnockoutBracket({matches,rounds,format,seats,standings,renderPor
     const votes=which==='left'?match.leftVotes:match.rightVotes,game=which==='left'?match.leftGame:match.rightGame
     const winner=matchResult(match).winnerId===id
     return <button type="button" className={`bracket-canvas__side${winner?' bracket-canvas__side--winner':''}${selected===id?' bracket-canvas__side--tracked':''}`} aria-label={`${name}，${votes} 票，查看晋级路径`} aria-pressed={pinned===id} onMouseEnter={()=>setHovered(id)} onMouseLeave={()=>setHovered(null)} onFocus={()=>setFocused(id)} onBlur={()=>setFocused(null)} onClick={()=>setPinned(pinned===id?null:id)}>
-      {renderPortrait({id,name,avatarArtworkKey:which==='left'?match.leftAvatarArtworkKey:match.rightAvatarArtworkKey,size:'bracket'})}<span><strong>{tidyName(name)}</strong>{renderBadge?.(id)}<small>{game}</small></span><b className="bracket-canvas__score">{votes}</b>
+      {renderPortrait({id,name,avatarArtworkKey:which==='left'?match.leftAvatarArtworkKey:match.rightAvatarArtworkKey,size:'bracket'})}
+      <span>
+        <span className="bracket-canvas__name"><strong>{tidyName(name)}</strong>{renderBadge?.(id)}</span>
+        <small>{game}</small>
+      </span><b className="bracket-canvas__score">{votes}</b>
     </button>
   }
   const edges=geometry.rounds.slice(0,-1).flatMap((round,roundIndex)=>round.cards.map(card=>{

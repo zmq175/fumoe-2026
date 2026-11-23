@@ -16,14 +16,16 @@
 .bracket-explorer__viewport--dragging, .bracket-explorer__viewport--dragging button { cursor: grabbing; }
 .bracket-explorer .bracket-canvas { margin-inline: auto; }
 .bracket-explorer .bracket-canvas__round-title small { color: #aebdc4; font-size: 12px; }
-.bracket-explorer .bracket-canvas__side { background-color: transparent; text-align: left; font: inherit; color: #d3dde2; grid-template-columns: 42px minmax(0, 1fr) auto; padding: 3px 9px 3px 6px; }
+.bracket-explorer .bracket-canvas__side { background-color: transparent; text-align: left; grid-template-rows: minmax(0, 1fr); font: inherit; color: #d3dde2; grid-template-columns: 42px minmax(0, 1fr) auto; padding: 3px 9px 3px 6px; }
+.bracket-canvas__name { display: flex; align-items: center; gap: 4px; }
+.bracket-canvas__name .defending-mark { flex: none; margin: 0; padding: 0 4px; white-space: nowrap; }
 .bracket-explorer .bracket-canvas__side strong { font-size: 15px; }
 .bracket-explorer .bracket-canvas__side small { font-family: 'Noto Sans SC', sans-serif; font-size: 10px; color: #abbac2; }
 .bracket-explorer .bracket-canvas__side--winner { color: #fff; }
 .bracket-explorer .bracket-canvas__score { font-family: 'Space Grotesk', 'Noto Sans SC', sans-serif; font-size: 19px; font-variant-numeric: tabular-nums; }
 .bracket-explorer .bracket-canvas__match--placeholder .bracket-canvas__side--unknown { grid-template-columns: minmax(0, 1fr) auto; }
 .bracket-explorer .bracket-canvas__slot { font-size: 12px; }
-.bracket-explorer .portrait--bracket { width: 42px; height: 44px; }
+.bracket-explorer .portrait--bracket { width: 42px; height: 100%; max-height: 44px; align-self: center; }
 .bracket-explorer .bracket-canvas__match > footer { color: #abbac2; font-size: 10px; }
 .bracket-explorer .bracket-canvas__match--tracked { border-color: var(--cyan); }
 .bracket-explorer .bracket-canvas__side--tracked { background-color: #234552; }
